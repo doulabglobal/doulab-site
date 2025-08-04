@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkai=self.webpackChunkai||[]).push([[9067],{9187:e=>{e.exports=JSON.parse('{"tags":[{"label":"whitepaper","permalink":"/docs/tags/whitepaper","count":2}]}')}}]);

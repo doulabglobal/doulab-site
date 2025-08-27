@@ -1,4 +1,4 @@
-import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
+﻿import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
     whitepaperSidebar: [
@@ -8,7 +8,7 @@ const sidebars: SidebarsConfig = {
             collapsed: false,
             items: [
                 'research-resources/distributed-federated-agentic-ai',
-                // Add more whitepapers here as needed
+                'releases', // New entry for Website Releases
             ],
         },
     ],

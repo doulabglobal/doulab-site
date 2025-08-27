@@ -1,9 +1,9 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+﻿import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const isProd = process.env.NODE_ENV === 'production';
-const isStaging = process.env.DEPLOY_ENV === 'staging'; // set only on staging builds
+const isStaging = false; // set only on staging builds
 
 // Same GTM container in both envs; staging uses GTM "Environments" tokens
 const GTM_ID = process.env.GTM_ID || 'GTM-5VPNJ9PD';
@@ -12,7 +12,7 @@ const GTM_ENV_PREVIEW = process.env.GTM_ENV_PREVIEW || '';  // e.g., env-6
 const loadStagingGtm = Boolean(isStaging && GTM_ENV_AUTH && GTM_ENV_PREVIEW);
 
 // Canonical site URL per environment (UPDATED: staging.doulab.net)
-const SITE_URL = isStaging ? 'https://staging.doulab.net' : 'https://doulab.net';
+const SITE_URL = 'https://doulab.net';
 
 const config: Config = {
     title: 'Doulab',
@@ -25,7 +25,6 @@ const config: Config = {
     baseUrl: '/',
     organizationName: 'doulabglobal',
     projectName: 'doulab-site',
-    deploymentBranch: 'gh-pages',
     trailingSlash: false,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -35,38 +34,7 @@ const config: Config = {
         locales: ['en'],
     },
 
-    /** Inject inline Consent Mode BEFORE GTM loads */
-    headTags: [
-        {
-            tagName: 'script',
-            attributes: {},
-            innerHTML: `
-        (function() {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          // Consent Mode v2 — default denied (GDPR + Swiss nFADP friendly)
-          gtag('consent', 'default', {
-            ad_storage: 'denied',
-            ad_user_data: 'denied',
-            ad_personalization: 'denied',
-            analytics_storage: 'denied',
-            functionality_storage: 'granted',
-            personalization_storage: 'denied',
-            security_storage: 'granted'
-          });
-        })();
-      `,
-        },
-
-        // Load GTM with environment tokens on STAGING only (noscript omitted)
-        ...(loadStagingGtm
-            ? [{
-                tagName: 'script',
-                attributes: {},
-                innerHTML: `
-            (function(w,d,s,l,i){
-              w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-              var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+     j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
               j.async=true;
               j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=${GTM_ENV_AUTH}&gtm_preview=${GTM_ENV_PREVIEW}&gtm_cookies_win=x';
               f.parentNode.insertBefore(j,f);
@@ -76,12 +44,7 @@ const config: Config = {
             : []),
     ],
 
-    plugins: [
-        // Google Tag Manager plugin — PRODUCTION only (no env tokens here)
-        isProd && !isStaging && [
-            '@docusaurus/plugin-google-tag-manager',
-            { containerId: GTM_ID },
-        ],
+    plugins: [],
     ].filter(Boolean) as any,
 
     presets: [
@@ -110,6 +73,16 @@ const config: Config = {
     ],
 
     themeConfig: {
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: {
+        defer: true,
+        src: 'https://static.cloudflareinsights.com/beacon.min.js',
+        'data-cf-beacon': '{"token":"YOUR_TOKEN"}',
+      },
+    },
+  ],
         image: 'img/docusaurus-social-card.jpg',
         navbar: {
             title: 'Doulab',
@@ -128,13 +101,22 @@ const config: Config = {
         footer: {
             style: 'dark',
             links: [
-                { title: 'Docs', items: [{ label: 'Research & Resources', to: '/docs/research-resources/' }] },
+                {
+                    title: 'Docs',
+                    items: [
+                        { label: 'Research & Resources', to: '/docs/research-resources/' },
+                        { label: 'Releases', to: '/docs/releases' }
+                    ]
+
+                },
                 {
                     title: 'Connect',
                     items: [
                         { label: 'Contact', to: 'work-with-us/contact' },
                         { label: 'Apply', to: 'work-with-us/apply' },
                         { label: 'Collaborate', to: 'work-with-us/collaborate' },
+                        
+
                     ],
                 },
                 {
@@ -156,3 +138,4 @@ const config: Config = {
 };
 
 export default config;
+

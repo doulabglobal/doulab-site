@@ -1,15 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github",
-    "\\.github\\workflows",
     "\\docs",
     "\\docs\\research-resources",
     "\\src",
-    "\\src\\components",
     "\\src\\css",
-    "\\src\\theme"
+    "\\src\\theme",
+    "\\static"
   ],
-  "SelectedNode": "\\docusaurus.config.ts",
+  "SelectedNode": "\\static\\_headers",
   "PreviewInSolutionExplorer": false
 }

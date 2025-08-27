@@ -1,148 +1,158 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+const isProd = process.env.NODE_ENV === 'production';
+const isStaging = process.env.DEPLOY_ENV === 'staging'; // set only on staging builds
+
+// Same GTM container in both envs; staging uses GTM "Environments" tokens
+const GTM_ID = process.env.GTM_ID || 'GTM-5VPNJ9PD';
+const GTM_ENV_AUTH = process.env.GTM_ENV_AUTH || '';       // from GTM > Admin > Environments (Staging)
+const GTM_ENV_PREVIEW = process.env.GTM_ENV_PREVIEW || '';  // e.g., env-6
+const loadStagingGtm = Boolean(isStaging && GTM_ENV_AUTH && GTM_ENV_PREVIEW);
+
+// Canonical site URL per environment (UPDATED: staging.doulab.net)
+const SITE_URL = isStaging ? 'https://staging.doulab.net' : 'https://doulab.net';
 
 const config: Config = {
-    title: 'Doulab AI',
-  tagline: 'Agentic AI, Federated Systems, and Decentralized Governance',
-  favicon: 'img/favicon.ico',
+    title: 'Doulab',
+    tagline: 'We unlock global prosperity by helping others create better futures',
+    favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
+    future: { v4: true },
 
-  // Set the production url of your site here
-  url: 'https://ai.doulab.net',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/ai',
+    url: SITE_URL,
+    baseUrl: '/',
+    organizationName: 'doulabglobal',
+    projectName: 'doulab-site',
+    deploymentBranch: 'gh-pages',
+    trailingSlash: false,
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'https://github.com/doulabglobal', // Usually your GitHub org/user name.
-  projectName: 'ai', // Usually your repo name.
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en'],
+    },
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-      locales: ['en']
-  },
-
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+    /** Inject inline Consent Mode BEFORE GTM loads */
+    headTags: [
+        {
+            tagName: 'script',
+            attributes: {},
+            innerHTML: `
+        (function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          // Consent Mode v2 — default denied (GDPR + Swiss nFADP friendly)
+          gtag('consent', 'default', {
+            ad_storage: 'denied',
+            ad_user_data: 'denied',
+            ad_personalization: 'denied',
+            analytics_storage: 'denied',
+            functionality_storage: 'granted',
+            personalization_storage: 'denied',
+            security_storage: 'granted'
+          });
+        })();
+      `,
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
+
+        // Load GTM with environment tokens on STAGING only (noscript omitted)
+        ...(loadStagingGtm
+            ? [{
+                tagName: 'script',
+                attributes: {},
+                innerHTML: `
+            (function(w,d,s,l,i){
+              w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+              j.async=true;
+              j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'&gtm_auth=${GTM_ENV_AUTH}&gtm_preview=${GTM_ENV_PREVIEW}&gtm_cookies_win=x';
+              f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `,
+            }]
+            : []),
     ],
-  ],
 
-  themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
-    navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+    plugins: [
+        // Google Tag Manager plugin — PRODUCTION only (no env tokens here)
+        isProd && !isStaging && [
+            '@docusaurus/plugin-google-tag-manager',
+            { containerId: GTM_ID },
+        ],
+    ].filter(Boolean) as any,
+
+    presets: [
+        [
+            'classic',
+            {
+                docs: {
+                    routeBasePath: '/docs',
+                    include: ['**/*.md', '**/*.mdx'],
+                    sidebarPath: require.resolve('./sidebars.ts'),
+                    showLastUpdateAuthor: true,
+                    showLastUpdateTime: true,
+                    editUrl: 'https://github.com/doulabglobal/doulab-site/edit/main/',
+                },
+                blog: {
+                    showReadingTime: true,
+                    feedOptions: { type: ['rss', 'atom'], xslt: true },
+                    editUrl: 'https://github.com/doulabglobal/doulab-site/edit/main/',
+                    onInlineTags: 'warn',
+                    onInlineAuthors: 'warn',
+                    onUntruncatedBlogPosts: 'warn',
+                },
+                theme: { customCss: require.resolve('./src/css/custom.css') },
+            } satisfies Preset.Options,
+        ],
+    ],
+
+    themeConfig: {
+        image: 'img/docusaurus-social-card.jpg',
+        navbar: {
+            title: 'Doulab',
+            logo: { alt: 'Doulab Logo', src: 'img/logo.svg' },
+            items: [
+                { to: '/about', label: 'About', position: 'left' },
+                { to: '/services', label: 'Services', position: 'left' },
+                { to: '/vigia-futura', label: 'Vigía Futura', position: 'left' },
+                { to: '/work-with-us', label: 'Work With Us', position: 'left' },
+                { to: '/docs/research-resources/', label: 'Research & Resources', position: 'left' },
+                { to: '/blog', label: 'Blog', position: 'left' },
+                { href: 'https://github.com/doulabglobal', label: 'GitHub', position: 'right' },
+            ],
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+
+        footer: {
+            style: 'dark',
+            links: [
+                { title: 'Docs', items: [{ label: 'Research & Resources', to: '/docs/research-resources/' }] },
+                {
+                    title: 'Connect',
+                    items: [
+                        { label: 'Contact', to: 'work-with-us/contact' },
+                        { label: 'Apply', to: 'work-with-us/apply' },
+                        { label: 'Collaborate', to: 'work-with-us/collaborate' },
+                    ],
+                },
+                {
+                    title: 'More',
+                    items: [
+                        { label: 'Blog', to: '/blog' },
+                        { label: 'GitHub', href: 'https://github.com/doulabglobal/doulab-site' },
+                    ],
+                },
+            ],
+            copyright: `© ${new Date().getFullYear()} Doulab. All rights reserved.`,
         },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
+
+        prism: {
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
+    } satisfies Preset.ThemeConfig,
 };
 
 export default config;

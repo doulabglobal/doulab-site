@@ -1,47 +1,55 @@
----
+﻿---
+id: intro
+title: About This Project
 sidebar_position: 1
+tags: [whitepaper]
 ---
 
-# Tutorial Intro
+# Welcome to Doulab AI
 
-Let's discover **Docusaurus in less than 5 minutes**.
+**Doulab AI** is an open knowledge initiative exploring how distributed, federated, and agentic artificial intelligence can empower the next generation of digital governance and public infrastructure.
 
-## Getting Started
+This documentation site hosts our whitepapers, implementation blueprints, policy notes, and research insights on:
 
-Get started by **creating a new site**.
+- Federated AI Architectures
+- Agentic AI Systems
+- Digital Sovereignty & Decentralized Governance
+- Identity, Trust, and Human-in-the-Loop Design
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+---
 
-### What you'll need
+## Purpose
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+We aim to contribute to a **global commons** of AI knowledge and practical frameworks designed for **governments, enterprises, and civil society** building interoperable, trustworthy, and sovereign AI ecosystems.
 
-## Generate a new site
+Our approach centers on:
 
-Generate a new Docusaurus site using the **classic template**.
+- **Transparency** – All models and protocols proposed are auditable and modular.
+- **Modularity** – Each component can be adopted independently or as part of a full stack.
+- **Resilience** – Designed for multi-stakeholder environments and decentralized control.
+- **Public Value** – We prioritize utility for public infrastructure and human rights.
 
-The classic template will automatically be added to your project after you run the command:
+---
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## How to Use This Site
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+Navigate the sidebar to explore:
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+- In-depth whitepapers
+- Implementation pathways and architectures
+- Governance and policy recommendations
+- Blog posts and shorter insights
 
-## Start your site
+---
 
-Run the development server:
+## Join the Conversation
 
-```bash
-cd my-website
-npm run start
-```
+This is an evolving public knowledge project. We welcome:
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+- Collaborations with public and private sector organizations
+- Feedback and community engagement
+- Real-world pilots and open-source contributions
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+Let's co-create AI systems that are sovereign, ethical, and aligned with human values.
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+> “We do not automate institutions. We empower them with autonomy.”

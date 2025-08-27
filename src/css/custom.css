@@ -1,30 +1,173 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import './consent-banner.css';
 
-/* You can override the default Infima variables here. */
+/* ===== Doulab docs styling (Research & Resources) ===== */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+    --dl-indigo: #4f46e5;
+    --dl-indigo-dark: #4338ca;
+    --dl-gray-700: #444;
+    --dl-gray-600: #555;
+    --dl-border: #e5e7eb;
+    --dl-bg-soft: #f9f9f9;
+    --dl-white: #fff;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Wrapper sizing */
+.theme-doc-markdown.doulabDoc,
+.markdown.doulabDoc {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+    /* Headings + paragraphs */
+    .theme-doc-markdown.doulabDoc h1,
+    .theme-doc-markdown.doulabDoc h2 {
+        line-height: 1.15;
+        margin-bottom: 1rem;
+    }
+
+    .theme-doc-markdown.doulabDoc h1 {
+        font-size: clamp(2rem, 1.6rem + 1vw, 3rem);
+    }
+
+    .theme-doc-markdown.doulabDoc h2 {
+        font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+    }
+
+    .theme-doc-markdown.doulabDoc p {
+        color: var(--dl-gray-700);
+    }
+
+    /* Cards grid (also works if doulabDoc wrapper is missing) */
+    .theme-doc-markdown.doulabDoc .dl-cards,
+    .theme-doc-markdown .dl-cards {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+    }
+
+        .theme-doc-markdown.doulabDoc .dl-cards > li,
+        .theme-doc-markdown .dl-cards > li {
+            grid-column: span 6;
+            background: var(--dl-white);
+            border: 1px solid var(--dl-border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: transform .2s, box-shadow .2s, border-color .2s;
+        }
+
+            .theme-doc-markdown.doulabDoc .dl-cards > li:hover,
+            .theme-doc-markdown .dl-cards > li:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+                border-color: rgba(79,70,229,0.35);
+            }
+
+        .theme-doc-markdown.doulabDoc .dl-cards h3,
+        .theme-doc-markdown .dl-cards h3 {
+            font-size: 1.1rem;
+            margin: 0 0 0.5rem;
+            color: #000;
+        }
+
+        .theme-doc-markdown.doulabDoc .dl-cards p,
+        .theme-doc-markdown .dl-cards p {
+            margin: 0.25rem 0 0.5rem;
+            font-size: 0.97rem;
+        }
+
+    /* Card CTA */
+    .theme-doc-markdown.doulabDoc .dl-cardCta,
+    .theme-doc-markdown .dl-cardCta {
+        display: inline-block;
+        padding: 0.5rem 0.9rem;
+        background: var(--dl-indigo);
+        color: var(--dl-white);
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-size: 0.92rem;
+        font-weight: 600;
+    }
+
+        .theme-doc-markdown.doulabDoc .dl-cardCta:hover,
+        .theme-doc-markdown .dl-cardCta:hover {
+            background: var(--dl-indigo-dark);
+        }
+
+    /* Final centered CTA block */
+    .theme-doc-markdown.doulabDoc .dl-finalCta,
+    .theme-doc-markdown .dl-finalCta {
+        text-align: center;
+        background: linear-gradient(180deg, #f7f7ff 0%, #fff 100%);
+        border: 1px solid var(--dl-border);
+        border-radius: 16px;
+        padding: 2rem 1rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        margin-top: 2rem;
+    }
+
+        .theme-doc-markdown.doulabDoc .dl-finalCta h2,
+        .theme-doc-markdown .dl-finalCta h2 {
+            margin: 0 0 0.5rem;
+        }
+
+        .theme-doc-markdown.doulabDoc .dl-finalCta p,
+        .theme-doc-markdown .dl-finalCta p {
+            color: var(--dl-gray-700);
+            margin: 0 0 1rem;
+        }
+
+        .theme-doc-markdown.doulabDoc .dl-finalCta .dl-ctas,
+        .theme-doc-markdown .dl-finalCta .dl-ctas {
+            display: flex;
+            gap: .75rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+    .theme-doc-markdown.doulabDoc .dl-buttonPrimary,
+    .theme-doc-markdown .dl-buttonPrimary,
+    .theme-doc-markdown.doulabDoc .dl-buttonSecondary,
+    .theme-doc-markdown .dl-buttonSecondary {
+        display: inline-block;
+        padding: 0.6rem 1rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+    .theme-doc-markdown.doulabDoc .dl-buttonPrimary,
+    .theme-doc-markdown .dl-buttonPrimary {
+        background: var(--dl-indigo);
+        color: var(--dl-white);
+    }
+
+        .theme-doc-markdown.doulabDoc .dl-buttonPrimary:hover,
+        .theme-doc-markdown .dl-buttonPrimary:hover {
+            background: var(--dl-indigo-dark);
+        }
+
+    .theme-doc-markdown.doulabDoc .dl-buttonSecondary,
+    .theme-doc-markdown .dl-buttonSecondary {
+        color: var(--dl-indigo);
+        border: 1px solid var(--dl-indigo);
+        background: transparent;
+    }
+
+        .theme-doc-markdown.doulabDoc .dl-buttonSecondary:hover,
+        .theme-doc-markdown .dl-buttonSecondary:hover {
+            background: #eef2ff;
+        }
+
+/* Responsive */
+@media (max-width: 960px) {
+    .theme-doc-markdown.doulabDoc .dl-cards > li,
+    .theme-doc-markdown .dl-cards > li {
+        grid-column: span 12;
+    }
 }

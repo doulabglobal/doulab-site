@@ -1,0 +1,227 @@
+﻿:root {
+    --dl-indigo: #4f46e5;
+    --dl-indigo-dark: #4338ca;
+    --dl-gray-700: #444;
+    --dl-gray-600: #555;
+    --dl-border: #e5e7eb;
+    --dl-bg-soft: #f9f9f9;
+    --dl-white: #fff;
+}
+
+/* Hero */
+.heroBanner {
+    margin: 0 auto 1rem;
+    max-width: 1200px;
+    padding: 2rem 1rem 0.5rem;
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+}
+
+.heroSubtitle {
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: var(--dl-indigo);
+    margin: 0 0 0.5rem;
+}
+
+.heroText {
+    font-size: 1.05rem;
+    color: var(--dl-gray-700);
+    margin: 0.25rem 0 0.75rem;
+}
+
+.heroImage {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.heroCtas {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin: 0.75rem 0 0;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+    display: inline-block;
+    padding: .65rem 1rem;
+    border-radius: .6rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.buttonPrimary {
+    background: var(--dl-indigo);
+    color: var(--dl-white);
+}
+
+    .buttonPrimary:hover {
+        background: var(--dl-indigo-dark);
+    }
+
+.buttonSecondary {
+    color: var(--dl-indigo);
+    border: 1px solid var(--dl-indigo);
+    background: transparent;
+}
+
+    .buttonSecondary:hover {
+        background: #eef2ff;
+    }
+
+/* In‑page subnav (sticky, horizontal) */
+.subnav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: .5rem 0 .75rem;
+    border-top: 1px dashed var(--dl-border);
+    border-bottom: 1px dashed var(--dl-border);
+    position: sticky;
+    top: 0;
+    background: var(--dl-white);
+    z-index: 5;
+}
+
+    .subnav a {
+        font-size: .95rem;
+        text-decoration: none;
+        color: var(--dl-indigo-dark);
+        opacity: .9;
+        padding: .25rem .5rem;
+        border-radius: .4rem;
+    }
+
+        .subnav a:hover {
+            background: #eef2ff;
+        }
+
+.subnavActive {
+    background: #eef2ff;
+    color: #3730a3;
+    font-weight: 700;
+}
+
+/* Sections + grids */
+.section {
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+    .section h2 {
+        font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+        margin: 0 0 1rem;
+    }
+
+.sectionLead {
+    font-size: 1.05rem;
+    color: var(--dl-gray-700);
+    max-width: 900px;
+}
+
+.bullets {
+    margin: 0.5rem 0 0.25rem 1rem;
+}
+
+    .bullets li {
+        margin-bottom: 0.35rem;
+    }
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin-top: .75rem;
+}
+
+@media (max-width: 960px) {
+    .cardGrid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cardGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    grid-column: span 4;
+    background: var(--dl-white);
+    border-radius: 12px;
+    border: 1px solid var(--dl-border);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    padding: 1.25rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+        border-color: rgba(79,70,229,0.35);
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin: 0.25rem 0 0.5rem;
+    }
+
+    .card p {
+        color: var(--dl-gray-600);
+        font-size: 0.97rem;
+        margin: 0.25rem 0 0.5rem;
+    }
+
+/* Final CTA */
+.finalCta {
+    text-align: center;
+    background: linear-gradient(180deg, #f7f7ff 0%, #fff 100%);
+    border: 1px solid var(--dl-border);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+    .finalCta h2 {
+        margin: 0 0 0.5rem;
+    }
+
+    .finalCta p {
+        color: var(--dl-gray-700);
+        margin: 0 0 1rem;
+    }
+
+    .finalCta .heroCtas {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+/* Dark mode tweaks */
+html.theme-dark .sectionLead {
+    color: #c7cad1;
+}
+
+html.theme-dark .card {
+    background: #111318;
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: none;
+}
+
+html.theme-dark .finalCta {
+    background: linear-gradient(180deg, #0f1020 0%, #090a10 100%);
+    border-color: rgba(255,255,255,0.12);
+}

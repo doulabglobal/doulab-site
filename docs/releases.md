@@ -35,3 +35,13 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 - Added explicit width/height to reduce CLS
 - Improved link/button contrast for AA
 - Fixed docs data typing for Latest Whitepapers section
+## 2025-08-28 — IA Scaffold
+
+- Navbar aligned to target IA: Home, What we do, Case Studies, Insights, About, Contact.
+- New top-level pages scaffolded:
+  - **What we do**: products/programs, proof placeholder, next steps.
+  - **Case Studies**: featured projects, IMM gate references.
+  - **Insights**: research highlights, links to Research & Resources + Releases.
+  - **Contact**: email CTA, IMM journey outline, future form placeholder.
+- About page improved with canonical tag for SEO.
+

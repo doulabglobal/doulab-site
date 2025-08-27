@@ -1,4 +1,4 @@
-﻿import { themes as prismThemes } from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -57,13 +57,12 @@ const config: Config = {
       title: 'Doulab',
       logo: { alt: 'Doulab Logo', src: 'img/logo.svg' },
       items: [
+        { to: '/', label: 'Home', position: 'left' },
+        { to: '/what-we-do', label: 'What we do', position: 'left' },
+        { to: '/case-studies', label: 'Case Studies', position: 'left' },
+        { to: '/insights', label: 'Insights', position: 'left' },
         { to: '/about', label: 'About', position: 'left' },
-        { to: '/services', label: 'Services', position: 'left' },
-        { to: '/vigia-futura', label: 'Vigía Futura', position: 'left' },
-        { to: '/work-with-us', label: 'Work With Us', position: 'left' },
-        { to: '/docs/research-resources/', label: 'Research & Resources', position: 'left' },
-        { to: '/docs/releases', label: 'Releases', position: 'left' },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'right' },
         { href: 'https://github.com/doulabglobal', label: 'GitHub', position: 'right' },
       ],
     },

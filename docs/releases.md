@@ -1,4 +1,4 @@
----
+﻿---
 id: releases
 title: Website Releases
 sidebar_label: Releases
@@ -11,6 +11,12 @@ This page tracks notable milestones and updates to the Doulab website.
 For daily development tasks, see the internal `CHECKLOG.md`.
 
 ---
+
+## 2025-08-28 — v0.2 Privacy & Infra Cleanup
+- Removed all GTM/GA/Consent Mode code (Root.tsx, ConsentBanner.tsx, config)
+- Enabled Cloudflare Web Analytics auto-injection (manual beacon removed)
+- Pinned build environment to Node 20.16.0 in Cloudflare Pages
+- Purged Cloudflare cache and redeployed production
 
 ## 2025-08-27 — v0.1 Cloudflare Migration
 - Migrated hosting from GitHub Pages to Cloudflare Pages

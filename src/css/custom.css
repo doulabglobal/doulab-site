@@ -2,8 +2,8 @@
 
 /* ===== Doulab docs styling (Research & Resources) ===== */
 :root {
-    --dl-indigo: #4f46e5;
-    --dl-indigo-dark: #4338ca;
+    --dl-indigo: #4338ca; /* darkened slightly for better contrast */
+    --dl-indigo-dark: #3730a3;
     --dl-gray-700: #444;
     --dl-gray-600: #555;
     --dl-border: #e5e7eb;

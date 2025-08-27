@@ -1,11 +1,11 @@
-// Home page aligned to About-page styles (hero + sections + cards + CTAs)
-// Cards copy normalized for similar length; footers align; final CTA centered.
+﻿// Cards copy normalized for similar length; footers align; final CTA centered.
 import React, { type ReactNode } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import clsx from 'clsx';
+import Head from '@docusaurus/Head';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import {
     Search, Layers, Lightbulb, Users, Radar,
@@ -14,13 +14,21 @@ import {
 
 import styles from './index.module.css';
 
+/** Minimal types for docs data to avoid TS errors */
+type DocMeta = { id: string; title: string; description?: string; permalink: string; tags?: string[] };
+type DocsVersion = { isLast?: boolean; docs: DocMeta[] };
+type DocsPluginData = { versions: DocsVersion[] };
+
 function LatestWhitepapersSection() {
     const allDocsData = useAllDocsData();
-    const docsPluginData = allDocsData?.['default'];
-    if (!docsPluginData || !docsPluginData.docs) return null;
-
-    const whitepapers = docsPluginData.docs.filter((doc) => doc.tags?.includes('whitepaper'));
+    const docsPluginData = (allDocsData?.['default'] as unknown as DocsPluginData | undefined);
+    const latestVersion =
+        docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
+    const docs = latestVersion?.docs ?? [];
+    const whitepapers = docs.filter((doc) => (doc.tags ?? []).includes('whitepaper'));
     const sorted = whitepapers.sort((a, b) => b.id.localeCompare(a.id)).slice(0, 3);
+
+    if (!sorted.length) return null;
 
     return (
         <section className={styles.section} aria-labelledby="latest-whitepapers-title">
@@ -46,6 +54,16 @@ function HomepageHero() {
     const { siteConfig } = useDocusaurusContext();
     return (
         <section className={styles.heroBanner} aria-labelledby="home-hero-title">
+            <Head>
+                {/* Preload the current LCP image (PNG). When AVIF/WEBP files exist, the browser will still pick best source. */}
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/img/people-collage.png"
+                    imageSrcSet="/img/people-collage.avif 1x, /img/people-collage.webp 1x, /img/people-collage.png 1x"
+                    imageSizes="(max-width: 600px) 100vw, 600px"
+                />
+            </Head>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
                     <Heading as="h1" id="home-hero-title" className={styles.heroTitle}>
@@ -68,21 +86,28 @@ function HomepageHero() {
                     </div>
                 </div>
                 <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-                    <img
-                        src="/img/people-collage.png"
-                        alt="Futures, innovation, and intelligence"
-                        className={styles.heroImage}
-                        loading="eager"
-                        fetchPriority="high"
-                    />
+                    <picture>
+                        {/* Optional next‑gen sources (add files under /static/img/) */}
+                        <source srcSet="/img/people-collage.avif" type="image/avif" />
+                        <source srcSet="/img/people-collage.webp" type="image/webp" />
+                        <img
+                            src="/img/people-collage.png"
+                            alt="Futures, innovation, and intelligence"
+                            className={styles.heroImage}
+                            loading="eager"
+                            fetchPriority="high"
+                            width="600"
+                            height="400"
+                        />
+                    </picture>
                 </div>
             </div>
         </section>
     );
 }
 
+// ========== Sections (unchanged content) ==========
 function ProblemSection() {
-    // Copy lightly normalized for near‑equal length while preserving meaning
     const problems = [
         {
             icon: <AlertTriangle className={styles.cardIcon} />,
@@ -194,7 +219,6 @@ function ProblemSection() {
 }
 
 function ServicesSection() {
-    // Descriptions normalized to similar length
     return (
         <section className={styles.section} id="services" aria-labelledby="services-title">
             <h2 id="services-title">Our Service Pillars</h2>
@@ -253,7 +277,6 @@ function ServicesSection() {
 }
 
 function ResearchResourcesSection() {
-    // Normalize both descriptions
     return (
         <section className={styles.section} aria-labelledby="research-title">
             <h2 id="research-title">Research + Resources</h2>
@@ -287,7 +310,6 @@ function ResearchResourcesSection() {
 }
 
 function PrinciplesSection() {
-    // Each principle one concise sentence of similar length
     return (
         <section className={styles.section} aria-labelledby="principles-title">
             <h2 id="principles-title">Our Principles</h2>

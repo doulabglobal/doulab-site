@@ -9,3 +9,4 @@ Docs — Updated README.md to align with Doulab Website project (Cloudflare migr
 Docs — Added releases.md to sidebars.ts (Research & Resources); optional navbar/footer link prepared
 Infra — Switched to production-only on Cloudflare; removed staging + GitHub Pages deploys; purged GTM; set single SITE_URL; kept Cloudflare Analytics
 Infra — Removed leftover GTM/Consent code, replaced Root.tsx and ConsentBanner.tsx with privacy-first stubs, disabled manual CF beacon (auto-injection enabled), purged cache, pinned Node 20.16.0 in CF Pages
+2025-08-28 — Web — Lighthouse fixes (hero LCP preload + AVIF/WEBP picture fallback, explicit image dimensions, AA contrast colors); fixed docs typing in index.tsx

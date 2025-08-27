@@ -30,3 +30,8 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 - Downgraded Node runtime to 20.16.0 via NVM
 - Clean reinstallation of dependencies and local build verified
 - Preserved internal `CHECKLOG.md` for daily task logging
+## 2025-08-28 — v0.3 Performance & A11y
+- Optimized hero LCP: preload + next-gen sources with PNG fallback
+- Added explicit width/height to reduce CLS
+- Improved link/button contrast for AA
+- Fixed docs data typing for Latest Whitepapers section

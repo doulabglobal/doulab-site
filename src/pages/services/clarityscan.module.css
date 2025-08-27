@@ -1,0 +1,292 @@
+/* ClarityScan page — aligned with Home/About/Services design tokens & components */
+
+:root {
+    --dl-indigo: #4f46e5;
+    --dl-indigo-dark: #4338ca;
+    --dl-gray-700: #444;
+    --dl-gray-600: #555;
+    --dl-border: #e5e7eb;
+    --dl-bg-soft: #f9f9f9;
+    --dl-white: #fff;
+}
+
+/* ====== Hero ====== */
+.heroBanner {
+    margin: 0 auto 2.5rem;
+    max-width: 1200px;
+    padding: 2rem 1rem;
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+}
+
+.heroSubtitle {
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: var(--dl-indigo);
+    margin: 0 0 0.5rem;
+}
+
+.heroText {
+    font-size: 1.05rem;
+    color: var(--dl-gray-700);
+    margin: 0.25rem 0 0.75rem;
+}
+
+.heroImage {
+    max-width: 520px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.heroCtas {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+
+.buttonPrimary,
+.buttonSecondary {
+    display: inline-block;
+    padding: 0.6rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.buttonPrimary {
+    background: var(--dl-indigo);
+    color: var(--dl-white);
+}
+
+    .buttonPrimary:hover {
+        background: var(--dl-indigo-dark);
+    }
+
+.buttonSecondary {
+    color: var(--dl-indigo);
+    border: 1px solid var(--dl-indigo);
+    background: transparent;
+}
+
+    .buttonSecondary:hover {
+        background: #eef2ff;
+    }
+
+/* ====== Sections ====== */
+.section {
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+    .section h2 {
+        font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+        margin: 0 0 1rem;
+    }
+
+.sectionLead {
+    font-size: 1.05rem;
+    color: var(--dl-gray-700);
+    max-width: 900px;
+}
+
+/* ====== Cards (what it is / outcomes) ====== */
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 960px) {
+    .cardGrid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cardGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card {
+    grid-column: span 4;
+    background: var(--dl-white);
+    border-radius: 12px;
+    border: 1px solid var(--dl-border);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    padding: 1.25rem;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+        border-color: rgba(79,70,229,0.35);
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+        margin: 0.25rem 0 0.5rem;
+    }
+
+.cardBody {
+    color: var(--dl-gray-600);
+    font-size: 0.97rem;
+    margin: 0.25rem 0 0.75rem;
+}
+
+.cardIcon {
+    width: 28px;
+    height: 28px;
+    opacity: 0.95;
+}
+
+/* ====== Steps ====== */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 960px) {
+    .steps {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+.step {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 0.75rem;
+    align-items: start;
+    background: var(--dl-bg-soft);
+    border: 1px solid var(--dl-border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+}
+
+.stepBadge {
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    background: var(--dl-indigo);
+    color: var(--dl-white);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+}
+
+/* ====== Bullets (sample items) ====== */
+.sampleGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 960px) {
+    .sampleGrid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .sampleGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sampleGrid > div {
+    grid-column: span 4;
+    background: var(--dl-white);
+    border: 1px solid var(--dl-border);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+}
+
+.bullets {
+    margin: 0.25rem 0 0.25rem 1rem;
+}
+
+    .bullets li {
+        margin-bottom: 0.35rem;
+        color: var(--dl-gray-700);
+    }
+
+/* ====== Final CTA ====== */
+.finalCta {
+    text-align: center;
+    background: linear-gradient(180deg, #f7f7ff 0%, #fff 100%);
+    border: 1px solid var(--dl-border);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+    .finalCta h2 {
+        margin: 0 0 0.5rem;
+    }
+
+    .finalCta p {
+        color: var(--dl-gray-700);
+        margin: 0 0 1rem;
+    }
+
+/* ====== FAQ ====== */
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+    .faqGrid details {
+        background: #f9fafb;
+        border: 1px solid var(--dl-border);
+        border-radius: 0.5rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .faqGrid summary {
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+@media (max-width: 900px) {
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ====== Dark theme support ====== */
+html.theme-dark .card,
+html.theme-dark .sampleGrid > div {
+    background: #111318;
+    border-color: rgba(255,255,255,0.12);
+    box-shadow: none;
+}
+
+html.theme-dark .step {
+    background: #14161c;
+    border-color: rgba(255,255,255,0.12);
+}
+
+html.theme-dark .sectionLead,
+html.theme-dark .heroText {
+    color: #c7cad1;
+}

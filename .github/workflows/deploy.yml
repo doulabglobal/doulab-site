@@ -1,0 +1,57 @@
+name: Deploy Doulab (Prod & Staging)
+
+on:
+  push:
+    branches: [ main, staging ]
+
+jobs:
+  prod:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: |
+          export NODE_ENV=production
+          export DEPLOY_ENV=production
+          npm run build
+        env:
+          GTM_ID: ${{ secrets.GTM_ID }}
+      - name: Deploy to gh-pages (this repo)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: gh-pages
+          cname: doulab.net
+
+  staging:
+    if: github.ref == 'refs/heads/staging'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: |
+          export NODE_ENV=production
+          export DEPLOY_ENV=staging
+          npm run build
+        env:
+          GTM_ID: ${{ secrets.GTM_ID }}
+          GTM_ENV_AUTH: ${{ secrets.GTM_ENV_AUTH }}
+          GTM_ENV_PREVIEW: ${{ secrets.GTM_ENV_PREVIEW }}
+      - name: Deploy to gh-pages (staging repo)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.GH_PAT }}   # classic PAT with repo scope
+          external_repository: doulabglobal/doulab-site-staging
+          publish_dir: ./build
+          publish_branch: gh-pages
+          cname: ai.doulab.net

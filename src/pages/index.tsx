@@ -1,18 +1,14 @@
-﻿// Cards copy normalized for similar length; footers align; final CTA centered.
-import React, { type ReactNode } from 'react';
+﻿import React, { type ReactNode } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
-import clsx from 'clsx';
 import Head from '@docusaurus/Head';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import {
     Search, Layers, Lightbulb, Users, Radar,
     AlertTriangle, FileWarning, EyeOff, CircleSlash, UserX, AlertOctagon, Frown, LineChart, Eye
 } from 'lucide-react';
-
-import styles from './index.module.css';
 
 /** Minimal types for docs data to avoid TS errors */
 type DocMeta = { id: string; title: string; description?: string; permalink: string; tags?: string[] };
@@ -31,15 +27,15 @@ function LatestWhitepapersSection() {
     if (!sorted.length) return null;
 
     return (
-        <section className={styles.section} aria-labelledby="latest-whitepapers-title">
+        <section className="section" aria-labelledby="latest-whitepapers-title">
             <h2 id="latest-whitepapers-title">Latest Whitepapers</h2>
-            <div className={styles.cardGrid}>
+            <div className="cardReel">
                 {sorted.map((paper) => (
-                    <div key={paper.permalink} className={styles.card}>
+                    <div key={paper.permalink} className="card">
                         <h3>{paper.title}</h3>
                         {paper.description && <p>{paper.description}</p>}
-                        <div className={styles.cardFooter}>
-                            <Link className={styles.cardCta} to={paper.permalink} aria-label={`Read ${paper.title}`}>
+                        <div className="cardFooter">
+                            <Link className="cardCta" to={paper.permalink} aria-label={`Read ${paper.title}`}>
                                 Read paper →
                             </Link>
                         </div>
@@ -53,7 +49,7 @@ function LatestWhitepapersSection() {
 function HomepageHero() {
     const { siteConfig } = useDocusaurusContext();
     return (
-        <section className={styles.heroBanner} aria-labelledby="home-hero-title">
+        <section className="heroBanner" aria-labelledby="home-hero-title">
             <Head>
                 {/* Preload the current LCP image (PNG). When AVIF/WEBP files exist, the browser will still pick best source. */}
                 <link
@@ -66,34 +62,34 @@ function HomepageHero() {
             </Head>
             <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                 <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-                    <Heading as="h1" id="home-hero-title" className={styles.heroTitle}>
+                    <Heading as="h1" id="home-hero-title" className="heroTitle">
                         {siteConfig.title}
                     </Heading>
-                    <p className={styles.heroSubtitle} style={{ textAlign: 'justify' }}>
+                    <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
                         Future studies, innovation ecosystems, and personalized mentoring and coaching to help shape tomorrow.
                     </p>
-                    <p className={styles.heroText}>
+                    <p className="heroText">
                         We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes.
                     </p>
 
-                    <div className={styles.heroCtas}>
-                        <Link to="/services" className={styles.buttonPrimary} data-cta="home_hero_services">
+                    <div className="heroCtas">
+                        <Link to="/services" className="buttonPrimary" data-cta="home_hero_services">
                             Explore our services
                         </Link>
-                        <Link to="/contact" className={styles.buttonSecondary} data-cta="home_hero_contact">
+                        <Link to="/contact" className="buttonSecondary" data-cta="home_hero_contact">
                             Book a discovery call
                         </Link>
                     </div>
                 </div>
                 <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
                     <picture>
-                        {/* Optional next‑gen sources (add files under /static/img/) */}
+                        {/* Optional next-gen sources (add files under /static/img/) */}
                         <source srcSet="/img/people-collage.avif" type="image/avif" />
                         <source srcSet="/img/people-collage.webp" type="image/webp" />
                         <img
                             src="/img/people-collage.png"
                             alt="Futures, innovation, and intelligence"
-                            className={styles.heroImage}
+                            className="heroImage"
                             loading="eager"
                             fetchPriority="high"
                             width="600"
@@ -106,11 +102,11 @@ function HomepageHero() {
     );
 }
 
-// ========== Sections (unchanged content) ==========
+// ========== Sections (with horizontal reel for The Problem) ==========
 function ProblemSection() {
     const problems = [
         {
-            icon: <AlertTriangle className={styles.cardIcon} />,
+            icon: <AlertTriangle className="cardIcon" />,
             cause: 'Innovation isn’t embedded as a cultural value',
             effect: 'Change meets resistance; efforts feel sporadic and engagement stays low.',
             metric: 'Global engagement ~20–23%, indicating persistent culture headwinds.',
@@ -119,25 +115,25 @@ function ProblemSection() {
             pillar: 'Culture + Innovation Mindset',
         },
         {
-            icon: <FileWarning className={styles.cardIcon} />,
+            icon: <FileWarning className="cardIcon" />,
             cause: 'Strategy is treated as a static document',
-            effect: 'Short‑term pivots multiply; OKRs drift and teams lose direction.',
+            effect: 'Short-term pivots multiply; OKRs drift and teams lose direction.',
             metric: 'Roughly 70% of employees report misalignment with strategy.',
             sourceHref: 'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
             sourceLabel: 'Forbes — When strategy fails to land',
             pillar: 'Planning Mindset + Leadership Development',
         },
         {
-            icon: <EyeOff className={styles.cardIcon} />,
+            icon: <EyeOff className="cardIcon" />,
             cause: 'Decisions lack reliable evidence and testing',
             effect: 'ROI suffers as opinions outrun data and validated learning.',
-            metric: 'Data‑driven orgs are far more likely to improve decisions.',
+            metric: 'Data-driven orgs are far more likely to improve decisions.',
             sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-            sourceLabel: 'Harvard Business School Online — Data‑driven decisions',
-            pillar: 'Evidence‑Based Decision‑Making',
+            sourceLabel: 'Harvard Business School Online — Data-driven decisions',
+            pillar: 'Evidence-Based Decision-Making',
         },
         {
-            icon: <CircleSlash className={styles.cardIcon} />,
+            icon: <CircleSlash className="cardIcon" />,
             cause: 'Innovation leadership lacks ownership and cadence',
             effect: 'Projects stall, alignment slips, and dependency risks increase.',
             metric: 'Transformations fail without visible leadership and governance.',
@@ -146,7 +142,7 @@ function ProblemSection() {
             pillar: 'Leadership & Innovation Governance',
         },
         {
-            icon: <UserX className={styles.cardIcon} />,
+            icon: <UserX className="cardIcon" />,
             cause: 'Rigid hierarchies and outdated skill structures',
             effect: 'Cycles slow down and teams detach from real user needs.',
             metric: 'Greater autonomy correlates with higher productivity and ownership.',
@@ -155,16 +151,16 @@ function ProblemSection() {
             pillar: 'Talent + HR Structure + Employee Experience',
         },
         {
-            icon: <AlertOctagon className={styles.cardIcon} />,
+            icon: <AlertOctagon className="cardIcon" />,
             cause: 'Core processes can’t scale or adapt reliably',
             effect: 'Costs creep, burnout rises, and delivery becomes inconsistent.',
-            metric: 'Scaling well requires deliberate operating‑model redesign.',
+            metric: 'Scaling well requires deliberate operating-model redesign.',
             sourceHref: 'https://www.bain.com/insights/scaling-software-companies-path-to-%241B-in-revenue/',
             sourceLabel: 'Bain — Scaling patterns & pitfalls',
             pillar: 'Scalable + Sustainable Processes',
         },
         {
-            icon: <Frown className={styles.cardIcon} />,
+            icon: <Frown className="cardIcon" />,
             cause: 'Customer insights aren’t integrated into delivery',
             effect: 'Offers drift from real needs; value is left on the table.',
             metric: 'US CX quality has declined for three consecutive years.',
@@ -173,7 +169,7 @@ function ProblemSection() {
             pillar: 'Customer Journey + CX Maturity',
         },
         {
-            icon: <LineChart className={styles.cardIcon} />,
+            icon: <LineChart className="cardIcon" />,
             cause: 'Limited visibility into capabilities and resources',
             effect: 'Assumptions drive bets; truth is scattered across systems.',
             metric: 'Interoperability enables a single, trusted data backbone.',
@@ -182,10 +178,10 @@ function ProblemSection() {
             pillar: 'Business Intelligence Maturity',
         },
         {
-            icon: <Eye className={styles.cardIcon} />,
+            icon: <Eye className="cardIcon" />,
             cause: 'Foresight is missing from the planning cycle',
             effect: 'Teams react to shocks instead of shaping possible futures.',
-            metric: 'Foresight improves resilience and long‑term performance.',
+            metric: 'Foresight improves resilience and long-term performance.',
             sourceHref: 'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
             sourceLabel: 'WEF — Why foresight matters',
             pillar: 'Foresight + Strategic Anticipation',
@@ -193,16 +189,17 @@ function ProblemSection() {
     ];
 
     return (
-        <section className={styles.section} aria-labelledby="problem-title">
+        <section className="section" aria-labelledby="problem-title">
             <h2 id="problem-title">The Problem</h2>
-            <p className={styles.sectionLead}>
+            <p className="sectionLead">
                 <strong>Entrepreneurship</strong> and <strong>innovation</strong> are <strong>hard</strong>, until you make them a <strong>repeatable process</strong>.
                 Below are some of the most common problems we’ve seen across startups and organizations, based on our work with them:
             </p>
-            <div className={styles.cardGrid}>
+            {/* Horizontal reel */}
+            <div className="cardReel" role="list" aria-label="Common problems">
                 {problems.map((item, idx) => (
-                    <div className={styles.card} key={idx} style={{ borderLeft: '4px solid var(--dl-indigo)' }}>
-                        <div className={styles.cardIconWrap}>{item.icon}</div>
+                    <div className="card" role="listitem" key={idx} style={{ borderLeft: '4px solid var(--dl-indigo)' }}>
+                        <div>{item.icon}</div>
                         <h3>{item.cause}</h3>
                         <p><strong>{item.effect}</strong></p>
                         <p><em>{item.metric}</em></p>
@@ -211,7 +208,7 @@ function ProblemSection() {
                     </div>
                 ))}
             </div>
-            <p className={styles.sectionLead}>
+            <p className="sectionLead">
                 If you identify with several of these, we can help. Explore how we reduce risk and accelerate outcomes:
             </p>
         </section>
@@ -220,55 +217,55 @@ function ProblemSection() {
 
 function ServicesSection() {
     return (
-        <section className={styles.section} id="services" aria-labelledby="services-title">
+        <section className="section" id="services" aria-labelledby="services-title">
             <h2 id="services-title">Our Service Pillars</h2>
-            <p className={styles.sectionLead}>This is how we help you mitigate these problems:</p>
-            <p className={styles.microcopy}>We design systems and processes that are flexible, adaptable, and scalable by default.</p>
-            <p className={styles.microcopy}>We work across sectors to co‑create solutions with you—for today’s needs and tomorrow’s shifts.</p>
+            <p className="sectionLead">This is how we help you mitigate these problems:</p>
+            <p className="microcopy">We design systems and processes that are flexible, adaptable, and scalable by default.</p>
+            <p className="microcopy">We work across sectors to co-create solutions with you—for today’s needs and tomorrow’s shifts.</p>
 
-            <div className={styles.cardGrid}>
-                <div className={styles.card}>
-                    <Search className={styles.cardIcon} aria-hidden="true" />
+            <div className="cardGrid">
+                <div className="card">
+                    <Search className="cardIcon" aria-hidden="true" />
                     <h3>Diagnostics: Know Where You Stand</h3>
-                    <p>Quickly map innovation maturity and pinpoint capability gaps with evidence‑based tools like ClarityScan®.</p>
-                    <div className={styles.cardFooter}>
-                        <Link to="/services/diagnostics" className={styles.cardCta} data-cta="services_diagnostics">Explore diagnostics →</Link>
+                    <p>Quickly map innovation maturity and pinpoint capability gaps with evidence-based tools like ClarityScan®.</p>
+                    <div className="cardFooter">
+                        <Link to="/services/diagnostics" className="cardCta" data-cta="services_diagnostics">Explore diagnostics →</Link>
                     </div>
                 </div>
 
-                <div className={styles.card}>
-                    <Lightbulb className={styles.cardIcon} aria-hidden="true" />
+                <div className="card">
+                    <Lightbulb className="cardIcon" aria-hidden="true" />
                     <h3>Workshops: Spark Aligned Action</h3>
                     <p>Highly focused sessions that align teams, unlock decisions, and turn strategy into practical next steps.</p>
-                    <div className={styles.cardFooter}>
-                        <Link to="/services/custom-workshops" className={styles.cardCta} data-cta="services_workshops">Explore workshops →</Link>
+                    <div className="cardFooter">
+                        <Link to="/services/custom-workshops" className="cardCta" data-cta="services_workshops">Explore workshops →</Link>
                     </div>
                 </div>
 
-                <div className={styles.card}>
-                    <Layers className={styles.cardIcon} aria-hidden="true" />
+                <div className="card">
+                    <Layers className="cardIcon" aria-hidden="true" />
                     <h3>Programs: Build Innovation Capacity</h3>
                     <p>Structured journeys—like IMM—that install culture, process, and metrics to scale innovation reliably.</p>
-                    <div className={styles.cardFooter}>
-                        <Link to="/services/innovation-maturity" className={styles.cardCta} data-cta="services_programs">Explore programs →</Link>
+                    <div className="cardFooter">
+                        <Link to="/services/innovation-maturity" className="cardCta" data-cta="services_programs">Explore programs →</Link>
                     </div>
                 </div>
 
-                <div className={styles.card}>
-                    <Users className={styles.cardIcon} aria-hidden="true" />
+                <div className="card">
+                    <Users className="cardIcon" aria-hidden="true" />
                     <h3>Coaching & Mentoring: Personalized Guidance</h3>
                     <p>Targeted 1:1 or group support to remove blockers, sustain momentum, and build internal capability.</p>
-                    <div className={styles.cardFooter}>
-                        <Link to="/services/coaching-mentoring" className={styles.cardCta} data-cta="services_coaching">Explore coaching & mentoring →</Link>
+                    <div className="cardFooter">
+                        <Link to="/services/coaching-mentoring" className="cardCta" data-cta="services_coaching">Explore coaching & mentoring →</Link>
                     </div>
                 </div>
 
-                <div className={styles.card}>
-                    <Radar className={styles.cardIcon} aria-hidden="true" />
+                <div className="card">
+                    <Radar className="cardIcon" aria-hidden="true" />
                     <h3>Future Studies: Anticipate & Shape Tomorrow</h3>
                     <p>Foresight research and training that spot trends, assess risks, and inform resilient strategic choices.</p>
-                    <div className={styles.cardFooter}>
-                        <Link to="/vigia-futura" className={styles.cardCta} data-cta="services_future_studies">Learn more →</Link>
+                    <div className="cardFooter">
+                        <Link to="/vigia-futura" className="cardCta" data-cta="services_future_studies">Learn more →</Link>
                     </div>
                 </div>
             </div>
@@ -278,28 +275,28 @@ function ServicesSection() {
 
 function ResearchResourcesSection() {
     return (
-        <section className={styles.section} aria-labelledby="research-title">
+        <section className="section" aria-labelledby="research-title">
             <h2 id="research-title">Research + Resources</h2>
-            <p className={styles.sectionLead}>
+            <p className="sectionLead">
                 Stay current with our latest frameworks and insights shaping innovation capability and public intelligence.
             </p>
-            <div className={styles.cardGrid}>
-                <div className={styles.card}>
-                    <Lightbulb className={styles.cardIcon} />
+            <div className="cardGrid">
+                <div className="card">
+                    <Lightbulb className="cardIcon" />
                     <h3>MicroCanvas Framework v2.1</h3>
-                    <p>Our open‑source toolkit to diagnose, design, and scale innovation with clear, reusable canvases.</p>
-                    <div className={styles.cardFooter}>
-                        <Link className={styles.cardCta} to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer">
+                    <p>Our open-source toolkit to diagnose, design, and scale innovation with clear, reusable canvases.</p>
+                    <div className="cardFooter">
+                        <Link className="cardCta" to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer">
                             Visit site →
                         </Link>
                     </div>
                 </div>
-                <div className={styles.card}>
-                    <Layers className={styles.cardIcon} />
+                <div className="card">
+                    <Layers className="cardIcon" />
                     <h3>Distributed Federated Agentic AI</h3>
-                    <p>A practical blueprint for decentralized AI governance, infrastructure, and public‑value creation.</p>
-                    <div className={styles.cardFooter}>
-                        <Link className={styles.cardCta} to="/docs/research-resources/distributed-federated-agentic-ai">
+                    <p>A practical blueprint for decentralized AI governance, infrastructure, and public-value creation.</p>
+                    <div className="cardFooter">
+                        <Link className="cardCta" to="/docs/research-resources/distributed-federated-agentic-ai">
                             Read whitepaper →
                         </Link>
                     </div>
@@ -311,24 +308,24 @@ function ResearchResourcesSection() {
 
 function PrinciplesSection() {
     return (
-        <section className={styles.section} aria-labelledby="principles-title">
+        <section className="section" aria-labelledby="principles-title">
             <h2 id="principles-title">Our Principles</h2>
-            <div className={clsx(styles.cardGrid)} style={{ marginTop: '0.5rem' }}>
-                <div className={styles.card}>
+            <div className="cardGrid" style={{ marginTop: '0.5rem' }}>
+                <div className="card">
                     <h3>01. Modularity</h3>
                     <p>We design systems and processes that remain flexible, adaptable, and scalable by default.</p>
                 </div>
-                <div className={styles.card}>
+                <div className="card">
                     <h3>02. Foresight</h3>
                     <p>We help teams see beyond the present to anticipate shifts and prepare credible options.</p>
                 </div>
-                <div className={styles.card}>
+                <div className="card">
                     <h3>03. Evidence</h3>
-                    <p>We favor decisions grounded in real‑world data, user feedback, and validated learning loops.</p>
+                    <p>We favor decisions grounded in real-world data, user feedback, and validated learning loops.</p>
                 </div>
-                <div className={styles.card}>
-                    <h3>04. Co‑Creation</h3>
-                    <p>We partner deeply with clients to co‑create solutions for today’s challenges and future needs.</p>
+                <div className="card">
+                    <h3>04. Co-Creation</h3>
+                    <p>We partner deeply with clients to co-create solutions for today’s challenges and future needs.</p>
                 </div>
             </div>
         </section>
@@ -337,15 +334,15 @@ function PrinciplesSection() {
 
 function FinalCta() {
     return (
-        <section className={styles.section} aria-labelledby="cta-title">
-            <div className={styles.finalCta}>
+        <section className="section" aria-labelledby="cta-title">
+            <div className="finalCta">
                 <h2 id="cta-title">Ready to make innovation repeatable?</h2>
-                <p>Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co‑create the path forward.</p>
-                <div className={styles.heroCtas} style={{ justifyContent: 'center' }}>
-                    <Link to="/services/diagnostics" className={styles.buttonPrimary} data-cta="footer_start_diagnostic">
+                <p>Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward.</p>
+                <div className="heroCtas" style={{ justifyContent: 'center' }}>
+                    <Link to="/services/diagnostics" className="buttonPrimary" data-cta="footer_start_diagnostic">
                         Start with a diagnostic
                     </Link>
-                    <Link to="/contact" className={styles.buttonSecondary} data-cta="footer_contact">
+                    <Link to="/contact" className="buttonSecondary" data-cta="footer_contact">
                         Talk to us
                     </Link>
                 </div>

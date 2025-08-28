@@ -16,3 +16,4 @@ Infra — Removed leftover GTM/Consent code, replaced Root.tsx and ConsentBanner
 2025-08-28 — IA — Added Insights page stub with highlights and links to docs/releases.
 2025-08-28 — IA — Improved About page with canonical tag (SEO).
 2025-08-28 — IA — Added Contact page stub with next steps and email CTA.
+2025-08-28 — Web — Homepage styles consolidated into src/css/custom.css; restored centered .section wrapper & 3-up card grid.

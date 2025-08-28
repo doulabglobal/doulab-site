@@ -45,3 +45,11 @@ For daily development tasks, see the internal `CHECKLOG.md`.
   - **Contact**: email CTA, IMM journey outline, future form placeholder.
 - About page improved with canonical tag for SEO.
 
+## 2025-08-28 — Homepage CSS consolidation & “The Problem” reel
+
+- Consolidated homepage styles into src/css/custom.css; removed src/pages/index.module.css.
+- Restored centered .section wrapper and consistent 3-up .cardGrid across sections.
+- Reinstated card hover effect (lift + highlighted border).
+- “The Problem” now uses a horizontal **card reel** (scroll-snap, touch-friendly) to showcase issues.
+- Kept privacy posture intact: Cloudflare Web Analytics auto-injection only; no Google tags.
+- LCP image preload + picture (AVIF/WebP/PNG) unchanged and validated.

@@ -5,9 +5,12 @@
     "\\docs\\research-resources",
     "\\src",
     "\\src\\css",
-    "\\src\\theme",
-    "\\static"
+    "\\src\\pages\\case-studies",
+    "\\src\\pages\\insights",
+    "\\src\\pages\\what-we-do",
+    "\\static",
+    "\\static\\img"
   ],
-  "SelectedNode": "\\static\\_headers",
+  "SelectedNode": "\\docs\\releases.md",
   "PreviewInSolutionExplorer": false
 }

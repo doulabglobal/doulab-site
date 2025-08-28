@@ -1,104 +1,173 @@
-﻿import React from 'react';
+﻿import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import { CheckCircle, LineChart } from 'lucide-react';
+import Heading from '@theme/Heading';
+import {
+  PiggyBank, GraduationCap, Building2,
+  CheckCircle, LineChart
+} from 'lucide-react';
 
-export default function CaseStudies() {
-    return (
-        <Layout title="Case Studies" description="Selected projects and measurable outcomes from Doulab">
-            <Head>
-                <link rel="canonical" href="https://doulab.net/case-studies" />
-            </Head>
+export default function CaseStudies(): ReactNode {
+  return (
+    <Layout
+      title="Case Studies — Outcomes & Repeatable Delivery | Doulab"
+      description="Selected projects and measurable outcomes from Doulab, tied to IMM gates and MCF 2.1 processes."
+    >
+      <Head>
+        <link rel="canonical" href="https://doulab.net/case-studies" />
+      </Head>
 
-            <main className="container">
-                {/* Intro */}
-                <section className="section">
-                    <header className="margin-bottom--lg">
-                        <h1>Case Studies</h1>
-                        <p className="lead">
-                            Outcome-oriented snapshots tied to IMM gates and KPIs, referencing MicroCanvas® 2.1 processes for
-                            traceability and repeatability.
-                        </p>
-                        <div className="btn-row">
-                            <Link className="btn-primary" to="/contact" data-cta="cases_contact">Start a project</Link>
-                            <Link className="btn-secondary" to="/insights" data-cta="cases_insights">Read insights</Link>
-                        </div>
-                    </header>
+      <main>
+        {/* Hero */}
+        <section className="heroBanner" id="hero" aria-labelledby="cases-hero-title">
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ flex: '1 1 800px' }}>
+              <Heading as="h1" id="cases-hero-title" className="heroTitle">
+                Case Studies
+              </Heading>
+              <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
+                Outcome-oriented snapshots tied to IMM gates and KPIs.
+              </p>
+              <p className="heroText">
+                Each engagement references MicroCanvas® 2.1 processes for traceability and repeatable delivery.
+              </p>
+              <div className="heroCtas">
+                <Link className="buttonPrimary" to="/contact" data-cta="cta.cases.hero.contact">
+                  Start a project
+                </Link>
+                <Link className="buttonSecondary" to="/insights" data-cta="cta.cases.hero.insights">
+                  Read insights
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                    {/* Featured cases (placeholders to be replaced with real content) */}
-                    <div className="grid grid-3">
-                        <article className="card" aria-labelledby="cs-public-title">
-                            <h3 id="cs-public-title">Public sector innovation program</h3>
-                            <p>
-                                Portfolio design, maturity uplift, and gated decision reviews across institutions.
-                            </p>
-                            <ul>
-                                <li><strong>Gate 1:</strong> Discovery → go/no-go per initiative</li>
-                                <li><strong>Gate 2:</strong> Validation → MVP readiness & KPIs</li>
-                                <li><strong>MCF 2.1 refs:</strong> Customer Analysis, Problem Definition, Solution Framing</li>
-                            </ul>
-                            <div className="btn-row">
-                                <Link className="btn-secondary" to="/insights" data-cta="cs_public_readmore">Learn more</Link>
-                            </div>
-                        </article>
+        {/* Featured projects — homogeneous cards */}
+        <section className="section" id="featured" aria-labelledby="featured-title">
+          <h2 id="featured-title">Featured projects</h2>
+          <p className="sectionLead">A few examples showing how gates, evidence, and cadence drive results.</p>
 
-                        <article className="card" aria-labelledby="cs-edtech-title">
-                            <h3 id="cs-edtech-title">EdTech validation sprint</h3>
-                            <p>
-                                Problem/solution fit, MVP roadmap, and governance aligned with IMM gates.
-                            </p>
-                            <ul>
-                                <li><strong>Evidence:</strong> interviews, JTBD, willingness-to-pay</li>
-                                <li><strong>Gate 1:</strong> Discovery evidence pack</li>
-                                <li><strong>Gate 2:</strong> MVP scope + success metrics</li>
-                            </ul>
-                            <div className="btn-row">
-                                <Link className="btn-secondary" to="/insights" data-cta="cs_edtech_readmore">Learn more</Link>
-                            </div>
-                        </article>
+          <div className="cardGrid">
+            {/* AFP Siembra */}
+            <article className="card" aria-labelledby="cs-siembra-title">
+              <PiggyBank className="cardIcon" aria-hidden="true" />
+              <h3 id="cs-siembra-title">AFP Siembra — Alcanza &amp; SILAB</h3>
+              <p>From strategy to repeatable delivery: digital savings product plus an operating innovation lab.</p>
+              <ul>
+                <li><strong>Outcomes:</strong> product launched; lab governance &amp; cadence installed</li>
+                <li><strong>Gates:</strong> Discovery → Validation with KPIs and decision owners</li>
+              </ul>
+              <div className="cardFooter">
+                <Link
+                  className="cardCta"
+                  to="https://afpsiembra.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="cta.cases.card.siembra"
+                >
+                  Visit afpsiembra.com →
+                </Link>
+              </div>
+            </article>
 
-                        <article className="card" aria-labelledby="cs-finserv-title">
-                            <h3 id="cs-finserv-title">Financial services capacity build</h3>
-                            <p>
-                                IMM-guided culture/process build-out; product incubation with measured outcomes.
-                            </p>
-                            <ul>
-                                <li><strong>Inputs:</strong> diagnostics, OKR alignment, playbooks</li>
-                                <li><strong>Outputs:</strong> pilot launches, lab governance</li>
-                                <li><strong>KPIs:</strong> adoption, NPS, cycle time, CAC/LTV signals</li>
-                            </ul>
-                            <div className="btn-row">
-                                <Link className="btn-secondary" to="/insights" data-cta="cs_finserv_readmore">Learn more</Link>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+            {/* FUNDAPEC */}
+            <article className="card" aria-labelledby="cs-fundapec-title">
+              <GraduationCap className="cardIcon" aria-hidden="true" />
+              <h3 id="cs-fundapec-title">FUNDAPEC — Comunidad FUNDAPEC</h3>
+              <p>Alumni platform co-developed to deepen engagement and unlock new value streams.</p>
+              <ul>
+                <li><strong>Outcomes:</strong> platform launched; community programs activated</li>
+                <li><strong>Gates:</strong> Validation → MVP rollout with usage KPIs</li>
+              </ul>
+              <div className="cardFooter">
+                <Link
+                  className="cardCta"
+                  to="https://comunidad.fundapec.edu.do"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="cta.cases.card.fundapec"
+                >
+                  Visit comunidad.fundapec.edu.do →
+                </Link>
+              </div>
+            </article>
 
-                {/* Method note */}
-                <section className="section section--tight" aria-labelledby="method-title">
-                    <h2 id="method-title">How we measure</h2>
-                    <p className="lead">
-                        Each case documents the MCF 2.1 processes used, evidence produced, and IMM gate outcomes (go/no-go),
-                        creating an auditable trail from hypothesis to decision.
-                    </p>
-                    <ul>
-                        <li><CheckCircle aria-hidden="true" /> Evidence packs (research notes, artifacts, interview summaries)</li>
-                        <li><CheckCircle aria-hidden="true" /> Gate reviews with predefined criteria and owners</li>
-                        <li><LineChart aria-hidden="true" /> KPI dashboards tied to stage-appropriate goals</li>
-                    </ul>
-                </section>
+            {/* OGTIC / RedLab */}
+            <article className="card" aria-labelledby="cs-ogtic-title">
+              <Building2 className="cardIcon" aria-hidden="true" />
+              <h3 id="cs-ogtic-title">OGTIC — RedLab &amp; Capacity Building</h3>
+              <p>Scaled public-sector innovation: aligned labs, shared methods, and accelerated delivery.</p>
+              <ul>
+                <li><strong>Outcomes:</strong> 7 labs co-created; capability uplift across institutions</li>
+                <li><strong>Gates:</strong> Program checkpoints; evidence-based go/no-go per pilot</li>
+              </ul>
+              <div className="cardFooter">
+                <Link
+                  className="cardCta"
+                  to="https://ogtic.gob.do"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="cta.cases.card.ogtic"
+                >
+                  Visit ogtic.gob.do →
+                </Link>
+              </div>
+            </article>
+          </div>
+        </section>
 
-                {/* CTA */}
-                <section className="section" aria-labelledby="cta-title">
-                    <h2 id="cta-title">Have a challenge in mind?</h2>
-                    <p className="lead">We’ll scope a 12+12 week plan with clear gates and success metrics.</p>
-                    <div className="btn-row">
-                        <Link className="btn-primary" to="/contact" data-cta="cases_cta_contact">Talk to us</Link>
-                        <Link className="btn-secondary" to="/what-we-do" data-cta="cases_cta_whatwedo">What we do</Link>
-                    </div>
-                </section>
-            </main>
-        </Layout>
-    );
+        {/* How we measure — keep the same card pattern */}
+        <section className="section" id="method" aria-labelledby="method-title">
+          <h2 id="method-title">How we measure</h2>
+          <div className="cardGrid">
+            <div className="card">
+              <CheckCircle className="cardIcon" aria-hidden="true" />
+              <h3>Evidence packs</h3>
+              <p>Auditable trace from hypothesis to decision, captured as artifacts.</p>
+              <ul>
+                <li>Research notes &amp; interview summaries</li>
+                <li>Decision memos with sources</li>
+              </ul>
+            </div>
+            <div className="card">
+              <CheckCircle className="cardIcon" aria-hidden="true" />
+              <h3>Gate reviews</h3>
+              <p>Predefined criteria &amp; owners ensure clarity at every checkpoint.</p>
+              <ul>
+                <li>Go/No-Go based on evidence</li>
+                <li>Accountable owners &amp; cadence</li>
+              </ul>
+            </div>
+            <div className="card">
+              <LineChart className="cardIcon" aria-hidden="true" />
+              <h3>KPI dashboards</h3>
+              <p>Stage-appropriate metrics track learning and delivery velocity.</p>
+              <ul>
+                <li>Adoption, NPS, cycle time</li>
+                <li>CAC/LTV &amp; viability signals</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA — shared pattern */}
+        <section className="section" id="cta" aria-labelledby="cta-title">
+          <div className="finalCta">
+            <h2 id="cta-title">Have a challenge in mind?</h2>
+            <p>We’ll scope a 12+12 week plan with clear gates and success metrics.</p>
+            <div className="heroCtas" style={{ justifyContent: 'center' }}>
+              <Link className="buttonPrimary" to="/contact" data-cta="cta.cases.final.contact">
+                Talk to us
+              </Link>
+              <Link className="buttonSecondary" to="/what-we-do" data-cta="cta.cases.final.whatwedo">
+                What we do
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
 }

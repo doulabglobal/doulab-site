@@ -1,52 +1,239 @@
-﻿import React from 'react';
+﻿// src/pages/contact/index.tsx
+import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import Link from '@docusaurus/Link';
+import {
+  PhoneCall,
+  Mail,
+  CalendarCheck,
+  ClipboardList,
+  ShieldCheck,
+  Clock,
+} from 'lucide-react';
 
-export default function Contact() {
-    return (
-        <Layout title="Contact" description="Get in touch with Doulab">
-            <Head>
-                <link rel="canonical" href="https://doulab.net/contact" />
-            </Head>
+/** Update if needed */
+const EMAIL = 'hello@doulab.net';
 
-            <main className="container margin-vert--lg">
-                <header className="margin-bottom--lg">
-                    <h1>Contact</h1>
-                    <p>Tell us about your goals. We’ll propose an IMM journey with clear gates and KPIs.</p>
-                </header>
+export default function Contact(): ReactNode {
+  const contactSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Doulab',
+    url: 'https://doulab.net/contact',
+    mainEntityOfPage: 'https://doulab.net/contact',
+    about: {
+      '@type': 'Organization',
+      name: 'Doulab',
+      url: 'https://doulab.net',
+    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        contactType: 'Business',
+        email: EMAIL,
+        availableLanguage: ['en', 'es'],
+      },
+    ],
+  };
 
-                <section aria-labelledby="write-to-us" className="margin-bottom--lg">
-                    <h2 id="write-to-us">Write to us</h2>
-                    <p>
-                        Email: <a href="mailto:hello@doulab.net">hello@doulab.net</a>
-                    </p>
-                    <p>We aim to reply within 2 business days.</p>
-                </section>
+  return (
+    <Layout
+      title="Contact — Doulab"
+      description="Start a discovery call or send us a brief. Privacy-first, no third-party forms."
+    >
+      <Head>
+        <link rel="canonical" href="https://doulab.net/contact" />
+        <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
+      </Head>
 
-                <section aria-labelledby="next-steps">
-                    <h2 id="next-steps">Next steps</h2>
-                    <ul>
-                        <li>Optional 20-minute discovery call to align on objectives.</li>
-                        <li>Light diagnostic to baseline current maturity (MCF 2.1 + IMM).</li>
-                        <li>Proposal with a 12+12 week plan (Discovery/Validation → Efficiency/Scale).</li>
-                    </ul>
-                </section>
+      <main>
+        {/* Hero */}
+        <section className="heroBanner" aria-labelledby="contact-hero-title">
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ flex: '1 1 820px' }}>
+              <h1 id="contact-hero-title" className="heroTitle">Contact Doulab</h1>
+              <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
+                Let’s scope a 20-minute discovery call.
+              </p>
+              <p className="heroText">
+                We’re privacy-first: no external forms or ad pixels. Email us or share a brief — we’ll propose clear next steps.
+                <br />We aim to reply within <strong>2 business days</strong>.
+              </p>
+              <div className="heroCtas">
+                <a
+                  className="buttonPrimary"
+                  href={`mailto:${EMAIL}?subject=Discovery%20call%20request&body=Hi%20Doulab%2C%20I%27d%20like%20to%20book%20a%2020-min%20discovery%20call.%20My%20goal%20is%20...`}
+                  data-cta="cta.contact.hero.email"
+                  aria-label="Email Doulab to request a discovery call"
+                >
+                  <Mail aria-hidden="true" style={{ width: 18, height: 18 }} />
+                  Email us
+                </a>
+                <Link
+                  className="buttonSecondary"
+                  to="/what-we-do"
+                  data-cta="cta.contact.hero.whatwedo"
+                >
+                  <ClipboardList aria-hidden="true" style={{ width: 18, height: 18 }} />
+                  What we do
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                {/* Future: privacy-first form (when ready)
-          <section aria-labelledby="contact-form" className="margin-top--lg">
-            <h2 id="contact-form">Send a message</h2>
-            <form method="post" action="/api/contact">
-              <label htmlFor="name">Name</label>
-              <input id="name" name="name" required />
-              <label htmlFor="email">Email</label>
-              <input id="email" name="email" type="email" required />
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows={6} required />
-              <button type="submit">Send</button>
-            </form>
-          </section>
-        */}
-            </main>
-        </Layout>
-    );
+        {/* Contact options */}
+        <section className="section" id="options" aria-labelledby="options-title">
+          <h2 id="options-title">How to reach us</h2>
+          <p className="sectionLead">
+            Choose what works best for you — each option keeps your data private and gets you to a clear next step.
+          </p>
+
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="opt-discovery">
+              <CalendarCheck className="cardIcon" aria-hidden="true" />
+              <h3 id="opt-discovery">Book a discovery call</h3>
+              <p>20-minute intro to align on goals, scope, and constraints.</p>
+              <ul>
+                <li>Outcome: initial direction + next steps</li>
+                <li>Follow-up: written summary within 2 business days</li>
+              </ul>
+              <div className="cardFooter">
+                <a
+                  className="cardCta"
+                  href={`mailto:${EMAIL}?subject=Discovery%20call%20request&body=Hi%20Doulab%2C%20Context%3A%20...`}
+                  data-cta="cta.contact.card.discovery_email"
+                  aria-label="Email to request a discovery call time"
+                >
+                  Email for a time →
+                </a>
+              </div>
+            </article>
+
+            <article className="card" aria-labelledby="opt-brief">
+              <ClipboardList className="cardIcon" aria-hidden="true" />
+              <h3 id="opt-brief">Send a short brief</h3>
+              <p>Share your context: goals, timelines, stakeholders, constraints.</p>
+              <ul>
+                <li>Outcome: tailored options within 3–5 business days</li>
+                <li>Format: email or slide deck — your choice</li>
+              </ul>
+              <div className="cardFooter">
+                <a
+                  className="cardCta"
+                  href={`mailto:${EMAIL}?subject=Project%20brief&body=Goal%3A%0ATimeline%3A%0AStakeholders%3A%0AConstraints%3A%0ASuccess%20metrics%3A%0A`}
+                  data-cta="cta.contact.card.brief_email"
+                  aria-label="Email your project brief"
+                >
+                  Email your brief →
+                </a>
+              </div>
+            </article>
+
+            <article className="card" aria-labelledby="opt-privacy">
+              <ShieldCheck className="cardIcon" aria-hidden="true" />
+              <h3 id="opt-privacy">Privacy &amp; security</h3>
+              <p>We keep things simple and private by default.</p>
+              <ul>
+                <li>No Google tags or ad pixels</li>
+                <li>Cloudflare Web Analytics only</li>
+              </ul>
+              <div className="cardFooter">
+                <Link
+                  className="cardCta"
+                  to="/docs/releases"
+                  data-cta="cta.contact.card.privacy_more"
+                >
+                  See what changed →
+                </Link>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* What to expect */}
+        <section className="section" id="process" aria-labelledby="process-title">
+          <h2 id="process-title">What to expect</h2>
+          <p className="sectionLead">A light, gated path to clarity. You’ll always know what’s next.</p>
+
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="step1">
+              <Clock className="cardIcon" aria-hidden="true" />
+              <h3 id="step1">1) Discovery (20 minutes)</h3>
+              <p>Share goals, constraints, and timing; align on success criteria.</p>
+              <ul>
+                <li>Output: summary + proposed next steps</li>
+                <li>Owner: your sponsor + Doulab lead</li>
+              </ul>
+            </article>
+
+            <article className="card" aria-labelledby="step2">
+              <ClipboardList className="cardIcon" aria-hidden="true" />
+              <h3 id="step2">2) Light diagnostic</h3>
+              <p>Quick baseline (MCF 2.1 + IMM®) to pinpoint capability gaps.</p>
+              <ul>
+                <li>Output: findings + options</li>
+                <li>Owner: joint working session</li>
+              </ul>
+            </article>
+
+            <article className="card" aria-labelledby="step3">
+              <PhoneCall className="cardIcon" aria-hidden="true" />
+              <h3 id="step3">3) Proposal (12+12 weeks)</h3>
+              <p>Phased plan with clear gates and measurable outcomes.</p>
+              <ul>
+                <li>Output: plan, cadence, owners</li>
+                <li>Owner: exec sponsor + Doulab PM</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section" id="faq" aria-labelledby="faq-title">
+          <h2 id="faq-title">FAQ</h2>
+          <div className="cardGrid">
+            <article className="card">
+              <h3>How soon can we start?</h3>
+              <p>Discovery can happen this week; proposals typically ship within 3–5 business days after a light diagnostic.</p>
+            </article>
+            <article className="card">
+              <h3>Do you work with public and private sectors?</h3>
+              <p>Yes. We often operate in public–private settings where shared standards and capacity building matter.</p>
+            </article>
+            <article className="card">
+              <h3>What about data privacy?</h3>
+              <p>We avoid ad pixels and third-party forms. Cloudflare Web Analytics is auto-injected; that’s it.</p>
+            </article>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="section" aria-labelledby="cta-title">
+          <div className="finalCta">
+            <h2 id="cta-title">Ready to talk?</h2>
+            <p>Send a brief or book a quick discovery call. We’ll propose a practical path forward.</p>
+            <div className="heroCtas" style={{ justifyContent: 'center' }}>
+              <a
+                className="buttonPrimary"
+                href={`mailto:${EMAIL}?subject=Discovery%20call%20request`}
+                data-cta="cta.contact.final.email"
+                aria-label="Email Doulab to request a discovery call"
+              >
+                Email us
+              </a>
+              <Link
+                className="buttonSecondary"
+                to="/what-we-do"
+                data-cta="cta.contact.final.whatwedo"
+              >
+                See what we do
+              </Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
 }

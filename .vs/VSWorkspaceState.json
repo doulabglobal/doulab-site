@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs",
-    "\\docs\\research-resources",
+    "\\build\\blog",
     "\\src",
-    "\\src\\css",
-    "\\src\\pages\\case-studies",
+    "\\src\\pages",
+    "\\src\\pages\\about",
+    "\\src\\pages\\contact",
     "\\src\\pages\\insights",
+    "\\src\\pages\\services",
     "\\src\\pages\\what-we-do",
-    "\\static",
-    "\\static\\img"
+    "\\static"
   ],
-  "SelectedNode": "\\docs\\releases.md",
+  "SelectedNode": "\\src\\pages\\services\\index.tsx",
   "PreviewInSolutionExplorer": false
 }

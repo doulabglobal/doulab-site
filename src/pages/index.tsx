@@ -1,13 +1,16 @@
-﻿import React, { type ReactNode } from 'react';
+﻿// Applies: hero meta/title tweak, Problem reel + a11y/controls, numbers strip, case study teaser,
+// consistent data-cta attributes, and small a11y/perf niceties (decoding/lazy where applicable).
+import React, {type ReactNode, useEffect, useMemo, useRef, useState} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
 import Head from '@docusaurus/Head';
-import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
+import {useAllDocsData} from '@docusaurus/plugin-content-docs/client';
 import {
-    Search, Layers, Lightbulb, Users, Radar,
-    AlertTriangle, FileWarning, EyeOff, CircleSlash, UserX, AlertOctagon, Frown, LineChart, Eye
+  Search, Layers, Lightbulb, Users, Radar,
+  AlertTriangle, FileWarning, EyeOff, CircleSlash, UserX, AlertOctagon, Frown, LineChart, Eye,
+  ChevronLeft, ChevronRight
 } from 'lucide-react';
 
 /** Minimal types for docs data to avoid TS errors */
@@ -15,355 +18,469 @@ type DocMeta = { id: string; title: string; description?: string; permalink: str
 type DocsVersion = { isLast?: boolean; docs: DocMeta[] };
 type DocsPluginData = { versions: DocsVersion[] };
 
+/** Hook: user preference for reduced motion (used for reel scroll behavior) */
+function usePrefersReducedMotion() {
+  const [prefers, setPrefers] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined' || !('matchMedia' in window)) return;
+    const m = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const update = () => setPrefers(!!m.matches);
+    update();
+    m.addEventListener?.('change', update);
+    return () => m.removeEventListener?.('change', update);
+  }, []);
+  return prefers;
+}
+
 function LatestWhitepapersSection() {
-    const allDocsData = useAllDocsData();
-    const docsPluginData = (allDocsData?.['default'] as unknown as DocsPluginData | undefined);
-    const latestVersion =
-        docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
-    const docs = latestVersion?.docs ?? [];
-    const whitepapers = docs.filter((doc) => (doc.tags ?? []).includes('whitepaper'));
-    const sorted = whitepapers.sort((a, b) => b.id.localeCompare(a.id)).slice(0, 3);
+  const allDocsData = useAllDocsData();
+  const docsPluginData = (allDocsData?.['default'] as unknown as DocsPluginData | undefined);
+  const latestVersion =
+    docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
+  const docs = latestVersion?.docs ?? [];
+  const whitepapers = docs.filter((doc) => (doc.tags ?? []).includes('whitepaper'));
+  const sorted = whitepapers.sort((a, b) => b.id.localeCompare(a.id)).slice(0, 3);
 
-    if (!sorted.length) return null;
+  if (!sorted.length) return null;
 
-    return (
-        <section className="section" aria-labelledby="latest-whitepapers-title">
-            <h2 id="latest-whitepapers-title">Latest Whitepapers</h2>
-            <div className="cardReel">
-                {sorted.map((paper) => (
-                    <div key={paper.permalink} className="card">
-                        <h3>{paper.title}</h3>
-                        {paper.description && <p>{paper.description}</p>}
-                        <div className="cardFooter">
-                            <Link className="cardCta" to={paper.permalink} aria-label={`Read ${paper.title}`}>
-                                Read paper →
-                            </Link>
-                        </div>
-                    </div>
-                ))}
+  return (
+    <section className="section" id="latest-whitepapers" aria-labelledby="latest-whitepapers-title">
+      <h2 id="latest-whitepapers-title">Latest Whitepapers</h2>
+      <div className="cardGrid">
+        {sorted.map((paper) => (
+          <div key={paper.permalink} className="card">
+            <h3>{paper.title}</h3>
+            {paper.description && <p>{paper.description}</p>}
+            <div className="cardFooter">
+              <Link className="cardCta" to={paper.permalink} data-cta="cta.home.latest_whitepaper.read" aria-label={`Read ${paper.title}`}>
+                Read paper →
+              </Link>
             </div>
-        </section>
-    );
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 function HomepageHero() {
-    const { siteConfig } = useDocusaurusContext();
-    return (
-        <section className="heroBanner" aria-labelledby="home-hero-title">
-            <Head>
-                {/* Preload the current LCP image (PNG). When AVIF/WEBP files exist, the browser will still pick best source. */}
-                <link
-                    rel="preload"
-                    as="image"
-                    href="/img/people-collage.png"
-                    imageSrcSet="/img/people-collage.avif 1x, /img/people-collage.webp 1x, /img/people-collage.png 1x"
-                    imageSizes="(max-width: 600px) 100vw, 600px"
-                />
-            </Head>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-                    <Heading as="h1" id="home-hero-title" className="heroTitle">
-                        {siteConfig.title}
-                    </Heading>
-                    <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
-                        Future studies, innovation ecosystems, and personalized mentoring and coaching to help shape tomorrow.
-                    </p>
-                    <p className="heroText">
-                        We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes.
-                    </p>
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <section className="heroBanner" id="hero" aria-labelledby="home-hero-title">
+      <Head>
+        {/* Preload the current LCP image (PNG). When AVIF/WEBP files exist, the browser will still pick best source. */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/people-collage.png"
+          imageSrcSet="/img/people-collage.avif 1x, /img/people-collage.webp 1x, /img/people-collage.png 1x"
+          imageSizes="(max-width: 600px) 100vw, 600px"
+        />
+      </Head>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
+          <Heading as="h1" id="home-hero-title" className="heroTitle">
+            {siteConfig.title}
+          </Heading>
+          <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
+            Innovation architecture, foresight, and personalized mentoring & coaching to help shape tomorrow.
+          </p>
+          <p className="heroText">
+            We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes.
+          </p>
 
-                    <div className="heroCtas">
-                        <Link to="/services" className="buttonPrimary" data-cta="home_hero_services">
-                            Explore our services
-                        </Link>
-                        <Link to="/contact" className="buttonSecondary" data-cta="home_hero_contact">
-                            Book a discovery call
-                        </Link>
-                    </div>
-                </div>
-                <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-                    <picture>
-                        {/* Optional next-gen sources (add files under /static/img/) */}
-                        <source srcSet="/img/people-collage.avif" type="image/avif" />
-                        <source srcSet="/img/people-collage.webp" type="image/webp" />
-                        <img
-                            src="/img/people-collage.png"
-                            alt="Futures, innovation, and intelligence"
-                            className="heroImage"
-                            loading="eager"
-                            fetchPriority="high"
-                            width="600"
-                            height="400"
-                        />
-                    </picture>
-                </div>
-            </div>
-        </section>
-    );
+          <div className="heroCtas">
+            <Link to="/services" className="buttonPrimary" data-cta="cta.home.hero.explore_services">
+              Explore our services
+            </Link>
+            <Link to="/contact" className="buttonSecondary" data-cta="cta.home.hero.book_call">
+              Book a discovery call
+            </Link>
+          </div>
+        </div>
+        <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
+          <picture>
+            {/* Optional next-gen sources (add files under /static/img/) */}
+            <source srcSet="/img/people-collage.avif" type="image/avif" />
+            <source srcSet="/img/people-collage.webp" type="image/webp" />
+            <img
+              src="/img/people-collage.png"
+              alt="Futures, innovation, and intelligence"
+              className="heroImage"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width="600"
+              height="400"
+            />
+          </picture>
+        </div>
+      </div>
+    </section>
+  );
 }
 
-// ========== Sections (with horizontal reel for The Problem) ==========
+// ========== Sections ==========
 function ProblemSection() {
-    const problems = [
-        {
-            icon: <AlertTriangle className="cardIcon" />,
-            cause: 'Innovation isn’t embedded as a cultural value',
-            effect: 'Change meets resistance; efforts feel sporadic and engagement stays low.',
-            metric: 'Global engagement ~20–23%, indicating persistent culture headwinds.',
-            sourceHref: 'https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx',
-            sourceLabel: 'Gallup — State of the Global Workplace 2024',
-            pillar: 'Culture + Innovation Mindset',
-        },
-        {
-            icon: <FileWarning className="cardIcon" />,
-            cause: 'Strategy is treated as a static document',
-            effect: 'Short-term pivots multiply; OKRs drift and teams lose direction.',
-            metric: 'Roughly 70% of employees report misalignment with strategy.',
-            sourceHref: 'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
-            sourceLabel: 'Forbes — When strategy fails to land',
-            pillar: 'Planning Mindset + Leadership Development',
-        },
-        {
-            icon: <EyeOff className="cardIcon" />,
-            cause: 'Decisions lack reliable evidence and testing',
-            effect: 'ROI suffers as opinions outrun data and validated learning.',
-            metric: 'Data-driven orgs are far more likely to improve decisions.',
-            sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-            sourceLabel: 'Harvard Business School Online — Data-driven decisions',
-            pillar: 'Evidence-Based Decision-Making',
-        },
-        {
-            icon: <CircleSlash className="cardIcon" />,
-            cause: 'Innovation leadership lacks ownership and cadence',
-            effect: 'Projects stall, alignment slips, and dependency risks increase.',
-            metric: 'Transformations fail without visible leadership and governance.',
-            sourceHref: 'https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson',
-            sourceLabel: 'McKinsey — Why transformations fail',
-            pillar: 'Leadership & Innovation Governance',
-        },
-        {
-            icon: <UserX className="cardIcon" />,
-            cause: 'Rigid hierarchies and outdated skill structures',
-            effect: 'Cycles slow down and teams detach from real user needs.',
-            metric: 'Greater autonomy correlates with higher productivity and ownership.',
-            sourceHref: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00963/full',
-            sourceLabel: 'Frontiers — Autonomy & productivity',
-            pillar: 'Talent + HR Structure + Employee Experience',
-        },
-        {
-            icon: <AlertOctagon className="cardIcon" />,
-            cause: 'Core processes can’t scale or adapt reliably',
-            effect: 'Costs creep, burnout rises, and delivery becomes inconsistent.',
-            metric: 'Scaling well requires deliberate operating-model redesign.',
-            sourceHref: 'https://www.bain.com/insights/scaling-software-companies-path-to-%241B-in-revenue/',
-            sourceLabel: 'Bain — Scaling patterns & pitfalls',
-            pillar: 'Scalable + Sustainable Processes',
-        },
-        {
-            icon: <Frown className="cardIcon" />,
-            cause: 'Customer insights aren’t integrated into delivery',
-            effect: 'Offers drift from real needs; value is left on the table.',
-            metric: 'US CX quality has declined for three consecutive years.',
-            sourceHref: 'https://www.forrester.com/blogs/us-cx-index-2024-results/',
-            sourceLabel: 'Forrester — 2024 CX Index',
-            pillar: 'Customer Journey + CX Maturity',
-        },
-        {
-            icon: <LineChart className="cardIcon" />,
-            cause: 'Limited visibility into capabilities and resources',
-            effect: 'Assumptions drive bets; truth is scattered across systems.',
-            metric: 'Interoperability enables a single, trusted data backbone.',
-            sourceHref: 'https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf',
-            sourceLabel: 'Accenture — Value Untangled (PDF)',
-            pillar: 'Business Intelligence Maturity',
-        },
-        {
-            icon: <Eye className="cardIcon" />,
-            cause: 'Foresight is missing from the planning cycle',
-            effect: 'Teams react to shocks instead of shaping possible futures.',
-            metric: 'Foresight improves resilience and long-term performance.',
-            sourceHref: 'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
-            sourceLabel: 'WEF — Why foresight matters',
-            pillar: 'Foresight + Strategic Anticipation',
-        },
-    ];
+  const prefersReduced = usePrefersReducedMotion();
+  const reelRef = useRef<HTMLDivElement | null>(null);
+  const reelId = 'problem-reel';
 
-    return (
-        <section className="section" aria-labelledby="problem-title">
-            <h2 id="problem-title">The Problem</h2>
-            <p className="sectionLead">
-                <strong>Entrepreneurship</strong> and <strong>innovation</strong> are <strong>hard</strong>, until you make them a <strong>repeatable process</strong>.
-                Below are some of the most common problems we’ve seen across startups and organizations, based on our work with them:
-            </p>
-            {/* Horizontal reel */}
-            <div className="cardReel" role="list" aria-label="Common problems">
-                {problems.map((item, idx) => (
-                    <div className="card" role="listitem" key={idx} style={{ borderLeft: '4px solid var(--dl-indigo)' }}>
-                        <div>{item.icon}</div>
-                        <h3>{item.cause}</h3>
-                        <p><strong>{item.effect}</strong></p>
-                        <p><em>{item.metric}</em></p>
-                        <p><a href={item.sourceHref} target="_blank" rel="noopener noreferrer">{item.sourceLabel}</a></p>
-                        <p><strong>{item.pillar}</strong></p>
-                    </div>
-                ))}
+  const scrollByAmount = (dir: 'prev'|'next') => {
+    const el = reelRef.current;
+    if (!el) return;
+    const amount = Math.max(280, el.clientWidth * 0.9) * (dir === 'prev' ? -1 : 1);
+    el.scrollBy({ left: amount, behavior: prefersReduced ? 'auto' : 'smooth' });
+  };
+
+  const problems = useMemo(() => ([
+    {
+      icon: <AlertTriangle className="cardIcon" aria-hidden="true" />,
+      cause: 'Innovation isn’t embedded as a cultural value',
+      effect: 'Change meets resistance; efforts feel sporadic and engagement stays low.',
+      metric: 'Global engagement ~20–23%, indicating persistent culture headwinds.',
+      sourceHref: 'https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx',
+      sourceLabel: 'Gallup — State of the Global Workplace 2024',
+      pillar: 'Culture + Innovation Mindset',
+    },
+    {
+      icon: <FileWarning className="cardIcon" aria-hidden="true" />,
+      cause: 'Strategy is treated as a static document',
+      effect: 'Short-term pivots multiply; OKRs drift and teams lose direction.',
+      metric: 'Roughly 70% of employees report misalignment with strategy.',
+      sourceHref: 'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
+      sourceLabel: 'Forbes — When strategy fails to land',
+      pillar: 'Planning Mindset + Leadership Development',
+    },
+    {
+      icon: <EyeOff className="cardIcon" aria-hidden="true" />,
+      cause: 'Decisions lack reliable evidence and testing',
+      effect: 'ROI suffers as opinions outrun data and validated learning.',
+      metric: 'Data-driven orgs are far more likely to improve decisions.',
+      sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
+      sourceLabel: 'Harvard Business School Online — Data-driven decisions',
+      pillar: 'Evidence-Based Decision-Making',
+    },
+    {
+      icon: <CircleSlash className="cardIcon" aria-hidden="true" />,
+      cause: 'Innovation leadership lacks ownership and cadence',
+      effect: 'Projects stall, alignment slips, and dependency risks increase.',
+      metric: 'Transformations fail without visible leadership and governance.',
+      sourceHref: 'https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson',
+      sourceLabel: 'McKinsey — Why transformations fail',
+      pillar: 'Leadership & Innovation Governance',
+    },
+    {
+      icon: <UserX className="cardIcon" aria-hidden="true" />,
+      cause: 'Rigid hierarchies and outdated skill structures',
+      effect: 'Cycles slow down and teams detach from real user needs.',
+      metric: 'Greater autonomy correlates with higher productivity and ownership.',
+      sourceHref: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00963/full',
+      sourceLabel: 'Frontiers — Autonomy & productivity',
+      pillar: 'Talent + HR Structure + Employee Experience',
+    },
+    {
+      icon: <AlertOctagon className="cardIcon" aria-hidden="true" />,
+      cause: 'Core processes can’t scale or adapt reliably',
+      effect: 'Costs creep, burnout rises, and delivery becomes inconsistent.',
+      metric: 'Scaling well requires deliberate operating-model redesign.',
+      sourceHref: 'https://www.bain.com/insights/scaling-software-companies-path-to-%241B-in-revenue/',
+      sourceLabel: 'Bain — Scaling patterns & pitfalls',
+      pillar: 'Scalable + Sustainable Processes',
+    },
+    {
+      icon: <Frown className="cardIcon" aria-hidden="true" />,
+      cause: 'Customer insights aren’t integrated into delivery',
+      effect: 'Offers drift from real needs; value is left on the table.',
+      metric: 'US CX quality has declined for three consecutive years.',
+      sourceHref: 'https://www.forrester.com/blogs/us-cx-index-2024-results/',
+      sourceLabel: 'Forrester — 2024 CX Index',
+      pillar: 'Customer Journey + CX Maturity',
+    },
+    {
+      icon: <LineChart className="cardIcon" aria-hidden="true" />,
+      cause: 'Limited visibility into capabilities and resources',
+      effect: 'Assumptions drive bets; truth is scattered across systems.',
+      metric: 'Interoperability enables a single, trusted data backbone.',
+      sourceHref: 'https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf',
+      sourceLabel: 'Accenture — Value Untangled (PDF)',
+      pillar: 'Business Intelligence Maturity',
+    },
+    {
+      icon: <Eye className="cardIcon" aria-hidden="true" />,
+      cause: 'Foresight is missing from the planning cycle',
+      effect: 'Teams react to shocks instead of shaping possible futures.',
+      metric: 'Foresight improves resilience and long-term performance.',
+      sourceHref: 'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
+      sourceLabel: 'WEF — Why foresight matters',
+      pillar: 'Foresight + Strategic Anticipation',
+    },
+  ]), []);
+
+  return (
+    <section className="section" id="problems" aria-labelledby="problem-title">
+      <h2 id="problem-title">The Problem</h2>
+      <p className="sectionLead">
+        <strong>Entrepreneurship</strong> and <strong>innovation</strong> are <strong>hard</strong>, until you make them a <strong>repeatable process</strong>.
+        Below are some of the most common problems we’ve seen across startups and organizations, based on our work with them:
+      </p>
+
+      {/* Horizontal reel with a11y + controls */}
+      <div style={{display:'flex', alignItems:'center', gap:'.5rem'}}>
+        <button
+          type="button"
+          className="buttonSecondary"
+          aria-controls={reelId}
+          aria-label="Scroll problems left"
+          data-cta="cta.home.problem.prev"
+          onClick={() => scrollByAmount('prev')}
+        >
+          <ChevronLeft size={18} aria-hidden="true" /> Prev
+        </button>
+
+        <div
+          id={reelId}
+          ref={reelRef}
+          className="cardReel"
+          role="group"
+          aria-roledescription="carousel"
+          aria-label="Common problems carousel"
+          tabIndex={0}
+        >
+          {problems.map((item, idx) => (
+            <div className="card" role="group" aria-roledescription="slide" key={idx} style={{ borderLeft: '4px solid var(--dl-indigo)' }}>
+              <div>{item.icon}</div>
+              <h3>{item.cause}</h3>
+              <p><strong>{item.effect}</strong></p>
+              <p><em>{item.metric}</em></p>
+              <p><a href={item.sourceHref} target="_blank" rel="noopener noreferrer">{item.sourceLabel}</a></p>
+              <p><strong>{item.pillar}</strong></p>
             </div>
-            <p className="sectionLead">
-                If you identify with several of these, we can help. Explore how we reduce risk and accelerate outcomes:
-            </p>
-        </section>
-    );
+          ))}
+        </div>
+
+        <button
+          type="button"
+          className="buttonPrimary"
+          aria-controls={reelId}
+          aria-label="Scroll problems right"
+          data-cta="cta.home.problem.next"
+          onClick={() => scrollByAmount('next')}
+        >
+          Next <ChevronRight size={18} aria-hidden="true" />
+        </button>
+      </div>
+
+      <p className="microcopy" aria-hidden="true">Hint: scroll horizontally →</p>
+
+      <p className="sectionLead">
+        If you identify with several of these, we can help. Explore how we reduce risk and accelerate outcomes:
+      </p>
+    </section>
+  );
 }
 
 function ServicesSection() {
-    return (
-        <section className="section" id="services" aria-labelledby="services-title">
-            <h2 id="services-title">Our Service Pillars</h2>
-            <p className="sectionLead">This is how we help you mitigate these problems:</p>
-            <p className="microcopy">We design systems and processes that are flexible, adaptable, and scalable by default.</p>
-            <p className="microcopy">We work across sectors to co-create solutions with you—for today’s needs and tomorrow’s shifts.</p>
+  return (
+    <section className="section" id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Our Service Pillars</h2>
+      <p className="sectionLead">This is how we help you mitigate these problems:</p>
+      <p className="microcopy">We design systems and processes that are flexible, adaptable, and scalable by default.</p>
+      <p className="microcopy">We work across sectors to co-create solutions with you—for today’s needs and tomorrow’s shifts.</p>
 
-            <div className="cardGrid">
-                <div className="card">
-                    <Search className="cardIcon" aria-hidden="true" />
-                    <h3>Diagnostics: Know Where You Stand</h3>
-                    <p>Quickly map innovation maturity and pinpoint capability gaps with evidence-based tools like ClarityScan®.</p>
-                    <div className="cardFooter">
-                        <Link to="/services/diagnostics" className="cardCta" data-cta="services_diagnostics">Explore diagnostics →</Link>
-                    </div>
-                </div>
+      <div className="cardGrid">
+        <div className="card">
+          <Search className="cardIcon" aria-hidden="true" />
+          <h3>Diagnostics: Know Where You Stand</h3>
+          <p>Quickly map innovation maturity and pinpoint capability gaps with evidence-based tools like ClarityScan®.</p>
+          <div className="cardFooter">
+            <Link to="/services/diagnostics" className="cardCta" data-cta="cta.home.services.diagnostics">Explore diagnostics →</Link>
+          </div>
+        </div>
 
-                <div className="card">
-                    <Lightbulb className="cardIcon" aria-hidden="true" />
-                    <h3>Workshops: Spark Aligned Action</h3>
-                    <p>Highly focused sessions that align teams, unlock decisions, and turn strategy into practical next steps.</p>
-                    <div className="cardFooter">
-                        <Link to="/services/custom-workshops" className="cardCta" data-cta="services_workshops">Explore workshops →</Link>
-                    </div>
-                </div>
+        <div className="card">
+          <Lightbulb className="cardIcon" aria-hidden="true" />
+          <h3>Workshops: Spark Aligned Action</h3>
+          <p>Highly focused sessions that align teams, unlock decisions, and turn strategy into practical next steps.</p>
+          <div className="cardFooter">
+            <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.home.services.workshops">Explore workshops →</Link>
+          </div>
+        </div>
 
-                <div className="card">
-                    <Layers className="cardIcon" aria-hidden="true" />
-                    <h3>Programs: Build Innovation Capacity</h3>
-                    <p>Structured journeys—like IMM—that install culture, process, and metrics to scale innovation reliably.</p>
-                    <div className="cardFooter">
-                        <Link to="/services/innovation-maturity" className="cardCta" data-cta="services_programs">Explore programs →</Link>
-                    </div>
-                </div>
+        <div className="card">
+          <Layers className="cardIcon" aria-hidden="true" />
+          <h3>Programs: Build Innovation Capacity</h3>
+          <p>Structured journeys—like IMM—that install culture, process, and metrics to scale innovation reliably.</p>
+          <div className="cardFooter">
+            <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.home.services.programs">Explore programs →</Link>
+          </div>
+        </div>
 
-                <div className="card">
-                    <Users className="cardIcon" aria-hidden="true" />
-                    <h3>Coaching & Mentoring: Personalized Guidance</h3>
-                    <p>Targeted 1:1 or group support to remove blockers, sustain momentum, and build internal capability.</p>
-                    <div className="cardFooter">
-                        <Link to="/services/coaching-mentoring" className="cardCta" data-cta="services_coaching">Explore coaching & mentoring →</Link>
-                    </div>
-                </div>
+        <div className="card">
+          <Users className="cardIcon" aria-hidden="true" />
+          <h3>Coaching & Mentoring: Personalized Guidance</h3>
+          <p>Targeted 1:1 or group support to remove blockers, sustain momentum, and build internal capability.</p>
+          <div className="cardFooter">
+            <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">Explore coaching & mentoring →</Link>
+          </div>
+        </div>
 
-                <div className="card">
-                    <Radar className="cardIcon" aria-hidden="true" />
-                    <h3>Future Studies: Anticipate & Shape Tomorrow</h3>
-                    <p>Foresight research and training that spot trends, assess risks, and inform resilient strategic choices.</p>
-                    <div className="cardFooter">
-                        <Link to="/vigia-futura" className="cardCta" data-cta="services_future_studies">Learn more →</Link>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+        <div className="card">
+          <Radar className="cardIcon" aria-hidden="true" />
+          <h3>Future Studies: Anticipate & Shape Tomorrow</h3>
+          <p>Foresight research and training that spot trends, assess risks, and inform resilient strategic choices.</p>
+          <div className="cardFooter">
+            <Link to="/vigia-futura" className="cardCta" data-cta="cta.home.services.futures">Learn more →</Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function NumbersStrip() {
+  const items = [
+    {kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners (2024)'},
+    {kpi: '25+', label: 'institutions/year supported', note: 'program capacity from 2025 onward'},
+    {kpi: '2–4×/week', label: 'sessions delivered for 12 months', note: 'scaled capability build-out'},
+  ];
+  return (
+    <section className="section" id="proof-numbers" aria-labelledby="numbers-title">
+      <h2 id="numbers-title">Proof / Numbers</h2>
+      <div className="cardGrid">
+        {items.map((x, i) => (
+          <div className="card" key={i}>
+            <h3 style={{fontSize:'1.75rem', marginBottom:'.25rem'}}>{x.kpi}</h3>
+            <p style={{marginBottom:'.25rem'}}><strong>{x.label}</strong></p>
+            <p className="microcopy">{x.note}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function CaseStudiesTeaser() {
+  return (
+    <section className="section" id="case-studies" aria-labelledby="case-studies-title">
+      <h2 id="case-studies-title">Case Studies</h2>
+      <div className="cardGrid">
+        <div className="card">
+          <h3>AFP Siembra — Alcanza & SILAB</h3>
+          <p>From strategy to repeatable delivery: designed a digital savings product and co-created an innovation lab.</p>
+          <div className="cardFooter">
+            <Link className="cardCta" to="https://afpsiembra.com" target="_blank" rel="noopener noreferrer" data-cta="cta.home.cases.siembra">
+              Visit afpsiembra.com →
+            </Link>
+          </div>
+        </div>
+        <div className="card">
+          <h3>FUNDAPEC — Alumni Platform</h3>
+          <p>Co-developed and launched <em>Comunidad FUNDAPEC</em> to deepen engagement and unlock new value.</p>
+          <div className="cardFooter">
+            <Link className="cardCta" to="https://comunidad.fundapec.edu.do" target="_blank" rel="noopener noreferrer" data-cta="cta.home.cases.fundapec">
+              Visit comunidad.fundapec.edu.do →
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function ResearchResourcesSection() {
-    return (
-        <section className="section" aria-labelledby="research-title">
-            <h2 id="research-title">Research + Resources</h2>
-            <p className="sectionLead">
-                Stay current with our latest frameworks and insights shaping innovation capability and public intelligence.
-            </p>
-            <div className="cardGrid">
-                <div className="card">
-                    <Lightbulb className="cardIcon" />
-                    <h3>MicroCanvas Framework v2.1</h3>
-                    <p>Our open-source toolkit to diagnose, design, and scale innovation with clear, reusable canvases.</p>
-                    <div className="cardFooter">
-                        <Link className="cardCta" to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer">
-                            Visit site →
-                        </Link>
-                    </div>
-                </div>
-                <div className="card">
-                    <Layers className="cardIcon" />
-                    <h3>Distributed Federated Agentic AI</h3>
-                    <p>A practical blueprint for decentralized AI governance, infrastructure, and public-value creation.</p>
-                    <div className="cardFooter">
-                        <Link className="cardCta" to="/docs/research-resources/distributed-federated-agentic-ai">
-                            Read whitepaper →
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section className="section" id="research" aria-labelledby="research-title">
+      <h2 id="research-title">Research + Resources</h2>
+      <p className="sectionLead">
+        Stay current with our latest frameworks and insights shaping innovation capability and public intelligence.
+      </p>
+      <div className="cardGrid">
+        <div className="card">
+          <Lightbulb className="cardIcon" aria-hidden="true" />
+          <h3>MicroCanvas Framework v2.1</h3>
+          <p>Our open-source toolkit to diagnose, design, and scale innovation with clear, reusable canvases.</p>
+          <div className="cardFooter">
+            <Link className="cardCta" to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer" data-cta="cta.home.research.mcf">
+              Visit site →
+            </Link>
+          </div>
+        </div>
+        <div className="card">
+          <Layers className="cardIcon" aria-hidden="true" />
+          <h3>Distributed Federated Agentic AI</h3>
+          <p>A practical blueprint for decentralized AI governance, infrastructure, and public-value creation.</p>
+          <div className="cardFooter">
+            <Link className="cardCta" to="/docs/research-resources/distributed-federated-agentic-ai" data-cta="cta.home.research.dfaa">
+              Read whitepaper →
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function PrinciplesSection() {
-    return (
-        <section className="section" aria-labelledby="principles-title">
-            <h2 id="principles-title">Our Principles</h2>
-            <div className="cardGrid" style={{ marginTop: '0.5rem' }}>
-                <div className="card">
-                    <h3>01. Modularity</h3>
-                    <p>We design systems and processes that remain flexible, adaptable, and scalable by default.</p>
-                </div>
-                <div className="card">
-                    <h3>02. Foresight</h3>
-                    <p>We help teams see beyond the present to anticipate shifts and prepare credible options.</p>
-                </div>
-                <div className="card">
-                    <h3>03. Evidence</h3>
-                    <p>We favor decisions grounded in real-world data, user feedback, and validated learning loops.</p>
-                </div>
-                <div className="card">
-                    <h3>04. Co-Creation</h3>
-                    <p>We partner deeply with clients to co-create solutions for today’s challenges and future needs.</p>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section className="section" id="principles" aria-labelledby="principles-title">
+      <h2 id="principles-title">Our Principles</h2>
+      <div className="cardGrid" style={{ marginTop: '0.5rem' }}>
+        <div className="card">
+          <h3>01. Modularity</h3>
+          <p>We design systems and processes that remain flexible, adaptable, and scalable by default.</p>
+        </div>
+        <div className="card">
+          <h3>02. Foresight</h3>
+          <p>We help teams see beyond the present to anticipate shifts and prepare credible options.</p>
+        </div>
+        <div className="card">
+          <h3>03. Evidence</h3>
+          <p>We favor decisions grounded in real-world data, user feedback, and validated learning loops.</p>
+        </div>
+        <div className="card">
+          <h3>04. Co-Creation</h3>
+          <p>We partner deeply with clients to co-create solutions for today’s challenges and future needs.</p>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function FinalCta() {
-    return (
-        <section className="section" aria-labelledby="cta-title">
-            <div className="finalCta">
-                <h2 id="cta-title">Ready to make innovation repeatable?</h2>
-                <p>Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward.</p>
-                <div className="heroCtas" style={{ justifyContent: 'center' }}>
-                    <Link to="/services/diagnostics" className="buttonPrimary" data-cta="footer_start_diagnostic">
-                        Start with a diagnostic
-                    </Link>
-                    <Link to="/contact" className="buttonSecondary" data-cta="footer_contact">
-                        Talk to us
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
+  return (
+    <section className="section" id="final-cta" aria-labelledby="cta-title">
+      <div className="finalCta">
+        <h2 id="cta-title">Ready to make innovation repeatable?</h2>
+        <p>Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward.</p>
+        <div className="heroCtas" style={{ justifyContent: 'center' }}>
+          <Link to="/services/diagnostics" className="buttonPrimary" data-cta="cta.home.final.start_diagnostic">
+            Start with a diagnostic
+          </Link>
+          <Link to="/contact" className="buttonSecondary" data-cta="cta.home.final.contact">
+            Talk to us
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default function Home(): ReactNode {
-    const { siteConfig } = useDocusaurusContext();
-    return (
-        <Layout title={`Welcome to ${siteConfig.title}`} description="Foresight, Innovation Architecture, and Agentic AI Systems for a Better Future">
-            <HomepageHero />
-            <main>
-                <ProblemSection />
-                <ServicesSection />
-                <ResearchResourcesSection />
-                <PrinciplesSection />
-                <LatestWhitepapersSection />
-                <FinalCta />
-            </main>
-        </Layout>
-    );
+  // Updated title to be value-prop rich for SEO/clarity
+  return (
+    <Layout title="Innovation, Foresight & Repeatable Delivery — Doulab" description="Foresight, Innovation Architecture, and Agentic AI Systems for a Better Future">
+      <HomepageHero />
+      <main>
+        <ProblemSection />
+        <ServicesSection />
+        <NumbersStrip />
+        <CaseStudiesTeaser />
+        <ResearchResourcesSection />
+        <PrinciplesSection />
+        <LatestWhitepapersSection />
+        <FinalCta />
+      </main>
+    </Layout>
+  );
 }

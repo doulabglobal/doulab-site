@@ -16,25 +16,24 @@
 .markdown.doulabDoc {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem
 }
 
-    .theme-doc-markdown.doulabDoc h1,
-    .theme-doc-markdown.doulabDoc h2 {
+    .theme-doc-markdown.doulabDoc h1, .theme-doc-markdown.doulabDoc h2 {
         line-height: 1.15;
-        margin-bottom: 1rem;
+        margin-bottom: 1rem
     }
 
     .theme-doc-markdown.doulabDoc h1 {
-        font-size: clamp(2rem, 1.6rem + 1vw, 3rem);
+        font-size: clamp(2rem,1.6rem + 1vw,3rem)
     }
 
     .theme-doc-markdown.doulabDoc h2 {
-        font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+        font-size: clamp(1.5rem,1.2rem + 1vw,2rem)
     }
 
     .theme-doc-markdown.doulabDoc p {
-        color: var(--dl-gray-700);
+        color: var(--dl-gray-700)
     }
 
     .theme-doc-markdown.doulabDoc .dl-cards,
@@ -43,8 +42,8 @@
         padding: 0;
         margin: 1rem 0 1.5rem;
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 1rem;
+        grid-template-columns: repeat(12,1fr);
+        gap: 1rem
     }
 
         .theme-doc-markdown.doulabDoc .dl-cards > li,
@@ -54,67 +53,67 @@
             border: 1px solid var(--dl-border);
             border-radius: 12px;
             padding: 1.25rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            transition: transform .2s, box-shadow .2s, border-color .2s;
+            box-shadow: 0 2px 6px rgba(0,0,0,.06);
+            transition: transform .2s,box-shadow .2s,border-color .2s
         }
 
             .theme-doc-markdown.doulabDoc .dl-cards > li:hover,
             .theme-doc-markdown .dl-cards > li:hover {
                 transform: translateY(-3px);
-                box-shadow: 0 6px 14px rgba(0,0,0,0.10);
-                border-color: rgba(79,70,229,0.35);
+                box-shadow: 0 6px 14px rgba(0,0,0,.1);
+                border-color: rgba(79,70,229,.35)
             }
 
         .theme-doc-markdown.doulabDoc .dl-cards h3,
         .theme-doc-markdown .dl-cards h3 {
             font-size: 1.1rem;
-            margin: 0 0 0.5rem;
-            color: #000;
+            margin: 0 0 .5rem;
+            color: #000
         }
 
         .theme-doc-markdown.doulabDoc .dl-cards p,
         .theme-doc-markdown .dl-cards p {
-            margin: 0.25rem 0 0.5rem;
-            font-size: 0.97rem;
+            margin: .25rem 0 .5rem;
+            font-size: .97rem
         }
 
     .theme-doc-markdown.doulabDoc .dl-cardCta,
     .theme-doc-markdown .dl-cardCta {
         display: inline-block;
-        padding: 0.5rem 0.9rem;
+        padding: .5rem .9rem;
         background: var(--dl-indigo);
         color: var(--dl-white);
-        border-radius: 0.5rem;
+        border-radius: .5rem;
         text-decoration: none;
-        font-size: 0.92rem;
-        font-weight: 600;
+        font-size: .92rem;
+        font-weight: 600
     }
 
         .theme-doc-markdown.doulabDoc .dl-cardCta:hover,
         .theme-doc-markdown .dl-cardCta:hover {
-            background: var(--dl-indigo-dark);
+            background: var(--dl-indigo-dark)
         }
 
     .theme-doc-markdown.doulabDoc .dl-finalCta,
     .theme-doc-markdown .dl-finalCta {
         text-align: center;
-        background: linear-gradient(180deg, #f7f7ff 0%, #fff 100%);
+        background: linear-gradient(180deg,#f7f7ff 0%,#fff 100%);
         border: 1px solid var(--dl-border);
         border-radius: 16px;
         padding: 2rem 1rem;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        margin-top: 2rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        margin-top: 2rem
     }
 
         .theme-doc-markdown.doulabDoc .dl-finalCta h2,
         .theme-doc-markdown .dl-finalCta h2 {
-            margin: 0 0 0.5rem;
+            margin: 0 0 .5rem
         }
 
         .theme-doc-markdown.doulabDoc .dl-finalCta p,
         .theme-doc-markdown .dl-finalCta p {
             color: var(--dl-gray-700);
-            margin: 0 0 1rem;
+            margin: 0 0 1rem
         }
 
         .theme-doc-markdown.doulabDoc .dl-finalCta .dl-ctas,
@@ -122,7 +121,7 @@
             display: flex;
             gap: .75rem;
             justify-content: center;
-            flex-wrap: wrap;
+            flex-wrap: wrap
         }
 
     .theme-doc-markdown.doulabDoc .dl-buttonPrimary,
@@ -130,87 +129,85 @@
     .theme-doc-markdown.doulabDoc .dl-buttonSecondary,
     .theme-doc-markdown .dl-buttonSecondary {
         display: inline-block;
-        padding: 0.6rem 1rem;
-        border-radius: 0.5rem;
+        padding: .6rem 1rem;
+        border-radius: .5rem;
         font-weight: 600;
         text-decoration: none;
-        font-size: 0.95rem;
+        font-size: .95rem
     }
 
     .theme-doc-markdown.doulabDoc .dl-buttonPrimary,
     .theme-doc-markdown .dl-buttonPrimary {
         background: var(--dl-indigo);
-        color: var(--dl-white);
+        color: var(--dl-white)
     }
 
         .theme-doc-markdown.doulabDoc .dl-buttonPrimary:hover,
         .theme-doc-markdown .dl-buttonPrimary:hover {
-            background: var(--dl-indigo-dark);
+            background: var(--dl-indigo-dark)
         }
 
     .theme-doc-markdown.doulabDoc .dl-buttonSecondary,
     .theme-doc-markdown .dl-buttonSecondary {
         color: var(--dl-indigo);
         border: 1px solid var(--dl-indigo);
-        background: transparent;
+        background: transparent
     }
 
         .theme-doc-markdown.doulabDoc .dl-buttonSecondary:hover,
         .theme-doc-markdown .dl-buttonSecondary:hover {
-            background: #eef2ff;
+            background: #eef2ff
         }
 
-@media (max-width: 960px) {
+@media (max-width:960px) {
     .theme-doc-markdown.doulabDoc .dl-cards > li,
     .theme-doc-markdown .dl-cards > li {
-        grid-column: span 12;
+        grid-column: span 12
     }
 }
 
-/* ===== Shared sitewide utilities (cards, sections, buttons) ===== */
-/* Containerized sections (centered, constrained) */
+/* ===== Shared sitewide utilities ===== */
 .section {
     margin: 3rem auto;
     max-width: 1200px;
-    padding: 0 1rem;
+    padding: 0 1rem
 }
 
 .section--tight {
     margin: 2rem auto;
     max-width: 1200px;
-    padding: 0 1rem;
+    padding: 0 1rem
 }
 
 .lead {
     font-size: 1.125rem;
     line-height: 1.7;
-    opacity: 0.95;
+    opacity: .95
 }
 
 .section h2 {
-    font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
-    margin: 0 0 1rem;
+    font-size: clamp(1.5rem,1.2rem + 1vw,2rem);
+    margin: 0 0 1rem
 }
 
-/* Microcopy helper */
 .microcopy {
     color: var(--dl-gray-600);
-    font-size: 0.95rem;
+    font-size: .95rem
 }
 
-/* Grid & card */
+/* Grid & card (UNIFIED CARD LAYOUT) */
 .grid {
     display: grid;
-    gap: 1.25rem;
+    gap: 1.25rem
 }
 
 .grid-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3,minmax(0,1fr))
 }
 
-@media (max-width: 996px) {
+@media (max-width:996px) {
     .grid-3 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
@@ -218,32 +215,66 @@
     border: 1px solid var(--dl-border);
     border-radius: 1rem;
     padding: 1.25rem;
-    background: var(--ifm-background-surface-color, #fff);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    background: var(--ifm-background-surface-color,#fff);
+    box-shadow: 0 2px 6px rgba(0,0,0,.06);
     height: 100%;
-    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    display: flex;
+    flex-direction: column; /* equalize heights */
+    transition: transform .2s ease,box-shadow .2s ease,border-color .2s ease
 }
 
     .card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0,0,0,0.10);
-        border-color: rgba(79,70,229,0.35);
+        box-shadow: 0 6px 14px rgba(0,0,0,.1);
+        border-color: rgba(79,70,229,.35)
     }
 
     .card h3 {
         margin-top: .25rem;
-        margin-bottom: .5rem;
+        margin-bottom: .5rem
     }
 
     .card p {
-        margin: 0 0 .5rem 0;
+        margin: 0 0 .5rem 0
+    }
+
+    .card ul {
+        padding-left: 1.25rem;
+        margin: .25rem 0 .75rem
+    }
+
+    .card li {
+        margin-bottom: .25rem
+    }
+
+.cardFooter {
+    margin-top: auto; /* align footers */
+    padding-top: .5rem;
+    border-top: 1px dashed var(--dl-border);
+    display: flex;
+    justify-content: flex-start
+}
+
+.cardCta {
+    display: inline-block;
+    padding: .5rem .9rem;
+    background: var(--dl-indigo);
+    color: var(--dl-white);
+    border-radius: .5rem;
+    text-decoration: none;
+    font-size: .92rem;
+    font-weight: 600
+}
+
+    .cardCta:hover {
+        background: var(--dl-indigo-dark)
     }
 
 /* Buttons */
 .btn-row {
     display: flex;
     gap: .75rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap
 }
 
 .btn-primary, .btn-secondary {
@@ -254,60 +285,58 @@
     border-radius: .75rem;
     border: 1px solid transparent;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 600
 }
 
 .btn-primary {
     background: var(--ifm-color-primary);
-    color: #fff;
+    color: #fff
 }
 
 .btn-secondary {
     background: transparent;
     border-color: var(--ifm-color-primary);
-    color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary)
 }
 
     .btn-primary:focus-visible, .btn-secondary:focus-visible {
         outline: 3px solid var(--ifm-color-primary);
-        outline-offset: 2px;
+        outline-offset: 2px
     }
 
-/* Links: visible focus + underline on hover for clarity */
 a:focus-visible {
     outline: 3px solid var(--ifm-color-primary);
-    outline-offset: 2px;
+    outline-offset: 2px
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline
 }
 
-/* ===== Homepage styles migrated from src/pages/index.module.css ===== */
-/* Hero */
+/* ===== Homepage styles moved to global ===== */
 .heroBanner {
     margin: 0 auto 2.5rem;
     max-width: 1200px;
-    padding: 2rem 1rem;
+    padding: 2rem 1rem
 }
 
 .heroTitle {
-    font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+    font-size: clamp(2rem,1.8rem + 1vw,3rem);
     line-height: 1.1;
-    margin: 0 0 0.5rem;
+    margin: 0 0 .5rem
 }
 
 .heroSubtitle {
     font-size: 2.25rem;
     font-weight: 500;
     color: var(--dl-indigo);
-    margin: 0 0 0.5rem;
+    margin: 0 0 .5rem
 }
 
 .heroText {
     font-size: 1.05rem;
     color: var(--dl-gray-700);
-    margin: 0.25rem 0 0.75rem;
+    margin: .25rem 0 .75rem
 }
 
 .heroImage {
@@ -315,139 +344,112 @@ a:hover {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08)
 }
 
 .heroCtas {
     display: flex;
-    gap: 0.75rem;
+    gap: .75rem;
     flex-wrap: wrap;
-    margin-top: 0.75rem;
+    margin-top: .75rem
 }
 
-/* Button aliases to global tokens (keep homepage class names working) */
 .buttonPrimary, .buttonSecondary {
     display: inline-block;
-    padding: 0.6rem 1rem;
-    border-radius: 0.5rem;
+    padding: .6rem 1rem;
+    border-radius: .5rem;
     font-weight: 600;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: .95rem
 }
 
 .buttonPrimary {
     background: var(--dl-indigo);
-    color: var(--dl-white);
+    color: var(--dl-white)
 }
 
     .buttonPrimary:hover {
-        background: var(--dl-indigo-dark);
+        background: var(--dl-indigo-dark)
     }
 
 .buttonSecondary {
     color: var(--dl-indigo);
     border: 1px solid var(--dl-indigo);
-    background: transparent;
+    background: transparent
 }
 
     .buttonSecondary:hover {
-        background: #eef2ff;
+        background: #eef2ff
     }
 
-/* Homepage Sections (centered wrapper already provided by .section) */
 .sectionLead {
     font-size: 1.05rem;
     color: var(--dl-gray-700);
-    max-width: 900px;
+    max-width: 900px
 }
 
-/* Cards grid (default 3-up) */
 .cardGrid {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem
 }
 
     .cardGrid .card {
-        grid-column: span 4;
+        grid-column: span 4
     }
 
-@media (max-width: 960px) {
+@media (max-width:960px) {
     .cardGrid {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(6,1fr)
     }
 
         .cardGrid .card {
-            grid-column: span 6;
+            grid-column: span 6
         }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .cardGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 
         .cardGrid .card {
-            grid-column: span 1;
+            grid-column: span 1
         }
 }
 
-/* Horizontal reel (used on The Problem) */
+/* Horizontal reel */
 .cardReel {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: clamp(280px, 30vw, 360px);
+    grid-auto-columns: clamp(280px,30vw,360px);
     gap: 1rem;
     overflow-x: auto;
     padding: .5rem 0 .75rem;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 1rem;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch
 }
 
     .cardReel .card {
         scroll-snap-align: start;
-        min-height: 100%;
+        min-height: 100%
     }
 
-/* Card internals */
 .cardIcon {
     width: 28px;
     height: 28px;
-    opacity: 0.95;
+    opacity: .95
 }
 
-.cardFooter {
-    margin-top: 0.25rem;
-    padding-top: 0.5rem;
-    border-top: 1px dashed var(--dl-border);
-    display: flex;
-    justify-content: flex-start;
-}
-
-.cardCta {
-    display: inline-block;
-    padding: 0.5rem 0.9rem;
-    background: var(--dl-indigo);
-    color: var(--dl-white);
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-size: 0.92rem;
-    font-weight: 600;
-}
-
-    .cardCta:hover {
-        background: var(--dl-indigo-dark);
-    }
-
-/* Process rail */
+/* Process rail with hover */
 .processRail {
     list-style: none;
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem
 }
 
 .processStep {
@@ -456,46 +458,53 @@ a:hover {
     border: 1px solid var(--dl-border);
     border-radius: 12px;
     padding: 1rem 1.25rem;
+    transition: transform .2s ease,box-shadow .2s ease,border-color .2s ease
 }
 
-@media (max-width: 960px) {
+    .processStep:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0,0,0,.1);
+        border-color: rgba(79,70,229,.35)
+    }
+
+@media (max-width:960px) {
     .processStep {
-        grid-column: span 6;
+        grid-column: span 6
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
     .processStep {
-        grid-column: span 12;
+        grid-column: span 12
     }
 }
 
 .stepIcon {
     width: 22px;
     height: 22px;
-    margin-bottom: 0.35rem;
-    opacity: 0.95;
+    margin-bottom: .35rem;
+    opacity: .95
 }
 
 .processStep h4 {
-    margin: 0 0 0.25rem;
-    font-size: 1rem;
+    margin: 0 0 .25rem;
+    font-size: 1rem
 }
 
 .processStep p {
     margin: 0;
     color: var(--dl-gray-600);
-    font-size: 0.95rem;
+    font-size: .95rem
 }
 
 /* Proof logos */
 .proofStrip {
     display: grid;
-    grid-template-columns: repeat(5, minmax(120px,1fr));
+    grid-template-columns: repeat(5,minmax(120px,1fr));
     gap: 1rem;
     align-items: center;
     justify-items: center;
-    margin-top: 1.25rem;
+    margin-top: 1.25rem
 }
 
     .proofStrip img {
@@ -504,24 +513,24 @@ a:hover {
         height: auto;
         filter: grayscale(100%);
         opacity: .9;
-        transition: filter .2s ease, opacity .2s ease, transform .2s ease;
+        transition: filter .2s,opacity .2s,transform .2s
     }
 
         .proofStrip img:hover {
             filter: grayscale(0%);
             opacity: 1;
-            transform: translateY(-1px);
+            transform: translateY(-1px)
         }
 
-@media (max-width: 800px) {
+@media (max-width:800px) {
     .proofStrip {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr)
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width:480px) {
     .proofStrip {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr)
     }
 }
 
@@ -529,78 +538,84 @@ a:hover {
 .chips {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
-    margin: 0.5rem 0 0;
+    gap: .5rem;
+    margin: .5rem 0 0;
     padding: 0;
-    list-style: none;
+    list-style: none
 }
 
     .chips li {
-        padding: 0.35rem 0.6rem;
+        padding: .35rem .6rem;
         border-radius: 999px;
         background: #eef2ff;
         color: #3730a3;
-        font-size: 0.85rem;
-        font-weight: 600;
+        font-size: .85rem;
+        font-weight: 600
     }
 
 /* FAQ */
 .faqGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1rem
 }
 
     .faqGrid details {
         background: #f9fafb;
         border: 1px solid var(--dl-border);
         border-radius: .5rem;
-        padding: .75rem 1rem;
+        padding: .75rem 1rem
     }
 
     .faqGrid summary {
         cursor: pointer;
-        font-weight: 600;
+        font-weight: 600
     }
 
-@media (max-width: 900px) {
+@media (max-width:900px) {
     .faqGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr
     }
 }
 
-/* Final CTA */
+/* Final CTA (shared across pages) */
 .finalCta {
     text-align: center;
-    background: linear-gradient(180deg, #f7f7ff 0%, #fff 100%);
+    background: linear-gradient(180deg,#f7f7ff 0%,#fff 100%);
     border: 1px solid var(--dl-border);
     border-radius: 16px;
     padding: 2rem 1rem;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    box-shadow: 0 4px 14px rgba(0,0,0,.06)
 }
 
     .finalCta h2 {
-        margin: 0 0 0.5rem;
+        margin: 0 0 .5rem
     }
 
     .finalCta p {
         color: var(--dl-gray-700);
-        margin: 0 0 1rem;
+        margin: 0 0 1rem
     }
 
 /* Dark theme tweaks */
-html.theme-dark .card,
-html.theme-dark .processStep {
+html.theme-dark .card, html.theme-dark .processStep {
     background: #111318;
-    border-color: rgba(255,255,255,0.12);
-    box-shadow: none;
+    border-color: rgba(255,255,255,.12);
+    box-shadow: none
 }
 
 html.theme-dark .cardFooter {
-    border-top-color: rgba(255,255,255,0.12);
+    border-top-color: rgba(255,255,255,.12)
 }
 
-html.theme-dark .sectionLead,
-html.theme-dark .heroText {
-    color: #c7cad1;
+html.theme-dark .sectionLead, html.theme-dark .heroText {
+    color: #c7cad1
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce) {
+    .card:hover, .processStep:hover {
+        transform: none !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,.06)
+    }
 }

@@ -1,85 +1,144 @@
-﻿import React from 'react';
+﻿import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import { Layers, Target, Lightbulb } from 'lucide-react';
+import Heading from '@theme/Heading';
+import { Layers, Target, Lightbulb, Search, AlignJustify, Rocket, TrendingUp } from 'lucide-react';
 
-export default function WhatWeDo() {
-    return (
-        <Layout title="What we do" description="Programs, diagnostics, and foresight to make innovation repeatable.">
-            <Head>
-                <link rel="canonical" href="https://doulab.net/what-we-do" />
-            </Head>
+export default function WhatWeDo(): ReactNode {
+  return (
+    <Layout
+      title="What we do — Programs, Diagnostics & Foresight | Doulab"
+      description="Programs, diagnostics, and foresight to make innovation repeatable with MicroCanvas® 2.1 and IMM."
+    >
+      <Head>
+        <link rel="canonical" href="https://doulab.net/what-we-do" />
+      </Head>
 
-            <main className="container">
-                {/* Intro */}
-                <section className="section">
-                    <header className="margin-bottom--lg">
-                        <h1>What we do</h1>
-                        <p className="lead">
-                            We design and run structured innovation systems—powered by MicroCanvas® 2.1 and the Innovation
-                            Maturity Model—to turn uncertainty into repeatable outcomes.
-                        </p>
-                        <div className="btn-row">
-                            <Link className="btn-primary" to="/contact" data-cta="whatwedo_contact">Talk to us</Link>
-                            <Link className="btn-secondary" to="/case-studies" data-cta="whatwedo_cases">See case studies</Link>
-                        </div>
-                    </header>
+      <main>
+        {/* Hero (shared design language) */}
+        <section className="heroBanner" id="hero" aria-labelledby="whatwedo-hero-title">
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ flex: '1 1 800px' }}>
+              <Heading as="h1" id="whatwedo-hero-title" className="heroTitle">What we do</Heading>
+              <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
+                Innovation architecture, diagnostics, and foresight — built to make delivery repeatable.
+              </p>
+              <p className="heroText">
+                We install the culture, process, and cadence for innovation to scale — using MicroCanvas® 2.1 and the Innovation Maturity Model (IMM).
+              </p>
+              <div className="heroCtas">
+                <Link className="buttonPrimary" to="/contact" data-cta="cta.whatwedo.hero.contact">Talk to us</Link>
+                <Link className="buttonSecondary" to="/case-studies" data-cta="cta.whatwedo.hero.cases">See case studies</Link>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                    {/* Products & Programs */}
-                    <div className="grid grid-3">
-                        <article className="card" aria-labelledby="imm-title">
-                            <Layers aria-hidden="true" />
-                            <h3 id="imm-title">IMM Sprints (12+12 weeks)</h3>
-                            <p>Discovery & Validation → Efficiency & Scale, with clear gates and KPIs.</p>
-                            <ul>
-                                <li>Gate 1 — Go/No-Go after Discovery</li>
-                                <li>Gate 2 — Go/No-Go before MVP/Scale</li>
-                            </ul>
-                        </article>
+        {/* Products & Programs (balanced content: 1 intro line + 2 bullets + CTA) */}
+        <section className="section" id="programs" aria-labelledby="programs-title">
+          <h2 id="programs-title">Products & Programs</h2>
+          <p className="sectionLead">Three ways we reduce risk and accelerate outcomes.</p>
 
-                        <article className="card" aria-labelledby="diagnostics-title">
-                            <Target aria-hidden="true" />
-                            <h3 id="diagnostics-title">Diagnostics & Workshops</h3>
-                            <p>Fast assessments, strategy sessions, and decision-driving workshops.</p>
-                            <ul>
-                                <li>Innovation maturity baseline (MCF 2.1 + IMM)</li>
-                                <li>Strategy + OKR alignment sprints</li>
-                            </ul>
-                        </article>
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="imm-title">
+              <Layers className="cardIcon" aria-hidden="true" />
+              <h3 id="imm-title">IMM Sprints (12+12 weeks)</h3>
+              <p>Discovery &amp; Validation → Efficiency &amp; Scale, with explicit gates and KPIs.</p>
+              <ul>
+                <li><strong>Gate 1</strong> — Go/No-Go after Discovery</li>
+                <li><strong>Gate 2</strong> — Go/No-Go before MVP/Scale</li>
+              </ul>
+              <div className="cardFooter">
+                <Link className="cardCta" to="/services/innovation-maturity" data-cta="cta.whatwedo.programs.imm">Explore IMM →</Link>
+              </div>
+            </article>
 
-                        <article className="card" aria-labelledby="vigia-title">
-                            <Lightbulb aria-hidden="true" />
-                            <h3 id="vigia-title">Vigía Futura</h3>
-                            <p>Foresight observatory and indices for trend radar, risk, and opportunity framing.</p>
-                            <ul>
-                                <li>Foresight maturity & literacy</li>
-                                <li>Briefings and early-signal scans</li>
-                            </ul>
-                        </article>
-                    </div>
-                </section>
+            <article className="card" aria-labelledby="diagnostics-title">
+              <Target className="cardIcon" aria-hidden="true" />
+              <h3 id="diagnostics-title">Diagnostics &amp; Workshops</h3>
+              <p>Fast assessments, strategy sessions, and decision-driving workshops.</p>
+              <ul>
+                <li>Innovation maturity baseline (MCF 2.1 + IMM)</li>
+                <li>Strategy &amp; OKR alignment sprints</li>
+              </ul>
+              <div className="cardFooter">
+                <Link className="cardCta" to="/services/diagnostics" data-cta="cta.whatwedo.programs.diagnostics">Explore diagnostics →</Link>
+              </div>
+            </article>
 
-                {/* Proof / Numbers (placeholder for now; we’ll wire real metrics next pass) */}
-                <section className="section section--tight">
-                    <h2>Proof & numbers</h2>
-                    <p className="lead">We’ll add concise, verifiable metrics here (conversion-oriented, privacy-safe).</p>
-                </section>
+            <article className="card" aria-labelledby="vigia-title">
+              <Lightbulb className="cardIcon" aria-hidden="true" />
+              <h3 id="vigia-title">Vigía Futura</h3>
+              <p>Foresight observatory and indices for trend radar, risk, and opportunity framing.</p>
+              <ul>
+                <li>Foresight maturity &amp; literacy</li>
+                <li>Briefings and early-signal scans</li>
+              </ul>
+              <div className="cardFooter">
+                <Link className="cardCta" to="/vigia-futura" data-cta="cta.whatwedo.programs.vigia">Discover Vigía Futura →</Link>
+              </div>
+            </article>
+          </div>
+        </section>
 
-                {/* Next steps */}
-                <section className="section">
-                    <h2>Next steps</h2>
-                    <ol>
-                        <li>20-minute discovery call to align on goals and constraints.</li>
-                        <li>Light diagnostic to baseline current maturity.</li>
-                        <li>Proposal with a 12+12 week plan and gate criteria.</li>
-                    </ol>
-                    <div className="btn-row">
-                        <Link className="btn-primary" to="/contact" data-cta="whatwedo_cta_contact">Start the conversation</Link>
-                        <Link className="btn-secondary" to="/insights" data-cta="whatwedo_cta_insights">Explore insights</Link>
-                    </div>
-                </section>
-            </main>
-        </Layout>
-    );
+        {/* Proof / Numbers (same pattern as homepage) */}
+        <section className="section" id="numbers" aria-labelledby="numbers-title">
+          <h2 id="numbers-title">Proof / Numbers</h2>
+          <div className="cardGrid">
+            <div className="card">
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>12+12 weeks</h3>
+              <p style={{ marginBottom: '.25rem' }}><strong>Structured sprint cadence</strong></p>
+              <p className="microcopy">Discovery &amp; Validation → Efficiency &amp; Scale</p>
+            </div>
+            <div className="card">
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>7</h3>
+              <p style={{ marginBottom: '.25rem' }}><strong>innovation labs co-created</strong></p>
+              <p className="microcopy">Public sector capacity building (2024)</p>
+            </div>
+            <div className="card">
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>2–4×/week</h3>
+              <p style={{ marginBottom: '.25rem' }}><strong>sessions for 12 months</strong></p>
+              <p className="microcopy">Scaled capability build-out</p>
+            </div>
+          </div>
+        </section>
+
+        {/* How we work (process rail with hover parity) */}
+        <section className="section" id="process" aria-labelledby="process-title">
+          <h2 id="process-title">How we work</h2>
+          <ul className="processRail" role="list">
+            <li className="processStep" role="listitem">
+              <Search className="stepIcon" aria-hidden="true" /><h4>Diagnose</h4>
+              <p>Baseline maturity, risks, and constraints with MCF 2.1 + IMM.</p>
+            </li>
+            <li className="processStep" role="listitem">
+              <AlignJustify className="stepIcon" aria-hidden="true" /><h4>Align</h4>
+              <p>Define outcomes, OKRs, and decision gates; align stakeholders.</p>
+            </li>
+            <li className="processStep" role="listitem">
+              <Rocket className="stepIcon" aria-hidden="true" /><h4>Pilot</h4>
+              <p>Run focused experiments to de-risk value, viability, and delivery.</p>
+            </li>
+            <li className="processStep" role="listitem">
+              <TrendingUp className="stepIcon" aria-hidden="true" /><h4>Scale</h4>
+              <p>Install cadence, metrics, and governance for repeatable delivery.</p>
+            </li>
+          </ul>
+        </section>
+
+        {/* Next steps — EXACT CTA pattern from homepage */}
+        <section className="section" id="next-steps" aria-labelledby="next-title">
+          <div className="finalCta">
+            <h2 id="next-title">Next steps</h2>
+            <p>Book a short call → run a light diagnostic → receive a 12+12 week plan with clear gates and outcomes.</p>
+            <div className="heroCtas" style={{ justifyContent: 'center' }}>
+              <Link className="buttonPrimary" to="/contact" data-cta="cta.whatwedo.next.contact">Start the conversation</Link>
+              <Link className="buttonSecondary" to="/insights" data-cta="cta.whatwedo.next.insights">Explore insights</Link>
+            </div>
+          </div>
+        </section>
+      </main>
+    </Layout>
+  );
 }

@@ -619,3 +619,22 @@ html.theme-dark .sectionLead, html.theme-dark .heroText {
         box-shadow: 0 2px 6px rgba(0,0,0,.06)
     }
 }
+
+.badge {
+    display: inline-block;
+    font-weight: 600;
+    font-size: .75rem;
+    line-height: 1;
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+    background: #eef2ff;
+    color: #3730a3;
+    border: 1px solid var(--dl-border);
+    margin-bottom: .5rem;
+}
+
+html.theme-dark .badge {
+    background: #1a1d26;
+    color: #c7cad1;
+    border-color: rgba(255,255,255,.12);
+}

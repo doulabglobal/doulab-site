@@ -17,3 +17,29 @@ Infra — Removed leftover GTM/Consent code, replaced Root.tsx and ConsentBanner
 2025-08-28 — IA — Improved About page with canonical tag (SEO).
 2025-08-28 — IA — Added Contact page stub with next steps and email CTA.
 2025-08-28 — Web — Homepage styles consolidated into src/css/custom.css; restored centered .section wrapper & 3-up card grid.
+2025-08-29 — Web — v0.4 Site-wide service pages & content refresh
+
+Done
+- Footer: fixed “Connect” links to real routes; standardized labels (“Insights”, “What we do”).
+- Insights: auto-list 3 latest whitepapers (docs tag=whitepaper) + 3 latest blog posts via /blog/rss.xml; added safe client parsing, CTAs.
+- _headers: added RSS rules & tightened security headers (CSP additions, caching for assets, no-store for RSS).
+- Home: card hover border/raise; “The Problem” horizontal reel; section centering normalized via custom.css.
+- About: timeline grouped by year; consolidated to shared styles; accessibility pass (headings/nav).
+- What we do: hero + grid aligned to shared tokens; final CTA uses standardized .finalCta pattern.
+- Case Studies: consistent cards; “How we measure” icons & semantics; final CTA standardized.
+- Services (index): migrated off page CSS; image preload attr fix (imageSrcSet/imageSizes); consistent cards + CTA.
+- Services/ClarityScan: productized copy; pricing/format cards; FAQ; Calendly CTA.
+- Services/Custom Workshops: agendas aligned to IMM & MCF phases; outcomes and CTAs standardized.
+- Services/Innovation Maturity: phase model clarified; outcomes/stat cards; CTA standardized.
+- Services/Coaching & Mentoring: tiers, outcomes, cadence; privacy-first copy; CTA standardized.
+- Services/Diagnostics: built full page (why/what/how, options, FAQ, CTA).
+- Vigía Futura: subnav with intersection observer; sections (Radar/Briefings/Labs/Training/Roadmap); consistent cards & CTA.
+- Research & Resources: safe MDX (.md) with shared components; featured whitepaper + frameworks; authoring tips; final CTA.
+
+Pending / Next
+- Add remaining customers to About timeline and enrich proof logos (SVG, high-DPI).
+- Unify hero images (sizes, aspect, preload hints) across all service pages.
+- Normalize card body lengths site-wide for perfect grid homogeneity.
+- Privacy-first contact form (serverless handler + minimal fields) and spam protection.
+- Blog: add per-post images/og tags and ensure tag=whitepaper discipline in docs.
+- Monitoring: LCP/CLS check post-deploy; review CF Pages cache & headers in staging.

@@ -63,4 +63,13 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 - Recovered project from Dropbox snapshot
 - Downgraded Node runtime to 20.16.0 via NVM
 - Clean reinstallation of dependencies and local build verified
-- Preserved internal `CHECKLOG.md` for daily task logging
+- Preserved internal `CHECKLOG.md` for daily task logging## 2025-08-29 — v0.4 Service pages, About timeline, Insights RSS
+- **Footer**: fixed “Connect” routes and standardized labels.
+- **Insights**: auto-lists latest whitepapers (docs tag=whitepaper) and 3 latest blog posts via local RSS; added CTAs.
+- **Headers/CSP**: added /blog/rss.xml rule (no-store) and tightened security headers; long-cache for /assets/* & /img/*.
+- **Homepage**: restored card hover border/raise; centered sections; “The Problem” horizontal reel.
+- **About**: timeline grouped by year; accessibility & copy polish.
+- **Services**: index + ClarityScan + Custom Workshops (IMM/MCF-aligned agendas) + Innovation Maturity + Coaching & Mentoring + Diagnostics — all migrated to shared styles and standardized CTAs.
+- **Vigía Futura**: sectioned with subnav; accessible, consistent cards.
+- **Research & Resources**: MDX-safe .md with featured whitepaper, frameworks, authoring tips, and final CTA.
+

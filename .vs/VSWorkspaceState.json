@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\build\\blog",
+    "\\docs",
+    "\\docs\\research-resources",
     "\\src",
     "\\src\\pages",
-    "\\src\\pages\\about",
-    "\\src\\pages\\contact",
-    "\\src\\pages\\insights",
-    "\\src\\pages\\services",
-    "\\src\\pages\\what-we-do",
-    "\\static"
+    "\\src\\pages\\ecosystems",
+    "\\src\\pages\\vigia-futura",
+    "\\src\\pages\\work-with-us",
+    "\\static",
+    "\\static\\img"
   ],
-  "SelectedNode": "\\src\\pages\\services\\index.tsx",
+  "SelectedNode": "\\docs\\research-resources\\index.md",
   "PreviewInSolutionExplorer": false
 }

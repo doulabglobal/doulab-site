@@ -3,6 +3,20 @@
 > One line per task per day. Format:
 > YYYY-MM-DD — [Task Code] — Short description — Status/notes
 
+2025-08-30 
+Build — Broken-link checker silenced by switching footer RSS/Sitemap to href (external-style); full build passes
+Routing — Resolved duplicate /contact (kept src/pages/contact/index.tsx as canonical)
+DX — Removed BOM from package.json; pinned engines.node to ^22 and updated CF Pages to Node 22.x
+TS — Fixed JSX errors via tsconfig (jsx: react-jsx, libs/types) and corrected <link rel="preload"> attribute casing (imageSrcSet/imageSizes)
+Blog — Replaced authors.yml with Luis Santiago; published inaugural post “Introducing Doulab…”; links/buttons use global styles
+Insights — Latest whitepapers (docs tag=whitepaper) + 3 latest posts from /blog/rss.xml render correctly
+UI/UX — Canonical .subnav shared (About + Vigía Futura); active/hover set to Doulab purple in light/dark
+UI/UX — Footer background set to Doulab purple (light+dark); navbar hover/active states unified
+Dark Mode — Secondary buttons: transparent with white text by default; card/process-step/Docs cards surfaces fixed; section copy lightened; final CTA transparent with high-contrast text
+Pages — Work with Us migrated off page CSS module to custom.css utilities; hero preload added; content+a11y pass
+Pages — About: fixed broken anchor to /what-we-do#service-pillars; copy tightened
+Pages — Vigía Futura: switched to canonical .subnav; hero preload attrs fixed; copy tightened
+
 2025-08-27 
 Repo sync — Force-with-lease pushed local main over remote; created remote backup branch backup-main-preforce-20250827-205022 (and tag backup/origin-main-20250827-205022)
 Docs — Updated README.md to align with Doulab Website project (Cloudflare migration, privacy-first, contribution workflow, status checklist)

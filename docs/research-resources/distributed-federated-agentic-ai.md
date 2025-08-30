@@ -1,10 +1,11 @@
----
+ï»¿---
 id: distributed-federated-agentic-ai
 title: Distributed Federated Agentic AI
 description: A Blueprint for Next-Generation Decentralized Governance.
 tags: [whitepaper]
 hide_title: false
 hide_table_of_contents: false
+tags: ["whitepaper"]
 ---
 
 # Distributed Federated Agentic AI:
@@ -19,7 +20,7 @@ In this white paper, we propose a blueprint for a next-generation distributed an
 
 ### 1. Introduction: The Need for a New Paradigm
 
-The evolution of digital infrastructure has outpaced our capacity to govern it responsibly. As AI systems become increasingly integrated into public services, economic models, and social systems, questions of control, transparency, and legitimacy arise. We argue that AI must be governed as a public utility—and designed as a distributed, auditable, and participatory infrastructure from the start.
+The evolution of digital infrastructure has outpaced our capacity to govern it responsibly. As AI systems become increasingly integrated into public services, economic models, and social systems, questions of control, transparency, and legitimacy arise. We argue that AI must be governed as a public utilityâ€”and designed as a distributed, auditable, and participatory infrastructure from the start.
 
 This paper proposes a federated, agent-based AI architecture that enables modular, cooperative intelligence, respecting local sovereignty, institutional boundaries, and individual rights.
 
@@ -50,7 +51,7 @@ Rather than relying on a single central AI model, this blueprint uses **Agentic 
 
 * **Sovereignty First:** Data and process ownership stay with the institution or node.
 * **Composability:** Any component can be reused, swapped, or extended.
-* **Agentic Modularity:** AI components should operate like public servants—transparent, accountable, and limited in scope.
+* **Agentic Modularity:** AI components should operate like public servantsâ€”transparent, accountable, and limited in scope.
 * **Resilience by Design:** Fully decentralized and tolerant to network partitioning.
 * **Auditability & Traceability:** Every decision, message, and transaction is traceable.
 
@@ -82,7 +83,7 @@ Rather than relying on a single central AI model, this blueprint uses **Agentic 
 
 #### 5.1 Stage 1: Minimal Viable Federation
 
-* 3–5 institutions
+* 3â€“5 institutions
 * Shared DID + Agent Registry + Messaging Bus
 * White-labeled agent execution environments
 

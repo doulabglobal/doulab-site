@@ -12,8 +12,7 @@
 }
 
 /* ===== Docs styling (Research & Resources) ===== */
-.theme-doc-markdown.doulabDoc,
-.markdown.doulabDoc {
+.theme-doc-markdown.doulabDoc, .markdown.doulabDoc {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 1rem
@@ -195,7 +194,7 @@
     font-size: .95rem
 }
 
-/* Grid & card (UNIFIED CARD LAYOUT) */
+/* Grid & card */
 .grid {
     display: grid;
     gap: 1.25rem
@@ -219,7 +218,7 @@
     box-shadow: 0 2px 6px rgba(0,0,0,.06);
     height: 100%;
     display: flex;
-    flex-direction: column; /* equalize heights */
+    flex-direction: column;
     transition: transform .2s ease,box-shadow .2s ease,border-color .2s ease
 }
 
@@ -248,7 +247,7 @@
     }
 
 .cardFooter {
-    margin-top: auto; /* align footers */
+    margin-top: auto;
     padding-top: .5rem;
     border-top: 1px dashed var(--dl-border);
     display: flex;
@@ -313,7 +312,7 @@ a:hover {
     text-decoration: underline
 }
 
-/* ===== Homepage styles moved to global ===== */
+/* ===== Hero ===== */
 .heroBanner {
     margin: 0 auto 2.5rem;
     max-width: 1200px;
@@ -354,6 +353,7 @@ a:hover {
     margin-top: .75rem
 }
 
+/* CTA buttons */
 .buttonPrimary, .buttonSecondary {
     display: inline-block;
     padding: .6rem 1rem;
@@ -382,6 +382,7 @@ a:hover {
         background: #eef2ff
     }
 
+/* Section helpers */
 .sectionLead {
     font-size: 1.05rem;
     color: var(--dl-gray-700);
@@ -442,7 +443,7 @@ a:hover {
     opacity: .95
 }
 
-/* Process rail with hover */
+/* Process rail */
 .processRail {
     list-style: none;
     margin: 0;
@@ -578,7 +579,7 @@ a:hover {
     }
 }
 
-/* Final CTA (shared across pages) */
+/* Final CTA */
 .finalCta {
     text-align: center;
     background: linear-gradient(180deg,#f7f7ff 0%,#fff 100%);
@@ -597,7 +598,90 @@ a:hover {
         margin: 0 0 1rem
     }
 
-/* Dark theme tweaks */
+/* ===== Navbar tweaks ===== */
+.navbar__link:hover,
+.navbar__link:focus {
+    color: var(--dl-indigo)
+}
+
+.navbar__link--active {
+    color: var(--dl-indigo)
+}
+
+/* ===== Unified in-page subnav (About + Vigía Futura) ===== */
+.subnav {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+    margin: .75rem 0 0
+}
+
+    .subnav a {
+        display: inline-block;
+        padding: .5rem .85rem;
+        border: 1px solid var(--dl-border);
+        border-radius: .75rem;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--ifm-font-color-base);
+        background: var(--ifm-background-surface-color,#fff);
+        transition: transform .15s ease,box-shadow .15s ease,border-color .15s ease
+    }
+
+        .subnav a:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0,0,0,.08);
+            border-color: rgba(79,70,229,.35)
+        }
+
+        .subnav a:focus-visible {
+            outline: 3px solid var(--ifm-color-primary);
+            outline-offset: 2px
+        }
+
+        .subnav a.subnavActive,
+        .subnav a[aria-current="true"] {
+            background: #eef2ff;
+            color: #3730a3;
+            border-color: rgba(79,70,229,.35)
+        }
+
+html.theme-dark .subnav a {
+    background: #111318;
+    border-color: rgba(255,255,255,.12);
+    color: #c7cad1
+}
+
+    html.theme-dark .subnav a.subnavActive,
+    html.theme-dark .subnav a[aria-current="true"] {
+        background: #1a1d26;
+        color: #e5e7eb;
+        border-color: rgba(255,255,255,.2)
+    }
+
+/* ===== Footer in Doulab purple ===== */
+.footer {
+    background: var(--dl-indigo) !important;
+    color: #fff
+}
+
+    .footer a, .footer__link-item {
+        color: #fff
+    }
+
+        .footer a:hover {
+            opacity: .9
+        }
+
+.footer__title {
+    color: #fff
+}
+
+.footer__copyright {
+    opacity: .9
+}
+
+/* ===== Dark theme tweaks ===== */
 html.theme-dark .card, html.theme-dark .processStep {
     background: #111318;
     border-color: rgba(255,255,255,.12);
@@ -609,17 +693,47 @@ html.theme-dark .cardFooter {
 }
 
 html.theme-dark .sectionLead, html.theme-dark .heroText {
-    color: #c7cad1
+    color: #e5e7eb
 }
 
-/* Reduced motion */
-@media (prefers-reduced-motion:reduce) {
-    .card:hover, .processStep:hover {
-        transform: none !important;
-        box-shadow: 0 2px 6px rgba(0,0,0,.06)
+html.theme-dark .section p, html.theme-dark .card p, html.theme-dark .card li {
+    color: #e5e7eb
+}
+
+html.theme-dark .card h3, html.theme-dark .card h4 {
+    color: #fff
+}
+
+/* Dark-mode: final CTA + secondary buttons */
+html.theme-dark .finalCta,
+html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta,
+html.theme-dark .markdown.doulabDoc .dl-finalCta {
+    background: linear-gradient(180deg,#0f1220 0%,#0b0e19 100%);
+    border-color: rgba(255,255,255,.12);
+    box-shadow: none
+}
+
+html.theme-dark .buttonSecondary,
+html.theme-dark .dl-buttonSecondary {
+    color: #e5e7eb;
+    border-color: rgba(255,255,255,.24);
+    background: transparent !important
+}
+
+    html.theme-dark .buttonSecondary:hover,
+    html.theme-dark .dl-buttonSecondary:hover {
+        background: #1a1d26
     }
+
+/* Docs dark-mode card fix */
+html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
+html.theme-dark .markdown.doulabDoc .dl-cards > li {
+    background: #111318;
+    border-color: rgba(255,255,255,.12);
+    box-shadow: none
 }
 
+/* Badges */
 .badge {
     display: inline-block;
     font-weight: 600;
@@ -630,11 +744,84 @@ html.theme-dark .sectionLead, html.theme-dark .heroText {
     background: #eef2ff;
     color: #3730a3;
     border: 1px solid var(--dl-border);
-    margin-bottom: .5rem;
+    margin-bottom: .5rem
 }
 
 html.theme-dark .badge {
     background: #1a1d26;
     color: #c7cad1;
-    border-color: rgba(255,255,255,.12);
+    border-color: rgba(255,255,255,.12)
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce) {
+    .card:hover, .processStep:hover {
+        transform: none !important;
+        box-shadow: 0 2px 6px rgba(0,0,0,.06)
+    }
+}
+
+/* Optional blog polish */
+.tag__name {
+    background: #eef2ff;
+    color: #3730a3
+}
+
+html.theme-dark .tag__name {
+    background: #1a1d26;
+    color: #e5e7eb;
+    border: 1px solid rgba(255,255,255,.12)
+}
+
+/* === Doulab dark-mode refinements (append last) ========================== */
+
+/* 1) Secondary CTAs: white text, no fill */
+html.theme-dark .buttonSecondary,
+html.theme-dark .dl-buttonSecondary {
+    color: #fff !important;
+    border-color: rgba(255,255,255,.32) !important;
+    background: transparent !important;
+}
+
+    html.theme-dark .buttonSecondary:hover,
+    html.theme-dark .dl-buttonSecondary:hover {
+        background: #1a1d26 !important;
+    }
+
+/* 2) Body copy & leads: white (not gray) across sections/cards/rails */
+html.theme-dark .sectionLead,
+html.theme-dark .heroText {
+    color: #fff !important;
+}
+
+html.theme-dark .section p,
+html.theme-dark .card p,
+html.theme-dark .processStep p,
+html.theme-dark .card li,
+html.theme-dark .section li {
+    color: #fff !important;
+}
+
+/* 3) Final CTA: transparent background + white text */
+html.theme-dark .finalCta,
+html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta,
+html.theme-dark .markdown.doulabDoc .dl-finalCta {
+    background: transparent !important;
+    border-color: rgba(255,255,255,.24) !important;
+    box-shadow: none !important;
+}
+
+    html.theme-dark .finalCta h2,
+    html.theme-dark .finalCta p,
+    html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta h2,
+    html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta p {
+        color: #fff !important;
+    }
+
+/* 4) Docs cards on Research & Resources: ensure dark surfaces */
+html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
+html.theme-dark .markdown.doulabDoc .dl-cards > li {
+    background: #111318 !important;
+    border-color: rgba(255,255,255,.12) !important;
+    box-shadow: none !important;
 }

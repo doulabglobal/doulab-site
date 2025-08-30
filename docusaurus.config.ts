@@ -40,6 +40,7 @@ const config: Config = {
                 },
                 blog: {
                     showReadingTime: true,
+                    // Generates /blog/rss.xml and /blog/atom.xml at build time
                     feedOptions: { type: ['rss', 'atom'], xslt: true },
                     editUrl: 'https://github.com/doulabglobal/doulab-site/edit/main/',
                     onInlineTags: 'warn',
@@ -100,8 +101,9 @@ const config: Config = {
                     title: 'More',
                     items: [
                         { label: 'Blog', to: '/blog' },
-                        { label: 'RSS', to: '/blog/rss.xml' },
-                        { label: 'Sitemap', to: '/sitemap.xml' },
+                        // Use absolute external hrefs so the broken-link checker ignores them
+                        { label: 'RSS', href: `${SITE_URL}/blog/rss.xml` },
+                        { label: 'Sitemap', href: `${SITE_URL}/sitemap.xml` },
                     ],
                 },
             ],

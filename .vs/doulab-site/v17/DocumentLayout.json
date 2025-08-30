@@ -3,28 +3,64 @@
   "WorkspaceRootPath": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\research-resources\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\releases.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\releases.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docusaurus.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docusaurus.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\CHECKLOG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CHECKLOG.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\diagnostics.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\services\\diagnostics.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\blog\\2025-08-30-introducing-doulab.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:blog\\2025-08-30-introducing-doulab.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\work-with-us\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\work-with-us\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\about\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\about\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\vigia-futura\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\vigia-futura\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\coaching-mentoring.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\services\\coaching-mentoring.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\blog\\authors.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:blog\\authors.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\css\\custom.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\distributed-federated-agentic-ai.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\research-resources\\distributed-federated-agentic-ai.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docusaurus.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docusaurus.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docs\\research-resources\\index.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\diagnostics.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\services\\diagnostics.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\coaching-mentoring.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\services\\coaching-mentoring.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\innovation-maturity.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -41,10 +77,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\services\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\contact\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\contact\\index.tsx||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,37 +86,154 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "index.md",
-              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\index.md",
-              "RelativeDocumentMoniker": "docs\\research-resources\\index.md",
-              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\index.md",
-              "RelativeToolTip": "docs\\research-resources\\index.md",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAIwF0AAAA3AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CHECKLOG.md",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\CHECKLOG.md",
+              "RelativeDocumentMoniker": "CHECKLOG.md",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\CHECKLOG.md",
+              "RelativeToolTip": "CHECKLOG.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2025-08-29T19:58:40.441Z",
+              "WhenOpened": "2025-08-30T00:49:59.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "index.tsx",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\work-with-us\\index.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\work-with-us\\index.tsx",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\work-with-us\\index.tsx",
+              "RelativeToolTip": "src\\pages\\work-with-us\\index.tsx",
+              "ViewState": "AgIAAAAAAAAANDMzMzMbwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-08-30T00:15:04.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "authors.yml",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\blog\\authors.yml",
+              "RelativeDocumentMoniker": "blog\\authors.yml",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\blog\\authors.yml",
+              "RelativeToolTip": "blog\\authors.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-08-29T23:43:15.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "distributed-federated-agentic-ai.md",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\distributed-federated-agentic-ai.md",
+              "RelativeDocumentMoniker": "docs\\research-resources\\distributed-federated-agentic-ai.md",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\distributed-federated-agentic-ai.md",
+              "RelativeToolTip": "docs\\research-resources\\distributed-federated-agentic-ai.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-08-29T23:04:38.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "2025-08-30-introducing-doulab.md",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\blog\\2025-08-30-introducing-doulab.md",
+              "RelativeDocumentMoniker": "blog\\2025-08-30-introducing-doulab.md",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\blog\\2025-08-30-introducing-doulab.md",
+              "RelativeToolTip": "blog\\2025-08-30-introducing-doulab.md",
+              "ViewState": "AgIAACMAAAAAAAAAAAAIwEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-08-29T23:03:20.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\tsconfig.json",
+              "RelativeDocumentMoniker": "tsconfig.json",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\tsconfig.json",
+              "RelativeToolTip": "tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-29T22:55:52.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "index.tsx",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\about\\index.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\about\\index.tsx",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\about\\index.tsx",
+              "RelativeToolTip": "src\\pages\\about\\index.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-08-29T22:43:52.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "custom.css",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\css\\custom.css",
+              "RelativeDocumentMoniker": "src\\css\\custom.css",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\css\\custom.css",
+              "RelativeToolTip": "src\\css\\custom.css",
+              "ViewState": "AgIAABQDAAAwMzMzM7MTwDsDAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-08-29T14:18:29.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "releases.md",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\releases.md",
+              "RelativeDocumentMoniker": "docs\\releases.md",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\releases.md",
+              "RelativeToolTip": "docs\\releases.md",
+              "ViewState": "AgIAAB8AAAAAaGZmZmb0v0oAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-08-29T20:22:21.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "docusaurus.config.ts",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docusaurus.config.ts",
               "RelativeDocumentMoniker": "docusaurus.config.ts",
               "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docusaurus.config.ts",
               "RelativeToolTip": "docusaurus.config.ts",
-              "ViewState": "AgIAAFMAAAAAAAAAAADwv2YAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAwHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-08-29T19:54:39.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "index.tsx",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\vigia-futura\\index.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\vigia-futura\\index.tsx",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\vigia-futura\\index.tsx",
+              "RelativeToolTip": "src\\pages\\vigia-futura\\index.tsx",
+              "ViewState": "AgIAAEIAAACAAAAAAIAbwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-08-29T19:10:52.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "diagnostics.tsx",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\diagnostics.tsx",
               "RelativeDocumentMoniker": "src\\pages\\services\\diagnostics.tsx",
@@ -97,20 +246,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "index.tsx",
-              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\vigia-futura\\index.tsx",
-              "RelativeDocumentMoniker": "src\\pages\\vigia-futura\\index.tsx",
-              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\vigia-futura\\index.tsx",
-              "RelativeToolTip": "src\\pages\\vigia-futura\\index.tsx",
-              "ViewState": "AgIAACEAAAAAmpmZmdklwEYBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-08-29T19:10:52.901Z",
+              "DocumentIndex": 12,
+              "Title": "index.md",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\index.md",
+              "RelativeDocumentMoniker": "docs\\research-resources\\index.md",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\docs\\research-resources\\index.md",
+              "RelativeToolTip": "docs\\research-resources\\index.md",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAIwF0AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-08-29T19:58:40.441Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "coaching-mentoring.tsx",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\coaching-mentoring.tsx",
               "RelativeDocumentMoniker": "src\\pages\\services\\coaching-mentoring.tsx",
@@ -123,20 +272,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "custom.css",
-              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\css\\custom.css",
-              "RelativeDocumentMoniker": "src\\css\\custom.css",
-              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\css\\custom.css",
-              "RelativeToolTip": "src\\css\\custom.css",
-              "ViewState": "AgIAAGgCAAAAAAAAAAAuwIACAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-29T14:18:29.558Z",
+              "DocumentIndex": 11,
+              "Title": "index.tsx",
+              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\index.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\index.tsx",
+              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\index.tsx",
+              "RelativeToolTip": "src\\pages\\index.tsx",
+              "ViewState": "AgIAAMMBAAAAAAAAAAAAwOUBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-08-29T20:23:35.3Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 15,
               "Title": "innovation-maturity.tsx",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\innovation-maturity.tsx",
               "RelativeDocumentMoniker": "src\\pages\\services\\innovation-maturity.tsx",
@@ -149,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "custom-workshops.tsx",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\custom-workshops.tsx",
               "RelativeDocumentMoniker": "src\\pages\\services\\custom-workshops.tsx",
@@ -162,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "clarityscan.tsx",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\clarityscan.tsx",
               "RelativeDocumentMoniker": "src\\pages\\services\\clarityscan.tsx",
@@ -175,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "index.tsx",
               "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\services\\index.tsx",
               "RelativeDocumentMoniker": "src\\pages\\services\\index.tsx",
@@ -185,18 +334,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
               "WhenOpened": "2025-08-28T13:43:56.933Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "index.tsx",
-              "DocumentMoniker": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\contact\\index.tsx",
-              "RelativeDocumentMoniker": "src\\pages\\contact\\index.tsx",
-              "ToolTip": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\src\\pages\\contact\\index.tsx",
-              "RelativeToolTip": "src\\pages\\contact\\index.tsx",
-              "ViewState": "AgIAAMwAAAAAAAAAAADwv+8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2025-08-28T13:29:35.929Z"
             }
           ]
         }

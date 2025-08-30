@@ -1,8 +1,34 @@
-{
-  // This file is not used in compilation. It is here just for a nice editor experience.
-  "extends": "@docusaurus/tsconfig",
-  "compilerOptions": {
-    "baseUrl": "."
-  },
-  "exclude": [".docusaurus", "build"]
+﻿{
+    "extends": "@docusaurus/tsconfig",
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+
+        "jsx": "react-jsx",
+        "jsxImportSource": "react",
+
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+
+        "lib": [ "ES2022", "DOM", "DOM.Iterable" ],
+        "types": [ "react", "react-dom", "node" ]
+    },
+    "include": [
+        "src",
+        "docs",
+        "blog",
+        "docusaurus.config.ts",
+        "sidebars.ts"
+    ]
 }
+
+
+

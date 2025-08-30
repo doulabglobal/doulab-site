@@ -1,35 +1,112 @@
-﻿import React from 'react';
+﻿// src/pages/work-with-us/index.tsx
+import React from 'react';
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import styles from './index.module.css';
 import { Search, Lightbulb, Users, Layers, Radar, Target, CheckCircle2 } from 'lucide-react';
+import type { JSX } from 'react';
 
-export default function WorkWithUsPage() {
+
+export default function WorkWithUsPage(): JSX.Element {
     return (
-        <Layout title="Work with Doulab" description="Practical ways to start—diagnose, align, and build capacity.">
+        <Layout
+            title="Work with Doulab"
+            description="Practical ways to start—diagnose, align, and build capability so strategy turns into sustained results."
+        >
+            <Head>
+                {/* LCP: hero image preload with next-gen sources */}
+                <link
+                    rel="preload"
+                    as="image"
+                    href="/img/work-with-us-hero.png"
+                    imageSrcSet="/img/work-with-us-hero.avif 1x, /img/work-with-us-hero.webp 1x, /img/work-with-us-hero.png 1x"
+                    imageSizes="(max-width: 700px) 100vw, 600px"
+                />
+
+                {/* FAQPage schema (SEO) */}
+                <script
+                    type="application/ld+json"
+                    // eslint-disable-next-line react/no-danger
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            '@context': 'https://schema.org',
+                            '@type': 'FAQPage',
+                            mainEntity: [
+                                {
+                                    '@type': 'Question',
+                                    name: 'How fast can we start?',
+                                    acceptedAnswer: {
+                                        '@type': 'Answer',
+                                        text: 'Diagnostics can start within days. Workshops schedule within 1–2 weeks.',
+                                    },
+                                },
+                                {
+                                    '@type': 'Question',
+                                    name: 'Remote or in-person?',
+                                    acceptedAnswer: {
+                                        '@type': 'Answer',
+                                        text: 'Both. We use collaborative canvases remotely and structured templates on-site.',
+                                    },
+                                },
+                                {
+                                    '@type': 'Question',
+                                    name: 'Typical engagement length?',
+                                    acceptedAnswer: {
+                                        '@type': 'Answer',
+                                        text: 'Diagnostics: 1–2 weeks. Workshops: half or full day (+light prep). Programs/coaching: 6–12+ weeks.',
+                                    },
+                                },
+                                {
+                                    '@type': 'Question',
+                                    name: 'Pricing?',
+                                    acceptedAnswer: {
+                                        '@type': 'Answer',
+                                        text: 'Fixed-fee for diagnostics/workshops; simple retainers for coaching; program pricing by scope.',
+                                    },
+                                },
+                            ],
+                        }),
+                    }}
+                />
+            </Head>
+
             <main>
                 {/* Hero */}
-                <section className={styles.heroBanner} aria-labelledby="wwu-hero-title">
+                <section className="heroBanner" aria-labelledby="wwu-hero-title">
                     <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
                         <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-                            <h1 id="wwu-hero-title" className={styles.heroTitle}>Work with Doulab</h1>
-                            <p className={styles.heroSubtitle}>Practical ways to start—diagnose, align, and build capacity.</p>
-                            <p className={styles.heroText}>
-                                Start small or go deep. We help teams make innovation repeatable and foresight practical,
+                            <h1 id="wwu-hero-title" className="heroTitle">Work with Doulab</h1>
+                            <p className="heroSubtitle">Practical ways to start—diagnose, align, and build capability.</p>
+                            <p className="heroText">
+                                Start small or go deeper. We make innovation <strong>repeatable</strong> and foresight <strong>practical</strong>—
                                 so strategy turns into sustained results.
                             </p>
 
-                            <div className={styles.heroCtas}>
-                                <Link to="/services/clarityscan" className={styles.buttonPrimary} data-cta="wwu_hero_clarityscan">
+                            <div className="heroCtas">
+                                <Link
+                                    to="/services/clarityscan"
+                                    className="buttonPrimary"
+                                    data-cta="wwu_hero_clarityscan"
+                                    data-section="wwu"
+                                    data-step="hero"
+                                    aria-label="Start with a ClarityScan diagnostic"
+                                >
                                     Start with ClarityScan®
                                 </Link>
-                                <Link to="/contact" className={styles.buttonSecondary} data-cta="wwu_hero_contact">
+                                <Link
+                                    to="/contact"
+                                    className="buttonSecondary"
+                                    data-cta="wwu_hero_contact"
+                                    data-section="wwu"
+                                    data-step="hero"
+                                    aria-label="Book a discovery call"
+                                >
                                     Book a discovery call
                                 </Link>
                             </div>
 
-                            {/* In this page subnav */}
-                            <nav className={styles.subnav} aria-label="In this page">
+                            {/* In-page subnav (canonical styles from custom.css) */}
+                            <nav className="subnav" aria-label="In this page" style={{ marginTop: '.75rem' }}>
                                 <a href="#start">Start</a>
                                 <a href="#process">How we work</a>
                                 <a href="#results">Results</a>
@@ -40,107 +117,155 @@ export default function WorkWithUsPage() {
                         </div>
 
                         <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-                            <img
-                                src="/img/work-with-us-hero.png"
-                                alt="Work with Doulab"
-                                className={styles.heroImage}
-                                loading="eager"
-                                fetchPriority="high"
-                            />
+                            <picture>
+                                <source srcSet="/img/work-with-us-hero.avif" type="image/avif" />
+                                <source srcSet="/img/work-with-us-hero.webp" type="image/webp" />
+                                <img
+                                    src="/img/work-with-us-hero.png"
+                                    alt="Work with Doulab"
+                                    className="heroImage"
+                                    loading="eager"
+                                    fetchPriority="high"
+                                    width={600}
+                                    height={400}
+                                />
+                            </picture>
                         </div>
                     </div>
                 </section>
 
                 {/* 3 ways to start */}
-                <section id="start" className={styles.section} aria-labelledby="wwu-start-title">
-                    <h2 id="wwu-start-title">Three ways to start</h2>
-                    <div className={styles.cardGrid}>
-                        <div className={styles.card}>
-                            <Search className={styles.cardIcon} aria-hidden="true" />
-                            <h3>ClarityScan® Diagnostic</h3>
-                            <p>Rapidly map innovation or foresight maturity, surface gaps that matter, and get a prioritized action snapshot.</p>
-                            <div className={styles.cardFooter}>
-                                <Link to="/services/clarityscan" className={styles.cardCta} data-cta="wwu_start_clarityscan">
+                <section id="start" className="section" aria-labelledby="wwu-start-title">
+                    <h2 id="wwu-start-title">Three ways to start, based on your goal</h2>
+                    <div className="cardGrid">
+                        <article className="card" aria-labelledby="wwu-card-clarity">
+                            <Search className="cardIcon" aria-hidden="true" />
+                            <h3 id="wwu-card-clarity">ClarityScan® Diagnostic</h3>
+                            <p>
+                                Baseline capability in <strong>days</strong>, surface the gaps that move the needle, and leave with a
+                                prioritized action snapshot.
+                            </p>
+                            <div className="cardFooter">
+                                <Link
+                                    to="/services/clarityscan"
+                                    className="cardCta"
+                                    data-cta="wwu_start_clarityscan"
+                                    data-section="wwu"
+                                    data-step="cards"
+                                    aria-label="Run a ClarityScan diagnostic"
+                                >
                                     Run a diagnostic →
                                 </Link>
                             </div>
-                        </div>
+                        </article>
 
-                        <div className={styles.card}>
-                            <Lightbulb className={styles.cardIcon} aria-hidden="true" />
-                            <h3>Custom Workshop</h3>
-                            <p>Half‑day or full‑day sessions to align teams, unlock decisions, and leave with a 30‑60‑90 plan you can execute.</p>
-                            <div className={styles.cardFooter}>
-                                <Link to="/services/custom-workshops" className={styles.cardCta} data-cta="wwu_start_workshop">
+                        <article className="card" aria-labelledby="wwu-card-workshop">
+                            <Lightbulb className="cardIcon" aria-hidden="true" />
+                            <h3 id="wwu-card-workshop">Custom Workshop</h3>
+                            <p>
+                                In <strong>half- or full-day</strong> sessions, align decisions and leave with a <strong>30–60–90</strong> you can execute.
+                            </p>
+                            <div className="cardFooter">
+                                <Link
+                                    to="/services/custom-workshops"
+                                    className="cardCta"
+                                    data-cta="wwu_start_workshop"
+                                    data-section="wwu"
+                                    data-step="cards"
+                                    aria-label="Start a custom workshop sprint"
+                                >
                                     Start a workshop sprint →
                                 </Link>
                             </div>
-                        </div>
+                        </article>
 
-                        <div className={styles.card}>
-                            <Users className={styles.cardIcon} aria-hidden="true" />
-                            <h3>Discovery Call</h3>
-                            <p>Share goals and constraints; we’ll suggest the best path—diagnostic, workshop, program, or coaching.</p>
-                            <div className={styles.cardFooter}>
-                                <Link to="/contact" className={styles.cardCta} data-cta="wwu_start_call">
+                        <article className="card" aria-labelledby="wwu-card-call">
+                            <Users className="cardIcon" aria-hidden="true" />
+                            <h3 id="wwu-card-call">Discovery Call</h3>
+                            <p>
+                                Share goals and constraints; we’ll point you to the fastest path—diagnostic, workshop, program, or coaching.
+                            </p>
+                            <div className="cardFooter">
+                                <Link
+                                    to="/contact"
+                                    className="cardCta"
+                                    data-cta="wwu_start_call"
+                                    data-section="wwu"
+                                    data-step="cards"
+                                    aria-label="Book a discovery call"
+                                >
                                     Book a call →
                                 </Link>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </section>
 
                 {/* How we work (process rail) */}
-                <section id="process" className={styles.section} aria-labelledby="wwu-process-title">
-                    <h2 id="wwu-process-title">How we work</h2>
-                    <p className={styles.sectionLead}>Lightweight, phased, and outcome‑driven. We meet you where you are and build momentum quickly.</p>
+                <section id="process" className="section" aria-labelledby="wwu-process-title">
+                    <h2 id="wwu-process-title">How we work (lightweight & outcome-driven)</h2>
+                    <p className="sectionLead">
+                        Lightweight, phased, and outcome-driven. We meet you where you are and build momentum quickly.
+                    </p>
 
-                    <ol className={styles.processRail}>
-                        <li className={styles.processStep}>
-                            <Target className={styles.stepIcon} aria-hidden="true" />
-                            <h4>1) Map & Prioritize</h4>
+                    <ol className="processRail">
+                        <li className="processStep">
+                            <Target className="stepIcon" aria-hidden="true" />
+                            <h4>1) Map &amp; Prioritize</h4>
                             <p>Use ClarityScan® to assess capability, find gaps, and focus where impact is highest.</p>
+                            <p className="microcopy">Evidence: baseline score + top&nbsp;3 capability gaps.</p>
                         </li>
-                        <li className={styles.processStep}>
-                            <Lightbulb className={styles.stepIcon} aria-hidden="true" />
-                            <h4>2) Align & Decide</h4>
+                        <li className="processStep">
+                            <Lightbulb className="stepIcon" aria-hidden="true" />
+                            <h4>2) Align &amp; Decide</h4>
                             <p>Run a workshop to resolve tensions, choose options, and agree on next moves.</p>
+                            <p className="microcopy">Gate: option chosen, owners, 30–60–90.</p>
                         </li>
-                        <li className={styles.processStep}>
-                            <Layers className={styles.stepIcon} aria-hidden="true" />
+                        <li className="processStep">
+                            <Layers className="stepIcon" aria-hidden="true" />
                             <h4>3) Build Capability</h4>
                             <p>Deploy programs and coaching to install culture, process, and measurement.</p>
+                            <p className="microcopy">Gate: practice installed; cadence + metrics live.</p>
                         </li>
-                        <li className={styles.processStep}>
-                            <Radar className={styles.stepIcon} aria-hidden="true" />
+                        <li className="processStep">
+                            <Radar className="stepIcon" aria-hidden="true" />
                             <h4>4) Anticipate Futures</h4>
-                            <p>Use Vigía Futura to track signals, stress‑test strategy, and stay future‑ready.</p>
+                            <p>Use Vigía Futura to track signals, stress-test strategy, and stay future-ready.</p>
+                            <p className="microcopy">Evidence: risks/options logged; next review date.</p>
                         </li>
                     </ol>
                 </section>
 
                 {/* Proof */}
-                <section id="results" className={styles.section} aria-labelledby="wwu-proof-title">
-                    <h2 id="wwu-proof-title">Selected results</h2>
-                    <div className={styles.cardGrid}>
-                        <div className={styles.card}>
-                            <CheckCircle2 className={styles.cardIcon} aria-hidden="true" />
-                            <h3>AFP Siembra</h3>
-                            <p>From experiments to outcomes: Alcanza product design + SILAB launch coordination; IMM‑guided coaching over 2.5 years.</p>
-                        </div>
-                        <div className={styles.card}>
-                            <CheckCircle2 className={styles.cardIcon} aria-hidden="true" />
-                            <h3>Alpha Inversiones</h3>
-                            <p>Established innovation process and mentored Alpha Escalable; foundations supported the new Alpha en Línea launch.</p>
-                        </div>
-                        <div className={styles.card}>
-                            <CheckCircle2 className={styles.cardIcon} aria-hidden="true" />
-                            <h3>FUNDAPEC & OGTIC</h3>
-                            <p>Built a community platform with FUNDAPEC; with OGTIC, adapted MCF/IMM to scale labs and public‑sector ecosystems.</p>
-                        </div>
+                <section id="results" className="section" aria-labelledby="wwu-proof-title">
+                    <h2 id="wwu-proof-title">Results we’ve helped deliver</h2>
+                    <div className="cardGrid">
+                        <article className="card" aria-labelledby="wwu-proof-siembra">
+                            <CheckCircle2 className="cardIcon" aria-hidden="true" />
+                            <h3 id="wwu-proof-siembra">AFP Siembra</h3>
+                            <p>
+                                From experiments to outcomes: Alcanza product design + SILAB launch coordination; IMM-guided coaching over
+                                <strong> 2.5 years</strong>.
+                            </p>
+                        </article>
+                        <article className="card" aria-labelledby="wwu-proof-alpha">
+                            <CheckCircle2 className="cardIcon" aria-hidden="true" />
+                            <h3 id="wwu-proof-alpha">Alpha Inversiones</h3>
+                            <p>
+                                Established innovation process and mentored Alpha Escalable; foundations supported the new
+                                <strong> Alpha en Línea</strong> launch.
+                            </p>
+                        </article>
+                        <article className="card" aria-labelledby="wwu-proof-public">
+                            <CheckCircle2 className="cardIcon" aria-hidden="true" />
+                            <h3 id="wwu-proof-public">FUNDAPEC &amp; OGTIC</h3>
+                            <p>
+                                Built a community platform with FUNDAPEC; with OGTIC, adapted MCF/IMM to scale labs and public-sector ecosystems.
+                            </p>
+                        </article>
                     </div>
 
-                    <div className={styles.proofStrip} aria-label="Organizations we’ve supported">
+                    <div className="proofStrip" aria-label="Organizations we’ve supported">
                         <img src="/img/afpsiembra.png" alt="AFP Siembra" width={160} height={48} loading="lazy" />
                         <img src="/img/OGTIC_horizontal_fullcolor.png" alt="OGTIC" width={160} height={48} loading="lazy" />
                         <img src="/img/alpha.png" alt="Alpha Inversiones" width={160} height={48} loading="lazy" />
@@ -150,29 +275,35 @@ export default function WorkWithUsPage() {
                 </section>
 
                 {/* Who we work with */}
-                <section id="fit" className={styles.section} aria-labelledby="wwu-fit-title">
-                    <h2 id="wwu-fit-title">Who we work with</h2>
-                    <p className={styles.sectionLead}>Public institutions, regulated finance, education, scale‑ups, and ecosystems where evidence and outcomes matter.</p>
-                    <ul className={styles.chips}>
+                <section id="fit" className="section" aria-labelledby="wwu-fit-title">
+                    <h2 id="wwu-fit-title">Who we’re best for</h2>
+                    <p className="sectionLead">
+                        Public institutions, regulated finance, education, scale-ups, and ecosystems where evidence and outcomes matter.
+                    </p>
+                    <ul className="chips">
                         <li>Public sector</li>
                         <li>Financial services</li>
-                        <li>Education & workforce</li>
-                        <li>Scale‑ups & startups</li>
-                        <li>Incubators & accelerators</li>
+                        <li>Education &amp; workforce</li>
+                        <li>Scale-ups &amp; startups</li>
+                        <li>Incubators &amp; accelerators</li>
                     </ul>
+                    <p className="microcopy" style={{ marginTop: '.75rem' }}>
+                        New to us? See our Programs and Coaching &amp; mentoring on the{' '}
+                        <Link to="/what-we-do">What we do</Link> page.
+                    </p>
                 </section>
 
                 {/* FAQ */}
-                <section id="faq" className={styles.section} aria-labelledby="wwu-faq-title">
+                <section id="faq" className="section" aria-labelledby="wwu-faq-title">
                     <h2 id="wwu-faq-title">FAQ</h2>
-                    <div className={styles.faqGrid}>
+                    <div className="faqGrid">
                         <details>
                             <summary>How fast can we start?</summary>
                             <p>Diagnostics can start within days. Workshops typically schedule within 1–2 weeks.</p>
                         </details>
                         <details>
-                            <summary>Remote or in‑person?</summary>
-                            <p>Both. We use collaborative canvases remotely and structured templates on‑site.</p>
+                            <summary>Remote or in-person?</summary>
+                            <p>Both. We use collaborative canvases remotely and structured templates on-site.</p>
                         </details>
                         <details>
                             <summary>Typical engagement length?</summary>
@@ -180,21 +311,35 @@ export default function WorkWithUsPage() {
                         </details>
                         <details>
                             <summary>Pricing?</summary>
-                            <p>Fixed‑fee for diagnostics/workshops; simple retainers for coaching; program pricing by scope.</p>
+                            <p>Fixed-fee for diagnostics/workshops; simple retainers for coaching; program pricing by scope.</p>
                         </details>
                     </div>
                 </section>
 
                 {/* Final centered CTA */}
-                <section id="get-started" className={styles.section} aria-labelledby="wwu-cta-title">
-                    <div className={styles.finalCta}>
+                <section id="get-started" className="section" aria-labelledby="wwu-cta-title">
+                    <div className="finalCta">
                         <h2 id="wwu-cta-title">Ready to move from plans to repeatable delivery?</h2>
-                        <p>Start with ClarityScan® or book a discovery call. We’ll co‑create the path from insight to results.</p>
-                        <div className={styles.heroCtas} style={{ justifyContent: 'center' }}>
-                            <Link to="/services/clarityscan" className={styles.buttonPrimary} data-cta="wwu_footer_clarityscan">
+                        <p>Start with ClarityScan® or book a discovery call. We’ll co-create the path from insight to results.</p>
+                        <div className="heroCtas" style={{ justifyContent: 'center' }}>
+                            <Link
+                                to="/services/clarityscan"
+                                className="buttonPrimary"
+                                data-cta="wwu_footer_clarityscan"
+                                data-section="wwu"
+                                data-step="final"
+                                aria-label="Start with a ClarityScan diagnostic"
+                            >
                                 Start with ClarityScan®
                             </Link>
-                            <Link to="/contact" className={styles.buttonSecondary} data-cta="wwu_footer_contact">
+                            <Link
+                                to="/contact"
+                                className="buttonSecondary"
+                                data-cta="wwu_footer_contact"
+                                data-section="wwu"
+                                data-step="final"
+                                aria-label="Talk to us"
+                            >
                                 Talk to us
                             </Link>
                         </div>

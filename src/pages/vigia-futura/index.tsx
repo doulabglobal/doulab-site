@@ -19,14 +19,16 @@ export default function VigiaFuturaPage() {
     const observerRef = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {
-        const headings = SECTIONS.map((s) => document.getElementById(s.id)).filter(Boolean) as HTMLElement[];
+        const headings = SECTIONS
+            .map((s) => document.getElementById(s.id))
+            .filter(Boolean) as HTMLElement[];
 
         observerRef.current = new IntersectionObserver(
             (entries) => {
                 const visible = entries
                     .filter((e) => e.isIntersecting)
                     .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-                if (visible?.target?.id) setActiveId(visible.target.id);
+                if (visible?.target?.id) setActiveId((visible.target as HTMLElement).id);
             },
             { rootMargin: '0px 0px -60% 0px', threshold: [0.25, 0.6, 1] }
         );
@@ -41,15 +43,14 @@ export default function VigiaFuturaPage() {
             description="A strategic foresight observatory that surfaces signals, maps risks, and translates insight into action."
         >
             <Head>
-                <link rel="canonical" href="https://doulab.net/vigia-futura" />
-                {/* LCP image preload with next-gen sources */}
                 <link
                     rel="preload"
                     as="image"
                     href="/img/vigia-futura-hero.png"
-                    imageSrcSet="/img/vigia-futura-hero.avif 1x, /img/vigia-futura-hero.webp 1x, /img/vigia-futura-hero.png 1x"
-                    imageSizes="(max-width: 600px) 100vw, 600px"
+                    imagesrcset="/img/vigia-futura-hero.avif 1x, /img/vigia-futura-hero.webp 1x, /img/vigia-futura-hero.png 1x"
+                    imagesizes="(max-width: 600px) 100vw, 600px"
                 />
+
             </Head>
 
             <main>
@@ -74,6 +75,21 @@ export default function VigiaFuturaPage() {
                                     Explore the radar
                                 </a>
                             </div>
+
+                            {/* In-page subnav (canonical classes) */}
+                            <nav className="subnav" aria-label="In this page">
+                                {SECTIONS.map((s) => (
+                                    <a
+                                        key={s.id}
+                                        href={`#${s.id}`}
+                                        className={activeId === s.id ? 'subnavActive' : undefined}
+                                        aria-current={activeId === s.id ? 'true' : undefined}
+                                    >
+                                        {s.label}
+                                    </a>
+                                ))}
+                            </nav>
+
                         </div>
 
                         <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
@@ -92,44 +108,13 @@ export default function VigiaFuturaPage() {
                             </picture>
                         </div>
                     </div>
-
-                    {/* In-page subnav */}
-                    <nav
-                        className="subnav"
-                        aria-label="In this page"
-                        style={{
-                            display: 'flex', gap: '.75rem', flexWrap: 'wrap', marginTop: '1rem',
-                            borderTop: '1px dashed var(--dl-border)', paddingTop: '.75rem'
-                        }}
-                    >
-                        {SECTIONS.map((s) => (
-                            <a
-                                key={s.id}
-                                href={`#${s.id}`}
-                                aria-current={activeId === s.id ? 'true' : undefined}
-                                style={{
-                                    textDecoration: 'none',
-                                    padding: '.35rem .65rem',
-                                    borderRadius: '999px',
-                                    border: activeId === s.id ? '1px solid var(--ifm-color-primary)' : '1px solid var(--dl-border)',
-                                    color: activeId === s.id ? 'var(--ifm-color-primary)' : 'inherit',
-                                    background: activeId === s.id ? 'rgba(79,70,229,0.08)' : 'transparent',
-                                    fontWeight: 600,
-                                    fontSize: '.92rem',
-                                }}
-                            >
-                                {s.label}
-                            </a>
-                        ))}
-                    </nav>
                 </section>
 
                 {/* Radar */}
                 <section className="section" id="radar" aria-labelledby="vf-radar-title">
                     <h2 id="vf-radar-title">Radar</h2>
                     <p className="sectionLead">
-                        A living <strong>radar</strong> that surfaces early-warning signals, trends, and inflection points —
-                        <strong> updated quarterly</strong>.
+                        A living <strong>radar</strong> that surfaces early-warning signals, trends, and inflection points — <strong>updated quarterly</strong>.
                     </p>
                     <div className="cardGrid">
                         <article className="card" aria-labelledby="radar-signals-title">
@@ -192,7 +177,6 @@ export default function VigiaFuturaPage() {
                         </article>
                     </div>
 
-                    {/* Mid-page CTA */}
                     <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '0.75rem' }}>
                         <Link className="buttonPrimary" to="/contact" data-cta="cta.vigia.mid.briefing">
                             Request a briefing
@@ -207,8 +191,7 @@ export default function VigiaFuturaPage() {
                 <section className="section" id="labs" aria-labelledby="vf-labs-title">
                     <h2 id="vf-labs-title">Policy &amp; Venture Labs</h2>
                     <p className="sectionLead">
-                        Time-boxed labs to <strong>prototype policy, services, or ventures</strong> against emerging futures — with
-                        <strong> measurable learning loops</strong>.
+                        Time-boxed labs to <strong>prototype policy, services, or ventures</strong> against emerging futures — with <strong>measurable learning loops</strong>.
                     </p>
                     <div className="cardGrid">
                         <article className="card" aria-labelledby="labs-governance-title">
@@ -242,8 +225,7 @@ export default function VigiaFuturaPage() {
                 <section className="section" id="training" aria-labelledby="vf-training-title">
                     <h2 id="vf-training-title">Training &amp; Capacity</h2>
                     <p className="sectionLead">
-                        Programs and toolkits to embed <strong>futures literacy</strong> and practice across teams — so foresight shows up in
-                        planning and delivery.
+                        Programs and toolkits to embed <strong>futures literacy</strong> and practice across teams — so foresight shows up in planning and delivery.
                     </p>
                     <div className="cardGrid">
                         <article className="card" aria-labelledby="training-literacy-title">

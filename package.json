@@ -1,17 +1,16 @@
 {
-  "name": "ai",
+  "name": "doulab.site",
   "version": "0.0.0",
   "private": true,
+  "description": "Doulab website (Docusaurus v3)",
   "scripts": {
-    "organizationName": "doulabglobal",
-    "projectName": "AI",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
@@ -35,6 +34,8 @@
     "@docusaurus/plugin-google-tag-manager": "^3.8.1",
     "@docusaurus/tsconfig": "3.8.1",
     "@docusaurus/types": "3.8.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
     "cross-env": "^10.0.0",
     "eslint": "^9.31.0",
     "typescript": "~5.6.2"
@@ -52,6 +53,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
+    "node": "22.x"
   }
 }

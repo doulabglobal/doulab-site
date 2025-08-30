@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\blog",
     "\\docs",
     "\\docs\\research-resources",
     "\\src",
     "\\src\\pages",
-    "\\src\\pages\\ecosystems",
-    "\\src\\pages\\vigia-futura",
-    "\\src\\pages\\work-with-us",
-    "\\static",
-    "\\static\\img"
+    "\\src\\pages\\case-studies",
+    "\\src\\pages\\insights",
+    "\\src\\pages\\services",
+    "\\src\\pages\\what-we-do"
   ],
-  "SelectedNode": "\\docs\\research-resources\\index.md",
+  "SelectedNode": "\\docs\\releases.md",
   "PreviewInSolutionExplorer": false
 }

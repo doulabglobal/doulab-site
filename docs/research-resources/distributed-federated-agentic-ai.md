@@ -5,8 +5,8 @@ description: A Blueprint for Next-Generation Decentralized Governance.
 tags: [whitepaper]
 hide_title: false
 hide_table_of_contents: false
-tags: ["whitepaper"]
 ---
+
 
 # Distributed Federated Agentic AI:
 

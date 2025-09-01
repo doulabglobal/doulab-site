@@ -1,9 +1,10 @@
-{
+﻿{
   "name": "doulab.site",
   "version": "0.5.0",
   "private": true,
   "description": "Doulab website (Docusaurus v3)",
   "scripts": {
+    "prepare": "node scripts/prepare.cjs",
     "preinstall": "node scripts/strip-bom.cjs",
     "prebuild": "node scripts/strip-bom.cjs",
     "typecheck": "tsc",
@@ -25,8 +26,7 @@
     "serve:staging": "cross-env NODE_ENV=production DEPLOY_ENV=staging docusaurus build && docusaurus serve",
     "release:bump:patch": "npm version patch -m \"chore(release): v%s\"",
     "release:bump:minor": "npm version minor -m \"chore(release): v%s\"",
-    "release:bump:major": "npm version major -m \"chore(release): v%s\"",
-    "prepare": "husky"
+    "release:bump:major": "npm version major -m \"chore(release): v%s\""
   },
   "dependencies": {
     "@docusaurus/core": "3.8.1",
@@ -48,7 +48,7 @@
     "@types/react-dom": "18.2.25",
     "cross-env": "^10.0.0",
     "eslint": "^9.31.0",
-    "husky": "^9.1.7",
+    "husky": "^9.1.6",
     "typescript": "~5.6.2"
   },
   "overrides": {
@@ -72,3 +72,4 @@
     "node": ">=20.16.0 <23"
   }
 }
+

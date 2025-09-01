@@ -1,4 +1,4 @@
-﻿@import './consent-banner.css';
+@import './consent-banner.css';
 
 /* ===== Doulab global tokens ===== */
 :root {
@@ -824,4 +824,39 @@ html.theme-dark .markdown.doulabDoc .dl-cards > li {
     background: #111318 !important;
     border-color: rgba(255,255,255,.12) !important;
     box-shadow: none !important;
+}
+/* Secondary buttons: white text by default in dark */
+html.theme-dark .buttonSecondary,
+html.theme-dark .dl-buttonSecondary,
+html.theme-dark .btn-secondary {
+    color: #fff;
+    border-color: rgba(255,255,255,.24);
+}
+
+/* Body copy contrast in dark: sections, cards, process steps */
+html.theme-dark .sectionLead,
+html.theme-dark .heroText,
+html.theme-dark .card p,
+html.theme-dark .processStep p {
+    color: #e5e7eb;
+}
+
+/* Final CTA in dark: transparent bg + white text */
+html.theme-dark .finalCta {
+    background: transparent;
+    color: #e5e7eb;
+    border-color: rgba(255,255,255,.12);
+}
+
+    html.theme-dark .finalCta h2,
+    html.theme-dark .finalCta p {
+        color: #e5e7eb;
+    }
+
+/* Docs: card + CTA blocks in dark stay dark (no white fill) */
+html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
+html.theme-dark .markdown.doulabDoc .dl-cards > li {
+    background: #111318;
+    border-color: rgba(255,255,255,.12);
+    box-shadow: none;
 }

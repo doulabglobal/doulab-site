@@ -1,19 +1,29 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+announcement:
+  label: Announcement
+  permalink: /blog/tags/announcement
+  description: Product and company news
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+mcf:
+  label: MicroCanvas
+  permalink: /blog/tags/mcf
+  description: MicroCanvas® methods and tools
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+imm:
+  label: IMM
+  permalink: /blog/tags/imm
+  description: Innovation Maturity Model® practice
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+clarityscan:
+  label: ClarityScan
+  permalink: /blog/tags/clarityscan
+  description: Diagnostics and capability baselines
+
+vigia-futura:
+  label: Vigía Futura
+  permalink: /blog/tags/vigia-futura
+  description: Foresight radar, briefings, and labs
+
+innovation:
+  label: Innovation
+  permalink: /blog/tags/innovation
+  description: Culture, delivery systems, and outcomes

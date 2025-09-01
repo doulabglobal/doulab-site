@@ -1,4 +1,4 @@
-﻿// src/pages/vigia-futura/index.tsx
+// src/pages/vigia-futura/index.tsx
 import React, { useEffect, useRef, useState } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -19,11 +19,15 @@ export default function VigiaFuturaPage() {
     const observerRef = useRef<IntersectionObserver | null>(null);
 
     useEffect(() => {
+        if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return;
+
         const headings = SECTIONS
             .map((s) => document.getElementById(s.id))
             .filter(Boolean) as HTMLElement[];
 
-        observerRef.current = new IntersectionObserver(
+        if (!headings.length) return;
+
+        const observer = new IntersectionObserver(
             (entries) => {
                 const visible = entries
                     .filter((e) => e.isIntersecting)
@@ -33,8 +37,9 @@ export default function VigiaFuturaPage() {
             { rootMargin: '0px 0px -60% 0px', threshold: [0.25, 0.6, 1] }
         );
 
-        headings.forEach((h) => observerRef.current?.observe(h));
-        return () => observerRef.current?.disconnect();
+        observerRef.current = observer;
+        headings.forEach((h) => observer.observe(h));
+        return () => observer.disconnect();
     }, []);
 
     return (
@@ -47,10 +52,9 @@ export default function VigiaFuturaPage() {
                     rel="preload"
                     as="image"
                     href="/img/vigia-futura-hero.png"
-                    imagesrcset="/img/vigia-futura-hero.avif 1x, /img/vigia-futura-hero.webp 1x, /img/vigia-futura-hero.png 1x"
-                    imagesizes="(max-width: 600px) 100vw, 600px"
+                    imageSrcSet="/img/vigia-futura-hero.avif 1x, /img/vigia-futura-hero.webp 1x, /img/vigia-futura-hero.png 1x"
+                    imageSizes="(max-width: 600px) 100vw, 600px"
                 />
-
             </Head>
 
             <main>
@@ -89,7 +93,6 @@ export default function VigiaFuturaPage() {
                                     </a>
                                 ))}
                             </nav>
-
                         </div>
 
                         <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
@@ -102,6 +105,7 @@ export default function VigiaFuturaPage() {
                                     className="heroImage"
                                     loading="eager"
                                     fetchPriority="high"
+                                    decoding="async"
                                     width={600}
                                     height={400}
                                 />

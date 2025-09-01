@@ -1,67 +1,74 @@
 {
-    "name": "doulab.site",
-    "version": "0.5.0",
-    "private": true,
-    "description": "Doulab website (Docusaurus v3)",
-    "scripts": {
-        "preinstall": "node scripts/strip-bom.cjs",
-        "prebuild": "node scripts/strip-bom.cjs",
-        "docusaurus": "docusaurus",
-        "start": "docusaurus start",
-        "build": "docusaurus build",
-        "serve": "docusaurus serve",
-        "clear": "docusaurus clear",
-        "swizzle": "docusaurus swizzle",
-        "deploy": "docusaurus deploy",
-        "write-translations": "docusaurus write-translations",
-        "write-heading-ids": "docusaurus write-heading-ids",
-        "typecheck": "tsc",
-        "serve:prod": "cross-env NODE_ENV=production docusaurus build && docusaurus serve",
-        "serve:staging": "cross-env NODE_ENV=production DEPLOY_ENV=staging docusaurus build && docusaurus serve",
-        "release:bump:patch": "npm version patch -m \"chore(release): v%s\"",
-        "release:bump:minor": "npm version minor -m \"chore(release): v%s\"",
-        "release:bump:major": "npm version major -m \"chore(release): v%s\""
-    },
-    "dependencies": {
-        "@docusaurus/core": "3.8.1",
-        "@docusaurus/preset-classic": "3.8.1",
-        "@fontsource/inter": "^5.2.6",
-        "@mdx-js/react": "^3.0.0",
-        "clsx": "^2.0.0",
-        "gh-pages": "^6.3.0",
-        "lucide-react": "^0.536.0",
-        "prism-react-renderer": "^2.3.0",
-        "react": "18.2.0",
-        "react-dom": "18.2.0"
-    },
-    "devDependencies": {
-        "@docusaurus/module-type-aliases": "3.8.1",
-        "@docusaurus/tsconfig": "3.8.1",
-        "@docusaurus/types": "3.8.1",
-        "@types/react": "18.2.79",
-        "@types/react-dom": "18.2.25",
-        "cross-env": "^10.0.0",
-        "eslint": "^9.31.0",
-        "typescript": "~5.6.2"
-    },
-    "overrides": {
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "scheduler": "0.23.0"
-    },
-    "browserslist": {
-        "production": [
-            ">0.5%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 3 chrome version",
-            "last 3 firefox version",
-            "last 5 safari version"
-        ]
-    },
-    "engines": {
-        "node": "20.16.0"
-    }
+  "name": "doulab.site",
+  "version": "0.5.0",
+  "private": true,
+  "description": "Doulab website (Docusaurus v3)",
+  "scripts": {
+    "preinstall": "node scripts/strip-bom.cjs",
+    "prebuild": "node scripts/strip-bom.cjs",
+    "typecheck": "tsc",
+    "build:dry": "docusaurus build --no-minify --out-dir build-dry",
+    "check:links": "node scripts/check-anchors.mjs",
+    "verify": "npm run typecheck && npm run build",
+    "prepush": "npm run verify",
+    "prepush:local": "npm run verify",
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "serve:prod": "cross-env NODE_ENV=production docusaurus build && docusaurus serve",
+    "serve:staging": "cross-env NODE_ENV=production DEPLOY_ENV=staging docusaurus build && docusaurus serve",
+    "release:bump:patch": "npm version patch -m \"chore(release): v%s\"",
+    "release:bump:minor": "npm version minor -m \"chore(release): v%s\"",
+    "release:bump:major": "npm version major -m \"chore(release): v%s\"",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.8.1",
+    "@docusaurus/preset-classic": "3.8.1",
+    "@fontsource/inter": "^5.2.6",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "gh-pages": "^6.3.0",
+    "lucide-react": "^0.536.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "3.8.1",
+    "@docusaurus/tsconfig": "3.8.1",
+    "@docusaurus/types": "3.8.1",
+    "@types/react": "18.2.79",
+    "@types/react-dom": "18.2.25",
+    "cross-env": "^10.0.0",
+    "eslint": "^9.31.0",
+    "husky": "^9.1.7",
+    "typescript": "~5.6.2"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "scheduler": "0.23.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.16.0 <23"
+  }
 }

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Introducing Doulab, innovation made repeatable
 description: Why Doulab exists, how the MicroCanvas® Framework and IMM® help teams ship outcomes reliably, and where to start.
 authors: [luis]
@@ -17,6 +17,8 @@ keywords:
 Innovation shouldn’t be a coin flip.
 
 We started **Doulab** to answer a hard question: *how do you make innovation and foresight repeatable—so strategy becomes measurable outcomes in any organization, not just the lucky ones?*
+
+<!-- truncate -->
 
 ## The operating system: MCF + IMM®
 

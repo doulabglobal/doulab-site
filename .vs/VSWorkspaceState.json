@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\blog",
-    "\\docs",
     "\\docs\\research-resources",
+    "\\scripts",
     "\\src",
-    "\\src\\pages",
+    "\\src\\css",
     "\\src\\pages\\case-studies",
     "\\src\\pages\\insights",
     "\\src\\pages\\services",

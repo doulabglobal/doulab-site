@@ -1,8 +1,8 @@
-﻿luis:
+luis:
   name: Luis Santiago
   title: Head Coach & Mentor
-  url: https://doulab.net
-  image_url: /img/logo.svg # TODO: replace with your headshot (e.g., /img/luis-santiago.jpg)
   page: true
+  image_url: /img/luis.png   # TODO: replace with /img/authors/luis.png
   socials:
-    linkedin: lasantiagoa   # shows LinkedIn icon/button on your author page
+    linkedin: lasantiagoa  # e.g., luis-santiago-xxxx
+    github: doulabglobal

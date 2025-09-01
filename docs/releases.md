@@ -14,44 +14,59 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 
 ## 2025-09-01
 
-#### v0.5.0 — Blog launch, Research+Resources aggregator, dark mode, build hardening
+#### v0.5.0 — Blog launch, narrative intro, Research+Resources aggregator, dark mode, build hardening
+
 **Content & IA**
-- **Blog launched** with RSS at `/blog/rss.xml`, author metadata, and avatars (`/img/authors/luis.jpg`).  
-- **Home > Research + Resources** now shows:
+- **Blog launched** with RSS at `/blog/rss.xml`, author metadata, and avatar (`/img/authors/luis.jpg`).
+- **Intro post fully rewritten** as a narrative (“Introducing Doulab: innovation made repeatable”):
+  - Integrates the homepage **Problem** and **Solution** content as scannable card grids.
+  - Brings in **Doulab’s purpose** from About (“help unlock global prosperity by helping others create better futures”).
+  - Keeps all CTAs, A11y attributes, and internal routes; quotes & punctuation normalized to UTF-8.
+  - Frontmatter title quoted to fix YAML colon parsing (`title: "Introducing Doulab: …"`).
+- **Home → Research + Resources** now shows:
   1) **MicroCanvas Framework v2.1** (fixed first card)  
   2) **Top 3 latest whitepapers** from Docs (`tag: whitepaper`)  
-  3) **Top 3 latest blog posts** via the local RSS (safe client-only parsing; production test pending).
+  3) **Top 3 latest blog posts** via local RSS (client-only parsing).  
 - **About**: canonical link, accessibility polish, hero preload fix, and stable `#service-pillars` anchor.
-- **Vigía Futura**: full page with hero preload (camel-cased `imageSrcSet/imageSizes`), subnav with IntersectionObserver, cards, and CTAs.
+- **Vigía Futura**: full page with hero preload (React camelCase `imageSrcSet/imageSizes`), in-page subnav via `IntersectionObserver`, and consistent cards/CTAs.
 
 **Design & UX**
-- **Dark-mode polish**: remaining edges refined across pages/components.
-- Card and CTA consistency in service/observatory pages; shared tokens + accessibility passes.
+- **Dark-mode polish**: finalized edges and tokens across pages/components.
+- Card and CTA consistency across services/observatory pages; shared styles + A11y passes.
 
 **Components**
 - **`WhitepaperCards.tsx`**: fixed JSX/closing tags and typing; stable 3-up layout.
 
+**Blog taxonomy & previews**
+- **Tags defined** in `tags.yml` for the intro post to remove warnings.
+- **Truncation marker** added to intro post for cleaner previews on paginated lists.
+
 **Build & Tooling**
-- **React dedupe fix** for “A React Element from an older version…” by pinning single React runtime:
+- **React dedupe fix** for “A React Element from an older version…” by pinning a single runtime:
   - `react@18.2.0`, `react-dom@18.2.0`, `scheduler@0.23.0` (via `overrides`).
-- **Node engines** relaxed to `20.x` to match Cloudflare (avoids EBADENGINE locally).
-- **Husky hooks** (LF + no BOM, v10-safe):
+- **Encoding/BOM fixes**
+  - Rewrote `package.json` as UTF-8 **no BOM** (resolved webpack/Docusaurus JSON parse error).
+  - Normalized blog/source files to UTF-8 (fixed mojibake like `â€™`).
+- **Husky v10-safe hooks (LF + no BOM)**
   - `pre-commit`: `npm run typecheck`
   - `pre-push`: `npm run verify` (typecheck + build + blog/anchors checks)
+  - Removed deprecated `husky.sh` sourcing; Git executable bit set; `.gitattributes` forces LF for hooks.
 - **Package scripts** added:
-  - `typecheck`, `verify`, `check:blog` (fetch `/blog/rss.xml`), `check:anchors` (Docusaurus broken anchors), plus clean/fix helpers.
-- **Encoding/BOM fixes**:
-  - Rewrote `package.json` as UTF-8 **no BOM** (resolved webpack/docusaurus JSON parse error).
-  - Husky scripts stored LF/no-BOM to avoid shebang issues on Windows + Git Bash.
-- **Docs frontmatter fix**: removed duplicate `tags:` key in `distributed-federated-agentic-ai.md` (YAML parse error).
+  - `typecheck`, `verify`, `check:blog` (RSS fetch), `check:anchors` (Docusaurus broken anchors), plus clean/fix helpers.
+- **Cloudflare build fix**
+  - CI-safe Husky setup so **Cloudflare Pages** doesn’t fail on `prepare`; build now passes end-to-end.
+- **Node engines** relaxed to `20.x` to match Cloudflare (avoids EBADENGINE locally).
+
+**Repo hygiene**
+- **Visual Studio artifacts** untracked and ignored: added `.gitignore` rules; cleaned `.vs/` from history.
+- Added `package-lock.json` to lock dependency graph.
 
 **Infra / Headers**
-- Keep `_headers` rules for RSS (no-store) and tightened CSP; long-cache for `/assets/*` & `/img/*`.
+- Kept `_headers` rules for RSS (no-store) and tightened CSP; long-cache for `/assets/*` & `/img/*`.
 
 **Known items / Next**
-- **Production validation**: confirm Home “Research + Resources” pulls **Top 3 blog posts** via RSS on Cloudflare.  
-- Blog taxonomy: define new tags in `tags.yml` to remove warnings.  
-- Fix upstream page linking to `/about#service-pillars` if it ever changes.
+- Validate “Research + Resources” **Top 3 blog posts** card list against RSS in production (if not already confirmed).
+- If any page still links `/about#service-pillars` and that anchor changes, update the source page accordingly.
 
 ---
 

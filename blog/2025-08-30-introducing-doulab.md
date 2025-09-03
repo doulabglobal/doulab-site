@@ -4,7 +4,7 @@ description: "Why Doulab exists, how the MicroCanvas® Framework and IMM® help 
 slug: /introducing-doulab
 authors: [luis]
 tags: [announcement, mcf, imm, clarityscan, vigia-futura, innovation]
-image: /img/docusaurus-social-card.jpg
+image: /img/2025-08-30-introducing-doulab.jpg
 keywords:
   - innovation maturity
   - microcanvas

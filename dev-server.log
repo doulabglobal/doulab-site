@@ -221,3 +221,143 @@ Module not found: Error: Can't resolve '@site/docs/research-resources/releases.m
 [90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 366.30ms
 [1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.02s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 485.43ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 324.28ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 271.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 717.57ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 291.44ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 455.55ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 265.30ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 349.05ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 355.03ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 694.16ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 363.06ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 421.78ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 300.84ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 691.51ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 260.23ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 276.43ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 316.43ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 442.52ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expected corresponding JSX closing tag for <h3>. (542:20)
+[0m [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m[33mLoading[39m latest [36mfrom[39m the blog�
+ [90m 541 |[39m                         [33m<[39m[33mp[39m className[33m=[39m[32m"microcopy"[39m[33m>[39m[33mFetching[39m recent posts[33m.[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 542 |[39m                     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m                     [31m[1m^[22m[39m
+ [90m 543 |[39m                 ) [33m:[39m latestBlog[33m.[39mlength [33m===[39m [35m0[39m [33m?[39m (
+ [90m 544 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m[32m"blog-fallback"[39m className[33m=[39m[32m"card"[39m[33m>[39m
+ [90m 545 |[39m                         [33m<[39m[33mLightbulb[39m className[33m=[39m[32m"cardIcon"[39m aria[33m-[39mhidden[33m=[39m[32m"true"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 147.14ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expected corresponding JSX closing tag for <h3>. (542:20)
+[0m [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m[33mLoading[39m latest [36mfrom[39m the blog�
+ [90m 541 |[39m                         [33m<[39m[33mp[39m className[33m=[39m[32m"microcopy"[39m[33m>[39m[33mFetching[39m recent posts[33m.[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+[31m[1m>[22m[39m[90m 542 |[39m                     [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m     |[39m                     [31m[1m^[22m[39m
+ [90m 543 |[39m                 ) [33m:[39m latestBlog[33m.[39mlength [33m===[39m [35m0[39m [33m?[39m (
+ [90m 544 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m[32m"blog-fallback"[39m className[33m=[39m[32m"card"[39m[33m>[39m
+ [90m 545 |[39m                         [33m<[39m[33mLightbulb[39m className[33m=[39m[32m"cardIcon"[39m aria[33m-[39mhidden[33m=[39m[32m"true"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 212.92ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expecting Unicode escape sequence \uXXXX. (538:58)
+[0m [90m 536 |[39m                 {[90m/* 2) Top 3 whitepapers (docs) */[39m}
+ [90m 537 |[39m                 {latestWhitepapers[33m.[39mmap((paper) [33m=>[39m (
+[31m[1m>[22m[39m[90m 538 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{paper[33m.[39mpermalink} className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"card\">[39m
+ [90m     |[39m                                                           [31m[1m^[22m[39m
+ [90m 539 |[39m                         [33m<[39m[33mLayers[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"cardIcon\" aria-hidden=\"true\" />[39m
+ [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m{paper[33m.[39mtitle}[33m<[39m[33m/[39m[33mh3[39m[33m>[39m
+ [90m 541 |[39m                         {paper[33m.[39mdescription [33m&&[39m [33m<[39m[33mp[39m[33m>[39m{paper[33m.[39mdescription}[33m<[39m[33m/[39m[33mp[39m[33m>[39m}[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 220.21ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expecting Unicode escape sequence \uXXXX. (538:58)
+[0m [90m 536 |[39m                 {[90m/* 2) Top 3 whitepapers (docs) */[39m}
+ [90m 537 |[39m                 {latestWhitepapers[33m.[39mmap((paper) [33m=>[39m (
+[31m[1m>[22m[39m[90m 538 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{paper[33m.[39mpermalink} className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"card\">[39m
+ [90m     |[39m                                                           [31m[1m^[22m[39m
+ [90m 539 |[39m                         [33m<[39m[33mLayers[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"cardIcon\" aria-hidden=\"true\" />[39m
+ [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m{paper[33m.[39mtitle}[33m<[39m[33m/[39m[33mh3[39m[33m>[39m
+ [90m 541 |[39m                         {paper[33m.[39mdescription [33m&&[39m [33m<[39m[33mp[39m[33m>[39m{paper[33m.[39mdescription}[33m<[39m[33m/[39m[33mp[39m[33m>[39m}[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 130.04ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expecting Unicode escape sequence \uXXXX. (538:58)
+[0m [90m 536 |[39m                 {[90m/* 2) Top 3 whitepapers (docs) */[39m}
+ [90m 537 |[39m                 {latestWhitepapers[33m.[39mmap((paper) [33m=>[39m (
+[31m[1m>[22m[39m[90m 538 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{paper[33m.[39mpermalink} className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"card\">[39m
+ [90m     |[39m                                                           [31m[1m^[22m[39m
+ [90m 539 |[39m                         [33m<[39m[33mLayers[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"cardIcon\" aria-hidden=\"true\" />[39m
+ [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m{paper[33m.[39mtitle}[33m<[39m[33m/[39m[33mh3[39m[33m>[39m
+ [90m 541 |[39m                         {paper[33m.[39mdescription [33m&&[39m [33m<[39m[33mp[39m[33m>[39m{paper[33m.[39mdescription}[33m<[39m[33m/[39m[33mp[39m[33m>[39m}[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 219.65ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expecting Unicode escape sequence \uXXXX. (538:58)
+[0m [90m 536 |[39m                 {[90m/* 2) Top 3 whitepapers (docs) */[39m}
+ [90m 537 |[39m                 {latestWhitepapers[33m.[39mmap((paper) [33m=>[39m (
+[31m[1m>[22m[39m[90m 538 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{paper[33m.[39mpermalink} className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"card\">[39m
+ [90m     |[39m                                                           [31m[1m^[22m[39m
+ [90m 539 |[39m                         [33m<[39m[33mLayers[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"cardIcon\" aria-hidden=\"true\" />[39m
+ [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m{paper[33m.[39mtitle}[33m<[39m[33m/[39m[33mh3[39m[33m>[39m
+ [90m 541 |[39m                         {paper[33m.[39mdescription [33m&&[39m [33m<[39m[33mp[39m[33m>[39m{paper[33m.[39mdescription}[33m<[39m[33m/[39m[33mp[39m[33m>[39m}[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 209.69ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expecting Unicode escape sequence \uXXXX. (538:58)
+[0m [90m 536 |[39m                 {[90m/* 2) Top 3 whitepapers (docs) */[39m}
+ [90m 537 |[39m                 {latestWhitepapers[33m.[39mmap((paper) [33m=>[39m (
+[31m[1m>[22m[39m[90m 538 |[39m                     [33m<[39m[33mdiv[39m key[33m=[39m{paper[33m.[39mpermalink} className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"card\">[39m
+ [90m     |[39m                                                           [31m[1m^[22m[39m
+ [90m 539 |[39m                         [33m<[39m[33mLayers[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"cardIcon\" aria-hidden=\"true\" />[39m
+ [90m 540 |[39m                         [33m<[39m[33mh3[39m[33m>[39m{paper[33m.[39mtitle}[33m<[39m[33m/[39m[33mh3[39m[33m>[39m
+ [90m 541 |[39m                         {paper[33m.[39mdescription [33m&&[39m [33m<[39m[33mp[39m[33m>[39m{paper[33m.[39mdescription}[33m<[39m[33m/[39m[33mp[39m[33m>[39m}[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.02s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 362.06ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 538.15ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m

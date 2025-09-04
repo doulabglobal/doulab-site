@@ -75,11 +75,11 @@ function ProblemSection() {
         () => [
             {
                 Icon: AlertTriangle,
-                cause: 'Innovation isn’t embedded as a cultural value',
+                cause: 'Innovation isnâ€™t embedded as a cultural value',
                 effect: 'Change meets resistance; efforts feel sporadic and engagement stays low.',
-                metric: 'Global engagement ~20–23%, indicating persistent culture headwinds.',
+                metric: 'Global engagement ~20â€“23%, indicating persistent culture headwinds.',
                 sourceHref: 'https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx',
-                sourceLabel: 'Gallup — State of the Global Workplace 2024',
+                sourceLabel: 'Gallup â€” State of the Global Workplace 2024',
                 pillar: 'Culture + Innovation Mindset',
             },
             {
@@ -88,7 +88,7 @@ function ProblemSection() {
                 effect: 'Short-term pivots multiply; OKRs drift and teams lose direction.',
                 metric: 'Roughly 70% of employees report misalignment with strategy.',
                 sourceHref: 'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
-                sourceLabel: 'Forbes — When strategy fails to land',
+                sourceLabel: 'Forbes â€” When strategy fails to land',
                 pillar: 'Planning Mindset + Leadership Development',
             },
             {
@@ -97,7 +97,7 @@ function ProblemSection() {
                 effect: 'ROI suffers as opinions outrun data and validated learning.',
                 metric: 'Data-driven orgs are far more likely to improve decisions.',
                 sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-                sourceLabel: 'Harvard Business School Online — Data-driven decisions',
+                sourceLabel: 'Harvard Business School Online â€” Data-driven decisions',
                 pillar: 'Evidence-Based Decision-Making',
             },
             {
@@ -106,7 +106,7 @@ function ProblemSection() {
                 effect: 'Projects stall, alignment slips, and dependency risks increase.',
                 metric: 'Transformations fail without visible leadership and governance.',
                 sourceHref: 'https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson',
-                sourceLabel: 'McKinsey — Why transformations fail',
+                sourceLabel: 'McKinsey â€” Why transformations fail',
                 pillar: 'Leadership & Innovation Governance',
             },
             {
@@ -115,25 +115,25 @@ function ProblemSection() {
                 effect: 'Cycles slow down and teams detach from real user needs.',
                 metric: 'Greater autonomy correlates with higher productivity and ownership.',
                 sourceHref: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00963/full',
-                sourceLabel: 'Frontiers — Autonomy & productivity',
+                sourceLabel: 'Frontiers â€” Autonomy & productivity',
                 pillar: 'Talent + HR Structure + Employee Experience',
             },
             {
                 Icon: AlertOctagon,
-                cause: 'Core processes can’t scale or adapt reliably',
+                cause: 'Core processes canâ€™t scale or adapt reliably',
                 effect: 'Costs creep, burnout rises, and delivery becomes inconsistent.',
                 metric: 'Scaling well requires deliberate operating-model redesign.',
                 sourceHref: 'https://www.bain.com/insights/scaling-software-companies-path-to-%241B-in-revenue/',
-                sourceLabel: 'Bain — Scaling patterns & pitfalls',
+                sourceLabel: 'Bain â€” Scaling patterns & pitfalls',
                 pillar: 'Scalable + Sustainable Processes',
             },
             {
                 Icon: Frown,
-                cause: 'Customer insights aren’t integrated into delivery',
+                cause: 'Customer insights arenâ€™t integrated into delivery',
                 effect: 'Offers drift from real needs; value is left on the table.',
                 metric: 'US CX quality has declined for three consecutive years.',
                 sourceHref: 'https://www.forrester.com/blogs/us-cx-index-2024-results/',
-                sourceLabel: 'Forrester — 2024 CX Index',
+                sourceLabel: 'Forrester â€” 2024 CX Index',
                 pillar: 'Customer Journey + CX Maturity',
             },
             {
@@ -142,7 +142,7 @@ function ProblemSection() {
                 effect: 'Assumptions drive bets; truth is scattered across systems.',
                 metric: 'Interoperability enables a single, trusted data backbone.',
                 sourceHref: 'https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf',
-                sourceLabel: 'Accenture — Value Untangled (PDF)',
+                sourceLabel: 'Accenture â€” Value Untangled (PDF)',
                 pillar: 'Business Intelligence Maturity',
             },
             {
@@ -151,7 +151,7 @@ function ProblemSection() {
                 effect: 'Teams react to shocks instead of shaping possible futures.',
                 metric: 'Foresight improves resilience and long-term performance.',
                 sourceHref: 'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
-                sourceLabel: 'WEF — Why foresight matters',
+                sourceLabel: 'WEF â€” Why foresight matters',
                 pillar: 'Foresight + Strategic Anticipation',
             },
         ],
@@ -163,7 +163,7 @@ function ProblemSection() {
             <h2 id="problem-title">The Problem</h2>
             <p className="sectionLead">
                 <strong>Entrepreneurship</strong> and <strong>innovation</strong> are <strong>hard</strong>, until you make them a <strong>repeatable process</strong>.
-                Below are some of the most common problems we’ve seen across startups and organizations, based on our work with them:
+                Below are some of the most common problems weâ€™ve seen across startups and organizations, based on our work with them:
             </p>
 
             {/* Horizontal reel with a11y + controls */}
@@ -221,20 +221,20 @@ function ProblemSection() {
                 </button>
             </div>
 
-            <p className="microcopy" aria-hidden="true">Hint: scroll horizontally →</p>
+            <p className="microcopy" aria-hidden="true">Hint: scroll horizontally â†’</p>
 
             {/* Centered support text + CTAs */}
             <div style={{ textAlign: 'center' }}>
                 <p className="sectionLead">If you identify with several of these, we can help.</p>
-                <p className="microcopy">Start small—get a quick baseline.</p>
+                <p className="microcopy">Start smallâ€”get a quick baseline.</p>
                 <div className="heroCtas" style={{ marginTop: '.5rem', justifyContent: 'center' }}>
                     <Link
                         to="/services/clarityscan"
                         className="buttonPrimary"
                         data-cta="cta.home.problem.clarityscan"
-                        aria-label="Start with ClarityScan — diagnostics baseline"
+                        aria-label="Start with ClarityScan â€” diagnostics baseline"
                     >
-                        Start with ClarityScan®
+                        Start with ClarityScanÂ®
                     </Link>
                     <Link
                         to="/contact"
@@ -255,21 +255,21 @@ function ServicesSection() {
             <h2 id="services-title">Our Service Pillars</h2>
             <p className="sectionLead">This is how we help you mitigate these problems:</p>
             <p className="microcopy">We design systems and processes that are flexible, adaptable, and scalable by default.</p>
-            <p className="microcopy">We work across sectors to co-create solutions with you—for today’s needs and tomorrow’s shifts.</p>
+            <p className="microcopy">We work across sectors to co-create solutions with youâ€”for todayâ€™s needs and tomorrowâ€™s shifts.</p>
 
             <div className="cardGrid">
                 <div className="card">
                     <Search className="cardIcon" aria-hidden="true" />
                     <h3>Diagnostics: Know Where You Stand</h3>
-                    <p>Quickly map innovation maturity and pinpoint capability gaps with evidence-based tools like ClarityScan®.</p>
+                    <p>Quickly map innovation maturity and pinpoint capability gaps with evidence-based tools like ClarityScanÂ®.</p>
                     <div className="cardFooter">
                         <Link
                             to="/services/clarityscan"
                             className="cardCta"
                             data-cta="cta.home.services.clarityscan"
-                            aria-label="Start with ClarityScan — diagnostics baseline"
+                            aria-label="Start with ClarityScan â€” diagnostics baseline"
                         >
-                            Start with ClarityScan® →
+                            Start with ClarityScanÂ® â†’
                         </Link>
                     </div>
                 </div>
@@ -279,16 +279,16 @@ function ServicesSection() {
                     <h3>Workshops: Spark Aligned Action</h3>
                     <p>Highly focused sessions that align teams, unlock decisions, and turn strategy into practical next steps.</p>
                     <div className="cardFooter">
-                        <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.home.services.workshops">Explore workshops →</Link>
+                        <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.home.services.workshops">Explore workshops â†’</Link>
                     </div>
                 </div>
 
                 <div className="card">
                     <Layers className="cardIcon" aria-hidden="true" />
                     <h3>Programs: Build Innovation Capacity</h3>
-                    <p>Structured journeys — like IMM-P — that install culture, process, and metrics to scale innovation reliably.</p>
+                    <p>Structured journeys â€” like IMM-P â€” that install culture, process, and metrics to scale innovation reliably.</p>
                     <div className="cardFooter">
-                        <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.home.services.programs">Explore programs →</Link>
+                        <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.home.services.programs">Explore programs â†’</Link>
                     </div>
                 </div>
 
@@ -297,7 +297,7 @@ function ServicesSection() {
                     <h3>Coaching & Mentoring: Personalized Guidance</h3>
                     <p>Targeted 1:1 or group support to remove blockers, sustain momentum, and build internal capability.</p>
                     <div className="cardFooter">
-                        <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">Explore coaching & mentoring →</Link>
+                        <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">Explore coaching & mentoring â†’</Link>
                     </div>
                 </div>
 
@@ -306,7 +306,7 @@ function ServicesSection() {
                     <h3>Future Studies: Anticipate & Shape Tomorrow</h3>
                     <p>Foresight research and training that spot trends, assess risks, and inform resilient strategic choices.</p>
                     <div className="cardFooter">
-                        <Link to="/vigia-futura" className="cardCta" data-cta="cta.home.services.futures">Learn more →</Link>
+                        <Link to="/vigia-futura" className="cardCta" data-cta="cta.home.services.futures">Learn more â†’</Link>
                     </div>
                 </div>
             </div>
@@ -318,11 +318,11 @@ function NumbersStrip() {
     const items = [
         { kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners (2024)' },
         { kpi: '25+', label: 'institutions/year supported', note: 'program capacity from 2025 onward' },
-        { kpi: '2–4×/week', label: 'sessions delivered for 12 months', note: 'scaled capability build-out' },
+        { kpi: '2â€“4Ã—/week', label: 'sessions delivered for 12 months', note: 'scaled capability build-out' },
     ];
     return (
         <section className="section" id="proof-numbers" aria-labelledby="numbers-title">
-            <h2 id="numbers-title">Proof — by the numbers</h2>
+            <h2 id="numbers-title">Proof â€” by the numbers</h2>
             <div className="cardGrid">
                 {items.map((x, i) => (
                     <div className="card" key={i}>
@@ -349,7 +349,7 @@ function CaseStudiesTeaser() {
                         <source srcSet="/img/afp-siembra-card.webp" type="image/webp" />
                         <img
                             src="/img/afp-siembra-card.jpg"
-                            alt="AFP Siembra — Alcanza product and SILAB innovation lab."
+                            alt="AFP Siembra â€” Alcanza product and SILAB innovation lab."
                             width={1200}
                             height={720}
                             loading="lazy"
@@ -357,11 +357,11 @@ function CaseStudiesTeaser() {
                             style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
                         />
                     </picture>
-                    <h3>AFP Siembra — Alcanza & SILAB</h3>
+                    <h3>AFP Siembra â€” Alcanza & SILAB</h3>
                     <p>From strategy to repeatable delivery: designed a digital savings product and co-created an innovation lab.</p>
                     <div className="cardFooter">
                         <Link to="/case-studies/afp-siembra" className="cardCta" data-cta="cta.home.cases.siembra">
-                            Read the case →
+                            Read the case â†’
                         </Link>
                     </div>
                 </div>
@@ -373,7 +373,7 @@ function CaseStudiesTeaser() {
                         <source srcSet="/img/fundapec-card.webp" type="image/webp" />
                         <img
                             src="/img/fundapec-card.jpg"
-                            alt="Comunidad FUNDAPEC — alumni platform and engagement."
+                            alt="Comunidad FUNDAPEC â€” alumni platform and engagement."
                             width={1200}
                             height={720}
                             loading="lazy"
@@ -381,11 +381,11 @@ function CaseStudiesTeaser() {
                             style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
                         />
                     </picture>
-                    <h3>FUNDAPEC — Alumni Platform</h3>
+                    <h3>FUNDAPEC â€” Alumni Platform</h3>
                     <p>Co-developed and launched <em>Comunidad FUNDAPEC</em> to deepen engagement and unlock new value.</p>
                     <div className="cardFooter">
                         <Link to="/case-studies/fundapec" className="cardCta" data-cta="cta.home.cases.fundapec">
-                            Read the case →
+                            Read the case â†’
                         </Link>
                     </div>
                 </div>
@@ -397,7 +397,7 @@ function CaseStudiesTeaser() {
                         <source srcSet="/img/ogtic-redlab-card.webp" type="image/webp" />
                         <img
                             src="/img/ogtic-redlab-card.jpg"
-                            alt="OGTIC — Red de Laboratorios de Innovación (RedLab) cohort sessions."
+                            alt="OGTIC â€” Red de Laboratorios de InnovaciÃ³n (RedLab) cohort sessions."
                             width={1200}
                             height={720}
                             loading="lazy"
@@ -405,11 +405,11 @@ function CaseStudiesTeaser() {
                             style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
                         />
                     </picture>
-                    <h3>OGTIC — RedLab Innovation Network</h3>
+                    <h3>OGTIC â€” RedLab Innovation Network</h3>
                     <p>Built and facilitated RedLab to accelerate public-sector innovation through structured capability and cohort learning.</p>
                     <div className="cardFooter">
                         <Link to="/case-studies/ogtic-redlab" className="cardCta" data-cta="cta.home.cases.ogtic_redlab">
-                            Read the case →
+                            Read the case â†’
                         </Link>
                     </div>
                 </div>
@@ -463,7 +463,7 @@ function useLatestBlogPosts(limit = 3) {
                     const descNode = n.querySelector('description') ?? n.querySelector('content\\:encoded');
                     const raw = descNode?.textContent ?? '';
                     const text = raw.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-                    const description = text.length > 220 ? text.slice(0, 217) + '…' : text;
+                    const description = text.length > 220 ? text.slice(0, 217) + 'â€¦' : text;
 
                     return { title, href, description, external, image };
                 });
@@ -491,7 +491,7 @@ function ResearchResourcesSection() {
                 <source srcSet="/img/mcf-card.webp" type="image/webp" />
                 <img
                     src="/img/mcf-card.jpg"
-                    alt="MicroCanvas Framework v2.1 — modular canvases for innovation."
+                    alt="MicroCanvas Framework v2.1 - modular canvases for innovation."
                     width={1200}
                     height={720}
                     loading="lazy"
@@ -503,18 +503,15 @@ function ResearchResourcesSection() {
             <h3>MicroCanvas Framework v2.1</h3>
             <p>Our open-source toolkit to diagnose, design, and scale innovation with clear, reusable canvases.</p>
             <div className="cardFooter">
-                <Link className="cardCta" to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer" data-cta="cta.home.research.mcf">
-                    Visit site →
-                </Link>
+                <Link className="cardCta" to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer" data-cta="cta.home.research.mcf">Visit site &rarr;</Link>
             </div>
         </div>
     );
 
-    // 2) Top 3 latest whitepapers from docs (tag=whitepaper)
+    // 2) Top 3 latest whitepapers from the docs (tag=whitepaper)
     const allDocsData = useAllDocsData();
     const docsPluginData = (allDocsData?.['default'] as unknown as DocsPluginData | undefined);
-    const latestVersion =
-        docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
+    const latestVersion = docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
     const docs = latestVersion?.docs ?? [];
     const whitepapers = docs.filter((doc) => (doc.tags ?? []).includes('whitepaper'));
     const latestWhitepapers = [...whitepapers].sort((a, b) => b.id.localeCompare(a.id)).slice(0, 3);
@@ -525,15 +522,27 @@ function ResearchResourcesSection() {
     return (
         <section className="section" id="research" aria-labelledby="research-title">
             <h2 id="research-title">Research + Resources</h2>
-            <p className="sectionLead">
-                Stay current with our latest frameworks and insights shaping innovation capability and public intelligence.
-            </p>
+            <p className="sectionLead">Stay current with our latest frameworks and insights shaping innovation capability and public intelligence.</p>
 
             <div className="cardGrid">
                 {/* 1) Fixed MCF card */}
                 {mcfCard}
 
-                {/* 2) Top 3 latest blog posts */}
+                {/* 2) Top 3 whitepapers (docs) */}
+                {latestWhitepapers.map((paper) => (
+                    <div key={paper.permalink} className="card">
+                        <Layers className="cardIcon" aria-hidden="true" />
+                        <h3>{paper.title}</h3>
+                        {paper.description && <p>{paper.description}</p>}
+                        <div className="cardFooter">
+                            <Link className="cardCta" to={paper.permalink} data-cta="cta.home.research.whitepaper.read" aria-label={`Read ${paper.title}`}>
+                                Read whitepaper &rarr;
+                            </Link>
+                        </div>
+                    </div>
+                ))}
+
+                {/* 3) Top 3 latest blog posts */}
                 {blogLoading ? (
                     <div key="blog-loading" className="card" aria-busy="true">
                         <Lightbulb className="cardIcon" aria-hidden="true" />
@@ -546,72 +555,28 @@ function ResearchResourcesSection() {
                         <h3>Latest from the blog</h3>
                         <p>Stories, methods, and updates from the work.</p>
                         <div className="cardFooter">
-                            <Link className="cardCta" to="/blog" data-cta="cta.home.research.blog.fallback">
-                                Visit the blog →
-                            </Link>
+                            <Link className="cardCta" to="/blog" data-cta="cta.home.research.blog.fallback">Visit the blog &rarr;</Link>
                         </div>
                     </div>
                 ) : (
                     latestBlog.map((post) => (
                         <div key={post.href} className="card">
                             {post.image && (
-                                <img
-                                    src={post.image}
-                                    alt={`${post.title} — cover`}
-                                    width={1200}
-                                    height={630}
-                                    loading="lazy"
-                                    decoding="async"
-                                    style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
-                                />
+                                <img src={post.image} alt={`${post.title} - cover`} width={1200} height={630} loading="lazy" decoding="async" style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }} />
                             )}
                             <Lightbulb className="cardIcon" aria-hidden="true" />
                             <h3>{post.title}</h3>
                             {post.description && <p>{post.description}</p>}
                             <div className="cardFooter">
                                 {post.external ? (
-                                    <a
-                                        className="cardCta"
-                                        href={post.href}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        data-cta="cta.home.research.blog.read"
-                                    >
-                                        Read post →
-                                    </a>
+                                    <a className="cardCta" href={post.href} target="_blank" rel="noopener noreferrer" data-cta="cta.home.research.blog.read">Read post &rarr;</a>
                                 ) : (
-                                    <Link
-                                        className="cardCta"
-                                        to={post.href}
-                                        data-cta="cta.home.research.blog.read"
-                                        aria-label={`Read ${post.title}`}
-                                    >
-                                        Read post →
-                                    </Link>
+                                    <Link className="cardCta" to={post.href} data-cta="cta.home.research.blog.read" aria-label={`Read ${post.title}`}>Read post &rarr;</Link>
                                 )}
                             </div>
                         </div>
                     ))
                 )}
-
-                {/* 3) Top 3 whitepapers (docs) */}
-                {latestWhitepapers.map((paper) => (
-                    <div key={paper.permalink} className="card">
-                        <Layers className="cardIcon" aria-hidden="true" />
-                        <h3>{paper.title}</h3>
-                        {paper.description && <p>{paper.description}</p>}
-                        <div className="cardFooter">
-                            <Link
-                                className="cardCta"
-                                to={paper.permalink}
-                                data-cta="cta.home.research.whitepaper.read"
-                                aria-label={`Read ${paper.title}`}
-                            >
-                                Read whitepaper →
-                            </Link>
-                        </div>
-                    </div>
-                ))}
             </div>
         </section>
     );
@@ -623,20 +588,20 @@ function PrinciplesSection() {
             <h2 id="principles-title">Our Principles</h2>
             <div className="cardGrid" style={{ marginTop: '0.5rem' }}>
                 <div className="card">
-                    <h3>01. Modularity</h3>
+                    <Layers className="cardIcon" aria-hidden="true" />`r`n                    <h3>01. Modularity</h3>
                     <p>We design systems and processes that remain flexible, adaptable, and scalable by default.</p>
                 </div>
                 <div className="card">
-                    <h3>02. Foresight</h3>
+                    <Eye className="cardIcon" aria-hidden="true" />`r`n                    <h3>02. Foresight</h3>
                     <p>We help teams see beyond the present to anticipate shifts and prepare credible options.</p>
                 </div>
                 <div className="card">
-                    <h3>03. Evidence</h3>
+                    <Lightbulb className="cardIcon" aria-hidden="true" />`r`n                    <h3>03. Evidence</h3>
                     <p>We favor decisions grounded in real-world data, user feedback, and validated learning loops.</p>
                 </div>
                 <div className="card">
-                    <h3>04. Co-Creation</h3>
-                    <p>We partner deeply with clients to co-create solutions for today’s challenges and future needs.</p>
+                    <Users className="cardIcon" aria-hidden="true" />`r`n                    <h3>04. Co-Creation</h3>
+                    <p>We partner deeply with clients to co-create solutions for todayâ€™s challenges and future needs.</p>
                 </div>
             </div>
         </section>
@@ -648,14 +613,14 @@ function FinalCta() {
         <section className="section" id="final-cta" aria-labelledby="cta-title">
             <div className="finalCta">
                 <h2 id="cta-title">Ready to make innovation repeatable?</h2>
-                <p>Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward.</p>
+                <p>Start with a quick diagnostic or book a discovery call. Weâ€™ll meet you where you are and co-create the path forward.</p>
                 <div className="heroCtas" style={{ justifyContent: 'center' }}>
                     <Link
                         to="/services/clarityscan"
                         className="buttonPrimary"
                         data-cta="cta.home.final.clarityscan"
                     >
-                        Start with ClarityScan®
+                        Start with ClarityScanÂ®
                     </Link>
                     <Link
                         to="/contact"
@@ -666,7 +631,7 @@ function FinalCta() {
                     </Link>
                 </div>
                 <p className="ctaNote" style={{ textAlign: 'center' }}>
-                    Get your baseline in 15–20 minutes.
+                    Get your baseline in 15â€“20 minutes.
                 </p>
             </div>
         </section>
@@ -678,7 +643,7 @@ export default function Home(): ReactNode {
 
     return (
         <Layout
-            title="Innovation, Foresight & Repeatable Delivery — Doulab"
+            title="Innovation, Foresight & Repeatable Delivery â€” Doulab"
             description="Foresight, Innovation Architecture, and Agentic AI Systems for a Better Future"
         >
             {/* Standardized two-column hero */}
@@ -690,16 +655,16 @@ export default function Home(): ReactNode {
                 imageAlt="Futures, innovation, and intelligence"
                 primaryCta={{
                     to: '/services/clarityscan',
-                    label: 'Start with ClarityScan®',
+                    label: 'Start with ClarityScanÂ®',
                     dataCta: 'cta.home.hero.clarityscan',
-                    ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
+                    ariaLabel: 'Start with ClarityScan â€” quick 15â€“20 minute baseline',
                 }}
                 secondaryCta={{
                     to: '/contact',
                     label: 'Book a discovery call',
                     dataCta: 'cta.home.hero.book_call',
                 }}
-                ctaNote="Get your baseline in 15–20 minutes."
+                ctaNote="Get your baseline in 15â€“20 minutes."
             />
 
             <main>

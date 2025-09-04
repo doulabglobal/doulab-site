@@ -1,6 +1,6 @@
 {
   "name": "doulab.site",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "private": true,
   "description": "Doulab website (Docusaurus v3)",
   "scripts": {

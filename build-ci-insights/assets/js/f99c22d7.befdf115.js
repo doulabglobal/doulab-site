@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkdoulab_site"] = self["webpackChunkdoulab_site"] || []).push([[3055],{
+
+/***/ 5602:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"tag":{"label":"Announcement","permalink":"/blog/tags/blog/tags/announcement","description":"Product and company news","allTagsPath":"/blog/tags","count":1,"unlisted":false},"listMetadata":{"permalink":"/blog/tags/blog/tags/announcement","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}}');
+
+/***/ })
+
+}]);

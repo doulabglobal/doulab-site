@@ -3,7 +3,12 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import { Search, Lightbulb, Layers, Users, Radar } from 'lucide-react';
+import Hero from '../../components/Hero';
+import Search from 'lucide-react/dist/esm/icons/search';
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
+import Layers from 'lucide-react/dist/esm/icons/layers';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Radar from 'lucide-react/dist/esm/icons/radar';
 
 export default function ServicesPage(): ReactNode {
     return (
@@ -13,6 +18,12 @@ export default function ServicesPage(): ReactNode {
         >
             <Head>
                 <link rel="canonical" href="https://doulab.net/services" />
+                <meta property="og:title" content="Services - Structured innovation, diagnostics, workshops & foresight | Doulab" />
+                <meta property="og:description" content="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes." />
+                <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
+                <meta property="og:image:alt" content="Doulab — Services" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="author" content="Luis Santiago Arias" />
                 {/* Preload LCP hero image (PNG fallback). Browser will choose best available source. */}
                 <link
                     rel="preload"
@@ -24,46 +35,21 @@ export default function ServicesPage(): ReactNode {
             </Head>
 
             <main>
-                {/* Hero */}
-                <section className="heroBanner" aria-labelledby="services-hero-title">
-                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                        <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-                            <h1 id="services-hero-title" className="heroTitle">Our Services</h1>
-                            <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
-                                Programs, workshops, diagnostics, and foresight — turning strategy into sustained results.
-                            </p>
-                            <p className="heroText">
-                                Whether you’re mapping maturity, aligning teams, or preparing to scale, we meet you where you are and
-                                co-create the path to outcomes.
-                            </p>
-
-                            <div className="heroCtas">
-                                <Link to="/contact" className="buttonPrimary" data-cta="cta.services.hero.contact" aria-label="Book a discovery call">
-                                    Book a discovery call
-                                </Link>
-                                <Link to="/about#service-pillars" className="buttonSecondary" data-cta="cta.services.hero.pillars" aria-label="See our service pillars">
-                                    See our service pillars
-                                </Link>
-                            </div>
-                        </div>
-
-                        <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-                            <picture>
-                                <source srcSet="/img/services-hero.avif" type="image/avif" />
-                                <source srcSet="/img/services-hero.webp" type="image/webp" />
-                                <img
-                                    src="/img/services-hero.png"
-                                    alt="Our Services"
-                                    className="heroImage"
-                                    loading="eager"
-                                    fetchPriority="high"
-                                    width="600"
-                                    height="400"
-                                />
-                            </picture>
-                        </div>
-                    </div>
-                </section>
+                <Hero
+                    title="Our Services"
+                    subtitle="Programs, workshops, diagnostics, and foresight - turning strategy into sustained results."
+                    body={"Whether you're mapping maturity, aligning teams, or preparing to scale, we meet you where you are and co-create the path to outcomes."}
+                    imageBase="/img/services-hero"
+                    imageAlt="Our Services"
+                    width={600}
+                    height={400}
+                    primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.services.hero.clarityscan' }}
+                    secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.services.hero.book_call' }}
+                    ctaNote="Get your baseline in 15–20 minutes."
+                    id="services-hero"
+                    ariaLabelledbyId="services-hero-title"
+                    eager
+                />
 
                 {/* Trusted line */}
                 <section className="section" aria-label="Trusted by">

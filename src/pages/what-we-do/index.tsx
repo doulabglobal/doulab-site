@@ -1,39 +1,45 @@
-﻿import React, { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
-import { Layers, Target, Lightbulb, Search, AlignJustify, Rocket, TrendingUp } from 'lucide-react';
+import Hero from '../../components/Hero';
+import Layers from 'lucide-react/dist/esm/icons/layers';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
+import Search from 'lucide-react/dist/esm/icons/search';
+import AlignJustify from 'lucide-react/dist/esm/icons/align-justify';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 
 export default function WhatWeDo(): ReactNode {
   return (
     <Layout
       title="What we do — Programs, Diagnostics & Foresight | Doulab"
-      description="Programs, diagnostics, and foresight to make innovation repeatable with MicroCanvas® 2.1 and IMM."
+      description="Programs, diagnostics, and foresight to make innovation repeatable with MicroCanvas® 2.1 and IMM®. "
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/what-we-do" />
       </Head>
 
       <main>
+        <Hero
+          title="What we do — Programs, Diagnostics & Foresight | Doulab"
+          subtitle="Innovation architecture, diagnostics, and foresight — built to make delivery repeatable."
+          body={"We install the culture, process, and cadence for innovation to scale — using MicroCanvas® 2.1 and the Innovation Maturity Model (IMM)."}
+          imageBase="/img/services-hero"
+          imageAlt="What we do"
+          width={600}
+          height={400}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.whatwedo.hero.clarityscan' }}
+          secondaryCta={{ to: '/case-studies', label: 'See case studies', dataCta: 'cta.whatwedo.hero.cases' }}
+          ctaNote="Get your baseline in 15–20 minutes."
+          id="whatwedo-hero"
+          ariaLabelledbyId="whatwedo-hero-title"
+          eager
+        />
         {/* Hero (shared design language) */}
-        <section className="heroBanner" id="hero" aria-labelledby="whatwedo-hero-title">
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ flex: '1 1 800px' }}>
-              <Heading as="h1" id="whatwedo-hero-title" className="heroTitle">What we do</Heading>
-              <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
-                Innovation architecture, diagnostics, and foresight — built to make delivery repeatable.
-              </p>
-              <p className="heroText">
-                We install the culture, process, and cadence for innovation to scale — using MicroCanvas® 2.1 and the Innovation Maturity Model (IMM).
-              </p>
-              <div className="heroCtas">
-                <Link className="buttonPrimary" to="/contact" data-cta="cta.whatwedo.hero.contact">Talk to us</Link>
-                <Link className="buttonSecondary" to="/case-studies" data-cta="cta.whatwedo.hero.cases">See case studies</Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Products & Programs (balanced content: 1 intro line + 2 bullets + CTA) */}
         <section className="section" id="programs" aria-labelledby="programs-title">

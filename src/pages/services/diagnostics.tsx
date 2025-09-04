@@ -3,15 +3,13 @@ import React from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import {
-    Gauge,
-    Target,
-    Binoculars,
-    Settings2,
-    CheckCircle,
-    FileText,
-    Users,
-} from 'lucide-react';
+import Gauge from 'lucide-react/dist/esm/icons/gauge';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Binoculars from 'lucide-react/dist/esm/icons/binoculars';
+import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
+import FileText from 'lucide-react/dist/esm/icons/file-text';
+import Users from 'lucide-react/dist/esm/icons/users';
 
 export default function DiagnosticsPage() {
     return (

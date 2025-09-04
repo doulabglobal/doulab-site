@@ -1,4 +1,9 @@
-#!/usr/bin/env sh
+#!/bin/sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run verify
+# Prevent pushing if normalization would change files
+npm run normalize:check || exit 1
+
+# Full verify (typecheck + build)
+npm run verify || exit 1
+

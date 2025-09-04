@@ -12,6 +12,51 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 
 ---
 
+## 2025-09-04
+
+### Insights
+- Standardized page structure and hero copy.
+- Highlights now includes the pinned MicroCanvas card and the top 3 whitepapers (from docs, tag `whitepaper`).
+- Added a separate “From the Blog” section (client-only RSS with `no-store`).
+- Updated OG image to a dedicated card: `/img/social/og-insights.jpg`.
+- A11y: descriptive alts, explicit width/height, and proper `aria-labelledby` across sections.
+
+### Case Studies
+- New/rewritten: `/case-studies/afp-siembra`
+  - Standardized two-column hero and canonical/OG meta.
+  - Sections: Context → What We Did → Timeline → Outcomes → Highlights (qualitative) → Final CTA.
+  - Added “System: MCF + IMM-P” callout with internal links.
+
+### Docs
+- Expanded: `MicroCanvas Framework (v2.1)` → `/docs/research-resources/microcanvas`
+  - Clear link to https://themicrocanvas.com
+  - Added description, getting-started tips, and related references (IMM-P).
+
+### IMM-P standardization
+- Adopted “Innovation Maturity Model — Program (IMM-P)” across primary pages:
+  - Case Studies index (description + hero subtitle).
+  - AFP Siembra case (system callout).
+  - Services: Coaching & Mentoring, Custom Workshops, Innovation Maturity (hero, copy, CTAs).
+  - Contact: “Quick baseline (MCF 2.1 + IMM-P)”.
+  - About: story text and pillars (clean UTF-8, no mojibake).
+
+### Services (copy + A11y)
+- ClarityScan: cleaned hero and CTAs; JSON-LD updated; arrows/dashes standardized.
+- Innovation Maturity: renamed to IMM-P; hero/body rewritten; CTAs standardized.
+- Coaching & Mentoring: copy cleaned; “MicroCanvas v2.1 + IMM-P”; retainers clarified.
+- Custom Workshops: copy cleaned; “MicroCanvas + IMM-P”; formats/outcomes clarified.
+
+### Contact
+- Rewrote page with privacy-first options and a gated “What to expect”.
+- Updated baseline to “MCF 2.1 + IMM-P”.
+
+### Assets & Tech
+- Added `/img/social/og-insights.jpg` (derived from Insights hero) for consistent social previews.
+- Typecheck passes. Dev build validated in a fresh out-dir. On Windows + synced folders, clear `.docusaurus` and restart dev server if you hit EBUSY.
+
+### Known follow-ups
+- Homepage still contains minor mojibake/legacy labels in a few microcopy lines (e.g., “ClarityScan®”). Scheduled for next sweep.
+
 ## 2025-09-01
 
 #### v0.5.0 — Blog launch, narrative intro, Research+Resources aggregator, dark mode, build hardening

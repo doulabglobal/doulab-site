@@ -3,7 +3,14 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import { Search, Lightbulb, Users, Layers, Radar, Target, CheckCircle2 } from 'lucide-react';
+import Search from 'lucide-react/dist/esm/icons/search';
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Layers from 'lucide-react/dist/esm/icons/layers';
+import Radar from 'lucide-react/dist/esm/icons/radar';
+import Target from 'lucide-react/dist/esm/icons/target';
+import CheckCircle2 from 'lucide-react/dist/esm/icons/check-circle-2';
+import Hero from '../../components/Hero';
 import type { JSX } from 'react';
 
 
@@ -14,6 +21,13 @@ export default function WorkWithUsPage(): JSX.Element {
             description="Practical ways to start—diagnose, align, and build capability so strategy turns into sustained results."
         >
             <Head>
+                <link rel="canonical" href="https://doulab.net/work-with-us" />
+                <meta property="og:title" content="Work with Doulab" />
+                <meta property="og:description" content="Practical ways to start—diagnose, align, and build capability so strategy turns into sustained results." />
+                <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
+                <meta property="og:image:alt" content="Doulab — Work with us" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="author" content="Luis Santiago Arias" />
                 {/* LCP: hero image preload with next-gen sources */}
                 <link
                     rel="preload"
@@ -71,68 +85,23 @@ export default function WorkWithUsPage(): JSX.Element {
             </Head>
 
             <main>
+                <Hero
+                    title="Work with Doulab"
+                    subtitle="Practical ways to start — diagnose, align, and build capability."
+                    body={"Start small or go deeper. We make innovation repeatable and foresight practical — so strategy turns into sustained results."}
+                    imageBase="/img/work-with-us-hero"
+                    imageAlt="Work with Doulab"
+                    width={600}
+                    height={400}
+                    primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.wwu.hero.clarityscan' }}
+                    secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.wwu.hero.book_call' }}
+                    ctaNote="Get your baseline in 15–20 minutes."
+                    id="wwu-hero"
+                    ariaLabelledbyId="wwu-hero-title"
+                    eager
+                />
                 {/* Hero */}
-                <section className="heroBanner" aria-labelledby="wwu-hero-title">
-                    <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                        <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-                            <h1 id="wwu-hero-title" className="heroTitle">Work with Doulab</h1>
-                            <p className="heroSubtitle">Practical ways to start—diagnose, align, and build capability.</p>
-                            <p className="heroText">
-                                Start small or go deeper. We make innovation <strong>repeatable</strong> and foresight <strong>practical</strong>—
-                                so strategy turns into sustained results.
-                            </p>
-
-                            <div className="heroCtas">
-                                <Link
-                                    to="/services/clarityscan"
-                                    className="buttonPrimary"
-                                    data-cta="wwu_hero_clarityscan"
-                                    data-section="wwu"
-                                    data-step="hero"
-                                    aria-label="Start with a ClarityScan diagnostic"
-                                >
-                                    Start with ClarityScan®
-                                </Link>
-                                <Link
-                                    to="/contact"
-                                    className="buttonSecondary"
-                                    data-cta="wwu_hero_contact"
-                                    data-section="wwu"
-                                    data-step="hero"
-                                    aria-label="Book a discovery call"
-                                >
-                                    Book a discovery call
-                                </Link>
-                            </div>
-
-                            {/* In-page subnav (canonical styles from custom.css) */}
-                            <nav className="subnav" aria-label="In this page" style={{ marginTop: '.75rem' }}>
-                                <a href="#start">Start</a>
-                                <a href="#process">How we work</a>
-                                <a href="#results">Results</a>
-                                <a href="#fit">Who we work with</a>
-                                <a href="#faq">FAQ</a>
-                                <a href="#get-started">Get started</a>
-                            </nav>
-                        </div>
-
-                        <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-                            <picture>
-                                <source srcSet="/img/work-with-us-hero.avif" type="image/avif" />
-                                <source srcSet="/img/work-with-us-hero.webp" type="image/webp" />
-                                <img
-                                    src="/img/work-with-us-hero.png"
-                                    alt="Work with Doulab"
-                                    className="heroImage"
-                                    loading="eager"
-                                    fetchPriority="high"
-                                    width={600}
-                                    height={400}
-                                />
-                            </picture>
-                        </div>
-                    </div>
-                </section>
+                
 
                 {/* 3 ways to start */}
                 <section id="start" className="section" aria-labelledby="wwu-start-title">

@@ -1,19 +1,30 @@
-﻿// Applies: hero meta/title tweak, Problem reel + a11y/controls, numbers strip, case study teaser,
-// safer icon rendering (no prebuilt elements), hardened blog RSS, correct external Link usage,
-// consistent data-cta attributes, and small a11y/perf niceties (decoding/lazy where applicable).
+// Applies: hero component (two-column) + meta/title tweak, Problem reel + a11y/controls,
+// numbers strip, case study teaser with images, safer icon rendering, hardened blog RSS,
+// correct external Link usage, consistent data-cta attributes, and small a11y/perf niceties.
 
 import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import Heading from '@theme/Heading';
-import Head from '@docusaurus/Head';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
-import {
-    Search, Layers, Lightbulb, Users, Radar,
-    AlertTriangle, FileWarning, EyeOff, CircleSlash, UserX, AlertOctagon, Frown, LineChart, Eye,
-    ChevronLeft, ChevronRight, type LucideIcon
-} from 'lucide-react';
+import Hero from '../components/Hero';
+import type { LucideIcon } from 'lucide-react';
+import Search from 'lucide-react/dist/esm/icons/search';
+import Layers from 'lucide-react/dist/esm/icons/layers';
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Radar from 'lucide-react/dist/esm/icons/radar';
+import AlertTriangle from 'lucide-react/dist/esm/icons/alert-triangle';
+import FileWarning from 'lucide-react/dist/esm/icons/file-warning';
+import EyeOff from 'lucide-react/dist/esm/icons/eye-off';
+import CircleSlash from 'lucide-react/dist/esm/icons/circle-slash';
+import UserX from 'lucide-react/dist/esm/icons/user-x';
+import AlertOctagon from 'lucide-react/dist/esm/icons/alert-octagon';
+import Frown from 'lucide-react/dist/esm/icons/frown';
+import LineChart from 'lucide-react/dist/esm/icons/line-chart';
+import Eye from 'lucide-react/dist/esm/icons/eye';
+import ChevronLeft from 'lucide-react/dist/esm/icons/chevron-left';
+import ChevronRight from 'lucide-react/dist/esm/icons/chevron-right';
 
 /** Minimal types for docs data to avoid TS errors */
 type DocMeta = { id: string; title: string; description?: string; permalink: string; tags?: string[] };
@@ -21,7 +32,7 @@ type DocsVersion = { isLast?: boolean; docs: DocMeta[] };
 type DocsPluginData = { versions: DocsVersion[] };
 
 /** Blog item shape (from RSS) */
-type BlogItem = { title: string; href: string; description?: string; external: boolean };
+type BlogItem = { title: string; href: string; description?: string; external: boolean; image?: string };
 
 function usePrefersReducedMotion() {
     const [prefers, setPrefers] = useState(false);
@@ -34,62 +45,6 @@ function usePrefersReducedMotion() {
         return () => m.removeEventListener?.('change', update);
     }, []);
     return prefers;
-}
-
-function HomepageHero() {
-    const { siteConfig } = useDocusaurusContext();
-    return (
-        <section className="heroBanner" id="hero" aria-labelledby="home-hero-title">
-            <Head>
-                {/* Preload the current LCP image (PNG). When AVIF/WEBP files exist, the browser will still pick best source. */}
-                <link
-                    rel="preload"
-                    as="image"
-                    href="/img/people-collage.png"
-                    imageSrcSet="/img/people-collage.avif 1x, /img/people-collage.webp 1x, /img/people-collage.png 1x"
-                    imageSizes="(max-width: 600px) 100vw, 600px"
-                />
-            </Head>
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-                    <Heading as="h1" id="home-hero-title" className="heroTitle">
-                        {siteConfig.title}
-                    </Heading>
-                    <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
-                        Innovation architecture, foresight, and personalized mentoring & coaching to help shape tomorrow.
-                    </p>
-                    <p className="heroText">
-                        We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes.
-                    </p>
-
-                    <div className="heroCtas">
-                        <Link to="/services" className="buttonPrimary" data-cta="cta.home.hero.explore_services">
-                            Explore our services
-                        </Link>
-                        <Link to="/contact" className="buttonSecondary" data-cta="cta.home.hero.book_call">
-                            Book a discovery call
-                        </Link>
-                    </div>
-                </div>
-                <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-                    <picture>
-                        <source srcSet="/img/people-collage.avif" type="image/avif" />
-                        <source srcSet="/img/people-collage.webp" type="image/webp" />
-                        <img
-                            src="/img/people-collage.png"
-                            alt="Futures, innovation, and intelligence"
-                            className="heroImage"
-                            loading="eager"
-                            fetchPriority="high"
-                            decoding="async"
-                            width="600"
-                            height="400"
-                        />
-                    </picture>
-                </div>
-            </div>
-        </section>
-    );
 }
 
 // ========== Sections ==========
@@ -268,9 +223,28 @@ function ProblemSection() {
 
             <p className="microcopy" aria-hidden="true">Hint: scroll horizontally →</p>
 
-            <p className="sectionLead">
-                If you identify with several of these, we can help. Explore how we reduce risk and accelerate outcomes:
-            </p>
+            {/* Centered support text + CTAs */}
+            <div style={{ textAlign: 'center' }}>
+                <p className="sectionLead">If you identify with several of these, we can help.</p>
+                <p className="microcopy">Start small—get a quick baseline.</p>
+                <div className="heroCtas" style={{ marginTop: '.5rem', justifyContent: 'center' }}>
+                    <Link
+                        to="/services/clarityscan"
+                        className="buttonPrimary"
+                        data-cta="cta.home.problem.clarityscan"
+                        aria-label="Start with ClarityScan — diagnostics baseline"
+                    >
+                        Start with ClarityScan®
+                    </Link>
+                    <Link
+                        to="/contact"
+                        className="buttonSecondary"
+                        data-cta="cta.home.problem.book_call"
+                    >
+                        Book a discovery call
+                    </Link>
+                </div>
+            </div>
         </section>
     );
 }
@@ -289,7 +263,14 @@ function ServicesSection() {
                     <h3>Diagnostics: Know Where You Stand</h3>
                     <p>Quickly map innovation maturity and pinpoint capability gaps with evidence-based tools like ClarityScan®.</p>
                     <div className="cardFooter">
-                        <Link to="/services/diagnostics" className="cardCta" data-cta="cta.home.services.diagnostics">Explore diagnostics →</Link>
+                        <Link
+                            to="/services/clarityscan"
+                            className="cardCta"
+                            data-cta="cta.home.services.clarityscan"
+                            aria-label="Start with ClarityScan — diagnostics baseline"
+                        >
+                            Start with ClarityScan® →
+                        </Link>
                     </div>
                 </div>
 
@@ -305,7 +286,7 @@ function ServicesSection() {
                 <div className="card">
                     <Layers className="cardIcon" aria-hidden="true" />
                     <h3>Programs: Build Innovation Capacity</h3>
-                    <p>Structured journeys—like IMM—that install culture, process, and metrics to scale innovation reliably.</p>
+                    <p>Structured journeys — like IMM-P — that install culture, process, and metrics to scale innovation reliably.</p>
                     <div className="cardFooter">
                         <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.home.services.programs">Explore programs →</Link>
                     </div>
@@ -341,7 +322,7 @@ function NumbersStrip() {
     ];
     return (
         <section className="section" id="proof-numbers" aria-labelledby="numbers-title">
-            <h2 id="numbers-title">Proof / Numbers</h2>
+            <h2 id="numbers-title">Proof — by the numbers</h2>
             <div className="cardGrid">
                 {items.map((x, i) => (
                     <div className="card" key={i}>
@@ -360,24 +341,79 @@ function CaseStudiesTeaser() {
         <section className="section" id="case-studies" aria-labelledby="case-studies-title">
             <h2 id="case-studies-title">Case Studies</h2>
             <div className="cardGrid">
+
+                {/* AFP Siembra */}
                 <div className="card">
+                    <picture>
+                        <source srcSet="/img/afp-siembra-card.avif" type="image/avif" />
+                        <source srcSet="/img/afp-siembra-card.webp" type="image/webp" />
+                        <img
+                            src="/img/afp-siembra-card.jpg"
+                            alt="AFP Siembra — Alcanza product and SILAB innovation lab."
+                            width={1200}
+                            height={720}
+                            loading="lazy"
+                            decoding="async"
+                            style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                        />
+                    </picture>
                     <h3>AFP Siembra — Alcanza & SILAB</h3>
                     <p>From strategy to repeatable delivery: designed a digital savings product and co-created an innovation lab.</p>
                     <div className="cardFooter">
-                        <Link href="https://afpsiembra.com" className="cardCta" target="_blank" rel="noopener noreferrer" data-cta="cta.home.cases.siembra">
-                            Visit afpsiembra.com →
+                        <Link to="/case-studies/afp-siembra" className="cardCta" data-cta="cta.home.cases.siembra">
+                            Read the case →
                         </Link>
                     </div>
                 </div>
+
+                {/* FUNDAPEC */}
                 <div className="card">
+                    <picture>
+                        <source srcSet="/img/fundapec-card.avif" type="image/avif" />
+                        <source srcSet="/img/fundapec-card.webp" type="image/webp" />
+                        <img
+                            src="/img/fundapec-card.jpg"
+                            alt="Comunidad FUNDAPEC — alumni platform and engagement."
+                            width={1200}
+                            height={720}
+                            loading="lazy"
+                            decoding="async"
+                            style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                        />
+                    </picture>
                     <h3>FUNDAPEC — Alumni Platform</h3>
                     <p>Co-developed and launched <em>Comunidad FUNDAPEC</em> to deepen engagement and unlock new value.</p>
                     <div className="cardFooter">
-                        <Link href="https://comunidad.fundapec.edu.do" className="cardCta" target="_blank" rel="noopener noreferrer" data-cta="cta.home.cases.fundapec">
-                            Visit comunidad.fundapec.edu.do →
+                        <Link to="/case-studies/fundapec" className="cardCta" data-cta="cta.home.cases.fundapec">
+                            Read the case →
                         </Link>
                     </div>
                 </div>
+
+                {/* OGTIC / RedLab */}
+                <div className="card">
+                    <picture>
+                        <source srcSet="/img/ogtic-redlab-card.avif" type="image/avif" />
+                        <source srcSet="/img/ogtic-redlab-card.webp" type="image/webp" />
+                        <img
+                            src="/img/ogtic-redlab-card.jpg"
+                            alt="OGTIC — Red de Laboratorios de Innovación (RedLab) cohort sessions."
+                            width={1200}
+                            height={720}
+                            loading="lazy"
+                            decoding="async"
+                            style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                        />
+                    </picture>
+                    <h3>OGTIC — RedLab Innovation Network</h3>
+                    <p>Built and facilitated RedLab to accelerate public-sector innovation through structured capability and cohort learning.</p>
+                    <div className="cardFooter">
+                        <Link to="/case-studies/ogtic-redlab" className="cardCta" data-cta="cta.home.cases.ogtic_redlab">
+                            Read the case →
+                        </Link>
+                    </div>
+                </div>
+
             </div>
         </section>
     );
@@ -414,12 +450,22 @@ function useLatestBlogPosts(limit = 3) {
                         // keep defaults
                     }
 
+                    // Prefer common RSS image slots: media:content, enclosure[url], image
+                    const media = n.querySelector('media\\:content');
+                    const enclosure = n.querySelector('enclosure');
+                    const imageEl = n.querySelector('image');
+                    const image =
+                        media?.getAttribute('url') ||
+                        enclosure?.getAttribute('url') ||
+                        imageEl?.textContent?.trim() ||
+                        '/img/social/default-og.jpg';
+
                     const descNode = n.querySelector('description') ?? n.querySelector('content\\:encoded');
                     const raw = descNode?.textContent ?? '';
                     const text = raw.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
                     const description = text.length > 220 ? text.slice(0, 217) + '…' : text;
 
-                    return { title, href, description, external };
+                    return { title, href, description, external, image };
                 });
 
                 if (!cancelled) setItems(parsed);
@@ -437,9 +483,22 @@ function useLatestBlogPosts(limit = 3) {
 }
 
 function ResearchResourcesSection() {
-    // 1) Always-first MCF card (fixed)
+    // 1) Always-first MCF card (with image)
     const mcfCard = (
         <div className="card" key="mcf-card">
+            <picture>
+                <source srcSet="/img/mcf-card.avif" type="image/avif" />
+                <source srcSet="/img/mcf-card.webp" type="image/webp" />
+                <img
+                    src="/img/mcf-card.jpg"
+                    alt="MicroCanvas Framework v2.1 — modular canvases for innovation."
+                    width={1200}
+                    height={720}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                />
+            </picture>
             <Lightbulb className="cardIcon" aria-hidden="true" />
             <h3>MicroCanvas Framework v2.1</h3>
             <p>Our open-source toolkit to diagnose, design, and scale innovation with clear, reusable canvases.</p>
@@ -474,26 +533,7 @@ function ResearchResourcesSection() {
                 {/* 1) Fixed MCF card */}
                 {mcfCard}
 
-                {/* 2) Top 3 whitepapers (docs) */}
-                {latestWhitepapers.map((paper) => (
-                    <div key={paper.permalink} className="card">
-                        <Layers className="cardIcon" aria-hidden="true" />
-                        <h3>{paper.title}</h3>
-                        {paper.description && <p>{paper.description}</p>}
-                        <div className="cardFooter">
-                            <Link
-                                className="cardCta"
-                                to={paper.permalink}
-                                data-cta="cta.home.research.whitepaper.read"
-                                aria-label={`Read ${paper.title}`}
-                            >
-                                Read whitepaper →
-                            </Link>
-                        </div>
-                    </div>
-                ))}
-
-                {/* 3) Top 3 latest blog posts */}
+                {/* 2) Top 3 latest blog posts */}
                 {blogLoading ? (
                     <div key="blog-loading" className="card" aria-busy="true">
                         <Lightbulb className="cardIcon" aria-hidden="true" />
@@ -514,6 +554,17 @@ function ResearchResourcesSection() {
                 ) : (
                     latestBlog.map((post) => (
                         <div key={post.href} className="card">
+                            {post.image && (
+                                <img
+                                    src={post.image}
+                                    alt={`${post.title} — cover`}
+                                    width={1200}
+                                    height={630}
+                                    loading="lazy"
+                                    decoding="async"
+                                    style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                                />
+                            )}
                             <Lightbulb className="cardIcon" aria-hidden="true" />
                             <h3>{post.title}</h3>
                             {post.description && <p>{post.description}</p>}
@@ -542,6 +593,25 @@ function ResearchResourcesSection() {
                         </div>
                     ))
                 )}
+
+                {/* 3) Top 3 whitepapers (docs) */}
+                {latestWhitepapers.map((paper) => (
+                    <div key={paper.permalink} className="card">
+                        <Layers className="cardIcon" aria-hidden="true" />
+                        <h3>{paper.title}</h3>
+                        {paper.description && <p>{paper.description}</p>}
+                        <div className="cardFooter">
+                            <Link
+                                className="cardCta"
+                                to={paper.permalink}
+                                data-cta="cta.home.research.whitepaper.read"
+                                aria-label={`Read ${paper.title}`}
+                            >
+                                Read whitepaper →
+                            </Link>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
@@ -580,25 +650,58 @@ function FinalCta() {
                 <h2 id="cta-title">Ready to make innovation repeatable?</h2>
                 <p>Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward.</p>
                 <div className="heroCtas" style={{ justifyContent: 'center' }}>
-                    <Link to="/services/diagnostics" className="buttonPrimary" data-cta="cta.home.final.start_diagnostic">
-                        Start with a diagnostic
+                    <Link
+                        to="/services/clarityscan"
+                        className="buttonPrimary"
+                        data-cta="cta.home.final.clarityscan"
+                    >
+                        Start with ClarityScan®
                     </Link>
-                    <Link to="/contact" className="buttonSecondary" data-cta="cta.home.final.contact">
-                        Talk to us
+                    <Link
+                        to="/contact"
+                        className="buttonSecondary"
+                        data-cta="cta.home.final.book_call"
+                    >
+                        Book a discovery call
                     </Link>
                 </div>
+                <p className="ctaNote" style={{ textAlign: 'center' }}>
+                    Get your baseline in 15–20 minutes.
+                </p>
             </div>
         </section>
     );
 }
 
 export default function Home(): ReactNode {
+    const { siteConfig } = useDocusaurusContext();
+
     return (
         <Layout
             title="Innovation, Foresight & Repeatable Delivery — Doulab"
             description="Foresight, Innovation Architecture, and Agentic AI Systems for a Better Future"
         >
-            <HomepageHero />
+            {/* Standardized two-column hero */}
+            <Hero
+                title={siteConfig.title}
+                subtitle="Innovation architecture, foresight, and coaching to shape tomorrow."
+                body="We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes."
+                imageBase="/img/people-collage"
+                imageAlt="Futures, innovation, and intelligence"
+                primaryCta={{
+                    to: '/services/clarityscan',
+                    label: 'Start with ClarityScan®',
+                    dataCta: 'cta.home.hero.clarityscan',
+                    ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
+                }}
+                secondaryCta={{
+                    to: '/contact',
+                    label: 'Book a discovery call',
+                    dataCta: 'cta.home.hero.book_call',
+                }}
+                ctaNote="Get your baseline in 15–20 minutes."
+            />
+
             <main>
                 <ProblemSection />
                 <ServicesSection />

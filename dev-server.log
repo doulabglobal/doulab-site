@@ -1,0 +1,220 @@
+
+> doulab.site@0.5.0 start
+> docusaurus start --port 3000
+
+[INFO] Starting the development server...
+[SUCCESS] Docusaurus website is running at: http://localhost:3000/
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 14.57s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 344.10ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 156.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 412.17ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 358.85ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 333.33ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 249.59ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 247.92ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 246.03ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 438.04ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 128.84ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 253.16ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 167.91ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 443.73ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 196.17ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 115.31ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 454.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 140.01ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 586.30ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 128.61ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 435.37ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 139.37ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 309.76ms
+Module not found: Error: Can't resolve '@site/src/pages/about/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/about/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 509.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 600.53ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 190.54ms
+Module not found: Error: Can't resolve '@site/src/pages/services/coaching-mentoring.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/coaching-mentoring.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 222.09ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 220.45ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 506.55ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 201.32ms
+Module not found: Error: Can't resolve '@site/src/pages/services/custom-workshops.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/custom-workshops.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 243.11ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 545.58ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 265.35ms
+Module not found: Error: Can't resolve '@site/src/pages/services/innovation-maturity.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/innovation-maturity.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 294.78ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 544.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 254.65ms
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 320.12ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 303.60ms
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 183.42ms
+Module not found: Error: Can't resolve '@site/src/pages/contact/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/contact/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m4 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 276.57ms
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/clarityscan.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 621.73ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[WARNING] Duplicate routes found!
+- Attempting to create page at /docs/releases, but a page already exists at this route.
+This could lead to non-deterministic routing behavior.
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 318.76ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[WARNING] Duplicate routes found!
+- Attempting to create page at /docs/releases, but a page already exists at this route.
+This could lead to non-deterministic routing behavior.
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 482.77ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 156.38ms
+Module not found: Error: Can't resolve '@site/docs/research-resources/releases.md' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/docs/research-resources/releases.md' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 326.93ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m

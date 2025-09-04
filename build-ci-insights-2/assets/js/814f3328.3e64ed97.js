@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkdoulab_site"] = self["webpackChunkdoulab_site"] || []).push([[7472],{
+
+/***/ 5513:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"title":"Recent posts","items":[{"title":"Introducing Doulab: innovation made repeatable","permalink":"/blog/introducing-doulab","unlisted":false,"date":"2025-08-30T00:00:00.000Z"}]}');
+
+/***/ })
+
+}]);

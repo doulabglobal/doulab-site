@@ -218,3 +218,6 @@ Module not found: Error: Can't resolve '@site/docs/research-resources/releases.m
 [90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 326.93ms
 [1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 366.30ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m

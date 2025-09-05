@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+﻿import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
@@ -13,7 +13,7 @@ export default function CaseAfpSiembra(): ReactNode {
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/afp-siembra" />
         <meta property="og:image" content="https://doulab.net/img/afp-siembra-card.jpg" />
-        <meta property="og:image:alt" content="AFP Siembra — Alcanza product and SILAB innovation lab." />
+        <meta property="og:image:alt" content="AFP Siembra â€” Alcanza product and SILAB innovation lab." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
       </Head>
@@ -25,14 +25,14 @@ export default function CaseAfpSiembra(): ReactNode {
 
         <Hero
           title="AFP Siembra: Alcanza and SILAB"
-          subtitle="From strategy to repeatable delivery. We helped launch a digital savings product and set up an innovation lab."
+          subtitle="From strategy to a repeatable innovation engine."
           body={"AFP Siembra is a pension fund leader in the Dominican Republic. " +
             "Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad."}
           imageBase="/img/afp-siembra-card"
-          imageAlt="AFP Siembra — Alcanza product and SILAB innovation lab"
+          imageAlt="AFP Siembra â€” Alcanza product and SILAB innovation lab"
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScanÂ®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
           ctaNote="Get your baseline in 15-20 minutes."
           id="afp-siembra-hero"
@@ -45,13 +45,13 @@ export default function CaseAfpSiembra(): ReactNode {
           <p>
             AFP Siembra is a specialized pension fund administrator (AFP) and the first in the Dominican Republic
             authorized by the Superintendencia de Pensiones (SIPEN). The team set out to launch <strong><a href="https://alcanza.com.do" target="_blank" rel="noopener noreferrer">Alcanza</a></strong>,
-            a <strong>digital savings solution</strong> for Dominicans—salaried and independent, living in the country and abroad—who need a safe,
+            a <strong>digital savings solution</strong> for Dominicansâ€”salaried and independent, living in the country and abroadâ€”who need a safe,
             flexible way to save for retirement, housing, education, and other goals.
           </p>
           <p>
             The challenge: low national savings rates, high trust requirements, and a <strong>regulated, security-first</strong>
             environment. In parallel, leadership wanted a <strong>repeatable innovation engine</strong> inside the
-            organization—what became <strong>SILAB</strong>.
+            organizationâ€”what became <strong>SILAB</strong>.
           </p>
         </section>
 
@@ -76,15 +76,15 @@ export default function CaseAfpSiembra(): ReactNode {
             </li>
             <li>
               <strong>Delivery System:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
-              SILAB’s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
+              SILABâ€™s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
             </li>
             <li>
               <strong>Innovation Lab & Launch:</strong> Starting in October 2023, we conceptualized the SIEMBRA Innovation Lab, leveraging learnings and outcomes from the Alcanza project to design an internal
-              innovation capability. In parallel, we helped conceptualize and produce the lab’s public launch during the inaugural AFP Siembra FutureScapes Innovation Summit—
+              innovation capability. In parallel, we helped conceptualize and produce the labâ€™s public launch during the inaugural AFP Siembra FutureScapes Innovation Summitâ€”
               a two-day event with more than 300 participants.
             </li>
             <li>
-              <strong>Security & Compliance:</strong> Worked within the Dominican financial sector’s cybersecurity
+              <strong>Security & Compliance:</strong> Worked within the Dominican financial sectorâ€™s cybersecurity
               regulations; defined security requirements and testing as first-class work.
             </li>
           </ul>
@@ -92,8 +92,8 @@ export default function CaseAfpSiembra(): ReactNode {
           <h3>Timeline</h3>
           <ul>
             <li><strong>Kick-off:</strong> January 2021</li>
-            <li><strong>Discovery & Experiments:</strong> 2021–2022</li>
-            <li><strong>Build & Hardening:</strong> 2023–2024</li>
+            <li><strong>Discovery & Experiments:</strong> 2021â€“2022</li>
+            <li><strong>Build & Hardening:</strong> 2023â€“2024</li>
             <li><strong>Full production launch:</strong> November 2024 (digital app)</li>
           </ul>
         </section>
@@ -107,13 +107,45 @@ export default function CaseAfpSiembra(): ReactNode {
           </ul>
         </section>
 
+        <section className="section" aria-labelledby="videos-title">
+          <h2 id="videos-title">FutureScapes Summit — Livestreams</h2>
+          <div className="cardGrid">
+            <div className="card">
+              <h3>FutureScapes Summit — October 9, 2024</h3>
+              <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/v7VBcTu86VQ?modestbranding=1&rel=0"
+                  title="FutureScapes Summit — October 9, 2024"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}
+                />
+              </div>
+            </div>
+            <div className="card">
+              <h3>FutureScapes Summit — October 10, 2024</h3>
+              <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/0x3JJShSvZ8?modestbranding=1&rel=0"
+                  title="FutureScapes Summit — October 10, 2024"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="section" aria-labelledby="cta-title">
           <div className="finalCta">
             <h2 id="cta-title">Take the first step</h2>
             <p>Get your baseline in 15-20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScan®
+                Start with ClarityScanÂ®
               </Link>
               <Link to="/contact" className="buttonSecondary" data-cta="cta.cases.final.book_call">
                 Book a discovery call

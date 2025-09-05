@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+﻿import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
@@ -9,14 +9,14 @@ import Hero from '../../components/Hero';
 export default function CaseStudies(): ReactNode {
   return (
     <Layout
-      title="Case Studies — Outcomes & Repeatable Delivery | Doulab"
+      title="Case Studies â€” Outcomes & Repeatable Delivery | Doulab"
       description="Selected projects and measurable outcomes from Doulab, shown with clear checkpoints, evidence packs, and KPIs."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies" />
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:image" content="https://doulab.net/img/hero-cases.jpg" />
-        <meta property="og:image:alt" content="Case studies hero — abstract indigo gradient with Doulab brand accents." />
+        <meta property="og:image:alt" content="Case studies hero â€” abstract indigo gradient with Doulab brand accents." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -25,12 +25,12 @@ export default function CaseStudies(): ReactNode {
         <Hero
           title="Case Studies"
           subtitle="Real projects. Clear checkpoints. Measurable results."
-          body="Each case shows context, what we did, and outcomes—with the artifacts and cadence that made it repeatable."
+          body="Each case shows context, what we did, and outcomesâ€”with the artifacts and cadence that made it repeatable."
           imageBase="/img/hero-cases"
-          imageAlt="Case studies hero — abstract indigo gradient with Doulab brand accents."
+          imageAlt="Case studies hero â€” abstract indigo gradient with Doulab brand accents."
           primaryCta={{
             to: '/services/clarityscan',
-            label: 'Start with ClarityScan®',
+            label: 'Start with ClarityScanÂ®',
             dataCta: 'cta.cases.hero.clarityscan',
             ariaLabel: 'Start with ClarityScan - quick 15-20 minute baseline',
           }}
@@ -40,7 +40,7 @@ export default function CaseStudies(): ReactNode {
 
         {/* How we measure teaser removed per request */}
 
-        {/* Featured projects — image cards linking to internal pages */}
+        {/* Featured projects â€” image cards linking to internal pages */}
         <section className="section" id="featured" aria-labelledby="featured-title">
           <h2 id="featured-title">Featured projects</h2>
           <p className="sectionLead">A few examples showing how checkpoints, evidence, and cadence drive results.</p>
@@ -53,7 +53,7 @@ export default function CaseStudies(): ReactNode {
                 <source srcSet="/img/afp-siembra-card.webp" type="image/webp" />
                 <img
                   src="/img/afp-siembra-card.jpg"
-                  alt="AFP Siembra — Alcanza product and SILAB innovation lab."
+                  alt="AFP Siembra â€” Alcanza product and SILAB innovation lab."
                   width={1200}
                   height={720}
                   loading="lazy"
@@ -63,7 +63,7 @@ export default function CaseStudies(): ReactNode {
               </picture>
               <h3 id="cs-siembra-title">
                 <Link to="/case-studies/afp-siembra" data-cta="cta.cases.card.afp_siembra.title" aria-label="Read AFP Siembra case study">
-                  AFP Siembra — Alcanza &amp; SILAB
+                  AFP Siembra â€” Alcanza &amp; SILAB
                 </Link>
               </h3>
               <p className="microcopy"><strong>Sector:</strong> Financial services</p>
@@ -75,6 +75,41 @@ export default function CaseStudies(): ReactNode {
                   to="/case-studies/afp-siembra"
                   data-cta="cta.cases.card.afp_siembra"
                   aria-label="Read AFP Siembra case study"
+                >
+                  Read the case â†’
+                </Link>
+              </div>
+            </article>
+
+            {/* Alpha Inversiones */}
+            <article className="card" aria-labelledby="cs-alpha-title">
+              <picture>
+                <source srcSet="/img/alpha.avif" type="image/avif" />
+                <source srcSet="/img/alpha.webp" type="image/webp" />
+                <img
+                  src="/img/alpha.png"
+                  alt="Alpha Inversiones — program and delivery snapshots."
+                  width={1200}
+                  height={720}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                />
+              </picture>
+              <h3 id="cs-alpha-title">
+                <Link to="/case-studies/alpha-inversiones" data-cta="cta.cases.card.alpha.title" aria-label="Read Alpha Inversiones case study">
+                  Alpha Inversiones
+                </Link>
+              </h3>
+              <p className="microcopy"><strong>Sector:</strong> Financial services</p>
+              <p className="microcopy"><strong>Capabilities:</strong> Training &amp; Programs; Evidence packs; Gate reviews</p>
+              <p>Evidence-led delivery with clear checkpoints and measurable outcomes.</p>
+              <div className="cardFooter">
+                <Link
+                  className="cardCta"
+                  to="/case-studies/alpha-inversiones"
+                  data-cta="cta.cases.card.alpha"
+                  aria-label="Read Alpha Inversiones case study"
                 >
                   Read the case →
                 </Link>
@@ -88,7 +123,7 @@ export default function CaseStudies(): ReactNode {
                 <source srcSet="/img/fundapec-card.webp" type="image/webp" />
                 <img
                   src="/img/fundapec-card.jpg"
-                  alt="Comunidad FUNDAPEC — alumni platform and engagement."
+                  alt="Comunidad FUNDAPEC â€” alumni platform and engagement."
                   width={1200}
                   height={720}
                   loading="lazy"
@@ -98,7 +133,7 @@ export default function CaseStudies(): ReactNode {
               </picture>
               <h3 id="cs-fundapec-title">
                 <Link to="/case-studies/fundapec" data-cta="cta.cases.card.fundapec.title" aria-label="Read FUNDAPEC case study">
-                  FUNDAPEC — Alumni Platform
+                  FUNDAPEC â€” Alumni Platform
                 </Link>
               </h3>
               <p className="microcopy"><strong>Sector:</strong> Education &amp; finance</p>
@@ -111,7 +146,7 @@ export default function CaseStudies(): ReactNode {
                   data-cta="cta.cases.card.fundapec"
                   aria-label="Read FUNDAPEC case study"
                 >
-                  Read the case →
+                  Read the case â†’
                 </Link>
               </div>
             </article>
@@ -123,7 +158,7 @@ export default function CaseStudies(): ReactNode {
                 <source srcSet="/img/ogtic-redlab-card.webp" type="image/webp" />
                 <img
                   src="/img/ogtic-redlab-card.jpg"
-                  alt="OGTIC — Red de Laboratorios de Innovación (RedLab) cohort sessions."
+                  alt="OGTIC â€” Red de Laboratorios de InnovaciÃ³n (RedLab) cohort sessions."
                   width={1200}
                   height={720}
                   loading="lazy"
@@ -133,7 +168,7 @@ export default function CaseStudies(): ReactNode {
               </picture>
               <h3 id="cs-ogtic-title">
                 <Link to="/case-studies/ogtic-redlab" data-cta="cta.cases.card.ogtic_redlab.title" aria-label="Read OGTIC RedLab case study">
-                  OGTIC — RedLab &amp; Capacity Building
+                  OGTIC â€” RedLab &amp; Capacity Building
                 </Link>
               </h3>
               <p className="microcopy"><strong>Sector:</strong> Public sector</p>
@@ -146,7 +181,7 @@ export default function CaseStudies(): ReactNode {
                   data-cta="cta.cases.card.ogtic_redlab"
                   aria-label="Read OGTIC RedLab case study"
                 >
-                  Read the case →
+                  Read the case â†’
                 </Link>
               </div>
             </article>
@@ -187,14 +222,14 @@ export default function CaseStudies(): ReactNode {
           </div>
         </section>
 
-        {/* Final CTA — standardized */}
+        {/* Final CTA â€” standardized */}
         <section className="section" id="cta" aria-labelledby="cta-title">
           <div className="finalCta">
             <h2 id="cta-title">Ready to make innovation repeatable?</h2>
-            <p>Start small — get your baseline in 15-20 minutes.</p>
+            <p>Start small â€” get your baseline in 15-20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link className="buttonPrimary" to="/services/clarityscan" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScan®
+                Start with ClarityScanÂ®
               </Link>
               <Link className="buttonSecondary" to="/contact" data-cta="cta.cases.final.book_call">
                 Book a discovery call
@@ -206,3 +241,4 @@ export default function CaseStudies(): ReactNode {
     </Layout>
   );
 }
+

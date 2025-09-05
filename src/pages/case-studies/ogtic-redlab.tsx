@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+﻿import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
@@ -13,7 +13,7 @@ export default function CaseOgticRedlab(): ReactNode {
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/ogtic-redlab" />
         <meta property="og:image" content="https://doulab.net/img/ogtic-redlab-card.jpg" />
-        <meta property="og:image:alt" content="OGTIC — Red de Laboratorios de Innovación (RedLab) cohort sessions." />
+        <meta property="og:image:alt" content="OGTIC â€” Red de Laboratorios de InnovaciÃ³n (RedLab) cohort sessions." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
       </Head>
@@ -24,13 +24,13 @@ export default function CaseOgticRedlab(): ReactNode {
         </nav>
 
         <Hero
-          title="OGTIC — RedLab Innovation Network"
+          title="OGTIC â€” RedLab Innovation Network"
           subtitle="Built and facilitated a public-sector innovation network with structured capability and cohort learning."
           imageBase="/img/ogtic-redlab-card"
-          imageAlt="OGTIC — Red de Laboratorios de Innovación (RedLab) cohort sessions."
+          imageAlt="OGTIC â€” Red de Laboratorios de InnovaciÃ³n (RedLab) cohort sessions."
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScanÂ®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
           ctaNote="Get your baseline in 15-20 minutes."
           eager
@@ -65,7 +65,7 @@ export default function CaseOgticRedlab(): ReactNode {
             <p>Get your baseline in 15-20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.case.ogtic.clarityscan">
-                Start with ClarityScan®
+                Start with ClarityScanÂ®
               </Link>
               <Link to="/contact" className="buttonSecondary" data-cta="cta.case.ogtic.book_call">
                 Book a discovery call

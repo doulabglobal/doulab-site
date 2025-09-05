@@ -9,14 +9,14 @@ import Hero from '../../components/Hero';
 export default function CaseStudies(): ReactNode {
   return (
     <Layout
-      title="Case Studies â€” Outcomes & Repeatable Delivery | Doulab"
+      title="Case Studies — Outcomes & Repeatable Delivery | Doulab"
       description="Selected projects and measurable outcomes from Doulab, shown with clear checkpoints, evidence packs, and KPIs."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies" />
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:image" content="https://doulab.net/img/hero-cases.jpg" />
-        <meta property="og:image:alt" content="Case studies hero â€” abstract indigo gradient with Doulab brand accents." />
+        <meta property="og:image:alt" content="Case studies hero — abstract indigo gradient with Doulab brand accents." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 
@@ -27,7 +27,7 @@ export default function CaseStudies(): ReactNode {
           subtitle="Real projects. Clear checkpoints. Measurable results."
           body="Each case shows context, what we did, and outcomesâ€”with the artifacts and cadence that made it repeatable."
           imageBase="/img/hero-cases"
-          imageAlt="Case studies hero â€” abstract indigo gradient with Doulab brand accents."
+          imageAlt="Case studies hero — abstract indigo gradient with Doulab brand accents."
           primaryCta={{
             to: '/services/clarityscan',
             label: 'Start with ClarityScanÂ®',
@@ -241,4 +241,6 @@ export default function CaseStudies(): ReactNode {
     </Layout>
   );
 }
+
+
 

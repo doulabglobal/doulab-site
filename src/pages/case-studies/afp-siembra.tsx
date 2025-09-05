@@ -32,7 +32,7 @@ export default function CaseAfpSiembra(): ReactNode {
           imageAlt="AFP Siembra â€” Alcanza product and SILAB innovation lab"
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScanÂ®', dataCta: 'cta.cases.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
           ctaNote="Get your baseline in 15-20 minutes."
           id="afp-siembra-hero"
@@ -45,13 +45,13 @@ export default function CaseAfpSiembra(): ReactNode {
           <p>
             AFP Siembra is a specialized pension fund administrator (AFP) and the first in the Dominican Republic
             authorized by the Superintendencia de Pensiones (SIPEN). The team set out to launch <strong><a href="https://alcanza.com.do" target="_blank" rel="noopener noreferrer">Alcanza</a></strong>,
-            a <strong>digital savings solution</strong> for Dominicansâ€”salaried and independent, living in the country and abroadâ€”who need a safe,
+            a <strong>digital savings solution</strong> for Dominicans—salaried and independent, living in the country and abroad—who need a safe,
             flexible way to save for retirement, housing, education, and other goals.
           </p>
           <p>
             The challenge: low national savings rates, high trust requirements, and a <strong>regulated, security-first</strong>
             environment. In parallel, leadership wanted a <strong>repeatable innovation engine</strong> inside the
-            organizationâ€”what became <strong>SILAB</strong>.
+            organization—what became <strong>SILAB</strong>.
           </p>
         </section>
 
@@ -60,7 +60,7 @@ export default function CaseAfpSiembra(): ReactNode {
           <ul>
             <li>
               <strong>Baseline & Direction:</strong> Ran an initial assessment (ClarityScan) to determine the current state of the innovation process,
-              surface risks, align stakeholders, and sequence the workload. Used MicroCanvas to frame problems, understand the customer, define value
+              surface risks, align stakeholders, and sequence the workload. Used <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to frame problems, understand the customer, define value
               propositions, create objectives and key results for the innovation project, and set the metrics to measure progress. We also worked with
               the innovation team to identify issues that were slowing the development of innovation projects and to unblock them.
             </li>
@@ -76,15 +76,15 @@ export default function CaseAfpSiembra(): ReactNode {
             </li>
             <li>
               <strong>Delivery System:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
-              SILABâ€™s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
+              SILAB’s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
             </li>
             <li>
               <strong>Innovation Lab & Launch:</strong> Starting in October 2023, we conceptualized the SIEMBRA Innovation Lab, leveraging learnings and outcomes from the Alcanza project to design an internal
-              innovation capability. In parallel, we helped conceptualize and produce the labâ€™s public launch during the inaugural AFP Siembra FutureScapes Innovation Summitâ€”
+              innovation capability. In parallel, we helped conceptualize and produce the lab’s public launch during the inaugural AFP Siembra FutureScapes Innovation Summit—
               a two-day event with more than 300 participants.
             </li>
             <li>
-              <strong>Security & Compliance:</strong> Worked within the Dominican financial sectorâ€™s cybersecurity
+              <strong>Security & Compliance:</strong> Worked within the Dominican financial sector’s cybersecurity
               regulations; defined security requirements and testing as first-class work.
             </li>
           </ul>
@@ -92,7 +92,7 @@ export default function CaseAfpSiembra(): ReactNode {
           <h3>Timeline</h3>
           <ul>
             <li><strong>Kick-off:</strong> January 2021</li>
-            <li><strong>Discovery & Experiments:</strong> 2021â€“2022</li>
+            <li><strong>Discovery & Experiments:</strong> 2021–2022</li>
             <li><strong>Build & Hardening:</strong> 2023â€“2024</li>
             <li><strong>Full production launch:</strong> November 2024 (digital app)</li>
           </ul>
@@ -145,7 +145,7 @@ export default function CaseAfpSiembra(): ReactNode {
             <p>Get your baseline in 15-20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScanÂ®
+                Start with ClarityScan®
               </Link>
               <Link to="/contact" className="buttonSecondary" data-cta="cta.cases.final.book_call">
                 Book a discovery call

@@ -30,7 +30,7 @@ export default function CaseAlphaInversiones(): ReactNode {
           imageAlt="Alpha Inversiones — program and delivery snapshots."
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScanÂ®', dataCta: 'cta.cases.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
           ctaNote="Get your baseline in 15-20 minutes."
           eager
@@ -45,7 +45,7 @@ export default function CaseAlphaInversiones(): ReactNode {
   <h2 id="work-title">What we did</h2>
   <ul>
     <li>Baseline assessment (ClarityScan) to surface risks, align stakeholders, and sequence work.</li>
-    <li>Evidence-first approach using MicroCanvas to frame problems, segments, and value propositions.</li>
+    <li>Evidence-first approach using <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to frame problems, segments, and value propositions.</li>
     <li>Delivery cadence with gate reviews, decision owners, and measurable KPIs.</li>
     <li>Helped create the innovation committee to prioritize initiatives in the new process.</li>
   </ul>
@@ -55,7 +55,7 @@ export default function CaseAlphaInversiones(): ReactNode {
   <h2 id="outcomes-title">Outcomes</h2>
   <h3>Training & Capacity Building</h3>
   <ul>
-    <li>30 Alpha employees trained in the MicroCanvas Framework (MCF 2.1) through structured workshops.</li>
+    <li>30 Alpha employees trained in the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework (MCF 2.1)</Link> through structured workshops.</li>
     <li>12‑week Innovation Maturity Model Program (IMM‑P) executed across discovery, validation, and development—run in several cycles over 24 months.</li>
   </ul>
   <h3>Innovation Pipeline</h3>
@@ -83,7 +83,7 @@ export default function CaseAlphaInversiones(): ReactNode {
             <p>Get your baseline in 15-20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.case.alpha.clarityscan">
-                Start with ClarityScanÂ®
+                Start with ClarityScan®
               </Link>
               <Link to="/contact" className="buttonSecondary" data-cta="cta.case.alpha.book_call">
                 Book a discovery call
@@ -95,6 +95,7 @@ export default function CaseAlphaInversiones(): ReactNode {
     </Layout>
   );
 }
+
 
 
 

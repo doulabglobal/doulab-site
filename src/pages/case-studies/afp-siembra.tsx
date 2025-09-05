@@ -24,9 +24,10 @@ export default function CaseAfpSiembra(): ReactNode {
         </nav>
 
         <Hero
-          title="AFP Siembra — Alcanza & SILAB"
+          title="AFP Siembra: Alcanza and SILAB"
           subtitle="From strategy to repeatable delivery. We helped launch a digital savings product and set up an innovation lab."
-          body="AFP Siembra is a pension fund leader in the Dominican Republic. Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad."
+          body={"AFP Siembra is a pension fund leader in the Dominican Republic. " +
+            "Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad."}
           imageBase="/img/afp-siembra-card"
           imageAlt="AFP Siembra — Alcanza product and SILAB innovation lab"
           width={1200}
@@ -43,10 +44,9 @@ export default function CaseAfpSiembra(): ReactNode {
           <h2 id="context-title">Context</h2>
           <p>
             AFP Siembra is a specialized pension fund administrator (AFP) and the first in the Dominican Republic
-            authorized by the Superintendencia de Pensiones (SIPEN). The team set out to launch <strong>Alcanza</strong>
-            (alcanza.com.do), a <strong>digital savings solution</strong> for Dominicans—salaried and independent,
-            living in the country and abroad—who need a safe, flexible way to save for retirement, housing, education,
-            and other goals.
+            authorized by the Superintendencia de Pensiones (SIPEN). The team set out to launch <strong><a href="https://alcanza.com.do" target="_blank" rel="noopener noreferrer">Alcanza</a></strong>,
+            a <strong>digital savings solution</strong> for Dominicans—salaried and independent, living in the country and abroad—who need a safe,
+            flexible way to save for retirement, housing, education, and other goals.
           </p>
           <p>
             The challenge: low national savings rates, high trust requirements, and a <strong>regulated, security-first</strong>
@@ -59,8 +59,10 @@ export default function CaseAfpSiembra(): ReactNode {
           <h2 id="work-title">What We Did</h2>
           <ul>
             <li>
-              <strong>Baseline & Direction:</strong> Ran a ClarityScan to surface risks, align stakeholders, and
-              sequence work. Used MicroCanvas to frame problems, value propositions, and metrics.
+              <strong>Baseline & Direction:</strong> Ran an initial assessment (ClarityScan) to determine the current state of the innovation process,
+              surface risks, align stakeholders, and sequence the workload. Used MicroCanvas to frame problems, understand the customer, define value
+              propositions, create objectives and key results for the innovation project, and set the metrics to measure progress. We also worked with
+              the innovation team to identify issues that were slowing the development of innovation projects and to unblock them.
             </li>
             <li>
               <strong>Evidence First:</strong> Designed multiple A/Bs in interview settings (from internal employees to
@@ -75,6 +77,11 @@ export default function CaseAfpSiembra(): ReactNode {
             <li>
               <strong>Delivery System:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
               SILAB’s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
+            </li>
+            <li>
+              <strong>Innovation Lab & Launch:</strong> Starting in October 2023, we conceptualized the SIEMBRA Innovation Lab, leveraging learnings and outcomes from the Alcanza project to design an internal
+              innovation capability. In parallel, we helped conceptualize and produce the lab’s public launch during the inaugural AFP Siembra FutureScapes Innovation Summit—
+              a two-day event with more than 300 participants.
             </li>
             <li>
               <strong>Security & Compliance:</strong> Worked within the Dominican financial sector’s cybersecurity
@@ -118,4 +125,3 @@ export default function CaseAfpSiembra(): ReactNode {
     </Layout>
   );
 }
-

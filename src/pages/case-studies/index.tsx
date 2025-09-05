@@ -38,28 +38,7 @@ export default function CaseStudies(): ReactNode {
           ctaNote="Get your baseline in 15-20 minutes."
         />
 
-        {/* How we measure (teaser) */}
-        <section className="section section--tight" id="measure-teaser" aria-labelledby="measure-teaser-title">
-          <h2 id="measure-teaser-title" className="sr-only">How we measure (teaser)</h2>
-          <ul className="processRail" aria-describedby="measure-teaser-note">
-            <li className="processStep">
-              <CheckCircle className="stepIcon" aria-hidden="true" />
-              <h4>Clear checkpoints</h4>
-              <p>Gate reviews with owners and criteria.</p>
-            </li>
-            <li className="processStep">
-              <CheckCircle className="stepIcon" aria-hidden="true" />
-              <h4>Evidence packs</h4>
-              <p>Decisions traced to artifacts.</p>
-            </li>
-            <li className="processStep">
-              <LineChart className="stepIcon" aria-hidden="true" />
-              <h4>Measurable KPIs</h4>
-              <p>Learning and outcomes tracked.</p>
-            </li>
-          </ul>
-          <p id="measure-teaser-note" className="microcopy">See details below in How we measure.</p>
-        </section>
+        {/* How we measure teaser removed per request */}
 
         {/* Featured projects — image cards linking to internal pages */}
         <section className="section" id="featured" aria-labelledby="featured-title">

@@ -496,6 +496,9 @@ function ResearchResourcesSection() {
       <Lightbulb className="cardIcon" aria-hidden="true" />
       <h3>MicroCanvas Framework v2.1</h3>
       <p>Open toolkit to diagnose, design, and scale innovation with reusable canvases.</p>
+      <p className="microcopy">
+        Learn the framework in our docs: <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link>.
+      </p>
       <div className="cardFooter">
         <a
           className="cardCta"
@@ -701,4 +704,3 @@ export default function Home(): ReactNode {
     </Layout>
   );
 }
-

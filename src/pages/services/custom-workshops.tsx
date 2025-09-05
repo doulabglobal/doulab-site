@@ -1,4 +1,4 @@
-// src/pages/services/custom-workshops.tsx
+﻿// src/pages/services/custom-workshops.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -18,11 +18,11 @@ export default function CustomWorkshopsPage(): ReactNode {
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
     url: 'https://doulab.net/services/custom-workshops',
     areaServed: 'Global',
-    description: 'Outcome-driven sessions to align teams, decide faster, and create momentum. Half‑day or full‑day formats, on‑site or remote.',
+    description: 'Outcome-driven sessions to align teams, decide faster, and create momentum. Halfâ€‘day or fullâ€‘day formats, onâ€‘site or remote.',
   };
 
   return (
-    <Layout title="Custom Workshops - Align decisions & accelerate outcomes | Doulab" description="Outcome-driven sessions to align teams, decide faster, and create momentum. Half‑day or full‑day formats, on‑site or remote.">
+    <Layout title="Custom Workshops - Align decisions & accelerate outcomes | Doulab" description="Outcome-driven sessions to align teams, decide faster, and create momentum. Halfâ€‘day or fullâ€‘day formats, onâ€‘site or remote.">
       <Head>
         <link rel="canonical" href="https://doulab.net/services/custom-workshops" />
         <link rel="preload" as="image" href="/img/workshops-hero.png" imageSrcSet="/img/workshops-hero.avif 1x, /img/workshops-hero.webp 1x, /img/workshops-hero.png 1x" imageSizes="(max-width: 700px) 100vw, 600px" />
@@ -37,7 +37,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <h1 id="cw-hero-title" className="heroTitle">Custom Workshops</h1>
               <p className="heroSubtitle" style={{ textAlign: 'justify' }}>Align. Decide. Move.</p>
               <p className="heroText">
-                We design and run <strong>tailored workshops</strong> that unblock decisions and turn strategy into action. Built on MicroCanvas and IMM‑P, delivered on‑site or remote, and tuned to your goals and constraints.
+                We design and run <strong>tailored workshops</strong> that unblock decisions and turn strategy into action. Built on <Link to='/docs/research-resources/microcanvas'>MicroCanvas</Link> and <Link to='/services/innovation-maturity'>IMM‑P</Link>, delivered onâ€‘site or remote, and tuned to your goals and constraints.
               </p>
               <div className="heroCtas">
                 <Link to="/contact" className="buttonPrimary" data-cta="cta.services.workshops.hero.contact">Start a workshop brief</Link>
@@ -67,13 +67,13 @@ export default function CustomWorkshopsPage(): ReactNode {
               <p>Make the few decisions that change everything.</p>
               <ul>
                 <li>Clear owners &amp; next steps</li>
-                <li>One‑page plan</li>
+                <li>Oneâ€‘page plan</li>
               </ul>
             </article>
             <article className="card" aria-labelledby="cw-why-alignment">
               <Users className="cardIcon" aria-hidden="true" />
               <h3 id="cw-why-alignment">Team alignment</h3>
-              <p>Get cross‑functional buy‑in and remove blockers in one session.</p>
+              <p>Get crossâ€‘functional buyâ€‘in and remove blockers in one session.</p>
               <ul>
                 <li>Shared framing</li>
                 <li>Commitments &amp; cadence</li>
@@ -81,8 +81,8 @@ export default function CustomWorkshopsPage(): ReactNode {
             </article>
             <article className="card" aria-labelledby="cw-why-gtm">
               <Target className="cardIcon" aria-hidden="true" />
-              <h3 id="cw-why-gtm">Go‑to‑Market</h3>
-              <p>Frame customers, offers, and tests that de‑risk launch.</p>
+              <h3 id="cw-why-gtm">Goâ€‘toâ€‘Market</h3>
+              <p>Frame customers, offers, and tests that deâ€‘risk launch.</p>
               <ul>
                 <li>Target segments &amp; hypotheses</li>
                 <li>MVP metrics &amp; signals</li>
@@ -97,26 +97,26 @@ export default function CustomWorkshopsPage(): ReactNode {
           <div className="cardGrid">
             <article className="card" aria-labelledby="cw-format-halfday">
               <CalendarClock className="cardIcon" aria-hidden="true" />
-              <h3 id="cw-format-halfday">Custom Innovation Workshop (half‑day)</h3>
-              <p>A focused <strong>3.5‑hour</strong> session built on MicroCanvas or complementary frameworks. Ideal for rapid alignment and a quick‑win plan.</p>
+              <h3 id="cw-format-halfday">Custom Innovation Workshop (halfâ€‘day)</h3>
+              <p>A focused <strong>3.5â€‘hour</strong> session built on MicroCanvas or complementary frameworks. Ideal for rapid alignment and a quickâ€‘win plan.</p>
               <ul>
-                <li>Delivery: on‑site or remote</li>
-                <li>Includes: pre‑work brief, decision log, 30/60/90 template</li>
+                <li>Delivery: onâ€‘site or remote</li>
+                <li>Includes: preâ€‘work brief, decision log, 30/60/90 template</li>
               </ul>
               <div className="cardFooter">
-                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.halfday.brief">Start a half‑day brief &rarr;</Link>
+                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.halfday.brief">Start a halfâ€‘day brief &rarr;</Link>
               </div>
             </article>
             <article className="card" aria-labelledby="cw-format-fullday">
               <CalendarClock className="cardIcon" aria-hidden="true" />
-              <h3 id="cw-format-fullday">Custom Innovation Workshop (full‑day)</h3>
-              <p>A deeper <strong>7‑hour</strong> session that moves from discovery to decisions and next steps. Includes pre‑work review and post‑work synthesis.</p>
+              <h3 id="cw-format-fullday">Custom Innovation Workshop (fullâ€‘day)</h3>
+              <p>A deeper <strong>7â€‘hour</strong> session that moves from discovery to decisions and next steps. Includes preâ€‘work review and postâ€‘work synthesis.</p>
               <ul>
-                <li>Delivery: on‑site or remote</li>
-                <li>Includes: pre‑work review, prioritization map, action board</li>
+                <li>Delivery: onâ€‘site or remote</li>
+                <li>Includes: preâ€‘work review, prioritization map, action board</li>
               </ul>
               <div className="cardFooter">
-                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">Start a full‑day brief &rarr;</Link>
+                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">Start a fullâ€‘day brief &rarr;</Link>
               </div>
             </article>
           </div>
@@ -129,7 +129,7 @@ export default function CustomWorkshopsPage(): ReactNode {
             <article className="card" aria-labelledby="cw-outcome-decisions">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />
               <h3 id="cw-outcome-decisions">Decisions &amp; owners</h3>
-              <p>Gate‑ready summaries and a one‑page plan with owners.</p>
+              <p>Gateâ€‘ready summaries and a oneâ€‘page plan with owners.</p>
             </article>
             <article className="card" aria-labelledby="cw-outcome-evidence">
               <Lightbulb className="cardIcon" aria-hidden="true" />
@@ -154,7 +154,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <Link to="/services/clarityscan" className="buttonSecondary" data-cta="cta.services.workshops.final.clarityscan">Start with a diagnostic</Link>
             </div>
             <p style={{ marginTop: '0.75rem', fontSize: '0.95rem' }}>
-              <em>We don't run third‑party trackers on this site. If you choose to schedule off‑site, that provider's privacy policy applies.</em>
+              <em>We don't run thirdâ€‘party trackers on this site. If you choose to schedule offâ€‘site, that provider's privacy policy applies.</em>
             </p>
           </div>
         </section>
@@ -162,4 +162,5 @@ export default function CustomWorkshopsPage(): ReactNode {
     </Layout>
   );
 }
+
 

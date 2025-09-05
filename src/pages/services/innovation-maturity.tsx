@@ -1,4 +1,4 @@
-// src/pages/services/innovation-maturity.tsx
+﻿// src/pages/services/innovation-maturity.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -14,7 +14,7 @@ export default function InnovationMaturityProgram(): ReactNode {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'Innovation Maturity Model — Program (IMM-P)',
+    name: 'Innovation Maturity Model â€” Program (IMM-P)',
     serviceType: 'Innovation capability acceleration',
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
     url: 'https://doulab.net/services/innovation-maturity',
@@ -25,7 +25,7 @@ export default function InnovationMaturityProgram(): ReactNode {
 
   return (
     <Layout
-      title="Innovation Maturity Model — Program (IMM-P) | Doulab"
+      title="Innovation Maturity Model â€” Program (IMM-P) | Doulab"
       description="A structured, gated program to assess, strengthen, and accelerate innovation capability using the MicroCanvas Framework (MCF v2.1)."
     >
       <Head>
@@ -40,7 +40,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <section className="heroBanner" aria-labelledby="imm-hero-title">
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-              <h1 id="imm-hero-title" className="heroTitle">Innovation Maturity Model — Program (IMM-P)</h1>
+              <h1 id="imm-hero-title" className="heroTitle">Innovation Maturity Model â€” Program (IMM-P)</h1>
               <p className="heroSubtitle" style={{ textAlign: 'justify' }}>Assess. Strengthen. Accelerate.</p>
               <p className="heroText">
                 IMM-P is Doulab's <strong>structured program</strong> to install <strong>repeatable innovation</strong>:
@@ -49,7 +49,7 @@ export default function InnovationMaturityProgram(): ReactNode {
               </p>
 
               <div className="heroCtas">
-                <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.services.imm.hero.clarityscan">Start with ClarityScan</Link>
+                <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.services.imm.hero.clarityscan">Start with ClarityScan®</Link>
                 <Link to="/contact" className="buttonSecondary" data-cta="cta.services.imm.hero.contact">Talk to us</Link>
               </div>
 
@@ -75,7 +75,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             <article className="card" aria-labelledby="imm-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
               <h3 id="imm-startups">Startups</h3>
-              <p>From ideas to evidence to product/market fit — with gates, focus, and repeatable delivery.</p>
+              <p>From ideas to evidence to product/market fit â€” with gates, focus, and repeatable delivery.</p>
             </article>
             <article className="card" aria-labelledby="imm-public">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />

@@ -1,4 +1,4 @@
-// src/pages/services/clarityscan/index.tsx
+﻿// src/pages/services/clarityscan/index.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -37,10 +37,10 @@ export default function ClarityScanPage(): ReactNode {
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
             <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
               <h1 id="clarityscan-hero-title" className="heroTitle">ClarityScan</h1>
-              <p className="heroSubtitle" style={{ textAlign: 'justify' }}>A rapid diagnostic to see where you are — and what to do next.</p>
-              <p className="heroText">In under 30 minutes, ClarityScan maps your innovation/foresight maturity across strategy, culture, process, and results — then pinpoints the top actions to unlock momentum.</p>
+              <p className="heroSubtitle" style={{ textAlign: "justify" }}>A rapid diagnostic to see where you are — and what to do next.</p>
+              <p className="heroText">In under 30 minutes, ClarityScan maps your innovation/foresight maturity across strategy, culture, process, and results â€” then pinpoints the top actions to unlock momentum.</p>
               <div className="heroCtas">
-                <a className="buttonPrimary" href="https://calendly.com/lasantiago/clarityscan" target="_blank" rel="noopener noreferrer" data-cta="cta.services.clarityscan.hero.run" aria-label="Schedule ClarityScan on Calendly (opens in a new tab)">Run ClarityScan</a>
+                <a className="buttonPrimary" href="https://calendly.com/lasantiago/clarityscan" target="_blank" rel="noopener noreferrer" data-cta="cta.services.clarityscan.hero.run" aria-label="Schedule ClarityScan on Calendly (opens in a new tab)">Run ClarityScan®</a>
                 <Link to="/contact" className="buttonSecondary" data-cta="cta.services.clarityscan.hero.contact">Talk to us</Link>
               </div>
             </div>
@@ -52,6 +52,7 @@ export default function ClarityScanPage(): ReactNode {
               </picture>
             </div>
           </div>
+        <p className="microcopy" style={{ marginTop: ".25rem" }}>Built on <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link> and <Link to="/services/innovation-maturity">IMM‑P</Link> gates.</p>
         </section>
 
         {/* What you get */}
@@ -61,12 +62,12 @@ export default function ClarityScanPage(): ReactNode {
             <article className="card">
               <Gauge className="cardIcon" aria-hidden="true" />
               <h3>Maturity snapshot</h3>
-              <p>Single‑page PDF with clear scores and notes.</p>
+              <p>Singleâ€‘page PDF with clear scores and notes.</p>
             </article>
             <article className="card">
               <Target className="cardIcon" aria-hidden="true" />
               <h3>Top moves</h3>
-              <p>3–5 priority actions with owners and cadence.</p>
+              <p>3â€“5 priority actions with owners and cadence.</p>
             </article>
             <article className="card">
               <CheckCircle className="cardIcon" aria-hidden="true" />
@@ -74,6 +75,7 @@ export default function ClarityScanPage(): ReactNode {
               <p>Editable plan template to build momentum fast.</p>
             </article>
           </div>
+        <p className="microcopy" style={{ marginTop: ".25rem" }}>Built on <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link> and <Link to="/services/innovation-maturity">IMM‑P</Link> gates.</p>
         </section>
 
         {/* How it works */}
@@ -96,22 +98,25 @@ export default function ClarityScanPage(): ReactNode {
               <p>Receive your snapshot and next steps within 2 days.</p>
             </article>
           </div>
-          <p className="microcopy" style={{ marginTop: '.5rem' }}>Note: ClarityScan is a rapid read, not a full program diagnosis. For deeper assessments, see ClarityScan Plus or our IMM‑P Programs.</p>
+          <p className="microcopy" style={{ marginTop: '.5rem' }}>Note: ClarityScan is a rapid read, not a full program diagnosis. For deeper assessments, see ClarityScan Plus or our IMMâ€‘P Programs.</p>
+        <p className="microcopy" style={{ marginTop: ".25rem" }}>Built on <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link> and <Link to="/services/innovation-maturity">IMM‑P</Link> gates.</p>
         </section>
 
         {/* Final CTA */}
         <section className="section" id="cta" aria-labelledby="clarityscan-cta-title">
           <div className="finalCta">
             <h2 id="clarityscan-cta-title">Ready to get a clear read?</h2>
-            <p>Run ClarityScan and get your maturity snapshot plus the exact next steps to take.</p>
+            <p>Run ClarityScan® and get your maturity snapshot plus the exact next steps to take.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <a className="buttonPrimary" href="https://calendly.com/lasantiago/clarityscan" target="_blank" rel="noopener noreferrer" data-cta="cta.services.clarityscan.final.run" aria-label="Schedule ClarityScan on Calendly (opens in a new tab)">Start ClarityScan &rarr;</a>
               <Link className="buttonSecondary" to="/contact" data-cta="cta.services.clarityscan.final.contact">Contact us</Link>
             </div>
           </div>
+        <p className="microcopy" style={{ marginTop: ".25rem" }}>Built on <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link> and <Link to="/services/innovation-maturity">IMM‑P</Link> gates.</p>
         </section>
       </main>
     </Layout>
   );
 }
+
 

@@ -38,7 +38,15 @@ export default function CaseAlphaInversiones(): ReactNode {
 
         <section className="section" aria-labelledby="context-title">
           <h2 id="context-title">Context</h2>
-          <p>Brief context of the challenge and goals. Replace this with your specific narrative.</p>
+          <p>
+            Alpha Inversiones, one of the leading firms in the Dominican Republic’s capital markets, faced a pivotal moment in its growth journey. Initially, the company sought to reduce the cost of client acquisition, but it soon became evident that the challenge was much broader: to scale sustainably while modernizing its culture, structure, and customer experience.
+          </p>
+          <p>
+            The organization needed to transition from a traditional financial services model into a future-ready, innovation-driven enterprise. This required building a culture of foresight, adopting project management discipline, strengthening data-driven decision-making, and aligning its digital platforms to an integrated customer journey.
+          </p>
+          <p>
+            To achieve this, Doulab partnered with Alpha to launch Alpha Escalable—a transformation program designed to prepare the company for scalable growth, while embedding innovation capabilities into its DNA
+          </p>
         </section>
 
         <section className="section" aria-labelledby="work-title">

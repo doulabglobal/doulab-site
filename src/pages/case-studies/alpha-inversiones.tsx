@@ -13,7 +13,7 @@ export default function CaseAlphaInversiones(): ReactNode {
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/alpha-inversiones" />
         <meta property="og:image" content="https://doulab.net/img/alpha.webp" />
-        <meta property="og:image:alt" content="Alpha Inversiones â€” program and delivery snapshots." />
+        <meta property="og:image:alt" content="Alpha Inversiones — program and delivery snapshots." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
       </Head>
@@ -27,7 +27,7 @@ export default function CaseAlphaInversiones(): ReactNode {
           title="Alpha Inversiones"
           subtitle="Evidence-led delivery with clear checkpoints and measurable outcomes."
           imageBase="/img/alpha-hero"
-          imageAlt="Alpha Inversiones â€” program and delivery snapshots."
+          imageAlt="Alpha Inversiones — program and delivery snapshots."
           width={1200}
           height={720}
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScanÂ®', dataCta: 'cta.cases.hero.clarityscan' }}
@@ -56,7 +56,7 @@ export default function CaseAlphaInversiones(): ReactNode {
   <h3>Training & Capacity Building</h3>
   <ul>
     <li>30 Alpha employees trained in the MicroCanvas Framework (MCF 2.1) through structured workshops.</li>
-    <li>12-week Innovation Maturity Model Program (IMM-P) executed across discovery, validation, and development.</li>
+    <li>12‑week Innovation Maturity Model Program (IMM‑P) executed across discovery, validation, and development—run in several cycles over 24 months.</li>
   </ul>
   <h3>Innovation Pipeline</h3>
   <ul>
@@ -95,6 +95,10 @@ export default function CaseAlphaInversiones(): ReactNode {
     </Layout>
   );
 }
+
+
+
+
 
 
 

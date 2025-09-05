@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react';
+﻿import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
@@ -13,7 +13,7 @@ export default function CaseFundapec(): ReactNode {
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/fundapec" />
         <meta property="og:image" content="https://doulab.net/img/fundapec-card.jpg" />
-        <meta property="og:image:alt" content="Comunidad FUNDAPEC — alumni platform and engagement." />
+        <meta property="og:image:alt" content="Comunidad FUNDAPEC â€” alumni platform and engagement." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
       </Head>
@@ -24,13 +24,13 @@ export default function CaseFundapec(): ReactNode {
         </nav>
 
         <Hero
-          title="FUNDAPEC — Alumni Platform"
+          title="FUNDAPEC â€” Alumni Platform"
           subtitle="Co-developed and launched Comunidad FUNDAPEC to deepen engagement and unlock new value."
           imageBase="/img/fundapec-card"
-          imageAlt="Comunidad FUNDAPEC — alumni platform and engagement."
+          imageAlt="Comunidad FUNDAPEC â€” alumni platform and engagement."
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScanÂ®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
           ctaNote="Get your baseline in 15-20 minutes."
           eager
@@ -57,7 +57,12 @@ export default function CaseFundapec(): ReactNode {
             <li>Operational clarity and faster decision cycles.</li>
             <li>New value streams identified.</li>
           </ul>
+        
+        <section className="section" aria-labelledby="why-title">
+          <h2 id="why-title">Why it mattered</h2>
+          <p className="microcopy">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>
         </section>
+</section>
 
         <section className="section" aria-labelledby="cta-title">
           <div className="finalCta">
@@ -65,7 +70,7 @@ export default function CaseFundapec(): ReactNode {
             <p>Get your baseline in 15-20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScan®
+                Start with ClarityScanÂ®
               </Link>
               <Link to="/contact" className="buttonSecondary" data-cta="cta.cases.final.book_call">
                 Book a discovery call
@@ -77,4 +82,5 @@ export default function CaseFundapec(): ReactNode {
     </Layout>
   );
 }
+
 

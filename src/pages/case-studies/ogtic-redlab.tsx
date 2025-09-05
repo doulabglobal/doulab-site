@@ -38,7 +38,9 @@ export default function CaseOgticRedlab(): ReactNode {
 
         <section className="section" aria-labelledby="context-title">
           <h2 id="context-title">Context</h2>
-          <p>Brief context of the challenge and goals. Replace this with your specific narrative.</p>
+          <p>The Red de Laboratorios de Innovación (RedLab) was created under the leadership of OGTIC in the Dominican Republic to strengthen innovation capacity across public institutions. The ambition was to move beyond isolated projects and establish a structured, scalable ecosystem that could empower government teams to design, test, and implement solutions to complex public challenges.</p>
+          <p>At the start, the network faced typical barriers of new initiatives: limited methodological alignment, fragmented governance, and uncertainty about how to sustain participation across diverse institutions. What was needed was a common framework and programmatic structure that could unite government labs under a shared vision while building practical innovation skills.</p>
+          <p>Doulab partnered with OGTIC to design and facilitate RedLab Cohorts 01 and 02, embedding the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework (MCF 2.1)</Link> as the methodology of choice. The goal was not only to equip public servants with innovation tools, but also to create a repeatable maturity process (<Link to="/services/innovation-maturity">IMM‑P</Link>) that would position RedLab as a cornerstone of public innovation policy in the country.</p>
         </section>
 
         <section className="section" aria-labelledby="work-title">
@@ -57,7 +59,12 @@ export default function CaseOgticRedlab(): ReactNode {
             <li>Faster delivery cycles on priority projects.</li>
             <li>Reusable playbooks and stronger internal capability.</li>
           </ul>
+        
+        <section className="section" aria-labelledby="why-title">
+          <h2 id="why-title">Why it mattered</h2>
+          <p className="microcopy">Placeholder — add policy impact, capacity uplift, and network effects observed.</p>
         </section>
+</section>
 
         <section className="section" aria-labelledby="cta-title">
           <div className="finalCta">
@@ -77,4 +84,7 @@ export default function CaseOgticRedlab(): ReactNode {
     </Layout>
   );
 }
+
+
+
 

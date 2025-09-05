@@ -83,6 +83,16 @@ export default function CaseAlphaInversiones(): ReactNode {
     <li>Positioned Alpha to scale sustainably, improve CX, and adopt innovation as a core capability.</li>
     <li>Guided decision-making on CRM transformation and on the new “Alpha en Línea” website and app projects.</li>
   </ul>
+
+  <section className="section" aria-labelledby="why-title">
+    <h2 id="why-title">Why it mattered</h2>
+    <ul>
+      <li>Aligned leadership and teams around a common growth program (Alpha Escalable) and evidence‑led decisions.</li>
+      <li>Installed durable capability—governance, roles, and rituals—that sustains delivery beyond individual projects.</li>
+      <li>Improved customer experience by connecting strategy, data, and delivery into an integrated journey.</li>
+    </ul>
+  </section>
+
 </section>
 
         <section className="section" aria-labelledby="cta-title">

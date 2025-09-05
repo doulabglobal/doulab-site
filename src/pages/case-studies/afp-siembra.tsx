@@ -105,7 +105,16 @@ export default function CaseAfpSiembra(): ReactNode {
             <li>Established <strong>SILAB</strong> governance and a working cadence with gate reviews.</li>
             <li>Evidence packs captured decisions and improved stakeholder alignment.</li>
           </ul>
+        
+        <section className="section" aria-labelledby="why-title">
+          <h2 id="why-title">Why it mattered</h2>
+          <ul>
+            <li>Turned strategy into execution with a repeatable engine for innovation (SILAB).</li>
+            <li>Reduced decision friction through gate reviews, owners, and evidence packs.</li>
+            <li>Built trust and visibility through a public launch and ongoing cadence.</li>
+          </ul>
         </section>
+</section>
 
         <section className="section" aria-labelledby="videos-title">
           <h2 id="videos-title">FutureScapes Summit — Livestreams</h2>
@@ -157,3 +166,5 @@ export default function CaseAfpSiembra(): ReactNode {
     </Layout>
   );
 }
+
+

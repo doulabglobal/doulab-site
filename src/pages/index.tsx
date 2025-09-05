@@ -1,4 +1,4 @@
-import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+﻿import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import Head from '@docusaurus/Head';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -275,8 +275,7 @@ function ServicesSection() {
 
         <div className="card">
           <Layers className="cardIcon" aria-hidden="true" />
-          <h3>Programs: Build Innovation Capacity</h3>
-          <p>Install culture, process, and metrics to scale innovation reliably.</p>
+          <h3>Programs: Build Innovation Capacity</h3><p>Install culture, process, and metrics to scale innovation reliably with <Link to="/services/innovation-maturity">IMM‑P</Link>.</p>
           <div className="cardFooter">
             <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.home.services.programs">
               {"Explore programs \u2192"}
@@ -315,7 +314,7 @@ function NumbersStrip() {
     { kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners' },
     { kpi: '25+', label: 'institutions/year supported', note: 'program capacity' },
     { kpi: '2-4/week', label: 'cadenced sessions over 12 months', note: 'capability build-out' },
-    { kpi: '3', label: 'open frameworks in use', note: 'MCF, IMM-P, foresight modules' },
+    { kpi: '3', label: 'open frameworks in use', note: '' },
   ];
   return (
     <section className="section section--tight" id="numbers" aria-labelledby="numbers-title">
@@ -704,3 +703,5 @@ export default function Home(): ReactNode {
     </Layout>
   );
 }
+
+

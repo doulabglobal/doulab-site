@@ -22,3 +22,8 @@ yarn-error.log*
 # IDE caches
 .vs/
 
+
+dev-server.log
+
+temp_*
+tmp_*

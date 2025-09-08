@@ -12,6 +12,87 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 
 ---
 
+## 2025-09-08 — v0.7
+
+### Componentization & DX
+- **New:** `FinalCta` shared component with typed CTAs:
+  - Supports internal links (`to`) and external actions (`href`) with proper `aria-label`.
+  - Used on: `/what-we-do`, `/contact`, and ready for site-wide reuse.
+- **New:** `CaseStudyCards` shared component
+  - Canonical order + consistent alt text/CTA labels.
+  - Used on: `/case-studies` index and `/services/innovation-maturity` (“Related case studies”).
+- **Fix:** Removed `isExternal` prop usage in pages; `FinalCta` now accepts either `to` **or** `href`.
+
+### Naming & copy standards (site-wide)
+- Standardized to **Innovation Maturity Model Program (IMM-P®)** (with ®) across pages.
+- Standardized section title: **“Who it’s for?”** (question mark). Added where applicable (e.g., **What we do**).
+- Removed the legacy **“Privacy & guardrails”** blocks from services; queued a dedicated **Privacy** page.
+
+### Case studies — pages
+- **Index:** `/case-studies/index.tsx`
+  - Replaced manual cards with `<CaseStudyCards />`.
+  - Section title typo fixed: **“How we measure progress”** (and added line referencing **IMM-P® gates: Discovery → Validation → Efficiency → Scale**).
+- **Alpha Inversiones:** `/case-studies/alpha-inversiones.tsx`
+  - Full content pass: context, work, outcomes; artifacts & cadence language aligned to IMM-P®.
+- **FUNDAPEC:** `/case-studies/fundapec.tsx`
+  - Deep rewrite reflecting **Track A → decision → Track B**.
+  - Clear governance (Communications owns the no-code platform), evidence loops, simplified journeys.
+  - Platform link added everywhere for **[Comunidad FUNDAPEC](https://comunidad.fundapec.edu.do)**.
+  - Outcomes tightened with numbers: legacy 20k “registrations” → **4k validated members**; **515 active** (from ~10 a year ago); single-source-of-truth analytics.
+  - Timeline included: Kick-off (Dec 2023) → Decision (Jun 2024) → Redesign & Build (Jul–Nov 2024) → Relaunch (Nov 2024) → Growth checkpoint (Sep 2025).
+- **OGTIC / RedLab:** `/case-studies/ogtic-redlab.tsx`
+  - Explicit link to **IMM-P®** as the cohort backbone; tightened program framing and outcomes.
+
+### Services — pages
+- **IMM-P®:** `/services/innovation-maturity.tsx`
+  - Program name standardized: *Innovation Maturity Model Program (IMM-P®)*.
+  - **Full program structure** added (Phases 01–05: Pre-Discovery; Discovery & Validation; Efficiency; Scaling; Continuous Improvement) with weekly themes, gates, and key deliverables.
+  - Added **“Who it’s for?”** (Startups, Public Institutions, Private organizations, Incubators & Accelerators).
+  - “Related case studies” now uses `<CaseStudyCards />`.
+  - **FAQ block** re-added (common questions on timeline, gates, outcomes).
+  - Final CTA standardized (can be migrated to `FinalCta` next pass if desired).
+- **What we do:** `/what-we-do/index.tsx`
+  - Hero/copy aligned to IMM-P® & MicroCanvas® 2.1.
+  - Added **“Who it’s for?”** section (applies here).
+  - Products & Programs, Numbers, Process rail refined; **FinalCta** component used.
+- **ClarityScan:** `/services/clarityscan/index.tsx`
+  - Mojibake cleaned (curly quotes, en dashes, ellipses).
+  - Microcopy (“Built on MicroCanvas® v2.1 and IMM-P® gates.”) aligned and consistently placed.
+  - Clear 30-minute flow; JSON-LD checked; consistent CTA labels.
+- **Coaching & Mentoring:** `/services/coaching-mentoring.tsx`
+  - Copy/A11y pass; “MCF v2.1 + IMM-P®” methods clarified; retainers detailed.
+  - On-page FAQ + JSON-LD FAQ.
+- **Custom Workshops:** `/services/custom-workshops.tsx`
+  - Copy normalized (no mojibake), outcomes/formats clarified; “Built on MicroCanvas® + IMM-P®”.
+
+### Core pages
+- **Home:** `/index.tsx`
+  - Consistency pass (head/meta, labels, CTAs). Sections aligned with latest prompt guidelines.
+- **Case studies index:** see above (componentized).
+- **Insights:** `/insights/index.tsx`
+  - Structure validated; OG meta and A11y consistent with shared patterns.
+- **About:** `/about/index.tsx`
+  - **Link fixes:** “Coaching & mentoring” → `/services/coaching-mentoring`; “Workshops” → `/services/custom-workshops`.
+  - Story/pillars aligned to IMM-P® naming; schema kept.
+- **Contact:** `/contact/index.tsx`
+  - Rewritten with privacy-first options; “What to expect” (gated path) mirrors IMM cadence.
+  - Converted the final block to **`FinalCta`** (uses `href` mailto in `primaryCta`).
+
+### Accessibility, SEO & performance
+- Descriptive alts, `aria-labelledby` per section, decorative icons `aria-hidden`.
+- Canonicals + `og:`/`twitter:card` updated or added where missing.
+- Hero preloads use correct React props (`imageSrcSet`, `imageSizes`), explicit `width/height` on images for CLS.
+
+### Fixes
+- **Build error:** stray `<` removed from `/services/innovation-maturity.tsx` (Babel “Unexpected token”).
+- **Module not found:** created `src/components/case-studies/CaseStudyCards.tsx` and fixed imports.
+- **Encoding:** removed stray mojibake sequences across services pages.
+
+### Known follow-ups
+- Add a dedicated **Privacy** page (we removed “Privacy & guardrails” blocks).
+- Migrate remaining manual page CTAs to **`FinalCta`** where appropriate.
+- Mirror the **“Who it’s for?”** section on other service pages **only where it adds clarity**.
+
 ## 2025-09-04
 
 ### Insights

@@ -3,6 +3,8 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+
+// Icons (tree-shaken)
 import Users from 'lucide-react/dist/esm/icons/users';
 import Briefcase from 'lucide-react/dist/esm/icons/briefcase';
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -11,9 +13,16 @@ import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check';
 import Sparkles from 'lucide-react/dist/esm/icons/sparkles';
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import ClipboardCheck from 'lucide-react/dist/esm/icons/clipboard-check';
+import Workflow from 'lucide-react/dist/esm/icons/workflow';
+
+import Hero from '../../components/Hero';
+import FinalCta from '../../components/FinalCta';
+import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 
 export default function CoachingMentoringPage(): ReactNode {
+  // JSON-LD
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -22,8 +31,8 @@ export default function CoachingMentoringPage(): ReactNode {
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
     url: 'https://doulab.net/services/coaching-mentoring',
     description:
-      'Personalized guidance for leaders and teams to turn strategy into execution and build repeatable innovation using MCF v2.1 and IMM-P.',
-    areaServed: 'Global',
+      'Personalized guidance for leaders and teams to turn strategy into execution and build repeatable innovation using MCF v2.1 and IMM-P®.',
+    areaServed: ['Global'],
   };
 
   const faqSchema = {
@@ -59,55 +68,81 @@ export default function CoachingMentoringPage(): ReactNode {
 
   return (
     <Layout
-      title="Coaching & Mentoring - Practical guidance, real momentum | Doulab"
+      title="Coaching & Mentoring — Practical guidance, real momentum | Doulab"
       description="1:1 and team coaching to turn strategy into execution, build repeatable innovation, and move faster with less risk."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/coaching-mentoring" />
-        <link rel="preload" as="image" href="/img/coaching-hero.png" imageSrcSet="/img/coaching-hero.avif 1x, /img/coaching-hero.webp 1x, /img/coaching-hero.png 1x" imageSizes="(max-width: 700px) 100vw, 600px" />
+        <meta name="author" content="Luis Santiago Arias" />
+        <meta property="og:image" content="https://doulab.net/img/social/og-coaching.jpg" />
+        <meta property="og:image:alt" content="Doulab — Coaching & Mentoring" />
+        <meta name="twitter:card" content="summary_large_image" />
+        {/* Hero LCP preload (shared Hero uses this base) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/services-hero.jpg"
+          imageSrcSet="/img/services-hero.avif 1x, /img/services-hero.webp 1x, /img/services-hero.jpg 1x"
+          imageSizes="(max-width: 700px) 100vw, 600px"
+        />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Head>
 
       <main>
-        {/* Hero */}
-        <section className="heroBanner" aria-labelledby="cm-hero-title">
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
-              <h1 id="cm-hero-title" className="heroTitle">Coaching &amp; Mentoring</h1>
-              <p className="heroSubtitle">Practical guidance. Real momentum.</p>
-              <p className="heroText">
-                1:1 and team coaching that helps leaders <strong>turn strategy into execution</strong>, build
-                <strong> repeatable innovation</strong>, and navigate change with clarity — grounded in
-                <strong> MicroCanvas v2.1</strong> and <strong>IMM-P</strong>.
-              </p>
-              <p className="sectionLead" style={{ marginTop: '.25rem' }}>
-                Leaders in public institutions and financial services use our coaching to de-risk decisions.
-              </p>
+        {/* Standardized two-column hero */}
+        <Hero
+          title="Coaching & Mentoring"
+          subtitle="Practical guidance. Real momentum."
+          body="1:1 and team coaching that helps leaders turn strategy into execution, build repeatable innovation, and navigate change with clarity — grounded in MicroCanvas® v2.1 and IMM-P®."
+          imageBase="/img/services-hero"
+          imageAlt="Coaching & mentoring — services overview"
+          width={1600}
+          height={900}
+          primaryCta={{
+            to: '/contact',
+            label: 'Book an intro call',
+            dataCta: 'cta.services.coaching.hero.contact',
+          }}
+          secondaryCta={{
+            to: '/services/clarityscan',
+            label: 'Start with a diagnostic',
+            dataCta: 'cta.services.coaching.hero.clarityscan',
+          }}
+          ctaNote="Get your baseline in 15–20 minutes."
+          eager
+        />
 
-              <div className="heroCtas">
-                <Link to="/contact" className="buttonPrimary" data-cta="cta.services.coaching.hero.contact">
-                  Book an intro call
-                </Link>
-                <Link to="/services/clarityscan" className="buttonSecondary" data-cta="cta.services.coaching.hero.clarityscan">
-                  Start with a diagnostic
-                </Link>
-              </div>
-            </div>
-
-            <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
-              <picture>
-                <source srcSet="/img/coaching-hero.avif" type="image/avif" />
-                <source srcSet="/img/coaching-hero.webp" type="image/webp" />
-                <img src="/img/coaching-hero.png" alt="Coaching & mentoring" className="heroImage" loading="eager" fetchPriority="high" width="600" height="400" />
-              </picture>
-            </div>
+        {/* Who it’s for? (standardized audience tiles) */}
+        <section className="section" id="who" aria-labelledby="who-title">
+          <h2 id="who-title">Who it’s for?</h2>
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="who-startups">
+              <Rocket className="cardIcon" aria-hidden="true" />
+              <h3 id="who-startups">Startups</h3>
+              <p>From idea to evidence to fit—faster. Clear gates and focus.</p>
+            </article>
+            <article className="card" aria-labelledby="who-public">
+              <ClipboardCheck className="cardIcon" aria-hidden="true" />
+              <h3 id="who-public">Public Institutions</h3>
+              <p>Build capability and transparency with evidence-first coaching.</p>
+            </article>
+            <article className="card" aria-labelledby="who-private">
+              <Users className="cardIcon" aria-hidden="true" />
+              <h3 id="who-private">Private organizations</h3>
+              <p>Established companies accelerating internal innovation delivery.</p>
+            </article>
+            <article className="card" aria-labelledby="who-accelerators">
+              <Workflow className="cardIcon" aria-hidden="true" />
+              <h3 id="who-accelerators">Incubators & Accelerators</h3>
+              <p>Raise cohort quality with reusable playbooks and clear decision gates.</p>
+            </article>
           </div>
         </section>
 
         {/* Retainers */}
-        <section className="section" aria-labelledby="cm-retainers-title">
-          <h2 id="cm-retainers-title">Retainer options</h2>
+        <section className="section" id="retainers" aria-labelledby="retainers-title">
+          <h2 id="retainers-title">Retainer options</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="cm-lite">
               <Briefcase className="cardIcon" aria-hidden="true" />
@@ -119,7 +154,7 @@ export default function CoachingMentoringPage(): ReactNode {
               </ul>
               <div className="cardFooter">
                 <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.lite">
-                  Enquire about Lite <ArrowRight size={16} />
+                  Enquire about Lite →
                 </Link>
               </div>
             </article>
@@ -134,7 +169,7 @@ export default function CoachingMentoringPage(): ReactNode {
               </ul>
               <div className="cardFooter">
                 <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.standard">
-                  Enquire about Standard <ArrowRight size={16} />
+                  Enquire about Standard →
                 </Link>
               </div>
             </article>
@@ -149,7 +184,7 @@ export default function CoachingMentoringPage(): ReactNode {
               </ul>
               <div className="cardFooter">
                 <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.pro">
-                  Enquire about Pro <ArrowRight size={16} />
+                  Enquire about Pro →
                 </Link>
               </div>
             </article>
@@ -164,23 +199,23 @@ export default function CoachingMentoringPage(): ReactNode {
               </ul>
               <div className="cardFooter">
                 <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.enterprise">
-                  Enquire about Enterprise <ArrowRight size={16} />
+                  Enquire about Enterprise →
                 </Link>
               </div>
             </article>
           </div>
-          <p className="sectionLead" style={{ marginTop: '.75rem' }}>
-            <em>Monthly; cancel anytime with 15‑day notice.</em>
+          <p className="microcopy" style={{ marginTop: '.75rem' }}>
+            <em>Monthly; cancel anytime with 15-day notice.</em>
           </p>
         </section>
 
         {/* Outcomes */}
-        <section className="section" aria-labelledby="cm-outcomes-title">
-          <h2 id="cm-outcomes-title">What you'll get</h2>
+        <section className="section" id="outcomes" aria-labelledby="outcomes-title">
+          <h2 id="outcomes-title">What you’ll get</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="cm-clarity">
               <MessageSquare className="cardIcon" aria-hidden="true" />
-              <h3 id="cm-clarity">Clarity &amp; focus</h3>
+              <h3 id="cm-clarity">Clarity & focus</h3>
               <p>Sharper priorities and faster decisions with confidence.</p>
               <ul>
                 <li>Cleaner OKRs</li>
@@ -191,7 +226,7 @@ export default function CoachingMentoringPage(): ReactNode {
             <article className="card" aria-labelledby="cm-methods">
               <Target className="cardIcon" aria-hidden="true" />
               <h3 id="cm-methods">Repeatable methods</h3>
-              <p>MCF + IMM-P playbooks you can reuse across teams and initiatives.</p>
+              <p>MCF v2.1 + IMM-P® playbooks you can reuse across teams and initiatives.</p>
               <ul>
                 <li>Reusable canvases</li>
                 <li>Evidence-first loops</li>
@@ -203,34 +238,21 @@ export default function CoachingMentoringPage(): ReactNode {
               <h3 id="cm-time">Momentum</h3>
               <p>Move faster with a steady cadence and clear owners.</p>
               <ul>
-                <li>30/45/60‑min sessions</li>
+                <li>30/45/60-minute sessions</li>
                 <li>Light async reviews</li>
               </ul>
             </article>
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className="section" aria-labelledby="cm-cta-title">
-          <div className="finalCta">
-            <h2 id="cm-cta-title">Ready to grow with guidance?</h2>
-            <p>Tell us your goals and constraints. We'll recommend the retainer that fits and start making progress fast.</p>
-            <div className="heroCtas" style={{ justifyContent: 'center' }}>
-              <Link to="/contact" className="buttonPrimary" data-cta="cta.services.coaching.final.contact">
-                Book an intro call
-              </Link>
-              <Link to="/services/clarityscan" className="buttonSecondary" data-cta="cta.services.coaching.final.clarityscan">
-                Start with ClarityScan
-              </Link>
-            </div>
-            <p className="sectionLead" style={{ marginTop: '.75rem' }}>
-              <small><em>Privacy-first: no tracking pixels. Email only.</em></small>
-            </p>
-          </div>
+        {/* Related case studies — shared component (canonical order) */}
+        <section className="section" id="related" aria-labelledby="related-title">
+          <h2 id="related-title">Related case studies</h2>
+          <CaseStudyCards slugs={['afp-siembra', 'alpha-inversiones', 'fundapec', 'ogtic-redlab']} />
         </section>
 
-        {/* On-page FAQ content is above; JSON-LD rich results added in <Head> */}
-        <section className="section" aria-labelledby="cm-faq-title">
+        {/* FAQ (content mirrors JSON-LD) */}
+        <section className="section" id="faq" aria-labelledby="cm-faq-title">
           <h2 id="cm-faq-title">FAQ</h2>
           <div className="faqGrid">
             <details>
@@ -247,8 +269,18 @@ export default function CoachingMentoringPage(): ReactNode {
             </details>
           </div>
         </section>
+
+        {/* Final CTA — standardized component */}
+        <FinalCta
+          id="coaching-final"
+          ariaLabelledbyId="coaching-final-title"
+          title="Ready to grow with guidance?"
+          body="Tell us your goals and constraints. We’ll recommend the retainer that fits and start making progress fast."
+          primaryCta={{ to: '/contact', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.contact' }}
+          secondaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.services.coaching.final.clarityscan' }}
+          ctaNote="Get your baseline in 15–20 minutes."
+        />
       </main>
     </Layout>
   );
 }
-

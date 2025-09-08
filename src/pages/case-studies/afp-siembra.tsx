@@ -7,12 +7,13 @@ import Hero from '../../components/Hero';
 export default function CaseAfpSiembra(): ReactNode {
   return (
     <Layout
-      title="Case Study — AFP Siembra: Alcanza & SILAB"
+      title="AFP Siembra: Alcanza & SILAB — Case Study | Doulab"
       description="From strategy to repeatable delivery: a digital savings product and an innovation lab co-created."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/afp-siembra" />
-        <meta property="og:image" content="https://doulab.net/img/afp-siembra-card.jpg" />
+        {/* Use a 1200×630 social card, not the wide card image */}
+        <meta property="og:image" content="https://doulab.net/img/social/og-afp-siembra.jpg" />
         <meta property="og:image:alt" content="AFP Siembra — Alcanza product and SILAB innovation lab." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
@@ -20,20 +21,23 @@ export default function CaseAfpSiembra(): ReactNode {
 
       <main className="container">
         <nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem' }}>
-          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← All case studies</Link>
+          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">All case studies</Link>
         </nav>
 
         <Hero
-          title="AFP Siembra — Alcanza & SILAB"
-          subtitle="From strategy to repeatable delivery. We helped launch a digital savings product and set up an innovation lab."
-          body="AFP Siembra is a pension fund leader in the Dominican Republic. Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad."
+          title="AFP Siembra: Alcanza & SILAB"
+          subtitle="From strategy to a repeatable innovation engine."
+          body={
+            'AFP Siembra is a pension fund leader in the Dominican Republic. ' +
+            'Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad.'
+          }
           imageBase="/img/afp-siembra-card"
-          imageAlt="AFP Siembra — Alcanza product and SILAB innovation lab"
+          imageAlt="AFP Siembra — Alcanza product and SILAB innovation lab."
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan', dataCta: 'cta.cases.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
-          ctaNote="Get your baseline in 15-20 minutes."
+          ctaNote="Get your baseline in 15–20 minutes."
           id="afp-siembra-hero"
           ariaLabelledbyId="afp-siembra-hero-title"
           eager
@@ -43,10 +47,9 @@ export default function CaseAfpSiembra(): ReactNode {
           <h2 id="context-title">Context</h2>
           <p>
             AFP Siembra is a specialized pension fund administrator (AFP) and the first in the Dominican Republic
-            authorized by the Superintendencia de Pensiones (SIPEN). The team set out to launch <strong>Alcanza</strong>
-            (alcanza.com.do), a <strong>digital savings solution</strong> for Dominicans—salaried and independent,
-            living in the country and abroad—who need a safe, flexible way to save for retirement, housing, education,
-            and other goals.
+            authorized by the Superintendencia de Pensiones (SIPEN). The team set out to launch <strong><a href="https://alcanza.com.do" target="_blank" rel="noopener noreferrer">Alcanza</a></strong>,
+            a <strong>digital savings solution</strong> for Dominicans—salaried and independent, living in the country and abroad—who need a safe,
+            flexible way to save for retirement, housing, education, and other goals.
           </p>
           <p>
             The challenge: low national savings rates, high trust requirements, and a <strong>regulated, security-first</strong>
@@ -56,25 +59,32 @@ export default function CaseAfpSiembra(): ReactNode {
         </section>
 
         <section className="section" aria-labelledby="work-title">
-          <h2 id="work-title">What We Did</h2>
+          <h2 id="work-title">What we did</h2>
           <ul>
             <li>
-              <strong>Baseline & Direction:</strong> Ran a ClarityScan to surface risks, align stakeholders, and
-              sequence work. Used MicroCanvas to frame problems, value propositions, and metrics.
+              <strong>Baseline & Direction:</strong> Ran an initial assessment (ClarityScan) to determine the current state of the innovation process,
+              surface risks, align stakeholders, and sequence the workload. Used <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to frame problems, understand the customer, define value
+              propositions, create objectives and key results for the innovation project, and set the metrics to measure progress. We also worked with
+              the innovation team to identify issues that were slowing the development of innovation projects and to unblock them.
             </li>
             <li>
-              <strong>Evidence First:</strong> Designed multiple A/Bs in interview settings (from internal employees to
+              <strong>Evidence first:</strong> Designed multiple A/Bs in interview settings (from internal employees to
               external focus groups) and concierge trials to test customer profiles, onboarding friction, benefits, cost
               sensitivity, and both problem/solution and market/product fit.
             </li>
             <li>
-              <strong>Product Scope:</strong> Defined the MVP for Alcanza (100% digital app at launch). Key features:
+              <strong>Product scope:</strong> Defined the MVP for Alcanza (100% digital app at launch). Key features:
               personalized goals, close guidance, goal rewards, strong security, retirement flexibility, and no fees or
               minimum balances.
             </li>
             <li>
-              <strong>Delivery System:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
+              <strong>Delivery system:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
               SILAB’s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
+            </li>
+            <li>
+              <strong>Innovation Lab & Launch:</strong> Starting in October 2023, we conceptualized the SIEMBRA Innovation Lab, leveraging learnings and outcomes from the Alcanza project to design an internal
+              innovation capability. In parallel, we helped conceptualize and produce the lab’s public launch during the inaugural AFP Siembra FutureScapes Innovation Summit —
+              a two-day event with more than 300 participants.
             </li>
             <li>
               <strong>Security & Compliance:</strong> Worked within the Dominican financial sector’s cybersecurity
@@ -94,65 +104,50 @@ export default function CaseAfpSiembra(): ReactNode {
         <section className="section" aria-labelledby="outcomes-title">
           <h2 id="outcomes-title">Outcomes</h2>
           <ul>
-            <li>
-              <strong>Product shipped:</strong> Alcanza launched to production with a clear scope and validated
-              assumptions.
-            </li>
-            <li>
-              <strong>Repeatable delivery:</strong> SILAB established with governance, decision gates, and steady
-              cadence from discovery to delivery.
-            </li>
-            <li>
-              <strong>Security posture:</strong> App aligned with sector cybersecurity requirements.
-            </li>
-            <li>
-              <strong>Faster decisions:</strong> Decision latency and idea-to-pilot cycle time improved (metrics to
-              add).
-            </li>
+            <li>Launched the <strong>Alcanza</strong> digital savings app (100% digital onboarding).</li>
+            <li>Established <strong>SILAB</strong> governance and a working cadence with gate reviews.</li>
+            <li>Evidence packs captured decisions and improved stakeholder alignment.</li>
           </ul>
-          <p className="microcopy">We can add adoption metrics, NPS, or cohort retention once you approve figures.</p>
         </section>
 
-        {/* Highlights (qualitative, public-safe) */}
-        <section className="section" id="highlights" aria-labelledby="highlights-title">
-          <h2 id="highlights-title">Highlights</h2>
-          <div className="cardGrid" style={{ marginTop: '.5rem' }}>
-            <div className="card" aria-label="Launch timeline">
-              <h3>Launch timeline</h3>
-              <p><strong>Jan 2021 → Nov 2024</strong></p>
-              <p className="microcopy">From discovery to full production launch.</p>
-            </div>
-            <div className="card" aria-label="Innovation lab">
-              <h3>SILAB established</h3>
-              <p>Charter, gates, and cadence to make delivery repeatable.</p>
-            </div>
-            <div className="card" aria-label="Security">
-              <h3>Security & compliance</h3>
-              <p>Aligned with sector cybersecurity requirements in the DR.</p>
-            </div>
-            <div className="card" aria-label="Evidence">
-              <h3>Evidence-led</h3>
-              <p>A/Bs in interviews and concierge trials across segments.</p>
-            </div>
-          </div>
+        <section className="section" aria-labelledby="why-title">
+          <h2 id="why-title">Why it mattered</h2>
+          <ul>
+            <li>Turned strategy into execution with a repeatable engine for innovation (SILAB).</li>
+            <li>Reduced decision friction through gate reviews, owners, and evidence packs.</li>
+            <li>Built trust and visibility through a public launch and ongoing cadence.</li>
+          </ul>
         </section>
 
-        {/* System callout: MCF + IMM-P */}
-        <section className="section" id="system" aria-labelledby="system-title">
-          <h2 id="system-title">System: MCF + IMM-P</h2>
-          <div className="cardGrid" style={{ marginTop: '.5rem' }}>
+        <section className="section" aria-labelledby="videos-title">
+          <h2 id="videos-title">FutureScapes Summit — Livestreams</h2>
+          <div className="cardGrid">
             <div className="card">
-              <h3>MicroCanvas Framework (MCF)</h3>
-              <p>Problem framing, value props, and evidence—kept simple, traceable, and reusable.</p>
-              <div className="cardFooter">
-                <Link className="cardCta" to="/docs/research-resources/microcanvas" data-cta="cta.cases.system.mcf">Explore MCF &rarr;</Link>
+              <h3>FutureScapes Summit — October 9, 2024</h3>
+              <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/v7VBcTu86VQ?modestbranding=1&rel=0"
+                  title="FutureScapes Summit — October 9, 2024"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}
+                />
               </div>
             </div>
             <div className="card">
-              <h3>Innovation Maturity Model — Program (IMM-P)</h3>
-              <p>From intake to delivery: gates, cadence, and role clarity for repeatable outcomes.</p>
-              <div className="cardFooter">
-                <Link className="cardCta" to="/docs/research-resources/" data-cta="cta.cases.system.imm_p">See our approach &rarr;</Link>
+              <h3>FutureScapes Summit — October 10, 2024</h3>
+              <div style={{ position: 'relative', paddingTop: '56.25%' }}>
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/0x3JJShSvZ8?modestbranding=1&rel=0"
+                  title="FutureScapes Summit — October 10, 2024"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}
+                />
               </div>
             </div>
           </div>
@@ -160,11 +155,11 @@ export default function CaseAfpSiembra(): ReactNode {
 
         <section className="section" aria-labelledby="cta-title">
           <div className="finalCta">
-            <h2 id="cta-title">Ready to make progress?</h2>
-            <p>Get your baseline in 15-20 minutes.</p>
+            <h2 id="cta-title">Take the first step</h2>
+            <p>Get your baseline in 15–20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScan
+                Start with ClarityScan®
               </Link>
               <Link to="/contact" className="buttonSecondary" data-cta="cta.cases.final.book_call">
                 Book a discovery call

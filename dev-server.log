@@ -361,3 +361,1687 @@ SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\
 [90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 538.15ms
 [1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 457.23ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 268.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 341.07ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 274.33ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 233.35ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Unexpected token, expected "," (79:39)
+[0m [90m 77 |[39m                 [33mIcon[39m[33m:[39m [33mAlertTriangle[39m[33m,[39m
+ [90m 78 |[39m                 cause[33m:[39m [32m'Innovation isnÃ¢â‚¬â„¢t embedded as a cultural value'[39m[33m,[39m
+[31m[1m>[22m[39m[90m 79 |[39m                 cause[33m:[39m [32m'Innovation isn'[39m[32m't embedded as a cultural value'[39m[33m,[39m
+ [90m    |[39m                                        [31m[1m^[22m[39m
+ [90m 80 |[39m                 metric[33m:[39m [32m'Global engagement ~20Ã¢â‚¬â€œ23%, indicating persistent culture headwinds.'[39m[33m,[39m
+ [90m 81 |[39m                 metric[33m:[39m [32m'Global engagement ~20-23%, indicating persistent culture headwinds.'[39m[33m,[39m
+ [90m 82 |[39m                 sourceLabel[33m:[39m [32m'Gallup Ã¢â‚¬â€ State of the Global Workplace 2024'[39m[33m,[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 225.09ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Unexpected token, expected "," (79:39)
+[0m [90m 77 |[39m                 [33mIcon[39m[33m:[39m [33mAlertTriangle[39m[33m,[39m
+ [90m 78 |[39m                 cause[33m:[39m [32m'Innovation isnÃ¢â‚¬â„¢t embedded as a cultural value'[39m[33m,[39m
+[31m[1m>[22m[39m[90m 79 |[39m                 cause[33m:[39m [32m'Innovation isn'[39m[32m't embedded as a cultural value'[39m[33m,[39m
+ [90m    |[39m                                        [31m[1m^[22m[39m
+ [90m 80 |[39m                 metric[33m:[39m [32m'Global engagement ~20Ã¢â‚¬â€œ23%, indicating persistent culture headwinds.'[39m[33m,[39m
+ [90m 81 |[39m                 metric[33m:[39m [32m'Global engagement ~20-23%, indicating persistent culture headwinds.'[39m[33m,[39m
+ [90m 82 |[39m                 sourceLabel[33m:[39m [32m'Gallup Ã¢â‚¬â€ State of the Global Workplace 2024'[39m[33m,[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 420.96ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 301.69ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 216.31ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Unexpected character '®'. (237:47)
+[0m [90m 235 |[39m                         aria[33m-[39mlabel[33m=[39m[32m"Start with ClarityScan â€” diagnostics baseline"[39m
+ [90m 236 |[39m                         aria[33m-[39mlabel[33m=[39m[32m"Start with ClarityScan - diagnostics baseline"[39m
+[31m[1m>[22m[39m[90m 237 |[39m                         [33mStart[39m [36mwith[39m [33mClarityScanÂ®[39m
+ [90m     |[39m                                                [31m[1m^[22m[39m
+ [90m 238 |[39m                         [33mStart[39m [36mwith[39m [33mClarityScan[39m
+ [90m 239 |[39m                     [33m<[39m[33mLink[39m
+ [90m 240 |[39m                         to[33m=[39m[32m"/contact"[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 222.97ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\index.tsx: Expected corresponding JSX closing tag for <div>. (247:20)
+[0m [90m 245 |[39m                     [33m<[39m[33m/[39m[33mLink[39m[33m>[39m
+ [90m 246 |[39m                         [33mBook[39m a discovery call
+[31m[1m>[22m[39m[90m 247 |[39m                     [33m<[39m[33m/[39m[33mLink[39m[33m>[39m
+ [90m     |[39m                     [31m[1m^[22m[39m
+ [90m 248 |[39m                 [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 249 |[39m             [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 250 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 1.18s
+Module not found: Error: Can't resolve '@site/src/pages/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 907.20ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.56s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 138.92ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 596.01ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 386.56ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 770.98ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 293.42ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 508.77ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 249.67ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 194.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 197.93ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 102.00ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 485.03ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 495.92ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 280.23ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 818.11ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 281.04ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 393.00ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 213.65ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 229.53ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 443.77ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/fundapec.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/fundapec.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 246.13ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 264.17ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/fundapec.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/fundapec.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 323.19ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 227.03ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 391.79ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 440.11ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 335.05ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 432.85ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 421.87ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 271.56ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 330.15ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 257.77ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 411.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 264.90ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 322.65ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 353.29ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 363.65ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 252.13ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 423.90ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 263.65ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 452.99ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 264.77ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 403.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 319.14ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 206.15ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 255.60ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 431.16ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 244.36ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 443.88ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 3.63s
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 350.00ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 488.53ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 276.49ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 413.64ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 434.95ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.17s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 135.06ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 302.93ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 304.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 321.23ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 206.88ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 319.82ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 234.42ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 549.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 307.64ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 427.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 321.84ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.53s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 127.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 319.08ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 206.84ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 158.21ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 212.19ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 241.29ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 187.16ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 295.57ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 145.35ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 148.17ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 417.56ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 175.60ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 255.64ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 551.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 375.03ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 228.17ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 284.55ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 808.15ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 262.72ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 378.75ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 342.97ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 506.23ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 348.46ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 321.28ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 129.21ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 131.12ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 155.10ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 92.66ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 239.99ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 150.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 120.81ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 145.50ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 283.40ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 163.43ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 179.87ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 166.88ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 143.07ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 474.13ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 263.45ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 389.91ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 291.34ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 401.43ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 241.26ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 209.23ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 363.12ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 270.34ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.17s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 164.47ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 273.83ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 179.38ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.32s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 186.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 263.79ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 142.92ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 158.91ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 758.02ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 311.39ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 205.38ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 285.84ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 373.92ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 226.36ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 395.27ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 294.94ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 413.64ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 259.45ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.94s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 156.44ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 211.98ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 910.54ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 305.03ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 227.21ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 174.65ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 780.36ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 622.16ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 316.26ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 152.06ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 596.67ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 310.29ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 778.20ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 1.10s
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 804.43ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 386.38ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 210.63ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 171.87ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 424.25ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token, expected "jsxTagEnd" (29:128)
+[0m [90m 27 |[39m     [33m<[39m[33mLayout[39m
+ [90m 28 |[39m       title[33m=[39m[32m"Innovation Maturity Model â€” Program (IMM-P) | Doulab"[39m
+[31m[1m>[22m[39m[90m 29 |[39m       description[33m=[39m[32m"A structured, gated program to assess, strengthen, and accelerate innovation capability using the <Link to="[39m[33m/[39mdocs[33m/[39mresearch[33m-[39mresources[33m/[39mmicrocanvas[32m">MicroCanvas Framework (MCF v2.1)</Link>."[39m
+ [90m    |[39m                                                                                                                                 [31m[1m^[22m[39m
+ [90m 30 |[39m     [33m>[39m
+ [90m 31 |[39m       [33m<[39m[33mHead[39m[33m>[39m
+ [90m 32 |[39m         [33m<[39m[33mlink[39m rel[33m=[39m[32m"canonical"[39m href[33m=[39m[32m"https://doulab.net/services/innovation-maturity"[39m [33m/[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 524.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 540.48ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 474.07ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 297.92ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 671.05ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 546.22ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 439.67ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 409.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 323.85ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 512.77ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 364.99ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.12s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 94.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 440.76ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 290.52ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 302.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 287.46ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 338.30ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 556.61ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 421.23ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 266.83ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 204.34ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 386.40ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 224.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 953.67ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 226.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 186.56ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 189.24ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 196.86ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 235.51ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 213.76ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 226.79ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 257.08ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 447.33ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 327.87ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 534.37ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 471.89ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 1.11s
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 303.24ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\afp-siembra.tsx: Expecting Unicode escape sequence \uXXXX. (109:28)
+[0m [90m 107 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 108 |[39m         
+[31m[1m>[22m[39m[90m 109 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m     |[39m                             [31m[1m^[22m[39m
+ [90m 110 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 111 |[39m           [33m<[39m[33mul[39m[33m>[39m
+ [90m 112 |[39m             [33m<[39m[33mli[39m[33m>[39m[33mTurned[39m strategy into execution [36mwith[39m a repeatable engine [36mfor[39m innovation ([33mSILAB[39m)[33m.[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+
+--------------------------
+
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 317.29ms
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies\fundapec.tsx: Expecting Unicode escape sequence \uXXXX. (61:28)
+[0m [90m 59 |[39m           [33m<[39m[33m/[39m[33mul[39m[33m>[39m
+ [90m 60 |[39m         
+[31m[1m>[22m[39m[90m 61 |[39m         [33m<[39m[33msection[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"section\" aria-labelledby=\"why-title\">[39m
+ [90m    |[39m                             [31m[1m^[22m[39m
+ [90m 62 |[39m           [33m<[39m[33mh2[39m id[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"why-title\">Why it mattered</h2>[39m
+ [90m 63 |[39m           [33m<[39m[33mp[39m className[33m=[39m[37m[41m[1m\[22m[49m[39m[32m"microcopy\">Placeholder — add engagement outcomes, platform metrics, and organizational benefits.</p>[39m
+ [90m 64 |[39m         [33m<[39m[33m/[39m[33msection[39m[33m>[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 205.39ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 935.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 293.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 268.00ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 282.83ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 242.15ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 399.99ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 289.56ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 231.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 379.97ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 262.00ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 667.78ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 971.47ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 265.45ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/index.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 708.66ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 259.34ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 296.74ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 278.97ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/fundapec.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/fundapec.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m4 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 299.26ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/afp-siembra.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 365.47ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 297.74ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 291.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 216.03ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 654.57ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 320.22ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 236.73ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 382.90ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 412.44ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 395.39ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/ogtic-redlab.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 489.68ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 348.12ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 511.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 476.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 297.25ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 248.84ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 274.50ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 362.22ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 250.35ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 445.07ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 224.52ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 290.62ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 431.28ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 201.93ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 672.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 134.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 12.66s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.57s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 239.00ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 674.61ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 733.39ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.51s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.72s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.15s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.18s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.07s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 707.26ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 937.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 310.08ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 285.99ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.38s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 1.90s
+SyntaxError: C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services\innovation-maturity.tsx: Unexpected token (377:0)
+[0m [90m 375 |[39m             [33m<[39m[33mp[39m[33m>[39m[33mKick[39m off [36mwith[39m a quick diagnostic or talk [36mwith[39m our team about running [33mIMM[39m[33m-[39m[33mP®[39m [36min[39m your organization[33m.[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m
+ [90m 376 |[39m             [33m<[39m
+[31m[1m>[22m[39m[90m 377 |[39m
+ [90m     |[39m [31m[1m^[22m[39m[0m
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 459.41ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 327.47ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.28s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 267.46ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 264.68ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 181.02ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 489.01ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 347.03ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 211.13ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 3.33s
+Module not found: Error: Can't resolve '../../components/case-studies/CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 236.64ms
+Module not found: Error: Can't resolve '../../components/case-studies/CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 360.31ms
+Module not found: Error: Can't resolve './components/case-studies/CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 232.34ms
+Module not found: Error: Can't resolve './components/case-studies/CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 329.36ms
+Module not found: Error: Can't resolve 'CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+Did you mean './CaseStudyCards'?
+Requests that should resolve in the current directory need to start with './'.
+Requests that start with a name are treated as module requests and resolve within module directories (C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\node_modules\@docusaurus\core\node_modules, node_modules, C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\node_modules).
+If changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 187.02ms
+Module not found: Error: Can't resolve 'CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+Did you mean './CaseStudyCards'?
+Requests that should resolve in the current directory need to start with './'.
+Requests that start with a name are treated as module requests and resolve within module directories (C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\node_modules\@docusaurus\core\node_modules, node_modules, C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\node_modules).
+If changing the source code is not an option there is also a resolve options called 'preferRelative' which tries to resolve these kind of requests in the current directory too.
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 259.96ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 249.46ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 509.18ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/caseStudiesData.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/caseStudiesData.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve './caseStudiesData' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m3 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 365.75ms
+Module not found: Error: Can't resolve './caseStudiesData' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 399.50ms
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/CaseStudyCards.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/case-studies/CaseStudyCards.tsx' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve './CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m3 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 319.77ms
+Module not found: Error: Can't resolve './CaseStudyCards' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\case-studies'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 291.58ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 218.49ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 816.85ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 207.72ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.16s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 214.27ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 2.18s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 255.20ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 414.09ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 170.11ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.57s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 208.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.63s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 223.80ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 693.63ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 119.06ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 231.27ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 99.79ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 530.57ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 126.75ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 367.43ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 89.37ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 561.56ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 109.44ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 885.81ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 148.77ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 132.98ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 95.18ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 166.68ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 143.24ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 170.70ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 100.89ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 486.41ms
+Module not found: Error: Can't resolve '../../../components/Hero' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services'
+
+--------------------------
+
+Module not found: Error: Can't resolve '../../../components/FinalCta' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 151.33ms
+Module not found: Error: Can't resolve '../../../components/Hero' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services'
+
+--------------------------
+
+Module not found: Error: Can't resolve '../../../components/FinalCta' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\src\pages\services'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 158.04ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 128.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.16s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 172.76ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 1.18s
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 115.22ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 247.85ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 108.09ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 237.74ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 116.54ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 211.49ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 108.16ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 665.63ms
+Module not found: Error: Can't resolve '@site/src/pages/services/overview.md' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/overview.md' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 302.20ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled with some errors in 302.33ms
+Module not found: Error: Can't resolve '@site/src/pages/services/incubation.md' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+
+--------------------------
+
+Module not found: Error: Can't resolve '@site/src/pages/services/incubation.md' in 'C:\HB9HJU_BkSSD\Dropbox\LS\Projects\INFORMATIK-LLC\Projects\Doulab\doulab-site\.docusaurus'
+[1mclient[39m[22m (webpack 5.101.3) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 226.38ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 511.79ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 135.18ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 149.88ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 138.40ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 205.38ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 120.58ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 245.35ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 163.96ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 147.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 106.62ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 172.54ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 86.15ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 502.97ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 421.17ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 215.01ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 589.79ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 330.17ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 372.10ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 356.57ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 359.42ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 222.38ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 399.18ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 201.24ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 586.72ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 158.29ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 352.59ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 248.00ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 498.57ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 189.89ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 257.68ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 291.68ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 302.08ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 179.97ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 281.89ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 220.16ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 199.75ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 332.74ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 199.90ms
+[1mclient[39m[22m (webpack 5.101.3) compiled [1m[32msuccessfully[39m[22m

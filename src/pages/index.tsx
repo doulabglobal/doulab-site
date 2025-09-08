@@ -1,10 +1,12 @@
-﻿import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+﻿// src/pages/index.tsx
+import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import Head from '@docusaurus/Head';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import Hero from '../components/Hero';
+import FinalCta from '../components/FinalCta';
+import CaseStudyCards from '../components/case-studies/CaseStudyCards';
 
 // Icons (tree-shaken imports)
 import type { LucideIcon } from 'lucide-react';
@@ -75,10 +77,10 @@ function ProblemSection() {
         Icon: AlertTriangle,
         cause: "Innovation isn't embedded as a cultural value",
         effect: 'Change meets resistance; efforts feel sporadic and engagement stays low.',
-        metric: 'Global engagement ~20-23%, indicating persistent culture headwinds.',
+        metric: 'Global engagement ~20–23%, indicating persistent culture headwinds.',
         sourceHref:
           'https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx',
-        sourceLabel: 'Gallup - State of the Global Workplace 2024',
+        sourceLabel: 'Gallup — State of the Global Workplace 2024',
         pillar: 'Culture + Innovation Mindset',
       },
       {
@@ -86,8 +88,9 @@ function ProblemSection() {
         cause: 'Strategy is treated as a static document',
         effect: 'Short-term pivots multiply; OKRs drift and teams lose direction.',
         metric: 'Roughly 70% of employees report misalignment with strategy.',
-        sourceHref: 'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
-        sourceLabel: 'Forbes - When strategy fails to land',
+        sourceHref:
+          'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
+        sourceLabel: 'Forbes — When strategy fails to land',
         pillar: 'Planning Mindset + Leadership Development',
       },
       {
@@ -96,7 +99,7 @@ function ProblemSection() {
         effect: 'ROI suffers as opinions outrun data and validated learning.',
         metric: 'Data-driven orgs are more likely to improve decisions.',
         sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-        sourceLabel: 'HBS Online - Data-driven decisions',
+        sourceLabel: 'HBS Online — Data-driven decisions',
         pillar: 'Evidence-Based Decision-Making',
       },
       {
@@ -106,7 +109,7 @@ function ProblemSection() {
         metric: 'Hidden costs surface as throughput and quality degrade.',
         sourceHref:
           'https://www.mckinsey.com/capabilities/operations/our-insights/reducing-complexity-with-operational-excellence',
-        sourceLabel: 'McKinsey - Reducing complexity',
+        sourceLabel: 'McKinsey — Reducing complexity',
         pillar: 'Operating Model + Delivery',
       },
       {
@@ -115,7 +118,7 @@ function ProblemSection() {
         effect: 'Solutions miss the mark; uptake and retention suffer.',
         metric: 'Teams move without shared understanding of users.',
         sourceHref: 'https://www.intercom.com/blog/customer-segmentation/',
-        sourceLabel: 'Intercom - Segmentation primer',
+        sourceLabel: 'Intercom — Segmentation primer',
         pillar: 'Segmentation + JTBD',
       },
       {
@@ -124,7 +127,7 @@ function ProblemSection() {
         effect: 'Effort piles into low-confidence bets; timelines slip.',
         metric: 'Governance lacks clear gates, owners, or evidence packs.',
         sourceHref: 'https://www.atlassian.com/agile/project-management/risk-management',
-        sourceLabel: 'Atlassian - Risk management',
+        sourceLabel: 'Atlassian — Risk management',
         pillar: 'Governance + Gate Reviews',
       },
       {
@@ -134,7 +137,7 @@ function ProblemSection() {
         metric: 'Dashboards track vanity metrics over learning or ROI.',
         sourceHref:
           'https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf',
-        sourceLabel: 'Accenture - Value untangled',
+        sourceLabel: 'Accenture — Value untangled',
         pillar: 'Business Intelligence Maturity',
       },
       {
@@ -144,7 +147,7 @@ function ProblemSection() {
         metric: 'Foresight improves resilience and long-term performance.',
         sourceHref:
           'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
-        sourceLabel: 'WEF - Why foresight matters',
+        sourceLabel: 'WEF — Why foresight matters',
         pillar: 'Foresight + Strategic Anticipation',
       },
     ],
@@ -155,7 +158,7 @@ function ProblemSection() {
     <section className="section" id="problems" aria-labelledby="problem-title">
       <h2 id="problem-title">The Problem</h2>
       <p className="sectionLead">
-        Entrepreneurship and innovation are hard, until you make them a repeatable process. Below are
+        Entrepreneurship and innovation are hard—until you make them a repeatable process. Below are
         common failure patterns we help teams overcome.
       </p>
 
@@ -217,19 +220,20 @@ function ProblemSection() {
         </button>
       </div>
 
-      <p className="microcopy" aria-hidden="true">Hint: scroll horizontally</p>
+      <p className="microcopy" aria-hidden="true">Hint: scroll horizontally →</p>
 
+      {/* Centered follow-up block + CTAs */}
       <div style={{ textAlign: 'center' }}>
         <p className="sectionLead">If several resonate, we can help.</p>
-        <p className="microcopy">Start small - get a quick baseline.</p>
+        <p className="microcopy">Start small—get a quick baseline.</p>
         <div className="heroCtas" style={{ justifyContent: 'center' }}>
           <Link
             to="/services/clarityscan"
             className="buttonPrimary"
             data-cta="cta.home.problem.clarityscan"
-            aria-label="Start with ClarityScan - diagnostics baseline"
+            aria-label="Start with ClarityScan — diagnostics baseline"
           >
-            {"Start with ClarityScan\u00AE"}
+            Start with ClarityScan®
           </Link>
           <Link to="/contact" className="buttonSecondary" data-cta="cta.home.problem.book_call">
             Book a discovery call
@@ -255,9 +259,9 @@ function ServicesSection() {
               to="/services/clarityscan"
               className="cardCta"
               data-cta="cta.home.services.clarityscan"
-              aria-label="Start with ClarityScan - diagnostics baseline"
+              aria-label="Start with ClarityScan — diagnostics baseline"
             >
-              {"Start with ClarityScan\u00AE \u2192"}
+              Start with ClarityScan® →
             </Link>
           </div>
         </div>
@@ -268,17 +272,21 @@ function ServicesSection() {
           <p>Focused sessions that align teams, unlock decisions, and turn strategy into steps.</p>
           <div className="cardFooter">
             <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.home.services.workshops">
-              {"Explore workshops \u2192"}
+              Explore workshops →
             </Link>
           </div>
         </div>
 
         <div className="card">
           <Layers className="cardIcon" aria-hidden="true" />
-          <h3>Programs: Build Innovation Capacity</h3><p>Install culture, process, and metrics to scale innovation reliably with <Link to="/services/innovation-maturity">IMM‑P</Link>.</p>
+          <h3>Programs: Build Innovation Capacity</h3>
+          <p>
+            Install culture, process, and metrics to scale innovation reliably with{' '}
+            <Link to="/services/innovation-maturity">IMM-P®</Link>.
+          </p>
           <div className="cardFooter">
             <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.home.services.programs">
-              {"Explore programs \u2192"}
+              Explore programs →
             </Link>
           </div>
         </div>
@@ -289,7 +297,7 @@ function ServicesSection() {
           <p>Targeted 1:1 or group support to remove blockers and sustain momentum.</p>
           <div className="cardFooter">
             <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">
-              {"Explore coaching & mentoring \u2192"}
+              Explore coaching & mentoring →
             </Link>
           </div>
         </div>
@@ -300,7 +308,7 @@ function ServicesSection() {
           <p>Foresight research and training to spot trends and inform resilient choices.</p>
           <div className="cardFooter">
             <Link to="/vigia-futura" className="cardCta" data-cta="cta.home.services.futures">
-              {"Learn more \u2192"}
+              Learn more →
             </Link>
           </div>
         </div>
@@ -311,20 +319,19 @@ function ServicesSection() {
 
 function NumbersStrip() {
   const items = [
-    { kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners' },
-    { kpi: '25+', label: 'institutions/year supported', note: 'program capacity' },
-    { kpi: '2-4/week', label: 'cadenced sessions over 12 months', note: 'capability build-out' },
-    { kpi: '3', label: 'open frameworks in use', note: '' },
+    { kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners (2024)' },
+    { kpi: '25+', label: 'institutions/year supported', note: 'program capacity from 2025 onward' },
+    { kpi: '2–4×/week', label: 'sessions delivered for 12 months', note: 'scaled capability build-out' },
   ];
   return (
-    <section className="section section--tight" id="numbers" aria-labelledby="numbers-title">
-      <h2 id="numbers-title">Numbers</h2>
+    <section className="section" id="proof-numbers" aria-labelledby="numbers-title">
+      <h2 id="numbers-title">Proof — by the numbers</h2>
       <div className="cardGrid">
-        {items.map((it) => (
-          <div key={it.label} className="card" aria-label={it.label}>
-            <h3 style={{ fontSize: '1.75rem', margin: 0 }}>{it.kpi}</h3>
-            <p style={{ margin: '0.25rem 0 0.25rem' }}><strong>{it.label}</strong></p>
-            <p className="microcopy" style={{ margin: 0 }}>{it.note}</p>
+        {items.map((x, i) => (
+          <div className="card" key={i}>
+            <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>{x.kpi}</h3>
+            <p style={{ marginBottom: '.25rem' }}><strong>{x.label}</strong></p>
+            <p className="microcopy">{x.note}</p>
           </div>
         ))}
       </div>
@@ -334,79 +341,10 @@ function NumbersStrip() {
 
 function CaseStudiesTeaser() {
   return (
-    <section className="section" id="case-studies" aria-labelledby="cases-title">
-      <h2 id="cases-title">Case Studies</h2>
+    <section className="section" id="case-studies" aria-labelledby="case-studies-title">
+      <h2 id="case-studies-title">Case Studies</h2>
       <p className="sectionLead">Selected projects and measurable outcomes.</p>
-      <div className="cardGrid">
-        {/* AFP Siembra */}
-        <div className="card">
-          <picture>
-            <source srcSet="/img/afp-siembra-card.avif" type="image/avif" />
-            <source srcSet="/img/afp-siembra-card.webp" type="image/webp" />
-            <img
-              src="/img/afp-siembra-card.jpg"
-              alt="AFP Siembra - Alcanza product and SILAB innovation lab."
-              width={1200}
-              height={720}
-              loading="lazy"
-              decoding="async"
-              style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
-            />
-          </picture>
-          <h3>AFP Siembra - Alcanza &amp; SILAB</h3>
-          <div className="cardFooter">
-            <Link to="/case-studies/afp-siembra" className="cardCta" data-cta="cta.home.cases.afp_siembra">
-              {"Read the case \u2192"}
-            </Link>
-          </div>
-        </div>
-
-        {/* FUNDAPEC */}
-        <div className="card">
-          <picture>
-            <source srcSet="/img/fundapec-card.avif" type="image/avif" />
-            <source srcSet="/img/fundapec-card.webp" type="image/webp" />
-            <img
-              src="/img/fundapec-card.jpg"
-              alt="FUNDAPEC - alumni community and capability uplift."
-              width={1200}
-              height={720}
-              loading="lazy"
-              decoding="async"
-              style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
-            />
-          </picture>
-          <h3>FUNDAPEC - Alumni Network</h3>
-          <div className="cardFooter">
-            <Link to="/case-studies/fundapec" className="cardCta" data-cta="cta.home.cases.fundapec">
-              {"Read the case \u2192"}
-            </Link>
-          </div>
-        </div>
-
-        {/* OGTIC / RedLab */}
-        <div className="card">
-          <picture>
-            <source srcSet="/img/ogtic-redlab-card.avif" type="image/avif" />
-            <source srcSet="/img/ogtic-redlab-card.webp" type="image/webp" />
-            <img
-              src="/img/ogtic-redlab-card.jpg"
-              alt="OGTIC - Red de Laboratorios de Innovacion (RedLab) cohort sessions."
-              width={1200}
-              height={720}
-              loading="lazy"
-              decoding="async"
-              style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
-            />
-          </picture>
-          <h3>OGTIC - RedLab Innovation Network</h3>
-          <div className="cardFooter">
-            <Link to="/case-studies/ogtic-redlab" className="cardCta" data-cta="cta.home.cases.ogtic_redlab">
-              {"Read the case \u2192"}
-            </Link>
-          </div>
-        </div>
-      </div>
+      <CaseStudyCards slugs={['afp-siembra', 'alpha-inversiones', 'fundapec', 'ogtic-redlab']} />
     </section>
   );
 }
@@ -450,12 +388,12 @@ function useLatestBlogPosts(limit = 3) {
             media?.getAttribute('url') ||
             enclosure?.getAttribute('url') ||
             imageEl?.textContent?.trim() ||
-            '/img/default-og.jpg';
+            '/img/social/default-og.jpg';
 
           const descNode = n.querySelector('description') ?? n.querySelector('content\\:encoded');
           const raw = descNode?.textContent ?? '';
           const text = raw.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-          const description = text.length > 200 ? text.slice(0, 197) + '...' : text;
+          const description = text.length > 220 ? text.slice(0, 217) + '…' : text;
           return { title, href, description, external, image };
         });
 
@@ -484,7 +422,7 @@ function ResearchResourcesSection() {
         <source srcSet="/img/mcf-card.webp" type="image/webp" />
         <img
           src="/img/mcf-card.jpg"
-          alt="MicroCanvas Framework v2.1 - modular canvases for innovation."
+          alt="MicroCanvas Framework v2.1 — modular canvases for innovation."
           width={1200}
           height={720}
           loading="lazy"
@@ -506,7 +444,7 @@ function ResearchResourcesSection() {
           rel="noopener noreferrer"
           data-cta="cta.home.research.mcf"
         >
-          {"Visit site \u2192"}
+          Visit site →
         </a>
       </div>
     </div>
@@ -536,7 +474,7 @@ function ResearchResourcesSection() {
         {blogLoading ? (
           <div key="blog-loading" className="card" aria-busy="true">
             <Lightbulb className="cardIcon" aria-hidden="true" />
-            <h3>Loading latest from the blog...</h3>
+            <h3>Loading latest from the blog…</h3>
             <p className="microcopy">Fetching recent posts.</p>
           </div>
         ) : latestBlog.length === 0 ? (
@@ -546,7 +484,7 @@ function ResearchResourcesSection() {
             <p>Stories, methods, and updates from the work.</p>
             <div className="cardFooter">
               <Link className="cardCta" to="/blog" data-cta="cta.home.research.blog.fallback">
-                {"Visit the blog \u2192"}
+                Visit the blog →
               </Link>
             </div>
           </div>
@@ -556,7 +494,7 @@ function ResearchResourcesSection() {
               {post.image && (
                 <img
                   src={post.image}
-                  alt={`${post.title} - cover`}
+                  alt={`${post.title} — cover`}
                   width={1200}
                   height={630}
                   loading="lazy"
@@ -569,12 +507,23 @@ function ResearchResourcesSection() {
               {post.description && <p>{post.description}</p>}
               <div className="cardFooter">
                 {post.external ? (
-                  <a className="cardCta" href={post.href} target="_blank" rel="noopener noreferrer" data-cta="cta.home.research.blog.read">
-                    {"Read post \u2192"}
+                  <a
+                    className="cardCta"
+                    href={post.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cta="cta.home.research.blog.read"
+                  >
+                    Read post →
                   </a>
                 ) : (
-                  <Link className="cardCta" to={post.href} data-cta="cta.home.research.blog.read" aria-label={`Read ${post.title}`}>
-                    {"Read post \u2192"}
+                  <Link
+                    className="cardCta"
+                    to={post.href}
+                    data-cta="cta.home.research.blog.read"
+                    aria-label={`Read ${post.title}`}
+                  >
+                    Read post →
                   </Link>
                 )}
               </div>
@@ -595,7 +544,7 @@ function ResearchResourcesSection() {
                 data-cta="cta.home.research.whitepaper.read"
                 aria-label={`Read ${paper.title}`}
               >
-                {"Read whitepaper \u2192"}
+                Read whitepaper →
               </Link>
             </div>
           </div>
@@ -628,37 +577,15 @@ function PrinciplesSection() {
         <div className="card">
           <Users className="cardIcon" aria-hidden="true" />
           <h3>04. Co-Creation</h3>
-          <p>We partner with clients to co-create solutions for today's and tomorrow's needs.</p>
+          <p>We partner with clients to co-create solutions for today’s and tomorrow’s needs.</p>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function FinalCta() {
-  return (
-    <section className="section" id="final-cta" aria-labelledby="cta-title">
-      <div className="finalCta">
-        <h2 id="cta-title">Ready to make innovation repeatable?</h2>
-        <p>Start with a quick diagnostic or book a discovery call. We'll meet you where you are and co-create the path forward.</p>
-        <div className="heroCtas" style={{ justifyContent: 'center' }}>
-          <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.home.final.clarityscan">
-            {"Start with ClarityScan\u00AE"}
-          </Link>
-          <Link to="/contact" className="buttonSecondary" data-cta="cta.home.final.book_call">
-            Book a discovery call
-          </Link>
-        </div>
-        <p className="ctaNote" style={{ textAlign: 'center' }}>{'Get your baseline in 15\u201320 minutes.'}</p>
       </div>
     </section>
   );
 }
 
 export default function Home(): ReactNode {
-  const { siteConfig } = useDocusaurusContext();
-
-  const pageTitle = 'Innovation, Foresight & Repeatable Delivery | Doulab';
+  const pageTitle = 'Innovation, Foresight & Repeatable Delivery — Doulab';
   const description =
     'We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes.';
 
@@ -669,9 +596,17 @@ export default function Home(): ReactNode {
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://doulab.net/img/default-og.jpg" />
-        <meta property="og:image:alt" content="Doulab - Innovation, foresight, and repeatable delivery." />
+        <meta property="og:image" content="https://doulab.net/img/social/default-og.jpg" />
+        <meta property="og:image:alt" content="Doulab — Innovation, foresight, and repeatable delivery." />
         <meta name="twitter:card" content="summary_large_image" />
+        {/* Hero LCP preload (two-column Hero uses this base) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/people-collage.png"
+          imageSrcSet="/img/people-collage.avif 1x, /img/people-collage.webp 1x, /img/people-collage.png 1x"
+          imageSizes="(max-width: 600px) 100vw, 600px"
+        />
       </Head>
 
       {/* Standardized two-column hero */}
@@ -683,12 +618,12 @@ export default function Home(): ReactNode {
         imageAlt="Futures, innovation, and intelligence"
         primaryCta={{
           to: '/services/clarityscan',
-          label: 'Start with ClarityScan\u00AE',
+          label: 'Start with ClarityScan®',
           dataCta: 'cta.home.hero.clarityscan',
-          ariaLabel: 'Start with ClarityScan - quick 15-20 minute baseline',
+          ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
         }}
         secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.hero.book_call' }}
-        ctaNote={'Get your baseline in 15\u201320 minutes.'}
+        ctaNote="Get your baseline in 15–20 minutes."
       />
 
       <main>
@@ -698,10 +633,18 @@ export default function Home(): ReactNode {
         <CaseStudiesTeaser />
         <ResearchResourcesSection />
         <PrinciplesSection />
-        <FinalCta />
+
+        {/* Standardized Final CTA component */}
+        <FinalCta
+          id="final-cta"
+          ariaLabelledbyId="cta-title"
+          title="Ready to make innovation repeatable?"
+          body="Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward."
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.home.final.clarityscan' }}
+          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.final.book_call' }}
+          ctaNote="Get your baseline in 15–20 minutes."
+        />
       </main>
     </Layout>
   );
 }
-
-

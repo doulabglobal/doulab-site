@@ -1,4 +1,4 @@
-﻿import React, { type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
@@ -7,13 +7,14 @@ import Hero from '../../components/Hero';
 export default function CaseAfpSiembra(): ReactNode {
   return (
     <Layout
-      title="Case Study | AFP Siembra: Alcanza & SILAB"
+      title="AFP Siembra: Alcanza & SILAB — Case Study | Doulab"
       description="From strategy to repeatable delivery: a digital savings product and an innovation lab co-created."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/afp-siembra" />
-        <meta property="og:image" content="https://doulab.net/img/afp-siembra-card.jpg" />
-        <meta property="og:image:alt" content="AFP Siembra â€” Alcanza product and SILAB innovation lab." />
+        {/* Use a 1200×630 social card, not the wide card image */}
+        <meta property="og:image" content="https://doulab.net/img/social/og-afp-siembra.jpg" />
+        <meta property="og:image:alt" content="AFP Siembra — Alcanza product and SILAB innovation lab." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
       </Head>
@@ -24,17 +25,19 @@ export default function CaseAfpSiembra(): ReactNode {
         </nav>
 
         <Hero
-          title="AFP Siembra: Alcanza and SILAB"
+          title="AFP Siembra: Alcanza & SILAB"
           subtitle="From strategy to a repeatable innovation engine."
-          body={"AFP Siembra is a pension fund leader in the Dominican Republic. " +
-            "Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad."}
+          body={
+            'AFP Siembra is a pension fund leader in the Dominican Republic. ' +
+            'Alcanza is a 100% digital savings solution designed for Dominicans at home and abroad.'
+          }
           imageBase="/img/afp-siembra-card"
-          imageAlt="AFP Siembra â€” Alcanza product and SILAB innovation lab"
+          imageAlt="AFP Siembra — Alcanza product and SILAB innovation lab."
           width={1200}
           height={720}
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
-          ctaNote="Get your baseline in 15-20 minutes."
+          ctaNote="Get your baseline in 15–20 minutes."
           id="afp-siembra-hero"
           ariaLabelledbyId="afp-siembra-hero-title"
           eager
@@ -56,7 +59,7 @@ export default function CaseAfpSiembra(): ReactNode {
         </section>
 
         <section className="section" aria-labelledby="work-title">
-          <h2 id="work-title">What We Did</h2>
+          <h2 id="work-title">What we did</h2>
           <ul>
             <li>
               <strong>Baseline & Direction:</strong> Ran an initial assessment (ClarityScan) to determine the current state of the innovation process,
@@ -65,22 +68,22 @@ export default function CaseAfpSiembra(): ReactNode {
               the innovation team to identify issues that were slowing the development of innovation projects and to unblock them.
             </li>
             <li>
-              <strong>Evidence First:</strong> Designed multiple A/Bs in interview settings (from internal employees to
+              <strong>Evidence first:</strong> Designed multiple A/Bs in interview settings (from internal employees to
               external focus groups) and concierge trials to test customer profiles, onboarding friction, benefits, cost
               sensitivity, and both problem/solution and market/product fit.
             </li>
             <li>
-              <strong>Product Scope:</strong> Defined the MVP for Alcanza (100% digital app at launch). Key features:
+              <strong>Product scope:</strong> Defined the MVP for Alcanza (100% digital app at launch). Key features:
               personalized goals, close guidance, goal rewards, strong security, retirement flexibility, and no fees or
               minimum balances.
             </li>
             <li>
-              <strong>Delivery System:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
+              <strong>Delivery system:</strong> Established a cadence, decision gates, and a lab playbook. Co-authored
               SILAB’s charter (mandate, intake, funding gates) and governance model to make delivery repeatable.
             </li>
             <li>
               <strong>Innovation Lab & Launch:</strong> Starting in October 2023, we conceptualized the SIEMBRA Innovation Lab, leveraging learnings and outcomes from the Alcanza project to design an internal
-              innovation capability. In parallel, we helped conceptualize and produce the lab’s public launch during the inaugural AFP Siembra FutureScapes Innovation Summit—
+              innovation capability. In parallel, we helped conceptualize and produce the lab’s public launch during the inaugural AFP Siembra FutureScapes Innovation Summit —
               a two-day event with more than 300 participants.
             </li>
             <li>
@@ -93,7 +96,7 @@ export default function CaseAfpSiembra(): ReactNode {
           <ul>
             <li><strong>Kick-off:</strong> January 2021</li>
             <li><strong>Discovery & Experiments:</strong> 2021–2022</li>
-            <li><strong>Build & Hardening:</strong> 2023â€“2024</li>
+            <li><strong>Build & Hardening:</strong> 2023–2024</li>
             <li><strong>Full production launch:</strong> November 2024 (digital app)</li>
           </ul>
         </section>
@@ -105,7 +108,8 @@ export default function CaseAfpSiembra(): ReactNode {
             <li>Established <strong>SILAB</strong> governance and a working cadence with gate reviews.</li>
             <li>Evidence packs captured decisions and improved stakeholder alignment.</li>
           </ul>
-        
+        </section>
+
         <section className="section" aria-labelledby="why-title">
           <h2 id="why-title">Why it mattered</h2>
           <ul>
@@ -114,7 +118,6 @@ export default function CaseAfpSiembra(): ReactNode {
             <li>Built trust and visibility through a public launch and ongoing cadence.</li>
           </ul>
         </section>
-</section>
 
         <section className="section" aria-labelledby="videos-title">
           <h2 id="videos-title">FutureScapes Summit — Livestreams</h2>
@@ -128,6 +131,7 @@ export default function CaseAfpSiembra(): ReactNode {
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}
                 />
               </div>
@@ -141,6 +145,7 @@ export default function CaseAfpSiembra(): ReactNode {
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                   style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}
                 />
               </div>
@@ -151,7 +156,7 @@ export default function CaseAfpSiembra(): ReactNode {
         <section className="section" aria-labelledby="cta-title">
           <div className="finalCta">
             <h2 id="cta-title">Take the first step</h2>
-            <p>Get your baseline in 15-20 minutes.</p>
+            <p>Get your baseline in 15–20 minutes.</p>
             <div className="heroCtas" style={{ justifyContent: 'center' }}>
               <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
                 Start with ClarityScan®
@@ -166,5 +171,3 @@ export default function CaseAfpSiembra(): ReactNode {
     </Layout>
   );
 }
-
-

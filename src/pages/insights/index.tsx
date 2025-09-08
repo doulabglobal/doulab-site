@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
+import FinalCta from '../../components/FinalCta';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Newspaper from 'lucide-react/dist/esm/icons/newspaper';
@@ -102,38 +103,50 @@ export default function Insights(): ReactNode {
     return date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit', timeZone: 'Europe/Zurich' }) : '';
   };
 
+  const isExternal = (href: string) => /^https?:\/\//i.test(href);
+
   return (
     <Layout
-      title="Insights - Research & Resources | Doulab"
-      description="Research, resources, and whitepapers from Doulab - practical, testable, and open."
+      title="Insights — Research & Resources | Doulab"
+      description="Research, resources, and whitepapers from Doulab — practical, testable, and open."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/insights" />
-        <meta property="og:title" content="Insights - Research & Resources | Doulab" />
-        <meta property="og:description" content="Research, resources, and whitepapers from Doulab - practical, testable, and open." />
+        <meta property="og:title" content="Insights — Research & Resources | Doulab" />
+        <meta property="og:description" content="Research, resources, and whitepapers from Doulab — practical, testable, and open." />
         <meta property="og:image" content="https://doulab.net/img/social/og-insights.jpg" />
-        <meta property="og:image:alt" content="Doulab - Insights" />
+        <meta property="og:image:alt" content="Doulab — Insights" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
+        {/* Hero LCP preload */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/hero-insights.jpg"
+          imageSrcSet="/img/hero-insights.avif 1x, /img/hero-insights.webp 1x, /img/hero-insights.jpg 1x"
+          imageSizes="(max-width: 700px) 100vw, 600px"
+        />
       </Head>
 
       <main>
+        {/* Standardized two-column hero */}
         <Hero
           title="Insights"
-          subtitle="Research & Resources - practical, testable, and open."
-          body={"Explore frameworks, whitepapers, and field notes to reduce risk and accelerate outcomes."}
+          subtitle="Research & Resources — practical, testable, and open."
+          body="Explore frameworks, whitepapers, and field notes to reduce risk and accelerate outcomes."
           imageBase="/img/hero-insights"
-          imageAlt="Insights - research and resources"
+          imageAlt="Insights — research and resources"
           width={1600}
           height={900}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan', dataCta: 'cta.insights.hero.clarityscan' }}
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.insights.hero.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.insights.hero.book_call' }}
-          ctaNote="Get your baseline in 15-20 minutes."
+          ctaNote="Get your baseline in 15–20 minutes."
           id="insights-hero"
           ariaLabelledbyId="insights-hero-title"
           eager
         />
 
+        {/* Highlights */}
         <section className="section" id="highlights" aria-labelledby="highlights-title">
           <h2 id="highlights-title">Highlights</h2>
           <div className="cardGrid">
@@ -143,7 +156,7 @@ export default function Insights(): ReactNode {
                 <source srcSet="/img/mcf-card.webp" type="image/webp" />
                 <img
                   src="/img/mcf-card.jpg"
-                  alt="MicroCanvas Framework v2.1 - open-source canvases"
+                  alt="MicroCanvas Framework v2.1 — open-source canvases"
                   width={1200}
                   height={720}
                   loading="lazy"
@@ -158,11 +171,18 @@ export default function Insights(): ReactNode {
                 <li>Step-by-step usage guides</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer" data-cta="cta.insights.card.mcf">
-                  Visit site &rarr;
-                </Link>
+                <a
+                  className="cardCta"
+                  href="https://themicrocanvas.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="cta.insights.card.mcf"
+                >
+                  Visit site →
+                </a>
               </div>
             </article>
+
             {whitepapers.map((p, i) => (
               <article className="card" key={`wp-${i}`} aria-labelledby={`high-wp-${i}`}>
                 <FileText className="cardIcon" aria-hidden="true" />
@@ -173,7 +193,7 @@ export default function Insights(): ReactNode {
                 </ul>
                 <div className="cardFooter">
                   <Link className="cardCta" to={p.permalink} data-cta="cta.insights.highlights.whitepaper">
-                    Read paper &rarr;
+                    Read paper →
                   </Link>
                 </div>
               </article>
@@ -181,6 +201,7 @@ export default function Insights(): ReactNode {
           </div>
         </section>
 
+        {/* Blog */}
         <section className="section" aria-labelledby="latest-blog-title">
           <h2 id="latest-blog-title">From the Blog</h2>
           <p className="sectionLead">Three recent posts from our blog.</p>
@@ -191,16 +212,28 @@ export default function Insights(): ReactNode {
                 <h3 id={`blog-${i}`}>{post.title}</h3>
                 <p>
                   {post.description.slice(0, 160)}
-                  {post.description.length > 160 ? '...' : ''}
+                  {post.description.length > 160 ? '…' : ''}
                 </p>
                 <ul>
                   <li>{fmtDate(post.pubDate)}</li>
                   <li>Blog post</li>
                 </ul>
                 <div className="cardFooter">
-                  <Link className="cardCta" to={post.link} data-cta="cta.insights.blog.read">
-                    Read post &rarr;
-                  </Link>
+                  {isExternal(post.link) ? (
+                    <a
+                      className="cardCta"
+                      href={post.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cta="cta.insights.blog.read"
+                    >
+                      Read post →
+                    </a>
+                  ) : (
+                    <Link className="cardCta" to={post.link} data-cta="cta.insights.blog.read">
+                      Read post →
+                    </Link>
+                  )}
                 </div>
               </article>
             ))}
@@ -212,6 +245,7 @@ export default function Insights(): ReactNode {
           </div>
         </section>
 
+        {/* Docs hub */}
         <section className="section" id="docs-hub" aria-labelledby="docs-hub-title">
           <h2 id="docs-hub-title">Where to start</h2>
           <p className="sectionLead">
@@ -228,23 +262,16 @@ export default function Insights(): ReactNode {
           </div>
         </section>
 
-        <section className="section" id="cta" aria-labelledby="cta-title">
-          <div className="finalCta">
-            <h2 id="cta-title">Have a topic you want us to cover?</h2>
-            <p>We publish practical, evidence-led guides. Tell us what would help your team.</p>
-            <div className="heroCtas" style={{ justifyContent: 'center' }}>
-              <Link className="buttonPrimary" to="/contact" data-cta="cta.insights.final.contact">
-                Suggest a topic
-              </Link>
-              <Link className="buttonPrimary" to="/services/clarityscan" data-cta="cta.insights.final.clarityscan">
-                Start with ClarityScan
-              </Link>
-              <Link className="buttonSecondary" to="/what-we-do" data-cta="cta.insights.final.whatwedo">
-                What we do
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Standardized Final CTA */}
+        <FinalCta
+          id="insights-final"
+          ariaLabelledbyId="insights-final-title"
+          title="Ready to make innovation repeatable?"
+          body="Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward."
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.insights.final.clarityscan' }}
+          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.insights.final.book_call' }}
+          ctaNote="Get your baseline in 15–20 minutes."
+        />
       </main>
     </Layout>
   );

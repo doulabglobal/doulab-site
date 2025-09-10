@@ -9,24 +9,24 @@ keywords:
   - foresight
   - innovation maturity
   - MicroCanvas
-  - IMM
+  - IMM-P
   - whitepapers
   - research
   - decentralized AI governance
 ---
 
-Welcome to our **Research & Resources** hub. You’ll find **whitepapers**, **frameworks**, and **open research notes** focused on strategic foresight, innovation systems, and decentralized AI governance — **practical, testable, and open**.
+Welcome to our **Research & Resources** hub. You will find **whitepapers**, **frameworks**, and **open research notes** focused on strategic foresight, innovation systems, and decentralized AI governance. The materials are **practical, testable, and open**.
 
-> Everything here is open access. If something doesn’t load, please tell us via the [Contact page](/contact).
+> Everything here is open access. If something does not load, please tell us via the [Contact page](/contact).
 
 ## Featured whitepapers
 
-<ul className="dl-cards">
+<ul className="dl-cards" role="list">
   <li>
     <h3>Distributed Federated Agentic AI</h3>
-    <p>A practical blueprint for decentralized AI governance, infrastructure, and public-value creation.</p>
+    <p>A practical blueprint for decentralized AI governance, infrastructure, and public value.</p>
     <ul>
-      <li>Identity &amp; trust (PKI, wallets, permissions)</li>
+      <li>Identity and trust (PKI, wallets, permissions)</li>
       <li>Workflows, model ops, and orchestration</li>
     </ul>
     <a
@@ -39,14 +39,14 @@ Welcome to our **Research & Resources** hub. You’ll find **whitepapers**, **fr
   </li>
 </ul>
 
-## Frameworks & toolkits
+## Frameworks and toolkits
 
-<ul className="dl-cards">
+<ul className="dl-cards" role="list">
   <li>
     <h3>MicroCanvas® Framework (MCF) v2.1</h3>
     <p>Modular canvases to diagnose, design, and scale innovation with repeatable methods.</p>
     <ul>
-      <li>Reusable canvases &amp; templates</li>
+      <li>Reusable canvases and templates</li>
       <li>Step-by-step usage guides</li>
     </ul>
     <a
@@ -56,11 +56,11 @@ Welcome to our **Research & Resources** hub. You’ll find **whitepapers**, **fr
       rel="noopener noreferrer"
       data-cta="docs.research.frameworks.mcf"
     >
-      Visit themicrocanvas.com →
+      Visit the MicroCanvas site →
     </a>
   </li>
   <li>
-    <h3>Innovation Maturity Model (IMM)®</h3>
+    <h3>Innovation Maturity Model Program (IMM-P®)</h3>
     <p>A structured way to assess capability, prioritize gaps, and guide improvement over time.</p>
     <ul>
       <li>Evidence-based diagnostics</li>
@@ -71,23 +71,24 @@ Welcome to our **Research & Resources** hub. You’ll find **whitepapers**, **fr
       href="/services/innovation-maturity"
       data-cta="docs.research.frameworks.imm"
     >
-      Explore the IMM Program →
+      Explore IMM-P →
     </a>
   </li>
 </ul>
 
-## Briefs & notes (ongoing)
+## Briefs and notes (ongoing)
 
-Short reads capturing signals, patterns, and how-tos. We publish these progressively — check back for updates.
+Short reads that capture signals, patterns, and how-tos. We publish these progressively. Check back for updates.
 
-- **Foresight in planning cycles** — integrating horizons, scenarios, and trigger points into annual strategy. *(coming soon)*
-- **Evidence loops** — lightweight instrumentation for decision quality and learning velocity. *(coming soon)*
-- **Public-private innovation rails** — shared standards for ecosystems and incubator networks. *(coming soon)*
+- **Foresight in planning cycles:** integrating horizons, scenarios, and trigger points into annual strategy. *(coming soon)*
+- **Evidence loops:** lightweight instrumentation for decision quality and learning velocity. *(coming soon)*
+- **Public-private innovation rails:** shared standards for ecosystems and incubator networks. *(coming soon)*
 
 ## Authoring tips (for our team)
 
-- **Whitepapers**: add `tags: ['whitepaper']` in a doc’s front matter.  
-- **Sorting**: prefix doc IDs with dates like `YYYY-MM-DD__your-slug` to keep “Latest” lists accurate without heavy parsing.
+- **Whitepapers:** add `tags: ['whitepaper']` in a doc’s front matter.  
+- **Radar surfacing:** add `tags: ['radar']` to include a doc in **Vigía Futura → Latest from the radar**.  
+- **Sorting:** prefix doc IDs with dates like `YYYY-MM-DD__your-slug` to keep “Latest” lists accurate without heavy parsing.
 
 ## How to reference our work
 
@@ -97,7 +98,7 @@ If you cite our materials, include title, author (“Doulab”), year, and URL. 
 
 <div className="dl-finalCta" style={{ marginTop: '2rem' }}>
   <h2>Want updates when we publish?</h2>
-  <p>Get brief pings when new whitepapers and toolkits go live — no spam, just useful drops.</p>
+  <p>Get brief pings when new whitepapers and toolkits go live. No spam, just useful drops.</p>
   <div className="dl-ctas">
     <a className="dl-buttonPrimary" href="/services/clarityscan" data-cta="docs.research.final.clarityscan">Start with ClarityScan®</a>
     <a className="dl-buttonSecondary" href="/contact" data-cta="docs.research.final.contact">Talk to us</a>

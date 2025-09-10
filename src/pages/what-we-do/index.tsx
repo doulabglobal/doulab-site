@@ -21,22 +21,78 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 export default function WhatWeDo(): ReactNode {
   return (
     <Layout
-      title="What we do — Programs, Diagnostics & Foresight | Doulab"
+      title="What we do, Programs, Diagnostics and Foresight | Doulab"
       description="Programs, diagnostics, and foresight to make innovation repeatable with MicroCanvas® 2.1 and IMM-P®."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/what-we-do" />
         <meta name="author" content="Luis Santiago Arias" />
+        <meta property="og:title" content="What we do, Programs, Diagnostics and Foresight | Doulab" />
+        <meta
+          property="og:description"
+          content="Programs, diagnostics, and foresight that make innovation repeatable with MicroCanvas 2.1 and IMM-P."
+        />
         <meta property="og:image" content="https://doulab.net/img/social/og-what-we-do.jpg" />
-        <meta property="og:image:alt" content="Doulab — Programs, diagnostics, and foresight." />
+        <meta property="og:image:alt" content="Doulab, Programs, diagnostics, and foresight." />
         <meta name="twitter:card" content="summary_large_image" />
-        {/* Hero LCP preload (two-column Hero uses this base) */}
+
+        {/* Breadcrumb JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
+              { '@type': 'ListItem', position: 2, name: 'What we do', item: 'https://doulab.net/what-we-do' },
+            ],
+          })}
+        </script>
+
+        {/* Services JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            itemListElement: [
+              {
+                '@type': 'Service',
+                name: 'ClarityScan',
+                serviceType: 'Diagnostics',
+                provider: { '@type': 'Organization', name: 'Doulab' },
+                description: 'A short diagnostic that maps innovation maturity and gaps in 15 to 20 minutes.',
+                areaServed: 'Global',
+                url: 'https://doulab.net/services/clarityscan',
+              },
+              {
+                '@type': 'Service',
+                name: 'IMM-P',
+                serviceType: 'Innovation Maturity Model Program',
+                provider: { '@type': 'Organization', name: 'Doulab' },
+                description: 'A 12 + 12 week program with clear gates and KPIs to build repeatable delivery.',
+                areaServed: 'Global',
+                url: 'https://doulab.net/services/innovation-maturity',
+              },
+              {
+                '@type': 'Service',
+                name: 'Vigía Futura',
+                serviceType: 'Foresight',
+                provider: { '@type': 'Organization', name: 'Doulab' },
+                description: 'Foresight research, briefings, and indices for trend radar and risk framing.',
+                areaServed: 'Global',
+                url: 'https://doulab.net/vigia-futura',
+              },
+            ],
+          })}
+        </script>
+
+        {/* Hero LCP preload */}
         <link
           rel="preload"
           as="image"
           href="/img/services-hero.jpg"
           imageSrcSet="/img/services-hero.avif 1x, /img/services-hero.webp 1x, /img/services-hero.jpg 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
+          fetchPriority="high"
         />
       </Head>
 
@@ -44,63 +100,79 @@ export default function WhatWeDo(): ReactNode {
         {/* Standardized two-column hero */}
         <Hero
           title="What we do"
-          subtitle="Innovation architecture, diagnostics, and foresight — built to make delivery repeatable."
-          body="We install the culture, process, and cadence for innovation to scale — using MicroCanvas® 2.1 and the Innovation Maturity Model Program (IMM-P®)."
+          subtitle="Innovation architecture, diagnostics, and foresight, built to make delivery repeatable."
+          body="We install the culture, process, and cadence for innovation to scale, using MicroCanvas® 2.1 and the Innovation Maturity Model Program, IMM-P®."
           imageBase="/img/services-hero"
-          imageAlt="What we do — services overview"
+          imageAlt="What we do, services overview"
           width={1600}
           height={900}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.whatwedo.hero.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.whatwedo.hero.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          primaryCta={{
+            to: '/services/clarityscan',
+            label: 'Start with ClarityScan®',
+            dataCta: 'cta.whatwedo.hero.clarityscan',
+            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+          }}
+          secondaryCta={{
+            to: '/contact',
+            label: 'Book a discovery call',
+            dataCta: 'cta.whatwedo.hero.book_call',
+            ariaLabel: 'Book a discovery call',
+          }}
+          ctaNote="Get your baseline in 15 to 20 minutes."
           id="whatwedo-hero"
           ariaLabelledbyId="whatwedo-hero-title"
           eager
         />
 
-        {/* Who it’s for? (standardized audience tiles) */}
+        {/* Who is it for? */}
         <section className="section" id="who" aria-labelledby="who-title">
-          <h2 id="who-title">Who it’s for?</h2>
+          <h2 id="who-title">Who is it for?</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
               <h3 id="who-startups">Startups</h3>
-              <p>From ideas to evidence to product/market fit — with gates, focus, and repeatable delivery.</p>
+              <p>From ideas to evidence to product market fit, with gates, focus, and repeatable delivery.</p>
             </article>
             <article className="card" aria-labelledby="who-public">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="who-public">Public Institutions</h3>
+              <h3 id="who-public">Public institutions</h3>
               <p>Transparent governance, capability building, and scaled delivery across programs and cohorts.</p>
             </article>
             <article className="card" aria-labelledby="who-private">
               <Users className="cardIcon" aria-hidden="true" />
               <h3 id="who-private">Private organizations</h3>
-              <p>Established companies accelerating internal innovation capabilities and delivery maturity.</p>
+              <p>Established companies that want stronger internal innovation and delivery maturity.</p>
             </article>
             <article className="card" aria-labelledby="who-accelerators">
               <Workflow className="cardIcon" aria-hidden="true" />
-              <h3 id="who-accelerators">Incubators & Accelerators</h3>
-              <p>Raise cohort quality with evidence-first methods, clear gates, and reusable playbooks.</p>
+              <h3 id="who-accelerators">Incubators and accelerators</h3>
+              <p>Raise cohort quality with evidence first methods, clear gates, and reusable playbooks.</p>
             </article>
           </div>
         </section>
 
-        {/* Products & Programs */}
+        {/* Products and Programs */}
         <section className="section" id="programs" aria-labelledby="programs-title">
-          <h2 id="programs-title">Products & Programs</h2>
+          <h2 id="programs-title">Products and Programs</h2>
           <p className="sectionLead">Three ways we reduce risk and accelerate outcomes.</p>
 
           <div className="cardGrid">
             <article className="card" aria-labelledby="imm-title">
               <Layers className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-title">IMM-P® (12+12 weeks)</h3>
-              <p>Discovery &amp; Validation → Efficiency &amp; Scale, with explicit gates and KPIs.</p>
+              <h3 id="imm-title">IMM-P®, 12 + 12 weeks</h3>
+              <p>Discovery and Validation → Efficiency and Scale, with explicit gates and KPIs.</p>
               <ul>
-                <li><strong>Gate 1</strong> — Go/No-Go after Discovery</li>
-                <li><strong>Gate 2</strong> — Go/No-Go before MVP/Scale</li>
+                <li><strong>Gate 1</strong>, go or no go after Discovery</li>
+                <li><strong>Gate 2</strong>, go or no go before MVP or Scale</li>
               </ul>
+              <p className="microcopy">Outcomes, faster decisions, shorter cycles, visible capability growth.</p>
               <div className="cardFooter">
-                <Link className="cardCta" to="/services/innovation-maturity" data-cta="cta.whatwedo.programs.imm">
+                <Link
+                  className="cardCta"
+                  to="/services/innovation-maturity"
+                  data-cta="cta.whatwedo.programs.imm"
+                  aria-label="Explore IMM-P"
+                >
                   Explore IMM-P® →
                 </Link>
               </div>
@@ -108,14 +180,20 @@ export default function WhatWeDo(): ReactNode {
 
             <article className="card" aria-labelledby="diagnostics-title">
               <Target className="cardIcon" aria-hidden="true" />
-              <h3 id="diagnostics-title">Diagnostics & Workshops</h3>
-              <p>Fast assessments, strategy sessions, and decision-driving workshops.</p>
+              <h3 id="diagnostics-title">Diagnostics and Workshops</h3>
+              <p>Fast assessments, strategy sessions, and decision driving workshops.</p>
               <ul>
-                <li>ClarityScan® baseline (MCF 2.1 + IMM-P®)</li>
-                <li>OKR alignment & leadership sessions</li>
+                <li>ClarityScan® baseline, MCF 2.1 and IMM-P®</li>
+                <li>OKR alignment and leadership sessions</li>
               </ul>
+              <p className="microcopy">What you get, a baseline, a shortlist of risks, and a 30, 60, 90 plan.</p>
               <div className="cardFooter">
-                <Link className="cardCta" to="/services/clarityscan" data-cta="cta.whatwedo.programs.diagnostics">
+                <Link
+                  className="cardCta"
+                  to="/services/clarityscan"
+                  data-cta="cta.whatwedo.programs.diagnostics"
+                  aria-label="Explore Diagnostics and Workshops"
+                >
                   Explore diagnostics →
                 </Link>
               </div>
@@ -124,13 +202,19 @@ export default function WhatWeDo(): ReactNode {
             <article className="card" aria-labelledby="vigia-title">
               <Lightbulb className="cardIcon" aria-hidden="true" />
               <h3 id="vigia-title">Vigía Futura</h3>
-              <p>Foresight observatory and indices for trend radar, risk, and opportunity framing.</p>
+              <p>Foresight program with indices for trend radar, risk, and opportunity framing.</p>
               <ul>
-                <li>Foresight maturity & literacy</li>
-                <li>Briefings and early-signal scans</li>
+                <li>Foresight maturity and literacy</li>
+                <li>Briefings and early signal scans</li>
               </ul>
+              <p className="microcopy">What you get, a shared view of shifts, and credible options to act.</p>
               <div className="cardFooter">
-                <Link className="cardCta" to="/vigia-futura" data-cta="cta.whatwedo.programs.vigia">
+                <Link
+                  className="cardCta"
+                  to="/vigia-futura"
+                  data-cta="cta.whatwedo.programs.vigia"
+                  aria-label="Discover Vigía Futura"
+                >
                   Discover Vigía Futura →
                 </Link>
               </div>
@@ -138,43 +222,43 @@ export default function WhatWeDo(): ReactNode {
           </div>
         </section>
 
-        {/* Proof — by the numbers (same pattern as homepage) */}
+        {/* Proof, by the numbers */}
         <section className="section" id="numbers" aria-labelledby="numbers-title">
-          <h2 id="numbers-title">Proof — by the numbers</h2>
+          <h2 id="numbers-title">Proof, by the numbers</h2>
           <div className="cardGrid">
             <div className="card">
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>12+12 weeks</h3>
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>12 + 12 weeks</h3>
               <p style={{ marginBottom: '.25rem' }}><strong>Structured sprint cadence</strong></p>
-              <p className="microcopy">Discovery &amp; Validation → Efficiency &amp; Scale</p>
+              <p className="microcopy">Discovery and Validation → Efficiency and Scale</p>
             </div>
             <div className="card">
               <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>7</h3>
               <p style={{ marginBottom: '.25rem' }}><strong>innovation labs co-created</strong></p>
-              <p className="microcopy">Public sector capacity building (2024)</p>
+              <p className="microcopy">Public sector capacity building in 2024</p>
             </div>
             <div className="card">
-              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>2–4×/week</h3>
+              <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>2 to 4 per week</h3>
               <p style={{ marginBottom: '.25rem' }}><strong>sessions for 12 months</strong></p>
-              <p className="microcopy">Scaled capability build-out</p>
+              <p className="microcopy">Scaled capability build out</p>
             </div>
           </div>
         </section>
 
-        {/* How we work (process rail) */}
+        {/* How we work */}
         <section className="section" id="process" aria-labelledby="process-title">
           <h2 id="process-title">How we work</h2>
           <ul className="processRail" role="list">
             <li className="processStep" role="listitem">
               <Search className="stepIcon" aria-hidden="true" /><h4>Diagnose</h4>
-              <p>Baseline maturity, risks, and constraints with MCF 2.1 + IMM-P®.</p>
+              <p>Baseline maturity, risks, and constraints with MCF 2.1 and IMM-P®.</p>
             </li>
             <li className="processStep" role="listitem">
               <AlignJustify className="stepIcon" aria-hidden="true" /><h4>Align</h4>
-              <p>Define outcomes, OKRs, and decision gates; align stakeholders.</p>
+              <p>Define outcomes, OKRs, and decision gates, align stakeholders.</p>
             </li>
             <li className="processStep" role="listitem">
               <Rocket className="stepIcon" aria-hidden="true" /><h4>Pilot</h4>
-              <p>Run focused experiments to de-risk value, viability, and delivery.</p>
+              <p>Run focused experiments to derisk value, viability, and delivery.</p>
             </li>
             <li className="processStep" role="listitem">
               <TrendingUp className="stepIcon" aria-hidden="true" /><h4>Scale</h4>
@@ -183,15 +267,19 @@ export default function WhatWeDo(): ReactNode {
           </ul>
         </section>
 
-        {/* Standardized Final CTA */}
+        {/* Final CTA */}
         <FinalCta
           id="whatwedo-final"
           ariaLabelledbyId="whatwedo-final-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward."
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.whatwedo.final.clarityscan' }}
+          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co-create the path forward."
+          primaryCta={{
+            to: '/services/clarityscan',
+            label: 'Start with ClarityScan®',
+            dataCta: 'cta.whatwedo.final.clarityscan',
+          }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.whatwedo.final.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          ctaNote="Get your baseline in 15 to 20 minutes."
         />
       </main>
     </Layout>

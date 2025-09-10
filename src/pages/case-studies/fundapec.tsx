@@ -1,105 +1,232 @@
+// src/pages/case-studies/fundapec.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
+import FinalCta from '../../components/FinalCta';
 
 export default function CaseFundapec(): ReactNode {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
+      { '@type': 'ListItem', position: 2, name: 'Case studies', item: 'https://doulab.net/case-studies' },
+      { '@type': 'ListItem', position: 3, name: 'FUNDAPEC: New business models and alumni platform', item: 'https://doulab.net/case-studies/fundapec' },
+    ],
+  };
+
+  const caseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CaseStudy',
+    name: 'FUNDAPEC: New business models and alumni platform',
+    url: 'https://doulab.net/case-studies/fundapec',
+    inLanguage: 'en',
+    description:
+      'Comunidad FUNDAPEC redesigned and relaunched after a new business models exploration, now a reliable engagement engine with clear governance and single source of truth analytics.',
+    image: 'https://doulab.net/img/social/og-fundapec.jpg',
+    primaryImageOfPage: 'https://doulab.net/img/social/og-fundapec.jpg',
+    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: 'https://doulab.net' },
+    about: {
+      '@type': 'Organization',
+      name: 'FUNDAPEC',
+      url: 'https://fundapec.edu.do/',
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Doulab',
+      url: 'https://doulab.net',
+    },
+  };
+
   return (
     <Layout
-      title="FUNDAPEC: New Business Models & Alumni Platform — Case Study | Doulab"
-      description="Comunidad FUNDAPEC redesigned and relaunched after a new business models exploration—now a reliable engagement engine with clear governance and single-source-of-truth analytics."
+      title="FUNDAPEC: New business models and alumni platform | Case Study | Doulab"
+      description="We redesigned and relaunched Comunidad FUNDAPEC after a new business models exploration, creating a reliable engagement engine with clear governance and single source of truth analytics."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/fundapec" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:title"
+          content="FUNDAPEC: New business models and alumni platform | Case Study | Doulab"
+        />
+        <meta
+          property="og:description"
+          content="We redesigned and relaunched Comunidad FUNDAPEC after a new business models exploration, creating a reliable engagement engine with clear governance and single source of truth analytics."
+        />
         {/* 1200×630 branded social card */}
         <meta property="og:image" content="https://doulab.net/img/social/og-fundapec.jpg" />
-        <meta property="og:image:alt" content="Comunidad FUNDAPEC — alumni platform and engagement." />
+        <meta property="og:image:alt" content="Comunidad FUNDAPEC, alumni platform and engagement." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
+
+        {/* JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(caseSchema)}</script>
+
+        {/* Hero LCP preload (React camelCase) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/fundapec-card.jpg"
+          imageSrcSet="/img/fundapec-card.avif 1x, /img/fundapec-card.webp 1x, /img/fundapec-card.jpg 1x"
+          imageSizes="(max-width: 700px) 100vw, 600px"
+          fetchPriority="high"
+        />
       </Head>
 
-      <main className="container">
+      <main>
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem' }}>
+        <nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem', marginBottom: '0.25rem' }}>
           <Link to="/case-studies" data-cta="cta.cases.breadcrumb">All case studies</Link>
         </nav>
 
         {/* Two-column standardized hero */}
         <Hero
-          title="FUNDAPEC: New Business Models & Alumni Platform"
-          subtitle="Redesign and relaunch powered by evidence—now a reliable engagement engine for growth."
-          body="Track A (new business models) revealed the need for a simpler, governed, data-visible platform. Track B then redesigned and relaunched Comunidad FUNDAPEC to serve as the foundation for those future models."
+          title="FUNDAPEC: New business models and alumni platform"
+          subtitle="Redesign and relaunch powered by evidence, now a reliable engagement engine for growth."
+          body="Track A, new business models, showed the need for a simpler, governed, data visible platform. Track B then redesigned and relaunched Comunidad FUNDAPEC to serve as the base for those future models."
           imageBase="/img/fundapec-card"
-          imageAlt="Comunidad FUNDAPEC — alumni platform and engagement."
+          imageAlt="Comunidad FUNDAPEC, alumni platform and engagement."
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          primaryCta={{
+            to: '/services/clarityscan',
+            label: 'Start with ClarityScan®',
+            dataCta: 'cta.cases.hero.clarityscan',
+            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+          }}
+          secondaryCta={{
+            to: '/contact',
+            label: 'Book a discovery call',
+            dataCta: 'cta.cases.hero.book_call',
+            ariaLabel: 'Book a discovery call',
+          }}
+          ctaNote="Get your baseline in 15 to 20 minutes."
           eager
         />
+
+        {/* At a glance */}
+        <section className="section" aria-labelledby="glance-title">
+          <h2 id="glance-title">At a glance</h2>
+          <ul>
+            <li><strong>Sector:</strong> Education finance and alumni engagement</li>
+            <li><strong>Focus:</strong> New business models and a modern alumni platform</li>
+            <li><strong>Approach:</strong> Evidence first, simplified journeys, clear ownership, trustworthy analytics</li>
+            <li><strong>Result:</strong> Validated member growth and a reliable engagement engine</li>
+          </ul>
+        </section>
 
         {/* Context */}
         <section className="section" aria-labelledby="context-title">
           <h2 id="context-title">Context</h2>
           <p>
-            FUNDAPEC expands access to education in the Dominican Republic. The legacy alumni site had ~20,000
-            “registrations” but little clarity on who was truly active. Journeys were complex, governance was diffuse,
-            and analytics didn’t provide a single source of truth for decisions.
+            FUNDAPEC expands access to education in the Dominican Republic. The legacy alumni site listed about 20,000
+            registrations but had little clarity on who was active. Journeys were complex, governance was unclear,
+            and analytics did not provide a single source of truth for decisions.
           </p>
           <p>
-            We started with a <strong>new business models exploration</strong> (Track A). The findings made it clear:
-            to support credible growth options, the organization needed a <strong>redesigned and relaunched</strong> platform
-            (Track B) with simplified journeys, clear ownership, and trustworthy analytics—what became{' '}
+            We started with a <strong>new business models exploration</strong>, Track A. The findings were clear.
+            To support credible growth options, the organization needed a <strong>redesigned and relaunched</strong> platform,
+            Track B, with simpler journeys, clear ownership, and trustworthy analytics, which became{' '}
             <a href="https://comunidad.fundapec.edu.do" target="_blank" rel="noopener noreferrer">Comunidad FUNDAPEC</a>.
           </p>
+          <p className="microcopy">
+            Comunidad FUNDAPEC in one line: simpler journeys, clearer ownership, better signals.
+          </p>
+          <p className="microcopy">
+            Who benefits first: alumni relations, partnerships, and growth teams that need clearer signals.
+          </p>
+        </section>
+
+        {/* Key risks and mitigations */}
+        <section className="section" aria-labelledby="risks-title">
+          <h2 id="risks-title">Key risks and mitigations</h2>
+          <ul>
+            <li><strong>Activation risk:</strong> Mitigated with clearer onboarding and re engagement flows.</li>
+            <li><strong>Data quality risk:</strong> Mitigated with a single source of truth setup and routine validation.</li>
+            <li><strong>Ownership risk:</strong> Mitigated with a named owner, Communications, and a simple editorial cadence.</li>
+          </ul>
         </section>
 
         {/* What we did */}
         <section className="section" aria-labelledby="work-title">
           <h2 id="work-title">What we did</h2>
 
-          <h3>Phase 1 — Track A: New Business Models Exploration</h3>
+          <h3>Phase 1, Track A: New business models exploration</h3>
           <ul>
             <li>
-              <strong>Baseline & direction:</strong> Ran a ClarityScan diagnostic to surface risks, align stakeholders,
-              and sequence work.
+              <strong>Baseline and direction:</strong> Ran a ClarityScan diagnostic to surface risks, align stakeholders,
+              and sequence the work.
             </li>
             <li>
-              <strong>Evidence first:</strong> Used <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to map segments
-              (students, alumni, employers, partners), define value propositions, shape early OKRs, articulate solution
-              alternatives and transformative purpose, and specify the processes needed for discovery and initial validation.
+              <strong>Evidence first:</strong> Used{' '}
+              <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to map segments, students, alumni, employers, partners,
+              define value propositions, shape early OKRs, compare solution options and purpose, and specify processes
+              for discovery and initial validation.
+              <p className="microcopy">
+                Evidence pack: problem and assumptions, segment and JTBD, experiment plan and results, artifact links,
+                decision memo, next step.
+              </p>
+              <p className="microcopy">
+                Insights are coded into a signal library to inform next experiments and the roadmap.
+              </p>
             </li>
             <li>
-              <strong>Offer probes:</strong> Conducted offer-level probes (no pricing) to assess viability and signal strength.
+              <strong>Offer probes:</strong> Ran offer level probes, no pricing, to assess viability and signal strength.
             </li>
             <li>
-              <strong>Governance & roadmap:</strong> Defined decision gates, owners, and criteria to advance from discovery
-              to piloting—along with a clear 24-month growth roadmap.
+              <strong>Governance and roadmap:</strong> Defined decision gates, owners, and criteria to move from discovery
+              to piloting, with a clear 24 month growth roadmap.
             </li>
           </ul>
 
           <h3>
-            Phase 2 — Track B:{' '}
+            Phase 2, Track B:{' '}
             <a href="https://comunidad.fundapec.edu.do" target="_blank" rel="noopener noreferrer">Comunidad FUNDAPEC</a>{' '}
-            Redesign &amp; Relaunch
+            redesign and relaunch
           </h3>
           <ul>
             <li>
-              <strong>Co-design:</strong> Reworked information architecture and content model (profiles, opportunities, events,
-              resources) with accessibility basics.
+              <strong>Co design:</strong> Reworked information architecture and content model, profiles, opportunities, events,
+              and resources, with accessibility basics.
             </li>
             <li>
-              <strong>Simplified journeys:</strong> Clean, linear onboarding and re-engagement flows that reduce friction.
+              <strong>Simplified journeys:</strong> Clean, linear onboarding and re engagement flows that reduce friction.
             </li>
             <li>
-              <strong>Evidence loops & analytics:</strong> Platform analytics now provide a <em>single source of truth</em> for
+              <strong>Evidence loops and analytics:</strong> Platform analytics now provide a <em>single source of truth</em> for
               participation, growth, and engagement trends.
             </li>
             <li>
-              <strong>Clear governance:</strong> Communications owns the platform (no-code), so updates don’t depend on other teams.
+              <strong>Clear governance:</strong> Communications owns the platform, no code, so updates do not depend on other teams.
               Editorial cadence, moderation rules, and periodic reviews are in place.
+            </li>
+            <li>
+              <strong>Delivery system:</strong> Cadence, gate reviews, and decision owners in place.
+              <ul>
+                <li><strong>Gate 1:</strong> Go or No Go after discovery, based on evidence packs.</li>
+                <li><strong>Gate 2:</strong> Go or No Go before scale, based on adoption and risk.</li>
+              </ul>
+              <p className="microcopy">
+                Governance model: <strong>RACI</strong> per initiative; <strong>weekly</strong> cadence; <strong>gate checklist</strong> per stage;
+                <strong> decision log</strong> and <strong>risk register</strong> for traceability.
+              </p>
+              <p className="microcopy">
+                KPI tree by stage: Discovery, signal quality and interview coverage; Validation, conversion to key action and time to decision;
+                Development, cycle time and escaped defects; Scale, activation, engagement, and unit economics.
+              </p>
+              <p className="microcopy">
+                Capability baseline: governance, measurement, and delivery cadence at kickoff, tracked quarterly against the KPI tree.
+              </p>
+              <p className="microcopy">
+                Operational rhythm: weekly reviews, monthly gate checks, and quarterly capability snapshots.
+              </p>
+              <p className="microcopy">
+                Artifacts: charter, gate checklist, RACI, evidence pack template, weekly review.
+              </p>
             </li>
           </ul>
         </section>
@@ -108,63 +235,83 @@ export default function CaseFundapec(): ReactNode {
         <section className="section" aria-labelledby="timeline-title">
           <h2 id="timeline-title">Timeline</h2>
           <ul>
-            <li><strong>Kick-off (Track A):</strong> December 2023 — ClarityScan baseline; interviews; offer probes; early OKRs.</li>
-            <li><strong>Decision:</strong> June 2024 — Redesign & relaunch approved; 24-month roadmap set.</li>
-            <li><strong>Redesign & Build (Track B):</strong> July 2024–November 2024 — IA, journeys, governance, analytics foundations.</li>
-            <li><strong>Relaunch:</strong> November 2024 — <a href="https://comunidad.fundapec.edu.do" target="_blank" rel="noopener noreferrer">Comunidad FUNDAPEC</a> live; member migration & validation begins.</li>
-            <li><strong>Growth checkpoint:</strong> September 2025 — Active members grew from 10 (a year prior) to 515; validated members at 4,000.</li>
+            <li><strong>Kick off, Track A:</strong> December 2023, ClarityScan baseline, interviews, offer probes, early OKRs.</li>
+            <li><strong>Decision:</strong> June 2024, redesign and relaunch approved, 24 month roadmap set.</li>
+            <li><strong>Redesign and build, Track B:</strong> July 2024 to November 2024, IA, journeys, governance, analytics foundations.</li>
+            <li><strong>Relaunch:</strong> November 2024, <a href="https://comunidad.fundapec.edu.do" target="_blank" rel="noopener noreferrer">Comunidad FUNDAPEC</a> live, member migration and validation begins.</li>
+            <li><strong>Growth checkpoint:</strong> September 2025, active members grew from 10 a year earlier to 515, validated members at 4,000.</li>
           </ul>
         </section>
 
         {/* Outcomes */}
-        <section className="section" aria-labelledby="outcomes-title">
+        <section className="section" aria-labelledby="outcomes-title" aria-describedby="outcomes-desc">
+          <p id="outcomes-desc" className="sr-only">What changed, how we measure progress, and key numbers.</p>
           <h2 id="outcomes-title">Outcomes</h2>
           <ul>
             <li>
-              <strong>From registrations to reality:</strong> Cleaned the legacy base from ~20,000 “registrations” to
+              <strong>From registrations to reality:</strong> Cleaned the legacy base from about 20,000 registrations to
               <strong> 4,000 validated members</strong>.
             </li>
             <li>
-              <strong>Active membership growth:</strong> Active members increased from <strong>10</strong> (a year ago) to
-              <strong> 515</strong> and continue to grow steadily.
+              <strong>Active membership growth:</strong> Active members increased from <strong>10</strong> to
+              <strong> 515</strong>, as of September 2025, and continue to grow.
             </li>
             <li>
               <strong>Reliable engagement engine:</strong>{' '}
               <a href="https://comunidad.fundapec.edu.do" target="_blank" rel="noopener noreferrer">Comunidad FUNDAPEC</a>{' '}
-              now underpins future growth for the new business models explored in Track A.
+              now supports future growth options from Track A.
             </li>
             <li>
               <strong>Faster, clearer decisions:</strong> Gate reviews, evidence packs, and accountable owners reduced decision latency.
             </li>
           </ul>
+          <p className="microcopy">
+            Tracked families, as of September 2025: decision latency, cycle time, activation and engagement, and capability growth.
+          </p>
         </section>
 
         {/* Why it mattered */}
         <section className="section" aria-labelledby="why-title">
           <h2 id="why-title">Why it mattered</h2>
           <ul>
-            <li>Connected mission and sustainability by tying alumni value to credible growth options.</li>
-            <li>Replaced guesswork with <strong>single-source-of-truth</strong> analytics and visible progress signals.</li>
-            <li>Gave Communications control (no-code), shortening cycles and improving responsiveness.</li>
-            <li>Built momentum via small wins, clear ownership, and simple user journeys.</li>
+            <li>Linked mission and sustainability by tying alumni value to credible growth options.</li>
+            <li>Replaced guesswork with a single source of truth and visible progress signals.</li>
+            <li>Gave Communications control, no code, which shortened cycles and improved responsiveness.</li>
+            <li>Built momentum with small wins, clear ownership, and simple user journeys.</li>
           </ul>
         </section>
 
-        {/* Final CTA */}
-        <section className="section" aria-labelledby="cta-title">
-          <div className="finalCta">
-            <h2 id="cta-title">Take the first step</h2>
-            <p>Get your baseline in 15–20 minutes.</p>
-            <div className="heroCtas" style={{ justifyContent: 'center' }}>
-              <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScan®
-              </Link>
-              <Link to="/contact" className="buttonSecondary" data-cta="cta.cases.final.book_call">
-                Book a discovery call
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Guidance and related services */}
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Start small: Discovery call → ClarityScan → Gate 1 pilot.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          To speed things up: share your goals, timelines, constraints, and how you measure success today.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Planning an event or cohort? <Link to="/contact">Co host a session</Link>.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
+          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          See more examples in <Link to="/case-studies">Case studies</Link>.
+        </p>
+
+        {/* Standardized Final CTA */}
+        <FinalCta
+          id="fundapec-final-cta"
+          ariaLabelledbyId="fundapec-final-cta-title"
+          title="Take the first step"
+          body="Get your baseline in 15 to 20 minutes."
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
+          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.final.book_call' }}
+          ctaNote="No prep required."
+        />
       </main>
     </Layout>
   );

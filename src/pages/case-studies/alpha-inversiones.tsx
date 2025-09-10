@@ -1,58 +1,156 @@
-﻿import React, { type ReactNode } from 'react';
+﻿// src/pages/case-studies/alpha-inversiones.tsx
+import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
+import FinalCta from '../../components/FinalCta';
 
 export default function CaseAlphaInversiones(): ReactNode {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
+      { '@type': 'ListItem', position: 2, name: 'Case studies', item: 'https://doulab.net/case-studies' },
+      { '@type': 'ListItem', position: 3, name: 'Alpha Inversiones: Alpha Escalable and Alpha en Línea', item: 'https://doulab.net/case-studies/alpha-inversiones' },
+    ],
+  };
+
+  const caseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CaseStudy',
+    name: 'Alpha Inversiones: Alpha Escalable and Alpha en Línea',
+    url: 'https://doulab.net/case-studies/alpha-inversiones',
+    inLanguage: 'en',
+    description:
+      'Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea.',
+    image: 'https://doulab.net/img/social/og-alpha-inversiones.jpg',
+    primaryImageOfPage: 'https://doulab.net/img/social/og-alpha-inversiones.jpg',
+    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: 'https://doulab.net' },
+    about: {
+      '@type': 'Organization',
+      name: 'Alpha Inversiones',
+      url: 'https://alphainversiones.com.do/',
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Doulab',
+      url: 'https://doulab.net',
+    },
+  };
+
   return (
     <Layout
-      title="Alpha Inversiones: Alpha Escalable & Alpha en Línea — Case Study | Doulab"
-      description="Evidence-led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea."
+      title="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study | Doulab"
+      description="Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/case-studies/alpha-inversiones" />
+        <meta
+          property="og:title"
+          content="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study | Doulab"
+        />
+        <meta
+          property="og:description"
+          content="Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea."
+        />
         {/* Prefer a 1200×630 brand social card for this page */}
         <meta property="og:image" content="https://doulab.net/img/social/og-alpha-inversiones.jpg" />
-        <meta property="og:image:alt" content="Alpha Inversiones — program and delivery snapshots." />
+        <meta property="og:image:alt" content="Alpha Inversiones, program and delivery snapshots." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
+
+        {/* JSON-LD */}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(caseSchema)}</script>
+
+        {/* Hero LCP preload (React camelCase) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/alpha-hero.jpg"
+          imageSrcSet="/img/alpha-hero.avif 1x, /img/alpha-hero.webp 1x, /img/alpha-hero.jpg 1x"
+          imageSizes="(max-width: 700px) 100vw, 600px"
+          fetchPriority="high"
+        />
       </Head>
 
-      <main className="container">
+      <main>
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem' }}>
-          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">All case studies</Link>
+        <nav
+          aria-label="Breadcrumb"
+          className="microcopy"
+          style={{ marginTop: '1rem', marginBottom: '0.25rem' }}
+        >
+          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">
+            All case studies
+          </Link>
         </nav>
 
         {/* Two-column standardized hero */}
         <Hero
-          title="Alpha Inversiones: Alpha Escalable & Alpha en Línea"
-          subtitle="Evidence-led delivery with clear checkpoints and measurable outcomes."
-          body="A multi-year program to scale sustainably—embedding foresight, disciplined delivery, and customer experience across the organization."
+          title="Alpha Inversiones: Alpha Escalable and Alpha en Línea"
+          subtitle="Evidence led delivery with clear checkpoints and measurable outcomes."
+          body="A multi year program to scale, with foresight, disciplined delivery, and better customer experience."
           imageBase="/img/alpha-hero"
-          imageAlt="Alpha Inversiones — program and delivery snapshots."
+          imageAlt="Alpha Inversiones, program and delivery snapshots."
           width={1200}
           height={720}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.hero.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          primaryCta={{
+            to: '/services/clarityscan',
+            label: 'Start with ClarityScan®',
+            dataCta: 'cta.cases.hero.clarityscan',
+            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+          }}
+          secondaryCta={{
+            to: '/contact',
+            label: 'Book a discovery call',
+            dataCta: 'cta.cases.hero.book_call',
+            ariaLabel: 'Book a discovery call',
+          }}
+          ctaNote="Get your baseline in 15 to 20 minutes. No prep required."
           eager
         />
+
+        {/* At a glance */}
+        <section className="section" aria-labelledby="glance-title">
+          <h2 id="glance-title">At a glance</h2>
+          <ul>
+            <li><strong>Sector:</strong> Capital markets, regulated</li>
+            <li><strong>Focus:</strong> Transformation program and omnichannel experience</li>
+            <li><strong>Approach:</strong> Evidence first, gates and cadence, CX and BI as transversal capabilities</li>
+            <li><strong>Result:</strong> A scalable program, stronger governance, and better customer journeys</li>
+          </ul>
+        </section>
 
         {/* Context */}
         <section className="section" aria-labelledby="context-title">
           <h2 id="context-title">Context</h2>
           <p>
-            Alpha Inversiones, a leading firm in the Dominican Republic’s capital markets, needed to scale sustainably while modernizing culture,
-            structure, and customer experience. What began as a goal to reduce acquisition costs expanded into a company-wide effort to build a
-            future-ready, innovation-driven enterprise—connecting strategy, data, and delivery.
+            Alpha Inversiones, a leading firm in the Dominican Republic capital markets, needed to scale sustainably
+            while modernizing culture, structure, and customer experience. What began as a goal to reduce acquisition
+            costs grew into a company wide effort to build a future ready, innovation driven enterprise that connects
+            strategy, data, and delivery.
           </p>
           <p>
-            Together we launched <strong>Alpha Escalable</strong>, a transformation program focused on foresight, disciplined project execution,
-            and evidence-based decisions. In parallel, we supported the evolution of <strong>Alpha en Línea</strong>—the firm’s website and app—
-            as part of an integrated, omnichannel customer journey.
+            Together we launched <strong>Alpha Escalable</strong>, a transformation program focused on foresight,
+            disciplined project execution, and evidence based decisions. In parallel, we supported the evolution of
+            <strong> Alpha en Línea</strong>, the website and app, as part of an integrated, omnichannel customer journey.
           </p>
+          <p className="microcopy">
+            Alpha Escalable in one line: clearer gates, faster decisions, better delivery.
+          </p>
+        </section>
+
+        {/* Key risks and mitigations */}
+        <section className="section" aria-labelledby="risks-title">
+          <h2 id="risks-title">Key risks and mitigations</h2>
+          <ul>
+            <li><strong>Adoption risk:</strong> Mitigated with interview tests and staged pilots.</li>
+            <li><strong>Delivery risk:</strong> Mitigated with gate reviews, owners, and weekly cadence.</li>
+            <li><strong>Alignment risk:</strong> Mitigated with evidence packs and an innovation committee.</li>
+          </ul>
         </section>
 
         {/* What we did */}
@@ -60,13 +158,37 @@ export default function CaseAlphaInversiones(): ReactNode {
           <h2 id="work-title">What we did</h2>
           <ul>
             <li>
-              <strong>Baseline & direction:</strong> Ran a ClarityScan diagnostic to surface risks, align stakeholders, and sequence work.
+              <strong>Baseline and direction:</strong> Ran a ClarityScan diagnostic to surface risks, align stakeholders, and sequence the work.
             </li>
             <li>
-              <strong>Evidence first:</strong> Used <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to frame problems, define segments and value propositions, and align OKRs.
+              <strong>Evidence first:</strong> Used{' '}
+              <Link to="/docs/research-resources/microcanvas">MicroCanvas</Link> to frame problems, define segments and value propositions,
+              and align OKRs.
+              <p className="microcopy">
+                Evidence pack: problem and assumptions, segment and JTBD, experiment plan and results,
+                artifact links, decision memo, next step.
+              </p>
+              <p className="microcopy">
+                Insights are coded into a signal library to inform next experiments and the roadmap.
+              </p>
             </li>
             <li>
-              <strong>Delivery system:</strong> Installed cadence, gate reviews, decision owners, and stage-appropriate KPIs.
+              <strong>Delivery system:</strong> Installed cadence, gate reviews, decision owners, and stage appropriate KPIs.
+              <ul>
+                <li><strong>Gate 1:</strong> Go or No Go after discovery, based on evidence packs.</li>
+                <li><strong>Gate 2:</strong> Go or No Go before scale, based on adoption and risk.</li>
+              </ul>
+              <p className="microcopy">
+                Governance model: <strong>RACI</strong> per initiative; <strong>weekly</strong> cadence; <strong>gate checklist</strong> per stage;
+                <strong> decision log</strong> and <strong>risk register</strong> for traceability.
+              </p>
+              <p className="microcopy">
+                KPI tree by stage: Discovery, signal quality and interview coverage; Validation, conversion to key action and time to decision;
+                Development, cycle time and escaped defects; Scale, adoption, NPS, and unit economics.
+              </p>
+              <p className="microcopy">
+                Artifacts: program charter, gate checklist, RACI, evidence pack template, weekly cadence.
+              </p>
             </li>
             <li>
               <strong>Governance:</strong> Helped create the innovation committee to prioritize initiatives and monitor progress.
@@ -75,61 +197,78 @@ export default function CaseAlphaInversiones(): ReactNode {
         </section>
 
         {/* Outcomes */}
-        <section className="section" aria-labelledby="outcomes-title">
+        <section className="section" id="outcomes" aria-labelledby="outcomes-title">
           <h2 id="outcomes-title">Outcomes</h2>
 
-          <h3>Training &amp; capacity building</h3>
+          <h3>Training and capacity building</h3>
           <ul>
-            <li>30 employees trained in the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework (MCF 2.1)</Link> via structured workshops.</li>
-            <li>12-week Innovation Maturity Model Program (IMM-P) cycles across discovery, validation, and development over 24 months.</li>
+            <li>Trained 30 employees in the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework, MCF 2.1</Link> through structured workshops.</li>
+            <li>Ran 12 week Innovation Maturity Model Program, IMM P, cycles across discovery, validation, and development over 24 months.</li>
           </ul>
 
           <h3>Innovation pipeline</h3>
           <ul>
-            <li>6 project pitches at the end of IMM-P, tackling scalability, digital experience, and customer journey.</li>
-            <li>Initiatives spanned CX, omnichannel, data-driven decision-making, and project management culture (PMO).</li>
+            <li>Six project pitches at the end of IMM P, focused on scalability, digital experience, and the customer journey.</li>
+            <li>Initiatives spanned CX, omnichannel, data driven decision making, and project management culture, PMO.</li>
           </ul>
 
           <h3>Organizational transformation</h3>
           <ul>
-            <li>Shift from task-based work to role-based execution; from static planning to foresight + project execution.</li>
-            <li>Supported launch of a PMO and creation of CX and Business Intelligence functions as transversal areas.</li>
-            <li>Improved balance of BAU operations with building scalable, future-oriented capabilities.</li>
+            <li>Shifted from task based work to role based execution, and from static planning to foresight and project execution.</li>
+            <li>Supported the launch of a PMO and the creation of CX and Business Intelligence as transversal areas.</li>
+            <li>Improved the balance of BAU operations with building scalable, future oriented capabilities.</li>
           </ul>
 
           <h3>Strategic impact</h3>
           <ul>
-            <li>Program evolved into <strong>Alpha Escalable</strong>, integrating culture, structure, processes, and technology.</li>
-            <li>Positioned the firm to scale sustainably, improve CX, and adopt innovation as a core capability.</li>
-            <li>Guided decision-making on CRM transformation and on the new <strong>Alpha en Línea</strong> website and app projects.</li>
+            <li><strong>Integrated</strong> culture, structure, processes, and technology into Alpha Escalable.</li>
+            <li><strong>Positioned</strong> the firm to scale, improve CX, and build innovation as a core skill.</li>
+            <li><strong>Guided</strong> decisions on the CRM and the new <strong>Alpha en Línea</strong> website and app.</li>
           </ul>
+
+          <p className="microcopy">
+            Tracked families: decision latency, cycle time, adoption and conversion, and capability growth.
+          </p>
         </section>
 
         {/* Why it mattered */}
         <section className="section" aria-labelledby="why-title">
           <h2 id="why-title">Why it mattered</h2>
           <ul>
-            <li>Aligned leadership and teams around a common growth program (Alpha Escalable) and evidence-led decisions.</li>
-            <li>Installed durable capability—governance, roles, and rituals—that sustains delivery beyond individual projects.</li>
+            <li>Aligned leadership and teams around a common growth program and evidence led decisions.</li>
+            <li>Installed durable capability, governance, roles, and rituals that sustain delivery beyond individual projects.</li>
             <li>Improved customer experience by connecting strategy, data, and delivery into an integrated journey.</li>
           </ul>
         </section>
 
-        {/* Final CTA */}
-        <section className="section" aria-labelledby="cta-title">
-          <div className="finalCta">
-            <h2 id="cta-title">Take the first step</h2>
-            <p>Get your baseline in 15–20 minutes.</p>
-            <div className="heroCtas" style={{ justifyContent: 'center' }}>
-              <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.cases.final.clarityscan">
-                Start with ClarityScan®
-              </Link>
-              <Link to="/contact" className="buttonSecondary" data-cta="cta.cases.final.book_call">
-                Book a discovery call
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Guidance and related services */}
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Start small: Discovery call → ClarityScan → Gate 1 pilot.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Helpful to share: goals, timelines, constraints, and how you measure success today.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
+          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
+        </p>
+        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+          See more examples in <Link to="/case-studies">Case studies</Link>.
+        </p>
+
+        {/* Standardized Final CTA */}
+        <FinalCta
+          id="alpha-final-cta"
+          ariaLabelledbyId="alpha-final-cta-title"
+          title="Take the first step"
+          body="Get your baseline in 15 to 20 minutes."
+          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
+          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.final.book_call' }}
+          ctaNote="No prep required."
+        />
       </main>
     </Layout>
   );

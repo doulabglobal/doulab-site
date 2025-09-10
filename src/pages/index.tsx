@@ -22,15 +22,9 @@ import CircleSlash from 'lucide-react/dist/esm/icons/circle-slash';
 import UserX from 'lucide-react/dist/esm/icons/user-x';
 import AlertOctagon from 'lucide-react/dist/esm/icons/alert-octagon';
 import Frown from 'lucide-react/dist/esm/icons/frown';
-import LineChart from 'lucide-react/dist/esm/icons/line-chart';
 import Eye from 'lucide-react/dist/esm/icons/eye';
 import ChevronLeft from 'lucide-react/dist/esm/icons/chevron-left';
 import ChevronRight from 'lucide-react/dist/esm/icons/chevron-right';
-
-// Docs data types (minimal)
-type DocMeta = { id: string; title: string; description?: string; permalink: string; tags?: string[] };
-type DocsVersion = { isLast?: boolean; docs: DocMeta[] };
-type DocsPluginData = { versions: DocsVersion[] };
 
 // Blog item (from RSS)
 type BlogItem = { title: string; href: string; description?: string; external: boolean; image?: string };
@@ -53,12 +47,24 @@ function ProblemSection() {
   const prefersReduced = usePrefersReducedMotion();
   const reelRef = useRef<HTMLDivElement | null>(null);
   const reelId = 'problem-reel';
+  const hintId = 'problem-reel-hint';
 
   const scrollByAmount = (dir: 'prev' | 'next') => {
     const el = reelRef.current;
     if (!el) return;
     const amount = Math.max(280, el.clientWidth * 0.9) * (dir === 'prev' ? -1 : 1);
     el.scrollBy({ left: amount, behavior: prefersReduced ? 'auto' : 'smooth' });
+  };
+
+  const onKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      scrollByAmount('prev');
+    }
+    if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      scrollByAmount('next');
+    }
   };
 
   type Problem = {
@@ -76,58 +82,58 @@ function ProblemSection() {
       {
         Icon: AlertTriangle,
         cause: "Innovation isn't embedded as a cultural value",
-        effect: 'Change meets resistance; efforts feel sporadic and engagement stays low.',
-        metric: 'Global engagement ~20–23%, indicating persistent culture headwinds.',
+        effect: 'Change meets resistance, efforts feel sporadic and engagement stays low.',
+        metric: 'Global engagement about 20 to 23 percent, indicating persistent culture headwinds.',
         sourceHref:
           'https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx',
-        sourceLabel: 'Gallup — State of the Global Workplace 2024',
+        sourceLabel: 'Gallup, State of the Global Workplace 2024',
         pillar: 'Culture + Innovation Mindset',
       },
       {
         Icon: FileWarning,
         cause: 'Strategy is treated as a static document',
-        effect: 'Short-term pivots multiply; OKRs drift and teams lose direction.',
-        metric: 'Roughly 70% of employees report misalignment with strategy.',
+        effect: 'Short-term pivots multiply, OKRs drift and teams lose direction.',
+        metric: 'Around 70% of employees report misalignment with strategy.',
         sourceHref:
           'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
-        sourceLabel: 'Forbes — When strategy fails to land',
+        sourceLabel: 'Forbes, When strategy fails to land',
         pillar: 'Planning Mindset + Leadership Development',
       },
       {
         Icon: EyeOff,
         cause: 'Decisions lack reliable evidence and testing',
         effect: 'ROI suffers as opinions outrun data and validated learning.',
-        metric: 'Data-driven orgs are more likely to improve decisions.',
+        metric: 'Data-driven organizations are more likely to improve decisions.',
         sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-        sourceLabel: 'HBS Online — Data-driven decisions',
+        sourceLabel: 'HBS Online, Data-driven decisions',
         pillar: 'Evidence-Based Decision-Making',
       },
       {
         Icon: CircleSlash,
         cause: 'Process debt compounds across teams',
-        effect: 'Work stalls; value delivery slows as exceptions become the norm.',
+        effect: 'Work stalls, value delivery slows as exceptions become the norm.',
         metric: 'Hidden costs surface as throughput and quality degrade.',
         sourceHref:
           'https://www.mckinsey.com/capabilities/operations/our-insights/reducing-complexity-with-operational-excellence',
-        sourceLabel: 'McKinsey — Reducing complexity',
+        sourceLabel: 'McKinsey, Reducing complexity',
         pillar: 'Operating Model + Delivery',
       },
       {
         Icon: UserX,
         cause: 'Customers are not clearly defined or prioritized',
-        effect: 'Solutions miss the mark; uptake and retention suffer.',
+        effect: 'Solutions miss the mark, uptake and retention suffer.',
         metric: 'Teams move without shared understanding of users.',
         sourceHref: 'https://www.intercom.com/blog/customer-segmentation/',
-        sourceLabel: 'Intercom — Segmentation primer',
+        sourceLabel: 'Intercom, Segmentation primer',
         pillar: 'Segmentation + JTBD',
       },
       {
         Icon: AlertOctagon,
         cause: 'Risk is untracked across portfolio',
-        effect: 'Effort piles into low-confidence bets; timelines slip.',
+        effect: 'Effort piles into low-confidence bets, timelines slip.',
         metric: 'Governance lacks clear gates, owners, or evidence packs.',
         sourceHref: 'https://www.atlassian.com/agile/project-management/risk-management',
-        sourceLabel: 'Atlassian — Risk management',
+        sourceLabel: 'Atlassian, Risk management',
         pillar: 'Governance + Gate Reviews',
       },
       {
@@ -137,7 +143,7 @@ function ProblemSection() {
         metric: 'Dashboards track vanity metrics over learning or ROI.',
         sourceHref:
           'https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf',
-        sourceLabel: 'Accenture — Value untangled',
+        sourceLabel: 'Accenture, Value untangled',
         pillar: 'Business Intelligence Maturity',
       },
       {
@@ -147,7 +153,7 @@ function ProblemSection() {
         metric: 'Foresight improves resilience and long-term performance.',
         sourceHref:
           'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
-        sourceLabel: 'WEF — Why foresight matters',
+        sourceLabel: 'WEF, Why foresight matters',
         pillar: 'Foresight + Strategic Anticipation',
       },
     ],
@@ -158,8 +164,8 @@ function ProblemSection() {
     <section className="section" id="problems" aria-labelledby="problem-title">
       <h2 id="problem-title">The Problem</h2>
       <p className="sectionLead">
-        Entrepreneurship and innovation are hard—until you make them a repeatable process. Below are
-        common failure patterns we help teams overcome.
+        Entrepreneurship and innovation are hard, until you make them a repeatable process. Below are
+        common patterns we fix.
       </p>
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}>
@@ -181,7 +187,9 @@ function ProblemSection() {
           role="group"
           aria-roledescription="carousel"
           aria-label="Common problems carousel"
+          aria-describedby={hintId}
           tabIndex={0}
+          onKeyDown={onKeyDown}
         >
           {problems.map((item, idx) => {
             const Icon = item.Icon;
@@ -193,7 +201,7 @@ function ProblemSection() {
                 key={idx}
                 style={{ borderLeft: '4px solid var(--dl-indigo)' }}
               >
-                <Icon className="cardIcon" aria-hidden="true" />
+                <Icon className="cardIcon" aria-hidden={true} />
                 <h3>{item.cause}</h3>
                 <p><strong>{item.effect}</strong></p>
                 <p><em>{item.metric}</em></p>
@@ -216,25 +224,27 @@ function ProblemSection() {
           data-cta="cta.home.problem.next"
           onClick={() => scrollByAmount('next')}
         >
-          Next <ChevronRight size={18} aria-hidden="true" />
+          Next <ChevronRight size={18} aria-hidden={true} />
         </button>
       </div>
 
-      <p className="microcopy" aria-hidden="true">Hint: scroll horizontally →</p>
+      <p id={hintId} className="microcopy">Hint, use left and right arrows or scroll horizontally</p>
 
       {/* Centered follow-up block + CTAs */}
       <div style={{ textAlign: 'center' }}>
-        <p className="sectionLead">If several resonate, we can help.</p>
-        <p className="microcopy">Start small—get a quick baseline.</p>
+        <p className="sectionLead">If these resonate, start with a quick baseline.</p>
+        <p className="microcopy">Get your baseline in 15 to 20 minutes, do not lose another cycle.</p>
         <div className="heroCtas" style={{ justifyContent: 'center' }}>
           <Link
             to="/services/clarityscan"
             className="buttonPrimary"
             data-cta="cta.home.problem.clarityscan"
-            aria-label="Start with ClarityScan — diagnostics baseline"
+            aria-label="Start with ClarityScan, diagnostics baseline"
           >
             Start with ClarityScan®
           </Link>
+        </div>
+        <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '.25rem' }}>
           <Link to="/contact" className="buttonSecondary" data-cta="cta.home.problem.book_call">
             Book a discovery call
           </Link>
@@ -248,18 +258,18 @@ function ServicesSection() {
   return (
     <section className="section" id="services" aria-labelledby="services-title">
       <h2 id="services-title">Our Service Pillars</h2>
-      <p className="sectionLead">Pragmatic ways we remove risk and accelerate outcomes.</p>
+      <p className="sectionLead">Practical ways to reduce risk and speed outcomes.</p>
       <div className="cardGrid">
         <div className="card">
-          <Search className="cardIcon" aria-hidden="true" />
-          <h3>Diagnostics: Know Where You Stand</h3>
+          <Search className="cardIcon" aria-hidden={true} />
+          <h3>Diagnostics, Know Where You Stand</h3>
           <p>Map innovation maturity and pinpoint gaps with an evidence-based baseline.</p>
           <div className="cardFooter">
             <Link
               to="/services/clarityscan"
               className="cardCta"
               data-cta="cta.home.services.clarityscan"
-              aria-label="Start with ClarityScan — diagnostics baseline"
+              aria-label="Start with ClarityScan, diagnostics baseline"
             >
               Start with ClarityScan® →
             </Link>
@@ -267,8 +277,8 @@ function ServicesSection() {
         </div>
 
         <div className="card">
-          <Lightbulb className="cardIcon" aria-hidden="true" />
-          <h3>Workshops: Spark Aligned Action</h3>
+          <Lightbulb className="cardIcon" aria-hidden={true} />
+          <h3>Workshops, Spark Aligned Action</h3>
           <p>Focused sessions that align teams, unlock decisions, and turn strategy into steps.</p>
           <div className="cardFooter">
             <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.home.services.workshops">
@@ -278,10 +288,10 @@ function ServicesSection() {
         </div>
 
         <div className="card">
-          <Layers className="cardIcon" aria-hidden="true" />
-          <h3>Programs: Build Innovation Capacity</h3>
+          <Layers className="cardIcon" aria-hidden={true} />
+          <h3>Programs, Build Innovation Capacity</h3>
           <p>
-            Install culture, process, and metrics to scale innovation reliably with{' '}
+            Install culture, process, and metrics to scale innovation reliably with clear gates and measurable ROI using{' '}
             <Link to="/services/innovation-maturity">IMM-P®</Link>.
           </p>
           <div className="cardFooter">
@@ -292,18 +302,18 @@ function ServicesSection() {
         </div>
 
         <div className="card">
-          <Users className="cardIcon" aria-hidden="true" />
-          <h3>Coaching & Mentoring</h3>
+          <Users className="cardIcon" aria-hidden={true} />
+          <h3>Coaching and Mentoring</h3>
           <p>Targeted 1:1 or group support to remove blockers and sustain momentum.</p>
           <div className="cardFooter">
             <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">
-              Explore coaching & mentoring →
+              Explore coaching and mentoring →
             </Link>
           </div>
         </div>
 
         <div className="card">
-          <Radar className="cardIcon" aria-hidden="true" />
+          <Radar className="cardIcon" aria-hidden={true} />
           <h3>Future Studies</h3>
           <p>Foresight research and training to spot trends and inform resilient choices.</p>
           <div className="cardFooter">
@@ -319,13 +329,13 @@ function ServicesSection() {
 
 function NumbersStrip() {
   const items = [
-    { kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners (2024)' },
-    { kpi: '25+', label: 'institutions/year supported', note: 'program capacity from 2025 onward' },
-    { kpi: '2–4×/week', label: 'sessions delivered for 12 months', note: 'scaled capability build-out' },
+    { kpi: '7', label: 'innovation labs co-created', note: 'with public sector partners in 2024' },
+    { kpi: '25+', label: 'institutions per year supported', note: 'program capacity from 2025 onward' },
+    { kpi: '2 to 4 per week', label: 'sessions delivered for 12 months', note: 'scaled capability build out' },
   ];
   return (
     <section className="section" id="proof-numbers" aria-labelledby="numbers-title">
-      <h2 id="numbers-title">Proof — by the numbers</h2>
+      <h2 id="numbers-title">Proof, by the numbers</h2>
       <div className="cardGrid">
         {items.map((x, i) => (
           <div className="card" key={i}>
@@ -335,6 +345,7 @@ function NumbersStrip() {
           </div>
         ))}
       </div>
+      <p className="microcopy">Notes, counts reflect 2024 to 2025 public sector programs and internal delivery logs.</p>
     </section>
   );
 }
@@ -380,7 +391,6 @@ function useLatestBlogPosts(limit = 3) {
             // keep defaults
           }
 
-          // Prefer media:content, enclosure[url], image
           const media = n.querySelector('media\\:content');
           const enclosure = n.querySelector('enclosure');
           const imageEl = n.querySelector('image');
@@ -413,6 +423,53 @@ function useLatestBlogPosts(limit = 3) {
   return { items, loading };
 }
 
+// --- NEW: tolerant whitepaper accessor to avoid TS type mismatches ---
+type AnyDoc = {
+  id?: string;
+  title?: string;
+  description?: string;
+  permalink?: string;
+  tags?: string[];
+  frontMatter?: { tags?: string[] };
+};
+
+function useLatestWhitepapers(limit = 3) {
+  const allDocsData = useAllDocsData() as any; // shape differs across Docusaurus versions
+  const defaultPluginId = (allDocsData && Object.keys(allDocsData)[0]) || 'default';
+  const plugin = allDocsData?.[defaultPluginId];
+
+  const latestVersion =
+    plugin?.versions?.find((v: any) => v?.isLast) ?? plugin?.versions?.[0];
+
+  const docs: AnyDoc[] = Array.isArray(latestVersion?.docs) ? latestVersion.docs : [];
+
+  const getTags = (d: AnyDoc) =>
+    (Array.isArray(d.tags) ? d.tags : []) ||
+    (Array.isArray(d.frontMatter?.tags) ? d.frontMatter?.tags : []) ||
+    [];
+
+  const whitepapers = docs.filter((d) => {
+    const tags = getTags(d).map((t) => String(t).toLowerCase());
+    const p = (d.permalink ?? '').toLowerCase();
+    const i = (d.id ?? '').toLowerCase();
+    return (
+      tags.includes('whitepaper') ||
+      p.includes('/whitepapers/') ||
+      p.endsWith('/whitepaper') ||
+      i.includes('whitepaper')
+    );
+  });
+
+  return whitepapers
+    .sort((a, b) => String(b.id ?? b.permalink ?? '').localeCompare(String(a.id ?? a.permalink ?? '')))
+    .slice(0, limit)
+    .map((d) => ({
+      title: d.title ?? 'Untitled',
+      description: d.description ?? '',
+      permalink: d.permalink ?? '#',
+    }));
+}
+
 function ResearchResourcesSection() {
   // 1) Fixed MCF card
   const mcfCard = (
@@ -422,7 +479,7 @@ function ResearchResourcesSection() {
         <source srcSet="/img/mcf-card.webp" type="image/webp" />
         <img
           src="/img/mcf-card.jpg"
-          alt="MicroCanvas Framework v2.1 — modular canvases for innovation."
+          alt="MicroCanvas Framework v2.1, modular canvases for innovation."
           width={1200}
           height={720}
           loading="lazy"
@@ -430,16 +487,16 @@ function ResearchResourcesSection() {
           style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
         />
       </picture>
-      <Lightbulb className="cardIcon" aria-hidden="true" />
+      <Lightbulb className="cardIcon" aria-hidden={true} />
       <h3>MicroCanvas Framework v2.1</h3>
       <p>Open toolkit to diagnose, design, and scale innovation with reusable canvases.</p>
       <p className="microcopy">
-        Learn the framework in our docs: <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link>.
+        Learn the framework in our docs, <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link>.
       </p>
       <div className="cardFooter">
         <a
           className="cardCta"
-          href="https://themicrocanvas.com"
+          href="https://themicrocanvas.com/?utm_source=doulab&utm_medium=site_home&utm_campaign=research_card"
           target="_blank"
           rel="noopener noreferrer"
           data-cta="cta.home.research.mcf"
@@ -453,13 +510,8 @@ function ResearchResourcesSection() {
   // 2) Latest blog entries (RSS)
   const { items: latestBlog, loading: blogLoading } = useLatestBlogPosts(3);
 
-  // 3) Latest whitepapers from docs (tag=whitepaper)
-  const allDocsData = useAllDocsData();
-  const docsPluginData = allDocsData?.['default'] as unknown as DocsPluginData | undefined;
-  const latestVersion = docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
-  const docs = latestVersion?.docs ?? [];
-  const whitepapers = docs.filter((doc) => (doc.tags ?? []).includes('whitepaper'));
-  const latestWhitepapers = [...whitepapers].sort((a, b) => b.id.localeCompare(a.id)).slice(0, 3);
+  // 3) Latest whitepapers — tolerant to Docusaurus client type shape
+  const latestWhitepapers = useLatestWhitepapers(3);
 
   return (
     <section className="section" id="research" aria-labelledby="research-title">
@@ -471,84 +523,103 @@ function ResearchResourcesSection() {
         {mcfCard}
 
         {/* 2) Top 3 blog posts (client-only) */}
-        {blogLoading ? (
-          <div key="blog-loading" className="card" aria-busy="true">
-            <Lightbulb className="cardIcon" aria-hidden="true" />
-            <h3>Loading latest from the blog…</h3>
-            <p className="microcopy">Fetching recent posts.</p>
-          </div>
-        ) : latestBlog.length === 0 ? (
-          <div key="blog-fallback" className="card">
-            <Lightbulb className="cardIcon" aria-hidden="true" />
-            <h3>Latest from the blog</h3>
-            <p>Stories, methods, and updates from the work.</p>
+        <div aria-live="polite" style={{ display: 'contents' }}>
+          {blogLoading ? (
+            <div key="blog-loading" className="card" role="status" aria-busy="true">
+              <Lightbulb className="cardIcon" aria-hidden={true} />
+              <h3>Loading latest from the blog…</h3>
+              <p className="microcopy">Fetching recent posts.</p>
+            </div>
+          ) : latestBlog.length === 0 ? (
+            <div key="blog-fallback" className="card">
+              <Lightbulb className="cardIcon" aria-hidden={true} />
+              <h3>Latest from the blog</h3>
+              <p>Stories, methods, and updates from the work.</p>
+              <div className="cardFooter">
+                <Link className="cardCta" to="/blog" data-cta="cta.home.research.blog.fallback">
+                  Visit the blog →
+                </Link>
+              </div>
+            </div>
+          ) : (
+            latestBlog.map((post) => (
+              <div key={post.href} className="card">
+                {post.image && (
+                  <img
+                    src={post.image}
+                    alt={`Blog, ${post.title}`}
+                    width={1200}
+                    height={630}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                  />
+                )}
+                <Lightbulb className="cardIcon" aria-hidden={true} />
+                <h3>{post.title}</h3>
+                {post.description && <p>{post.description}</p>}
+                <div className="cardFooter">
+                  {post.external ? (
+                    <a
+                      className="cardCta"
+                      href={post.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cta="cta.home.research.blog.read"
+                    >
+                      Read post →
+                    </a>
+                  ) : (
+                    <Link
+                      className="cardCta"
+                      to={post.href}
+                      data-cta="cta.home.research.blog.read"
+                      aria-label={`Read ${post.title}`}
+                    >
+                      Read post →
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+
+        {/* 3) Top 3 whitepapers */}
+        {latestWhitepapers.length === 0 ? (
+          <div key="whitepaper-fallback" className="card">
+            <Layers className="cardIcon" aria-hidden={true} />
+            <h3>Latest from our research</h3>
+            <p>Whitepapers and technical notes from current projects.</p>
             <div className="cardFooter">
-              <Link className="cardCta" to="/blog" data-cta="cta.home.research.blog.fallback">
-                Visit the blog →
+              <Link
+                className="cardCta"
+                to="/docs/research-resources/"
+                data-cta="cta.home.research.whitepaper.fallback"
+              >
+                Explore research →
               </Link>
             </div>
           </div>
         ) : (
-          latestBlog.map((post) => (
-            <div key={post.href} className="card">
-              {post.image && (
-                <img
-                  src={post.image}
-                  alt={`${post.title} — cover`}
-                  width={1200}
-                  height={630}
-                  loading="lazy"
-                  decoding="async"
-                  style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
-                />
-              )}
-              <Lightbulb className="cardIcon" aria-hidden="true" />
-              <h3>{post.title}</h3>
-              {post.description && <p>{post.description}</p>}
+          latestWhitepapers.map((paper) => (
+            <div key={paper.permalink} className="card">
+              <Layers className="cardIcon" aria-hidden={true} />
+              <h3>{paper.title}</h3>
+              {paper.description && <p>{paper.description}</p>}
               <div className="cardFooter">
-                {post.external ? (
-                  <a
-                    className="cardCta"
-                    href={post.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    data-cta="cta.home.research.blog.read"
-                  >
-                    Read post →
-                  </a>
-                ) : (
-                  <Link
-                    className="cardCta"
-                    to={post.href}
-                    data-cta="cta.home.research.blog.read"
-                    aria-label={`Read ${post.title}`}
-                  >
-                    Read post →
-                  </Link>
-                )}
+                <Link
+                  className="cardCta"
+                  to={paper.permalink ?? '#'}
+                  data-cta="cta.home.research.whitepaper.read"
+                  aria-label={`Read ${paper.title}`}
+                >
+                  Read whitepaper →
+                </Link>
               </div>
             </div>
           ))
         )}
-
-        {/* 3) Top 3 whitepapers (docs) */}
-        {latestWhitepapers.map((paper) => (
-          <div key={paper.permalink} className="card">
-            <Layers className="cardIcon" aria-hidden="true" />
-            <h3>{paper.title}</h3>
-            {paper.description && <p>{paper.description}</p>}
-            <div className="cardFooter">
-              <Link
-                className="cardCta"
-                to={paper.permalink}
-                data-cta="cta.home.research.whitepaper.read"
-                aria-label={`Read ${paper.title}`}
-              >
-                Read whitepaper →
-              </Link>
-            </div>
-          </div>
-        ))}
       </div>
     </section>
   );
@@ -560,22 +631,22 @@ function PrinciplesSection() {
       <h2 id="principles-title">Our Principles</h2>
       <div className="cardGrid" style={{ marginTop: '0.5rem' }}>
         <div className="card">
-          <Layers className="cardIcon" aria-hidden="true" />
+          <Layers className="cardIcon" aria-hidden={true} />
           <h3>01. Modularity</h3>
           <p>We design systems and processes that remain flexible, adaptable, and scalable by default.</p>
         </div>
         <div className="card">
-          <Eye className="cardIcon" aria-hidden="true" />
+          <Eye className="cardIcon" aria-hidden={true} />
           <h3>02. Foresight</h3>
           <p>We help teams anticipate shifts and prepare credible options.</p>
         </div>
         <div className="card">
-          <Lightbulb className="cardIcon" aria-hidden="true" />
+          <Lightbulb className="cardIcon" aria-hidden={true} />
           <h3>03. Evidence</h3>
           <p>We favor decisions grounded in data, user feedback, and validated learning.</p>
         </div>
         <div className="card">
-          <Users className="cardIcon" aria-hidden="true" />
+          <Users className="cardIcon" aria-hidden={true} />
           <h3>04. Co-Creation</h3>
           <p>We partner with clients to co-create solutions for today’s and tomorrow’s needs.</p>
         </div>
@@ -585,9 +656,9 @@ function PrinciplesSection() {
 }
 
 export default function Home(): ReactNode {
-  const pageTitle = 'Innovation, Foresight & Repeatable Delivery — Doulab';
+  const pageTitle = 'Innovation, Foresight and Repeatable Delivery, Doulab';
   const description =
-    'We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes.';
+    'We help people and organizations make innovation repeatable and foresight practical, so strategy turns into sustainable outcomes. You will get a short baseline and a 30, 60, 90 plan.';
 
   return (
     <Layout title={pageTitle} description={description}>
@@ -597,21 +668,44 @@ export default function Home(): ReactNode {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content="https://doulab.net/img/social/default-og.jpg" />
-        <meta property="og:image:alt" content="Doulab — Innovation, foresight, and repeatable delivery." />
+        <meta property="og:image:alt" content="Doulab, Innovation, foresight, and repeatable delivery." />
         <meta name="twitter:card" content="summary_large_image" />
-        {/* Hero LCP preload (two-column Hero uses this base) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Doulab',
+            url: 'https://doulab.net/',
+            logo: 'https://doulab.net/img/logo.png',
+            sameAs: ['https://www.linkedin.com/company/doulab'],
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            url: 'https://doulab.net/',
+            potentialAction: {
+              '@type': 'SearchAction',
+              target: 'https://doulab.net/search?q={query}',
+              'query-input': 'required name=query',
+            },
+          })}
+        </script>
+        {/* Hero LCP preload */}
         <link
           rel="preload"
           as="image"
           href="/img/people-collage.png"
           imageSrcSet="/img/people-collage.avif 1x, /img/people-collage.webp 1x, /img/people-collage.png 1x"
           imageSizes="(max-width: 600px) 100vw, 600px"
+          fetchPriority="high"
         />
       </Head>
 
       {/* Standardized two-column hero */}
       <Hero
-        title="Innovation, Foresight & Repeatable Delivery"
+        title="Innovation, Foresight and Repeatable Delivery"
         subtitle="Innovation architecture, foresight, and coaching to shape tomorrow."
         body={description}
         imageBase="/img/people-collage"
@@ -620,10 +714,10 @@ export default function Home(): ReactNode {
           to: '/services/clarityscan',
           label: 'Start with ClarityScan®',
           dataCta: 'cta.home.hero.clarityscan',
-          ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
+          ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
         }}
         secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.hero.book_call' }}
-        ctaNote="Get your baseline in 15–20 minutes."
+        ctaNote="Get your baseline in 15 to 20 minutes."
       />
 
       <main>
@@ -639,10 +733,10 @@ export default function Home(): ReactNode {
           id="final-cta"
           ariaLabelledbyId="cta-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward."
+          body="Start with a quick diagnostic or book a discovery call. We track decision latency, cycle time, and capability growth. We will meet you where you are and co-create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.home.final.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.final.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          ctaNote="Get your baseline in 15 to 20 minutes."
         />
       </main>
     </Layout>

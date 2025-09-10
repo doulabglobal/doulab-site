@@ -9,6 +9,7 @@ import CalendarCheck from 'lucide-react/dist/esm/icons/calendar-check';
 import ClipboardList from 'lucide-react/dist/esm/icons/clipboard-list';
 import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check';
 import Clock from 'lucide-react/dist/esm/icons/clock';
+import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 
 const EMAIL = 'hello@doulab.net';
@@ -26,70 +27,83 @@ export default function Contact(): ReactNode {
     ],
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://doulab.net/contact' },
+    ],
+  };
+
   return (
     <Layout
-      title="Contact — Doulab"
-      description="Start a discovery call or send us a brief. Privacy-first, no third-party forms."
+      title="Contact | Doulab"
+      description="Start a discovery call or send us a brief. Privacy first, no third-party forms."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/contact" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Contact — Doulab" />
-        <meta
-          property="og:description"
-          content="Start a discovery call or send us a brief. Privacy-first, no third-party forms."
-        />
+        <meta property="og:title" content="Contact | Doulab" />
+        <meta property="og:description" content="Start a discovery call or send us a brief. Privacy first, no third-party forms." />
         <meta property="og:image" content="https://doulab.net/img/social/og-contact.jpg" />
-        <meta property="og:image:alt" content="Doulab — Contact" />
+        <meta property="og:image:alt" content="Doulab, Contact" />
         <meta name="twitter:card" content="summary_large_image" />
+
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+
+        {/* Hero LCP preload (React camelCase attrs) */}
+        <link
+          rel="preload"
+          as="image"
+          href="/img/contact-hero.jpg"
+          imageSrcSet="/img/contact-hero.avif 1x, /img/contact-hero.webp 1x, /img/contact-hero.jpg 1x"
+          imageSizes="(max-width: 700px) 100vw, 600px"
+          fetchPriority="high"
+        />
       </Head>
 
       <main>
-        {/* Hero */}
-        <section className="heroBanner" aria-labelledby="contact-hero-title">
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ flex: '1 1 820px' }}>
-              <h1 id="contact-hero-title" className="heroTitle">Contact Doulab</h1>
-              <p className="heroSubtitle" style={{ textAlign: 'justify' }}>Let’s scope a 20-minute discovery call.</p>
-              <p className="heroText">
-                We’re privacy-first: no external forms or ad pixels. Email us or share a brief — we’ll propose clear
-                next steps. <br />
-                We aim to reply within <strong>2 business days</strong>.
-              </p>
-              <div className="heroCtas">
-                <a
-                  className="buttonPrimary"
-                  href={`mailto:${EMAIL}?subject=Discovery%20call%20request&body=Hi%20Doulab%2C%20I%27d%20like%20to%20book%20a%2020-min%20discovery%20call.%20My%20goal%20is%20...`}
-                  data-cta="cta.contact.hero.email"
-                  aria-label="Email Doulab to request a discovery call"
-                >
-                  <Mail aria-hidden="true" style={{ width: 18, height: 18, marginRight: 6 }} />
-                  Email us
-                </a>
-                <Link className="buttonSecondary" to="/what-we-do" data-cta="cta.contact.hero.whatwedo">
-                  <ClipboardList aria-hidden="true" style={{ width: 18, height: 18, marginRight: 6 }} />
-                  What we do
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Standardized two-column hero */}
+        <Hero
+          title="Contact"
+          subtitle="Book a 20 minute discovery call."
+          body="We are privacy first, no external forms or ad pixels. Email us or share a brief, and we will propose clear next steps. We aim to reply within 2 business days."
+          imageBase="/img/contact-hero"
+          imageAlt="Contact Doulab"
+          width={1600}
+          height={900}
+          primaryCta={{
+          to: '/contact#email',
+          label: 'Email us',
+          dataCta: 'cta.contact.hero.email',
+          }}
+          secondaryCta={{
+            to: '/what-we-do',
+            label: 'What we do',
+            dataCta: 'cta.contact.hero.whatwedo',
+          }}
+          ctaNote="No prep required. We confirm a time and send a brief follow up."
+          id="contact-hero"
+          ariaLabelledbyId="contact-hero-title"
+          eager
+        />
 
         {/* Contact options */}
         <section className="section" id="options" aria-labelledby="options-title">
           <h2 id="options-title">How to reach us</h2>
           <p className="sectionLead">
-            Choose what works best for you — each option keeps your data private and gets you to a clear next step.
+            Choose what works best for you. Each option keeps your data private and gets you to a clear next step.
           </p>
           <div className="cardGrid">
             <article className="card" aria-labelledby="opt-discovery">
               <CalendarCheck className="cardIcon" aria-hidden="true" />
               <h3 id="opt-discovery">Book a discovery call</h3>
-              <p>20-minute intro to align on goals, scope, and constraints.</p>
+              <p>20 minute intro to align on goals, scope, and constraints.</p>
               <ul>
-                <li>Outcome: initial direction + next steps</li>
-                <li>Follow-up: written summary within 2 business days</li>
+                <li>Outcome: initial direction and next steps</li>
+                <li>Follow up: written summary within 2 business days</li>
               </ul>
               <div className="cardFooter">
                 <a
@@ -98,7 +112,7 @@ export default function Contact(): ReactNode {
                   data-cta="cta.contact.card.discovery_email"
                   aria-label="Email to request a discovery call time"
                 >
-                  Email for a time &rarr;
+                  Email for a time
                 </a>
               </div>
             </article>
@@ -106,10 +120,10 @@ export default function Contact(): ReactNode {
             <article className="card" aria-labelledby="opt-brief">
               <ClipboardList className="cardIcon" aria-hidden="true" />
               <h3 id="opt-brief">Send a short brief</h3>
-              <p>Share your context: goals, timelines, stakeholders, constraints.</p>
+              <p>Share your context, goals, timelines, stakeholders, and constraints.</p>
               <ul>
-                <li>Outcome: tailored options within 3–5 business days</li>
-                <li>Format: email or slide deck — your choice</li>
+                <li>Outcome: tailored options within 3 to 5 business days</li>
+                <li>Format: email or slide deck, your choice</li>
               </ul>
               <div className="cardFooter">
                 <a
@@ -118,22 +132,22 @@ export default function Contact(): ReactNode {
                   data-cta="cta.contact.card.brief_email"
                   aria-label="Email your project brief"
                 >
-                  Email your brief &rarr;
+                  Email your brief
                 </a>
               </div>
             </article>
 
             <article className="card" aria-labelledby="opt-privacy">
               <ShieldCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="opt-privacy">Privacy &amp; security</h3>
+              <h3 id="opt-privacy">Privacy and security</h3>
               <p>We keep things simple and private by default.</p>
               <ul>
                 <li>No Google tags or ad pixels</li>
                 <li>Cloudflare Web Analytics only</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="/docs/releases" data-cta="cta.contact.card.privacy_more">
-                  See what changed &rarr;
+                <Link className="cardCta" to="/docs/releases" data-cta="cta.contact.card.privacy_more" aria-label="See what changed">
+                  See what changed
                 </Link>
               </div>
             </article>
@@ -143,33 +157,33 @@ export default function Contact(): ReactNode {
         {/* What to expect */}
         <section className="section" id="process" aria-labelledby="process-title">
           <h2 id="process-title">What to expect</h2>
-          <p className="sectionLead">A light, gated path to clarity. You’ll always know what’s next.</p>
+          <p className="sectionLead">A light, gated path to clarity. You will always know what is next.</p>
           <div className="cardGrid">
             <article className="card" aria-labelledby="step1">
               <Clock className="cardIcon" aria-hidden="true" />
-              <h3 id="step1">1) Discovery (20 minutes)</h3>
-              <p>Share goals, constraints, and timing; align on success criteria.</p>
+              <h3 id="step1">1) Discovery, 20 minutes</h3>
+              <p>Share goals, constraints, and timing, and align on success criteria.</p>
               <ul>
-                <li>Output: summary + proposed next steps</li>
-                <li>Owner: your sponsor + Doulab lead</li>
+                <li>Output: summary and proposed next steps</li>
+                <li>Owner: your sponsor and Doulab lead</li>
               </ul>
             </article>
             <article className="card" aria-labelledby="step2">
               <ClipboardList className="cardIcon" aria-hidden="true" />
               <h3 id="step2">2) Light diagnostic</h3>
-              <p>Quick baseline (MCF 2.1 + IMM-P®) to pinpoint capability gaps.</p>
+              <p>Quick baseline, MCF 2.1 and IMM-P®, to pinpoint capability gaps.</p>
               <ul>
-                <li>Output: findings + options</li>
+                <li>Output: findings and options</li>
                 <li>Owner: joint working session</li>
               </ul>
             </article>
             <article className="card" aria-labelledby="step3">
               <PhoneCall className="cardIcon" aria-hidden="true" />
-              <h3 id="step3">3) Proposal (12+12 weeks)</h3>
+              <h3 id="step3">3) Proposal, 12+12 weeks</h3>
               <p>Phased plan with clear gates and measurable outcomes.</p>
               <ul>
                 <li>Output: plan, cadence, owners</li>
-                <li>Owner: exec sponsor + Doulab PM</li>
+                <li>Owner: exec sponsor and Doulab PM</li>
               </ul>
             </article>
           </div>
@@ -180,12 +194,12 @@ export default function Contact(): ReactNode {
           id="contact-final"
           ariaLabelledbyId="contact-final-title"
           title="Ready to talk?"
-          body="Send a brief or book a quick discovery call. We’ll propose a practical path forward."
+          body="Send a brief or book a quick discovery call. We will propose a practical path forward."
           primaryCta={{
-            href: `mailto:${EMAIL}?subject=Discovery%20call%20request`,
-            label: 'Email us',
-            dataCta: 'cta.contact.final.email',
-            ariaLabel: 'Email Doulab to request a discovery call',
+          to: '/contact#options',
+          label: 'Email us',
+          dataCta: 'cta.contact.hero.email',
+          ariaLabel: 'Jump to contact options',
           }}
           secondaryCta={{
             to: '/what-we-do',

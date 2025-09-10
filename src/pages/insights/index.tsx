@@ -8,6 +8,7 @@ import FinalCta from '../../components/FinalCta';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Newspaper from 'lucide-react/dist/esm/icons/newspaper';
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 
 type DocMeta = { id: string; title: string; description?: string; permalink: string; tags?: string[] };
@@ -16,8 +17,14 @@ type DocsPluginData = { versions: DocsVersion[] };
 
 type BlogItem = { title: string; link: string; pubDate: string; description: string };
 
-function useLatestBlogItems() {
+// ---------- adjustable limits ----------
+const BLOG_LIMIT = 3;          // set to 10 if desired
+const WHITEPAPER_LIMIT = 3;    // set to 10 if desired
+// --------------------------------------
+
+function useLatestBlogItems(limit = 3) {
   const [items, setItems] = useState<BlogItem[]>([]);
+  const [loading, setLoading] = useState(true);
   const rssHref = useBaseUrl('/blog/rss.xml');
   const atomHref = useBaseUrl('/blog/atom.xml');
 
@@ -31,27 +38,40 @@ function useLatestBlogItems() {
       return text.replace(/\s+/g, ' ').trim();
     };
 
-    const parseRSS = (xmlText: string): BlogItem[] => {
-      const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
-      const nodes = Array.from(doc.querySelectorAll('item'));
-      return nodes.slice(0, 3).map((n) => ({
-        title: n.querySelector('title')?.textContent ?? 'Untitled',
-        link: n.querySelector('link')?.textContent ?? '#',
-        pubDate: n.querySelector('pubDate')?.textContent ?? '',
-        description: clean(n.querySelector('description')?.textContent ?? ''),
-      }));
+    const sameOriginToRelative = (raw: string, origin: string) => {
+      try {
+        const u = new URL(raw, origin);
+        if (u.origin === origin) return u.pathname + (u.search || '') + (u.hash || '');
+        return u.toString();
+      } catch {
+        return raw;
+      }
     };
 
-    const parseAtom = (xmlText: string): BlogItem[] => {
+    const parseRSS = (xmlText: string, origin: string): BlogItem[] => {
+      const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+      const nodes = Array.from(doc.querySelectorAll('item'));
+      return nodes.slice(0, limit).map((n) => {
+        const rawLink = n.querySelector('link')?.textContent ?? '#';
+        return {
+          title: n.querySelector('title')?.textContent ?? 'Untitled',
+          link: sameOriginToRelative(rawLink, origin),
+          pubDate: n.querySelector('pubDate')?.textContent ?? '',
+          description: clean(n.querySelector('description')?.textContent ?? ''),
+        };
+      });
+    };
+
+    const parseAtom = (xmlText: string, origin: string): BlogItem[] => {
       const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
       const nodes = Array.from(doc.querySelectorAll('entry'));
-      return nodes.slice(0, 3).map((n) => {
+      return nodes.slice(0, limit).map((n) => {
         const linkEl = n.querySelector('link[rel="alternate"]') || n.querySelector('link');
-        const linkHref = linkEl?.getAttribute('href') ?? '#';
+        const rawLink = linkEl?.getAttribute('href') ?? '#';
         const summary = n.querySelector('summary')?.textContent ?? n.querySelector('content')?.textContent ?? '';
         return {
           title: n.querySelector('title')?.textContent ?? 'Untitled',
-          link: linkHref,
+          link: sameOriginToRelative(rawLink, origin),
           pubDate: n.querySelector('updated')?.textContent ?? n.querySelector('published')?.textContent ?? '',
           description: clean(summary),
         };
@@ -60,30 +80,45 @@ function useLatestBlogItems() {
 
     (async () => {
       try {
+        const origin = window.location.origin;
+
         let res = await fetch(rssHref, { cache: 'no-store' });
         if (res.ok) {
           const text = await res.text();
-          const parsed = parseRSS(text);
-          if (!cancelled && parsed.length) return setItems(parsed);
+          const parsed = parseRSS(text, origin);
+          if (!cancelled && parsed.length) {
+            setItems(parsed);
+            setLoading(false);
+            return;
+          }
         }
+
         res = await fetch(atomHref, { cache: 'no-store' });
         if (res.ok) {
           const text = await res.text();
-          const parsed = parseAtom(text);
-          if (!cancelled && parsed.length) return setItems(parsed);
+          const parsed = parseAtom(text, origin);
+          if (!cancelled && parsed.length) {
+            setItems(parsed);
+            setLoading(false);
+            return;
+          }
         }
       } catch {
         // silent; privacy-first client fetch
+      } finally {
+        if (!cancelled) setLoading(false);
       }
     })();
 
-    return () => { cancelled = true; };
-  }, [rssHref, atomHref]);
+    return () => {
+      cancelled = true;
+    };
+  }, [rssHref, atomHref, limit]);
 
-  return items;
+  return { items, loading };
 }
 
-function useLatestWhitepapers() {
+function useLatestWhitepapers(limit = 3) {
   const allDocsData = useAllDocsData();
   const docsPluginData = (allDocsData?.['default'] as unknown as DocsPluginData | undefined);
   const latestVersion = docsPluginData?.versions?.find((v) => v.isLast) ?? docsPluginData?.versions?.[0];
@@ -91,33 +126,63 @@ function useLatestWhitepapers() {
   return docs
     .filter((d) => (d.tags ?? []).includes('whitepaper'))
     .sort((a, b) => b.id.localeCompare(a.id))
-    .slice(0, 3);
+    .slice(0, limit);
 }
 
 export default function Insights(): ReactNode {
-  const blogItems = useLatestBlogItems();
-  const whitepapers = useLatestWhitepapers();
+  const { items: blogItems, loading: blogLoading } = useLatestBlogItems(BLOG_LIMIT);
+  const whitepapers = useLatestWhitepapers(WHITEPAPER_LIMIT);
+  const latestWhitepaper = whitepapers[0];
 
   const fmtDate = (d: string) => {
     const date = d ? new Date(d) : null;
-    return date ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit', timeZone: 'Europe/Zurich' }) : '';
+    return date
+      ? date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: '2-digit', timeZone: 'Europe/Zurich' })
+      : '';
   };
 
-  const isExternal = (href: string) => /^https?:\/\//i.test(href);
+  const getDocDate = (doc: DocMeta | undefined): string => {
+    if (!doc) return '';
+    const anyDoc = doc as unknown as { date?: string };
+    return anyDoc?.date ? fmtDate(anyDoc.date) : '';
+  };
+
+  const isExternal = (href: string) => {
+    try {
+      if (typeof window === 'undefined') return /^https?:\/\//i.test(href);
+      const u = new URL(href, window.location.origin);
+      return u.origin !== window.location.origin;
+    } catch {
+      return true;
+    }
+  };
 
   return (
     <Layout
-      title="Insights — Research & Resources | Doulab"
-      description="Research, resources, and whitepapers from Doulab — practical, testable, and open."
+      title="Insights, Research and Resources | Doulab"
+      description="Research, resources, and whitepapers from Doulab, practical, testable, and open."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/insights" />
-        <meta property="og:title" content="Insights — Research & Resources | Doulab" />
-        <meta property="og:description" content="Research, resources, and whitepapers from Doulab — practical, testable, and open." />
+        <meta property="og:title" content="Insights, Research and Resources | Doulab" />
+        <meta property="og:description" content="Research, resources, and whitepapers from Doulab, practical, testable, and open." />
         <meta property="og:image" content="https://doulab.net/img/social/og-insights.jpg" />
-        <meta property="og:image:alt" content="Doulab — Insights" />
+        <meta property="og:image:alt" content="Doulab, Insights" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
+
+        {/* Breadcrumb JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
+              { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://doulab.net/insights' },
+            ],
+          })}
+        </script>
+
         {/* Hero LCP preload */}
         <link
           rel="preload"
@@ -125,6 +190,7 @@ export default function Insights(): ReactNode {
           href="/img/hero-insights.jpg"
           imageSrcSet="/img/hero-insights.avif 1x, /img/hero-insights.webp 1x, /img/hero-insights.jpg 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
+          fetchPriority="high"
         />
       </Head>
 
@@ -132,31 +198,45 @@ export default function Insights(): ReactNode {
         {/* Standardized two-column hero */}
         <Hero
           title="Insights"
-          subtitle="Research & Resources — practical, testable, and open."
+          subtitle="Research and Resources, practical, testable, and open."
           body="Explore frameworks, whitepapers, and field notes to reduce risk and accelerate outcomes."
           imageBase="/img/hero-insights"
-          imageAlt="Insights — research and resources"
+          imageAlt="Insights, research and resources"
           width={1600}
           height={900}
-          primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.insights.hero.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.insights.hero.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          primaryCta={{
+            to: '/docs/research-resources/',
+            label: 'Browse Research and Resources',
+            dataCta: 'cta.insights.hero.research',
+            ariaLabel: 'Browse Research and Resources',
+          }}
+          secondaryCta={{ to: '/blog', label: 'Read the blog', dataCta: 'cta.insights.hero.blog', ariaLabel: 'Read the blog' }}
+          ctaNote="Get deeper context before you decide. ClarityScan is available below when you are ready."
           id="insights-hero"
           ariaLabelledbyId="insights-hero-title"
           eager
         />
 
-        {/* Highlights */}
-        <section className="section" id="highlights" aria-labelledby="highlights-title">
-          <h2 id="highlights-title">Highlights</h2>
+        {/* Anchor rail */}
+        <nav aria-label="Section navigation" className="microcopy" style={{ textAlign: 'center', marginTop: '.5rem' }}>
+          <a href="#start" style={{ marginRight: '.75rem' }} data-cta="cta.insights.anchor.start">Start here</a>
+          <a href="#whitepapers" style={{ marginRight: '.75rem' }} data-cta="cta.insights.anchor.whitepapers">Whitepapers</a>
+          <a href="#blog" style={{ marginRight: '.75rem' }} data-cta="cta.insights.anchor.blog">Blog</a>
+          <a href="#releases" data-cta="cta.insights.anchor.releases">Releases</a>
+        </nav>
+
+        {/* Start here (ordered: MicroCanvas, Blog, Whitepaper) */}
+        <section className="section" id="start" aria-labelledby="start-title">
+          <h2 id="start-title">Start here</h2>
           <div className="cardGrid">
-            <article className="card" aria-labelledby="insight-mcf-title">
+            {/* MicroCanvas Framework v2.1 */}
+            <article className="card" aria-labelledby="start-mcf-title">
               <picture>
                 <source srcSet="/img/mcf-card.avif" type="image/avif" />
                 <source srcSet="/img/mcf-card.webp" type="image/webp" />
                 <img
                   src="/img/mcf-card.jpg"
-                  alt="MicroCanvas Framework v2.1 — open-source canvases"
+                  alt="MicroCanvas Framework v2.1, open-source canvases"
                   width={1200}
                   height={720}
                   loading="lazy"
@@ -164,113 +244,173 @@ export default function Insights(): ReactNode {
                   style={{ borderRadius: '0.75rem', width: '100%', height: 'auto', marginBottom: '.5rem' }}
                 />
               </picture>
-              <h3 id="insight-mcf-title">MicroCanvas Framework v2.1</h3>
+              <Lightbulb className="cardIcon" aria-hidden="true" />
+              <h3 id="start-mcf-title">MicroCanvas Framework v2.1</h3>
               <p>Open-source canvases to diagnose, design, and scale innovation.</p>
-              <ul>
-                <li>Reusable canvases &amp; templates</li>
-                <li>Step-by-step usage guides</li>
-              </ul>
+              <p className="microcopy"><strong>Framework</strong></p>
               <div className="cardFooter">
-                <a
-                  className="cardCta"
-                  href="https://themicrocanvas.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cta="cta.insights.card.mcf"
-                >
-                  Visit site →
+                <a className="cardCta" href="https://themicrocanvas.com" target="_blank" rel="noopener noreferrer" data-cta="cta.insights.start.mcf">
+                  Visit site
                 </a>
               </div>
             </article>
 
-            {whitepapers.map((p, i) => (
-              <article className="card" key={`wp-${i}`} aria-labelledby={`high-wp-${i}`}>
-                <FileText className="cardIcon" aria-hidden="true" />
-                <h3 id={`high-wp-${i}`}>{p.title}</h3>
-                <p>{p.description ?? 'Whitepaper'}</p>
-                <ul>
-                  <li>Evidence-led guidance</li>
-                </ul>
-                <div className="cardFooter">
-                  <Link className="cardCta" to={p.permalink} data-cta="cta.insights.highlights.whitepaper">
-                    Read paper →
-                  </Link>
-                </div>
-              </article>
-            ))}
+            {/* Newest blog post */}
+            <article className="card" aria-labelledby="start-blog-title">
+              <Newspaper className="cardIcon" aria-hidden="true" />
+              <h3 id="start-blog-title">{blogItems[0]?.title ?? 'Latest from the blog'}</h3>
+              <p>
+                {blogItems[0]?.description ? `${blogItems[0].description.slice(0, 160)}${blogItems[0].description.length > 160 ? '…' : ''}` : 'See our latest post and field notes.'}
+              </p>
+              <p className="microcopy"><strong>Blog</strong>{blogItems[0]?.pubDate ? ` • ${fmtDate(blogItems[0].pubDate)}` : ''}</p>
+              <div className="cardFooter">
+                {blogItems[0] ? (
+                  isExternal(blogItems[0].link) ? (
+                    <a className="cardCta" href={blogItems[0].link} target="_blank" rel="noopener noreferrer" data-cta="cta.insights.start.blog">Read post</a>
+                  ) : (
+                    <Link className="cardCta" to={blogItems[0].link} data-cta="cta.insights.start.blog">Read post</Link>
+                  )
+                ) : (
+                  <Link className="cardCta" to="/blog" data-cta="cta.insights.start.blog.fallback">Visit the blog</Link>
+                )}
+              </div>
+            </article>
+
+            {/* Latest whitepaper */}
+            <article className="card" aria-labelledby="start-wp-title">
+              <FileText className="cardIcon" aria-hidden="true" />
+              <h3 id="start-wp-title">{latestWhitepaper?.title ?? 'Latest whitepaper'}</h3>
+              <p>{latestWhitepaper?.description ?? 'Read the newest thinking and guidance from our research.'}</p>
+              <p className="microcopy"><strong>Whitepaper</strong>{getDocDate(latestWhitepaper) ? ` • ${getDocDate(latestWhitepaper)}` : ''}</p>
+              <div className="cardFooter">
+                {latestWhitepaper ? (
+                  <Link className="cardCta" to={latestWhitepaper.permalink} data-cta="cta.insights.start.whitepaper">Read paper</Link>
+                ) : (
+                  <Link className="cardCta" to="/docs/research-resources/" data-cta="cta.insights.start.whitepaper.fallback">Browse Research and Resources</Link>
+                )}
+              </div>
+            </article>
           </div>
         </section>
 
-        {/* Blog */}
-        <section className="section" aria-labelledby="latest-blog-title">
-          <h2 id="latest-blog-title">From the Blog</h2>
-          <p className="sectionLead">Three recent posts from our blog.</p>
+        {/* Whitepapers (top N) */}
+        <section className="section" id="whitepapers" aria-labelledby="whitepapers-title">
+          <h2 id="whitepapers-title">Whitepapers</h2>
           <div className="cardGrid">
-            {blogItems.map((post, i) => (
-              <article className="card" key={`blog-${i}`} aria-labelledby={`blog-${i}`}>
-                <Newspaper className="cardIcon" aria-hidden="true" />
-                <h3 id={`blog-${i}`}>{post.title}</h3>
-                <p>
-                  {post.description.slice(0, 160)}
-                  {post.description.length > 160 ? '…' : ''}
-                </p>
-                <ul>
-                  <li>{fmtDate(post.pubDate)}</li>
-                  <li>Blog post</li>
-                </ul>
+            {whitepapers.length === 0 ? (
+              <article className="card" aria-labelledby="wp-fallback-title">
+                <FileText className="cardIcon" aria-hidden="true" />
+                <h3 id="wp-fallback-title">Latest whitepapers</h3>
+                <p>Read our most recent research and technical notes.</p>
                 <div className="cardFooter">
-                  {isExternal(post.link) ? (
-                    <a
-                      className="cardCta"
-                      href={post.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      data-cta="cta.insights.blog.read"
-                    >
-                      Read post →
-                    </a>
-                  ) : (
-                    <Link className="cardCta" to={post.link} data-cta="cta.insights.blog.read">
-                      Read post →
-                    </Link>
-                  )}
+                  <Link className="cardCta" to="/docs/research-resources/" data-cta="cta.insights.whitepapers.fallback">
+                    Browse Research and Resources
+                  </Link>
                 </div>
               </article>
+            ) : (
+              whitepapers.map((p, i) => (
+                <article className="card" key={`wp-${i}`} aria-labelledby={`wp-${i}-title`}>
+                  <FileText className="cardIcon" aria-hidden="true" />
+                  <h3 id={`wp-${i}-title`}>{p.title}</h3>
+                  <p>{p.description ?? 'Whitepaper'}</p>
+                  <p className="microcopy"><strong>Whitepaper</strong>{getDocDate(p) ? ` • ${getDocDate(p)}` : ''}</p>
+                  <div className="cardFooter">
+                    <Link className="cardCta" to={p.permalink} data-cta="cta.insights.whitepapers.read">
+                      Read paper
+                    </Link>
+                  </div>
+                </article>
+              ))
+            )}
+          </div>
+          <div className="heroCtas" style={{ marginTop: '.5rem' }}>
+            <Link className="buttonSecondary" to="/docs/research-resources/" data-cta="cta.insights.whitepapers.view_all">
+              See all whitepapers
+            </Link>
+          </div>
+        </section>
+
+        {/* Blog (top N) */}
+        <section className="section" id="blog" aria-labelledby="blog-title">
+          <h2 id="blog-title">From the blog</h2>
+          <p className="sectionLead">Three recent posts from our blog.</p>
+          <div className="cardGrid" aria-live="polite" aria-busy={blogLoading ? 'true' : 'false'}>
+            {blogLoading ? (
+              <article className="card" aria-label="Loading blog posts">
+                <Newspaper className="cardIcon" aria-hidden="true" />
+                <h3>Loading latest from the blog</h3>
+                <p className="microcopy">Fetching recent posts.</p>
+              </article>
+            ) : (blogItems.length === 0 ? (
+              <article className="card">
+                <Newspaper className="cardIcon" aria-hidden="true" />
+                <h3>No recent posts found</h3>
+                <p>Visit the blog to see all articles.</p>
+                <div className="cardFooter">
+                  <Link className="cardCta" to="/blog" data-cta="cta.insights.blog.view_all_fallback">
+                    Visit the blog
+                  </Link>
+                </div>
+              </article>
+            ) : (
+              blogItems.map((post, i) => (
+                <article className="card" key={`blog-${i}`} aria-labelledby={`blog-${i}-title`}>
+                  <Newspaper className="cardIcon" aria-hidden="true" />
+                  <h3 id={`blog-${i}-title`}>{post.title}</h3>
+                  <p>
+                    {post.description.slice(0, 160)}
+                    {post.description.length > 160 ? '…' : ''}
+                  </p>
+                  <p className="microcopy"><strong>Blog</strong>{post.pubDate ? ` • ${fmtDate(post.pubDate)}` : ''}</p>
+                  <div className="cardFooter">
+                    {isExternal(post.link) ? (
+                      <a className="cardCta" href={post.link} target="_blank" rel="noopener noreferrer" data-cta="cta.insights.blog.read">
+                        Read post
+                      </a>
+                    ) : (
+                      <Link className="cardCta" to={post.link} data-cta="cta.insights.blog.read">
+                        Read post
+                      </Link>
+                    )}
+                  </div>
+                </article>
+              ))
             ))}
           </div>
-          <div className="heroCtas" style={{ marginTop: '0.75rem' }}>
+          <div className="heroCtas" style={{ marginTop: '.75rem' }}>
             <Link className="buttonSecondary" to="/blog" data-cta="cta.insights.blog.view_all">
               View all blog posts
             </Link>
           </div>
         </section>
 
-        {/* Docs hub */}
-        <section className="section" id="docs-hub" aria-labelledby="docs-hub-title">
-          <h2 id="docs-hub-title">Where to start</h2>
-          <p className="sectionLead">
-            The <Link to="/docs/research-resources/">Research &amp; Resources</Link> hub aggregates whitepapers, frameworks, and open references.
-            For recent updates, see <Link to="/docs/releases">Releases</Link>.
-          </p>
-          <div className="heroCtas" style={{ marginTop: '.5rem' }}>
-            <Link className="buttonSecondary" to="/docs/research-resources/" data-cta="cta.insights.docs_hub.research">
-              Browse Research &amp; Resources
-            </Link>
-            <Link className="buttonSecondary" to="/docs/releases" data-cta="cta.insights.docs_hub.releases">
-              See Releases
-            </Link>
+        {/* Releases */}
+        <section className="section" id="releases" aria-labelledby="releases-title">
+          <h2 id="releases-title">Releases</h2>
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="releases-card-title">
+              <Lightbulb className="cardIcon" aria-hidden="true" />
+              <h3 id="releases-card-title">Latest updates and changelog</h3>
+              <p>See what changed, what is new, and what is planned next.</p>
+              <div className="cardFooter">
+                <Link className="cardCta" to="/docs/releases" data-cta="cta.insights.releases.view">
+                  See Releases
+                </Link>
+              </div>
+            </article>
           </div>
         </section>
 
-        {/* Standardized Final CTA */}
+        {/* Final CTA */}
         <FinalCta
           id="insights-final"
           ariaLabelledbyId="insights-final-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We’ll meet you where you are and co-create the path forward."
+          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co-create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.insights.final.clarityscan' }}
           secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.insights.final.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          ctaNote="Get your baseline in 15 to 20 minutes."
         />
       </main>
     </Layout>

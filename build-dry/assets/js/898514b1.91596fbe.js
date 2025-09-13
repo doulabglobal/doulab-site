@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdoulab_site=self.webpackChunkdoulab_site||[]).push([[9067],{9187:e=>{e.exports=JSON.parse('{"tags":[{"label":"whitepaper","permalink":"/docs/tags/whitepaper","count":2}]}')}}]);

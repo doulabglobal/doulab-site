@@ -17,6 +17,7 @@ import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import ClipboardCheck from 'lucide-react/dist/esm/icons/clipboard-check';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Workflow from 'lucide-react/dist/esm/icons/workflow';
+import Globe from 'lucide-react/dist/esm/icons/globe';
 
 export default function WhatWeDo(): ReactNode {
   return (
@@ -108,21 +109,35 @@ export default function WhatWeDo(): ReactNode {
           height={900}
           primaryCta={{
             to: '/services/clarityscan',
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.whatwedo.hero.clarityscan',
-            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+            label: 'Explore ClarityScan',
+            dataCta: 'cta.whatwedo.hero.explore_clarityscan',
+            ariaLabel: 'Explore ClarityScan',
           }}
-          secondaryCta={{
-            to: '/contact',
-            label: 'Book a discovery call',
-            dataCta: 'cta.whatwedo.hero.book_call',
-            ariaLabel: 'Book a discovery call',
-          }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.whatwedo.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online' }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="whatwedo-hero"
           ariaLabelledbyId="whatwedo-hero-title"
           eager
         />
+
+        {/* In-page subnav (match Insights/Vigía style) */}
+        <div className="container">
+          <nav
+            className="subnav"
+            aria-label="In this page"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '.5rem',
+              padding: '.25rem 0 .5rem',
+              margin: '0 auto .75rem',
+            }}
+          >
+            <a href="#who" data-cta="cta.whatwedo.anchor.who">Who is it for?</a>
+            <a href="#programs" data-cta="cta.whatwedo.anchor.programs">Products and Programs</a>
+          </nav>
+        </div>
 
         {/* Who is it for? */}
         <section className="section" id="who" aria-labelledby="who-title">
@@ -181,10 +196,10 @@ export default function WhatWeDo(): ReactNode {
             <article className="card" aria-labelledby="diagnostics-title">
               <Target className="cardIcon" aria-hidden="true" />
               <h3 id="diagnostics-title">Diagnostics and Workshops</h3>
-              <p>Fast assessments, strategy sessions, and decision driving workshops.</p>
+              <p>Fast diagnostics to baseline maturity, risks, and constraints.</p>
               <ul>
                 <li>ClarityScan® baseline, MCF 2.1 and IMM-P®</li>
-                <li>OKR alignment and leadership sessions</li>
+                <li>Maturity map and prioritized risk shortlist</li>
               </ul>
               <p className="microcopy">What you get, a baseline, a shortlist of risks, and a 30, 60, 90 plan.</p>
               <div className="cardFooter">
@@ -192,14 +207,48 @@ export default function WhatWeDo(): ReactNode {
                   className="cardCta"
                   to="/services/clarityscan"
                   data-cta="cta.whatwedo.programs.diagnostics"
-                  aria-label="Explore Diagnostics and Workshops"
+                  aria-label="Explore diagnostics"
                 >
                   Explore diagnostics →
                 </Link>
-              </div>
-            </article>
+          </div>
+        </article>
 
-            <article className="card" aria-labelledby="vigia-title">
+        {/* Workshops pillar */}
+        <article className="card" aria-labelledby="pillars-workshops">
+          <Lightbulb className="cardIcon" aria-hidden={true} />
+          <h3 id="pillars-workshops">Workshops — spark aligned action</h3>
+          <p>Focused sessions that unlock decisions and turn strategy into next steps.</p>
+          <div className="cardFooter">
+            <Link
+              className="cardCta"
+              to="/services/custom-workshops"
+              data-cta="cta.whatwedo.pillars.workshops"
+              aria-label="Explore workshops"
+            >
+              Explore workshops →
+            </Link>
+          </div>
+        </article>
+
+        {/* Coaching & mentoring pillar */}
+        <article className="card" aria-labelledby="pillars-coaching">
+          <Users className="cardIcon" aria-hidden={true} />
+          <h3 id="pillars-coaching">Coaching & mentoring</h3>
+          <p>Targeted one‑to‑one or group support to remove blockers and build internal capability.</p>
+          <div className="cardFooter">
+            <Link
+              className="cardCta"
+              to="/services/coaching-mentoring"
+              data-cta="cta.whatwedo.pillars.coaching"
+              aria-label="Explore coaching and mentoring"
+            >
+              Explore coaching and mentoring →
+            </Link>
+          </div>
+        </article>
+
+        <article className="card" aria-labelledby="vigia-title">
               <Lightbulb className="cardIcon" aria-hidden="true" />
               <h3 id="vigia-title">Vigía Futura</h3>
               <p>Foresight program with indices for trend radar, risk, and opportunity framing.</p>
@@ -272,16 +321,27 @@ export default function WhatWeDo(): ReactNode {
           id="whatwedo-final"
           ariaLabelledbyId="whatwedo-final-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co-create the path forward."
+          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
           primaryCta={{
             to: '/services/clarityscan',
             label: 'Start with ClarityScan®',
             dataCta: 'cta.whatwedo.final.clarityscan',
           }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.whatwedo.final.book_call' }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=whatwedo_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.whatwedo.final.book_clarityscan_booking',
+            newTab: true,
+          }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>
   );
 }
+
+
+
+
+
+

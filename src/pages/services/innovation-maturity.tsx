@@ -1,4 +1,4 @@
-﻿// src/pages/services/innovation-maturity.tsx
+// src/pages/services/innovation-maturity.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -170,23 +170,19 @@ export default function InnovationMaturityProgram(): ReactNode {
           width={1600}
           height={900}
           primaryCta={{
-            to: '/services/clarityscan',
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.services.imm.hero.clarityscan',
-            ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
+            to: '/services/innovation-maturity#imm-structure',
+            label: 'See program structure',
+            dataCta: 'cta.services.imm.hero.see_structure',
+            ariaLabel: 'See program structure',
           }}
-          secondaryCta={{
-            to: '/contact',
-            label: 'Book a discovery call',
-            dataCta: 'cta.services.imm.hero.contact',
-          }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.services.imm.hero.book_clarityscan_online' }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
 
-        {/* Who it’s for? */}
+        {/* Who is it for? */}
         <section className="section" id="imm-who" aria-labelledby="imm-who-title">
-          <h2 id="imm-who-title">Who it’s for?</h2>
+          <h2 id="imm-who-title">Who is it for?</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="imm-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
@@ -401,10 +397,11 @@ export default function InnovationMaturityProgram(): ReactNode {
             dataCta: 'cta.services.imm.final.clarityscan',
             ariaLabel: 'Start with ClarityScan — 15–20 minute baseline',
           }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.services.imm.final.contact' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=services_imm_final_cta', label: 'Book a ClarityScan® online', dataCta: 'cta.services.imm.final.book_clarityscan_booking', newTab: true }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>
   );
 }
+

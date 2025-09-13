@@ -127,18 +127,13 @@ export default function AboutPage(): ReactNode {
           width={1600}
           height={900}
           primaryCta={{
-            to: '/services/clarityscan',
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.about.hero.clarityscan',
-            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+            to: '/what-we-do',
+            label: 'Learn more',
+            dataCta: 'cta.about.hero.learn_more',
+            ariaLabel: 'Learn more about what we do',
           }}
-          secondaryCta={{
-            to: '/contact',
-            label: 'Book a discovery call',
-            dataCta: 'cta.about.hero.book_call',
-            ariaLabel: 'Book a discovery call',
-          }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.about.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online' }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="about-hero"
           ariaLabelledbyId="about-hero-title"
           eager
@@ -174,7 +169,7 @@ export default function AboutPage(): ReactNode {
             making foresight usable in everyday decisions.
           </p>
           <p className="microcopy">
-            See how we work in practice. <Link to="/what-we-do#process" data-cta="cta.about.story.process">How we work</Link>.
+            See how we work in practice. <Link to="/what-we-do#who" data-cta="cta.about.story.process">How we work</Link>.
           </p>
         </section>
 
@@ -282,12 +277,18 @@ export default function AboutPage(): ReactNode {
           id="about-final"
           ariaLabelledbyId="about-final-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co-create the path forward."
+          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.about.final.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.about.final.book_call' }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=about_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.about.final.book_clarityscan_booking',
+            newTab: true,
+          }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>
   );
 }
+

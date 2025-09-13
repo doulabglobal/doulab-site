@@ -88,9 +88,12 @@ export default function DiagnosticsPage() {
                                 <li><strong>What we assess:</strong> strategy clarity &amp; OKRs; culture &amp; incentives; delivery cadence; results &amp; measurement.</li>
                                 <li><strong>Session:</strong> ≤ 30 minutes</li>
                             </ul>
-                            <div className="cardFooter">
+                            <div className="cardFooter" style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
                                 <Link className="cardCta" to="/services/clarityscan" data-cta="cta.diagnostics.offer.clarityscan">
                                     Run ClarityScan® →
+                                </Link>
+                                <Link className="cardCta" to="/book-clarityscan" data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book a ClarityScan online" target="_blank" rel="noopener noreferrer">
+                                    Book online →
                                 </Link>
                             </div>
                         </article>

@@ -18,6 +18,16 @@ clarityscan:
   permalink: /blog/tags/clarityscan
   description: Diagnostics and capability baselines
 
+diagnostics:
+  label: Diagnostics
+  permalink: /blog/tags/diagnostics
+  description: Quick baselines, risk mapping, and evidence-first next steps
+
+decision-latency:
+  label: Decision latency
+  permalink: /blog/tags/decision-latency
+  description: Reducing time-to-decision with evidence and clear ownership
+
 vigia-futura:
   label: Vigía Futura
   permalink: /blog/tags/vigia-futura

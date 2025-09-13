@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Doulab Blog</title>
+        <link>https://doulab.net/blog</link>
+        <description>Doulab Blog</description>
+        <lastBuildDate>Sat, 30 Aug 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Introducing Doulab: innovation made repeatable]]></title>
+            <link>https://doulab.net/blog/introducing-doulab</link>
+            <guid>https://doulab.net/blog/introducing-doulab</guid>
+            <pubDate>Sat, 30 Aug 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Why Doulab exists, how the MicroCanvas® Framework and IMM® help teams ship outcomes reliably, and where to start.]]></description>
+            <content:encoded><![CDATA[<p>Innovation shouldn’t be a coin flip.</p>
+<p>We started <strong>Doulab</strong> to answer a stubborn question: <em>How do you make innovation and foresight repeatable—so strategy turns into measurable outcomes in any organization, not just the lucky ones?</em> Since then, we’ve supported teams across public institutions and companies—from <strong>AFP Siembra</strong> and <strong>Alpha Inversiones</strong> to <strong>OGTIC/RedLab</strong>, <strong>FUNDAPEC</strong>, and <strong>Runway Innovation Hub</strong>—and saw the same pattern: when teams can see clearly, decide faster, and learn in tight loops, they ship.</p>
+<p>Our purpose is simple: <strong>help unlock global prosperity by helping others create better futures</strong>. In practice, that means making innovation <strong>repeatable</strong> and foresight <strong>practical</strong>—so plans become outcomes you can measure.</p>
+<p><strong>Default next step:</strong> get a baseline in <strong>15–20 minutes</strong> with <strong><a href="https://doulab.net/services/clarityscan">ClarityScan®</a></strong>, or <strong><a href="https://doulab.net/contact">book a short discovery call</a></strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-gets-in-the-way-the-problem">What gets in the way (the problem)<a href="https://doulab.net/blog/introducing-doulab#what-gets-in-the-way-the-problem" class="hash-link" aria-label="Direct link to What gets in the way (the problem)" title="Direct link to What gets in the way (the problem)">​</a></h2>
+<p>Across startups and institutions, the blockers rhyme. Here are the most common ones we see—each solvable with the right scaffolding:</p>
+<div class="cardGrid"><article class="card"><h3>Culture isn’t wired for innovation</h3><p>Efforts feel sporadic; engagement stays low. Global engagement hovers ~20–23%.</p><p><a href="https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx" target="_blank" rel="noopener noreferrer">Gallup — 2024</a></p></article><article class="card"><h3>Strategy treated as a document</h3><p>OKRs drift, teams lose the thread; misalignment compounds.</p><p><a href="https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/" target="_blank" rel="noopener noreferrer">Kotter via Forbes</a></p></article><article class="card"><h3>Decisions outrun by opinions</h3><p>ROI suffers without evidence and testing; data-driven loops change that.</p><p><a href="https://online.hbs.edu/blog/post/data-driven-decision-making" target="_blank" rel="noopener noreferrer">HBS Online</a></p></article><article class="card"><h3>Leadership without cadence</h3><p>Projects stall without visible ownership and governance.</p><p><a href="https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson" target="_blank" rel="noopener noreferrer">McKinsey</a></p></article><article class="card"><h3>Rigid structures, stale skills</h3><p>Cycles slow; teams detach from real user needs.</p><p><a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2020.00963/full" target="_blank" rel="noopener noreferrer">Frontiers in Psychology</a></p></article><article class="card"><h3>Processes that don’t scale</h3><p>Costs creep, delivery becomes inconsistent; operating models need redesign.</p><p><a href="https://www.bain.com/insights/scaling-software-companies-path-to-%241B-in-revenue/" target="_blank" rel="noopener noreferrer">Bain</a></p></article><article class="card"><h3>Customer insight off to the side</h3><p>Offers drift from real needs; value left on the table.</p><p><a href="https://www.forrester.com/blogs/us-cx-index-2024-results/" target="_blank" rel="noopener noreferrer">Forrester — CX Index</a></p></article><article class="card"><h3>Scattered truth, slow bets</h3><p>Without a shared backbone, assumptions drive decisions.</p><p><a href="https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf" target="_blank" rel="noopener noreferrer">Accenture (PDF)</a></p></article><article class="card"><h3>No foresight in the cycle</h3><p>Teams react to shocks instead of shaping options.</p><p><a href="https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/" target="_blank" rel="noopener noreferrer">World Economic Forum</a></p></article></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-simple-system-under-the-work">The simple system under the work<a href="https://doulab.net/blog/introducing-doulab#the-simple-system-under-the-work" class="hash-link" aria-label="Direct link to The simple system under the work" title="Direct link to The simple system under the work">​</a></h2>
+<p>We built two pieces that make the work feel less like guesswork:</p>
+<ul>
+<li>The <strong>MicroCanvas® Framework (MCF)</strong>, a set of lightweight canvases that move teams from discovery to delivery—without weeks of meetings.</li>
+<li>The <strong>Innovation Maturity Model (IMM®)</strong>, a structured way to baseline capability, prioritize gaps, and install practice across strategy, culture, process, and results.</li>
+</ul>
+<p>Used together, MCF + IMM reduce <strong>decision latency</strong> (fewer stalls), shorten <strong>cycle time</strong> (smaller bets, faster feedback), improve <strong>signal quality</strong> (evidence in planning &amp; delivery), and raise <strong>capability</strong> (measurable progress across IMM dimensions).</p>
+<blockquote>
+<p>With <strong>AFP Siembra</strong>, strategy-to-delivery support led to a digital savings product and a working innovation lab—practical scaffolding for repeatable outcomes. External site: <a href="https://afpsiembra.com/" target="_blank" rel="noopener noreferrer">afpsiembra.com</a>.</p>
+</blockquote>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="what-we-install-the-solution">What we install (the solution)<a href="https://doulab.net/blog/introducing-doulab#what-we-install-the-solution" class="hash-link" aria-label="Direct link to What we install (the solution)" title="Direct link to What we install (the solution)">​</a></h2>
+<p>You don’t need a moonshot to get moving. We right-size entry points and build from there:</p>
+<div class="cardGrid"><article class="card"><h3>Diagnostics: know where you stand</h3><p>Quick baselines of innovation maturity; pinpoint gaps with evidence-based tools like ClarityScan®.</p><div class="cardFooter"><a class="cardCta" href="https://doulab.net/services/clarityscan">Explore diagnostics →</a></div></article><article class="card"><h3>Workshops: spark aligned action</h3><p>Focused sessions that unlock decisions and translate strategy into practical next steps.</p><div class="cardFooter"><a class="cardCta" href="https://doulab.net/services/custom-workshops">Explore workshops →</a></div></article><article class="card"><h3>Programs: build innovation capacity</h3><p>Structured journeys—like IMM—that install culture, process, and metrics to scale reliably.</p><div class="cardFooter"><a class="cardCta" href="https://doulab.net/services/innovation-maturity">Explore programs →</a></div></article><article class="card"><h3>Coaching &amp; mentoring</h3><p>Targeted 1:1 or group support to remove blockers and build internal capability.</p><div class="cardFooter"><a class="cardCta" href="https://doulab.net/services/coaching-mentoring">Explore coaching &amp; mentoring →</a></div></article><article class="card"><h3>Future studies</h3><p>Foresight research and training to spot trends, assess risk, and guide resilient choices.</p><div class="cardFooter"><a class="cardCta" href="https://doulab.net/vigia-futura">Discover Vigía Futura →</a></div></article></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="who-were-for">Who we’re for<a href="https://doulab.net/blog/introducing-doulab#who-were-for" class="hash-link" aria-label="Direct link to Who we’re for" title="Direct link to Who we’re for">​</a></h2>
+<p>If you’re a founder or product leader pushing for clarity and speed; an executive team aligning strategy, governance, and operating rhythms; a public-sector leader building repeatable capacity; or a strategy/ops team hungry for better evidence loops—you’ll feel at home here.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="how-we-work-together">How we work together<a href="https://doulab.net/blog/introducing-doulab#how-we-work-together" class="hash-link" aria-label="Direct link to How we work together" title="Direct link to How we work together">​</a></h2>
+<p>We start where you are and build momentum:</p>
+<p><strong>Diagnostics</strong> give you a quick baseline and targeted actions. Most teams begin with <strong><a href="https://doulab.net/services/clarityscan">ClarityScan®</a></strong> (15–20 minutes; get a baseline this week).</p>
+<p><strong>Custom workshops</strong> create alignment, prioritization, and a 30–60–90 plan in one focused day. See <strong><a href="https://doulab.net/services/custom-workshops">workshop options</a></strong>.</p>
+<p><strong>Programs (IMM-P)</strong> install operating rhythms, governance, and instrumentation so outcomes become reliable. Explore the <strong><a href="https://doulab.net/services/innovation-maturity">IMM Program</a></strong>.</p>
+<p><strong>Coaching &amp; mentoring</strong> unblock high-stakes priorities for execs, product, and GTM leaders. Learn more about <strong><a href="https://doulab.net/services/coaching-mentoring">coaching &amp; mentoring</a></strong>.</p>
+<p><strong>Vigía Futura</strong> is our foresight observatory—signals, executive briefings, and short policy/venture labs—so leaders can act before the curve. Visit <strong><a href="https://doulab.net/vigia-futura">Vigía Futura</a></strong>.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="why-this-matters-now">Why this matters now<a href="https://doulab.net/blog/introducing-doulab#why-this-matters-now" class="hash-link" aria-label="Direct link to Why this matters now" title="Direct link to Why this matters now">​</a></h2>
+<p>AI acceleration, shifting governance, and unsettled markets reward <strong>learning velocity</strong>. Teams that instrument decisions, run small bets, and iterate intentionally out-ship the rest. That’s the system we help you install—so you avoid the high cost of waiting and the regret of missed windows.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="whats-coming-next">What’s coming next<a href="https://doulab.net/blog/introducing-doulab#whats-coming-next" class="hash-link" aria-label="Direct link to What’s coming next" title="Direct link to What’s coming next">​</a></h2>
+<p>We’re publishing <strong><a href="https://doulab.net/docs/research-resources/distributed-federated-agentic-ai">Distributed Federated Agentic AI</a></strong> (open access). We’re rolling out <strong>Vigía Futura</strong>—a live radar (quarterly), executive briefings, and quick-turn policy/venture labs. And we’re expanding the <strong>MCF toolkit</strong> and open resources for teams and public institutions—see <strong><a href="https://doulab.net/docs/research-resources">Research &amp; Resources</a></strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="faq">FAQ<a href="https://doulab.net/blog/introducing-doulab#faq" class="hash-link" aria-label="Direct link to FAQ" title="Direct link to FAQ">​</a></h2>
+<p><strong>Is this “consulting”?</strong><br>
+<!-- -->It’s <strong>system installation</strong>: decision scaffolds, operating cadences, and capability building. We co-create, transfer, and instrument so your team can run it.</p>
+<p><strong>How fast will we see value?</strong><br>
+<!-- -->Most teams get a baseline and targeted actions within <strong>a week</strong> via ClarityScan® and/or a one-day workshop.</p>
+<p><strong>Do you work beyond the private sector?</strong><br>
+<!-- -->Yes. We’ve adapted MCF + IMM for public contexts (e.g., <strong>RedLab</strong>) where governance and inclusion matter.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="start-here">Start here<a href="https://doulab.net/blog/introducing-doulab#start-here" class="hash-link" aria-label="Direct link to Start here" title="Direct link to Start here">​</a></h2>
+<p>Prefer proof before plans? <strong><a href="https://doulab.net/services/clarityscan">Get your baseline with ClarityScan®</a></strong> and see exactly where to focus.<br>
+<!-- -->Prefer a conversation? <strong><a href="https://doulab.net/contact">Book a discovery call</a></strong> and we’ll map goals, constraints, and a fit-for-purpose path.</p>
+<div class="btn-row" style="margin-top:0.5rem"><a class="btn-primary" href="https://doulab.net/services/clarityscan" aria-label="Get your baseline with ClarityScan">Get your baseline</a><a class="btn-secondary" href="https://doulab.net/contact" aria-label="Talk to Doulab">Talk to us</a></div>]]></content:encoded>
+            <category>Announcement</category>
+            <category>MicroCanvas</category>
+            <category>IMM</category>
+            <category>ClarityScan</category>
+            <category>Vigía Futura</category>
+            <category>Innovation</category>
+        </item>
+    </channel>
+</rss>

@@ -1,4 +1,4 @@
-﻿// src/pages/index.tsx
+// src/pages/index.tsx
 import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
@@ -57,6 +57,8 @@ function ProblemSection() {
   };
 
   const onKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
+    const el = reelRef.current;
+    if (!el) return;
     if (e.key === 'ArrowLeft') {
       e.preventDefault();
       scrollByAmount('prev');
@@ -64,6 +66,14 @@ function ProblemSection() {
     if (e.key === 'ArrowRight') {
       e.preventDefault();
       scrollByAmount('next');
+    }
+    if (e.key === 'Home') {
+      e.preventDefault();
+      el.scrollTo({ left: 0, behavior: prefersReduced ? 'auto' : 'smooth' });
+    }
+    if (e.key === 'End') {
+      e.preventDefault();
+      el.scrollTo({ left: el.scrollWidth - el.clientWidth, behavior: prefersReduced ? 'auto' : 'smooth' });
     }
   };
 
@@ -198,6 +208,7 @@ function ProblemSection() {
                 className="card"
                 role="group"
                 aria-roledescription="slide"
+                aria-label={`Slide ${idx + 1} of ${problems.length}: ${item.cause}`}
                 key={idx}
                 style={{ borderLeft: '4px solid var(--dl-indigo)' }}
               >
@@ -233,7 +244,7 @@ function ProblemSection() {
       {/* Centered follow-up block + CTAs */}
       <div style={{ textAlign: 'center' }}>
         <p className="sectionLead">If these resonate, start with a quick baseline.</p>
-        <p className="microcopy">Get your baseline in 15 to 20 minutes, do not lose another cycle.</p>
+        <p className="microcopy">Get your baseline in 15–20 minutes; avoid another lost cycle.</p>
         <div className="heroCtas" style={{ justifyContent: 'center' }}>
           <Link
             to="/services/clarityscan"
@@ -243,12 +254,30 @@ function ProblemSection() {
           >
             Start with ClarityScan®
           </Link>
+          <a
+            className="buttonSecondary"
+            href="https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=home_problem_cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="cta.home.problem.book_clarityscan_booking"
+            aria-label="Book a ClarityScan online via Microsoft Bookings"
+          >
+            Book a ClarityScan® online
+          </a>
         </div>
-        <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '.25rem' }}>
-          <Link to="/contact" className="buttonSecondary" data-cta="cta.home.problem.book_call">
-            Book a discovery call
-          </Link>
+        <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '.25rem', display: 'none' }}>
+          <a
+            className="buttonSecondary"
+            href="https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=home_problem_cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cta="cta.home.problem.book_clarityscan_booking"
+            aria-label="Book a ClarityScan online via Microsoft Bookings"
+          >
+            Book a ClarityScan® online
+          </a>
         </div>
+        <p className="microcopy">ClarityScan® feeds the IMM‑P® baseline (decision latency, cycle time).</p>
       </div>
     </section>
   );
@@ -389,6 +418,11 @@ function useLatestBlogPosts(limit = 3) {
             }
           } catch {
             // keep defaults
+          }
+
+          // Normalize: ensure blog item links point under /blog
+          if (!external && href.startsWith('/') && !href.startsWith('/blog')) {
+            href = '/blog' + (href === '/' ? '' : href);
           }
 
           const media = n.querySelector('media\\:content');
@@ -714,10 +748,10 @@ export default function Home(): ReactNode {
           to: '/services/clarityscan',
           label: 'Start with ClarityScan®',
           dataCta: 'cta.home.hero.clarityscan',
-          ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+          ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
         }}
-        secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.hero.book_call' }}
-        ctaNote="Get your baseline in 15 to 20 minutes."
+        secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.home.hero.book_clarityscan_online' }}
+        ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
       />
 
       <main>
@@ -733,10 +767,15 @@ export default function Home(): ReactNode {
           id="final-cta"
           ariaLabelledbyId="cta-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We track decision latency, cycle time, and capability growth. We will meet you where you are and co-create the path forward."
+          body="Start with a quick diagnostic or book a discovery call. We track decision latency, cycle time, and capability growth. We will meet you where you are and co‑create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.home.final.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.final.book_call' }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=home_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.home.final.book_clarityscan_booking',
+            newTab: true,
+          }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>

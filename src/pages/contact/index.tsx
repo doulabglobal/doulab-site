@@ -68,21 +68,21 @@ export default function Contact(): ReactNode {
         {/* Standardized two-column hero */}
         <Hero
           title="Contact"
-          subtitle="Book a 20 minute discovery call."
-          body="We are privacy first, no external forms or ad pixels. Email us or share a brief, and we will propose clear next steps. We aim to reply within 2 business days."
+          subtitle="Book a 20‑minute discovery call."
+          body="Privacy‑first. No external forms or ad pixels. Email us or send a brief; we reply within 2 business days."
           imageBase="/img/contact-hero"
           imageAlt="Contact Doulab"
           width={1600}
           height={900}
           primaryCta={{
-          to: '/contact#email',
+          to: '/contact#options',
           label: 'Email us',
           dataCta: 'cta.contact.hero.email',
           }}
           secondaryCta={{
-            to: '/what-we-do',
-            label: 'What we do',
-            dataCta: 'cta.contact.hero.whatwedo',
+            to: '/book-clarityscan',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.contact.hero.book_clarityscan_online',
           }}
           ctaNote="No prep required. We confirm a time and send a brief follow up."
           id="contact-hero"
@@ -202,9 +202,10 @@ export default function Contact(): ReactNode {
           ariaLabel: 'Jump to contact options',
           }}
           secondaryCta={{
-            to: '/what-we-do',
-            label: 'See what we do',
-            dataCta: 'cta.contact.final.whatwedo',
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=contact_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.contact.final.book_clarityscan_booking',
+            newTab: true,
           }}
         />
       </main>

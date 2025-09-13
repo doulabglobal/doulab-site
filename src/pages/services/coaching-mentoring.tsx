@@ -109,13 +109,13 @@ export default function CoachingMentoringPage(): ReactNode {
             label: 'Start with a diagnostic',
             dataCta: 'cta.services.coaching.hero.clarityscan',
           }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
 
-        {/* Who it’s for? (standardized audience tiles) */}
+        {/* Who is it for? (standardized audience tiles) */}
         <section className="section" id="who" aria-labelledby="who-title">
-          <h2 id="who-title">Who it’s for?</h2>
+          <h2 id="who-title">Who is it for?</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
@@ -277,8 +277,8 @@ export default function CoachingMentoringPage(): ReactNode {
           title="Ready to grow with guidance?"
           body="Tell us your goals and constraints. We’ll recommend the retainer that fits and start making progress fast."
           primaryCta={{ to: '/contact', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.contact' }}
-          secondaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.services.coaching.final.clarityscan' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=services_coaching_final_cta', label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>

@@ -1,4 +1,4 @@
-﻿// src/pages/case-studies/index.tsx
+// src/pages/case-studies/index.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -78,12 +78,12 @@ export default function CaseStudies(): ReactNode {
           imageAlt="Case studies hero, abstract indigo gradient with Doulab brand accents."
           primaryCta={{
             to: '/services/clarityscan',
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.cases.hero.clarityscan',
-            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+            label: 'Explore ClarityScan',
+            dataCta: 'cta.cases.hero.explore_clarityscan',
+            ariaLabel: 'Explore ClarityScan',
           }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.hero.book_call' }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online' }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
 
@@ -151,12 +151,18 @@ export default function CaseStudies(): ReactNode {
           id="cases-final"
           ariaLabelledbyId="cta-title"
           title="Ready to make innovation repeatable?"
-          body="Start small, get your baseline in 15 to 20 minutes."
+          body="Start small, get your baseline in 15–20 minutes."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.final.book_call' }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=cases_index_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.cases.final.book_clarityscan_booking',
+            newTab: true,
+          }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>
   );
 }
+

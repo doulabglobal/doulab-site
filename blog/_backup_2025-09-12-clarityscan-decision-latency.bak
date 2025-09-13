@@ -1,0 +1,125 @@
+---
+title: "ClarityScan®: how a 15–20 minute baseline reduces decision latency"
+description: "A short diagnostic that surfaces risks, constraints, and priority gaps so teams decide faster and avoid another lost cycle."
+slug: /clarityscan-decision-latency
+authors: [luis]
+tags: [clarityscan, diagnostics, decision-latency, mcf, imm]
+keywords:
+  - clarityscan
+  - diagnostics
+  - decision latency
+  - baseline
+  - microcanvas
+  - IMM
+hide_table_of_contents: false
+image: /img/social/2025-09-12-clarityscan-decision-latency.jpg
+---
+
+Decision latency is expensive. Every week a decision slips, costs creep, risk accumulates, and teams lose momentum. ClarityScan® gives you a **15–20 minute** baseline that pinpoints where latency comes from and what to change first—so you can move now, not next quarter.
+
+<!-- truncate -->
+
+<picture>
+  <source srcset="/img/social/2025-09-12-clarityscan-decision-latency.avif" type="image/avif" />
+  <source srcset="/img/social/2025-09-12-clarityscan-decision-latency.webp" type="image/webp" />
+  <img
+    src="/img/social/2025-09-12-clarityscan-decision-latency.png"
+    alt="ClarityScan® — fast diagnostic to reduce decision latency"
+    width={1600}
+    height={900}
+    loading="lazy"
+    decoding="async"
+    style={{ borderRadius: '16px', width: '100%', height: 'auto', margin: '0.5rem 0 1rem' }}
+  />
+</picture>
+
+## What is ClarityScan®?
+
+- A fast, structured diagnostic across strategy, culture, operating model, and evidence loops.
+- Built on the [MicroCanvas® Framework](https://themicrocanvas.com) (MCF) and the [Innovation Maturity Model Program (IMM‑P®)](/services/innovation-maturity) gates.
+- Designed to produce **actionable next steps**—not a long report.
+
+## Why we built it (20 years of patterns)
+
+Over two decades working on innovation, one truth keeps showing up: most teams were never taught to think logically about innovation or structure projects in a way that makes decisions easy.
+
+Across startups and established organizations building new technologies, business models, or simply improving commercial offerings, the same pattern appeared: **there was no clarity**. Teams struggled to pinpoint a target customer with precision, articulate the core problem, or outline a credible path to fix it.
+
+The [MicroCanvas® Framework](https://themicrocanvas.com) (MCF) was born from that reality—repeatable canvases that create shared clarity. The [Innovation Maturity Model Program (IMM‑P®)](/services/innovation-maturity) later complemented MCF with a **12+12 weeks** structure to install cadence and governance so innovation becomes sustainable and friction drops.
+
+There was still one missing piece: how to start on the right foot—quickly understanding today’s challenges and turning them into a steady, structured path forward.
+
+That is why we built ClarityScan®. It is our guided onboarding step into the Doulab ecosystem. In minutes, we identify where your innovation journey is blocked and shape a practical 30/60/90 plan. Whether you need a [workshop](/services/custom-workshops), an incubation or acceleration path, structured [coaching or mentoring](/services/coaching-mentoring), or C‑level/board guidance, **ClarityScan® is where our shared work begins**.
+
+### Who it’s for
+
+- Startups clarifying target customer, problem-solution fit, and immediate risks.
+- Public institutions aligning stakeholders and governance for visible progress.
+- Established companies reducing decision latency across strategy and delivery.
+- Incubators/accelerators upgrading cohort scaffolds and evidence-first methods.
+
+## Why decision latency matters
+
+- Latency = time from “we need a decision” to “we made one and acted.”
+- High latency shows up as stalled OKRs, rework, and inconsistent delivery.
+- The fix is rarely a single tool; it’s clarifying goals, owners, and evidence—then installing a cadence that sticks.
+
+## How it works (15–20 minutes)
+
+1) Context: goal, constraints, and where decisions stall today.
+2) Quick maturity pass across MCF/IMM: strategy, culture, evidence, cadence, governance.
+3) Signals: where proof is thin vs. strong; risks you can address fast.
+4) Decisions & owners: who needs to decide what, and by when.
+5) 30/60/90: a short plan that reduces latency and builds momentum.
+
+:::info ClarityScan flow (15–20 minutes)
+```mermaid
+flowchart LR
+  A[Context] --> B[MCF/IMM Quick Pass]
+  B --> C[Signals & Evidence Gaps]
+  C --> D[Decisions & Owners]
+  D --> E[30/60/90 Plan]
+```
+:::
+
+## Problem → Objective → Solution alternatives
+
+- Problem: Decision latency and low clarity slow outcomes—teams struggle to define target customers precisely, articulate the core problem, and agree on evidence to proceed.
+- Objective: Reduce time-to-decision with a shared baseline, explicit owners, and near-term tests that build confidence and momentum.
+- Solution alternatives:
+  - A) Start directly with a multi-week program like [IMM‑P®](/services/innovation-maturity): strong for operating model change; slower to first decision improvement.
+  - B) Run a one-day [custom workshop](/services/custom-workshops): great for alignment; needs a fast prior baseline for sharper outcomes.
+  - C) Begin with **ClarityScan®**: fastest path to surface constraints/risks, assign owners, and create a 30/60/90 plan; pairs well with A or B.
+
+## Evidence and references
+
+- Engagement & culture headwinds correlate with execution drag: Gallup’s State of the Global Workplace 2024 reports global engagement around 20–23%.
+  - https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx
+- Data-driven decisions reduce rework and improve outcomes: HBS Online overview of data-driven decision-making.
+  - https://online.hbs.edu/blog/post/data-driven-decision-making
+- Transformation and cadence: McKinsey highlights governance and ownership as critical to momentum.
+  - https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson
+- Customer clarity and outcomes: Forrester’s CX Index underscores the cost of misalignment with customer needs.
+  - https://www.forrester.com/blogs/us-cx-index-2024-results/
+
+## What you get
+
+- A one‑page maturity snapshot with priority gaps.
+- A **shortlist of risks** and how to test them.
+- A **30/60/90** plan with clear owners and next steps.
+- Fit guidance: when to continue with a **half‑day workshop** vs. move into **IMM‑P® (12+12 weeks)**.
+
+## Where it fits
+
+- Start with **[ClarityScan®](/services/clarityscan)** for baseline and priority, or **[book online](/book-clarityscan)**.
+- Use a **[half‑day workshop](/services/custom-workshops)** to align stakeholders and turn the plan into action.
+- Move into **[IMM‑P®](/services/innovation-maturity)** to install operating rhythms, governance, and instrumentation.
+
+## Get your baseline
+
+- Start now: [ClarityScan® service](/services/clarityscan)
+- Prefer to book directly? [Book a ClarityScan® online](/book-clarityscan)
+- Need tailored support next? Consider [custom workshops](/services/custom-workshops) or [coaching & mentoring](/services/coaching-mentoring).
+
+Privacy note: We use privacy‑first analytics only; no third‑party pixels.
+

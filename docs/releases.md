@@ -12,7 +12,43 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 
 ---
 
-## 2025-09-08 — v0.7
+## 2025-09-13 - v0.7.1
+
+### Highlights
+- Blog cards reliability: fixed homepage and Insights "Latest from the blog" cards linking to a non-prefixed path (404 risk). Links are now normalized to always live under `/blog`.
+- New post: “ClarityScanr: how a 30-45 minute baseline reduces decision latency”.
+
+### UX & CTAs
+- Added/standardized direct “Book a ClarityScan® online” CTAs across the site, pointing to Outlook Bookings.
+  - Home: hero secondary CTA + final CTA (`src/pages/index.tsx`).
+  - Insights: final CTA (`src/pages/insights/index.tsx`).
+  - About: final CTA (`src/pages/about/index.tsx`).
+  - Contact: final CTA (`src/pages/contact/index.tsx`).
+  - Case studies: final CTA on AFP Siembra, Alpha Inversiones, FUNDAPEC, OGTIC/RedLab, and index (`src/pages/case-studies/*`).
+  - Vigía Futura: final CTA (`src/pages/vigia-futura/index.tsx`).
+  - Services: ClarityScan page final CTA (`src/pages/services/clarityscan.tsx`).
+- Service-specific booking links where relevant:
+  - Custom Workshops: added a half-day booking link in-page and final CTA (`src/pages/services/custom-workshops.tsx`).
+  - Coaching & Mentoring, Innovation Maturity: final CTAs include “Book a ClarityScan® online” as the on-ramp (`src/pages/services/coaching-mentoring.tsx`, `src/pages/services/innovation-maturity.tsx`).
+- Added canonical booking redirect page: `/book-clarityscan` (`src/pages/book-clarityscan.tsx`).
+
+### Technical changes
+- Homepage RSS parser update to normalize same-origin links to `/blog`.
+  - `src/pages/index.tsx:391` (`useLatestBlogPosts`) ensures same-origin links that don’t start with `/blog` are prefixed.
+- Insights page RSS/Atom parser updated with the same normalization.
+  - `src/pages/insights/index.tsx:25` (`sameOriginToRelative`) prefixes same-origin links with `/blog`.
+- Removed temporary static redirects (not needed after normalization).
+
+### QA notes
+- Verified dev build resolves latest post cards to `/blog/<slug>`.
+- External links and dated blog URLs remain unchanged.
+
+### Known follow-ups
+- Blog tag permalinks look duplicated (e.g., `/blog/tags/blog/tags/...`) in dev metadata; investigate taxonomy config and plugin output.
+
+---
+
+## 2025-09-08 - v0.7
 
 ### Highlights
 - New shared **FinalCta** component used across key pages.

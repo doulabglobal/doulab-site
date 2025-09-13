@@ -1,4 +1,4 @@
-﻿// src/pages/services/clarityscan/index.tsx
+// src/pages/services/clarityscan/index.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -67,36 +67,19 @@ export default function ClarityScanPage(): ReactNode {
           width={1600}
           height={900}
           primaryCta={{
-            to: '/services/clarityscan', // keeps sitewide CTA pattern consistent
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.services.clarityscan.hero.start',
-            ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
+            to: '/book-clarityscan',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.services.clarityscan.hero.book_clarityscan_online',
+            ariaLabel: 'Book a ClarityScan online',
           }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.services.clarityscan.hero.book_call' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
-        {/* Direct schedule CTA (kept for convenience) */}
-        <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '0.5rem' }}>
-          <a
-            className="buttonPrimary"
-            href="https://calendly.com/lasantiago/clarityscan"
-            target="_blank"
-            rel="noopener noreferrer"
-            data-cta="cta.services.clarityscan.hero.run"
-            aria-label="Schedule ClarityScan on Calendly (opens in a new tab)"
-          >
-            Run ClarityScan®
-          </a>
-        </div>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
-          Built on <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link> and{' '}
-          <Link to="/services/innovation-maturity">IMM-P®</Link> gates.
-        </p>
 
-        {/* Who it’s for? */}
+        {/* Who is it for? */}
         <section className="section" id="who" aria-labelledby="who-title">
-          <h2 id="who-title">Who it’s for?</h2>
+          <h2 id="who-title">Who is it for?</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
@@ -180,8 +163,13 @@ export default function ClarityScanPage(): ReactNode {
             label: 'Start with ClarityScan®',
             dataCta: 'cta.services.clarityscan.final.start',
           }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.services.clarityscan.final.contact' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=services_clarityscan_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.services.clarityscan.final.book_clarityscan_booking',
+            newTab: true,
+          }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>

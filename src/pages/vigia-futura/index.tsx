@@ -355,7 +355,7 @@ export default function VigiaFuturaPage() {
           title="Ready to build future ready capacity?"
           body="Book a briefing or start with a workshop. We will meet you where you are and co-create a path forward. Privacy first, no tracking pixels."
           primaryCta={{ to: '/contact', label: 'Book a briefing', dataCta: 'cta.vigia.final.contact' }}
-          secondaryCta={{ to: '/services/custom-workshops', label: 'Start a workshop', dataCta: 'cta.vigia.final.workshops' }}
+          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=vigia_final_cta', label: 'Book a ClarityScan® online', dataCta: 'cta.vigia.final.book_clarityscan_booking', newTab: true }}
         />
       </main>
     </Layout>

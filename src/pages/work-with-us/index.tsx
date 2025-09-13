@@ -1,4 +1,4 @@
-﻿// src/pages/work-with-us/index.tsx
+// src/pages/work-with-us/index.tsx
 import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -93,9 +93,9 @@ export default function WorkWithUsPage(): JSX.Element {
                     imageAlt="Work with Doulab"
                     width={600}
                     height={400}
-                    primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.wwu.hero.clarityscan' }}
-                    secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.wwu.hero.book_call' }}
-                    ctaNote="Get your baseline in 15–20 minutes."
+                    primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.wwu.hero.explore_clarityscan' }}
+                    secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.wwu.hero.book_clarityscan_online' }}
+                    ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
                     id="wwu-hero"
                     ariaLabelledbyId="wwu-hero-title"
                     eager
@@ -124,6 +124,16 @@ export default function WorkWithUsPage(): JSX.Element {
                                     aria-label="Run a ClarityScan diagnostic"
                                 >
                                     Run a diagnostic →
+                                </Link>
+                                <Link
+                                    to="/book-clarityscan"
+                                    className="cardCta"
+                                    data-cta="wwu_start_clarityscan_book_online"
+                                    aria-label="Book a ClarityScan online"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Book online →
                                 </Link>
                             </div>
                         </article>
@@ -318,3 +328,5 @@ export default function WorkWithUsPage(): JSX.Element {
         </Layout>
     );
 }
+
+

@@ -1,4 +1,4 @@
-﻿// src/pages/services/index.tsx
+// src/pages/services/index.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -43,9 +43,9 @@ export default function ServicesPage(): ReactNode {
                     imageAlt="Our Services"
                     width={600}
                     height={400}
-                    primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.services.hero.clarityscan' }}
-                    secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.services.hero.book_call' }}
-                    ctaNote="Get your baseline in 15–20 minutes."
+                    primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
+                    secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online' }}
+                    ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
                     eager
@@ -71,9 +71,12 @@ export default function ServicesPage(): ReactNode {
                                 <li>Baseline maturity map (MCF 2.1 + IMM®)</li>
                                 <li>Gap analysis with prioritized next steps</li>
                             </ul>
-                            <div className="cardFooter">
+                            <div className="cardFooter" style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
                                     Run a diagnostic →
+                                </Link>
+                                <Link to="/book-clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan online" target="_blank" rel="noopener noreferrer">
+                                    Book online →
                                 </Link>
                             </div>
                         </article>

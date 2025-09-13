@@ -38,15 +38,20 @@ function useLatestBlogItems(limit = 3) {
       return text.replace(/\s+/g, ' ').trim();
     };
 
-    const sameOriginToRelative = (raw: string, origin: string) => {
-      try {
-        const u = new URL(raw, origin);
-        if (u.origin === origin) return u.pathname + (u.search || '') + (u.hash || '');
-        return u.toString();
-      } catch {
-        return raw;
+  const sameOriginToRelative = (raw: string, origin: string) => {
+    try {
+      const u = new URL(raw, origin);
+      if (u.origin === origin) {
+        let p = u.pathname + (u.search || '') + (u.hash || '');
+        // Normalize: ensure blog item links point under /blog
+        if (p.startsWith('/') && !p.startsWith('/blog')) p = '/blog' + (p === '/' ? '' : p);
+        return p;
       }
-    };
+      return u.toString();
+    } catch {
+      return raw;
+    }
+  };
 
     const parseRSS = (xmlText: string, origin: string): BlogItem[] => {
       const doc = new DOMParser().parseFromString(xmlText, 'application/xml');
@@ -217,13 +222,26 @@ export default function Insights(): ReactNode {
           eager
         />
 
-        {/* Anchor rail */}
-        <nav aria-label="Section navigation" className="microcopy" style={{ textAlign: 'center', marginTop: '.5rem' }}>
-          <a href="#start" style={{ marginRight: '.75rem' }} data-cta="cta.insights.anchor.start">Start here</a>
-          <a href="#whitepapers" style={{ marginRight: '.75rem' }} data-cta="cta.insights.anchor.whitepapers">Whitepapers</a>
-          <a href="#blog" style={{ marginRight: '.75rem' }} data-cta="cta.insights.anchor.blog">Blog</a>
-          <a href="#releases" data-cta="cta.insights.anchor.releases">Releases</a>
-        </nav>
+        {/* In-page subnav (match Vigía Futura style) */}
+        <div className="container">
+          <nav
+            className="subnav"
+            aria-label="In this page"
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '.5rem',
+              padding: '.25rem 0 .5rem',
+              margin: '0 auto .75rem',
+            }}
+          >
+            <a href="#start" data-cta="cta.insights.anchor.start">Start here</a>
+            <a href="#whitepapers" data-cta="cta.insights.anchor.whitepapers">Whitepapers</a>
+            <a href="#blog" data-cta="cta.insights.anchor.blog">Blog</a>
+            <a href="#releases" data-cta="cta.insights.anchor.releases">Releases</a>
+          </nav>
+        </div>
 
         {/* Start here (ordered: MicroCanvas, Blog, Whitepaper) */}
         <section className="section" id="start" aria-labelledby="start-title">
@@ -407,10 +425,15 @@ export default function Insights(): ReactNode {
           id="insights-final"
           ariaLabelledbyId="insights-final-title"
           title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co-create the path forward."
+          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.insights.final.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.insights.final.book_call' }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=insights_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.insights.final.book_clarityscan_booking',
+            newTab: true,
+          }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>
     </Layout>

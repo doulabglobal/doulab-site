@@ -94,17 +94,12 @@ export default function CaseFundapec(): ReactNode {
           height={720}
           primaryCta={{
             to: '/services/clarityscan',
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.cases.hero.clarityscan',
-            ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
+            label: 'Explore ClarityScan',
+            dataCta: 'cta.cases.hero.explore_clarityscan',
+            ariaLabel: 'Explore ClarityScan',
           }}
-          secondaryCta={{
-            to: '/contact',
-            label: 'Book a discovery call',
-            dataCta: 'cta.cases.hero.book_call',
-            ariaLabel: 'Book a discovery call',
-          }}
-          ctaNote="Get your baseline in 15 to 20 minutes."
+          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online' }}
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
 
@@ -302,6 +297,27 @@ export default function CaseFundapec(): ReactNode {
           See more examples in <Link to="/case-studies">Case studies</Link>.
         </p>
 
+        {/* Process (diagram) */}
+        <section className="section" id="process-diagram" aria-labelledby="process-diagram-title">
+          <h2 id="process-diagram-title">Process (diagram)</h2>
+          <div style={{ textAlign: 'center' }}>
+            <picture>
+              <source srcSet="/img/diagrams/fundapec-process.avif" type="image/avif" />
+              <source srcSet="/img/diagrams/fundapec-process.webp" type="image/webp" />
+              <img
+                src="/img/diagrams/fundapec-process.png"
+                alt="Process diagram for FUNDAPEC"
+                width="1200"
+                height="720"
+                loading="lazy"
+              />
+            </picture>
+            <p className="microcopy">Diagram: high‑level flow of context → work → outcomes.</p>
+          </div>
+        </section>
+
+        {/* Standardized Final CTA */}
+
         {/* Standardized Final CTA */}
         <FinalCta
           id="fundapec-final-cta"
@@ -309,10 +325,20 @@ export default function CaseFundapec(): ReactNode {
           title="Take the first step"
           body="Get your baseline in 15 to 20 minutes."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.cases.final.book_call' }}
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=case_fundapec_final_cta',
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.cases.final.book_clarityscan_booking',
+            newTab: true,
+          }}
           ctaNote="No prep required."
         />
       </main>
     </Layout>
   );
 }
+
+
+
+
+

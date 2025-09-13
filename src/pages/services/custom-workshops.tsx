@@ -66,19 +66,12 @@ export default function CustomWorkshopsPage(): ReactNode {
           height={900}
           primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.contact' }}
           secondaryCta={{ to: '/what-we-do', label: 'See what we do', dataCta: 'cta.services.workshops.hero.services' }}
-          ctaNote="Get your baseline in 15–20 minutes."
+          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
-      <div style={{ maxWidth: 'var(--ifm-container-width-xl)', margin: '0.25rem auto 0', padding: '0 1rem' }}>
-      <p className="microcopy" style={{ margin: 0, textAlign: 'center' }}>
-      Built on <Link to="/docs/research-resources/microcanvas">MicroCanvas® v2.1</Link> and{' '}
-      <Link to="/services/innovation-maturity">IMM-P®</Link> gates.
-      </p>
-      </div>
-
-        {/* Who it’s for? (standardized audience tiles) */}
+        {/* Who is it for? (standardized audience tiles) */}
         <section className="section" id="who" aria-labelledby="who-title">
-          <h2 id="who-title">Who it’s for?</h2>
+          <h2 id="who-title">Who is it for?</h2>
           <div className="cardGrid">
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
@@ -150,12 +143,25 @@ export default function CustomWorkshopsPage(): ReactNode {
               </p>
               <ul>
                 <li>Delivery: on-site or remote</li>
-                <li>Includes: pre-work brief, decision log, 30/60/90 template</li>
+                <li>What’s included: kickoff + goals, maturity/constraints snapshot, prioritization map, decisions & owners, 30/60/90 template</li>
               </ul>
+              <p className="microcopy">Default content can be customized during our first discovery call.</p>
+              <p className="microcopy">Typically schedules within 1–2 weeks.</p>
               <div className="cardFooter">
                 <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.halfday.brief">
                   Start a half-day brief →
                 </Link>
+                <a
+                  className="cardCta"
+                  href="https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/ahkLyvQl7kCM2czREPzaRg2?ismsaljsauthenabled"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="cta.services.workshops.formats.halfday.book"
+                  aria-label="Book a half-day workshop via Microsoft Bookings"
+                  style={{ order: -1 }}
+                >
+                  Book a half-day workshop →
+                </a>
               </div>
             </article>
 
@@ -168,11 +174,16 @@ export default function CustomWorkshopsPage(): ReactNode {
               </p>
               <ul>
                 <li>Delivery: on-site or remote</li>
-                <li>Includes: pre-work review, prioritization map, action board</li>
+                <li>What’s included: discovery deep-dive, stakeholder/constraints mapping, hypothesis & experiments, prioritization map, action board, post-work synthesis</li>
               </ul>
+              <p className="microcopy">Default content can be customized during our first discovery call.</p>
+              <p className="microcopy">Typically schedules within 1–2 weeks.</p>
               <div className="cardFooter">
                 <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">
                   Start a full-day brief →
+                </Link>
+                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.discovery" aria-label="Book a discovery call for the full-day workshop">
+                  Book a discovery call
                 </Link>
               </div>
             </article>
@@ -214,7 +225,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           title="Ready to align and move?"
           body="Send us your goals and constraints. We’ll design the right workshop and get you moving fast."
           primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.final.contact' }}
-          secondaryCta={{ to: '/services/clarityscan', label: 'Start with a diagnostic', dataCta: 'cta.services.workshops.final.clarityscan' }}
+          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/ahkLyvQl7kCM2czREPzaRg2?ismsaljsauthenabled', label: 'Book a half-day workshop', dataCta: 'cta.services.workshops.final.book_halfday_booking', newTab: true }}
           ctaNote="We use privacy-first analytics only."
         />
       </main>

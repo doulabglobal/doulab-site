@@ -19,6 +19,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 import Hero from '../../components/Hero';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 export default function InnovationMaturityProgram(): ReactNode {
   // JSON-LD schema (service)
@@ -175,7 +176,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             dataCta: 'cta.services.imm.hero.see_structure',
             ariaLabel: 'See program structure',
           }}
-          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.services.imm.hero.book_clarityscan_online' }}
+          secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.imm.hero.book_clarityscan_online', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
@@ -397,7 +398,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             dataCta: 'cta.services.imm.final.clarityscan',
             ariaLabel: 'Start with ClarityScan — 15–20 minute baseline',
           }}
-          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=services_imm_final_cta', label: 'Book a ClarityScan® online', dataCta: 'cta.services.imm.final.book_clarityscan_booking', newTab: true }}
+          secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.imm.final.book_clarityscan_booking', newTab: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>

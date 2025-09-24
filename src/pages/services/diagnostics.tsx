@@ -1,4 +1,4 @@
-﻿// src/pages/services/diagnostics.tsx
+// src/pages/services/diagnostics.tsx
 import React from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
@@ -10,6 +10,7 @@ import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Users from 'lucide-react/dist/esm/icons/users';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 export default function DiagnosticsPage() {
     return (
@@ -92,7 +93,7 @@ export default function DiagnosticsPage() {
                                 <Link className="cardCta" to="/services/clarityscan" data-cta="cta.diagnostics.offer.clarityscan">
                                     Run ClarityScan® →
                                 </Link>
-                                <Link className="cardCta" to="/book-clarityscan" data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book a ClarityScan online" target="_blank" rel="noopener noreferrer">
+                                <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book a ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
                                     Book online →
                                 </Link>
                             </div>
@@ -243,3 +244,6 @@ export default function DiagnosticsPage() {
         </Layout>
     );
 }
+
+
+

@@ -11,6 +11,7 @@ import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 const EMAIL = 'hello@doulab.net';
 
@@ -80,9 +81,10 @@ export default function Contact(): ReactNode {
           dataCta: 'cta.contact.hero.email',
           }}
           secondaryCta={{
-            to: '/book-clarityscan',
+            to: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.contact.hero.book_clarityscan_online',
+              external: true,
           }}
           ctaNote="No prep required. We confirm a time and send a brief follow up."
           id="contact-hero"
@@ -202,7 +204,7 @@ export default function Contact(): ReactNode {
           ariaLabel: 'Jump to contact options',
           }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=contact_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.contact.final.book_clarityscan_booking',
             newTab: true,
@@ -212,3 +214,9 @@ export default function Contact(): ReactNode {
     </Layout>
   );
 }
+
+
+
+
+
+

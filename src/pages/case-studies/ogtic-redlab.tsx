@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 export default function CaseOgticRedlab(): ReactNode {
   const breadcrumbSchema = {
@@ -99,7 +100,7 @@ export default function CaseOgticRedlab(): ReactNode {
             dataCta: 'cta.cases.hero.explore_clarityscan',
             ariaLabel: 'Explore ClarityScan',
           }}
-          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online' }}
+          secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
@@ -301,7 +302,7 @@ export default function CaseOgticRedlab(): ReactNode {
           body="Get your baseline in 15 to 20 minutes."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=case_ogtic_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.cases.final.book_clarityscan_booking',
             newTab: true,

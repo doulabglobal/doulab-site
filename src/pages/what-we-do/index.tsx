@@ -5,6 +5,7 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 // Icons (tree-shaken)
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -113,7 +114,7 @@ export default function WhatWeDo(): ReactNode {
             dataCta: 'cta.whatwedo.hero.explore_clarityscan',
             ariaLabel: 'Explore ClarityScan',
           }}
-          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.whatwedo.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online' }}
+          secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.whatwedo.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="whatwedo-hero"
           ariaLabelledbyId="whatwedo-hero-title"
@@ -328,7 +329,7 @@ export default function WhatWeDo(): ReactNode {
             dataCta: 'cta.whatwedo.final.clarityscan',
           }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=whatwedo_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.whatwedo.final.book_clarityscan_booking',
             newTab: true,
@@ -339,6 +340,7 @@ export default function WhatWeDo(): ReactNode {
     </Layout>
   );
 }
+
 
 
 

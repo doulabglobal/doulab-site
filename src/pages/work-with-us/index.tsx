@@ -12,6 +12,7 @@ import Target from 'lucide-react/dist/esm/icons/target';
 import CheckCircle2 from 'lucide-react/dist/esm/icons/check-circle-2';
 import Hero from '../../components/Hero';
 import type { JSX } from 'react';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 
 export default function WorkWithUsPage(): JSX.Element {
@@ -94,7 +95,7 @@ export default function WorkWithUsPage(): JSX.Element {
                     width={600}
                     height={400}
                     primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.wwu.hero.explore_clarityscan' }}
-                    secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.wwu.hero.book_clarityscan_online' }}
+                    secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.wwu.hero.book_clarityscan_online', external: true, ariaLabel: 'Book a ClarityScan online via Stripe Checkout' }}
                     ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
                     id="wwu-hero"
                     ariaLabelledbyId="wwu-hero-title"
@@ -126,7 +127,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                     Run a diagnostic →
                                 </Link>
                                 <Link
-                                    to="/book-clarityscan"
+                                    href={CLARITYSCAN_CHECKOUT_URL}
                                     className="cardCta"
                                     data-cta="wwu_start_clarityscan_book_online"
                                     aria-label="Book a ClarityScan online"
@@ -328,5 +329,7 @@ export default function WorkWithUsPage(): JSX.Element {
         </Layout>
     );
 }
+
+
 
 

@@ -7,6 +7,7 @@ import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import Hero from '../components/Hero';
 import FinalCta from '../components/FinalCta';
 import CaseStudyCards from '../components/case-studies/CaseStudyCards';
+import { CLARITYSCAN_CHECKOUT_URL } from '../constants/urls';
 
 // Icons (tree-shaken imports)
 import type { LucideIcon } from 'lucide-react';
@@ -256,11 +257,11 @@ function ProblemSection() {
           </Link>
           <a
             className="buttonSecondary"
-            href="https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=home_problem_cta"
+            href={CLARITYSCAN_CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
             data-cta="cta.home.problem.book_clarityscan_booking"
-            aria-label="Book a ClarityScan online via Microsoft Bookings"
+            aria-label="Book a ClarityScan online via Stripe Checkout"
           >
             Book a ClarityScan® online
           </a>
@@ -268,11 +269,11 @@ function ProblemSection() {
         <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '.25rem', display: 'none' }}>
           <a
             className="buttonSecondary"
-            href="https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=home_problem_cta"
+            href={CLARITYSCAN_CHECKOUT_URL}
             target="_blank"
             rel="noopener noreferrer"
             data-cta="cta.home.problem.book_clarityscan_booking"
-            aria-label="Book a ClarityScan online via Microsoft Bookings"
+            aria-label="Book a ClarityScan online via Stripe Checkout"
           >
             Book a ClarityScan® online
           </a>
@@ -750,7 +751,7 @@ export default function Home(): ReactNode {
           dataCta: 'cta.home.hero.clarityscan',
           ariaLabel: 'Start with ClarityScan — quick 15–20 minute baseline',
         }}
-        secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.home.hero.book_clarityscan_online' }}
+        secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.home.hero.book_clarityscan_online', external: true }}
         ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
       />
 
@@ -770,7 +771,7 @@ export default function Home(): ReactNode {
           body="Start with a quick diagnostic or book a discovery call. We track decision latency, cycle time, and capability growth. We will meet you where you are and co‑create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.home.final.clarityscan' }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=home_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.home.final.book_clarityscan_booking',
             newTab: true,

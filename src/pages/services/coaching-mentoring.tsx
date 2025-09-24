@@ -19,6 +19,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 
 export default function CoachingMentoringPage(): ReactNode {
@@ -277,7 +278,7 @@ export default function CoachingMentoringPage(): ReactNode {
           title="Ready to grow with guidance?"
           body="Tell us your goals and constraints. We’ll recommend the retainer that fits and start making progress fast."
           primaryCta={{ to: '/contact', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.contact' }}
-          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=services_coaching_final_cta', label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
+          secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>

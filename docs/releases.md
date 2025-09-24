@@ -12,11 +12,29 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 
 ---
 
+## 2025-09-24 - v0.7.2
+
+### Highlights
+- New blog post: "Vigía Futura: Why Latin America Needs a Strategic Foresight Observatory"
+- Stripe Checkout now powers ClarityScan® purchases with a single CTA source of truth.
+- Added a post-payment success page that immediately surfaces the Microsoft Bookings link.
+
+### UX & CTAs
+- Repointed every “Book a ClarityScan® online” CTA to the Stripe checkout (home, services, case studies, contact, What We Do, Work With Us, Vigía Futura, etc.).
+- Introduced a page, auto-opening the Microsoft Bookings page and keeping a fallback CTA on-screen.
+- Standardized booking copy to “ClarityScan®” across the flow.
+
+### Content & Taxonomy
+- Added `foresight` and `latin-america` blog tags for upcoming signal and regional coverage.
+
+### DX & Maintenance
+- Introduced `src/constants/urls.ts` so ClarityScan® booking and checkout URLs live in one reusable place.
+
 ## 2025-09-13 - v0.7.1
 
 ### Highlights
 - Blog cards reliability: fixed homepage and Insights "Latest from the blog" cards linking to a non-prefixed path (404 risk). Links are now normalized to always live under `/blog`.
-- New post: “ClarityScanr: how a 30-45 minute baseline reduces decision latency”.
+- New post: “ClarityScan®: how a 30-45 minute baseline reduces decision latency”.
 
 ### UX & CTAs
 - Added/standardized direct “Book a ClarityScan® online” CTAs across the site, pointing to Outlook Bookings.
@@ -300,3 +318,4 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 - Replaced Google Analytics with **Cloudflare Web Analytics**.  
 - Updated README with workflow & status checklist.  
 - Established public release notes under **/docs/releases**.
+

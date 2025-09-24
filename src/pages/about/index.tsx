@@ -5,6 +5,7 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 // Icons (tree-shaken)
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -132,7 +133,7 @@ export default function AboutPage(): ReactNode {
             dataCta: 'cta.about.hero.learn_more',
             ariaLabel: 'Learn more about what we do',
           }}
-          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.about.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online' }}
+          secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.about.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="about-hero"
           ariaLabelledbyId="about-hero-title"
@@ -280,7 +281,7 @@ export default function AboutPage(): ReactNode {
           body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.about.final.clarityscan' }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=about_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.about.final.book_clarityscan_booking',
             newTab: true,

@@ -18,6 +18,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 export default function ClarityScanPage(): ReactNode {
   // JSON-LD schema
@@ -66,11 +67,12 @@ export default function ClarityScanPage(): ReactNode {
           imageAlt="ClarityScan® diagnostic visual"
           width={1600}
           height={900}
-          primaryCta={{
-            to: '/book-clarityscan',
+                    primaryCta={{
+            to: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.services.clarityscan.hero.book_clarityscan_online',
-            ariaLabel: 'Book a ClarityScan online',
+            ariaLabel: 'Book a ClarityScan online via Stripe Checkout',
+            external: true,
           }}
           secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
@@ -164,7 +166,7 @@ export default function ClarityScanPage(): ReactNode {
             dataCta: 'cta.services.clarityscan.final.start',
           }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=services_clarityscan_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.services.clarityscan.final.book_clarityscan_booking',
             newTab: true,
@@ -175,3 +177,6 @@ export default function ClarityScanPage(): ReactNode {
     </Layout>
   );
 }
+
+
+

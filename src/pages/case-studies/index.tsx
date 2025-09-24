@@ -5,6 +5,7 @@ import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 // Tree-shaken icons
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
@@ -82,7 +83,7 @@ export default function CaseStudies(): ReactNode {
             dataCta: 'cta.cases.hero.explore_clarityscan',
             ariaLabel: 'Explore ClarityScan',
           }}
-          secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online' }}
+          secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           eager
         />
@@ -154,7 +155,7 @@ export default function CaseStudies(): ReactNode {
           body="Start small, get your baseline in 15–20 minutes."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=cases_index_final_cta',
+            href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.cases.final.book_clarityscan_booking',
             newTab: true,

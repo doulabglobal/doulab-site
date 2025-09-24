@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -44,7 +45,7 @@ export default function ServicesPage(): ReactNode {
                     width={600}
                     height={400}
                     primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
-                    secondaryCta={{ to: '/book-clarityscan', label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online' }}
+                    secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
@@ -75,7 +76,7 @@ export default function ServicesPage(): ReactNode {
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
                                     Run a diagnostic →
                                 </Link>
-                                <Link to="/book-clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan online" target="_blank" rel="noopener noreferrer">
+                                <Link href={CLARITYSCAN_CHECKOUT_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
                                     Book online →
                                 </Link>
                             </div>
@@ -166,5 +167,9 @@ export default function ServicesPage(): ReactNode {
         </Layout>
     );
 }
+
+
+
+
 
 

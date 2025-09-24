@@ -37,3 +37,13 @@ innovation:
   label: Innovation
   permalink: /blog/tags/innovation
   description: Culture, delivery systems, and outcomes
+
+foresight:
+  label: Foresight
+  permalink: /blog/tags/foresight
+  description: Strategic foresight, signals, scenarios, and decision support
+
+latin-america:
+  label: Latin America
+  permalink: /blog/tags/latin-america
+  description: Regional context across LAC markets, policy, and ecosystems

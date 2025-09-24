@@ -5,6 +5,7 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 
 type SectionDef = { id: string; label: string };
@@ -355,7 +356,7 @@ export default function VigiaFuturaPage() {
           title="Ready to build future ready capacity?"
           body="Book a briefing or start with a workshop. We will meet you where you are and co-create a path forward. Privacy first, no tracking pixels."
           primaryCta={{ to: '/contact', label: 'Book a briefing', dataCta: 'cta.vigia.final.contact' }}
-          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=vigia_final_cta', label: 'Book a ClarityScan® online', dataCta: 'cta.vigia.final.book_clarityscan_booking', newTab: true }}
+          secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.vigia.final.book_clarityscan_booking', newTab: true }}
         />
       </main>
     </Layout>

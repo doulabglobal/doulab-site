@@ -1,4 +1,4 @@
-﻿import { themes as prismThemes } from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
@@ -127,6 +127,7 @@ const config: Config = {
           title: 'More',
           items: [
             { label: 'Blog', to: '/blog' },
+            { label: 'Privacy & Terms', to: '/privacy-terms' },
             { label: 'RSS (XML)', href: `${SITE_URL}/blog/rss.xml` },
             { label: 'Atom (XML)', href: `${SITE_URL}/blog/atom.xml` },
             { label: 'Sitemap', href: `${SITE_URL}/sitemap.xml` },
@@ -144,3 +145,4 @@ const config: Config = {
 };
 
 export default config;
+

@@ -66,9 +66,10 @@ export default function CustomWorkshopsPage(): ReactNode {
           height={900}
           primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.contact' }}
           secondaryCta={{ to: '/what-we-do', label: 'See what we do', dataCta: 'cta.services.workshops.hero.services' }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.1 and IMM-P® gates."
           eager
         />
+
         {/* Who is it for? (standardized audience tiles) */}
         <section className="section" id="who" aria-labelledby="who-title">
           <h2 id="who-title">Who is it for?</h2>
@@ -90,7 +91,7 @@ export default function CustomWorkshopsPage(): ReactNode {
             </article>
             <article className="card" aria-labelledby="who-accelerators">
               <Workflow className="cardIcon" aria-hidden="true" />
-              <h3 id="who-accelerators">Incubators & Accelerators</h3>
+              <h3 id="who-accelerators">Incubators &amp; Accelerators</h3>
               <p>Raise cohort quality with evidence-first methods and reusable playbooks.</p>
             </article>
           </div>
@@ -105,7 +106,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <h3 id="cw-why-decisions">Decisions, not meetings</h3>
               <p>Make the few decisions that change everything.</p>
               <ul>
-                <li>Clear owners & cadence</li>
+                <li>Clear owners &amp; cadence</li>
                 <li>One-page plan</li>
               </ul>
             </article>
@@ -115,7 +116,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <p>Get cross-functional buy-in and remove blockers in one session.</p>
               <ul>
                 <li>Shared framing</li>
-                <li>Commitments & next steps</li>
+                <li>Commitments &amp; next steps</li>
               </ul>
             </article>
             <article className="card" aria-labelledby="cw-why-gtm">
@@ -123,8 +124,8 @@ export default function CustomWorkshopsPage(): ReactNode {
               <h3 id="cw-why-gtm">Go-to-Market</h3>
               <p>Frame customers, offers, and tests that de-risk launch.</p>
               <ul>
-                <li>Target segments & hypotheses</li>
-                <li>MVP metrics & signals</li>
+                <li>Target segments &amp; hypotheses</li>
+                <li>MVP metrics &amp; signals</li>
               </ul>
             </article>
           </div>
@@ -134,6 +135,7 @@ export default function CustomWorkshopsPage(): ReactNode {
         <section className="section" id="cw-formats" aria-labelledby="cw-formats-title">
           <h2 id="cw-formats-title">Workshop formats</h2>
           <div className="cardGrid">
+            {/* Half-day custom */}
             <article className="card" aria-labelledby="cw-format-halfday">
               <CalendarClock className="cardIcon" aria-hidden="true" />
               <h3 id="cw-format-halfday">Custom Innovation Workshop (half-day)</h3>
@@ -143,7 +145,10 @@ export default function CustomWorkshopsPage(): ReactNode {
               </p>
               <ul>
                 <li>Delivery: on-site or remote</li>
-                <li>What’s included: kickoff + goals, maturity/constraints snapshot, prioritization map, decisions & owners, 30/60/90 template</li>
+                <li>
+                  What’s included: kickoff + goals, maturity/constraints snapshot, prioritization map, decisions &amp; owners,
+                  30/60/90 template
+                </li>
               </ul>
               <p className="microcopy">Default content can be customized during our first discovery call.</p>
               <p className="microcopy">Typically schedules within 1–2 weeks.</p>
@@ -165,6 +170,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               </div>
             </article>
 
+            {/* Full-day custom */}
             <article className="card" aria-labelledby="cw-format-fullday">
               <CalendarClock className="cardIcon" aria-hidden="true" />
               <h3 id="cw-format-fullday">Custom Innovation Workshop (full-day)</h3>
@@ -174,7 +180,10 @@ export default function CustomWorkshopsPage(): ReactNode {
               </p>
               <ul>
                 <li>Delivery: on-site or remote</li>
-                <li>What’s included: discovery deep-dive, stakeholder/constraints mapping, hypothesis & experiments, prioritization map, action board, post-work synthesis</li>
+                <li>
+                  What’s included: discovery deep-dive, stakeholder/constraints mapping, hypotheses &amp; experiments,
+                  prioritization map, action board, post-work synthesis
+                </li>
               </ul>
               <p className="microcopy">Default content can be customized during our first discovery call.</p>
               <p className="microcopy">Typically schedules within 1–2 weeks.</p>
@@ -182,8 +191,46 @@ export default function CustomWorkshopsPage(): ReactNode {
                 <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">
                   Start a full-day brief →
                 </Link>
-                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.discovery" aria-label="Book a discovery call for the full-day workshop">
+                <Link
+                  to="/contact"
+                  className="cardCta"
+                  data-cta="cta.services.workshops.formats.fullday.discovery"
+                  aria-label="Book a discovery call for the full-day workshop"
+                >
                   Book a discovery call
+                </Link>
+              </div>
+            </article>
+
+            {/* Innovation Readiness & Governance Workshop */}
+            <article className="card" aria-labelledby="cw-format-innovation-readiness">
+              <CalendarClock className="cardIcon" aria-hidden="true" />
+              <h3 id="cw-format-innovation-readiness">Innovation Readiness &amp; Governance Workshop (8 hours)</h3>
+              <p>
+                A structured <strong>8-hour hybrid</strong> journey for innovation and strategy teams, combining foresight,
+                MicroCanvas® 2.1, IMM-P® and governance of the work cells and cross-functional teams to make execution predictable and aligned.
+              </p>
+              <ul>
+                <li>Format: 4 hours in person (Day 1) + 4 hours online (Day 2)</li>
+                <li>Focus: foresight, culture, structure, execution discipline and work-cell governance</li>
+              </ul>
+              <p className="microcopy">Fully digital, laptop per participant, with collaborative workspaces and follow-up artifacts.</p>
+              <div className="cardFooter">
+                <Link
+                  to="/services/innovation-readiness-workshop"
+                  className="cardCta"
+                  data-cta="cta.services.workshops.formats.innovation_readiness.view"
+                  aria-label="View the Innovation Readiness & Governance Workshop details"
+                >
+                  View workshop details →
+                </Link>
+                <Link
+                  to="/contact"
+                  className="cardCta"
+                  data-cta="cta.services.workshops.formats.innovation_readiness.brief"
+                  aria-label="Start a brief for the Innovation Readiness & Governance Workshop"
+                >
+                  Start a brief →
                 </Link>
               </div>
             </article>
@@ -196,12 +243,12 @@ export default function CustomWorkshopsPage(): ReactNode {
           <div className="cardGrid">
             <article className="card" aria-labelledby="cw-outcome-decisions">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="cw-outcome-decisions">Decisions & owners</h3>
+              <h3 id="cw-outcome-decisions">Decisions &amp; owners</h3>
               <p>Gate-ready summaries and a one-page plan with clear owners.</p>
             </article>
             <article className="card" aria-labelledby="cw-outcome-evidence">
               <Lightbulb className="cardIcon" aria-hidden="true" />
-              <h3 id="cw-outcome-evidence">Evidence & experiments</h3>
+              <h3 id="cw-outcome-evidence">Evidence &amp; experiments</h3>
               <p>Ranked tests with signals, timelines, and success criteria.</p>
             </article>
             <article className="card" aria-labelledby="cw-outcome-reuse">
@@ -225,7 +272,12 @@ export default function CustomWorkshopsPage(): ReactNode {
           title="Ready to align and move?"
           body="Send us your goals and constraints. We’ll design the right workshop and get you moving fast."
           primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.final.contact' }}
-          secondaryCta={{ href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/ahkLyvQl7kCM2czREPzaRg2?ismsaljsauthenabled', label: 'Book a half-day workshop', dataCta: 'cta.services.workshops.final.book_halfday_booking', newTab: true }}
+          secondaryCta={{
+            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/ahkLyvQl7kCM2czREPzaRg2?ismsaljsauthenabled',
+            label: 'Book a half-day workshop',
+            dataCta: 'cta.services.workshops.final.book_halfday_booking',
+            newTab: true,
+          }}
           ctaNote="We use privacy-first analytics only."
         />
       </main>

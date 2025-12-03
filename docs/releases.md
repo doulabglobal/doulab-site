@@ -12,6 +12,25 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 
 ---
 
+## 2025-09-28 - v0.7.3
+
+### Highlights
+- Federated AI whitepaper rebuilt for rigor and stability: IMM-P © standardized, copyright symbol fixed, MDX parsing errors resolved, and academic scaffolding added (research questions, methodology, pilots, comparative analysis, threats/limitations, ethics/compliance, TCO, repeatability, risks/mitigations, UX checklist, minimum evidence, glossary, style snapshot).
+- Innovation Readiness Workshop page now links to core services/docs and uses the live bookings CTA.
+
+### UX & CTAs
+- Wired the hero “Book a discovery call” CTA on the Innovation Readiness Workshop page to the configured bookings URL (mirrors the final CTA).
+- Added a related-links section on the workshop page pointing to ClarityScan, IMM-P program, Custom Workshops, and the distributed federated AI whitepaper.
+
+### Content & Docs
+- Standardized IMM-P © usage across the whitepaper and updated front matter to fix MDX build breaks.
+- Restored whitepaper content from backup and ensured comparison operators are escaped to satisfy MDX.
+
+### Known follow-ups
+- Replace the placeholder BOOKINGS_URL with the final Microsoft Bookings link once available.
+
+---
+
 ## 2025-09-24 - v0.7.2
 
 ### Highlights
@@ -318,4 +337,7 @@ For daily development tasks, see the internal `CHECKLOG.md`.
 - Replaced Google Analytics with **Cloudflare Web Analytics**.  
 - Updated README with workflow & status checklist.  
 - Established public release notes under **/docs/releases**.
+
+
+
 

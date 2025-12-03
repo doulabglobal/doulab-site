@@ -196,8 +196,8 @@ export default function WhatWeDo(): ReactNode {
 
             <article className="card" aria-labelledby="diagnostics-title">
               <Target className="cardIcon" aria-hidden="true" />
-              <h3 id="diagnostics-title">Diagnostics and Workshops</h3>
-              <p>Fast diagnostics to baseline maturity, risks, and constraints.</p>
+              <h3 id="diagnostics-title">Diagnostics</h3>
+              <p>Fast baselines on maturity, risks, and constraints to anchor decisions.</p>
               <ul>
                 <li>ClarityScan® baseline, MCF 2.1 and IMM-P®</li>
                 <li>Maturity map and prioritized risk shortlist</li>
@@ -218,8 +218,16 @@ export default function WhatWeDo(): ReactNode {
         {/* Workshops pillar */}
         <article className="card" aria-labelledby="pillars-workshops">
           <Lightbulb className="cardIcon" aria-hidden={true} />
-          <h3 id="pillars-workshops">Workshops — spark aligned action</h3>
-          <p>Focused sessions that unlock decisions and turn strategy into next steps.</p>
+          <h3 id="pillars-workshops">Workshops</h3>
+          <p>
+            Custom and readymade sessions (including the Innovation Readiness &amp; Governance workshop)
+            that compress weeks into a day: align decisions, clarify roles, and produce actionable roadmaps.
+          </p>
+          <ul>
+            <li>Strategy/OKR alignment workshops</li>
+            <li>Decision and roadmap facilitation</li>
+            <li>Innovation Readiness &amp; Governance (8h hybrid) for evidence-based gates</li>
+          </ul>
           <div className="cardFooter">
             <Link
               className="cardCta"

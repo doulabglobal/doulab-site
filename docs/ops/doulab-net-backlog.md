@@ -13,10 +13,10 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Commits: TBD
 
 ### B-P0-02
-- Description: Fix placeholder booking link `https://outlook.office.com/book/REPLACE_ME`.
+- Description: Fix placeholder booking link.
 - Rationale: Placeholder link is broken and harms conversions.
 - Acceptance criteria:
-  - No `REPLACE_ME` booking URL remains in repo.
+  - No placeholder booking URL remains in repo.
   - Booking inventory shows only valid booking URLs.
 - Commits: TBD
 

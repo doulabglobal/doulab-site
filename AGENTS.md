@@ -13,12 +13,15 @@ This file defines workflow, guardrails, backlog tracking, and commit discipline 
 ## Task acceptance criteria
 All CODEX tasks must include explicit acceptance criteria in the request or in the response plan.
 
+## Acceptance criteria / audit rules
+- Legacy booking link checks exclude `ops/audits/**` (immutable evidence); enforce only in runtime source and active documentation (`src/**`, `docs/**`, configs/constants).
+
 ## Backlog (tracked) — Phase B1
 Each item must link to commit hash(es) upon completion.
 
 ### P0
 - Remove or gate `/markdown-page`.
-- Fix placeholder booking link `https://outlook.office.com/book/REPLACE_ME`.
+- Fix placeholder booking link (redacted).
 
 ### P1
 - Define canonical booking.doulab.net entrypoints and refactor booking policy.

@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import styles from './Hero.module.css';
 
 type Cta = {
     to: string;
@@ -65,16 +66,15 @@ export default function Hero({
         <picture>
             <source srcSet={avif} type="image/avif" />
             <source srcSet={webp} type="image/webp" />
-            <img
-                src={jpg}
-                alt={imageAlt}
-                className="heroImage"
-                loading={eager ? 'eager' : 'lazy'}
-                fetchPriority={eager ? 'high' as const : undefined}
-                decoding="async"
-                width={width}
-                height={height}
-                style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                <img
+                    src={jpg}
+                    alt={imageAlt}
+                    loading={eager ? 'eager' : 'lazy'}
+                    fetchPriority={eager ? 'high' as const : undefined}
+                    decoding="async"
+                    width={width}
+                    height={height}
+                className={`heroImage ${styles.image}`}
             />
         </picture>
     );
@@ -92,11 +92,11 @@ export default function Hero({
             </Head>
 
             {/* Two-column layout, matching home: text left, image right */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>
-                <div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>
+            <div className={styles.layout}>
+                <div className={styles.content}>
                     <h1 id={ariaLabelledbyId} className="heroTitle">{title}</h1>
                     {subtitle && (
-                        <p className="heroSubtitle" style={{ textAlign: 'justify' }}>
+                        <p className={`heroSubtitle ${styles.subtitle}`}>
                             {subtitle}
                         </p>
                     )}
@@ -161,7 +161,7 @@ export default function Hero({
                     {ctaNote && <p className="ctaNote">{ctaNote}</p>}
                 </div>
 
-                <div style={{ flex: '1 1 320px', textAlign: 'center' }}>
+                <div className={styles.media}>
                     {ImgTag}
                 </div>
             </div>

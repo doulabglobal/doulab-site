@@ -2,6 +2,7 @@
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import PageHeader from '../components/PageHeader/PageHeader';
 
 export default function TermsAndConditions(): ReactNode {
   const pageTitle = 'Terms & Conditions | Doulab';
@@ -18,12 +19,10 @@ export default function TermsAndConditions(): ReactNode {
       </Head>
 
       <main className="container" style={{ padding: '2rem 1rem', maxWidth: '960px' }}>
-        <header>
-          <h1>Terms &amp; Conditions</h1>
-          <p className="microcopy" style={{ marginBottom: '2rem' }}>
-            Updated: 24 September 2025
-          </p>
-        </header>
+        <PageHeader
+          title="Terms & Conditions"
+          meta="Updated: 24 September 2025"
+        />
 
         <section id="agreement">
           <h2>1. Agreement</h2>

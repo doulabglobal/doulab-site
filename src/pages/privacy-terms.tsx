@@ -1,6 +1,7 @@
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import PageHeader from '../components/PageHeader/PageHeader';
 
 export default function PrivacyAndTerms(): ReactNode {
   const pageTitle = 'Privacy & Terms | Doulab';
@@ -18,17 +19,17 @@ export default function PrivacyAndTerms(): ReactNode {
       </Head>
 
       <main className="container" style={{ padding: '2rem 1rem', maxWidth: '960px' }}>
-        <header>
-          <h1>Privacy &amp; Terms</h1>
-          <p className="microcopy" style={{ marginBottom: '1.5rem' }}>
-            Updated: {lastUpdated}
-          </p>
-          <p>
-            This page explains how Doulab collects, uses, and protects personal information and sets out the terms that govern the
-            use of our diagnostics, foresight programs, and advisory services. If you have questions, contact{' '}
-            <a href="mailto:legal@doulab.net">legal@doulab.net</a>.
-          </p>
-        </header>
+        <PageHeader
+          title="Privacy & Terms"
+          meta={`Updated: ${lastUpdated}`}
+          body={
+            <p>
+              This page explains how Doulab collects, uses, and protects personal information and sets out the terms that govern the
+              use of our diagnostics, foresight programs, and advisory services. If you have questions, contact{' '}
+              <a href="mailto:legal@doulab.net">legal@doulab.net</a>.
+            </p>
+          }
+        />
 
         <nav aria-label="On-page navigation" style={{ margin: '2rem 0' }}>
           <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
@@ -321,4 +322,3 @@ export default function PrivacyAndTerms(): ReactNode {
     </Layout>
   );
 }
-

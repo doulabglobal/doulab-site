@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { CLARITYSCAN_BOOKING_URL } from '../constants/urls';
+import PageHeader from '../components/PageHeader/PageHeader';
 
 export default function BookClarityScanPage() {
   useEffect(() => {
@@ -27,7 +28,7 @@ export default function BookClarityScanPage() {
       </Head>
 
       <main className="container" style={{ padding: '2rem 1rem' }}>
-        <h1>Booking ClarityScan®.</h1>
+        <PageHeader title="Booking ClarityScan®." body={<p>We are opening the booking page in a new tab.</p>} />
         <p role="status" aria-live="polite">
           Redirecting you to our Outlook booking page. If nothing happens, use the direct link below.
         </p>

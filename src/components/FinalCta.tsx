@@ -1,6 +1,7 @@
 // src/components/FinalCta.tsx
 import React from 'react';
 import Link from '@docusaurus/Link';
+import styles from './FinalCta.module.css';
 
 type CtaInternal = {
   to: string;
@@ -90,12 +91,12 @@ export default function FinalCta({
       <div className="finalCta">
         <h2 id={headingId}>{title}</h2>
         <p>{body}</p>
-        <div className="heroCtas" style={{ justifyContent: 'center' }}>
+        <div className={`heroCtas ${styles.ctaRow}`}>
           <RenderButton cta={primaryCta} className="buttonPrimary" />
           {secondaryCta ? <RenderButton cta={secondaryCta} className="buttonSecondary" /> : null}
         </div>
         {ctaNote ? (
-          <p className="ctaNote" id={noteId} style={{ textAlign: 'center' }}>
+          <p className={`ctaNote ${styles.ctaNote}`} id={noteId}>
             {ctaNote}
           </p>
         ) : null}

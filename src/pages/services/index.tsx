@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
+import CardGrid from '../../components/CardGrid/CardGrid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
@@ -62,7 +63,7 @@ export default function ServicesPage(): ReactNode {
                 {/* Services Grid */}
                 <section className="section" aria-labelledby="services-grid-title">
                     <h2 id="services-grid-title">What we offer</h2>
-                    <div className="cardGrid">
+                    <CardGrid>
                         {/* Diagnostics */}
                         <article className="card" aria-labelledby="svc-diagnostics">
                             <Search className="cardIcon" aria-hidden="true" />
@@ -145,7 +146,7 @@ export default function ServicesPage(): ReactNode {
                                 </Link>
                             </div>
                         </article>
-                    </div>
+                    </CardGrid>
                 </section>
 
                 {/* Final CTA */}

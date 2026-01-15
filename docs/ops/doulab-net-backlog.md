@@ -64,6 +64,17 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - No Docusaurus scaffold command used.
 - Commits: TBD
 
+### B-P2-04
+- Description: Pass 1 UI primitives (PageHeader + CardGrid) and targeted inline style removal.
+- Rationale: Establish shared patterns and reduce inline styling risk with minimal surface change.
+- Acceptance criteria:
+  - PageHeader applied to ≤ 3 pages in src/pages.
+  - CardGrid applied to ≤ 2 pages in src/pages.
+  - Inline styles reduced by at least 5 occurrences in src/components.
+  - No new inline styles introduced.
+- Status: Completed (Pass 1)
+- Commits: TBD
+
 ## P3
 
 ### B-P3-01

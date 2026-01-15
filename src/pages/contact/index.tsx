@@ -3,6 +3,7 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
 import PhoneCall from 'lucide-react/dist/esm/icons/phone-call';
 import Mail from 'lucide-react/dist/esm/icons/mail';
 import CalendarCheck from 'lucide-react/dist/esm/icons/calendar-check';
@@ -93,8 +94,10 @@ export default function Contact(): ReactNode {
         />
 
         {/* Contact options */}
-        <section className="section" id="options" aria-labelledby="options-title">
-          <h2 id="options-title">How to reach us</h2>
+      <section className="section" id="options" aria-labelledby="options">
+        <Heading as="h2" id="options">
+          How to reach us
+        </Heading>
           <p className="sectionLead">
             Choose what works best for you. Each option keeps your data private and gets you to a clear next step.
           </p>

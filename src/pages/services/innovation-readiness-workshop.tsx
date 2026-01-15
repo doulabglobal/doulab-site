@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
+import Heading from "@theme/Heading";
 import styles from "./innovation-readiness-workshop.module.css";
 
 const BOOKINGS_URL = "https://outlook.office.com/book/REPLACE_ME";
@@ -198,7 +199,9 @@ export default function InnovationReadinessWorkshopPage() {
         {/* Structure */}
         <section id="structure" className={styles.sectionAlt}>
           <div className={styles.container}>
-            <h2 className={styles.sectionTitle}>Workshop structure (8 hours hybrid)</h2>
+            <Heading as="h2" id="structure" className={styles.sectionTitle}>
+              Workshop structure (8 hours hybrid)
+            </Heading>
             <div className={styles.columns}>
               <div className={styles.column}>
                 <h3>Day 1 - In person (4 hours, fully digital)</h3>

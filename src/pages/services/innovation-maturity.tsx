@@ -3,6 +3,7 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
 
 // Icons (tree-shaken)
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -231,8 +232,10 @@ export default function InnovationMaturityProgram(): ReactNode {
         </section>
 
         {/* Program structure — full weekly themes + deliverables */}
-        <section className="section" id="imm-structure" aria-labelledby="imm-structure-title">
-          <h2 id="imm-structure-title">Program structure (IMM-P®)</h2>
+      <section className="section" id="imm-structure" aria-labelledby="imm-structure">
+        <Heading as="h2" id="imm-structure">
+          Program structure (IMM-P®)
+        </Heading>
           <p className="sectionLead">
             Five phases. Weekly masterclasses + mentoring. Clear gates, owners, and decision criteria. Evidence in the loop.
           </p>

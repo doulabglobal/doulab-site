@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
@@ -140,11 +141,13 @@ export default function VigiaFuturaPage() {
 
 
         {/* Radar */}
-        <section className="section" id="radar" aria-labelledby="vf-radar-title" aria-describedby="vf-radar-desc">
+        <section className="section" id="radar" aria-labelledby="radar" aria-describedby="vf-radar-desc">
           <p id="vf-radar-desc" className="sr-only">
             The radar surfaces early signals, trends, and inflection points, and is updated quarterly.
           </p>
-          <h2 id="vf-radar-title">Radar</h2>
+          <Heading as="h2" id="radar">
+            Radar
+          </Heading>
           <p className="sectionLead">
             A living radar that surfaces early signals, trends, and inflection points, updated quarterly.
           </p>

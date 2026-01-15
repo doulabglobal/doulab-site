@@ -3,6 +3,7 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
@@ -141,8 +142,10 @@ export default function WhatWeDo(): ReactNode {
         </div>
 
         {/* Who is it for? */}
-        <section className="section" id="who" aria-labelledby="who-title">
-          <h2 id="who-title">Who is it for?</h2>
+        <section className="section" id="who" aria-labelledby="who">
+          <Heading as="h2" id="who">
+            Who is it for?
+          </Heading>
           <div className="cardGrid">
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />

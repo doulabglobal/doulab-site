@@ -46,7 +46,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Components exist and are used on applicable pages.
   - Component parity scan shows expected usage.
-- Commits: TBD
+- Commits: TBD (Pass 2)
 
 ### B-P2-02
 - Description: Remove inline styles plan.

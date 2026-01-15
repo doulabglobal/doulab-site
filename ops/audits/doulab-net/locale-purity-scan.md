@@ -1,0 +1,149 @@
+# Locale Purity Scan
+
+## i18n routing conventions observed
+- docusaurus.config.ts: i18n defaultLocale = en; locales = [en]
+- No locale-prefixed routes expected (no /en/ or /es/ routing)
+
+## File classifications
+- `blog\2025-08-30-introducing-doulab.md` | mixed
+  - L3: description: "Why Doulab exists, how the MicroCanvas® Framework and IMM® help teams ship outcomes reliably, and where to start."
+  - L15: - strategy execution
+  - L20: We started **Doulab** to answer a stubborn question: *How do you make innovation and foresight repeatable—so strategy turns into measurable outcomes in any organization, not just the lucky ones?* Since then, we’ve supported teams across public institutions and companies—from **AFP Siembra** and **Alpha Inversiones** to **OGTIC/RedLab**, **FUNDAPEC**, and **Runway Innovation Hub**—and saw the same pattern: when teams can see clearly, decide faster, and learn in tight loops, they ship.
+- `blog\2025-09-12-clarityscan-decision-latency.md` | mixed
+  - L3: description: "A short diagnostic that surfaces risks, constraints, and priority gaps so teams decide faster and avoid another lost cycle."
+  - L22: > **TL;DR** — Decision latency is the hidden tax on innovation and public value. ClarityScan® delivers, in **30–45 minutes**: a shared baseline, two proof signals, named owners, and a **30/60/90‑day plan**. Leaders who run this loop weekly cut latency by **~30% in the first 30 days** and see earlier launches, fewer escalations, and higher trust.
+  - L24: Reducing median decision latency shortens the path from policy idea to working service, improving outcomes and trust.
+- `blog\2025-09-22-vigia-futura-foresight-observatory.md` | mixed
+  - L2: title: "Vigía Futura: Why Latin America Needs a Strategic Foresight Observatory"
+  - L3: description: "Vigía Futura is building a regional foresight observatory with indices, dashboards, and capacity-building to help governments, startups, and investors anticipate change and act with confidence."
+  - L20: # Vigía Futura: Why Latin America Needs a Strategic Foresight Observatory
+- `docs\intro.md` | EN-only
+  - L8: # Welcome to Doulab AI
+  - L10: **Doulab AI** is an open knowledge initiative exploring how distributed, federated, and agentic artificial intelligence can empower the next generation of digital governance and public infrastructure.
+  - L12: This documentation site hosts our whitepapers, implementation blueprints, policy notes, and research insights on:
+- `docs\releases.md` | mixed
+  - L5: description: Release notes and major updates to the Doulab website.
+  - L10: This page tracks notable milestones and updates to the Doulab website.
+  - L11: For daily development tasks, see the internal `CHECKLOG.md`.
+- `docs\research-resources\distributed-federated-agentic-ai.md` | EN-only
+  - L3: title: "Distributed Federated Agentic AI: A Blueprint for Next-Generation Decentralized Governance"
+  - L4: description: "A Doulab whitepaper outlining a trust-centric, evidence-based framework for distributed and agentic intelligence systems, integrating MCF 2.1, IMM-P &copy;, and Vigia Futura foresight mechanisms."
+  - L21: ## A blueprint for next generation decentralized governance
+- `docs\research-resources\index.md` | mixed
+  - L6: description: Curated whitepapers, frameworks, and open research on foresight, innovation systems, and decentralized AI governance.
+  - L18: Welcome to our **Research & Resources** hub. You will find **whitepapers**, **frameworks**, and **open research notes** focused on strategic foresight, innovation systems, and decentralized AI governance. The materials are **practical, testable, and open**.
+  - L20: > Everything here is open access. If something does not load, please tell us via the [Contact page](/contact).
+- `docs\research-resources\microcanvas.md` | EN-only
+  - L4: description: A modular, evidence-led framework that makes innovation repeatable — from discovery to delivery.
+  - L9: The MicroCanvas Framework (MCF) is a modular toolkit that helps teams make innovation repeatable — from discovery to delivery — with small, traceable steps.
+  - L11: - Clear canvases for problem framing, value propositions, experiments, and delivery.
+- `src\pages\about\contact.md` | unknown
+- `src\pages\about\index.tsx` | mixed
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\about\mission.md` | unknown
+- `src\pages\about\team.md` | unknown
+- `src\pages\book-clarityscan-success.tsx` | EN-only
+  - L2: import React, { useEffect } from 'react';
+  - L3: import Head from '@docusaurus/Head';
+  - L4: import Layout from '@theme/Layout';
+- `src\pages\book-clarityscan.tsx` | EN-only
+  - L2: import React, { useEffect } from 'react';
+  - L3: import Head from '@docusaurus/Head';
+  - L4: import Layout from '@theme/Layout';
+- `src\pages\case-studies\afp-siembra.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Link from '@docusaurus/Link';
+- `src\pages\case-studies\alpha-inversiones.tsx` | mixed
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Link from '@docusaurus/Link';
+- `src\pages\case-studies\fundapec.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Link from '@docusaurus/Link';
+- `src\pages\case-studies\index.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\case-studies\ogtic-redlab.tsx` | mixed
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Link from '@docusaurus/Link';
+- `src\pages\contact\index.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\ecosystems\red-incubadoras.tsx` | mixed
+  - L1: ﻿import React from 'react';
+  - L2: import Layout from '@theme/Layout';
+  - L3: import Link from '@docusaurus/Link';
+- `src\pages\ecosystems\redlab.tsx` | mixed
+  - L1: ﻿import React from 'react';
+  - L2: import Layout from '@theme/Layout';
+  - L3: import Link from '@docusaurus/Link';
+- `src\pages\index.tsx` | EN-only
+  - L2: import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+  - L3: import Head from '@docusaurus/Head';
+  - L4: import Layout from '@theme/Layout';
+- `src\pages\insights\index.tsx` | mixed
+  - L2: import React, { type ReactNode, useEffect, useState } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\markdown-page.md` | EN-only
+  - L7: You don't need React to write simple standalone pages.
+- `src\pages\privacy-terms.tsx` | EN-only
+  - L1: import React, { type ReactNode } from 'react';
+  - L2: import Layout from '@theme/Layout';
+  - L3: import Head from '@docusaurus/Head';
+- `src\pages\services\clarityscan.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\services\coaching-mentoring.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\services\custom-workshops.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\services\diagnostics.tsx` | EN-only
+  - L2: import React from 'react';
+  - L3: import Head from '@docusaurus/Head';
+  - L4: import Layout from '@theme/Layout';
+- `src\pages\services\index.tsx` | mixed
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\services\innovation-maturity.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\services\innovation-readiness-workshop.tsx` | mixed
+  - L1: import React from "react";
+  - L2: import Layout from "@theme/Layout";
+  - L3: import Link from "@docusaurus/Link";
+- `src\pages\terms-and-conditions.tsx` | EN-only
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\vigia-futura\governancemodels.md` | unknown
+- `src\pages\vigia-futura\index.tsx` | mixed
+  - L2: import React, { useEffect, useRef, useState } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\vigia-futura\indices.md` | unknown
+- `src\pages\vigia-futura\vision.md` | unknown
+- `src\pages\what-we-do\index.tsx` | mixed
+  - L2: import React, { type ReactNode } from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';
+- `src\pages\work-with-us\apply.md` | unknown
+- `src\pages\work-with-us\collaborate.md` | unknown
+- `src\pages\work-with-us\index.tsx` | mixed
+  - L2: import React from 'react';
+  - L3: import Layout from '@theme/Layout';
+  - L4: import Head from '@docusaurus/Head';

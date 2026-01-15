@@ -1,0 +1,149 @@
+# Component Parity Scan
+
+## EntityHeader / DocBadges definitions
+- Not found
+
+## EntityHeader / DocBadges usage (best-effort)
+- No usage found
+
+## Pages without header components (best-effort)
+- `src\pages\about\contact.md`
+- `src\pages\about\index.tsx`
+- `src\pages\about\mission.md`
+- `src\pages\about\team.md`
+- `src\pages\book-clarityscan-success.tsx`
+- `src\pages\book-clarityscan.tsx`
+- `src\pages\case-studies\afp-siembra.tsx`
+- `src\pages\case-studies\alpha-inversiones.tsx`
+- `src\pages\case-studies\fundapec.tsx`
+- `src\pages\case-studies\index.tsx`
+- `src\pages\case-studies\ogtic-redlab.tsx`
+- `src\pages\contact\index.tsx`
+- `src\pages\ecosystems\red-incubadoras.tsx`
+- `src\pages\ecosystems\redlab.tsx`
+- `src\pages\index.tsx`
+- `src\pages\insights\index.tsx`
+- `src\pages\markdown-page.md`
+- `src\pages\privacy-terms.tsx`
+- `src\pages\services\clarityscan.tsx`
+- `src\pages\services\coaching-mentoring.tsx`
+- `src\pages\services\custom-workshops.tsx`
+- `src\pages\services\diagnostics.tsx`
+- `src\pages\services\index.tsx`
+- `src\pages\services\innovation-maturity.tsx`
+- `src\pages\services\innovation-readiness-workshop.tsx`
+- `src\pages\terms-and-conditions.tsx`
+- `src\pages\vigia-futura\governancemodels.md`
+- `src\pages\vigia-futura\index.tsx`
+- `src\pages\vigia-futura\indices.md`
+- `src\pages\vigia-futura\vision.md`
+- `src\pages\what-we-do\index.tsx`
+- `src\pages\work-with-us\apply.md`
+- `src\pages\work-with-us\collaborate.md`
+- `src\pages\work-with-us\index.tsx`
+
+## Inline styles (style={{ ... }})
+- `src\components\FinalCta.tsx`:93 `<div className="heroCtas" style={{ justifyContent: 'center' }}>`
+- `src\components\FinalCta.tsx`:98 `<p className="ctaNote" id={noteId} style={{ textAlign: 'center' }}>`
+- `src\components\Hero.tsx`:77 `style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}`
+- `src\components\Hero.tsx`:95 `<div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>`
+- `src\components\Hero.tsx`:96 `<div style={{ flex: '1 1 460px', paddingRight: '2rem' }}>`
+- `src\components\Hero.tsx`:99 `<p className="heroSubtitle" style={{ textAlign: 'justify' }}>`
+- `src\components\Hero.tsx`:164 `<div style={{ flex: '1 1 320px', textAlign: 'center' }}>`
+- `src\pages\book-clarityscan-success.tsx`:28 `<main className="container" style={{ padding: '2rem 1rem', maxWidth: '720px' }}>`
+- `src\pages\book-clarityscan.tsx`:29 `<main className="container" style={{ padding: '2rem 1rem' }}>`
+- `src\pages\index.tsx`:171 `<div style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}>`
+- `src\pages\index.tsx`:202 `style={{ borderLeft: '4px solid var(--dl-indigo)' }}`
+- `src\pages\index.tsx`:234 `<div style={{ textAlign: 'center' }}>`
+- `src\pages\index.tsx`:237 `<div className="heroCtas" style={{ justifyContent: 'center' }}>`
+- `src\pages\index.tsx`:247 `<div className="heroCtas" style={{ justifyContent: 'center', marginTop: '.25rem' }}>`
+- `src\pages\index.tsx`:342 `<h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>{x.kpi}</h3>`
+- `src\pages\index.tsx`:343 `<p style={{ marginBottom: '.25rem' }}><strong>{x.label}</strong></p>`
+- `src\pages\index.tsx`:487 `style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}`
+- `src\pages\index.tsx`:526 `<div aria-live="polite" style={{ display: 'contents' }}>`
+- `src\pages\index.tsx`:555 `style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}`
+- `src\pages\index.tsx`:632 `<div className="cardGrid" style={{ marginTop: '0.5rem' }}>`
+- `src\pages\privacy-terms.tsx`:20 `<main className="container" style={{ padding: '2rem 1rem', maxWidth: '960px' }}>`
+- `src\pages\privacy-terms.tsx`:23 `<p className="microcopy" style={{ marginBottom: '1.5rem' }}>`
+- `src\pages\privacy-terms.tsx`:33 `<nav aria-label="On-page navigation" style={{ margin: '2rem 0' }}>`
+- `src\pages\privacy-terms.tsx`:34 `<ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>`
+- `src\pages\privacy-terms.tsx`:44 `<section id="privacy-policy" style={{ marginBottom: '3rem' }}>`
+- `src\pages\terms-and-conditions.tsx`:20 `<main className="container" style={{ padding: '2rem 1rem', maxWidth: '960px' }}>`
+- `src\pages\terms-and-conditions.tsx`:23 `<p className="microcopy" style={{ marginBottom: '2rem' }}>`
+- `src\pages\about\index.tsx`:144 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\about\index.tsx`:267 `<p className="microcopy" style={{ marginTop: '.5rem' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:100 `<nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem', marginBottom: '0.25rem' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:232 `<div style={{ position: 'relative', paddingTop: '56.25%' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:240 `style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}`
+- `src\pages\case-studies\afp-siembra.tsx`:246 `<div style={{ position: 'relative', paddingTop: '56.25%' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:254 `style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0, borderRadius: '12px' }}`
+- `src\pages\case-studies\afp-siembra.tsx`:259 `<p className="microcopy" style={{ textAlign: 'center' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:264 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:268 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\afp-siembra.tsx`:275 `<div style={{ textAlign: 'center' }}>`
+- `src\pages\case-studies\alpha-inversiones.tsx`:85 `style={{ marginTop: '1rem', marginBottom: '0.25rem' }}`
+- `src\pages\case-studies\alpha-inversiones.tsx`:241 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\alpha-inversiones.tsx`:244 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\alpha-inversiones.tsx`:247 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\alpha-inversiones.tsx`:250 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\alpha-inversiones.tsx`:254 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\alpha-inversiones.tsx`:261 `<div style={{ textAlign: 'center' }}>`
+- `src\pages\case-studies\fundapec.tsx`:83 `<nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem', marginBottom: '0.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:281 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:284 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:287 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:290 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:293 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:297 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\fundapec.tsx`:304 `<div style={{ textAlign: 'center' }}>`
+- `src\pages\case-studies\index.tsx`:92 `<p className="microcopy" style={{ marginTop: '0.25rem', textAlign: 'center' }}>`
+- `src\pages\case-studies\index.tsx`:107 `<p className="microcopy" style={{ marginTop: '-.25rem' }}>`
+- `src\pages\case-studies\index.tsx`:142 `<p className="microcopy" style={{ marginTop: '.5rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:84 `<nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem', marginBottom: '0.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:255 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:258 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:261 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:264 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:267 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:270 `<p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>`
+- `src\pages\case-studies\ogtic-redlab.tsx`:279 `<div style={{ textAlign: 'center' }}>`
+- `src\pages\ecosystems\red-incubadoras.tsx`:8 `<main style={{ maxWidth: 960, margin: '0 auto', padding: '2rem 1rem' }}>`
+- `src\pages\ecosystems\redlab.tsx`:8 `<main style={{ maxWidth: 960, margin: '0 auto', padding: '2rem 1rem' }}>`
+- `src\pages\insights\index.tsx`:231 `style={{`
+- `src\pages\insights\index.tsx`:263 `style={{ borderRadius: '0.75rem', width: '100%', height: 'auto', marginBottom: '.5rem' }}`
+- `src\pages\insights\index.tsx`:346 `<div className="heroCtas" style={{ marginTop: '.5rem' }}>`
+- `src\pages\insights\index.tsx`:400 `<div className="heroCtas" style={{ marginTop: '.75rem' }}>`
+- `src\pages\services\clarityscan.tsx`:151 `<p className="microcopy" style={{ marginTop: '.5rem' }}>`
+- `src\pages\services\coaching-mentoring.tsx`:208 `<p className="microcopy" style={{ marginTop: '.75rem' }}>`
+- `src\pages\services\custom-workshops.tsx`:166 `style={{ order: -1 }}`
+- `src\pages\services\diagnostics.tsx`:36 `<div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center' }}>`
+- `src\pages\services\diagnostics.tsx`:37 `<div style={{ flex: '1 1 520px', paddingRight: '2rem' }}>`
+- `src\pages\services\diagnostics.tsx`:39 `<p className="heroSubtitle" style={{ textAlign: 'justify' }}>`
+- `src\pages\services\diagnostics.tsx`:56 `<div style={{ flex: '1 1 320px', textAlign: 'center' }}>`
+- `src\pages\services\diagnostics.tsx`:77 `<p className="lead" style={{ maxWidth: 900 }}>`
+- `src\pages\services\diagnostics.tsx`:92 `<div className="cardFooter" style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>`
+- `src\pages\services\diagnostics.tsx`:136 `<div className="lead" style={{ marginTop: '0.75rem' }}>`
+- `src\pages\services\diagnostics.tsx`:189 `<p className="lead" style={{ marginTop: '0.75rem' }}>`
+- `src\pages\services\diagnostics.tsx`:222 `<div className="heroCtas" style={{ justifyContent: 'center' }}>`
+- `src\pages\services\diagnostics.tsx`:239 `<p style={{ textAlign: 'center', opacity: 0.75, fontSize: '0.85rem', marginTop: '-1rem' }}>`
+- `src\pages\services\index.tsx`:57 `<p className="sectionLead" style={{ textAlign: 'center' }}>`
+- `src\pages\services\index.tsx`:75 `<div className="cardFooter" style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>`
+- `src\pages\services\index.tsx`:156 `<div className="heroCtas" style={{ justifyContent: 'center' }}>`
+- `src\pages\services\innovation-maturity.tsx`:321 `<p className="microcopy" style={{ marginTop: '.5rem' }}>`
+- `src\pages\services\innovation-maturity.tsx`:330 `<div className="faqList" style={{ display: 'grid', gap: '0.75rem' }}>`
+- `src\pages\vigia-futura\index.tsx`:119 `style={{`
+- `src\pages\vigia-futura\index.tsx`:181 `<h3 id="vf-radar-latest-title" style={{ marginTop: '1rem' }}>Latest from the radar</h3>`
+- `src\pages\vigia-futura\index.tsx`:242 `<div className="heroCtas" style={{ justifyContent: 'center', marginTop: '0.75rem' }}>`
+- `src\pages\what-we-do\index.tsx`:129 `style={{`
+- `src\pages\what-we-do\index.tsx`:288 `<h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>12 + 12 weeks</h3>`
+- `src\pages\what-we-do\index.tsx`:289 `<p style={{ marginBottom: '.25rem' }}><strong>Structured sprint cadence</strong></p>`
+- `src\pages\what-we-do\index.tsx`:293 `<h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>7</h3>`
+- `src\pages\what-we-do\index.tsx`:294 `<p style={{ marginBottom: '.25rem' }}><strong>innovation labs co-created</strong></p>`
+- `src\pages\what-we-do\index.tsx`:298 `<h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>2 to 4 per week</h3>`
+- `src\pages\what-we-do\index.tsx`:299 `<p style={{ marginBottom: '.25rem' }}><strong>sessions for 12 months</strong></p>`
+- `src\pages\work-with-us\index.tsx`:270 `<p className="microcopy" style={{ marginTop: '.75rem' }}>`
+- `src\pages\work-with-us\index.tsx`:304 `<div className="heroCtas" style={{ justifyContent: 'center' }}>`
+- `src\components\case-studies\CaseStudyCards.tsx`:32 `style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}`
+- `docs\research-resources\index.md`:99 `<div className="dl-finalCta" style={{ marginTop: '2rem' }}>`
+- `blog\2025-08-30-introducing-doulab.md`:169 `<div className="btn-row" style={{marginTop: '0.5rem'}}>`
+- `blog\2025-09-12-clarityscan-decision-latency.md`:88 `style={{ borderRadius: '16px', width: '100%', height: 'auto', margin: '0.5rem 0 1rem' }}`

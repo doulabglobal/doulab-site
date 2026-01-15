@@ -123,7 +123,7 @@ export function SitewideDiscoveryCta(props?: {
   const {
     id = 'bookings-general',
     emailHref = 'mailto:hello@doulab.net?subject=Discovery%20call',
-    scheduleHref = 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/?ismsaljsauthenabled&utm_source=doulab.net&utm_medium=cta&utm_campaign=scheduling',
+    scheduleHref = 'https://booking.doulab.net/discovery',
     title = 'Ready to talk?',
     body = 'Send a brief or book a quick discovery call with Doulab.',
     ctaNote,

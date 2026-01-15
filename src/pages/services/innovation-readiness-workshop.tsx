@@ -4,7 +4,7 @@ import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
 import styles from "./innovation-readiness-workshop.module.css";
 
-const BOOKINGS_URL = "https://outlook.office.com/book/REPLACE_ME";
+const BOOKINGS_URL = "https://booking.doulab.net/fdworkshop";
 const CONTACT_EMAIL = "luis@doulab.net";
 
 export default function InnovationReadinessWorkshopPage() {

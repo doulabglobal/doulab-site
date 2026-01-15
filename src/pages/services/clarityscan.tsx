@@ -30,7 +30,7 @@ export default function ClarityScanPage(): ReactNode {
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
     url: 'https://doulab.net/services/clarityscan',
     areaServed: ['Global'],
-    potentialAction: { '@type': 'ScheduleAction', target: 'https://calendly.com/lasantiago/clarityscan' },
+    potentialAction: { '@type': 'ScheduleAction', target: 'https://booking.doulab.net/clarityscan' },
     description:
       'A rapid, evidence-based diagnostic to baseline innovation/foresight maturity and pinpoint priority actions.',
   };

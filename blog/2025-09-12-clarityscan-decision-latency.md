@@ -33,7 +33,7 @@ We created [**ClarityScan®**](/services/clarityscan) to shorten that gap. In **
 
 In a 2025 [report](https://www.gallup.com/workplace/653386/state-of-the-global-workplace-2025.aspx), Gallup estimated that _“low engagement costs the global economy US$9.6 trillion, or 9% of global GDP.”_ When people aren’t engaged and clarity is thin, organizations **hesitate**. Hours become days and days become weeks while opportunities slip and risks accumulate. That’s the cost of latency you can feel at work. If you’ve been here, you’ve seen how people stop engaging and the purpose of the innovation drifts.
 
-That’s why we created ClarityScan® — [book your baseline today](https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?utm_source=doulab&utm_medium=blog_cta&utm_campaign=clarityscan_post).
+That’s why we created ClarityScan® — [book your baseline today](https://booking.doulab.net/clarityscan).
 
 ### Let’s talk about failure
 Early in my engineering career, I kept hearing the same sobering stats: *“90% of IT projects fail,” “95% of transformation efforts fall short,” “90–97% of startups fail within five years.”* Different contexts, same result: wasted energy and missed opportunities. According to McKinsey, _“when corporations launch transformations, roughly 70 percent fail.”_
@@ -91,7 +91,7 @@ Instrument latency by adding **decision_requested_at** and **decision_committed_
 
 *ClarityScan® baseline — the first step in reducing decision latency.*
 
-> **Book your baseline now:** [Schedule a ClarityScan®](https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?utm_source=doulab&utm_medium=blog_cta&utm_campaign=clarityscan_post)
+> **Book your baseline now:** [Schedule a ClarityScan®](https://booking.doulab.net/clarityscan)
 
 But let's now move to what ClarityScan® is and how it can reduce decision latency.
 
@@ -282,7 +282,7 @@ That small loop is the engine of momentum. It repeats across teams and scales in
 
 ## Where it fits (and what comes next)
 
-- Start with **[ClarityScan®](/services/clarityscan)** for the baseline and priority, or **[book a ClarityScan® online](https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/rRGkXT4g4kS-FFL_J-4j4Q2?utm_source=doulab&utm_medium=blog_cta&utm_campaign=clarityscan_post)**.  
+- Start with **[ClarityScan®](/services/clarityscan)** for the baseline and priority, or **[book a ClarityScan® online](https://booking.doulab.net/clarityscan)**.  
 - If you need more depth, book a **[half‑day workshop](/services/custom-workshops)** to align stakeholders and turn the plan into action.  
 - If your innovation requires close guidance or if you want to establish your organization’s innovation journey, evaluate **[IMM‑P®](/services/innovation-maturity)** to install operating rhythms, governance, and instrumentation.  
 - Explore more insights in our **[Research & Resources](/docs/research-resources)**.  
@@ -306,4 +306,3 @@ That small loop is the engine of momentum. It repeats across teams and scales in
 ---
 
 **Privacy note** — We use privacy‑first analytics only; no third‑party pixels.
-

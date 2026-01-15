@@ -158,7 +158,7 @@ export default function CustomWorkshopsPage(): ReactNode {
                 </Link>
                 <a
                   className="cardCta"
-                  href="https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/ahkLyvQl7kCM2czREPzaRg2?ismsaljsauthenabled"
+                  href="https://booking.doulab.net/hdworkshop"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cta="cta.services.workshops.formats.halfday.book"
@@ -192,7 +192,7 @@ export default function CustomWorkshopsPage(): ReactNode {
                   Start a full-day brief →
                 </Link>
                 <Link
-                  to="/contact"
+                  to="https://booking.doulab.net/fdworkshop"
                   className="cardCta"
                   data-cta="cta.services.workshops.formats.fullday.discovery"
                   aria-label="Book a discovery call for the full-day workshop"
@@ -273,7 +273,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           body="Send us your goals and constraints. We’ll design the right workshop and get you moving fast."
           primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.final.contact' }}
           secondaryCta={{
-            href: 'https://outlook.office.com/book/Doulab@NETORGFT5107446.onmicrosoft.com/s/ahkLyvQl7kCM2czREPzaRg2?ismsaljsauthenabled',
+            href: 'https://booking.doulab.net/hdworkshop',
             label: 'Book a half-day workshop',
             dataCta: 'cta.services.workshops.final.book_halfday_booking',
             newTab: true,

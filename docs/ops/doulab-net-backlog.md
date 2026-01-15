@@ -18,7 +18,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - No placeholder booking URL remains in repo.
   - Booking inventory shows only valid booking URLs.
-- Commits: TBD
+- Commits: cc5da1010de433adbb6153d350a709b931c073c1
 
 ## P1
 
@@ -28,7 +28,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - A single canonical booking domain or entrypoint is documented and implemented.
   - All booking CTAs point to the canonical entrypoint.
-- Commits: TBD
+- Commits: 27bc2bd61d3c81da6b55bc804bd45f1c12fce0e4, cc5da1010de433adbb6153d350a709b931c073c1
 
 ### B-P1-02
 - Description: CI Node pinning + Cloudflare Pages script parity.
@@ -36,7 +36,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - CI configuration pins Node version compatible with package.json engines.
   - Cloudflare build scripts match repo scripts (`build:cf`, `verify:build`).
-- Commits: TBD
+- Commits: 7cf8c4704e73986186dd56e3caf50b6769536bbc
 
 ## P2
 
@@ -46,7 +46,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Components exist and are used on applicable pages.
   - Component parity scan shows expected usage.
-- Commits: TBD (Pass 2)
+- Commits: feaee1f1d791360745700df132eda04bb37f8e02, 4aad69da2f93c32393a37109567479f13b8adfcc
 
 ### B-P2-02
 - Description: Remove inline styles plan.
@@ -73,7 +73,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Inline styles reduced by at least 5 occurrences in src/components.
   - No new inline styles introduced.
 - Status: Completed (Pass 1)
-- Commits: TBD
+- Commits: 98d0e0a724c40b0664d9c837473a3535a1f274ea, 44285372c6595c9b3d7093bc24023920c9f88b32
 
 ## P3
 

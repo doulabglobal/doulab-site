@@ -1,21 +1,21 @@
 
-> doulab.site@0.7.1 verify:build
+> doulab.site@0.8.0 verify:build
 > npm run verify
 
 
-> doulab.site@0.7.1 verify
+> doulab.site@0.8.0 verify
 > npm run typecheck && npm run build
 
 
-> doulab.site@0.7.1 typecheck
+> doulab.site@0.8.0 typecheck
 > tsc
 
 
-> doulab.site@0.7.1 prebuild
+> doulab.site@0.8.0 prebuild
 > node scripts/strip-bom.cjs
 
 
-> doulab.site@0.7.1 build
+> doulab.site@0.8.0 build
 > docusaurus build
 
 [WARNING] The `siteConfig.onBrokenMarkdownLinks` config option is deprecated and will be removed in Docusaurus v4.
@@ -23,11 +23,10 @@ Please migrate and move this option to `siteConfig.markdown.hooks.onBrokenMarkdo
 [INFO] [en] Creating an optimized production build...
 [WARNING] The `siteConfig.onBrokenMarkdownLinks` config option is deprecated and will be removed in Docusaurus v4.
 Please migrate and move this option to `siteConfig.markdown.hooks.onBrokenMarkdownLinks` instead.
-[WARNING] Cannot infer the update date for some files, as they are not tracked by git.
 [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 6.21s
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 6.42s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 2.44s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 2.83s
 [SUCCESS] Generated static files in "build".
 [INFO] Use `npm run serve` command to test your build locally.

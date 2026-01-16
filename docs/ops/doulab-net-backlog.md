@@ -176,7 +176,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Docs landing pages use consistent headers and CTAs.
   - No docs-only components used in `src/pages/**`.
-- Commits: TBD
+- Commits: 63adcc9f56f8aee3b2919e031bcb97dc126eabe6
 
 ## Phase B5 (Performance baseline)
 

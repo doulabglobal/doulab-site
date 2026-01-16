@@ -50,4 +50,9 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
 - Latest merged hardening commits: 10cc8f3, a6438fc
-- Current phase in progress: Hardening Pass 2
+- Current phase status: Hardening Pass 2 complete
+
+## Next decision
+- Choose path:
+  - Hardening Pass 3 (headers enforcement + GDPR copy review)
+  - B4 UX polish (404 UX refinements + minor IA cleanup)

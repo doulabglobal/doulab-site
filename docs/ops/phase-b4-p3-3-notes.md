@@ -4,8 +4,8 @@
 - Inline style count (rg `style={{}}` in src): 32
 
 ## Scope (planned)
-- Pages: `src/pages/case-studies/alpha-inversiones.tsx`, `src/pages/case-studies/fundapec.tsx`, `src/pages/case-studies/afp-siembra.tsx`
-- Shared component: `src/components/case-studies/CaseStudyCards.tsx`
+- Pages: `src/pages/book-clarityscan.tsx`, `src/pages/book-clarityscan-success.tsx`, `src/pages/ecosystems/redlab.tsx`, `src/pages/ecosystems/red-incubadoras.tsx`, `src/pages/case-studies/index.tsx`
+- Shared component: none in this pass
 
 ## Checklist
 - Inline style count reduced by at least 12 (target `<= 20`).

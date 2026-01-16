@@ -20,6 +20,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import styles from '../b4-p2.module.css';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 
 export default function CoachingMentoringPage(): ReactNode {
@@ -205,7 +206,7 @@ export default function CoachingMentoringPage(): ReactNode {
               </div>
             </article>
           </div>
-          <p className="microcopy" style={{ marginTop: '.75rem' }}>
+          <p className={`microcopy ${styles.leadTop}`}>
             <em>Monthly; cancel anytime with 15-day notice.</em>
           </p>
         </section>

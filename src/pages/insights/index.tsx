@@ -7,6 +7,7 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from '../b4-p2.module.css';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Newspaper from 'lucide-react/dist/esm/icons/newspaper';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
@@ -226,16 +227,8 @@ export default function Insights(): ReactNode {
         {/* In-page subnav (match Vigía Futura style) */}
         <div className="container">
           <nav
-            className="subnav"
+            className={`subnav ${styles.subnavLayout}`}
             aria-label="In this page"
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: '.5rem',
-              padding: '.25rem 0 .5rem',
-              margin: '0 auto .75rem',
-            }}
           >
             <a href="#start" data-cta="cta.insights.anchor.start">Start here</a>
             <a href="#whitepapers" data-cta="cta.insights.anchor.whitepapers">Whitepapers</a>
@@ -260,7 +253,7 @@ export default function Insights(): ReactNode {
                   height={720}
                   loading="lazy"
                   decoding="async"
-                  style={{ borderRadius: '0.75rem', width: '100%', height: 'auto', marginBottom: '.5rem' }}
+                  className={`${styles.roundedMedia} ${styles.roundedMediaTight}`}
                 />
               </picture>
               <Lightbulb className="cardIcon" aria-hidden="true" />
@@ -343,7 +336,7 @@ export default function Insights(): ReactNode {
               ))
             )}
           </div>
-          <div className="heroCtas" style={{ marginTop: '.5rem' }}>
+          <div className={`heroCtas ${styles.ctaRowSmall}`}>
             <Link className="buttonSecondary" to="/docs/research-resources/" data-cta="cta.insights.whitepapers.view_all">
               See all whitepapers
             </Link>
@@ -397,7 +390,7 @@ export default function Insights(): ReactNode {
               ))
             ))}
           </div>
-          <div className="heroCtas" style={{ marginTop: '.75rem' }}>
+          <div className={`heroCtas ${styles.ctaRowMedium}`}>
             <Link className="buttonSecondary" to="/blog" data-cta="cta.insights.blog.view_all">
               View all blog posts
             </Link>

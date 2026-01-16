@@ -21,6 +21,7 @@ import Hero from '../../components/Hero';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import styles from '../b4-p2.module.css';
 
 export default function InnovationMaturityProgram(): ReactNode {
   // JSON-LD schema (service)
@@ -321,7 +322,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             <p><strong>Key deliverables:</strong> CI strategy; foresight inputs; impact measures; resilience plan; long-term roadmap; decision memo.</p>
           </article>
 
-          <p className="microcopy" style={{ marginTop: '.5rem' }}>
+          <p className={`microcopy ${styles.microcopyTop}`}>
             Method backbone: <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework (MCF 2.1)</Link> and IMM-P® governance.
           </p>
         </section>
@@ -330,7 +331,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <section className="section" id="imm-faq" aria-labelledby="imm-faq-title">
           <h2 id="imm-faq-title">IMM-P® — Frequently asked questions</h2>
 
-          <div className="faqList" style={{ display: 'grid', gap: '0.75rem' }}>
+          <div className={`faqList ${styles.faqListGrid}`}>
             <details className="card">
               <summary><strong>How long does IMM-P® run?</strong></summary>
               <p>Most teams start with a 12-week core track. Larger rollouts extend to 24+ weeks across the five phases with additional mentoring and pilots.</p>

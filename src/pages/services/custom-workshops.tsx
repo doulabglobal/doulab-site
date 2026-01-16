@@ -17,6 +17,7 @@ import ClipboardList from 'lucide-react/dist/esm/icons/clipboard-list';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
+import styles from '../b4-p2.module.css';
 
 export default function CustomWorkshopsPage(): ReactNode {
   // JSON-LD
@@ -157,13 +158,12 @@ export default function CustomWorkshopsPage(): ReactNode {
                   Start a half-day brief →
                 </Link>
                 <a
-                  className="cardCta"
                   href="https://booking.doulab.net/hdworkshop"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cta="cta.services.workshops.formats.halfday.book"
                   aria-label="Book a half-day workshop via Microsoft Bookings"
-                  style={{ order: -1 }}
+                  className={`cardCta ${styles.orderFirst}`}
                 >
                   Book a half-day workshop →
                 </a>

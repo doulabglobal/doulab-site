@@ -1,0 +1,85 @@
+.subnavLayout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0 0.5rem;
+  margin: 0 auto 0.75rem;
+}
+
+.roundedMedia {
+  border-radius: 0.75rem;
+  width: 100%;
+  height: auto;
+}
+
+.roundedMediaTight {
+  margin-bottom: 0.5rem;
+}
+
+.ctaRowSmall {
+  margin-top: 0.5rem;
+}
+
+.ctaRowMedium {
+  margin-top: 0.75rem;
+}
+
+.cardFooterRow {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.heroRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroCopy {
+  flex: 1 1 520px;
+  padding-right: 2rem;
+}
+
+.heroMedia {
+  flex: 1 1 320px;
+  text-align: center;
+}
+
+.heroSubtitleJustify {
+  text-align: justify;
+}
+
+.leadMax {
+  max-width: 900px;
+}
+
+.leadTop {
+  margin-top: 0.75rem;
+}
+
+.ctaCenter {
+  justify-content: center;
+}
+
+.noteCenter {
+  text-align: center;
+  opacity: 0.75;
+  font-size: 0.85rem;
+  margin-top: -1rem;
+}
+
+.microcopyTop {
+  margin-top: 0.5rem;
+}
+
+.faqListGrid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.orderFirst {
+  order: -1;
+}

@@ -11,10 +11,9 @@
 > docusaurus build
 
 [INFO] [en] Creating an optimized production build...
-[WARNING] Cannot infer the update date for some files, as they are not tracked by git.
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 3.60s
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 5.70s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 3.93s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 8.29s
 [SUCCESS] Generated static files in "build".
 [INFO] Use `npm run serve` command to test your build locally.

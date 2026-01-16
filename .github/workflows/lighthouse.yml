@@ -1,0 +1,32 @@
+name: lighthouse
+
+on:
+  pull_request:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node 20.16.0
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.16.0'
+          cache: 'npm'
+
+      - name: Install deps (CI)
+        run: npm ci
+
+      - name: Build (cf)
+        run: npm run build:cf
+
+      - name: Lighthouse CI (non-blocking)
+        run: npx @lhci/cli@0.13.0 autorun --collect.staticDistDir=build --upload.target=filesystem --upload.outputDir=./lhci --assertions.preset=off
+
+      - name: Upload Lighthouse report
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: lhci

@@ -167,8 +167,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Notes document created with baseline and checklist.
   - No site code changes in the plan-only fix.
-- Status: Plan fix completed (B4-P3.3)
-- Commits: fb38bd82c9e1afd500f51b93c213cf2ced0289ab
+- Status: Completed (B4-P3.3)
+- Commits: fb38bd82c9e1afd500f51b93c213cf2ced0289ab, e5fea86e2192528933cf3fc6c9cc6d44dd261bbc, 899cc03e604077130f1b3ee6755b22ac23191487
 
 ### B4-P4
 - Description: Docs landing pages polish (docs-only components allowed).

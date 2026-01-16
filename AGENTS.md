@@ -52,15 +52,17 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: B4-P3.3 plan fix complete
+- Current phase status: B4-P3.3 complete
 - B4-P3.1 pages: `src/pages/privacy-terms.tsx`, `src/pages/terms-and-conditions.tsx`
 - B4-P3.1 patterns: Legal layout module, forward page for terms, explicit heading anchors on canonical privacy page.
 - B4-P3.1 commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a, 503a34fd40683d1000d725ea696fcc812fe3a236
 - B4-P3.2 pages: `src/pages/vigia-futura/index.tsx`, `src/pages/work-with-us/index.tsx`, `src/pages/case-studies/ogtic-redlab.tsx`
 - B4-P3.2 patterns: Subnav focus-visible styles, centered CTA rows, microcopy spacing via CSS modules.
 - B4-P3.2 commits: dd32342423ecaa54484035c6205be6184dd925de, 6d2d63a, 341b38b804433599dde6278e64577a030034be8f, fe7d46ae1e51d252fa898c647143f34d4cefb073
-- B4-P3.3 plan fix commit: fb38bd82c9e1afd500f51b93c213cf2ced0289ab
-- Next pass: B4-P3.3 (final ux consistency + lighthouse delta pass)
+- B4-P3.3 pages: `src/pages/book-clarityscan.tsx`, `src/pages/book-clarityscan-success.tsx`, `src/pages/ecosystems/redlab.tsx`, `src/pages/ecosystems/red-incubadoras.tsx`, `src/pages/case-studies/index.tsx`, `src/pages/case-studies/alpha-inversiones.tsx`, `src/pages/case-studies/fundapec.tsx`, `src/pages/case-studies/afp-siembra.tsx`
+- B4-P3.3 patterns: Container spacing moved to CSS modules, case study breadcrumbs/microcopy/video wrappers normalized, CaseStudyCards image styling centralized.
+- B4-P3.3 commits: fb38bd82c9e1afd500f51b93c213cf2ced0289ab, e5fea86e2192528933cf3fc6c9cc6d44dd261bbc, 899cc03e604077130f1b3ee6755b22ac23191487
+- Next pass: B4-P4 (docs landing pages polish)
 
 ## Next decision
 - Choose path:

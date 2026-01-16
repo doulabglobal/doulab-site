@@ -13,7 +13,7 @@
 [INFO] [en] Creating an optimized production build...
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 8.27s
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 12.30s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 7.92s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 10.91s
 [SUCCESS] Generated static files in "build".
 [INFO] Use `npm run serve` command to test your build locally.

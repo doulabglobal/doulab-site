@@ -1,7 +1,7 @@
 # GDPR / Swiss nFADP Baseline (Doulab)
 
 ## Controller
-- Doulab GmbH (Switzerland) acts as the data controller for doulab.net.
+- Santiago Arias Consulting ("Doulab") acts as the data controller for doulab.net.
 - Contact: legal@doulab.net
 
 ## Data categories processed

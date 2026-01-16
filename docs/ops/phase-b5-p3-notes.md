@@ -22,13 +22,6 @@
 
 ## Changes
 - Added `decoding="async"` to below-the-fold images to reduce main-thread decode cost:
-  - `src/pages/case-studies/ogtic-redlab.tsx`
-  - `src/pages/case-studies/alpha-inversiones.tsx`
-  - `src/pages/case-studies/fundapec.tsx`
-  - `src/pages/case-studies/afp-siembra.tsx`
-  - `src/components/case-studies/CaseStudyCards.tsx`
-  - `src/pages/index.tsx`
-  - `src/pages/insights/index.tsx`
   - `src/pages/services/diagnostics.tsx`
   - `src/pages/work-with-us/index.tsx`
 
@@ -49,3 +42,8 @@
   - 0.48 MB  img/afp-siembra-card.png
   - 0.42 MB  img/diagnostics-hero.png
   - 0.41 MB  assets/js/165.fcb7b6fa.js
+
+## Correction
+- Previous note overstated the touched files. Actual updates were limited to:
+  - `src/pages/services/diagnostics.tsx`
+  - `src/pages/work-with-us/index.tsx`

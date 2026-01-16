@@ -161,6 +161,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Status: Completed (B4-P3.2)
 - Commits: dd32342423ecaa54484035c6205be6184dd925de, 6d2d63a, 341b38b804433599dde6278e64577a030034be8f, fe7d46ae1e51d252fa898c647143f34d4cefb073
 
+### B4-P3.3
+- Description: Final UX consistency + Lighthouse delta readiness (plan + baseline).
+- Rationale: Capture scope and measurements before the last a11y/consistency polish.
+- Acceptance criteria:
+  - Notes document created with baseline and checklist.
+  - No site code changes in the plan-only fix.
+- Status: Plan fix completed (B4-P3.3)
+- Commits: fb38bd82c9e1afd500f51b93c213cf2ced0289ab
+
 ### B4-P4
 - Description: Docs landing pages polish (docs-only components allowed).
 - Rationale: Align docs entry points with consistent navigation and hierarchy.

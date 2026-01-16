@@ -150,7 +150,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - `/terms-and-conditions` remains route-safe and forwards users to the canonical page.
   - No inline styles added.
 - Status: Completed (B4-P3.1)
-- Commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a
+- Commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a, 503a34fd40683d1000d725ea696fcc812fe3a236
 
 ### B4-P4
 - Description: Docs landing pages polish (docs-only components allowed).

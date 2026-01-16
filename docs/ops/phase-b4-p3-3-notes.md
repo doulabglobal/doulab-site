@@ -18,3 +18,16 @@
 - Replace inline styles on case study breadcrumbs, microcopy rows, and media containers with CSS modules.
 - Replace inline styles on responsive video wrappers with CSS modules.
 - Move CaseStudyCards image sizing into CSS module.
+
+## Results
+- Inline style count after changes: 0
+- Pages updated:
+  - `src/pages/book-clarityscan.tsx`: container padding moved to CSS module.
+  - `src/pages/book-clarityscan-success.tsx`: container padding/max-width moved to CSS module.
+  - `src/pages/ecosystems/redlab.tsx`: main layout styles moved to CSS module.
+  - `src/pages/ecosystems/red-incubadoras.tsx`: main layout styles moved to CSS module.
+  - `src/pages/case-studies/index.tsx`: microcopy spacing moved to CSS module.
+  - `src/pages/case-studies/alpha-inversiones.tsx`: breadcrumb/microcopy/media centering moved to CSS module.
+  - `src/pages/case-studies/fundapec.tsx`: breadcrumb/microcopy/media centering moved to CSS module.
+  - `src/pages/case-studies/afp-siembra.tsx`: breadcrumb/microcopy/video wrappers moved to CSS module.
+  - `src/components/case-studies/CaseStudyCards.tsx`: image sizing moved to CSS module.

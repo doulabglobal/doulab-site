@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { CLARITYSCAN_BOOKING_URL } from '../constants/urls';
+import styles from './book-clarityscan-success.module.css';
 
 export default function BookClarityScanSuccessPage() {
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function BookClarityScanSuccessPage() {
         <meta property="og:description" content="Payment confirmed. Use the link to schedule your ClarityScan diagnostic." />
       </Head>
 
-      <main className="container" style={{ padding: '2rem 1rem', maxWidth: '720px' }}>
+      <main className={`container ${styles.main}`}>
         <h1>You're all set.</h1>
         <p role="status" aria-live="polite">
           Your ClarityScan payment is confirmed. Use the button below to pick a time via Microsoft Bookings. We already opened the scheduling page in a new tab for you.

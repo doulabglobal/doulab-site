@@ -6,6 +6,7 @@ import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import styles from './alpha-inversiones.module.css';
 
 export default function CaseAlphaInversiones(): ReactNode {
   const breadcrumbSchema = {
@@ -81,8 +82,7 @@ export default function CaseAlphaInversiones(): ReactNode {
         {/* Breadcrumb */}
         <nav
           aria-label="Breadcrumb"
-          className="microcopy"
-          style={{ marginTop: '1rem', marginBottom: '0.25rem' }}
+          className={`microcopy ${styles.breadcrumb}`}
         >
           <Link to="/case-studies" data-cta="cta.cases.breadcrumb">
             All case studies
@@ -238,27 +238,27 @@ export default function CaseAlphaInversiones(): ReactNode {
         </section>
 
         {/* Guidance and related services */}
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Start small: Discovery call → ClarityScan → Gate 1 pilot.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Helpful to share: goals, timelines, constraints, and how you measure success today.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
           <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           See more examples in <Link to="/case-studies">Case studies</Link>.
         </p>
 
         {/* Process (diagram) */}
         <section className="section" id="process-diagram" aria-labelledby="process-diagram-title">
           <h2 id="process-diagram-title">Process (diagram)</h2>
-          <div style={{ textAlign: 'center' }}>
+          <div className={styles.centeredMedia}>
             <picture>
               <source srcSet="/img/diagrams/alpha-inversiones-process.avif" type="image/avif" />
               <source srcSet="/img/diagrams/alpha-inversiones-process.webp" type="image/webp" />

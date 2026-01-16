@@ -142,6 +142,16 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Inline styles reduced on touched pages.
 - Commits: TBD
 
+### B4-P3.1
+- Description: Consolidate legal pages (privacy/terms) with a canonical route and forward page.
+- Rationale: Reduce user confusion and ensure a single source of truth for legal content.
+- Acceptance criteria:
+  - `/privacy-terms` is canonical with anchors for privacy, analytics, bookings, terms, contact.
+  - `/terms-and-conditions` remains route-safe and forwards users to the canonical page.
+  - No inline styles added.
+- Status: Completed (B4-P3.1)
+- Commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3
+
 ### B4-P4
 - Description: Docs landing pages polish (docs-only components allowed).
 - Rationale: Align docs entry points with consistent navigation and hierarchy.

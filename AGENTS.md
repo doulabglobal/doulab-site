@@ -52,11 +52,11 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: B4-P2 complete
-- B4-P2 pages: `src/pages/insights/index.tsx`, `src/pages/services/clarityscan.tsx`, `src/pages/services/coaching-mentoring.tsx`, `src/pages/services/custom-workshops.tsx`, `src/pages/services/diagnostics.tsx`, `src/pages/services/innovation-maturity.tsx`
-- B4-P2 patterns: CSS modules for subnav layout, hero alignment, card footer rows, and CTA spacing; inline styles removed in services/insights.
-- B4-P2 commits: d555d01f6f1b2567843b4c030d9cc60f14f7b8d6, 55ab35f2b0d682c650d01deab4ac93a7ed87edc5
-- Next pass: B4-P3 (utility/legal/support pages)
+- Current phase status: B4-P3.1 complete
+- B4-P3.1 pages: `src/pages/privacy-terms.tsx`, `src/pages/terms-and-conditions.tsx`
+- B4-P3.1 patterns: Legal layout module, forward page for terms, explicit heading anchors on canonical privacy page.
+- B4-P3.1 commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3
+- Next pass: B4-P3.2 (remaining utility/legal/support pages)
 
 ## Next decision
 - Choose path:

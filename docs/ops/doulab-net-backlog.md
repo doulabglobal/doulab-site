@@ -189,3 +189,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - No code or config changes.
 - Status: Completed (B5-P1)
 - Commits: 4f84f4b09e154791fe3102f68c34c07d9dc88b97
+
+### B5-P2
+- Description: Performance quick wins (low-risk, proof-based).
+- Rationale: Reduce decode cost for below-the-fold diagrams without altering IA or tooling.
+- Acceptance criteria:
+  - Plan and notes created under `docs/ops/phase-b5-p2-plan.md` and `docs/ops/phase-b5-p2-notes.md`.
+  - Low-risk image decoding tweaks applied and documented.
+  - build:cf and verify:build executed with logs captured.
+- Status: Completed (B5-P2)
+- Commits: 6dcc3cdbaed533c673132c3d420a253dad271d09, 27568e4844d8060ab9d3f8828b866e4035bff321

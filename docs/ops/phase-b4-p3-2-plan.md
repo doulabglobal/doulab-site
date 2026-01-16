@@ -6,7 +6,7 @@
 - Shared components: `src/components/PageHeader/*`, `src/components/CardGrid/*`, `src/components/Hero.tsx`, `src/components/FinalCta.tsx` only if a11y gaps are found.
 
 ## Baseline measurements
-- Inline style count (rg style={{}} in src): 45
+- Inline style count (rg `style={{}}` in src): 45
 
 ## Targeted changes (planned)
 - Remove inline styles from Vigia Futura in-page subnav and CTA row; move to a CSS module.
@@ -15,7 +15,7 @@
 - Confirm icon-only links/buttons have aria-labels (if any are found).
 
 ## Checks to run
-- Inline style count before/after (rg style={{}} in src).
+- Inline style count before/after (rg `style={{}}` in src).
 - Manual scan for img alt text on touched pages.
 - Verify focus-visible styles on in-page subnav links.
 

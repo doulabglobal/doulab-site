@@ -30,7 +30,22 @@
   - `src/pages/index.tsx`
   - `src/pages/insights/index.tsx`
   - `src/pages/services/diagnostics.tsx`
+  - `src/pages/work-with-us/index.tsx`
 
 ## Risks + rollback
 - Risk: Low (standard image decoding hint).
 - Rollback: revert the perf/site commit and rebuild.
+
+## After (post-change size signals)
+- Build size total: 15485357 bytes (14.77 MB)
+- Top 10 largest assets:
+  - 0.88 MB  img/alpha-hero.png
+  - 0.65 MB  img/ogtic-redlab-card.png
+  - 0.56 MB  img/social/2025-09-12-clarityscan-decision-latency.png
+  - 0.55 MB  img/work-with-us-hero.png
+  - 0.51 MB  assets/js/2279.7ff960b1.js
+  - 0.50 MB  img/clarityscan-hero.png
+  - 0.48 MB  img/workshops-hero.png
+  - 0.48 MB  img/afp-siembra-card.png
+  - 0.42 MB  img/diagnostics-hero.png
+  - 0.41 MB  assets/js/165.fcb7b6fa.js

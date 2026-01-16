@@ -247,11 +247,11 @@ export default function WorkWithUsPage(): JSX.Element {
                     </div>
 
                     <div className="proofStrip" aria-label="Organizations we’ve supported">
-                        <img src="/img/afpsiembra.png" alt="AFP Siembra" width={160} height={48} loading="lazy" />
-                        <img src="/img/OGTIC_horizontal_fullcolor.png" alt="OGTIC" width={160} height={48} loading="lazy" />
-                        <img src="/img/alpha.png" alt="Alpha Inversiones" width={160} height={48} loading="lazy" />
-                        <img src="/img/fundapec.png" alt="FUNDAPEC" width={160} height={48} loading="lazy" />
-                        <img src="/img/runway.png" alt="Runway Innovation Hub" width={160} height={48} loading="lazy" />
+                        <img src="/img/afpsiembra.png" alt="AFP Siembra" width={160} height={48} loading="lazy" decoding="async" />
+                        <img src="/img/OGTIC_horizontal_fullcolor.png" alt="OGTIC" width={160} height={48} loading="lazy" decoding="async" />
+                        <img src="/img/alpha.png" alt="Alpha Inversiones" width={160} height={48} loading="lazy" decoding="async" />
+                        <img src="/img/fundapec.png" alt="FUNDAPEC" width={160} height={48} loading="lazy" decoding="async" />
+                        <img src="/img/runway.png" alt="Runway Innovation Hub" width={160} height={48} loading="lazy" decoding="async" />
                     </div>
                 </section>
 

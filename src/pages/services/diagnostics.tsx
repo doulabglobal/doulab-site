@@ -60,9 +60,10 @@ export default function DiagnosticsPage() {
                                 <source srcSet="/img/diagnostics-hero.webp" type="image/webp" />
                                 <img
                                     src="/img/diagnostics-hero.png"
-                                    alt="Diagnostics — evidence-based innovation and foresight scans"
+                                    alt="Diagnostics - evidence-based innovation and foresight scans"
                                     className="heroImage"
                                     loading="eager"
+                                    decoding="async"
                                     fetchPriority="high"
                                     width="600"
                                     height="400"

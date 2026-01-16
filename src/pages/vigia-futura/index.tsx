@@ -8,6 +8,7 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
+import styles from './vigia-futura.module.css';
 
 type SectionDef = { id: string; label: string };
 
@@ -111,33 +112,21 @@ export default function VigiaFuturaPage() {
           eager
         />
 
-        {/* In-page subnav */}
-       {/* In-page subnav (centered, same width as content) */}
-<div className="container">
-  <nav
-    className="subnav"
-    aria-label="In this page"
-    style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      justifyContent: 'center',
-      gap: '.5rem',
-      padding: '.25rem 0 .5rem',
-      margin: '0 auto .75rem',
-    }}
-  >
-    {SECTIONS.map((s) => (
-      <a
-        key={s.id}
-        href={`#${s.id}`}
-        className={activeId === s.id ? 'subnavActive' : undefined}
-        aria-current={activeId === s.id ? 'true' : undefined}
-      >
-        {s.label}
-      </a>
-    ))}
-  </nav>
-</div>
+        {/* In-page subnav (centered, same width as content) */}
+        <div className="container">
+          <nav className={`subnav ${styles.subnav}`} aria-label="In this page">
+            {SECTIONS.map((s) => (
+              <a
+                key={s.id}
+                href={`#${s.id}`}
+                className={`${styles.subnavLink}${activeId === s.id ? ' subnavActive' : ''}`}
+                aria-current={activeId === s.id ? 'true' : undefined}
+              >
+                {s.label}
+              </a>
+            ))}
+          </nav>
+        </div>
 
 
         {/* Radar */}
@@ -181,7 +170,9 @@ export default function VigiaFuturaPage() {
           </div>
 
           {/* Dynamic: Latest from the radar (docs tagged "radar") */}
-          <h3 id="vf-radar-latest-title" style={{ marginTop: '1rem' }}>Latest from the radar</h3>
+          <h3 id="vf-radar-latest-title" className={styles.radarLatestTitle}>
+            Latest from the radar
+          </h3>
           <div className="cardGrid" role="list" aria-labelledby="vf-radar-latest-title">
             {radarDocs.length === 0 ? (
               <article className="card" role="listitem" aria-label="Radar updates">
@@ -242,7 +233,7 @@ export default function VigiaFuturaPage() {
             </article>
           </div>
 
-          <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '0.75rem' }}>
+          <div className={`heroCtas ${styles.centeredCtas}`}>
             <Link className="buttonPrimary" to="/contact" data-cta="cta.vigia.mid.briefing">
               Request a briefing
             </Link>

@@ -6,6 +6,7 @@ import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import styles from './ogtic-redlab.module.css';
 
 export default function CaseOgticRedlab(): ReactNode {
   const breadcrumbSchema = {
@@ -81,7 +82,7 @@ export default function CaseOgticRedlab(): ReactNode {
 
       <main>
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className="microcopy" style={{ marginTop: '1rem', marginBottom: '0.25rem' }}>
+        <nav aria-label="Breadcrumb" className={`microcopy ${styles.breadcrumb}`}>
           <Link to="/case-studies" data-cta="cta.cases.breadcrumb">All case studies</Link>
         </nav>
 
@@ -252,22 +253,22 @@ export default function CaseOgticRedlab(): ReactNode {
         </section>
 
         {/* Guidance and related services */}
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Start small: Discovery call → ClarityScan → Gate 1 pilot.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           To speed things up: share your goals, timelines, constraints, and how you measure success today.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Planning a cohort or event? <Link to="/contact">Co host a session</Link>.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Exploring co-branded cohorts or MOUs? <Link to="/contact">Let’s outline options</Link>.
         </p>
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
           Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
           <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>. See more examples in{' '}
           <Link to="/case-studies">Case studies</Link>.
@@ -276,7 +277,7 @@ export default function CaseOgticRedlab(): ReactNode {
         {/* Process (diagram) */}
         <section className="section" id="process-diagram" aria-labelledby="process-diagram-title">
           <h2 id="process-diagram-title">Process (diagram)</h2>
-          <div style={{ textAlign: 'center' }}>
+          <div className={styles.centeredMedia}>
             <picture>
               <source srcSet="/img/diagrams/ogtic-redlab-process.avif" type="image/avif" />
               <source srcSet="/img/diagrams/ogtic-redlab-process.webp" type="image/webp" />

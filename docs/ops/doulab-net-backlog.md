@@ -232,3 +232,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - No code or config changes.
 - Status: Completed (B7 plan)
 - Commits: 1fefcae6d339e1e38aad2b740e39573ebf03ab4e
+
+### B7-P1
+- Description: Performance quick wins with measurable before/after metrics.
+- Rationale: Reduce payload footprint with low-risk, reversible changes and documented evidence.
+- Acceptance criteria:
+  - Baseline metrics captured in `docs/ops/phase-b7-p1-notes.md`.
+  - Low-risk asset pruning documented with proof.
+  - build:cf and verify:build executed with logs captured.
+- Status: Completed (B7-P1)
+- Commits: 676ca32ac51ed0d7876b225c05b79ef9f705c24f, cdaab4a5e05f94c48b9eed9b18d54819b0dfdfe7

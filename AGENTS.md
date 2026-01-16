@@ -52,7 +52,7 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.9.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: B7 plan complete
+- Current phase status: B7-P1 complete
 - B4-P3.1 pages: `src/pages/privacy-terms.tsx`, `src/pages/terms-and-conditions.tsx`
 - B4-P3.1 patterns: Legal layout module, forward page for terms, explicit heading anchors on canonical privacy page.
 - B4-P3.1 commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a, 503a34fd40683d1000d725ea696fcc812fe3a236
@@ -73,7 +73,8 @@ Each item must link to commit hash(es) upon completion.
 - B6 freeze: v0.9.0 release bump + closeout artifact.
 - B6 commits: 0ff76f9, 91b6308
 - B7 plan commit: 1fefcae6d339e1e38aad2b740e39573ebf03ab4e
-- Next pass: execute B7 workstreams
+- B7-P1 commits: 676ca32ac51ed0d7876b225c05b79ef9f705c24f, cdaab4a5e05f94c48b9eed9b18d54819b0dfdfe7
+- Next pass: B7-P2 performance quick wins or next approved workstream
 
 ## Next decision
 - Choose path:

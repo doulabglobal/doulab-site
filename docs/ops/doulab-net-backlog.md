@@ -152,6 +152,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Status: Completed (B4-P3.1)
 - Commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a, 503a34fd40683d1000d725ea696fcc812fe3a236
 
+### B4-P3.2
+- Description: UX consistency + accessibility micro-polish (plan + baseline).
+- Rationale: Define scope and measurements before applying site-wide a11y polish.
+- Acceptance criteria:
+  - Plan document created with scope, baseline, and checks.
+  - No site code changes in the plan-only fix.
+- Status: Plan fix completed (B4-P3.2)
+- Commits: dd32342423ecaa54484035c6205be6184dd925de
+
 ### B4-P4
 - Description: Docs landing pages polish (docs-only components allowed).
 - Rationale: Align docs entry points with consistent navigation and hierarchy.

@@ -199,3 +199,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B5-P2)
 - Commits: 6dcc3cdbaed533c673132c3d420a253dad271d09, 27568e4844d8060ab9d3f8828b866e4035bff321
+
+### B5-P3
+- Description: Performance deep pass (proof-based improvements).
+- Rationale: Reduce decode overhead and document bundle-size signals without UX/IA changes.
+- Acceptance criteria:
+  - Plan and notes created under `docs/ops/phase-b5-p3-plan.md` and `docs/ops/phase-b5-p3-notes.md`.
+  - Low-risk performance tweaks applied and documented with before/after signals.
+  - build:cf and verify:build executed with logs captured.
+- Status: Completed (B5-P3)
+- Commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82

@@ -58,7 +58,7 @@ export default function PrivacyAndTerms(): ReactNode {
             Privacy
           </Heading>
           <p>
-            Doulab GmbH (referred to as &quot;Doulab&quot;, &quot;we&quot;, or &quot;us&quot;) provides strategic foresight, innovation
+            Santiago Arias Consulting (&quot;Doulab&quot;) (referred to as &quot;Doulab&quot;, &quot;we&quot;, or &quot;us&quot;) provides strategic foresight, innovation
             advisory, and diagnostic services. This Privacy Policy describes the personal information we collect, how we use it, and
             the choices available to you.
           </p>
@@ -402,7 +402,7 @@ export default function PrivacyAndTerms(): ReactNode {
             Contact
           </Heading>
           <p>
-            Email <a href="mailto:legal@doulab.net">legal@doulab.net</a> or write to Doulab GmbH, Alpenstrasse 15, 6300 Zug,
+            Email <a href="mailto:legal@doulab.net">legal@doulab.net</a> or write to Doulab, Mettlenstrasse 45, 8193 Eglisau, Switzerland
             Switzerland for privacy inquiries, data access requests, or complaints.
           </p>
         </section>

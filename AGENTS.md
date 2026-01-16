@@ -50,9 +50,9 @@ Each item must link to commit hash(es) upon completion.
 - Every pass MUST update:
   - `docs/ops/doulab-net-backlog.md` with completed items + commit hashes
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
-- Current version: v0.8.0
+- Current version: v0.9.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: B5-P3 complete
+- Current phase status: B6 complete
 - B4-P3.1 pages: `src/pages/privacy-terms.tsx`, `src/pages/terms-and-conditions.tsx`
 - B4-P3.1 patterns: Legal layout module, forward page for terms, explicit heading anchors on canonical privacy page.
 - B4-P3.1 commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a, 503a34fd40683d1000d725ea696fcc812fe3a236
@@ -68,7 +68,9 @@ Each item must link to commit hash(es) upon completion.
 - B5-P2 commits: 6dcc3cdbaed533c673132c3d420a253dad271d09, 27568e4844d8060ab9d3f8828b866e4035bff321
 - B5-P3 improvements: async decode on below-the-fold images across case studies and marketing pages.
 - B5-P3 commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82, a06dadef26faf034c91d80b916b42fd27fad19f5 (notes correction / scope accuracy)
-- Next pass: B4-P4 (docs landing pages polish) or B5-P4 if defined
+- B6 freeze: v0.9.0 release bump + closeout artifact.
+- B6 commits: 0ff76f9, 91b6308
+- Next pass: B4-P4 (docs landing pages polish) or define B7
 
 ## Next decision
 - Choose path:

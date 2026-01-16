@@ -209,3 +209,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B5-P3)
 - Commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82, a06dadef26faf034c91d80b916b42fd27fad19f5 (notes correction)
+
+## Phase B6 (Freeze & Version)
+
+### B6-Freeze
+- Description: Freeze site at new release and record closeout artifact.
+- Rationale: Lock B1-B5 outputs with auditable release notes and closeout record.
+- Acceptance criteria:
+  - Version bump committed (v0.9.0).
+  - Release notes updated and closeout artifact created.
+  - build:cf and verify:build executed with logs captured.
+- Status: Completed (B6)
+- Commits: 0ff76f9, 91b6308

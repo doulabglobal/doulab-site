@@ -15,6 +15,8 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 
 ## Acceptance criteria / audit rules
 - Legacy booking link checks exclude `ops/audits/**` (immutable evidence); enforce only in runtime source and active documentation (`src/**`, `docs/**`, configs/constants).
+- Header source of truth is `static/_headers` (build `_headers` files are artifacts only).
+- CSP changes should default to Report-Only unless a tested policy is confirmed safe; otherwise defer.
 
 ## Backlog (tracked) — Phase B1
 Each item must link to commit hash(es) upon completion.
@@ -49,8 +51,9 @@ Each item must link to commit hash(es) upon completion.
   - `docs/ops/doulab-net-backlog.md` with completed items + commit hashes
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
-- Latest merged hardening commits: 10cc8f3, a6438fc
-- Current phase status: Hardening Pass 2 complete
+- Latest merged hardening commits: f6930624, fd90198a, 55c258b
+- Current phase status: Hardening Pass 3 completed
+- Hardening Pass 3 commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, TBD (security + 404)
 
 ## Next decision
 - Choose path:

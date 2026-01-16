@@ -7,7 +7,7 @@ export default function PrivacyAndTerms(): ReactNode {
   const pageTitle = 'Privacy & Terms | Doulab';
   const description =
     'Privacy policy and terms & conditions covering Doulab services, diagnostics, foresight programs, and digital properties.';
-  const lastUpdated = '24 September 2025';
+  const lastUpdated = '15 January 2026';
 
   return (
     <Layout title={pageTitle} description={description}>
@@ -67,12 +67,16 @@ export default function PrivacyAndTerms(): ReactNode {
               </li>
               <li>
                 <strong>Technical data</strong>: IP addresses, device identifiers, approximate location, browser type, language
-                settings, and referring URLs captured through privacy-respecting analytics (currently Plausible Analytics) to
-                understand site performance. We do not use third-party advertising cookies.
+                settings, and referring URLs captured through privacy-respecting analytics (Cloudflare Web Analytics) to understand
+                site performance. We do not use marketing or advertising cookies.
               </li>
               <li>
                 <strong>Payment data</strong>: Stripe Checkout processes payments for fixed-fee services. Doulab does not store card
                 numbers; Stripe processes personal data under its own terms and privacy policies.
+              </li>
+              <li>
+                <strong>Booking data</strong>: Appointment details submitted through booking.doulab.net (which redirects to Google
+                Calendar appointment links), such as name, email, and requested time.
               </li>
             </ul>
           </section>
@@ -102,10 +106,11 @@ export default function PrivacyAndTerms(): ReactNode {
           <section id="data-sharing">
             <h3>4. Data Sharing &amp; Transfers</h3>
             <p>
-              We may share personal information with carefully selected partners that help us deliver services, such as analytics
-              providers, secure document repositories, or payment processors. Each partner is bound by confidentiality commitments and
-              data processing agreements. We do not sell or rent personal information. When data is transferred outside Switzerland or
-              the European Economic Area, we rely on adequacy decisions, standard contractual clauses, or comparable safeguards.
+              We may share personal information with carefully selected partners that help us deliver services, such as Cloudflare
+              Pages (hosting and analytics), GitHub (source control and CI), Google Calendar appointment links (scheduling), and Stripe
+              (payments). Each partner is bound by confidentiality commitments and data processing agreements. We do not sell or rent
+              personal information. When data is transferred outside Switzerland or the European Economic Area, we rely on adequacy
+              decisions, standard contractual clauses, or comparable safeguards.
             </p>
           </section>
 

@@ -82,7 +82,18 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Baseline scores recorded in `docs/ops/performance-baseline.md`.
   - PDF archived under `ops/audits/doulab-net/` with deterministic filename.
 - Status: Completed (Hardening Pass 2)
-- Commits: TBD
+- Commits: f6930624a8c3f96b1ad839b05d95ac5124c66c11
+
+### B-P2-06
+- Description: Hardening Pass 3 baseline security + GDPR/CH compliance + 404 noindex.
+- Rationale: Improve security posture and compliance transparency without breaking site behavior.
+- Acceptance criteria:
+  - `static/_headers` updated with baseline headers (HSTS, Permissions-Policy, Referrer-Policy, nosniff).
+  - GDPR/CH compliance baseline documented and reflected in privacy/terms pages.
+  - 404 includes `noindex,follow` and maintains helpful navigation.
+  - Dependency prune proof recorded (no removals unless proven safe).
+- Status: Completed (Hardening Pass 3)
+- Commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, TBD (security + 404)
 
 ## P3
 

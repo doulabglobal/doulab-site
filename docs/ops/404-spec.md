@@ -5,6 +5,7 @@
 - Offer a primary CTA to book (`https://booking.doulab.net/`).
 - Provide secondary links: Services, Docs, Contact, Home.
 - No inline styles; use shared components and existing card styles.
+- Add `noindex,follow` robots meta.
 
 ## Content
 - Headline: playful and concise (e.g., "This page escaped the lab.").

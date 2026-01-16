@@ -21,7 +21,7 @@ export default function TermsAndConditions(): ReactNode {
       <main className="container" style={{ padding: '2rem 1rem', maxWidth: '960px' }}>
         <PageHeader
           title="Terms & Conditions"
-          meta="Updated: 24 September 2025"
+          meta="Updated: 15 January 2026"
         />
 
         <section id="agreement">
@@ -45,7 +45,8 @@ export default function TermsAndConditions(): ReactNode {
               a Client under an engagement.
             </li>
             <li>
-              <strong>Bookings</strong>: Self-service sessions purchased via Stripe Checkout or scheduled through Microsoft Bookings.
+              <strong>Bookings</strong>: Self-service sessions purchased via Stripe Checkout or scheduled through booking.doulab.net
+              (Google Calendar appointment links).
             </li>
           </ul>
         </section>
@@ -116,7 +117,8 @@ export default function TermsAndConditions(): ReactNode {
           <p>
             Doulab operates on a privacy-first basis. We collect only the data required to deliver the Services, process payments,
             and fulfill our legal obligations. We do not embed third-party trackers in client workspaces. Third-party processors
-            (for example Stripe and Microsoft Bookings) handle data under their own policies; Clients should review those terms.
+            (for example Stripe and Google Calendar appointment links via booking.doulab.net) handle data under their own policies;
+            Clients should review those terms.
             Project files are stored in encrypted repositories with access restricted to the delivery team. Unless required to retain
             records for legal or audit purposes, project data is deleted or anonymized within twelve (12) months of engagement
             completion. Nothing in these Terms restricts either party from meeting statutory obligations such as breach notifications

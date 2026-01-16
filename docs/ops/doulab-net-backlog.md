@@ -177,3 +177,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Docs landing pages use consistent headers and CTAs.
   - No docs-only components used in `src/pages/**`.
 - Commits: TBD
+
+## Phase B5 (Performance baseline)
+
+### B5-P1
+- Description: Performance and runtime baseline capture (docs-only).
+- Rationale: Record current toolchain, build/verify timing, and build artifact sizes.
+- Acceptance criteria:
+  - Baseline document created under `docs/ops/phase-b5-p1-baseline.md`.
+  - build:cf and verify:build executed with logs captured.
+  - No code or config changes.
+- Status: Completed (B5-P1)
+- Commits: 4f84f4b09e154791fe3102f68c34c07d9dc88b97

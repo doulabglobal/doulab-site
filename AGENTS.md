@@ -43,3 +43,11 @@ Each item must link to commit hash(es) upon completion.
 - Follow semantic versioning: MAJOR for breaking changes, MINOR for new features, PATCH for fixes.
 - Bump `package.json` version only on successful phase closeouts.
 - B6 freeze must tag a release version (if tags are used).
+
+## Per-pass governance updates (hard rule)
+- Every pass MUST update:
+  - `docs/ops/doulab-net-backlog.md` with completed items + commit hashes
+  - `AGENTS.md` with current phase status and any new guardrails/clarifications
+- Current version: v0.8.0
+- Latest merged hardening commits: 10cc8f3, a6438fc
+- Current phase in progress: Hardening Pass 2

@@ -75,6 +75,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Status: Completed (Pass 1)
 - Commits: 98d0e0a724c40b0664d9c837473a3535a1f274ea, 44285372c6595c9b3d7093bc24023920c9f88b32
 
+### B-P2-05
+- Description: Lighthouse baseline recorded + PDF archived.
+- Rationale: Preserve baseline evidence and enable regression tracking.
+- Acceptance criteria:
+  - Baseline scores recorded in `docs/ops/performance-baseline.md`.
+  - PDF archived under `ops/audits/doulab-net/` with deterministic filename.
+- Status: Completed (Hardening Pass 2)
+- Commits: TBD
+
 ## P3
 
 ### B-P3-01

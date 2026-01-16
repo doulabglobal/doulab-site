@@ -17,12 +17,10 @@ const config: Config = {
   projectName: 'doulab-site',
   trailingSlash: false,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
   // Enable ```mermaid fences
-  markdown: { mermaid: true },
+  markdown: { mermaid: true, hooks: { onBrokenMarkdownLinks: 'warn' } },
 
   // Load Mermaid theme
   themes: ['@docusaurus/theme-mermaid'],

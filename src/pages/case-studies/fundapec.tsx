@@ -312,6 +312,7 @@ export default function CaseFundapec(): ReactNode {
                 width="1200"
                 height="720"
                 loading="lazy"
+                decoding="async"
               />
             </picture>
             <p className="microcopy">Diagram: high‑level flow of context → work → outcomes.</p>

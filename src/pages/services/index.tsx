@@ -5,12 +5,14 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import CardGrid from '../../components/CardGrid/CardGrid';
+import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Radar from 'lucide-react/dist/esm/icons/radar';
+import styles from '../b4-p1.module.css';
 
 export default function ServicesPage(): ReactNode {
     return (
@@ -55,7 +57,7 @@ export default function ServicesPage(): ReactNode {
 
                 {/* Trusted line */}
                 <section className="section" aria-label="Trusted by">
-                    <p className="sectionLead" style={{ textAlign: 'center' }}>
+                    <p className={`sectionLead ${styles.centerText}`}>
                         Trusted by organizations like OGTIC, AFP Siembra, FUNDAPEC, and Alpha Inversiones.
                     </p>
                 </section>
@@ -73,7 +75,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Baseline maturity map (MCF 2.1 + IMM®)</li>
                                 <li>Gap analysis with prioritized next steps</li>
                             </ul>
-                            <div className="cardFooter" style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
+                            <div className={`cardFooter ${styles.cardFooterRow}`}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
                                     Run a diagnostic →
                                 </Link>
@@ -150,25 +152,18 @@ export default function ServicesPage(): ReactNode {
                 </section>
 
                 {/* Final CTA */}
-                <section className="section" aria-labelledby="services-cta-title">
-                    <div className="finalCta">
-                        <h2 id="services-cta-title">Ready to make innovation repeatable?</h2>
-                        <p>Start with a quick diagnostic or book a discovery call. We’ll co-create the path from insight to results.</p>
-                        <div className="heroCtas" style={{ justifyContent: 'center' }}>
-                            <Link to="/services/clarityscan" className="buttonPrimary" data-cta="cta.services.final.diagnostic">
-                                Start with a diagnostic
-                            </Link>
-                            <Link to="/contact" className="buttonSecondary" data-cta="cta.services.final.contact">
-                                Talk to us
-                            </Link>
-                        </div>
-                    </div>
-                </section>
+                <FinalCta
+                    id="services-final"
+                    ariaLabelledbyId="services-cta-title"
+                    title="Ready to make innovation repeatable?"
+                    body="Start with a quick diagnostic or book a discovery call. We'll co-create the path from insight to results."
+                    primaryCta={{ to: '/services/clarityscan', label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic' }}
+                    secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.final.contact' }}
+                />
             </main>
         </Layout>
     );
 }
-
 
 
 

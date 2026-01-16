@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import styles from '../b4-p1.module.css';
 
 // Icons (tree-shaken)
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -141,7 +142,7 @@ export default function AboutPage(): ReactNode {
         />
 
         {/* Proof + outcomes microcopy under hero */}
-        <p className="microcopy" style={{ textAlign: 'center', marginTop: '.25rem' }}>
+        <p className={`microcopy ${styles.microcopyCenterTight}`}>
           7 labs co-created in 2024. We reduce decision latency and cycle time.
         </p>
 
@@ -264,7 +265,7 @@ export default function AboutPage(): ReactNode {
           </div>
 
           {/* Cross-link to services overview */}
-          <p className="microcopy" style={{ marginTop: '.5rem' }}>
+          <p className={`microcopy ${styles.microcopyTop}`}>
             Want the full overview?{' '}
             <Link to="/what-we-do" data-cta="cta.about.to_whatwedo">
               See services overview
@@ -292,4 +293,3 @@ export default function AboutPage(): ReactNode {
     </Layout>
   );
 }
-

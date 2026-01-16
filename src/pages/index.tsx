@@ -7,6 +7,7 @@ import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import Hero from '../components/Hero';
 import FinalCta from '../components/FinalCta';
 import CaseStudyCards from '../components/case-studies/CaseStudyCards';
+import styles from './b4-p1.module.css';
 
 // Icons (tree-shaken imports)
 import type { LucideIcon } from 'lucide-react';
@@ -168,7 +169,7 @@ function ProblemSection() {
         common patterns we fix.
       </p>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '.5rem' }}>
+      <div className={styles.buttonRow}>
         <button
           type="button"
           className="buttonSecondary"
@@ -195,11 +196,10 @@ function ProblemSection() {
             const Icon = item.Icon;
             return (
               <div
-                className="card"
+                className={`card ${styles.problemCard}`}
                 role="group"
                 aria-roledescription="slide"
                 key={idx}
-                style={{ borderLeft: '4px solid var(--dl-indigo)' }}
               >
                 <Icon className="cardIcon" aria-hidden={true} />
                 <h3>{item.cause}</h3>
@@ -231,10 +231,10 @@ function ProblemSection() {
       <p id={hintId} className="microcopy">Hint, use left and right arrows or scroll horizontally</p>
 
       {/* Centered follow-up block + CTAs */}
-      <div style={{ textAlign: 'center' }}>
+      <div className={styles.centerText}>
         <p className="sectionLead">If these resonate, start with a quick baseline.</p>
         <p className="microcopy">Get your baseline in 15 to 20 minutes, do not lose another cycle.</p>
-        <div className="heroCtas" style={{ justifyContent: 'center' }}>
+        <div className={`heroCtas ${styles.ctaRowCenter}`}>
           <Link
             to="/services/clarityscan"
             className="buttonPrimary"
@@ -244,7 +244,7 @@ function ProblemSection() {
             Start with ClarityScan®
           </Link>
         </div>
-        <div className="heroCtas" style={{ justifyContent: 'center', marginTop: '.25rem' }}>
+        <div className={`heroCtas ${styles.ctaRowCenter} ${styles.ctaRowTight}`}>
           <Link to="/contact" className="buttonSecondary" data-cta="cta.home.problem.book_call">
             Book a discovery call
           </Link>
@@ -339,8 +339,8 @@ function NumbersStrip() {
       <div className="cardGrid">
         {items.map((x, i) => (
           <div className="card" key={i}>
-            <h3 style={{ fontSize: '1.75rem', marginBottom: '.25rem' }}>{x.kpi}</h3>
-            <p style={{ marginBottom: '.25rem' }}><strong>{x.label}</strong></p>
+            <h3 className={styles.kpiValue}>{x.kpi}</h3>
+            <p className={styles.kpiLabel}><strong>{x.label}</strong></p>
             <p className="microcopy">{x.note}</p>
           </div>
         ))}
@@ -484,7 +484,7 @@ function ResearchResourcesSection() {
           height={720}
           loading="lazy"
           decoding="async"
-          style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+          className={styles.roundedMedia}
         />
       </picture>
       <Lightbulb className="cardIcon" aria-hidden={true} />
@@ -523,7 +523,7 @@ function ResearchResourcesSection() {
         {mcfCard}
 
         {/* 2) Top 3 blog posts (client-only) */}
-        <div aria-live="polite" style={{ display: 'contents' }}>
+        <div aria-live="polite" className={styles.displayContents}>
           {blogLoading ? (
             <div key="blog-loading" className="card" role="status" aria-busy="true">
               <Lightbulb className="cardIcon" aria-hidden={true} />
@@ -552,7 +552,7 @@ function ResearchResourcesSection() {
                     height={630}
                     loading="lazy"
                     decoding="async"
-                    style={{ borderRadius: '0.75rem', width: '100%', height: 'auto' }}
+                    className={styles.roundedMedia}
                   />
                 )}
                 <Lightbulb className="cardIcon" aria-hidden={true} />
@@ -629,7 +629,7 @@ function PrinciplesSection() {
   return (
     <section className="section" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title">Our Principles</h2>
-      <div className="cardGrid" style={{ marginTop: '0.5rem' }}>
+      <div className={`cardGrid ${styles.cardGridTight}`}>
         <div className="card">
           <Layers className="cardIcon" aria-hidden={true} />
           <h3>01. Modularity</h3>

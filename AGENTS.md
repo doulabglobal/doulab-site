@@ -52,11 +52,11 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: B4-P1 complete
-- B4-P1 pages: `src/pages/index.tsx`, `src/pages/services/index.tsx`, `src/pages/what-we-do/index.tsx`, `src/pages/about/index.tsx`
-- B4-P1 patterns: CSS modules for spacing, CTA alignment, and card footer layout; FinalCta reuse.
-- B4-P1 commits: d8dc48636704f123517b3fee15879dfa6b923609, 530c64cd8c9649169151526dacc0ed7ee6b934e8
-- Next pass: B4-P2 (services subtree)
+- Current phase status: B4-P2 complete
+- B4-P2 pages: `src/pages/insights/index.tsx`, `src/pages/services/clarityscan.tsx`, `src/pages/services/coaching-mentoring.tsx`, `src/pages/services/custom-workshops.tsx`, `src/pages/services/diagnostics.tsx`, `src/pages/services/innovation-maturity.tsx`
+- B4-P2 patterns: CSS modules for subnav layout, hero alignment, card footer rows, and CTA spacing; inline styles removed in services/insights.
+- B4-P2 commits: d555d01f6f1b2567843b4c030d9cc60f14f7b8d6, 55ab35f2b0d682c650d01deab4ac93a7ed87edc5
+- Next pass: B4-P3 (utility/legal/support pages)
 
 ## Next decision
 - Choose path:

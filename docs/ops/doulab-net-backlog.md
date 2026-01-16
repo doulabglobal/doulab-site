@@ -131,7 +131,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Card grids and CTA blocks normalized across services pages.
   - Inline styles reduced on touched pages.
-- Commits: TBD
+- Status: Completed (B4-P2)
+- Commits: d555d01f6f1b2567843b4c030d9cc60f14f7b8d6, 55ab35f2b0d682c650d01deab4ac93a7ed87edc5
 
 ### B4-P3
 - Description: Utility/legal/support pages polish.

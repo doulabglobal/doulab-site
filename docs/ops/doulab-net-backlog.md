@@ -221,3 +221,14 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B6)
 - Commits: 0ff76f9, 91b6308
+
+## Phase B7 (Planning)
+
+### B7-Plan
+- Description: Post-freeze roadmap definition (plan-only).
+- Rationale: Define objectives, scope boundaries, and acceptance criteria for the next phase.
+- Acceptance criteria:
+  - Plan created under `docs/ops/phase-b7-plan.md`.
+  - No code or config changes.
+- Status: Completed (B7 plan)
+- Commits: 1fefcae6d339e1e38aad2b740e39573ebf03ab4e

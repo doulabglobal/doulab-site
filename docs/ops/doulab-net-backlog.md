@@ -104,3 +104,46 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - `package.json` version bumped only after successful phase closeouts.
   - Release notes reflect the phase completion.
 - Commits: TBD
+
+### B-P3-02
+- Description: Fix missing `check:links` script target.
+- Rationale: `npm run check:links` currently fails because `scripts/check-anchors.mjs` is missing.
+- Acceptance criteria:
+  - Either restore `scripts/check-anchors.mjs` from a known-good version, or
+  - Update package scripts to remove/replace the missing script reference.
+- Commits: TBD
+
+## Phase B4 (UX polish, whole-site)
+
+### B4-P1
+- Description: Core nav + primary marketing pages polish.
+- Rationale: Align top marketing routes with consistent headers, cards, and CTA hierarchy.
+- Acceptance criteria:
+  - No more than five pages modified in the pass.
+  - Inline styles reduced on touched pages.
+  - CTA/Next steps blocks consistent.
+- Commits: TBD
+
+### B4-P2
+- Description: Services subtree polish (`/services/*`).
+- Rationale: Make services pages consistent and reduce duplication.
+- Acceptance criteria:
+  - Card grids and CTA blocks normalized across services pages.
+  - Inline styles reduced on touched pages.
+- Commits: TBD
+
+### B4-P3
+- Description: Utility/legal/support pages polish.
+- Rationale: Improve readability and consistency on lower-traffic, critical pages.
+- Acceptance criteria:
+  - Consistent header/section patterns across legal/support pages.
+  - Inline styles reduced on touched pages.
+- Commits: TBD
+
+### B4-P4
+- Description: Docs landing pages polish (docs-only components allowed).
+- Rationale: Align docs entry points with consistent navigation and hierarchy.
+- Acceptance criteria:
+  - Docs landing pages use consistent headers and CTAs.
+  - No docs-only components used in `src/pages/**`.
+- Commits: TBD

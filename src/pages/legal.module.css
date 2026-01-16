@@ -1,0 +1,25 @@
+.main {
+  padding: 2rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.nav {
+  margin: 2rem 0;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.forwardBody {
+  margin-top: 1rem;
+}

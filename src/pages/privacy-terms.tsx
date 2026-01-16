@@ -1,7 +1,9 @@
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import Heading from '@theme/Heading';
 import PageHeader from '../components/PageHeader/PageHeader';
+import styles from './legal.module.css';
 
 export default function PrivacyAndTerms(): ReactNode {
   const pageTitle = 'Privacy & Terms | Doulab';
@@ -18,7 +20,7 @@ export default function PrivacyAndTerms(): ReactNode {
         <meta name="robots" content="noindex,follow" />
       </Head>
 
-      <main className="container" style={{ padding: '2rem 1rem', maxWidth: '960px' }}>
+      <main className={`container ${styles.main}`}>
         <PageHeader
           title="Privacy & Terms"
           meta={`Updated: ${lastUpdated}`}
@@ -31,19 +33,30 @@ export default function PrivacyAndTerms(): ReactNode {
           }
         />
 
-        <nav aria-label="On-page navigation" style={{ margin: '2rem 0' }}>
-          <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexWrap: 'wrap', gap: '1.5rem' }}>
+        <nav aria-label="On-page navigation" className={styles.nav}>
+          <ul className={styles.navList}>
             <li>
-              <a href="#privacy-policy">Privacy Policy</a>
+              <a href="#privacy">Privacy</a>
             </li>
             <li>
-              <a href="#terms-and-conditions">Terms &amp; Conditions</a>
+              <a href="#analytics">Analytics</a>
+            </li>
+            <li>
+              <a href="#bookings">Bookings</a>
+            </li>
+            <li>
+              <a href="#terms">Terms</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </nav>
 
-        <section id="privacy-policy" style={{ marginBottom: '3rem' }}>
-          <h2>Privacy Policy</h2>
+        <section id="privacy" className={styles.section}>
+          <Heading as="h2" id="privacy">
+            Privacy
+          </Heading>
           <p>
             Doulab GmbH (referred to as &quot;Doulab&quot;, &quot;we&quot;, or &quot;us&quot;) provides strategic foresight, innovation
             advisory, and diagnostic services. This Privacy Policy describes the personal information we collect, how we use it, and
@@ -51,7 +64,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </p>
 
           <section id="data-we-collect">
-            <h3>1. Information We Collect</h3>
+            <Heading as="h3" id="data-we-collect">
+              1. Information We Collect
+            </Heading>
             <ul>
               <li>
                 <strong>Contact information</strong>: Name, business email, phone number, organization, and role provided when you
@@ -81,20 +96,44 @@ export default function PrivacyAndTerms(): ReactNode {
             </ul>
           </section>
 
+          <section id="analytics">
+            <Heading as="h3" id="analytics">
+              Analytics
+            </Heading>
+            <p>
+              We use Cloudflare Web Analytics to understand site performance and aggregate traffic trends. We do not use marketing or
+              advertising cookies.
+            </p>
+          </section>
+
+          <section id="bookings">
+            <Heading as="h3" id="bookings">
+              Bookings
+            </Heading>
+            <p>
+              Booking requests made on booking.doulab.net redirect to Google Calendar appointment links. We collect only the details
+              you submit (name, email, and requested time) to schedule sessions.
+            </p>
+          </section>
+
           <section id="how-we-use-data">
-            <h3>2. How We Use Information</h3>
+            <Heading as="h3" id="how-we-use-data">
+              2. How We Use Information
+            </Heading>
             <p>We process personal information to:</p>
             <ul>
               <li>Deliver programs, diagnostics, and advisory services covered under a statement of work or booking;</li>
               <li>Schedule sessions, manage project logistics, and provide client support;</li>
               <li>Improve our tools, methodologies, and knowledge base using aggregated and anonymized insights;</li>
-              <li>Send operational updates, policy notices, and—where permitted—thought leadership relevant to your engagement;</li>
+              <li>Send operational updates, policy notices, and-where permitted-thought leadership relevant to your engagement;</li>
               <li>Comply with legal obligations, regulatory requests, and internal risk management requirements.</li>
             </ul>
           </section>
 
           <section id="legal-bases">
-            <h3>3. Legal Bases for Processing</h3>
+            <Heading as="h3" id="legal-bases">
+              3. Legal Bases for Processing
+            </Heading>
             <p>
               Doulab processes personal data on the following grounds: (a) performance of a contract or to take steps at your request
               before entering into a contract; (b) legitimate interests in delivering and improving services while safeguarding client
@@ -104,7 +143,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="data-sharing">
-            <h3>4. Data Sharing &amp; Transfers</h3>
+            <Heading as="h3" id="data-sharing">
+              4. Data Sharing &amp; Transfers
+            </Heading>
             <p>
               We may share personal information with carefully selected partners that help us deliver services, such as Cloudflare
               Pages (hosting and analytics), GitHub (source control and CI), Google Calendar appointment links (scheduling), and Stripe
@@ -115,7 +156,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="retention">
-            <h3>5. Data Retention</h3>
+            <Heading as="h3" id="retention">
+              5. Data Retention
+            </Heading>
             <p>
               We retain client records, diagnostics, and engagement outputs for the duration of an active engagement plus up to five
               (5) years, unless a longer period is legally required or expressly agreed in writing. Marketing preferences are retained
@@ -124,7 +167,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="security">
-            <h3>6. Security Measures</h3>
+            <Heading as="h3" id="security">
+              6. Security Measures
+            </Heading>
             <p>
               Doulab maintains administrative, technical, and physical safeguards to protect personal information. Access is limited to
               personnel and subcontractors who require it to perform their roles, subject to confidentiality obligations. We review
@@ -133,7 +178,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="your-rights">
-            <h3>7. Your Rights</h3>
+            <Heading as="h3" id="your-rights">
+              7. Your Rights
+            </Heading>
             <p>
               Depending on your jurisdiction, you may have the right to access, correct, delete, or restrict processing of your personal
               information, as well as the right to data portability and to object to certain processing. You can exercise these rights by
@@ -143,7 +190,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="children">
-            <h3>8. Children&apos;s Privacy</h3>
+            <Heading as="h3" id="children">
+              8. Children&apos;s Privacy
+            </Heading>
             <p>
               Our services are designed for professionals and organizations. We do not knowingly collect information from individuals
               under the age of sixteen (16). If you believe a minor has provided personal data, contact us so we can delete it.
@@ -151,24 +200,20 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="updates">
-            <h3>9. Changes to This Privacy Policy</h3>
+            <Heading as="h3" id="updates">
+              9. Changes to This Privacy Policy
+            </Heading>
             <p>
               Material changes to this Privacy Policy will be posted on this page with an updated revision date. Where required by law,
               we will obtain your consent for significant changes.
             </p>
           </section>
-
-          <section id="privacy-contact">
-            <h3>10. Contact</h3>
-            <p>
-              Email <a href="mailto:legal@doulab.net">legal@doulab.net</a> or write to Doulab GmbH, Alpenstrasse 15, 6300 Zug,
-              Switzerland for privacy inquiries, data access requests, or complaints.
-            </p>
-          </section>
         </section>
 
-        <section id="terms-and-conditions">
-          <h2>Terms &amp; Conditions</h2>
+        <section id="terms" className={styles.section}>
+          <Heading as="h2" id="terms">
+            Terms &amp; Conditions
+          </Heading>
           <p>
             These Terms &amp; Conditions (&quot;Terms&quot;) govern access to Doulab diagnostics, workshops, research programs, and
             related services (collectively, the &quot;Services&quot;). By accessing or using the Services you agree to these Terms. If
@@ -176,7 +221,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </p>
 
           <section id="terms-agreement">
-            <h3>1. Agreement</h3>
+            <Heading as="h3" id="terms-agreement">
+              1. Agreement
+            </Heading>
             <p>
               Each engagement is governed by these Terms, any statement of work, project proposal, or booking confirmation issued by
               Doulab, and any supplemental schedules agreed in writing. In case of conflict, the order of precedence is: (a) signed
@@ -185,7 +232,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-definitions">
-            <h3>2. Definitions</h3>
+            <Heading as="h3" id="terms-definitions">
+              2. Definitions
+            </Heading>
             <ul>
               <li>
                 <strong>Client</strong>: Any organization or individual contracting Doulab for Services, including ClarityScan&reg;
@@ -203,7 +252,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-scope">
-            <h3>3. Scope of Services</h3>
+            <Heading as="h3" id="terms-scope">
+              3. Scope of Services
+            </Heading>
             <p>
               Doulab designs and delivers strategy, innovation, foresight, and organizational capability engagements. Each engagement
               includes the timeline, format, and Deliverables described in the applicable statement of work or booking confirmation.
@@ -213,7 +264,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-payments">
-            <h3>4. Bookings &amp; Payments</h3>
+            <Heading as="h3" id="terms-payments">
+              4. Bookings &amp; Payments
+            </Heading>
             <ol>
               <li>
                 <strong>Stripe Checkout</strong>: Payments for fixed-fee Services are processed by Stripe. You authorize Stripe to store
@@ -235,7 +288,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-client-obligations">
-            <h3>5. Client Responsibilities</h3>
+            <Heading as="h3" id="terms-client-obligations">
+              5. Client Responsibilities
+            </Heading>
             <p>
               Clients agree to provide timely access to stakeholders, accurate information, and secure collaboration spaces (for example
               Notion, Miro, Teams, or similar). The Client is responsible for ensuring that participation in workshops or diagnostics is
@@ -244,7 +299,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-ip">
-            <h3>6. Intellectual Property</h3>
+            <Heading as="h3" id="terms-ip">
+              6. Intellectual Property
+            </Heading>
             <p>
               Unless otherwise agreed, Doulab retains ownership of methodologies, frameworks, tools, and pre-existing intellectual
               property used in delivering the Services. Upon full payment, the Client receives a non-exclusive, non-transferable license
@@ -254,7 +311,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-feedback">
-            <h3>7. Feedback</h3>
+            <Heading as="h3" id="terms-feedback">
+              7. Feedback
+            </Heading>
             <p>
               Feedback, suggestions, or improvement ideas shared with Doulab may be used to evolve our Services without obligation to the
               Client. Doulab will not publicly reference a Client&apos;s feedback without permission.
@@ -262,7 +321,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-confidentiality">
-            <h3>8. Confidentiality</h3>
+            <Heading as="h3" id="terms-confidentiality">
+              8. Confidentiality
+            </Heading>
             <p>
               Both parties agree to protect confidential information disclosed during an engagement and to use it only for delivering or
               receiving the Services. Confidentiality obligations do not apply to information that is public, already known without
@@ -271,7 +332,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-warranties">
-            <h3>9. Warranties &amp; Disclaimer</h3>
+            <Heading as="h3" id="terms-warranties">
+              9. Warranties &amp; Disclaimer
+            </Heading>
             <p>
               Doulab will deliver Services with professional care and skill consistent with agreed scopes. Except as expressly stated,
               the Services are provided &quot;as is&quot; without warranties of any kind. Doulab does not guarantee specific commercial
@@ -280,7 +343,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-liability">
-            <h3>10. Limitation of Liability</h3>
+            <Heading as="h3" id="terms-liability">
+              10. Limitation of Liability
+            </Heading>
             <p>
               To the maximum extent permitted by law, Doulab&apos;s aggregate liability arising from the Services is limited to the fees
               paid for the engagement giving rise to the claim. Doulab will not be liable for indirect, incidental, consequential,
@@ -289,7 +354,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-acceptance">
-            <h3>11. Deliverable Review &amp; Acceptance</h3>
+            <Heading as="h3" id="terms-acceptance">
+              11. Deliverable Review &amp; Acceptance
+            </Heading>
             <p>
               Deliverables are deemed accepted if no written feedback is received within five (5) business days of delivery. Requested
               changes within that timeframe will be addressed in a mutually agreed remediation plan. Additional revisions outside scope
@@ -298,7 +365,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-law">
-            <h3>12. Governing Law &amp; Dispute Resolution</h3>
+            <Heading as="h3" id="terms-law">
+              12. Governing Law &amp; Dispute Resolution
+            </Heading>
             <p>
               These Terms are governed by the laws of Switzerland. Disputes will first be escalated to designated representatives for
               good-faith resolution. If unresolved within thirty (30) days, disputes will be submitted to arbitration administered in
@@ -308,7 +377,9 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-changes">
-            <h3>13. Changes to These Terms</h3>
+            <Heading as="h3" id="terms-changes">
+              13. Changes to These Terms
+            </Heading>
             <p>
               Doulab may update these Terms from time to time. Material changes will be posted on this page with an updated revision
               date. Continued use of the Services after changes take effect constitutes acceptance of the updated Terms.
@@ -316,12 +387,24 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
 
           <section id="terms-contact">
-            <h3>14. Contact</h3>
+            <Heading as="h3" id="terms-contact">
+              14. Contact
+            </Heading>
             <p>
               Questions about these Terms can be sent to <a href="mailto:legal@doulab.net">legal@doulab.net</a> or via the contact form
               at <a href="https://doulab.net/contact">https://doulab.net/contact</a>.
             </p>
           </section>
+        </section>
+
+        <section id="contact" className={styles.section}>
+          <Heading as="h2" id="contact">
+            Contact
+          </Heading>
+          <p>
+            Email <a href="mailto:legal@doulab.net">legal@doulab.net</a> or write to Doulab GmbH, Alpenstrasse 15, 6300 Zug,
+            Switzerland for privacy inquiries, data access requests, or complaints.
+          </p>
         </section>
       </main>
     </Layout>

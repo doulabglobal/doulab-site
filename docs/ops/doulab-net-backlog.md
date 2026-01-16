@@ -122,7 +122,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - No more than five pages modified in the pass.
   - Inline styles reduced on touched pages.
   - CTA/Next steps blocks consistent.
-- Commits: TBD
+- Status: Completed (B4-P1)
+- Commits: d8dc48636704f123517b3fee15879dfa6b923609, 530c64cd8c9649169151526dacc0ed7ee6b934e8
 
 ### B4-P2
 - Description: Services subtree polish (`/services/*`).

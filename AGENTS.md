@@ -1,4 +1,4 @@
-# Doulab Website Ops — AGENTS
+# Doulab Website Ops - AGENTS
 
 This file defines workflow, guardrails, backlog tracking, and commit discipline for Doulab website operations in this repo.
 
@@ -7,7 +7,7 @@ This file defines workflow, guardrails, backlog tracking, and commit discipline 
 - STOP rules: unexpected files, broken links, encoding drift, or scope creep -> stop and report before proceeding.
 - No silent changes: always report what changed, files touched, and build/verify status.
 - Verifier integrity: never weaken, skip, or bypass verifiers.
-- Phased execution: follow Phase B1–B6 sequencing; do not jump phases without explicit approval.
+- Phased execution: follow Phase B1-B6 sequencing; do not jump phases without explicit approval.
 - Frozen surfaces: do not modify `clients.doulab.net` (it is frozen).
 
 ## Task acceptance criteria
@@ -18,7 +18,7 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - Header source of truth is `static/_headers` (build `_headers` files are artifacts only).
 - CSP changes should default to Report-Only unless a tested policy is confirmed safe; otherwise defer.
 
-## Backlog (tracked) — Phase B1
+## Backlog (tracked) - Phase B1
 Each item must link to commit hash(es) upon completion.
 
 ### P0
@@ -38,7 +38,7 @@ Each item must link to commit hash(es) upon completion.
 - Versioning rule: update `package.json` version after successful phase closeouts.
 
 ## Commit Log
-- 7cf8c4704e73986186dd56e3caf50b6769536bbc — chore(build): add build:cf + verify:build scripts for Cloudflare parity
+- 7cf8c4704e73986186dd56e3caf50b6769536bbc - chore(build): add build:cf + verify:build scripts for Cloudflare parity
 - Rule: every completed backlog item must be linked to commit hash(es).
 
 ## Versioning policy
@@ -52,8 +52,11 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: Hardening Pass 3 completed
-- Hardening Pass 3 commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, 9de859c0484128e9876910fb09bde32684235b9a
+- Current phase status: B4-P1 complete
+- B4-P1 pages: `src/pages/index.tsx`, `src/pages/services/index.tsx`, `src/pages/what-we-do/index.tsx`, `src/pages/about/index.tsx`
+- B4-P1 patterns: CSS modules for spacing, CTA alignment, and card footer layout; FinalCta reuse.
+- B4-P1 commits: d8dc48636704f123517b3fee15879dfa6b923609, 530c64cd8c9649169151526dacc0ed7ee6b934e8
+- Next pass: B4-P2 (services subtree)
 
 ## Next decision
 - Choose path:

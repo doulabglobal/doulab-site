@@ -93,7 +93,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - 404 includes `noindex,follow` and maintains helpful navigation.
   - Dependency prune proof recorded (no removals unless proven safe).
 - Status: Completed (Hardening Pass 3)
-- Commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, TBD (security + 404)
+- Commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, 9de859c0484128e9876910fb09bde32684235b9a
 
 ## P3
 

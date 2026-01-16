@@ -51,9 +51,9 @@ Each item must link to commit hash(es) upon completion.
   - `docs/ops/doulab-net-backlog.md` with completed items + commit hashes
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.8.0
-- Latest merged hardening commits: f6930624, fd90198a, 55c258b
+- Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
 - Current phase status: Hardening Pass 3 completed
-- Hardening Pass 3 commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, TBD (security + 404)
+- Hardening Pass 3 commits: 0275390eafe46a129ab1bb283c60ce11b3a5daf4, 9de859c0484128e9876910fb09bde32684235b9a
 
 ## Next decision
 - Choose path:

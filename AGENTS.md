@@ -67,7 +67,7 @@ Each item must link to commit hash(es) upon completion.
 - B5-P2 quick wins: add async decoding to below-the-fold case study diagrams.
 - B5-P2 commits: 6dcc3cdbaed533c673132c3d420a253dad271d09, 27568e4844d8060ab9d3f8828b866e4035bff321
 - B5-P3 improvements: async decode on below-the-fold images across case studies and marketing pages.
-- B5-P3 commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82
+- B5-P3 commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82, a06dadef26faf034c91d80b916b42fd27fad19f5 (notes correction / scope accuracy)
 - Next pass: B4-P4 (docs landing pages polish) or B5-P4 if defined
 
 ## Next decision

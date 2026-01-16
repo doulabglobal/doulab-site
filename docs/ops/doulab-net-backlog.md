@@ -208,4 +208,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Low-risk performance tweaks applied and documented with before/after signals.
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B5-P3)
-- Commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82
+- Commits: 63e416d3dd9ac4717dba2ab7a5c8e872f6aafdb0, cd423d1493d24c54a2d508d91b048270a3c13c82, a06dadef26faf034c91d80b916b42fd27fad19f5 (notes correction)

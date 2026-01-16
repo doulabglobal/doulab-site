@@ -8,7 +8,7 @@
 - Shared component: `src/components/case-studies/CaseStudyCards.tsx`
 
 ## Checklist
-- Inline style count reduced by at least 12 (target <= 20).
+- Inline style count reduced by at least 12 (target `<= 20`).
 - Single H1 per page remains intact.
 - Icon-only links/buttons have accessible labels (if present).
 - External links opening new tabs use `rel="noopener noreferrer"`.

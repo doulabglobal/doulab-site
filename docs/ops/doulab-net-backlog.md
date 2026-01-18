@@ -116,6 +116,16 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Update package scripts to remove/replace the missing script reference.
 - Commits: TBD
 
+### B-P3-03
+- Description: Hardening Pass 3 (headers + GDPR copy review).
+- Rationale: Reduce security/compliance risk before Phase B closeout.
+- Acceptance criteria:
+  - CSP enforced or documented; Referrer-Policy, Permissions-Policy, X-Content-Type-Options, HSTS, and clickjacking protection set.
+  - Privacy/analytics disclosure aligns with Cloudflare Web Analytics and booking flow; no new legal claims.
+  - `build:cf` and `verify:build` logs updated.
+- Status: Completed (B-P3)
+- Commits: e417e49, f81cdc3
+
 ## Phase B4 (UX polish, whole-site)
 
 ### B4-P1

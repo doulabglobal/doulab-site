@@ -6,7 +6,7 @@ import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import CardGrid from '../../components/CardGrid/CardGrid';
 import FinalCta from '../../components/FinalCta';
-import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import { CLARITYSCAN_BOOKING_URL } from '../../constants/urls';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -47,8 +47,8 @@ export default function ServicesPage(): ReactNode {
                     imageAlt="Our Services"
                     width={600}
                     height={400}
-                    primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
-                    secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
+                    primaryCta={{ to: CLARITYSCAN_BOOKING_URL, label: 'Book a ClarityScanr online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
+                    secondaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
                     ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
@@ -79,7 +79,7 @@ export default function ServicesPage(): ReactNode {
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
                                     Run a diagnostic →
                                 </Link>
-                                <Link href={CLARITYSCAN_CHECKOUT_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
+                                <Link href={CLARITYSCAN_BOOKING_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan via booking.doulab.net" target="_blank" rel="noopener noreferrer">
                                     Book online →
                                 </Link>
                             </div>
@@ -157,7 +157,7 @@ export default function ServicesPage(): ReactNode {
                     ariaLabelledbyId="services-cta-title"
                     title="Ready to make innovation repeatable?"
                     body="Start with a quick diagnostic or book a discovery call. We'll co-create the path from insight to results."
-                    primaryCta={{ to: '/services/clarityscan', label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic' }}
+                    primaryCta={{ to: CLARITYSCAN_BOOKING_URL, label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic', external: true }}
                     secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.final.contact' }}
                 />
             </main>

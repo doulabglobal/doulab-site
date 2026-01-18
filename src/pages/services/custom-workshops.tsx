@@ -65,7 +65,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           imageAlt="Custom innovation workshops"
           width={1600}
           height={900}
-          primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.contact' }}
+          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.discovery' }}
           secondaryCta={{ to: '/what-we-do', label: 'See what we do', dataCta: 'cta.services.workshops.hero.services' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM-P® gates."
         />
@@ -270,7 +270,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           ariaLabelledbyId="workshops-final-title"
           title="Ready to align and move?"
           body="Send us your goals and constraints. We’ll design the right workshop and get you moving fast."
-          primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.final.contact' }}
+          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.final.discovery' }}
           secondaryCta={{
             href: 'https://booking.doulab.net/hdworkshop',
             label: 'Book a half-day workshop',

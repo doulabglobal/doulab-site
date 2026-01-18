@@ -423,3 +423,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
 - Status: Done
 - Commits: a0f745a
+
+### C14
+- Description: Services booking links canonicalization.
+- Rationale: Ensure service CTAs route through booking.doulab.net canonical links.
+- Acceptance criteria:
+  - Primary service CTAs point to booking.doulab.net canonical routes.
+  - No booking-intent CTAs link directly to provider URLs.
+- Evidence: `docs/ops/booking-architecture.md`, `docs/ops/phase-c12-conversion-ux-spec.md`
+- Status: Done
+- Commits: TBD

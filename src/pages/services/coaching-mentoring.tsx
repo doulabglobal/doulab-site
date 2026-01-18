@@ -19,7 +19,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
-import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import { CLARITYSCAN_BOOKING_URL } from '../../constants/urls';
 import styles from '../b4-p2.module.css';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 
@@ -102,9 +102,9 @@ export default function CoachingMentoringPage(): ReactNode {
           width={1600}
           height={900}
           primaryCta={{
-            to: '/contact',
+            to: 'https://booking.doulab.net/discovery',
             label: 'Book an intro call',
-            dataCta: 'cta.services.coaching.hero.contact',
+            dataCta: 'cta.services.coaching.hero.discovery',
           }}
           secondaryCta={{
             to: '/services/clarityscan',
@@ -277,8 +277,8 @@ export default function CoachingMentoringPage(): ReactNode {
           ariaLabelledbyId="coaching-final-title"
           title="Ready to grow with guidance?"
           body="Tell us your goals and constraints. We’ll recommend the retainer that fits and start making progress fast."
-          primaryCta={{ to: '/contact', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.contact' }}
-          secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
+          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.discovery' }}
+          secondaryCta={{ href: CLARITYSCAN_BOOKING_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>

@@ -402,3 +402,14 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Evidence: `docs/ops/phase-c11-service-conversion-audit.md`
 - Status: Not started
 - Commits: TBD
+
+### C12
+- Description: Conversion UX spec + decision (default/fallback) and mailto replacement plan.
+- Rationale: Establish an implementation-ready conversion model with consistent booking-first entrypoints.
+- Acceptance criteria:
+  - Unified conversion spec documented with default and fallback flows.
+  - Mailto replacement plan defined for briefing and service CTAs.
+  - Success/confirmation pattern defined beyond ClarityScan.
+- Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
+- Status: Done
+- Commits: 46d5e21

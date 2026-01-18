@@ -9,6 +9,7 @@ This file defines workflow, guardrails, backlog tracking, and commit discipline 
 - Verifier integrity: never weaken, skip, or bypass verifiers.
 - Phased execution: follow Phase B1-B6 sequencing; do not jump phases without explicit approval.
 - Frozen surfaces: do not modify `clients.doulab.net` (it is frozen).
+- Governance mapping: when a task requires recording the commit hash in governance files, use two commits (implementation first, governance mapping second). Do not amend.
 
 ## Task acceptance criteria
 All CODEX tasks must include explicit acceptance criteria in the request or in the response plan.
@@ -108,9 +109,10 @@ Each item must link to commit hash(es) upon completion.
 - Consolidate global tokens & utilities into custom.css
 - Explicitly exclude component/page CSS modules
 
-### C4 — Accessibility Micro-Fixes (NOT STARTED)
+### C4 — Accessibility Micro-Fixes (DONE)
 - Contrast fixes (problem cards)
 - Non-color link affordances
+- Commit: 39bb2c2
 
 ### C5 — SEO Clarifications (NOT STARTED)
 - Decide on custom robots.txt directives

@@ -338,8 +338,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Contrast fixes applied to problem cards.
   - Non-color link affordances added where needed.
-- Status: Not started
-- Commits: TBD
+- Status: Done
+- Commits: 39bb2c2
 
 ### C5
 - Description: SEO clarifications.

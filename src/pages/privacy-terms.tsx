@@ -245,8 +245,8 @@ export default function PrivacyAndTerms(): ReactNode {
                 engagement.
               </li>
               <li>
-                <strong>Bookings</strong>: Self-service sessions scheduled through Stripe Checkout, Microsoft Bookings, or other online
-                scheduling tools made available by Doulab.
+                <strong>Bookings</strong>: Self-service sessions scheduled through Stripe Checkout or booking.doulab.net (which redirects
+                to Google Calendar appointment links), plus any other scheduling tools explicitly provided by Doulab.
               </li>
             </ul>
           </section>
@@ -403,7 +403,7 @@ export default function PrivacyAndTerms(): ReactNode {
           </Heading>
           <p>
             Email <a href="mailto:legal@doulab.net">legal@doulab.net</a> or write to Doulab, Mettlenstrasse 45, 8193 Eglisau, Switzerland
-            Switzerland for privacy inquiries, data access requests, or complaints.
+            for privacy inquiries, data access requests, or complaints.
           </p>
         </section>
       </main>

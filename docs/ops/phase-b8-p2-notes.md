@@ -19,3 +19,13 @@
 - `src/pages/case-studies/afp-siembra.tsx`
 - `src/pages/case-studies/fundapec.tsx`
 - `src/pages/case-studies/alpha-inversiones.tsx`
+
+## Implementation summary
+- Replaced the static diagram image section with two Mermaid diagrams on each target page.
+- Used the canonical system flow and capability progression patterns from B8-P1.
+
+## Pages updated
+- OGTIC / RedLab (reference pattern)
+- AFP Siembra
+- Fundapec
+- Alpha Inversiones

@@ -5,6 +5,8 @@ import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import Admonition from '@theme/Admonition';
+import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import styles from './afp-siembra.module.css';
 
@@ -269,23 +271,28 @@ export default function CaseAfpSiembra(): ReactNode {
           Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
         </p>
 
-        {/* Process (diagram) */}
-        <section className="section" id="process-diagram" aria-labelledby="process-diagram-title">
-          <h2 id="process-diagram-title">Process (diagram)</h2>
-          <div className={styles.centeredMedia}>
-            <picture>
-              <source srcSet="/img/diagrams/afp-siembra-process.avif" type="image/avif" />
-              <source srcSet="/img/diagrams/afp-siembra-process.webp" type="image/webp" />
-              <img loading="lazy"
-                src="/img/diagrams/afp-siembra-process.png"
-                alt="Process diagram for AFP Siembra"
-                width="1200"
-                height="720"
-                decoding="async"
-              />
-            </picture>
-            <p className="microcopy">Diagram: high‑level flow of context → work → outcomes.</p>
-          </div>
+        {/* Case study diagrams */}
+        <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
+          <h2 id="case-diagrams-title">Case diagrams</h2>
+          <Admonition type="tip" title="Diagram — System Flow">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart LR
+    A[Problem Context] --> B[Evidence / Signals]
+    B --> C[Intervention: Establish SILAB + Digital Launch]
+    C --> D[Enablers: Gate Reviews + Evidence Packs]
+    D --> E[Capability: Repeatable Product Delivery]
+    E --> F[Outcomes: Digital Onboarding + Alignment]
+`} />
+          </Admonition>
+          <Admonition type="tip" title="Diagram — Capability Progression">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart TB
+    A[Before: Ad-hoc Product Delivery]
+    B[MCF Workshops + Evidence Packs]
+    C[IMM-P Gate Reviews]
+    D[After: SILAB Delivery Cadence]
+`} />
+          </Admonition>
         </section>
 
         {/* Standardized Final CTA */}

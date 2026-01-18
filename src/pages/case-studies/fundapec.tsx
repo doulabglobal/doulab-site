@@ -5,6 +5,8 @@ import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import Admonition from '@theme/Admonition';
+import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import styles from './fundapec.module.css';
 
@@ -298,23 +300,28 @@ export default function CaseFundapec(): ReactNode {
           See more examples in <Link to="/case-studies">Case studies</Link>.
         </p>
 
-        {/* Process (diagram) */}
-        <section className="section" id="process-diagram" aria-labelledby="process-diagram-title">
-          <h2 id="process-diagram-title">Process (diagram)</h2>
-          <div className={styles.centeredMedia}>
-            <picture>
-              <source srcSet="/img/diagrams/fundapec-process.avif" type="image/avif" />
-              <source srcSet="/img/diagrams/fundapec-process.webp" type="image/webp" />
-              <img loading="lazy"
-                src="/img/diagrams/fundapec-process.png"
-                alt="Process diagram for FUNDAPEC"
-                width="1200"
-                height="720"
-                decoding="async"
-              />
-            </picture>
-            <p className="microcopy">Diagram: high‑level flow of context → work → outcomes.</p>
-          </div>
+        {/* Case study diagrams */}
+        <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
+          <h2 id="case-diagrams-title">Case diagrams</h2>
+          <Admonition type="tip" title="Diagram — System Flow">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart LR
+    A[Problem Context] --> B[Evidence / Signals]
+    B --> C[Intervention: Relaunch Comunidad Platform]
+    C --> D[Enablers: Governance + Decision Log]
+    D --> E[Capability: Engagement Engine]
+    E --> F[Outcomes: Validated Members + Clearer Decisions]
+`} />
+          </Admonition>
+          <Admonition type="tip" title="Diagram — Capability Progression">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart TB
+    A[Before: Legacy Registrations]
+    B[Validated Member Base]
+    C[Governed Engagement Cadence]
+    D[After: Sustainable Community Platform]
+`} />
+          </Admonition>
         </section>
 
         {/* Standardized Final CTA */}

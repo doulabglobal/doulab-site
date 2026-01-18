@@ -5,6 +5,8 @@ import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import Admonition from '@theme/Admonition';
+import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import styles from './ogtic-redlab.module.css';
 
@@ -273,23 +275,28 @@ export default function CaseOgticRedlab(): ReactNode {
           <Link to="/case-studies">Case studies</Link>.
         </p>
 
-        {/* Process (diagram) */}
-        <section className="section" id="process-diagram" aria-labelledby="process-diagram-title">
-          <h2 id="process-diagram-title">Process (diagram)</h2>
-          <div className={styles.centeredMedia}>
-            <picture>
-              <source srcSet="/img/diagrams/ogtic-redlab-process.avif" type="image/avif" />
-              <source srcSet="/img/diagrams/ogtic-redlab-process.webp" type="image/webp" />
-              <img loading="lazy"
-                src="/img/diagrams/ogtic-redlab-process.png"
-                alt="Process diagram for OGTIC RedLab"
-                width="1200"
-                height="720"
-                decoding="async"
-              />
-            </picture>
-            <p className="microcopy">Diagram: high‑level flow of context → work → outcomes.</p>
-          </div>
+        {/* Case study diagrams */}
+        <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
+          <h2 id="case-diagrams-title">Case diagrams</h2>
+          <Admonition type="tip" title="Diagram — System Flow">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart LR
+    A[Problem Context] --> B[Evidence / Signals]
+    B --> C[Intervention: Establish Cohort Program]
+    C --> D[Enablers: Governance + Playbooks]
+    D --> E[Capability: Repeatable Lab Delivery]
+    E --> F[Outcomes: Clearer Decisions + Reuse]
+`} />
+          </Admonition>
+          <Admonition type="tip" title="Diagram — Capability Progression">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart TB
+    A[Before: Isolated Labs]
+    B[Shared MCF Method]
+    C[IMM-P Gate Cadence]
+    D[After: Network Delivery]
+`} />
+          </Admonition>
         </section>
 
         {/* Standardized Final CTA */}

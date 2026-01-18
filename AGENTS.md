@@ -116,7 +116,7 @@ Each item must link to commit hash(es) upon completion.
 - Decide on custom robots.txt directives
 - Document intentional Lighthouse warnings if retained
 
-### C6 — CTA Card Pattern (NOT STARTED)
+### C6 — CTA Card Pattern (DONE)
 - Replace standalone CTA-style text blocks with a reusable card-based UI pattern
 - Applies sitewide (case studies, services, insights)
 - Canonical placement:
@@ -125,6 +125,15 @@ Each item must link to commit hash(es) upon completion.
 - Out of scope:
   - Visual redesign
   - Copy rewrites beyond structural adaptation
+- Commit: bf55ba4
+
+### C7 — Terminology normalization (IMM-P®) (DONE)
+- Replace IMM-Pr with IMM-P® across src/pages.
+- Commit: c7052ce
+
+### C8 — Case study back-link placement normalization (DONE)
+- Standardize top-of-page back link text and placement on case studies.
+- Commit: c7052ce
 
 ### Phase C Push Policy
 - No push until all Phase C items are complete

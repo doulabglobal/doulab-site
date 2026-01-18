@@ -357,5 +357,21 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - CTA card pattern documented for use after Results and before final CTA.
   - Applies sitewide (case studies, services, insights).
   - No visual redesign or copy rewrites beyond structural adaptation.
-- Status: Not started
-- Commits: TBD
+- Status: Done
+- Commits: bf55ba4
+
+### C7
+- Description: Terminology normalization (IMM-P®).
+- Rationale: Ensure consistent registered mark usage across pages.
+- Acceptance criteria:
+  - IMM-Pr replaced with IMM-P® in src/pages.
+- Status: Done
+- Commits: c7052ce
+
+### C8
+- Description: Case study back-link placement normalization.
+- Rationale: Standardize navigation placement and reduce mid-body link drift.
+- Acceptance criteria:
+  - Case studies include "← All case studies" near the top and only once.
+- Status: Done
+- Commits: c7052ce

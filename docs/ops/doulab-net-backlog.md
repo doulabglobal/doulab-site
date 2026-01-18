@@ -55,7 +55,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Plan documented (scope, order, and refactor guidelines).
   - Inline styles inventory updated with a burn-down list.
-- Commits: TBD
+- Status: Completed (B-P2-02)
+- Commits: f37ff61b9bb1b158875bd10e3d8c227a3dd1b2fa
 
 ### B-P2-03
 - Description: ES i18n manual plan (no Docusaurus scaffold).

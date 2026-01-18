@@ -238,7 +238,7 @@ export default function PrivacyAndTerms(): ReactNode {
             <ul>
               <li>
                 <strong>Client</strong>: Any organization or individual contracting Doulab for Services, including ClarityScan&reg;
-                diagnostics, IMM-Pr programs, or advisory engagements.
+                diagnostics, IMM-P® programs, or advisory engagements.
               </li>
               <li>
                 <strong>Deliverables</strong>: Reports, models, playbooks, or other outputs produced for the Client in connection with an

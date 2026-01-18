@@ -85,7 +85,7 @@ export default function CaseOgticRedlab(): ReactNode {
       <main>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className={`microcopy ${styles.breadcrumb}`}>
-          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">All case studies</Link>
+          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← All case studies</Link>
         </nav>
 
         {/* Two-column standardized hero */}
@@ -303,7 +303,7 @@ flowchart TB
             <article className="card" aria-labelledby="cta-related-title">
               <h3 id="cta-related-title">Related services</h3>
               <ul>
-                <li><Link to="/services/innovation-maturity">Programs, IMM-Pr</Link></li>
+                <li><Link to="/services/innovation-maturity">Programs, IMM-P®</Link></li>
                 <li><Link to="/services/clarityscan">Diagnostics, ClarityScanr</Link></li>
               </ul>
               <p>

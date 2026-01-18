@@ -82,6 +82,7 @@ Each item must link to commit hash(es) upon completion.
 - B-P2-02 commit: f37ff61b9bb1b158875bd10e3d8c227a3dd1b2fa
 - B-P2-03 commit: f3f42b3a2e9b38cf2b6a638edcd99681168be745
 - B-P3 commits: e417e49, f81cdc3
+- Lighthouse audit (2026-01-18): supporting evidence (non-blocking, informational post-B verification) — c10eca2
 - Next pass: Phase C1 implementation (awaiting instruction)
 
 ## Phase C — Information Architecture & Maintainability

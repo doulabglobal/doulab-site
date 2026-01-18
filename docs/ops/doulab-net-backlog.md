@@ -422,4 +422,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Booking architecture updated to reflect briefing route.
 - Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
 - Status: Done
-- Commits: TBD
+- Commits: a0f745a

@@ -1,7 +1,7 @@
 # Doulab.net Backlog (Phase B1)
 
 Phase B status: CLOSED (final commit hashes confirmed).
-Phase C status: C9/C10 complete; C3/C5 pending.
+Phase C status: C9/C10 complete; C3/C5/C11 pending.
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -392,3 +392,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - CTA cards have scoped visual prominence.
 - Status: Done
 - Commits: 53a7723
+
+### C11
+- Description: Service conversion workflow unification (analysis + implementation plan).
+- Rationale: Reduce mailto-based CTAs and normalize conversion flows across services.
+- Acceptance criteria:
+  - Current-state audit and target workflow options documented.
+  - Default and fallback workflow recommendations proposed.
+- Evidence: `docs/ops/phase-c11-service-conversion-audit.md`
+- Status: Not started
+- Commits: TBD

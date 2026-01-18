@@ -10,6 +10,7 @@ This file defines workflow, guardrails, backlog tracking, and commit discipline 
 - Phased execution: follow Phase B1-B6 sequencing; do not jump phases without explicit approval.
 - Frozen surfaces: do not modify `clients.doulab.net` (it is frozen).
 - Governance mapping: when a task requires recording the commit hash in governance files, use two commits (implementation first, governance mapping second). Do not amend.
+- Docs/ops manifest: `AGENTS.md` must list every file under `docs/ops/`; update the manifest whenever files are added or removed.
 
 ## Task acceptance criteria
 All CODEX tasks must include explicit acceptance criteria in the request or in the response plan.
@@ -85,6 +86,51 @@ Each item must link to commit hash(es) upon completion.
 - B-P3 commits: e417e49, f81cdc3
 - Lighthouse audit (2026-01-18): supporting evidence (non-blocking, informational post-B verification) — c10eca2
 - Next pass: next pending Phase C item (awaiting instruction)
+
+## Docs/ops manifest (authoritative)
+- docs/ops/404-spec.md
+- docs/ops/booking-architecture.md
+- docs/ops/booking-link-map.md
+- docs/ops/deps-prune-proof.md
+- docs/ops/doulab-net-backlog.md
+- docs/ops/gdpr-compliance.md
+- docs/ops/hardening-pass-3-plan.md
+- docs/ops/hardening-plan.md
+- docs/ops/performance-baseline.md
+- docs/ops/phase-b-p0-01-notes.md
+- docs/ops/phase-b-p2-02-notes.md
+- docs/ops/phase-b-p2-02-plan.md
+- docs/ops/phase-b-p2-03-notes.md
+- docs/ops/phase-b-p2-03-plan.md
+- docs/ops/phase-b-p3-notes.md
+- docs/ops/phase-b-p3-plan.md
+- docs/ops/phase-b1-site-reevaluation.md
+- docs/ops/phase-b2-plan.md
+- docs/ops/phase-b4-p1-notes.md
+- docs/ops/phase-b4-p2-notes.md
+- docs/ops/phase-b4-p3-2-notes.md
+- docs/ops/phase-b4-p3-2-plan.md
+- docs/ops/phase-b4-p3-3-notes.md
+- docs/ops/phase-b4-p3-legal-consolidation.md
+- docs/ops/phase-b4-p4-notes.md
+- docs/ops/phase-b4-ux-polish-plan.md
+- docs/ops/phase-b5-p1-baseline.md
+- docs/ops/phase-b5-p2-notes.md
+- docs/ops/phase-b5-p2-plan.md
+- docs/ops/phase-b5-p3-notes.md
+- docs/ops/phase-b5-p3-plan.md
+- docs/ops/phase-b6-closeout.md
+- docs/ops/phase-b7-p1-notes.md
+- docs/ops/phase-b7-p2-notes.md
+- docs/ops/phase-b7-p2-plan.md
+- docs/ops/phase-b7-plan.md
+- docs/ops/phase-b8-p1-diagram-system.md
+- docs/ops/phase-b8-p1-notes.md
+- docs/ops/phase-b8-p2-notes.md
+- docs/ops/phase-b8-p3-closeout.md
+- docs/ops/phase-c0-case-studies-ia-audit.md
+- docs/ops/phase-c11-service-conversion-audit.md
+- docs/ops/security-headers-review.md
 
 ## Phase C — Information Architecture & Maintainability
 Canonical backlog: `docs/ops/doulab-net-backlog.md`

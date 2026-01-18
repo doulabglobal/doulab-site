@@ -59,6 +59,25 @@
 
 .problemCard {
   border-left: 4px solid var(--dl-indigo);
+  color: var(--ifm-color-emphasis-900);
+}
+
+.problemCard p,
+.problemCard em,
+.problemCard strong {
+  color: inherit;
+}
+
+.problemCard a {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+  text-underline-offset: 2px;
+}
+
+.problemCard a:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
 }
 
 .buttonRow {

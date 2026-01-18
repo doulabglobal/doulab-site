@@ -1,5 +1,7 @@
 # Doulab.net Backlog (Phase B1)
 
+Phase B status: CLOSED (final commit hashes confirmed).
+
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
 ## P0

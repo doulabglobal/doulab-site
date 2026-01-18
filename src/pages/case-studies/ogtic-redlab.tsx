@@ -240,6 +240,9 @@ export default function CaseOgticRedlab(): ReactNode {
           <p className="microcopy">
             Tracked families, as of September 2025: decision latency, cycle time, adoption and satisfaction, and capability growth.
           </p>
+          <p className="microcopy">
+            See the case diagrams below for the system flow and capability progression.
+          </p>
         </section>
 
         {/* Why it mattered */}
@@ -252,28 +255,6 @@ export default function CaseOgticRedlab(): ReactNode {
             <li>Built a base to scale future cohorts and to embed innovation in public management.</li>
           </ul>
         </section>
-
-        {/* Guidance and related services */}
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Start small: Discovery call → ClarityScan → Gate 1 pilot.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          To speed things up: share your goals, timelines, constraints, and how you measure success today.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Planning a cohort or event? <Link to="/contact">Co host a session</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Exploring co-branded cohorts or MOUs? <Link to="/contact">Let’s outline options</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
-          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>. See more examples in{' '}
-          <Link to="/case-studies">Case studies</Link>.
-        </p>
 
         {/* Case study diagrams */}
         <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
@@ -298,6 +279,28 @@ flowchart TB
 `} />
           </Admonition>
         </section>
+
+        {/* Guidance and related services */}
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Start small: Discovery call → ClarityScan → Gate 1 pilot.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          To speed things up: share your goals, timelines, constraints, and how you measure success today.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Planning a cohort or event? <Link to="/contact">Co host a session</Link>.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Exploring co-branded cohorts or MOUs? <Link to="/contact">Let’s outline options</Link>.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
+          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>. See more examples in{' '}
+          <Link to="/case-studies">Case studies</Link>.
+        </p>
 
         {/* Standardized Final CTA */}
 

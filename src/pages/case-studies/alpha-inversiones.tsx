@@ -226,6 +226,9 @@ export default function CaseAlphaInversiones(): ReactNode {
           <p className="microcopy">
             Tracked families: decision latency, cycle time, adoption and conversion, and capability growth.
           </p>
+          <p className="microcopy">
+            See the case diagrams below for the system flow and capability progression.
+          </p>
         </section>
 
         {/* Why it mattered */}
@@ -237,24 +240,6 @@ export default function CaseAlphaInversiones(): ReactNode {
             <li>Improved customer experience by connecting strategy, data, and delivery into an integrated journey.</li>
           </ul>
         </section>
-
-        {/* Guidance and related services */}
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Start small: Discovery call → ClarityScan → Gate 1 pilot.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Helpful to share: goals, timelines, constraints, and how you measure success today.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
-          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          See more examples in <Link to="/case-studies">Case studies</Link>.
-        </p>
 
         {/* Case study diagrams */}
         <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
@@ -279,6 +264,24 @@ flowchart TB
 `} />
           </Admonition>
         </section>
+
+        {/* Guidance and related services */}
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Start small: Discovery call → ClarityScan → Gate 1 pilot.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Helpful to share: goals, timelines, constraints, and how you measure success today.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
+          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
+        </p>
+        <p className={`microcopy ${styles.microcopyCentered}`}>
+          See more examples in <Link to="/case-studies">Case studies</Link>.
+        </p>
 
         {/* Standardized Final CTA */}
 

@@ -263,5 +263,5 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - `docs/ops/phase-b8-p1-diagram-system.md` created with two canonical diagram types.
   - `docs/ops/phase-b8-p1-notes.md` created with scope and summary.
   - build:cf and verify:build executed with logs captured.
-- Status: In progress (B8-P1)
-- Commits: TBD
+- Status: Completed (B8-P1)
+- Commits: 5146519c30a053b51393a353bb1fb1fd7c848fa2

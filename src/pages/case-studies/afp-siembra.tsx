@@ -285,18 +285,30 @@ flowchart TB
               </div>
             </div>
           </div>
-          <p className={`microcopy ${styles.microcopyCentered}`}>
-            Prefer a briefing? <Link to="/contact" data-cta="cta.cases.briefing">Request a briefing</Link>.
-          </p>
         </section>
 
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Recommended path: Discovery call → ClarityScan → Gate 1 pilot.
-        </p>
-
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
-        </p>
+        {/* CTA briefing cards */}
+        <section className="section" aria-label="CTA briefing cards">
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="cta-briefing-title">
+              <h3 id="cta-briefing-title">Prefer a briefing?</h3>
+              <p>
+                Prefer a briefing? <Link to="/contact" data-cta="cta.cases.briefing">Request a briefing</Link>.
+              </p>
+            </article>
+            <article className="card" aria-labelledby="cta-path-title">
+              <h3 id="cta-path-title">Recommended path</h3>
+              <p>Recommended path: Discovery call  → ClarityScan  → Gate 1 pilot.</p>
+            </article>
+            <article className="card" aria-labelledby="cta-related-title">
+              <h3 id="cta-related-title">Related services</h3>
+              <ul>
+                <li><Link to="/services/innovation-maturity">Programs, IMM-Pr</Link></li>
+                <li><Link to="/services/clarityscan">Diagnostics, ClarityScanr</Link></li>
+              </ul>
+            </article>
+          </div>
+        </section>
 
         {/* Standardized Final CTA */}
 

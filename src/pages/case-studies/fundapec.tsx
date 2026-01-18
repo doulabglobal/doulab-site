@@ -306,26 +306,35 @@ flowchart TB
           </Admonition>
         </section>
 
-        {/* Guidance and related services */}
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Start small: Discovery call → ClarityScan → Gate 1 pilot.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          To speed things up: share your goals, timelines, constraints, and how you measure success today.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Planning an event or cohort? <Link to="/contact">Co host a session</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and{' '}
-          <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
-        </p>
-        <p className={`microcopy ${styles.microcopyCentered}`}>
-          See more examples in <Link to="/case-studies">Case studies</Link>.
-        </p>
+        {/* CTA briefing cards */}
+        <section className="section" aria-label="CTA briefing cards">
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="cta-briefing-title">
+              <h3 id="cta-briefing-title">Prefer a briefing?</h3>
+              <p>
+                Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
+              </p>
+              <p>To speed things up: share your goals, timelines, constraints, and how you measure success today.</p>
+              <p>
+                Planning an event or cohort? <Link to="/contact">Co host a session</Link>.
+              </p>
+            </article>
+            <article className="card" aria-labelledby="cta-path-title">
+              <h3 id="cta-path-title">Recommended path</h3>
+              <p>Start small: Discovery call  → ClarityScan  → Gate 1 pilot.</p>
+            </article>
+            <article className="card" aria-labelledby="cta-related-title">
+              <h3 id="cta-related-title">Related services</h3>
+              <ul>
+                <li><Link to="/services/innovation-maturity">Programs, IMM-Pr</Link></li>
+                <li><Link to="/services/clarityscan">Diagnostics, ClarityScanr</Link></li>
+              </ul>
+              <p>
+                See more examples in <Link to="/case-studies">Case studies</Link>.
+              </p>
+            </article>
+          </div>
+        </section>
 
         {/* Standardized Final CTA */}
 

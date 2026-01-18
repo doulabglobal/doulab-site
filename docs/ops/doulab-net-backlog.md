@@ -1,6 +1,7 @@
 # Doulab.net Backlog (Phase B1)
 
 Phase B status: CLOSED (final commit hashes confirmed).
+Phase C status: C1 in progress (governance tracking started).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -299,3 +300,52 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Closeout recorded in `docs/ops/phase-b8-p3-closeout.md`.
 - Status: Done (Covered by B8-P2; no remaining scope)
 - Commits: 309fbb3aa4d32a3184f64b10bd2284d29d255b98, 7c56d5a5f3d9d8f696f6e6d6a1c7c1372b4a6e5e
+
+## Phase C — Information Architecture & Maintainability
+
+### C1
+- Description: Case studies IA implementation (reorder sections, diagram placement, missing sections).
+- Rationale: Align case study structure to an executive-first narrative and reduce floating diagrams.
+- Acceptance criteria:
+  - Case studies follow the canonical order (Hero -> Snapshot -> Context -> Problem -> Approach -> Delivery -> Results -> Diagrams -> CTA).
+  - Diagrams are referenced in narrative and appear after Results by default.
+  - Missing sections flagged in Phase C0 audit are added.
+- Evidence: `docs/ops/phase-c0-case-studies-ia-audit.md`
+- Status: In progress
+- Commits: TBD
+
+### C2
+- Description: Anchor & in-page navigation normalization.
+- Rationale: Prevent broken deep links and improve navigability.
+- Acceptance criteria:
+  - Heading IDs align with in-page links.
+  - Anchor usage normalized across pages.
+- Status: Not started
+- Commits: TBD
+
+### C3
+- Description: CSS consolidation (safe path only).
+- Rationale: Reduce styling drift while preserving component encapsulation.
+- Acceptance criteria:
+  - Global tokens/utilities consolidated into `custom.css`.
+  - Component/page CSS modules remain untouched.
+- Status: Not started
+- Commits: TBD
+
+### C4
+- Description: Accessibility micro-fixes.
+- Rationale: Address high-signal a11y gaps with low risk changes.
+- Acceptance criteria:
+  - Contrast fixes applied to problem cards.
+  - Non-color link affordances added where needed.
+- Status: Not started
+- Commits: TBD
+
+### C5
+- Description: SEO clarifications.
+- Rationale: Remove ambiguity around intentional SEO decisions.
+- Acceptance criteria:
+  - Robots directives are explicit.
+  - Known Lighthouse warnings are documented if retained.
+- Status: Not started
+- Commits: TBD

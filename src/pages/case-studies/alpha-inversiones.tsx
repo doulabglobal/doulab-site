@@ -273,7 +273,7 @@ flowchart TB
               <p>Prefer a briefing for your team or partners?</p>
               <p>Helpful to share: goals, timelines, constraints, and how you measure success today.</p>
               <div className="ctaCardButtons">
-                <Link to="/contact" className="buttonPrimary">Request a briefing</Link>
+                <Link to="https://booking.doulab.net/briefing" className="buttonPrimary">Request a briefing</Link>
               </div>
             </article>
             <article className="card" aria-labelledby="cta-path-title">

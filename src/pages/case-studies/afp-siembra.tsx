@@ -294,7 +294,7 @@ flowchart TB
               <h3 id="cta-briefing-title">Prefer a briefing?</h3>
               <p>Prefer a briefing?</p>
               <div className="ctaCardButtons">
-                <Link to="/contact" className="buttonPrimary" data-cta="cta.cases.briefing">Request a briefing</Link>
+                <Link to="https://booking.doulab.net/briefing" className="buttonPrimary" data-cta="cta.cases.briefing">Request a briefing</Link>
               </div>
             </article>
             <article className="card" aria-labelledby="cta-path-title">

@@ -104,7 +104,7 @@ export default function VigiaFuturaPage() {
           imageAlt="Vigía Futura, foresight observatory"
           width={1600}
           height={900}
-          primaryCta={{ to: '/contact', label: 'Book a briefing', dataCta: 'cta.vigia.hero.contact', ariaLabel: 'Book a briefing' }}
+          primaryCta={{ to: 'https://booking.doulab.net/briefing', label: 'Book a briefing', dataCta: 'cta.vigia.hero.contact', ariaLabel: 'Book a briefing' }}
           secondaryCta={{ to: '#radar', label: 'Explore the radar', dataCta: 'cta.vigia.hero.radar', ariaLabel: 'Jump to radar' }}
           ctaNote="Privacy first. No tracking pixels."
           id="vf-hero"
@@ -233,7 +233,7 @@ export default function VigiaFuturaPage() {
           </div>
 
           <div className={`heroCtas ${styles.centeredCtas}`}>
-            <Link className="buttonPrimary" to="/contact" data-cta="cta.vigia.mid.briefing">
+            <Link className="buttonPrimary" to="https://booking.doulab.net/briefing" data-cta="cta.vigia.mid.briefing">
               Request a briefing
             </Link>
             <Link className="buttonSecondary" to="/services/custom-workshops" data-cta="cta.vigia.mid.workshops">
@@ -348,7 +348,7 @@ export default function VigiaFuturaPage() {
           ariaLabelledbyId="vf-cta-title"
           title="Ready to build future ready capacity?"
           body="Book a briefing or start with a workshop. We will meet you where you are and co-create a path forward. Privacy first, no tracking pixels."
-          primaryCta={{ to: '/contact', label: 'Book a briefing', dataCta: 'cta.vigia.final.contact' }}
+          primaryCta={{ to: 'https://booking.doulab.net/briefing', label: 'Book a briefing', dataCta: 'cta.vigia.final.contact' }}
           secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.vigia.final.book_clarityscan_booking', newTab: true }}
         />
       </main>

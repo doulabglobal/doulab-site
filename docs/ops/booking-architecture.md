@@ -14,6 +14,7 @@ Provide a provider-agnostic booking layer so site CTAs never link directly to ve
 - https://booking.doulab.net/advisory
 - https://booking.doulab.net/hdworkshop
 - https://booking.doulab.net/fdworkshop
+- https://booking.doulab.net/briefing
 
 ## Redirect behavior
 - Default: 302 redirects while routes stabilize.

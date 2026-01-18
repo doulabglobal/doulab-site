@@ -315,7 +315,7 @@ flowchart TB
               <p>To speed things up: share your goals, timelines, constraints, and how you measure success today.</p>
               <p>Planning an event or cohort?</p>
               <div className="ctaCardButtons">
-                <Link to="/contact" className="buttonPrimary">Request a briefing</Link>
+                <Link to="https://booking.doulab.net/briefing" className="buttonPrimary">Request a briefing</Link>
                 <Link to="/contact" className="buttonSecondary">Co host a session</Link>
               </div>
             </article>

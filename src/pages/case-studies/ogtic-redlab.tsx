@@ -290,7 +290,7 @@ flowchart TB
               <p>Planning a cohort or event?</p>
               <p>Exploring co-branded cohorts or MOUs?</p>
               <div className="ctaCardButtons">
-                <Link to="/contact" className="buttonPrimary">Request a briefing</Link>
+                <Link to="https://booking.doulab.net/briefing" className="buttonPrimary">Request a briefing</Link>
                 <Link to="/contact" className="buttonSecondary">Co host a session</Link>
                 <Link to="/contact" className="buttonSecondary">Let's outline options</Link>
               </div>

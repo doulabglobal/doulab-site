@@ -413,3 +413,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
 - Status: Done
 - Commits: 46d5e21
+
+### C13
+- Description: Replace mailto conversion CTAs with booking /briefing (Phase 1).
+- Rationale: Remove mailto as a conversion endpoint and standardize briefing CTAs.
+- Acceptance criteria:
+  - "Request a briefing" CTAs point to booking.doulab.net/briefing.
+  - Booking architecture updated to reflect briefing route.
+- Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
+- Status: Done
+- Commits: TBD

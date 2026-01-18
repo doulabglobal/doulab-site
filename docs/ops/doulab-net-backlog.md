@@ -275,3 +275,12 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B8-P2)
 - Commits: bbb57f62051fe4f2b27f1aa8dba8782b44e047fb, 309fbb3aa4d32a3184f64b10bd2284d29d255b98
+
+### B8-P3
+- Description: Remaining case study diagrams (AFP Siembra, Fundapec).
+- Rationale: Close out remaining scope if any.
+- Acceptance criteria:
+  - No additional diagrams required; scope already satisfied by B8-P2.
+  - Closeout recorded in `docs/ops/phase-b8-p3-closeout.md`.
+- Status: Done (Covered by B8-P2; no remaining scope)
+- Commits: 309fbb3aa4d32a3184f64b10bd2284d29d255b98, 7c56d5a5f3d9d8f696f6e6d6a1c7c1372b4a6e5e

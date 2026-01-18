@@ -64,7 +64,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Manual i18n structure and routing conventions defined.
   - No Docusaurus scaffold command used.
-- Commits: TBD
+- Status: Completed (B-P2-03)
+- Commits: f3f42b3a2e9b38cf2b6a638edcd99681168be745
 
 ### B-P2-04
 - Description: Pass 1 UI primitives (PageHeader + CardGrid) and targeted inline style removal.

@@ -443,7 +443,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Legal/privacy mailto links remain intact.
 - Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
 - Status: Done
-- Commits: TBD
+- Commits: 6173b30
 
 ### C16
 - Description: Restore ClarityScan® paid-first Stripe conversion flow.
@@ -453,4 +453,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Booking step remains post-payment (success page -> scheduling).
 - Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`, `docs/ops/booking-architecture.md`
 - Status: Done
-- Commits: TBD
+- Commits: 6173b30

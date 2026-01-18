@@ -215,6 +215,9 @@ export default function CaseAfpSiembra(): ReactNode {
           <p className="microcopy">
             Tracked metrics: decision latency, cycle time, onboarding conversion, and capability growth.
           </p>
+          <p className="microcopy">
+            See the case diagrams below for the system flow and capability progression.
+          </p>
         </section>
 
         <section className="section" aria-labelledby="why-title">
@@ -224,6 +227,30 @@ export default function CaseAfpSiembra(): ReactNode {
             <li>Reduced decision friction through gate reviews, owners, and evidence packs.</li>
             <li>Built trust and visibility through a public launch and ongoing cadence.</li>
           </ul>
+        </section>
+
+        {/* Case study diagrams */}
+        <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
+          <h2 id="case-diagrams-title">Case diagrams</h2>
+          <Admonition type="tip" title="Diagram — System Flow">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart LR
+    A[Problem Context] --> B[Evidence / Signals]
+    B --> C[Intervention: Establish SILAB + Digital Launch]
+    C --> D[Enablers: Gate Reviews + Evidence Packs]
+    D --> E[Capability: Repeatable Product Delivery]
+    E --> F[Outcomes: Digital Onboarding + Alignment]
+`} />
+          </Admonition>
+          <Admonition type="tip" title="Diagram — Capability Progression">
+            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+flowchart TB
+    A[Before: Ad-hoc Product Delivery]
+    B[MCF Workshops + Evidence Packs]
+    C[IMM-P Gate Reviews]
+    D[After: SILAB Delivery Cadence]
+`} />
+          </Admonition>
         </section>
 
         <section className="section" aria-labelledby="videos-title">
@@ -270,30 +297,6 @@ export default function CaseAfpSiembra(): ReactNode {
         <p className={`microcopy ${styles.microcopyCentered}`}>
           Related services: <Link to="/services/innovation-maturity">Programs, IMM-P®</Link> and <Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link>.
         </p>
-
-        {/* Case study diagrams */}
-        <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
-          <h2 id="case-diagrams-title">Case diagrams</h2>
-          <Admonition type="tip" title="Diagram — System Flow">
-            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
-flowchart LR
-    A[Problem Context] --> B[Evidence / Signals]
-    B --> C[Intervention: Establish SILAB + Digital Launch]
-    C --> D[Enablers: Gate Reviews + Evidence Packs]
-    D --> E[Capability: Repeatable Product Delivery]
-    E --> F[Outcomes: Digital Onboarding + Alignment]
-`} />
-          </Admonition>
-          <Admonition type="tip" title="Diagram — Capability Progression">
-            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
-flowchart TB
-    A[Before: Ad-hoc Product Delivery]
-    B[MCF Workshops + Evidence Packs]
-    C[IMM-P Gate Reviews]
-    D[After: SILAB Delivery Cadence]
-`} />
-          </Admonition>
-        </section>
 
         {/* Standardized Final CTA */}
 

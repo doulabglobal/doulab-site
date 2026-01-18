@@ -115,6 +115,16 @@ Each item must link to commit hash(es) upon completion.
 - Decide on custom robots.txt directives
 - Document intentional Lighthouse warnings if retained
 
+### C6 — CTA Card Pattern (NOT STARTED)
+- Replace standalone CTA-style text blocks with a reusable card-based UI pattern
+- Applies sitewide (case studies, services, insights)
+- Canonical placement:
+  - After Results
+  - Before final CTA
+- Out of scope:
+  - Visual redesign
+  - Copy rewrites beyond structural adaptation
+
 ### Phase C Push Policy
 - No push until all Phase C items are complete
 - Single consolidated push at Phase C closeout

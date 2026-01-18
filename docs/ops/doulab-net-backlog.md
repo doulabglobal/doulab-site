@@ -349,3 +349,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Known Lighthouse warnings are documented if retained.
 - Status: Not started
 - Commits: TBD
+
+### C6
+- Description: CTA card pattern.
+- Rationale: Replace standalone CTA-style text blocks with a reusable card-based UI pattern.
+- Acceptance criteria:
+  - CTA card pattern documented for use after Results and before final CTA.
+  - Applies sitewide (case studies, services, insights).
+  - No visual redesign or copy rewrites beyond structural adaptation.
+- Status: Not started
+- Commits: TBD

@@ -253,3 +253,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B7-P2)
 - Commits: 14c7111581ade04f2fbef2b48c793444c0905ccf, 4e88916f1c47d6bf1db31014df43442274fa5bd9
+
+## Phase B8 (Diagram system)
+
+### B8-P1
+- Description: Define canonical Mermaid diagram system and templates for case studies (docs-only).
+- Rationale: Provide a consistent, diff-friendly diagram grammar before per-case diagrams.
+- Acceptance criteria:
+  - `docs/ops/phase-b8-p1-diagram-system.md` created with two canonical diagram types.
+  - `docs/ops/phase-b8-p1-notes.md` created with scope and summary.
+  - build:cf and verify:build executed with logs captured.
+- Status: In progress (B8-P1)
+- Commits: TBD

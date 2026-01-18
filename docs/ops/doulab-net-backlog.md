@@ -242,3 +242,14 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B7-P1)
 - Commits: 676ca32ac51ed0d7876b225c05b79ef9f705c24f, cdaab4a5e05f94c48b9eed9b18d54819b0dfdfe7
+
+### B7-P2
+- Description: Image loading/decoding consistency (lazy-loading + eager exceptions).
+- Rationale: Reduce render-blocking cost and standardize image attributes without layout changes.
+- Acceptance criteria:
+  - `docs/ops/phase-b7-p2-plan.md` and `docs/ops/phase-b7-p2-notes.md` created.
+- Missing `loading="lazy"` count reduced to 0 for non-hero images.
+- Eager/LCP exceptions documented (no more than two).
+  - build:cf and verify:build executed with logs captured.
+- Status: Completed (B7-P2)
+- Commits: 14c7111581ade04f2fbef2b48c793444c0905ccf, 4e88916f1c47d6bf1db31014df43442274fa5bd9

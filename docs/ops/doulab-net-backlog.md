@@ -10,7 +10,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - `/markdown-page` is removed from production routes or explicitly gated behind a non-public mechanism.
   - Routes audit reflects the change.
-- Commits: TBD
+- Status: Completed (B-P0-01)
+- Commits: ded5a80ee8600205f512abef40decbd50d7d8169, f0a8a20f4a5a085eacdba15202bbccaf1e0f0751
 
 ### B-P0-02
 - Description: Fix placeholder booking link.

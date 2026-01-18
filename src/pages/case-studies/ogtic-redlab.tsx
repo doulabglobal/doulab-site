@@ -103,7 +103,6 @@ export default function CaseOgticRedlab(): ReactNode {
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
-          eager
         />
 
         {/* At a glance */}
@@ -281,12 +280,11 @@ export default function CaseOgticRedlab(): ReactNode {
             <picture>
               <source srcSet="/img/diagrams/ogtic-redlab-process.avif" type="image/avif" />
               <source srcSet="/img/diagrams/ogtic-redlab-process.webp" type="image/webp" />
-              <img
+              <img loading="lazy"
                 src="/img/diagrams/ogtic-redlab-process.png"
                 alt="Process diagram for OGTIC RedLab"
                 width="1200"
                 height="720"
-                loading="lazy"
                 decoding="async"
               />
             </picture>

@@ -477,12 +477,11 @@ function ResearchResourcesSection() {
       <picture>
         <source srcSet="/img/mcf-card.avif" type="image/avif" />
         <source srcSet="/img/mcf-card.webp" type="image/webp" />
-        <img
+        <img loading="lazy"
           src="/img/mcf-card.jpg"
           alt="MicroCanvas Framework v2.1, modular canvases for innovation."
           width={1200}
           height={720}
-          loading="lazy"
           decoding="async"
           className={styles.roundedMedia}
         />
@@ -545,12 +544,11 @@ function ResearchResourcesSection() {
             latestBlog.map((post) => (
               <div key={post.href} className="card">
                 {post.image && (
-                  <img
+                  <img loading="lazy"
                     src={post.image}
                     alt={`Blog, ${post.title}`}
                     width={1200}
                     height={630}
-                    loading="lazy"
                     decoding="async"
                     className={styles.roundedMedia}
                   />
@@ -718,6 +716,7 @@ export default function Home(): ReactNode {
         }}
         secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.hero.book_call' }}
         ctaNote="Get your baseline in 15 to 20 minutes."
+        eager
       />
 
       <main>

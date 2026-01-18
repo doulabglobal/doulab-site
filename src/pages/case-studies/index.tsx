@@ -86,7 +86,6 @@ export default function CaseStudies(): ReactNode {
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
-          eager
         />
 
         {/* Outcome focus line under the hero */}

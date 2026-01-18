@@ -109,7 +109,6 @@ export default function VigiaFuturaPage() {
           ctaNote="Privacy first. No tracking pixels."
           id="vf-hero"
           ariaLabelledbyId="vf-hero-title"
-          eager
         />
 
         {/* In-page subnav (centered, same width as content) */}

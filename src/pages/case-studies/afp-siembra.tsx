@@ -123,7 +123,6 @@ export default function CaseAfpSiembra(): ReactNode {
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="afp-siembra-hero"
           ariaLabelledbyId="afp-siembra-hero-title"
-          eager
         />
 
         {/* At a glance */}
@@ -277,12 +276,11 @@ export default function CaseAfpSiembra(): ReactNode {
             <picture>
               <source srcSet="/img/diagrams/afp-siembra-process.avif" type="image/avif" />
               <source srcSet="/img/diagrams/afp-siembra-process.webp" type="image/webp" />
-              <img
+              <img loading="lazy"
                 src="/img/diagrams/afp-siembra-process.png"
                 alt="Process diagram for AFP Siembra"
                 width="1200"
                 height="720"
-                loading="lazy"
                 decoding="async"
               />
             </picture>

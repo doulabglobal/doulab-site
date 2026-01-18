@@ -138,7 +138,6 @@ export default function AboutPage(): ReactNode {
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="about-hero"
           ariaLabelledbyId="about-hero-title"
-          eager
         />
 
         {/* Proof + outcomes microcopy under hero */}

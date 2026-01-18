@@ -23,12 +23,11 @@ function Card({ cs }: { cs: CaseStudy }) {
       <picture>
         <source srcSet={`${cs.imageBase}.avif`} type="image/avif" />
         <source srcSet={`${cs.imageBase}.webp`} type="image/webp" />
-        <img
+        <img loading="lazy"
           src={`${cs.imageBase}.jpg`}
           alt={cs.imageAlt}
           width={1200}
           height={720}
-          loading="lazy"
           decoding="async"
           className={styles.cardImage}
         />

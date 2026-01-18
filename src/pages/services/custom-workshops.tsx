@@ -68,7 +68,6 @@ export default function CustomWorkshopsPage(): ReactNode {
           primaryCta={{ to: '/contact', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.contact' }}
           secondaryCta={{ to: '/what-we-do', label: 'See what we do', dataCta: 'cta.services.workshops.hero.services' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM-P® gates."
-          eager
         />
 
         {/* Who is it for? (standardized audience tiles) */}

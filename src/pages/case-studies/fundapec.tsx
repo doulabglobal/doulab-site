@@ -102,7 +102,6 @@ export default function CaseFundapec(): ReactNode {
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
-          eager
         />
 
         {/* At a glance */}
@@ -306,12 +305,11 @@ export default function CaseFundapec(): ReactNode {
             <picture>
               <source srcSet="/img/diagrams/fundapec-process.avif" type="image/avif" />
               <source srcSet="/img/diagrams/fundapec-process.webp" type="image/webp" />
-              <img
+              <img loading="lazy"
                 src="/img/diagrams/fundapec-process.png"
                 alt="Process diagram for FUNDAPEC"
                 width="1200"
                 height="720"
-                loading="lazy"
                 decoding="async"
               />
             </picture>

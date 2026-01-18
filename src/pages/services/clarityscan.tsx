@@ -77,7 +77,6 @@ export default function ClarityScanPage(): ReactNode {
           }}
           secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
-          eager
         />
 
         {/* Who is it for? */}

@@ -100,7 +100,6 @@ export default function WorkWithUsPage(): JSX.Element {
                     ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
                     id="wwu-hero"
                     ariaLabelledbyId="wwu-hero-title"
-                    eager
                 />
                 {/* Hero */}
                 

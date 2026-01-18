@@ -112,7 +112,6 @@ export default function CoachingMentoringPage(): ReactNode {
             dataCta: 'cta.services.coaching.hero.clarityscan',
           }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
-          eager
         />
 
         {/* Who is it for? (standardized audience tiles) */}

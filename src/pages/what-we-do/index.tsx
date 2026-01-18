@@ -120,7 +120,6 @@ export default function WhatWeDo(): ReactNode {
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
           id="whatwedo-hero"
           ariaLabelledbyId="whatwedo-hero-title"
-          eager
         />
 
         {/* In-page subnav (match Insights/Vigía style) */}
@@ -344,7 +343,6 @@ export default function WhatWeDo(): ReactNode {
     </Layout>
   );
 }
-
 
 
 

@@ -38,7 +38,7 @@ type HeroProps = {
     id?: string;
     ariaLabelledbyId?: string;
 
-    /** Control eager loading (default true for hero/LCP) */
+    /** Control eager loading (default false; opt-in for true LCP heroes) */
     eager?: boolean;
 };
 
@@ -56,7 +56,7 @@ export default function Hero({
     ctaNote,
     id = 'hero',
     ariaLabelledbyId = 'page-hero-title',
-    eager = true,
+    eager = false,
 }: HeroProps) {
     const jpg = `${imageBase}.jpg`;
     const webp = `${imageBase}.webp`;
@@ -66,10 +66,9 @@ export default function Hero({
         <picture>
             <source srcSet={avif} type="image/avif" />
             <source srcSet={webp} type="image/webp" />
-                <img
+                <img loading={eager ? 'eager' : 'lazy'}
                     src={jpg}
                     alt={imageAlt}
-                    loading={eager ? 'eager' : 'lazy'}
                     fetchPriority={eager ? 'high' as const : undefined}
                     decoding="async"
                     width={width}

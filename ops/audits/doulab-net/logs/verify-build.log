@@ -22,7 +22,7 @@
 [WARNING] Cannot infer the update date for some files, as they are not tracked by git.
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 4.14s
-[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 4.36s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 4.77s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 5.52s
 [SUCCESS] Generated static files in "build".
 [INFO] Use `npm run serve` command to test your build locally.

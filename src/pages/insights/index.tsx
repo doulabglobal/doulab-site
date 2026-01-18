@@ -221,7 +221,6 @@ export default function Insights(): ReactNode {
           ctaNote="Get deeper context before you decide. ClarityScan is available below when you are ready."
           id="insights-hero"
           ariaLabelledbyId="insights-hero-title"
-          eager
         />
 
         {/* In-page subnav (match Vigía Futura style) */}
@@ -246,12 +245,11 @@ export default function Insights(): ReactNode {
               <picture>
                 <source srcSet="/img/mcf-card.avif" type="image/avif" />
                 <source srcSet="/img/mcf-card.webp" type="image/webp" />
-                <img
+                <img loading="lazy"
                   src="/img/mcf-card.jpg"
                   alt="MicroCanvas Framework v2.1, open-source canvases"
                   width={1200}
                   height={720}
-                  loading="lazy"
                   decoding="async"
                   className={`${styles.roundedMedia} ${styles.roundedMediaTight}`}
                 />

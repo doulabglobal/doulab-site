@@ -90,7 +90,6 @@ export default function Contact(): ReactNode {
           ctaNote="No prep required. We confirm a time and send a brief follow up."
           id="contact-hero"
           ariaLabelledbyId="contact-hero-title"
-          eager
         />
 
         {/* Contact options */}

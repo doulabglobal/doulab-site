@@ -58,13 +58,11 @@ export default function DiagnosticsPage() {
                             <picture>
                                 <source srcSet="/img/diagnostics-hero.avif" type="image/avif" />
                                 <source srcSet="/img/diagnostics-hero.webp" type="image/webp" />
-                                <img
+                                <img loading="lazy"
                                     src="/img/diagnostics-hero.png"
                                     alt="Diagnostics - evidence-based innovation and foresight scans"
                                     className="heroImage"
-                                    loading="eager"
                                     decoding="async"
-                                    fetchPriority="high"
                                     width="600"
                                     height="400"
                                 />

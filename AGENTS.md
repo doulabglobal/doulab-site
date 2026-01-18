@@ -77,6 +77,7 @@ Each item must link to commit hash(es) upon completion.
 - B7-P2 commits: 14c7111581ade04f2fbef2b48c793444c0905ccf, 4e88916f1c47d6bf1db31014df43442274fa5bd9
 - B8-P1 commit: 5146519c30a053b51393a353bb1fb1fd7c848fa2
 - B8-P2 commits: bbb57f62051fe4f2b27f1aa8dba8782b44e047fb, 309fbb3aa4d32a3184f64b10bd2284d29d255b98
+- B8-P3 closeout: 5c919e0d0d7a47f1f29ff02d0f1571d6b7f93c5d (N/A; covered by B8-P2)
 - Next pass: next approved B8 workstream
 
 ## Next decision

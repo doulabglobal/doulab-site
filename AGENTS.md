@@ -53,7 +53,7 @@ Each item must link to commit hash(es) upon completion.
   - `AGENTS.md` with current phase status and any new guardrails/clarifications
 - Current version: v0.9.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
-- Current phase status: Phase C1 IN PROGRESS
+- Current phase status: Phase C IN PROGRESS
 - B4-P3.1 pages: `src/pages/privacy-terms.tsx`, `src/pages/terms-and-conditions.tsx`
 - B4-P3.1 patterns: Legal layout module, forward page for terms, explicit heading anchors on canonical privacy page.
 - B4-P3.1 commits: b61d5c9a94edb64f5f40aefbfdc030990a1562a2, 63fcd20c57e092a1590ce8682712223a76a342b3, 8684817966320351e92fe86aaf6b69437706052a, 503a34fd40683d1000d725ea696fcc812fe3a236
@@ -84,11 +84,12 @@ Each item must link to commit hash(es) upon completion.
 - B-P2-03 commit: f3f42b3a2e9b38cf2b6a638edcd99681168be745
 - B-P3 commits: e417e49, f81cdc3
 - Lighthouse audit (2026-01-18): supporting evidence (non-blocking, informational post-B verification) — c10eca2
-- Next pass: Phase C1 implementation (awaiting instruction)
+- Next pass: next pending Phase C item (awaiting instruction)
 
 ## Phase C — Information Architecture & Maintainability
+Canonical backlog: `docs/ops/doulab-net-backlog.md`
 
-### C1 — Case Studies IA Implementation (IN PROGRESS after this commit)
+### C1 — Case Studies IA Implementation (DONE)
 - Reorder case study sections per canonical structure:
   Hero → Snapshot → Context → Problem → Approach → Delivery → Results → Diagrams → CTA
 - Ensure diagrams:
@@ -99,11 +100,13 @@ Each item must link to commit hash(es) upon completion.
   - src/pages/case-studies/**
 - Evidence:
   - docs/ops/phase-c0-case-studies-ia-audit.md
+- Commits: afdebb4, 21c0bb0, 17cbaa9, 4382b81
 
-### C2 — Anchor & In-Page Navigation Normalization (NOT STARTED)
+### C2 — Anchor & In-Page Navigation Normalization (DONE)
 - Normalize anchor usage across pages
 - Align deep links with heading IDs
 - Optional anchor policy documentation
+- Commit: 78fe9c9
 
 ### C3 — CSS Consolidation (Safe Path Only) (NOT STARTED)
 - Consolidate global tokens & utilities into custom.css
@@ -137,9 +140,17 @@ Each item must link to commit hash(es) upon completion.
 - Standardize top-of-page back link text and placement on case studies.
 - Commit: c7052ce
 
+### C9 — ClarityScan® terminology normalization (DONE)
+- Replace ClarityScanr with ClarityScan® across src/pages.
+- Commit: 53a7723
+
+### C10 — CTA briefing cards button CTAs + visibility (DONE)
+- Ensure CTA card links render as buttons and cards are visually prominent.
+- Commit: 53a7723
+
 ### Phase C Push Policy
 - No push until all Phase C items are complete
 - Single consolidated push at Phase C closeout
 
 ## Next decision
-- Await instruction to begin Phase C1 implementation.
+- Await instruction to begin the next Phase C item.

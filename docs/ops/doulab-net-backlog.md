@@ -1,7 +1,7 @@
 # Doulab.net Backlog (Phase B1)
 
 Phase B status: CLOSED (final commit hashes confirmed).
-Phase C status: C1 in progress (governance tracking started).
+Phase C status: C9/C10 complete; C3/C5 pending.
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -339,7 +339,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Contrast fixes applied to problem cards.
   - Non-color link affordances added where needed.
 - Status: Done
-- Commits: 39bb2c2
+- Commits: 39bb2c2, 65ae797
 
 ### C5
 - Description: SEO clarifications.
@@ -381,8 +381,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Rationale: Ensure registered mark usage is consistent across pages.
 - Acceptance criteria:
   - ClarityScanr replaced with ClarityScan® in src/pages.
-- Status: In progress
-- Commits: TBD
+- Status: Done
+- Commits: 53a7723
 
 ### C10
 - Description: CTA briefing cards button CTAs + visibility.
@@ -390,5 +390,5 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - CTA card links render as buttons.
   - CTA cards have scoped visual prominence.
-- Status: In progress
-- Commits: TBD
+- Status: Done
+- Commits: 53a7723

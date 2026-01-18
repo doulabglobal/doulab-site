@@ -432,4 +432,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - No booking-intent CTAs link directly to provider URLs.
 - Evidence: `docs/ops/booking-architecture.md`, `docs/ops/phase-c12-conversion-ux-spec.md`
 - Status: Done
-- Commits: TBD
+- Commits: 96c2452

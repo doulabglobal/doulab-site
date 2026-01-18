@@ -157,7 +157,7 @@ export default function ServicesPage(): ReactNode {
                     ariaLabelledbyId="services-cta-title"
                     title="Ready to make innovation repeatable?"
                     body="Start with a quick diagnostic or book a discovery call. We'll co-create the path from insight to results."
-                    primaryCta={{ to: CLARITYSCAN_BOOKING_URL, label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic', external: true }}
+                    primaryCta={{ to: CLARITYSCAN_BOOKING_URL, label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic' }}
                     secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.final.contact' }}
                 />
             </main>

@@ -311,8 +311,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Diagrams are referenced in narrative and appear after Results by default.
   - Missing sections flagged in Phase C0 audit are added.
 - Evidence: `docs/ops/phase-c0-case-studies-ia-audit.md`
-- Status: In progress
-- Commits: TBD
+- Status: Done
+- Commits: afdebb4, 21c0bb0, 17cbaa9, 4382b81
 
 ### C2
 - Description: Anchor & in-page navigation normalization.
@@ -320,8 +320,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Heading IDs align with in-page links.
   - Anchor usage normalized across pages.
-- Status: Not started
-- Commits: TBD
+- Status: Done
+- Commits: 78fe9c9
 
 ### C3
 - Description: CSS consolidation (safe path only).
@@ -375,3 +375,20 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Case studies include "← All case studies" near the top and only once.
 - Status: Done
 - Commits: c7052ce
+
+### C9
+- Description: ClarityScan® terminology normalization.
+- Rationale: Ensure registered mark usage is consistent across pages.
+- Acceptance criteria:
+  - ClarityScanr replaced with ClarityScan® in src/pages.
+- Status: In progress
+- Commits: TBD
+
+### C10
+- Description: CTA briefing cards button CTAs + visibility.
+- Rationale: Improve CTA card visibility and ensure button-based link affordances.
+- Acceptance criteria:
+  - CTA card links render as buttons.
+  - CTA cards have scoped visual prominence.
+- Status: In progress
+- Commits: TBD

@@ -281,20 +281,19 @@ flowchart TB
         </section>
 
         {/* CTA briefing cards */}
-        <section className="section" aria-label="CTA briefing cards">
+        <section className="section ctaBriefingCards" aria-label="CTA briefing cards">
           <div className="cardGrid">
             <article className="card" aria-labelledby="cta-briefing-title">
               <h3 id="cta-briefing-title">Prefer a briefing?</h3>
-              <p>
-                Prefer a briefing for your team or partners? <Link to="/contact">Request a briefing</Link>.
-              </p>
+              <p>Prefer a briefing for your team or partners?</p>
               <p>To speed things up: share your goals, timelines, constraints, and how you measure success today.</p>
-              <p>
-                Planning a cohort or event? <Link to="/contact">Co host a session</Link>.
-              </p>
-              <p>
-                Exploring co-branded cohorts or MOUs? <Link to="/contact">Let's outline options</Link>.
-              </p>
+              <p>Planning a cohort or event?</p>
+              <p>Exploring co-branded cohorts or MOUs?</p>
+              <div className="ctaCardButtons">
+                <Link to="/contact" className="buttonPrimary">Request a briefing</Link>
+                <Link to="/contact" className="buttonSecondary">Co host a session</Link>
+                <Link to="/contact" className="buttonSecondary">Let's outline options</Link>
+              </div>
             </article>
             <article className="card" aria-labelledby="cta-path-title">
               <h3 id="cta-path-title">Recommended path</h3>
@@ -304,11 +303,12 @@ flowchart TB
               <h3 id="cta-related-title">Related services</h3>
               <ul>
                 <li><Link to="/services/innovation-maturity">Programs, IMM-P®</Link></li>
-                <li><Link to="/services/clarityscan">Diagnostics, ClarityScanr</Link></li>
+                <li><Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link></li>
               </ul>
-              <p>
-                See more examples in <Link to="/case-studies">Case studies</Link>.
-              </p>
+              <p>See more examples in case studies.</p>
+              <div className="ctaCardButtons">
+                <Link to="/case-studies" className="buttonSecondary">Case studies</Link>
+              </div>
             </article>
           </div>
         </section>

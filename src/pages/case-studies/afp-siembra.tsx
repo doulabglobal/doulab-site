@@ -288,13 +288,14 @@ flowchart TB
         </section>
 
         {/* CTA briefing cards */}
-        <section className="section" aria-label="CTA briefing cards">
+        <section className="section ctaBriefingCards" aria-label="CTA briefing cards">
           <div className="cardGrid">
             <article className="card" aria-labelledby="cta-briefing-title">
               <h3 id="cta-briefing-title">Prefer a briefing?</h3>
-              <p>
-                Prefer a briefing? <Link to="/contact" data-cta="cta.cases.briefing">Request a briefing</Link>.
-              </p>
+              <p>Prefer a briefing?</p>
+              <div className="ctaCardButtons">
+                <Link to="/contact" className="buttonPrimary" data-cta="cta.cases.briefing">Request a briefing</Link>
+              </div>
             </article>
             <article className="card" aria-labelledby="cta-path-title">
               <h3 id="cta-path-title">Recommended path</h3>
@@ -304,7 +305,7 @@ flowchart TB
               <h3 id="cta-related-title">Related services</h3>
               <ul>
                 <li><Link to="/services/innovation-maturity">Programs, IMM-P®</Link></li>
-                <li><Link to="/services/clarityscan">Diagnostics, ClarityScanr</Link></li>
+                <li><Link to="/services/clarityscan">Diagnostics, ClarityScan®</Link></li>
               </ul>
             </article>
           </div>

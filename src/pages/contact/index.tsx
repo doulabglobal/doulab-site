@@ -71,15 +71,15 @@ export default function Contact(): ReactNode {
         <Hero
           title="Contact"
           subtitle="Book a 20‑minute discovery call."
-          body="Privacy‑first. No external forms or ad pixels. Email us or send a brief; we reply within 2 business days."
+          body="Privacy-first. No external forms or ad pixels. Book a discovery call or request a briefing; we reply within 2 business days."
           imageBase="/img/contact-hero"
           imageAlt="Contact Doulab"
           width={1600}
           height={900}
           primaryCta={{
-          to: '/contact#options',
-          label: 'Email us',
-          dataCta: 'cta.contact.hero.email',
+          to: 'https://booking.doulab.net/discovery',
+          label: 'Book a discovery call',
+          dataCta: 'cta.contact.hero.discovery',
           }}
           secondaryCta={{
             to: CLARITYSCAN_CHECKOUT_URL,
@@ -112,11 +112,11 @@ export default function Contact(): ReactNode {
               <div className="cardFooter">
                 <a
                   className="cardCta"
-                  href={`mailto:${EMAIL}?subject=Discovery%20call%20request&body=Hi%20Doulab%2C%20Context%3A%20...`}
-                  data-cta="cta.contact.card.discovery_email"
-                  aria-label="Email to request a discovery call time"
+                  href="https://booking.doulab.net/discovery"
+                  data-cta="cta.contact.card.discovery"
+                  aria-label="Book a discovery call"
                 >
-                  Email for a time
+                  Book a discovery call
                 </a>
               </div>
             </article>
@@ -132,11 +132,11 @@ export default function Contact(): ReactNode {
               <div className="cardFooter">
                 <a
                   className="cardCta"
-                  href={`mailto:${EMAIL}?subject=Project%20brief&body=Goal%3A%0ATimeline%3A%0AStakeholders%3A%0AConstraints%3A%0ASuccess%20metrics%3A%0A`}
-                  data-cta="cta.contact.card.brief_email"
-                  aria-label="Email your project brief"
+                  href="https://booking.doulab.net/briefing"
+                  data-cta="cta.contact.card.briefing"
+                  aria-label="Request a briefing"
                 >
-                  Email your brief
+                  Request a briefing
                 </a>
               </div>
             </article>
@@ -200,10 +200,10 @@ export default function Contact(): ReactNode {
           title="Ready to talk?"
           body="Send a brief or book a quick discovery call. We will propose a practical path forward."
           primaryCta={{
-          to: '/contact#options',
-          label: 'Email us',
-          dataCta: 'cta.contact.hero.email',
-          ariaLabel: 'Jump to contact options',
+          to: 'https://booking.doulab.net/discovery',
+          label: 'Book a discovery call',
+          dataCta: 'cta.contact.final.discovery',
+          ariaLabel: 'Book a discovery call',
           }}
           secondaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,

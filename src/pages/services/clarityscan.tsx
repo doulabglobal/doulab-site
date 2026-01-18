@@ -18,7 +18,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
-import { CLARITYSCAN_BOOKING_URL } from '../../constants/urls';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import styles from '../b4-p2.module.css';
 
 export default function ClarityScanPage(): ReactNode {
@@ -68,11 +68,12 @@ export default function ClarityScanPage(): ReactNode {
           imageAlt="ClarityScan® diagnostic visual"
           width={1600}
           height={900}
-                    primaryCta={{
-            to: CLARITYSCAN_BOOKING_URL,
+          primaryCta={{
+            to: CLARITYSCAN_CHECKOUT_URL,
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.services.clarityscan.hero.book_clarityscan_online',
-            ariaLabel: 'Book a ClarityScan via booking.doulab.net',
+            ariaLabel: 'Book a ClarityScan online via Stripe Checkout',
+            external: true,
           }}
           secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
@@ -160,9 +161,10 @@ export default function ClarityScanPage(): ReactNode {
           title="Ready to get a clear read?"
           body="Run ClarityScan® and get your maturity snapshot plus the exact next steps to take."
           primaryCta={{
-            to: CLARITYSCAN_BOOKING_URL,
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.services.clarityscan.final.start',
+            href: CLARITYSCAN_CHECKOUT_URL,
+            label: 'Book a ClarityScanr online',
+            dataCta: 'cta.services.clarityscan.final.book_clarityscan_booking',
+            newTab: true,
           }}
           secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.final.contact' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."

@@ -123,12 +123,12 @@ export function SitewideDiscoveryCta(props?: {
 }) {
   const {
     id = 'bookings-general',
-    emailHref = 'mailto:hello@doulab.net?subject=Discovery%20call',
+    emailHref = 'https://booking.doulab.net/briefing',
     scheduleHref = 'https://booking.doulab.net/discovery',
     title = 'Ready to talk?',
     body = 'Send a brief or book a quick discovery call with Doulab.',
     ctaNote,
-    emailLabel = 'Email us',
+    emailLabel = 'Request a briefing',
     scheduleLabel = 'Schedule online',
     scheduleNewTab = false,
   } = props || {};

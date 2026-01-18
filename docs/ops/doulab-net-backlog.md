@@ -347,7 +347,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Robots directives are explicit.
   - Known Lighthouse warnings are documented if retained.
-- Status: Not started
+- Status: Blocked (robots.txt missing; source unknown)
+- Notes: robots.txt not found in repo; locate hosting/generation source before changes.
 - Commits: TBD
 
 ### C6
@@ -433,3 +434,23 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Evidence: `docs/ops/booking-architecture.md`, `docs/ops/phase-c12-conversion-ux-spec.md`
 - Status: Done
 - Commits: 96c2452, 79a9903
+
+### C15
+- Description: Replace conversion mailto CTAs with booking-first alternatives.
+- Rationale: Remove mailto from conversion flows while preserving legal/privacy contacts.
+- Acceptance criteria:
+  - Conversion mailto CTAs replaced with booking.doulab.net routes.
+  - Legal/privacy mailto links remain intact.
+- Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`
+- Status: Done
+- Commits: TBD
+
+### C16
+- Description: Restore ClarityScan® paid-first Stripe conversion flow.
+- Rationale: Ensure fixed-fee ClarityScan follows payment-first before scheduling.
+- Acceptance criteria:
+  - ClarityScan CTAs point to Stripe Checkout payment link.
+  - Booking step remains post-payment (success page -> scheduling).
+- Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`, `docs/ops/booking-architecture.md`
+- Status: Done
+- Commits: TBD

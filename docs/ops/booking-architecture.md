@@ -5,7 +5,8 @@ Provide a provider-agnostic booking layer so site CTAs never link directly to ve
 
 ## State
 - Redirects are managed in Cloudflare Redirect Rules (C2).
-- The website only links to `booking.doulab.net` canonical routes.
+- The website links to `booking.doulab.net` canonical routes for scheduling.
+- ClarityScan uses a paid-first Stripe Checkout link; scheduling follows via `booking.doulab.net/clarityscan`.
 
 ## Canonical routes
 - https://booking.doulab.net/

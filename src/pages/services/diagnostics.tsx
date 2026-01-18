@@ -10,7 +10,7 @@ import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Users from 'lucide-react/dist/esm/icons/users';
-import { CLARITYSCAN_BOOKING_URL } from '../../constants/urls';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import styles from '../b4-p2.module.css';
 
 export default function DiagnosticsPage() {
@@ -45,7 +45,7 @@ export default function DiagnosticsPage() {
                                 clear <strong>30/60/90-day plan</strong>. Built on MicroCanvas® 2.1 and IMM®; privacy-first by design.
                             </p>
                             <div className="heroCtas">
-                                <Link className="buttonPrimary" to="https://booking.doulab.net/clarityscan" data-cta="cta.diagnostics.hero.clarityscan">
+                                <Link className="buttonPrimary" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.hero.clarityscan">
                                     Start with ClarityScan®
                                 </Link>
                                 <Link className="buttonSecondary" to="/contact" data-cta="cta.diagnostics.hero.contact">
@@ -90,10 +90,10 @@ export default function DiagnosticsPage() {
                                 <li><strong>Session:</strong> ≤ 30 minutes</li>
                             </ul>
                             <div className={`cardFooter ${styles.cardFooterRow}`}>
-                                <Link className="cardCta" to="https://booking.doulab.net/clarityscan" data-cta="cta.diagnostics.offer.clarityscan">
+                                <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan">
                                     Run ClarityScan® →
                                 </Link>
-                                <Link className="cardCta" href={CLARITYSCAN_BOOKING_URL} data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book a ClarityScan via booking.doulab.net" target="_blank" rel="noopener noreferrer">
+                                <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book a ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
                                     Book online →
                                 </Link>
                             </div>
@@ -222,7 +222,7 @@ export default function DiagnosticsPage() {
                         <div className={`heroCtas ${styles.ctaCenter}`}>
                             <Link
                                 className="buttonPrimary"
-                                to="https://booking.doulab.net/clarityscan"
+                                href={CLARITYSCAN_CHECKOUT_URL}
                                 data-cta="cta.diagnostics.final.clarityscan"
                             >
                                 Start ClarityScan®

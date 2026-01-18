@@ -554,7 +554,11 @@ export default function InnovationReadinessWorkshopPage() {
               <Link className={styles.primaryButton} to={BOOKINGS_URL}>
                 Book a discovery call
               </Link>
-              <a className={styles.secondaryButton} href={`mailto:${CONTACT_EMAIL}`}>
+              <a
+                className={styles.secondaryButton}
+                href="https://booking.doulab.net/discovery"
+                data-cta="cta.services.innovation_readiness.proposal.discovery"
+              >
                 Request a proposal and dates
               </a>
             </div>

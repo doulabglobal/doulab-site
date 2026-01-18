@@ -20,7 +20,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 import Hero from '../../components/Hero';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 import FinalCta from '../../components/FinalCta';
-import { CLARITYSCAN_BOOKING_URL } from '../../constants/urls';
+import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import styles from '../b4-p2.module.css';
 
 export default function InnovationMaturityProgram(): ReactNode {
@@ -395,10 +395,11 @@ export default function InnovationMaturityProgram(): ReactNode {
           title="Ready to accelerate your innovation maturity?"
           body="Kick off with a quick diagnostic or talk with our team about running IMM-P® in your organization."
           primaryCta={{
-            to: CLARITYSCAN_BOOKING_URL,
-            label: 'Start with ClarityScan®',
-            dataCta: 'cta.services.imm.final.clarityscan',
-            ariaLabel: 'Start with ClarityScan — 15–20 minute baseline',
+            href: CLARITYSCAN_CHECKOUT_URL,
+            label: 'Book a ClarityScan® online',
+            dataCta: 'cta.services.imm.final.book_clarityscan_booking',
+            newTab: true,
+            ariaLabel: 'Book a ClarityScan — 15–20 minute baseline',
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Book a discovery call', dataCta: 'cta.services.imm.final.discovery' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."

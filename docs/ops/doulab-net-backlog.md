@@ -265,3 +265,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - build:cf and verify:build executed with logs captured.
 - Status: Completed (B8-P1)
 - Commits: 5146519c30a053b51393a353bb1fb1fd7c848fa2
+
+### B8-P2
+- Description: Add Mermaid diagrams to case study pages using the B8-P1 system.
+- Rationale: Replace static process images with consistent, auditable diagrams.
+- Acceptance criteria:
+  - Each target case study contains exactly two Mermaid diagrams (System Flow + Capability Progression).
+  - Diagrams use the canonical grammar and admonition wrapper.
+  - build:cf and verify:build executed with logs captured.
+- Status: Completed (B8-P2)
+- Commits: bbb57f62051fe4f2b27f1aa8dba8782b44e047fb, 309fbb3aa4d32a3184f64b10bd2284d29d255b98

@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D11 complete (commit mapping pending).
+Phase D status: D0 intake; D1 blocked; D2-D11 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -569,4 +569,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - New blog post includes Mermaid flowchart, xychart, and quadrant diagrams.
   - Briefing and discovery CTAs use canonical booking routes.
 - Status: Done
-- Commits: TBD
+- Commits: c3d6dba

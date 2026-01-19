@@ -1,7 +1,7 @@
 # Doulab.net Backlog (Phase B1)
 
 Phase B status: CLOSED (final commit hashes confirmed).
-Phase C status: C9/C10 complete; C3/C5/C11 pending.
+Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
 Phase D status: D0 intake; D1 blocked; D2-D9 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
@@ -350,7 +350,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Known Lighthouse warnings are documented if retained.
 - Status: Blocked (robots.txt missing; source unknown)
 - Notes: robots.txt not found in repo; locate hosting/generation source before changes.
-- Commits: TBD
+- Commits: 6bb71b8
 
 ### C6
 - Description: CTA card pattern.
@@ -402,8 +402,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Current-state audit and target workflow options documented.
   - Default and fallback workflow recommendations proposed.
 - Evidence: `docs/ops/phase-c11-service-conversion-audit.md`
-- Status: Not started
-- Commits: TBD
+- Status: Done (analysis)
+- Commits: fd89dad
 
 ### C12
 - Description: Conversion UX spec + decision (default/fallback) and mailto replacement plan.

@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D14 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D16 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -597,3 +597,22 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - tags.yml defines ecosystems, governance, coordination, innovation-maturity, and caribbean.
 - Status: Done
 - Commits: 0c6f0e7
+
+### D15
+- Description: Fix 404 catch-all to always render custom 404.tsx per 404 spec.
+- Rationale: Ensure unknown routes consistently show the custom 404 UI.
+- Acceptance criteria:
+  - Custom 404 renders for unknown routes and emits build/404.html.
+  - Primary CTA uses https://booking.doulab.net/.
+- Status: Done
+- Commits: dfe2e5d
+
+### D16
+- Description: Consolidate site CSS into src/css/custom.css (remove remaining CSS files/modules).
+- Rationale: Reduce CSS fragmentation and remove module/global split.
+- Acceptance criteria:
+  - No remaining .module.css files under src.
+  - No remaining non-module CSS files under src besides src/css/custom.css.
+  - TSX no longer imports module CSS.
+- Status: Done
+- Commits: dfe2e5d

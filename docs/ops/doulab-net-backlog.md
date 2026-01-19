@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D12 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D13 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -579,3 +579,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Blog sidebar includes the new post.
 - Status: Done
 - Commits: 03cd644
+
+### D13
+- Description: NNY hero + social card + CTA card styling + post structure repair for coordination-threshold post.
+- Rationale: Align the new editorial post with NNY hero standards and readable in-post CTAs.
+- Acceptance criteria:
+  - Hero image stored under static/img/blog/2026 and referenced in frontmatter and body.
+  - Diagram admonitions and headings render cleanly.
+  - CTA cards render as visible cards with button CTAs.
+- Status: Done
+- Commits: d7b352d

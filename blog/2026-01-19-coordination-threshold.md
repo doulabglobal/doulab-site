@@ -67,6 +67,8 @@ flowchart LR
   C -->|No| E[Plateau\nResets between cohorts and institutions]
   E --> F[Fragmentation\nHigher coordination costs, low transfer]
   F --> B
+```
+
 Key arguments
 1) Activity scales faster than outcomes
 A plausible interpretation is not a shortage of ideas or talent, but weak compounding across programs (Stam, 2015).
@@ -77,12 +79,15 @@ Early ecosystems may temporarily bypass this constraint. As ecosystems mature, d
 
 mermaid
 Copy code
+```mermaid
 xychart-beta
   title "Activity vs. Compounding Outcomes (conceptual)"
   x-axis "Time / ecosystem scale" [1,2,3,4,5]
   y-axis "Relative level" 0 --> 10
   line "Activity" [2,4,6,8,9]
   line "Compounding outcomes" [1,2,3,3,3]
+```
+
 2) Coordination costs rise as interdependence increases
 As ecosystems grow, coordination shifts from optional to essential.
 
@@ -98,6 +103,7 @@ When coordination costs rise faster than coordination capacity, fragmentation be
 
 mermaid
 Copy code
+```mermaid
 flowchart TB
   subgraph Domains
     M[Markets] --- T[Talent]
@@ -109,6 +115,8 @@ flowchart TB
   Domains --> X[Interdependence increases\ncoordination costs rise]
   X --> Y[Informal coordination saturates]
   Y --> Z[Fragmentation becomes structural]
+```
+
 3) Innovation maturity explains discontinuity
 Considerable attention is rightly given to founders. However, ecosystem-level outcomes depend not only on startup capability, but on the maturity of the surrounding system.
 
@@ -120,6 +128,7 @@ In such contexts, apparent success may reflect exceptional founders scaling desp
 
 mermaid
 Copy code
+```mermaid
 quadrantChart
   title Maturity asymmetry across actors (conceptual)
   x-axis Low alignment --> High alignment
@@ -132,6 +141,8 @@ quadrantChart
   "Program B" : [0.35, 0.70]
   "Investor readiness" : [0.45, 0.40]
   "Policy / regulation" : [0.60, 0.35]
+```
+
 From diagnosis to interpretation
 Taken together, these patterns suggest that the binding constraint is no longer entrepreneurial activity itself, but how ecosystems coordinate learning, progression, and decision-making as they grow.
 

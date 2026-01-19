@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D16 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D19 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -616,3 +616,28 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - TSX no longer imports module CSS.
 - Status: Done
 - Commits: dfe2e5d
+
+### D17
+- Description: NotFound override: unknown routes render custom 404.tsx.
+- Rationale: Ensure Docusaurus NotFound uses the custom 404 UI for all unknown routes.
+- Acceptance criteria:
+  - src/theme/NotFound/Content renders src/pages/404.tsx.
+  - Unknown routes display the custom 404 UI.
+- Status: Done
+- Commits: d1291a8, 727366a
+
+### D18
+- Description: Normalize /services/custom-workshops card CTA button sizing.
+- Rationale: Keep workshop format CTAs aligned and consistent within each card row.
+- Acceptance criteria:
+  - CTA buttons in workshop format cards are equal width/height.
+- Status: Done
+- Commits: d1291a8
+
+### D19
+- Description: Homologate blog card colors to Doulab card system.
+- Rationale: Align blog list cards with site card surface/border/hover treatments.
+- Acceptance criteria:
+  - Blog cards match Doulab card styling in light/dark modes.
+- Status: Done
+- Commits: d1291a8

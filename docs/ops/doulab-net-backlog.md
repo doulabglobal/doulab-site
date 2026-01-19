@@ -2,6 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: C9/C10 complete; C3/C5/C11 pending.
+Phase D status: D0 intake; D1 discovery pending.
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -454,3 +455,29 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Evidence: `docs/ops/phase-c12-conversion-ux-spec.md`, `docs/ops/booking-architecture.md`
 - Status: Done
 - Commits: 6173b30
+
+
+## Phase D - Quality & Compliance Hardening
+
+### D0
+- Description: Lighthouse 2026-01-19 findings intake.
+- Rationale: Capture audit findings and seed remediation backlog.
+- Acceptance criteria:
+  - SEO: robots.txt invalid due to unknown directive "Content-Signal: search=yes,ai-train=no".
+  - Best Practices: CSP Trusted Types missing; script-src includes 'unsafe-inline'; no preload directive found.
+  - Accessibility: contrast issues on .problemCard; links rely on color; identical links same purpose.
+  - Best Practices/Console: deprecated API warning; asset 503s (observed in report).
+  - Performance: render-blocking requests; unused JS estimate; missing explicit image width/height.
+- Evidence: `ops/audits/doulab-net/lighthouse-2026-01-19.pdf`
+- Notes: Derived from Lighthouse 13.0.1 report.
+- Status: Intake
+- Commits: TBD
+
+### D1
+- Description: robots.txt discovery + fix (invalid directive).
+- Rationale: Resolve robots.txt validity error flagged by Lighthouse.
+- Acceptance criteria:
+  - Identify source of robots.txt / Content-Signal directive.
+  - Remove invalid directive or document external source if not in repo.
+- Status: Discovery pending
+- Commits: TBD

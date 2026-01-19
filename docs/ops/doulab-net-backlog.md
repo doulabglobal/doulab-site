@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D12 complete (commit mapping pending).
+Phase D status: D0 intake; D1 blocked; D2-D12 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -578,4 +578,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - NNY hero rules documented and referenced in AGENTS.md.
   - Blog sidebar includes the new post.
 - Status: Done
-- Commits: TBD
+- Commits: 03cd644

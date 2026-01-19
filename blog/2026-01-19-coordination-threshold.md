@@ -59,15 +59,17 @@ Experiences in countries such as Colombia and Chile illustrate this tension. Pro
 
 ## Visual interpretation: activation to continuity threshold
 
+:::tip[Diagram — Activation to continuity threshold]
 ```mermaid
 flowchart LR
-  A[Activation\nMore programs, cohorts, events] --> B[Scale\nMore actors + more interdependence]
-  B --> C{Continuity threshold\nDo outcomes compound?}
-  C -->|Yes| D[Continuity\nLearning + progression signals persist]
-  C -->|No| E[Plateau\nResets between cohorts and institutions]
-  E --> F[Fragmentation\nHigher coordination costs, low transfer]
+  A["<b>Activation</b><br/><i>More programs, cohorts, events</i>"] --> B["<b>Scale</b><br/><i>More actors + more interdependence</i>"]
+  B --> C{"<b>Continuity threshold</b><br/><i>Do outcomes compound?</i>"}
+  C -->|Yes| D["<b>Continuity learning</b><br/><i>Learning + progression signals persist</i>"]
+  C -->|No| E["<b>Plateau</b><br/><i>Resets between cohorts and institutions</i>"]
+  E --> F["<b>Fragmentation</b><br/><i>Higher coordination costs, low transfer</i>"]
   F --> B
 ```
+:::
 
 Key arguments
 1) Activity scales faster than outcomes
@@ -77,8 +79,7 @@ CARIBEquity identifies several constraints that plausibly interrupt compounding,
 
 Early ecosystems may temporarily bypass this constraint. As ecosystems mature, discontinuity becomes harder to ignore.
 
-mermaid
-Copy code
+:::tip[Diagram — Activity vs compounding outcomes]
 ```mermaid
 xychart-beta
   title "Activity vs. Compounding Outcomes (conceptual)"
@@ -87,6 +88,7 @@ xychart-beta
   line "Activity" [2,4,6,8,9]
   line "Compounding outcomes" [1,2,3,3,3]
 ```
+:::
 
 2) Coordination costs rise as interdependence increases
 As ecosystems grow, coordination shifts from optional to essential.
@@ -101,8 +103,7 @@ Research on innovation ecosystem governance highlights the importance of adaptiv
 
 When coordination costs rise faster than coordination capacity, fragmentation becomes the default equilibrium.
 
-mermaid
-Copy code
+:::tip[Diagram — Interdependence and coordination costs]
 ```mermaid
 flowchart TB
   subgraph Domains
@@ -112,10 +113,11 @@ flowchart TB
     P --- K[Culture]
     K --- M
   end
-  Domains --> X[Interdependence increases\ncoordination costs rise]
+  Domains --> X["<b>Interdependence increases</b><br/>coordination costs rise"]
   X --> Y[Informal coordination saturates]
   Y --> Z[Fragmentation becomes structural]
 ```
+:::
 
 3) Innovation maturity explains discontinuity
 Considerable attention is rightly given to founders. However, ecosystem-level outcomes depend not only on startup capability, but on the maturity of the surrounding system.
@@ -126,22 +128,22 @@ OECD ecosystem diagnostics explicitly frame ecosystems as input-output systems i
 
 In such contexts, apparent success may reflect exceptional founders scaling despite systemic conditions, rather than because of them (Stam, 2015).
 
-mermaid
-Copy code
+:::tip[Diagram — Maturity asymmetry across actors]
 ```mermaid
 quadrantChart
   title Maturity asymmetry across actors (conceptual)
   x-axis Low alignment --> High alignment
   y-axis Low capability --> High capability
-  quadrant-1 "Isolated excellence\n(success despite system)"
-  quadrant-2 "Compounding zone\n(shared progression)"
-  quadrant-3 "Stalled activation\n(fragmented inputs)"
-  quadrant-4 "Local optimization\n(no ecosystem transfer)"
+  quadrant-1 "Isolated excellence"
+  quadrant-2 "Compounding zone"
+  quadrant-3 "Stalled activation"
+  quadrant-4 "Local optimization"
   "Program A" : [0.75, 0.65]
   "Program B" : [0.35, 0.70]
   "Investor readiness" : [0.45, 0.40]
   "Policy / regulation" : [0.60, 0.35]
 ```
+:::
 
 From diagnosis to interpretation
 Taken together, these patterns suggest that the binding constraint is no longer entrepreneurial activity itself, but how ecosystems coordinate learning, progression, and decision-making as they grow.
@@ -169,12 +171,7 @@ Many startup ecosystems now appear to be crossing a threshold where coordination
 
 Recognizing this transition helps explain why momentum sometimes plateaus despite continued effort, particularly when individual success stories obscure systemic constraints. Approaches such as VIF represent one way to think about supporting this next phase—by design rather than accumulation.
 
-Next step (if you prefer a briefing)
-Request a briefing: https://booking.doulab.net/briefing
-
-Book a discovery call: https://booking.doulab.net/discovery
-
-ClarityScan® (paid-first): (keep the existing Stripe payment link used on the site)
+<div className="ctaCardGrid"> <div className="ctaCard"> <div className="ctaCardTitle">Prefer a briefing?</div> <div className="ctaCardBody">Use the briefing route if you already have context and want to align on next steps.</div> <a className="button button--primary" href="https://booking.doulab.net/briefing">Request a briefing</a> </div> <div className="ctaCard"> <div className="ctaCardTitle">Starting from zero?</div> <div className="ctaCardBody">Book a discovery call to map constraints, goals, and the recommended path forward.</div> <a className="button button--secondary" href="https://booking.doulab.net/discovery">Book a discovery call</a> </div> </div>
 
 References
 CARIBEquity (2025). CARIBEquity Regional Ecosystem Report I: Assessment. IDB Lab & European Union.

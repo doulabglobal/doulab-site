@@ -28,6 +28,32 @@ decision-latency:
   permalink: /blog/tags/decision-latency
   description: Reducing time-to-decision with evidence and clear ownership
 
+ecosystems:
+  label: Ecosystems
+  permalink: /blog/tags/ecosystems
+  description: Startup and innovation ecosystems, ecosystem dynamics, and system-level outcomes
+
+governance:
+  label: Governance
+  permalink: /blog/tags/governance
+  description: Governance structures, coordination mechanisms, and decision systems for innovation
+
+coordination:
+  label: Coordination
+  permalink: /blog/tags/coordination
+  description: Coordination capacity, transaction costs, and cross-actor alignment in ecosystems
+
+innovation-maturity:
+  label: Innovation maturity
+  permalink: /blog/tags/innovation-maturity
+  description: Readiness, progression, and maturity dynamics across organizations and systems
+
+caribbean:
+  label: Caribbean
+  permalink: /blog/tags/caribbean
+  description: Ecosystem and innovation dynamics across Caribbean contexts
+
+
 vigia-futura:
   label: Vigía Futura
   permalink: /blog/tags/vigia-futura

@@ -42,6 +42,8 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           feedOptions: { type: 'all' }, // rss.xml + atom.xml
+          blogSidebarTitle: 'All posts',
+          blogSidebarCount: 'ALL',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',

@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D11 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D12 complete (commit mapping pending).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -570,3 +570,12 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Briefing and discovery CTAs use canonical booking routes.
 - Status: Done
 - Commits: c3d6dba
+
+### D12
+- Description: Register NNY hero design language + blog sidebar integration.
+- Rationale: Lock editorial hero system and ensure the latest post is discoverable in blog navigation.
+- Acceptance criteria:
+  - NNY hero rules documented and referenced in AGENTS.md.
+  - Blog sidebar includes the new post.
+- Status: Done
+- Commits: TBD

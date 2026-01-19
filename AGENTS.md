@@ -25,6 +25,10 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - Canonical backlog (status + commits): `docs/ops/doulab-net-backlog.md`
 - Lighthouse audit (2026-01-18): supporting evidence (non-blocking, informational post-B verification) - c10eca2
 
+## Editorial Design Systems
+- NNY hero banner rules (blog/editorial only): `docs/ops/design-nny-hero-language.md`
+- Rule: No blog hero banner may be implemented outside the NNY system.
+
 ## Commit Log
 - 7cf8c4704e73986186dd56e3caf50b6769536bbc - chore(build): add build:cf + verify:build scripts for Cloudflare parity
 - Rule: every completed backlog item must be linked to commit hash(es).
@@ -47,6 +51,7 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - docs/ops/booking-architecture.md
 - docs/ops/booking-link-map.md
 - docs/ops/deps-prune-proof.md
+- docs/ops/design-nny-hero-language.md (locked)
 - docs/ops/doulab-net-backlog.md
 - docs/ops/gdpr-compliance.md
 - docs/ops/hardening-pass-3-plan.md

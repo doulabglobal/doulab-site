@@ -42,7 +42,6 @@ const config: Config = {
         blog: {
           showReadingTime: true,
           feedOptions: { type: 'all' }, // rss.xml + atom.xml
-          editUrl: 'https://github.com/doulabglobal/doulab-site/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',

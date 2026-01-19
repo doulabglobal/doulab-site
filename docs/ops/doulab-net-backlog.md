@@ -524,3 +524,20 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Blog conversion CTAs use canonical booking routes.
 - Status: Done
 - Commits: 27c5348
+
+### D7
+- Description: Remove "Edit this page" links across blog.
+- Rationale: Keep blog UX focused on readers, avoid repo-only links.
+- Acceptance criteria:
+  - Blog posts no longer display "Edit this page" links.
+- Status: Done
+- Commits: TBD
+
+### D8
+- Description: Homepage dark-mode surface parity for "How we work" cards and final CTA.
+- Rationale: Prevent white surfaces in dark mode and align with "Proof, by the numbers".
+- Acceptance criteria:
+  - "How we work" cards use dark surfaces in dark mode.
+  - Final CTA uses a dark surface with readable text in dark mode.
+- Status: Done
+- Commits: TBD

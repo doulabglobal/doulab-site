@@ -625,7 +625,7 @@ function ResearchResourcesSection() {
 
 function PrinciplesSection() {
   return (
-    <section className="section" id="principles" aria-labelledby="principles-title">
+    <section className="section homeHowWeWork" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title">Our Principles</h2>
       <div className={`cardGrid ${styles.cardGridTight}`}>
         <div className="card">

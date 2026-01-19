@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: C9/C10 complete; C3/C5/C11 pending.
-Phase D status: D0 intake; D1 discovery pending.
+Phase D status: D0 intake; D1 blocked (robots source unknown).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -471,7 +471,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Evidence: `ops/audits/doulab-net/lighthouse-2026-01-19.pdf`
 - Notes: Derived from Lighthouse 13.0.1 report.
 - Status: Intake
-- Commits: TBD
+- Commits: 81a261d
 
 ### D1
 - Description: robots.txt discovery + fix (invalid directive).
@@ -479,5 +479,6 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Identify source of robots.txt / Content-Signal directive.
   - Remove invalid directive or document external source if not in repo.
-- Status: Discovery pending
-- Commits: TBD
+- Status: Blocked (robots.txt not found; source unknown)
+- Notes: robots.txt not found in repo; likely Cloudflare/edge-generated.
+- Commits: 81a261d

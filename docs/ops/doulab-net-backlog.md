@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D10 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D11 complete (commit mapping pending).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -561,3 +561,12 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - No direct calendar provider URLs remain for conversion intents.
 - Status: Done
 - Commits: 5e53b64
+
+### D11
+- Description: Publish “Activation to Continuity” ecosystem essay with Mermaid diagrams and canonical booking links.
+- Rationale: Document ecosystem continuity thesis with visual diagrams and consistent CTAs.
+- Acceptance criteria:
+  - New blog post includes Mermaid flowchart, xychart, and quadrant diagrams.
+  - Briefing and discovery CTAs use canonical booking routes.
+- Status: Done
+- Commits: TBD

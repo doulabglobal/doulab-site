@@ -8,7 +8,6 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
-import styles from './vigia-futura.module.css';
 
 type SectionDef = { id: string; label: string };
 
@@ -113,12 +112,12 @@ export default function VigiaFuturaPage() {
 
         {/* In-page subnav (centered, same width as content) */}
         <div className="container">
-          <nav className={`subnav ${styles.subnav}`} aria-label="In this page">
+          <nav className={`subnav ${'pages-vigia-futura-vigia-futura__subnav'}`} aria-label="In this page">
             {SECTIONS.map((s) => (
               <a
                 key={s.id}
                 href={`#${s.id}`}
-                className={`${styles.subnavLink}${activeId === s.id ? ' subnavActive' : ''}`}
+                className={`${'pages-vigia-futura-vigia-futura__subnavLink'}${activeId === s.id ? ' subnavActive' : ''}`}
                 aria-current={activeId === s.id ? 'true' : undefined}
               >
                 {s.label}
@@ -169,7 +168,7 @@ export default function VigiaFuturaPage() {
           </div>
 
           {/* Dynamic: Latest from the radar (docs tagged "radar") */}
-          <h3 id="vf-radar-latest-title" className={styles.radarLatestTitle}>
+          <h3 id="vf-radar-latest-title" className={'pages-vigia-futura-vigia-futura__radarLatestTitle'}>
             Latest from the radar
           </h3>
           <div className="cardGrid" role="list" aria-labelledby="vf-radar-latest-title">
@@ -232,7 +231,7 @@ export default function VigiaFuturaPage() {
             </article>
           </div>
 
-          <div className={`heroCtas ${styles.centeredCtas}`}>
+          <div className={`heroCtas ${'pages-vigia-futura-vigia-futura__centeredCtas'}`}>
             <Link className="buttonPrimary" to="https://booking.doulab.net/briefing" data-cta="cta.vigia.mid.briefing">
               Request a briefing
             </Link>

@@ -5,7 +5,6 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { CLARITYSCAN_BOOKING_URL } from '../constants/urls';
 import PageHeader from '../components/PageHeader/PageHeader';
-import styles from './book-clarityscan.module.css';
 
 export default function BookClarityScanPage() {
   useEffect(() => {
@@ -28,7 +27,7 @@ export default function BookClarityScanPage() {
         <meta property="og:description" content="Book a ClarityScan® online in minutes." />
       </Head>
 
-      <main className={`container ${styles.main}`}>
+      <main className={`container ${'pages-book-clarityscan__main'}`}>
         <PageHeader title="Booking ClarityScan®." body={<p>We are opening the booking page in a new tab.</p>} />
         <p role="status" aria-live="polite">
           Redirecting you to our Outlook booking page. If nothing happens, use the direct link below.

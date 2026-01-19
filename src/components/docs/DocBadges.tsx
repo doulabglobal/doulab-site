@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './DocBadges.module.css';
 
 type DocBadgesProps = {
   items: string[];
@@ -10,9 +9,9 @@ export default function DocBadges({ items }: DocBadgesProps) {
     return null;
   }
   return (
-    <ul className={styles.badges}>
+    <ul className={'components-docs-docbadges__badges'}>
       {items.map((item) => (
-        <li key={item} className={styles.badge}>
+        <li key={item} className={'components-docs-docbadges__badge'}>
           {item}
         </li>
       ))}

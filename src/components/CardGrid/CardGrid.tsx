@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './CardGrid.module.css';
 
 type CardGridProps = {
   children: React.ReactNode;
@@ -7,5 +6,5 @@ type CardGridProps = {
 };
 
 export default function CardGrid({ children, className }: CardGridProps) {
-  return <div className={`${styles.grid} ${className ?? ''}`.trim()}>{children}</div>;
+  return <div className={`components-cardgrid-cardgrid__grid ${className ?? ''}`.trim()}>{children}</div>;
 }

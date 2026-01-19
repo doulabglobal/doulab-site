@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
 import { CASE_STUDIES, type CaseStudy } from './caseStudiesData';
-import styles from './CaseStudyCards.module.css';
 
 type Props = {
   variant?: 'grid' | 'related';
@@ -29,7 +28,7 @@ function Card({ cs }: { cs: CaseStudy }) {
           width={1200}
           height={720}
           decoding="async"
-          className={styles.cardImage}
+          className={'components-case-studies-casestudycards__cardImage'}
         />
       </picture>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import DocBadges from './DocBadges';
-import styles from './EntityHeader.module.css';
 
 type EntityHeaderProps = {
   title: string;
@@ -12,12 +11,12 @@ type EntityHeaderProps = {
 
 export default function EntityHeader({ title, subtitle, entityLabel, updated, badges = [] }: EntityHeaderProps) {
   return (
-    <header className={styles.header}>
-      {entityLabel ? <p className={styles.eyebrow}>{entityLabel}</p> : null}
-      <h1 className={styles.title}>{title}</h1>
-      {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
+    <header className={'components-docs-entityheader__header'}>
+      {entityLabel ? <p className={'components-docs-entityheader__eyebrow'}>{entityLabel}</p> : null}
+      <h1 className={'components-docs-entityheader__title'}>{title}</h1>
+      {subtitle ? <p className={'components-docs-entityheader__subtitle'}>{subtitle}</p> : null}
       {badges.length ? <DocBadges items={badges} /> : null}
-      {updated ? <p className={`microcopy ${styles.meta}`}>Updated: {updated}</p> : null}
+      {updated ? <p className={`microcopy ${'components-docs-entityheader__meta'}`}>Updated: {updated}</p> : null}
     </header>
   );
 }

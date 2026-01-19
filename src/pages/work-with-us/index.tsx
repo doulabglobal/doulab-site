@@ -13,7 +13,6 @@ import CheckCircle2 from 'lucide-react/dist/esm/icons/check-circle-2';
 import Hero from '../../components/Hero';
 import type { JSX } from 'react';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from './work-with-us.module.css';
 
 
 export default function WorkWithUsPage(): JSX.Element {
@@ -267,7 +266,7 @@ export default function WorkWithUsPage(): JSX.Element {
                         <li>Scale-ups &amp; startups</li>
                         <li>Incubators &amp; accelerators</li>
                     </ul>
-                    <p className={`microcopy ${styles.microcopyTight}`}>
+                    <p className={`microcopy ${'pages-work-with-us-work-with-us__microcopyTight'}`}>
                         New to us? See our Programs and Coaching &amp; mentoring on the{' '}
                         <Link to="/what-we-do">What we do</Link> page.
                     </p>
@@ -301,7 +300,7 @@ export default function WorkWithUsPage(): JSX.Element {
                     <div className="finalCta">
                         <h2 id="wwu-cta-title">Ready to move from plans to repeatable delivery?</h2>
                         <p>Start with ClarityScan® or book a discovery call. We’ll co-create the path from insight to results.</p>
-                        <div className={`heroCtas ${styles.centeredCtas}`}>
+                        <div className={`heroCtas ${'pages-work-with-us-work-with-us__centeredCtas'}`}>
                             <Link
                                 to="/services/clarityscan"
                                 className="buttonPrimary"

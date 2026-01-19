@@ -7,7 +7,6 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from '../b4-p2.module.css';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Newspaper from 'lucide-react/dist/esm/icons/newspaper';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
@@ -226,7 +225,7 @@ export default function Insights(): ReactNode {
         {/* In-page subnav (match Vigía Futura style) */}
         <div className="container">
           <nav
-            className={`subnav ${styles.subnavLayout}`}
+            className={`subnav ${'pages-b4-p2__subnavLayout'}`}
             aria-label="In this page"
           >
             <a href="#start" data-cta="cta.insights.anchor.start">Start here</a>
@@ -251,7 +250,7 @@ export default function Insights(): ReactNode {
                   width={1200}
                   height={720}
                   decoding="async"
-                  className={`${styles.roundedMedia} ${styles.roundedMediaTight}`}
+                  className={`${'pages-b4-p2__roundedMedia'} ${'pages-b4-p2__roundedMediaTight'}`}
                 />
               </picture>
               <Lightbulb className="cardIcon" aria-hidden="true" />
@@ -334,7 +333,7 @@ export default function Insights(): ReactNode {
               ))
             )}
           </div>
-          <div className={`heroCtas ${styles.ctaRowSmall}`}>
+          <div className={`heroCtas ${'pages-b4-p2__ctaRowSmall'}`}>
             <Link className="buttonSecondary" to="/docs/research-resources/" data-cta="cta.insights.whitepapers.view_all">
               See all whitepapers
             </Link>
@@ -388,7 +387,7 @@ export default function Insights(): ReactNode {
               ))
             ))}
           </div>
-          <div className={`heroCtas ${styles.ctaRowMedium}`}>
+          <div className={`heroCtas ${'pages-b4-p2__ctaRowMedium'}`}>
             <Link className="buttonSecondary" to="/blog" data-cta="cta.insights.blog.view_all">
               View all blog posts
             </Link>

@@ -3,7 +3,6 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Heading from '@theme/Heading';
 import PageHeader from '../components/PageHeader/PageHeader';
-import styles from './legal.module.css';
 
 export default function PrivacyAndTerms(): ReactNode {
   const pageTitle = 'Privacy & Terms | Doulab';
@@ -20,7 +19,7 @@ export default function PrivacyAndTerms(): ReactNode {
         <meta name="robots" content="noindex,follow" />
       </Head>
 
-      <main className={`container ${styles.main}`}>
+      <main className={`container ${'pages-legal__main'}`}>
         <PageHeader
           title="Privacy & Terms"
           meta={`Updated: ${lastUpdated}`}
@@ -33,8 +32,8 @@ export default function PrivacyAndTerms(): ReactNode {
           }
         />
 
-        <nav aria-label="On-page navigation" className={styles.nav}>
-          <ul className={styles.navList}>
+        <nav aria-label="On-page navigation" className={'pages-legal__nav'}>
+          <ul className={'pages-legal__navList'}>
             <li>
               <a href="#privacy">Privacy</a>
             </li>
@@ -53,7 +52,7 @@ export default function PrivacyAndTerms(): ReactNode {
           </ul>
         </nav>
 
-        <section id="privacy" className={styles.section}>
+        <section id="privacy" className={'pages-legal__section'}>
           <Heading as="h2" id="privacy">
             Privacy
           </Heading>
@@ -210,7 +209,7 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
         </section>
 
-        <section id="terms" className={styles.section}>
+        <section id="terms" className={'pages-legal__section'}>
           <Heading as="h2" id="terms">
             Terms &amp; Conditions
           </Heading>
@@ -397,7 +396,7 @@ export default function PrivacyAndTerms(): ReactNode {
           </section>
         </section>
 
-        <section id="contact" className={styles.section}>
+        <section id="contact" className={'pages-legal__section'}>
           <Heading as="h2" id="contact">
             Contact
           </Heading>

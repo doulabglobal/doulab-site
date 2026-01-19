@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import styles from './Hero.module.css';
 
 type Cta = {
     to: string;
@@ -73,7 +72,7 @@ export default function Hero({
                     decoding="async"
                     width={width}
                     height={height}
-                className={`heroImage ${styles.image}`}
+                className={`heroImage ${'components-hero__image'}`}
             />
         </picture>
     );
@@ -91,11 +90,11 @@ export default function Hero({
             </Head>
 
             {/* Two-column layout, matching home: text left, image right */}
-            <div className={styles.layout}>
-                <div className={styles.content}>
+            <div className={'components-hero__layout'}>
+                <div className={'components-hero__content'}>
                     <h1 id={ariaLabelledbyId} className="heroTitle">{title}</h1>
                     {subtitle && (
-                        <p className={`heroSubtitle ${styles.subtitle}`}>
+                        <p className={`heroSubtitle ${'components-hero__subtitle'}`}>
                             {subtitle}
                         </p>
                     )}
@@ -160,7 +159,7 @@ export default function Hero({
                     {ctaNote && <p className="ctaNote">{ctaNote}</p>}
                 </div>
 
-                <div className={styles.media}>
+                <div className={'components-hero__media'}>
                     {ImgTag}
                 </div>
             </div>

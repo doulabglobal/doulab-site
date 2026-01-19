@@ -8,7 +8,6 @@ import FinalCta from '../../components/FinalCta';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from './ogtic-redlab.module.css';
 
 export default function CaseOgticRedlab(): ReactNode {
   const breadcrumbSchema = {
@@ -84,7 +83,7 @@ export default function CaseOgticRedlab(): ReactNode {
 
       <main>
         {/* Breadcrumb */}
-        <nav aria-label="Breadcrumb" className={`microcopy ${styles.breadcrumb}`}>
+        <nav aria-label="Breadcrumb" className={`microcopy ${'pages-case-studies-ogtic-redlab__breadcrumb'}`}>
           <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← All case studies</Link>
         </nav>
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
-import styles from './PageHeader.module.css';
 
 type PageHeaderCta = {
   label: string;
@@ -54,15 +53,15 @@ export default function PageHeader({
   align = 'left',
 }: PageHeaderProps) {
   return (
-    <section className={styles.section}>
-      <header className={`${styles.header} ${align === 'center' ? styles.center : ''}`}>
-        {eyebrow ? <p className={styles.eyebrow}>{eyebrow}</p> : null}
-        <h1 className={styles.title}>{title}</h1>
-        {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}
-        {meta ? <p className={`microcopy ${styles.meta}`}>{meta}</p> : null}
+    <section className={'components-pageheader-pageheader__section'}>
+      <header className={`${'components-pageheader-pageheader__header'} ${align === 'center' ? 'components-pageheader-pageheader__center' : ''}`}>
+        {eyebrow ? <p className={'components-pageheader-pageheader__eyebrow'}>{eyebrow}</p> : null}
+        <h1 className={'components-pageheader-pageheader__title'}>{title}</h1>
+        {subtitle ? <p className={'components-pageheader-pageheader__subtitle'}>{subtitle}</p> : null}
+        {meta ? <p className={`microcopy ${'components-pageheader-pageheader__meta'}`}>{meta}</p> : null}
         {body ? <div>{body}</div> : null}
         {primaryCta || secondaryCta ? (
-          <div className={styles.actions}>
+          <div className={'components-pageheader-pageheader__actions'}>
             {primaryCta ? <RenderCta cta={primaryCta} className="buttonPrimary" /> : null}
             {secondaryCta ? <RenderCta cta={secondaryCta} className="buttonSecondary" /> : null}
           </div>

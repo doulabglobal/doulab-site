@@ -8,7 +8,6 @@ import FinalCta from '../../components/FinalCta';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from './afp-siembra.module.css';
 
 export default function CaseAfpSiembra(): ReactNode {
   const breadcrumbSchema = {
@@ -100,7 +99,7 @@ export default function CaseAfpSiembra(): ReactNode {
       </Head>
 
       <main>
-        <nav aria-label="Breadcrumb" className={`microcopy ${styles.breadcrumb}`}>
+        <nav aria-label="Breadcrumb" className={`microcopy ${'pages-case-studies-afp-siembra__breadcrumb'}`}>
           <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← All case studies</Link>
         </nav>
 
@@ -258,7 +257,7 @@ flowchart TB
           <div className="cardGrid">
             <div className="card">
               <h3>FutureScapes Summit, October 9, 2024</h3>
-              <div className={styles.videoWrapper}>
+              <div className={'pages-case-studies-afp-siembra__videoWrapper'}>
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/v7VBcTu86VQ?modestbranding=1&rel=0"
                   title="FutureScapes Summit, October 9, 2024"
@@ -266,13 +265,13 @@ flowchart TB
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                  className={styles.videoFrame}
+                  className={'pages-case-studies-afp-siembra__videoFrame'}
                 />
               </div>
             </div>
             <div className="card">
               <h3>FutureScapes Summit, October 10, 2024</h3>
-              <div className={styles.videoWrapper}>
+              <div className={'pages-case-studies-afp-siembra__videoWrapper'}>
                 <iframe
                   src="https://www.youtube-nocookie.com/embed/0x3JJShSvZ8?modestbranding=1&rel=0"
                   title="FutureScapes Summit, October 10, 2024"
@@ -280,7 +279,7 @@ flowchart TB
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                  className={styles.videoFrame}
+                  className={'pages-case-studies-afp-siembra__videoFrame'}
                 />
               </div>
             </div>

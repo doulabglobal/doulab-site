@@ -19,7 +19,6 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from '../b4-p2.module.css';
 
 export default function ClarityScanPage(): ReactNode {
   // JSON-LD schema
@@ -148,7 +147,7 @@ export default function ClarityScanPage(): ReactNode {
               <p>Receive your snapshot and next steps within two business days.</p>
             </article>
           </div>
-          <p className={`microcopy ${styles.microcopyTop}`}>
+          <p className={`microcopy ${'pages-b4-p2__microcopyTop'}`}>
             Note: ClarityScan® is a rapid read, not a full program diagnosis. For deeper assessments, see ClarityScan Plus
             or our <Link to="/services/innovation-maturity">IMM-P®</Link> programs.
           </p>

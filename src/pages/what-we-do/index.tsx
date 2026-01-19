@@ -7,7 +7,6 @@ import Heading from '@theme/Heading';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from '../b4-p1.module.css';
 
 // Icons (tree-shaken)
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -125,7 +124,7 @@ export default function WhatWeDo(): ReactNode {
         {/* In-page subnav (match Insights/Vigía style) */}
         <div className="container">
           <nav
-            className={`subnav ${styles.subnavLayout}`}
+            className={`subnav ${'pages-b4-p1__subnavLayout'}`}
             aria-label="In this page"
           >
             <a href="#who" data-cta="cta.whatwedo.anchor.who">Who is it for?</a>
@@ -280,18 +279,18 @@ export default function WhatWeDo(): ReactNode {
           <h2 id="numbers-title">Proof, by the numbers</h2>
           <div className="cardGrid">
             <div className="card">
-              <h3 className={styles.kpiValue}>12 + 12 weeks</h3>
-              <p className={styles.kpiLabel}><strong>Structured sprint cadence</strong></p>
+              <h3 className={'pages-b4-p1__kpiValue'}>12 + 12 weeks</h3>
+              <p className={'pages-b4-p1__kpiLabel'}><strong>Structured sprint cadence</strong></p>
               <p className="microcopy">Discovery and Validation → Efficiency and Scale</p>
             </div>
             <div className="card">
-              <h3 className={styles.kpiValue}>7</h3>
-              <p className={styles.kpiLabel}><strong>innovation labs co-created</strong></p>
+              <h3 className={'pages-b4-p1__kpiValue'}>7</h3>
+              <p className={'pages-b4-p1__kpiLabel'}><strong>innovation labs co-created</strong></p>
               <p className="microcopy">Public sector capacity building in 2024</p>
             </div>
             <div className="card">
-              <h3 className={styles.kpiValue}>2 to 4 per week</h3>
-              <p className={styles.kpiLabel}><strong>sessions for 12 months</strong></p>
+              <h3 className={'pages-b4-p1__kpiValue'}>2 to 4 per week</h3>
+              <p className={'pages-b4-p1__kpiLabel'}><strong>sessions for 12 months</strong></p>
               <p className="microcopy">Scaled capability build out</p>
             </div>
           </div>

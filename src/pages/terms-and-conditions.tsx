@@ -3,7 +3,6 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import PageHeader from '../components/PageHeader/PageHeader';
-import styles from './legal.module.css';
 
 export default function TermsAndConditions(): ReactNode {
   const pageTitle = 'Terms & Conditions | Doulab';
@@ -19,7 +18,7 @@ export default function TermsAndConditions(): ReactNode {
         <meta name="robots" content="noindex,follow" />
       </Head>
 
-      <main className={`container ${styles.main}`}>
+      <main className={`container ${'pages-legal__main'}`}>
         <PageHeader
           title="Terms & Policies"
           subtitle="This content now lives on the consolidated Privacy & Terms page."
@@ -36,7 +35,7 @@ export default function TermsAndConditions(): ReactNode {
           }}
         />
 
-        <div className={styles.forwardBody}>
+        <div className={'pages-legal__forwardBody'}>
           <p>
             This page is now consolidated into the Privacy &amp; Terms page to reduce duplication. Use the buttons above to jump to
             the Terms or Privacy sections.

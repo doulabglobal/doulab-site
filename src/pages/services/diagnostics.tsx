@@ -11,7 +11,6 @@ import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Users from 'lucide-react/dist/esm/icons/users';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from '../b4-p2.module.css';
 
 export default function DiagnosticsPage() {
     return (
@@ -34,10 +33,10 @@ export default function DiagnosticsPage() {
             <main>
                 {/* Hero */}
                 <section className="heroBanner" aria-labelledby="diagnostics-hero-title">
-                    <div className={styles.heroRow}>
-                        <div className={styles.heroCopy}>
+                    <div className={'pages-b4-p2__heroRow'}>
+                        <div className={'pages-b4-p2__heroCopy'}>
                             <h1 id="diagnostics-hero-title" className="heroTitle">Diagnostics</h1>
-                            <p className={`heroSubtitle ${styles.heroSubtitleJustify}`}>
+                            <p className={`heroSubtitle ${'pages-b4-p2__heroSubtitleJustify'}`}>
                                 Baseline capability. Reveal gaps. Act with confidence.
                             </p>
                             <p className="heroText">
@@ -54,7 +53,7 @@ export default function DiagnosticsPage() {
                             </div>
                         </div>
 
-                        <div className={styles.heroMedia}>
+                        <div className={'pages-b4-p2__heroMedia'}>
                             <picture>
                                 <source srcSet="/img/diagnostics-hero.avif" type="image/avif" />
                                 <source srcSet="/img/diagnostics-hero.webp" type="image/webp" />
@@ -74,7 +73,7 @@ export default function DiagnosticsPage() {
                 {/* What we offer */}
                 <section className="section" aria-labelledby="diagnostics-offer-title">
                     <h2 id="diagnostics-offer-title">What we offer</h2>
-                    <p className={`lead ${styles.leadMax}`}>
+                    <p className={`lead ${'pages-b4-p2__leadMax'}`}>
                         Three lightweight, privacy-first scans tailored to where you are — each producing a focused brief and a
                         <strong> 30/60/90-day action plan</strong>.
                     </p>
@@ -89,7 +88,7 @@ export default function DiagnosticsPage() {
                                 <li><strong>What we assess:</strong> strategy clarity &amp; OKRs; culture &amp; incentives; delivery cadence; results &amp; measurement.</li>
                                 <li><strong>Session:</strong> ≤ 30 minutes</li>
                             </ul>
-                            <div className={`cardFooter ${styles.cardFooterRow}`}>
+                            <div className={`cardFooter ${'pages-b4-p2__cardFooterRow'}`}>
                                 <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan">
                                     Run ClarityScan® →
                                 </Link>
@@ -133,7 +132,7 @@ export default function DiagnosticsPage() {
                     </div>
 
                     {/* Selection helper */}
-                    <div className={`lead ${styles.leadTop}`}>
+                    <div className={`lead ${'pages-b4-p2__leadTop'}`}>
                         <strong>Which scan fits?</strong> <br />
                         • Just need a fast maturity read? <em>ClarityScan®</em>. &nbsp;• Want to embed foresight? <em>Foresight Readiness</em>. &nbsp;• Delivery feels slow or unclear? <em>Operating Model Checkup</em>.
                     </div>
@@ -186,7 +185,7 @@ export default function DiagnosticsPage() {
                             <p>Concise brief you can share; aligned with MicroCanvas® 2.1 and IMM® terminology.</p>
                         </article>
                     </div>
-                    <p className={`lead ${styles.leadTop}`}>
+                    <p className={`lead ${'pages-b4-p2__leadTop'}`}>
                         Want to preview the format? <Link to="https://booking.doulab.net/briefing" data-cta="cta.diagnostics.sample_brief">Ask for a sample findings brief</Link>.
                     </p>
                 </section>
@@ -219,7 +218,7 @@ export default function DiagnosticsPage() {
                             <strong>Data handling:</strong> we only use information you provide for the diagnostic. No third-party trackers.
                             See our Privacy page for details.
                         </p>
-                        <div className={`heroCtas ${styles.ctaCenter}`}>
+                        <div className={`heroCtas ${'pages-b4-p2__ctaCenter'}`}>
                             <Link
                                 className="buttonPrimary"
                                 href={CLARITYSCAN_CHECKOUT_URL}
@@ -236,7 +235,7 @@ export default function DiagnosticsPage() {
 
                 {/* Trademark footnote */}
                 <section className="section" aria-hidden="true">
-                    <p className={styles.noteCenter}>
+                    <p className={'pages-b4-p2__noteCenter'}>
                         MicroCanvas® and IMM® are registered marks. ClarityScan® is a Doulab service mark.
                     </p>
                 </section>

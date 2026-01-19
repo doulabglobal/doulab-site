@@ -12,7 +12,6 @@ import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Radar from 'lucide-react/dist/esm/icons/radar';
-import styles from '../b4-p1.module.css';
 
 export default function ServicesPage(): ReactNode {
     return (
@@ -57,7 +56,7 @@ export default function ServicesPage(): ReactNode {
 
                 {/* Trusted line */}
                 <section className="section" aria-label="Trusted by">
-                    <p className={`sectionLead ${styles.centerText}`}>
+                    <p className={`sectionLead ${'pages-b4-p1__centerText'}`}>
                         Trusted by organizations like OGTIC, AFP Siembra, FUNDAPEC, and Alpha Inversiones.
                     </p>
                 </section>
@@ -75,7 +74,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Baseline maturity map (MCF 2.1 + IMM®)</li>
                                 <li>Gap analysis with prioritized next steps</li>
                             </ul>
-                            <div className={`cardFooter ${styles.cardFooterRow}`}>
+                            <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
                                     Run a diagnostic →
                                 </Link>

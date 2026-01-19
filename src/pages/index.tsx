@@ -7,7 +7,6 @@ import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import Hero from '../components/Hero';
 import FinalCta from '../components/FinalCta';
 import CaseStudyCards from '../components/case-studies/CaseStudyCards';
-import styles from './b4-p1.module.css';
 
 // Icons (tree-shaken imports)
 import type { LucideIcon } from 'lucide-react';
@@ -169,7 +168,7 @@ function ProblemSection() {
         common patterns we fix.
       </p>
 
-      <div className={styles.buttonRow}>
+      <div className={'pages-b4-p1__buttonRow'}>
         <button
           type="button"
           className="buttonSecondary"
@@ -196,7 +195,7 @@ function ProblemSection() {
             const Icon = item.Icon;
             return (
               <div
-                className={`card ${styles.problemCard}`}
+                className={`card ${'pages-b4-p1__problemCard'}`}
                 role="group"
                 aria-roledescription="slide"
                 key={idx}
@@ -231,10 +230,10 @@ function ProblemSection() {
       <p id={hintId} className="microcopy">Hint, use left and right arrows or scroll horizontally</p>
 
       {/* Centered follow-up block + CTAs */}
-      <div className={styles.centerText}>
+      <div className={'pages-b4-p1__centerText'}>
         <p className="sectionLead">If these resonate, start with a quick baseline.</p>
         <p className="microcopy">Get your baseline in 15 to 20 minutes, do not lose another cycle.</p>
-        <div className={`heroCtas ${styles.ctaRowCenter}`}>
+        <div className={`heroCtas ${'pages-b4-p1__ctaRowCenter'}`}>
           <Link
             to="/services/clarityscan"
             className="buttonPrimary"
@@ -244,7 +243,7 @@ function ProblemSection() {
             Start with ClarityScan®
           </Link>
         </div>
-        <div className={`heroCtas ${styles.ctaRowCenter} ${styles.ctaRowTight}`}>
+        <div className={`heroCtas ${'pages-b4-p1__ctaRowCenter'} ${'pages-b4-p1__ctaRowTight'}`}>
           <Link to="https://booking.doulab.net/discovery" className="buttonSecondary" data-cta="cta.home.problem.book_call">
             Book a discovery call
           </Link>
@@ -339,8 +338,8 @@ function NumbersStrip() {
       <div className="cardGrid">
         {items.map((x, i) => (
           <div className="card" key={i}>
-            <h3 className={styles.kpiValue}>{x.kpi}</h3>
-            <p className={styles.kpiLabel}><strong>{x.label}</strong></p>
+            <h3 className={'pages-b4-p1__kpiValue'}>{x.kpi}</h3>
+            <p className={'pages-b4-p1__kpiLabel'}><strong>{x.label}</strong></p>
             <p className="microcopy">{x.note}</p>
           </div>
         ))}
@@ -483,7 +482,7 @@ function ResearchResourcesSection() {
           width={1200}
           height={720}
           decoding="async"
-          className={styles.roundedMedia}
+          className={'pages-b4-p1__roundedMedia'}
         />
       </picture>
       <Lightbulb className="cardIcon" aria-hidden={true} />
@@ -522,7 +521,7 @@ function ResearchResourcesSection() {
         {mcfCard}
 
         {/* 2) Top 3 blog posts (client-only) */}
-        <div aria-live="polite" className={styles.displayContents}>
+        <div aria-live="polite" className={'pages-b4-p1__displayContents'}>
           {blogLoading ? (
             <div key="blog-loading" className="card" role="status" aria-busy="true">
               <Lightbulb className="cardIcon" aria-hidden={true} />
@@ -550,7 +549,7 @@ function ResearchResourcesSection() {
                     width={1200}
                     height={630}
                     decoding="async"
-                    className={styles.roundedMedia}
+                    className={'pages-b4-p1__roundedMedia'}
                   />
                 )}
                 <Lightbulb className="cardIcon" aria-hidden={true} />
@@ -627,7 +626,7 @@ function PrinciplesSection() {
   return (
     <section className="section homeHowWeWork" id="principles" aria-labelledby="principles-title">
       <h2 id="principles-title">Our Principles</h2>
-      <div className={`cardGrid ${styles.cardGridTight}`}>
+      <div className={`cardGrid ${'pages-b4-p1__cardGridTight'}`}>
         <div className="card">
           <Layers className="cardIcon" aria-hidden={true} />
           <h3>01. Modularity</h3>

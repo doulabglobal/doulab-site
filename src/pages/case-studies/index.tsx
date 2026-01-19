@@ -6,7 +6,6 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
-import styles from './case-studies.module.css';
 
 // Tree-shaken icons
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
@@ -89,7 +88,7 @@ export default function CaseStudies(): ReactNode {
         />
 
         {/* Outcome focus line under the hero */}
-        <p className={`microcopy ${styles.heroNote}`}>
+        <p className={`microcopy ${'pages-case-studies-case-studies__heroNote'}`}>
           We focus on decision latency, cycle time, and capability growth.
         </p>
 
@@ -104,7 +103,7 @@ export default function CaseStudies(): ReactNode {
         {/* How we measure progress */}
         <section className="section" id="method" aria-labelledby="method-title">
           <h2 id="method-title">How we measure progress</h2>
-          <p className={`microcopy ${styles.methodLead}`}>
+          <p className={`microcopy ${'pages-case-studies-case-studies__methodLead'}`}>
             Tracked across IMM-P® gates, <strong>Discovery → Validation → Efficiency → Scale</strong>.
           </p>
           <div className="cardGrid">
@@ -139,7 +138,7 @@ export default function CaseStudies(): ReactNode {
           </div>
 
           {/* Keep high-intent users moving */}
-          <p className={`microcopy ${styles.methodLink}`}>
+          <p className={`microcopy ${'pages-case-studies-case-studies__methodLink'}`}>
             Want the methods behind the cases?{' '}
             <a href="/docs/research-resources" data-cta="cta.cases.method.research">
               See all research →

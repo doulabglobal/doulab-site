@@ -678,14 +678,14 @@ a:hover {
             border-color: rgba(79,70,229,.35)
         }
 
-html.theme-dark .subnav a {
+:is(html.theme-dark, html[data-theme='dark']) .subnav a {
     background: #111318;
     border-color: rgba(255,255,255,.12);
     color: #c7cad1
 }
 
-    html.theme-dark .subnav a.subnavActive,
-    html.theme-dark .subnav a[aria-current="true"] {
+    :is(html.theme-dark, html[data-theme='dark']) .subnav a.subnavActive,
+    :is(html.theme-dark, html[data-theme='dark']) .subnav a[aria-current="true"] {
         background: #1a1d26;
         color: #e5e7eb;
         border-color: rgba(255,255,255,.2)
@@ -714,52 +714,52 @@ html.theme-dark .subnav a {
 }
 
 /* ===== Dark theme tweaks ===== */
-html.theme-dark .card, html.theme-dark .processStep {
+:is(html.theme-dark, html[data-theme='dark']) .card, :is(html.theme-dark, html[data-theme='dark']) .processStep {
     background: #111318;
     border-color: rgba(255,255,255,.12);
     box-shadow: none
 }
 
-html.theme-dark .cardFooter {
+:is(html.theme-dark, html[data-theme='dark']) .cardFooter {
     border-top-color: rgba(255,255,255,.12)
 }
 
-html.theme-dark .sectionLead, html.theme-dark .heroText {
+:is(html.theme-dark, html[data-theme='dark']) .sectionLead, :is(html.theme-dark, html[data-theme='dark']) .heroText {
     color: #e5e7eb
 }
 
-html.theme-dark .section p, html.theme-dark .card p, html.theme-dark .card li {
+:is(html.theme-dark, html[data-theme='dark']) .section p, :is(html.theme-dark, html[data-theme='dark']) .card p, :is(html.theme-dark, html[data-theme='dark']) .card li {
     color: #e5e7eb
 }
 
-html.theme-dark .card h3, html.theme-dark .card h4 {
+:is(html.theme-dark, html[data-theme='dark']) .card h3, :is(html.theme-dark, html[data-theme='dark']) .card h4 {
     color: #fff
 }
 
 /* Dark-mode: final CTA + secondary buttons */
-html.theme-dark .finalCta,
-html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta,
-html.theme-dark .markdown.doulabDoc .dl-finalCta {
+:is(html.theme-dark, html[data-theme='dark']) .finalCta,
+:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-finalCta,
+:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-finalCta {
     background: linear-gradient(180deg,#0f1220 0%,#0b0e19 100%);
     border-color: rgba(255,255,255,.12);
     box-shadow: none
 }
 
-html.theme-dark .buttonSecondary,
-html.theme-dark .dl-buttonSecondary {
+:is(html.theme-dark, html[data-theme='dark']) .buttonSecondary,
+:is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary {
     color: #e5e7eb;
     border-color: rgba(255,255,255,.24);
     background: transparent !important
 }
 
-    html.theme-dark .buttonSecondary:hover,
-    html.theme-dark .dl-buttonSecondary:hover {
+    :is(html.theme-dark, html[data-theme='dark']) .buttonSecondary:hover,
+    :is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary:hover {
         background: #1a1d26
     }
 
 /* Docs dark-mode card fix */
-html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
-html.theme-dark .markdown.doulabDoc .dl-cards > li {
+:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-cards > li,
+:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-cards > li {
     background: #111318;
     border-color: rgba(255,255,255,.12);
     box-shadow: none
@@ -779,7 +779,7 @@ html.theme-dark .markdown.doulabDoc .dl-cards > li {
     margin-bottom: .5rem
 }
 
-html.theme-dark .badge {
+:is(html.theme-dark, html[data-theme='dark']) .badge {
     background: #1a1d26;
     color: #c7cad1;
     border-color: rgba(255,255,255,.12)
@@ -799,7 +799,7 @@ html.theme-dark .badge {
     color: #3730a3
 }
 
-html.theme-dark .tag__name {
+:is(html.theme-dark, html[data-theme='dark']) .tag__name {
     background: #1a1d26;
     color: #e5e7eb;
     border: 1px solid rgba(255,255,255,.12)
@@ -808,95 +808,106 @@ html.theme-dark .tag__name {
 /* === Doulab dark-mode refinements (append last) ========================== */
 
 /* 1) Secondary CTAs: white text, no fill */
-html.theme-dark .buttonSecondary,
-html.theme-dark .dl-buttonSecondary {
+:is(html.theme-dark, html[data-theme='dark']) .buttonSecondary,
+:is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary {
     color: #fff !important;
     border-color: rgba(255,255,255,.32) !important;
     background: transparent !important;
 }
 
-    html.theme-dark .buttonSecondary:hover,
-    html.theme-dark .dl-buttonSecondary:hover {
+    :is(html.theme-dark, html[data-theme='dark']) .buttonSecondary:hover,
+    :is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary:hover {
         background: #1a1d26 !important;
     }
 
 /* 2) Body copy & leads: white (not gray) across sections/cards/rails */
-html.theme-dark .sectionLead,
-html.theme-dark .heroText {
+:is(html.theme-dark, html[data-theme='dark']) .sectionLead,
+:is(html.theme-dark, html[data-theme='dark']) .heroText {
     color: #fff !important;
 }
 
-html.theme-dark .section p,
-html.theme-dark .card p,
-html.theme-dark .processStep p,
-html.theme-dark .card li,
-html.theme-dark .section li {
+:is(html.theme-dark, html[data-theme='dark']) .section p,
+:is(html.theme-dark, html[data-theme='dark']) .card p,
+:is(html.theme-dark, html[data-theme='dark']) .processStep p,
+:is(html.theme-dark, html[data-theme='dark']) .card li,
+:is(html.theme-dark, html[data-theme='dark']) .section li {
     color: #fff !important;
 }
 
 /* 3) Final CTA: readable dark surface + clear text */
-html.theme-dark .finalCta {
+:is(html.theme-dark, html[data-theme='dark']) .finalCta {
     background: var(--ifm-background-surface-color) !important;
     border-color: var(--ifm-color-emphasis-200) !important;
     box-shadow: 0 8px 18px rgba(0,0,0,.35) !important;
 }
 
-    html.theme-dark .finalCta h2,
-    html.theme-dark .finalCta p {
+    :is(html.theme-dark, html[data-theme='dark']) .finalCta h2,
+    :is(html.theme-dark, html[data-theme='dark']) .finalCta p {
         color: #f3f4f6 !important;
     }
 
-/* Homepage: ensure "How we work" cards match dark surfaces */
-html.theme-dark .homeHowWeWork .card {
+/* Dark mode process rail cards */
+:is(html.theme-dark, html[data-theme='dark']) .processStep {
     background: var(--ifm-background-surface-color) !important;
     border-color: var(--ifm-color-emphasis-200) !important;
     box-shadow: 0 6px 14px rgba(0,0,0,.24) !important;
 }
 
-    html.theme-dark .homeHowWeWork .card h3,
-    html.theme-dark .homeHowWeWork .card p {
+    :is(html.theme-dark, html[data-theme='dark']) .processStep h3 {
+        color: #f3f4f6 !important;
+    }
+
+/* Homepage: ensure "How we work" cards match dark surfaces */
+:is(html.theme-dark, html[data-theme='dark']) .homeHowWeWork .card {
+    background: var(--ifm-background-surface-color) !important;
+    border-color: var(--ifm-color-emphasis-200) !important;
+    box-shadow: 0 6px 14px rgba(0,0,0,.24) !important;
+}
+
+    :is(html.theme-dark, html[data-theme='dark']) .homeHowWeWork .card h3,
+    :is(html.theme-dark, html[data-theme='dark']) .homeHowWeWork .card p {
         color: #e5e7eb !important;
     }
 
-html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta,
-html.theme-dark .markdown.doulabDoc .dl-finalCta {
+:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-finalCta,
+:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-finalCta {
     background: transparent !important;
     border-color: rgba(255,255,255,.24) !important;
     box-shadow: none !important;
 }
 
-    html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta h2,
-    html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta p {
+    :is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-finalCta h2,
+    :is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-finalCta p {
         color: #fff !important;
     }
 
 /* 4) Docs cards on Research & Resources: ensure dark surfaces */
-html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
-html.theme-dark .markdown.doulabDoc .dl-cards > li {
+:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-cards > li,
+:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-cards > li {
     background: #111318 !important;
     border-color: rgba(255,255,255,.12) !important;
     box-shadow: none !important;
 }
 /* Secondary buttons: white text by default in dark */
-html.theme-dark .buttonSecondary,
-html.theme-dark .dl-buttonSecondary,
-html.theme-dark .btn-secondary {
+:is(html.theme-dark, html[data-theme='dark']) .buttonSecondary,
+:is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary,
+:is(html.theme-dark, html[data-theme='dark']) .btn-secondary {
     color: #fff;
     border-color: rgba(255,255,255,.24);
 }
 
 /* Body copy contrast in dark: sections, cards, process steps */
-html.theme-dark .sectionLead,
-html.theme-dark .heroText,
-html.theme-dark .card p,
-html.theme-dark .processStep p {
+:is(html.theme-dark, html[data-theme='dark']) .sectionLead,
+:is(html.theme-dark, html[data-theme='dark']) .heroText,
+:is(html.theme-dark, html[data-theme='dark']) .card p,
+:is(html.theme-dark, html[data-theme='dark']) .processStep p {
     color: #e5e7eb;
 }
 
 
 /* Docs: card + CTA blocks in dark stay dark (no white fill) */
-html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
-html.theme-dark .markdown.doulabDoc .dl-cards > li {
+:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-cards > li,
+:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-cards > li {
     background: #111318;
     border-color: rgba(255,255,255,.12);
     box-shadow: none;
@@ -953,3 +964,4 @@ html[data-theme='dark'] .mermaid svg .note {
 
 /* Keep diagrams responsive */
 .mermaid svg { max-width: 100%; height: auto; }
+

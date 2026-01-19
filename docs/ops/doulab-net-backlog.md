@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: C9/C10 complete; C3/C5/C11 pending.
-Phase D status: D0 intake; D1 blocked; D2-D8 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D9 complete (commit mapping pending).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -541,3 +541,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Final CTA uses a dark surface with readable text in dark mode.
 - Status: Done
 - Commits: c272c6c
+
+### D9
+- Description: Fix dark-mode selector mismatch (html.theme-dark vs html[data-theme='dark']).
+- Rationale: Ensure dark-mode overrides apply consistently across Docusaurus.
+- Acceptance criteria:
+  - Dark mode selectors apply for both html.theme-dark and html[data-theme='dark'].
+  - Process rail tiles and Final CTA render with dark surfaces.
+- Notes: DOM attribute not verified; selectors updated to cover both cases.
+- Status: Done
+- Commits: TBD

@@ -286,6 +286,52 @@
     text-decoration: none
 }
 
+/* Blog CTA cards (editorial, minimal) */
+.ctaCardGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+}
+
+@media (max-width: 996px) {
+    .ctaCardGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ctaCard {
+    border: 1px solid var(--ifm-color-emphasis-300);
+    border-radius: 16px;
+    padding: 16px;
+    background: var(--ifm-background-surface-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.ctaCardTitle {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.ctaCardBody {
+    color: var(--ifm-color-emphasis-700);
+    margin-bottom: 12px;
+}
+
+/* NNY blog hero (Quiet Image) */
+.nnyHero {
+    margin: 24px 0 8px;
+}
+
+.nnyHero--image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    border: 1px solid var(--ifm-color-emphasis-300);
+}
+
 .cardCta {
     display: inline-block;
     padding: .5rem .9rem;

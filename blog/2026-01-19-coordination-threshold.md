@@ -16,12 +16,21 @@ keywords:
   - institutional learning
   - policy and innovation systems
 hide_table_of_contents: false
-image: /img/social/2026-01-19-coordination-threshold.jpg
+image: /img/blog/2026/2026-01-19-coordination-threshold-hero.png
 ---
 
 > **TL;DR** — Many startup ecosystems generate increasing activity but struggle to compound results over time. Once ecosystems reach a certain scale, **coordination capacity, governance arrangements, and innovation maturity** become binding constraints. Without shared learning, progression logic, and institutional continuity, outcomes reset between cohorts instead of accumulating across them.
 
 <!--truncate-->
+
+<div className="nnyHero nnyHero--image">
+  <img
+    src="/img/blog/2026/2026-01-19-coordination-threshold-hero.png"
+    alt="Editorial hero: coordination threshold in startup ecosystems"
+    loading="eager"
+  />
+</div>
+
 
 ## Summary
 - Many startup ecosystems, particularly in Latin America and the Caribbean, show strong entrepreneurial momentum and increasing activity.
@@ -71,8 +80,8 @@ flowchart LR
 ```
 :::
 
-Key arguments
-1) Activity scales faster than outcomes
+## Key arguments
+### 1) Activity scales faster than outcomes
 A plausible interpretation is not a shortage of ideas or talent, but weak compounding across programs (Stam, 2015).
 
 CARIBEquity identifies several constraints that plausibly interrupt compounding, including limited ecosystem connectedness, uneven mentorship capacity, early-stage funding readiness, and regulatory frictions (CARIBEquity, 2025). OECD research similarly emphasizes that fragmented incubation and acceleration systems reduce navigability and weaken post-program continuity (OECD, 2024).
@@ -90,7 +99,7 @@ xychart-beta
 ```
 :::
 
-2) Coordination costs rise as interdependence increases
+### 2) Coordination costs rise as interdependence increases
 As ecosystems grow, coordination shifts from optional to essential.
 
 Historically, ecosystem coordination in Latin America has been largely informal. This approach functioned reasonably well when ecosystems were small and relatively homogeneous.
@@ -119,7 +128,7 @@ flowchart TB
 ```
 :::
 
-3) Innovation maturity explains discontinuity
+### 3) Innovation maturity explains discontinuity
 Considerable attention is rightly given to founders. However, ecosystem-level outcomes depend not only on startup capability, but on the maturity of the surrounding system.
 
 Here, innovation maturity is used descriptively, as a way to interpret system readiness and alignment, not as a normative ranking or certification. When programs emphasize ideation and early validation without corresponding attention to efficiency, scaling, and continuous improvement, startups are repeatedly asked to re-prove what has already been validated elsewhere.
@@ -145,12 +154,12 @@ quadrantChart
 ```
 :::
 
-From diagnosis to interpretation
+## From diagnosis to interpretation
 Taken together, these patterns suggest that the binding constraint is no longer entrepreneurial activity itself, but how ecosystems coordinate learning, progression, and decision-making as they grow.
 
 At this stage, adding more isolated programs, contests, or events tends to produce diminishing returns. The literature increasingly treats coordination and governance as ecosystem capabilities requiring deliberate design rather than informal emergence (Cao, 2025; Könnölä et al., 2021).
 
-Frameworks as lenses, not solutions
+## Frameworks as lenses, not solutions
 If the challenge is structural rather than episodic, then analytical lenses are required to make structure visible before attempting change.
 
 MicroCanvas Framework (MCF 2.2) provides a shared language for problem definition, evidence, and decision traceability across actors.
@@ -161,19 +170,30 @@ Vigía Futura introduces foresight and sensing to support anticipatory governanc
 
 Together, these lenses shift attention from isolated activities to ecosystem capability as a whole.
 
-What this perspective does not claim
+## What this perspective does not claim
 This perspective does not replace markets, capital formation, policy reform, or founder execution. It does not assume centralized control, require new institutions, or guarantee outcomes.
 
 Architecture and innovation maturity are treated as enablers, not determinants.
 
-Conclusion
+## Conclusion
 Many startup ecosystems now appear to be crossing a threshold where coordination, learning continuity, and maturity matter as much as—if not more than—activity.
 
 Recognizing this transition helps explain why momentum sometimes plateaus despite continued effort, particularly when individual success stories obscure systemic constraints. Approaches such as VIF represent one way to think about supporting this next phase—by design rather than accumulation.
 
-<div className="ctaCardGrid"> <div className="ctaCard"> <div className="ctaCardTitle">Prefer a briefing?</div> <div className="ctaCardBody">Use the briefing route if you already have context and want to align on next steps.</div> <a className="button button--primary" href="https://booking.doulab.net/briefing">Request a briefing</a> </div> <div className="ctaCard"> <div className="ctaCardTitle">Starting from zero?</div> <div className="ctaCardBody">Book a discovery call to map constraints, goals, and the recommended path forward.</div> <a className="button button--secondary" href="https://booking.doulab.net/discovery">Book a discovery call</a> </div> </div>
+<div className="ctaCardGrid">
+  <div className="ctaCard">
+    <div className="ctaCardTitle">Prefer a briefing?</div>
+    <div className="ctaCardBody">Use the briefing route if you already have context and want to align on next steps.</div>
+    <a className="button button--primary" href="https://booking.doulab.net/briefing">Request a briefing</a>
+  </div>
+  <div className="ctaCard">
+    <div className="ctaCardTitle">Starting from zero?</div>
+    <div className="ctaCardBody">Book a discovery call to map constraints, goals, and the recommended path forward.</div>
+    <a className="button button--secondary" href="https://booking.doulab.net/discovery">Book a discovery call</a>
+  </div>
+</div>
 
-References
+## References
 CARIBEquity (2025). CARIBEquity Regional Ecosystem Report I: Assessment. IDB Lab & European Union.
 
 CARIBEquity (2025). CARIBEquity Regional Ecosystem Report II: Recommendations. IDB Lab & European Union.

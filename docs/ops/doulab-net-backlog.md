@@ -624,7 +624,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - src/theme/NotFound/Content renders src/pages/404.tsx.
   - Unknown routes display the custom 404 UI.
 - Status: Done
-- Commits: d1291a8, 727366a
+- Commits: d1291a8, 727366a, 03e9f1a
 
 ### D18
 - Description: Normalize /services/custom-workshops card CTA button sizing.
@@ -632,7 +632,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - CTA buttons in workshop format cards are equal width/height.
 - Status: Done
-- Commits: d1291a8
+- Commits: d1291a8, 727366a, 03e9f1a
 
 ### D19
 - Description: Homologate blog card colors to Doulab card system.
@@ -640,4 +640,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Blog cards match Doulab card styling in light/dark modes.
 - Status: Done
-- Commits: d1291a8
+- Commits: d1291a8, 727366a, 03e9f1a

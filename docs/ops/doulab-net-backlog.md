@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: C9/C10 complete; C3/C5/C11 pending.
-Phase D status: D0 intake; D1 blocked (robots source unknown).
+Phase D status: D0 intake; D1 blocked; D2-D6 complete (commit mapping pending).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -482,3 +482,45 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Status: Blocked (robots.txt not found; source unknown)
 - Notes: robots.txt not found in repo; likely Cloudflare/edge-generated.
 - Commits: 81a261d
+
+
+### D2
+- Description: Dark mode styling for the "Ready to make innovation repeatable?" CTA component.
+- Rationale: Ensure CTA readability and contrast in dark mode.
+- Acceptance criteria:
+  - CTA surface and text are readable in dark mode without light-mode regressions.
+- Status: Done
+- Commits: TBD
+
+### D3
+- Description: Sitewide canonical booking link audit + normalization.
+- Rationale: Ensure conversion CTAs use canonical booking routes.
+- Acceptance criteria:
+  - Booking CTAs point to canonical booking.doulab.net routes.
+  - ClarityScan paid-first links remain Stripe Checkout.
+- Status: Done
+- Commits: TBD
+
+### D4
+- Description: Blog Mermaid/diagram theme parity (dark/light).
+- Rationale: Ensure diagram readability across color modes.
+- Acceptance criteria:
+  - Mermaid diagrams render with readable contrast in light and dark.
+- Status: Done
+- Commits: TBD
+
+### D5
+- Description: Replace SQL/Sheets instrumentation example with diagram in clarityscan-decision-latency.
+- Rationale: Use an illustrative diagram instead of SQL snippet.
+- Acceptance criteria:
+  - Section contains a Mermaid diagram that reflects the instrumentation flow.
+- Status: Done
+- Commits: TBD
+
+### D6
+- Description: Blog booking/service CTA link audit + consistency pass.
+- Rationale: Remove stale booking links in blog entries.
+- Acceptance criteria:
+  - Blog conversion CTAs use canonical booking routes.
+- Status: Done
+- Commits: TBD

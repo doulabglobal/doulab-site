@@ -33,7 +33,7 @@ We created [**ClarityScan®**](/services/clarityscan) to shorten that gap. In **
 
 In a 2025 [report](https://www.gallup.com/workplace/653386/state-of-the-global-workplace-2025.aspx), Gallup estimated that _“low engagement costs the global economy US$9.6 trillion, or 9% of global GDP.”_ When people aren’t engaged and clarity is thin, organizations **hesitate**. Hours become days and days become weeks while opportunities slip and risks accumulate. That’s the cost of latency you can feel at work. If you’ve been here, you’ve seen how people stop engaging and the purpose of the innovation drifts.
 
-That’s why we created ClarityScan® — [book your baseline today](https://booking.doulab.net/clarityscan).
+That’s why we created ClarityScan® — [book your baseline today](https://buy.stripe.com/28E00jdhCanL5Hb3xmcZa00).
 
 ### Let’s talk about failure
 Early in my engineering career, I kept hearing the same sobering stats: *“90% of IT projects fail,” “95% of transformation efforts fall short,” “90–97% of startups fail within five years.”* Different contexts, same result: wasted energy and missed opportunities. According to McKinsey, _“when corporations launch transformations, roughly 70 percent fail.”_
@@ -91,7 +91,7 @@ Instrument latency by adding **decision_requested_at** and **decision_committed_
 
 *ClarityScan® baseline — the first step in reducing decision latency.*
 
-> **Book your baseline now:** [Schedule a ClarityScan®](https://booking.doulab.net/clarityscan)
+> **Book your baseline now:** [Schedule a ClarityScan®](https://buy.stripe.com/28E00jdhCanL5Hb3xmcZa00)
 
 But let's now move to what ClarityScan® is and how it can reduce decision latency.
 
@@ -237,16 +237,13 @@ And this is our recommendation of simple KPIs most organizations should add to t
 - **% decisions reviewed on schedule**  
 - **Escalation rule:** any decision **stuck >14 days** escalates with its 1‑page evidence pack.
 
-:::tip[SQL/Sheets instrumentation example]
-```sql
--- Minimal SQL example to compute weekly median decision latency
-SELECT
-  DATE_TRUNC('week', decision_requested_at) AS week_start,
-  PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY EXTRACT(EPOCH FROM (decision_committed_at - decision_requested_at))/86400) AS median_days
-FROM decisions
-WHERE decision_committed_at IS NOT NULL
-GROUP BY week_start
-ORDER BY week_start;
+:::tip[Instrumentation example]
+```mermaid
+flowchart LR
+  A[Decision event captured] --> B[Tracker timestamps]
+  B --> C[Sheets/DB storage]
+  C --> D[Weekly median latency calc]
+  D --> E[Dashboard / review]
 ```
 Use two timestamp fields (`decision_requested_at`, `decision_committed_at`) in your tracker or spreadsheet. Compute weekly medians to see improvement trends.
 :::
@@ -282,7 +279,7 @@ That small loop is the engine of momentum. It repeats across teams and scales in
 
 ## Where it fits (and what comes next)
 
-- Start with **[ClarityScan®](/services/clarityscan)** for the baseline and priority, or **[book a ClarityScan® online](https://booking.doulab.net/clarityscan)**.  
+- Start with **[ClarityScan®](/services/clarityscan)** for the baseline and priority, or **[book a ClarityScan® online](https://buy.stripe.com/28E00jdhCanL5Hb3xmcZa00)**.  
 - If you need more depth, book a **[half‑day workshop](/services/custom-workshops)** to align stakeholders and turn the plan into action.  
 - If your innovation requires close guidance or if you want to establish your organization’s innovation journey, evaluate **[IMM‑P®](/services/innovation-maturity)** to install operating rhythms, governance, and instrumentation.  
 - Explore more insights in our **[Research & Resources](/docs/research-resources)**.  

@@ -245,7 +245,7 @@ function ProblemSection() {
           </Link>
         </div>
         <div className={`heroCtas ${styles.ctaRowCenter} ${styles.ctaRowTight}`}>
-          <Link to="/contact" className="buttonSecondary" data-cta="cta.home.problem.book_call">
+          <Link to="https://booking.doulab.net/discovery" className="buttonSecondary" data-cta="cta.home.problem.book_call">
             Book a discovery call
           </Link>
         </div>
@@ -714,7 +714,7 @@ export default function Home(): ReactNode {
           dataCta: 'cta.home.hero.clarityscan',
           ariaLabel: 'Start with ClarityScan, quick 15 to 20 minute baseline',
         }}
-        secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.hero.book_call' }}
+        secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Book a discovery call', dataCta: 'cta.home.hero.book_call' }}
         ctaNote="Get your baseline in 15 to 20 minutes."
         eager
       />
@@ -734,7 +734,7 @@ export default function Home(): ReactNode {
           title="Ready to make innovation repeatable?"
           body="Start with a quick diagnostic or book a discovery call. We track decision latency, cycle time, and capability growth. We will meet you where you are and co-create the path forward."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.home.final.clarityscan' }}
-          secondaryCta={{ to: '/contact', label: 'Book a discovery call', dataCta: 'cta.home.final.book_call' }}
+          secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Book a discovery call', dataCta: 'cta.home.final.book_call' }}
           ctaNote="Get your baseline in 15 to 20 minutes."
         />
       </main>

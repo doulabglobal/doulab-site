@@ -834,8 +834,18 @@ html.theme-dark .section li {
     color: #fff !important;
 }
 
-/* 3) Final CTA: transparent background + white text */
-html.theme-dark .finalCta,
+/* 3) Final CTA: readable dark surface + clear text */
+html.theme-dark .finalCta {
+    background: #0f1220 !important;
+    border-color: rgba(255,255,255,.18) !important;
+    box-shadow: 0 8px 18px rgba(0,0,0,.35) !important;
+}
+
+    html.theme-dark .finalCta h2,
+    html.theme-dark .finalCta p {
+        color: #f3f4f6 !important;
+    }
+
 html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta,
 html.theme-dark .markdown.doulabDoc .dl-finalCta {
     background: transparent !important;
@@ -843,8 +853,6 @@ html.theme-dark .markdown.doulabDoc .dl-finalCta {
     box-shadow: none !important;
 }
 
-    html.theme-dark .finalCta h2,
-    html.theme-dark .finalCta p,
     html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta h2,
     html.theme-dark .theme-doc-markdown.doulabDoc .dl-finalCta p {
         color: #fff !important;
@@ -873,17 +881,6 @@ html.theme-dark .processStep p {
     color: #e5e7eb;
 }
 
-/* Final CTA in dark: transparent bg + white text */
-html.theme-dark .finalCta {
-    background: transparent;
-    color: #e5e7eb;
-    border-color: rgba(255,255,255,.12);
-}
-
-    html.theme-dark .finalCta h2,
-    html.theme-dark .finalCta p {
-        color: #e5e7eb;
-    }
 
 /* Docs: card + CTA blocks in dark stay dark (no white fill) */
 html.theme-dark .theme-doc-markdown.doulabDoc .dl-cards > li,
@@ -919,6 +916,20 @@ html.theme-dark .markdown.doulabDoc .dl-cards > li {
 .mermaid svg text {
   font-size: 16px !important;
   fill: var(--ifm-font-color-base) !important;
+}
+
+/* Mermaid surface/frame for light/dark parity */
+.mermaid {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+html[data-theme='dark'] .mermaid {
+  background: #0f1117;
+  border-color: rgba(255,255,255,.18);
 }
 
 /* Ensure boxes/actors in dark mode keep good contrast */

@@ -75,7 +75,7 @@ export default function ClarityScanPage(): ReactNode {
             ariaLabel: 'Book a ClarityScan online via Stripe Checkout',
             external: true,
           }}
-          secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
+          secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
 
@@ -166,7 +166,7 @@ export default function ClarityScanPage(): ReactNode {
             dataCta: 'cta.services.clarityscan.final.book_clarityscan_booking',
             newTab: true,
           }}
-          secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.clarityscan.final.contact' }}
+          secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us', dataCta: 'cta.services.clarityscan.final.contact' }}
           ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
         />
       </main>

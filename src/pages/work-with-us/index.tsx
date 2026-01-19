@@ -167,7 +167,7 @@ export default function WorkWithUsPage(): JSX.Element {
                             </p>
                             <div className="cardFooter">
                                 <Link
-                                    to="/contact"
+                                    to="https://booking.doulab.net/discovery"
                                     className="cardCta"
                                     data-cta="wwu_start_call"
                                     data-section="wwu"
@@ -313,7 +313,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                 Start with ClarityScan®
                             </Link>
                             <Link
-                                to="/contact"
+                                to="https://booking.doulab.net/discovery"
                                 className="buttonSecondary"
                                 data-cta="wwu_footer_contact"
                                 data-section="wwu"
@@ -329,7 +329,6 @@ export default function WorkWithUsPage(): JSX.Element {
         </Layout>
     );
 }
-
 
 
 

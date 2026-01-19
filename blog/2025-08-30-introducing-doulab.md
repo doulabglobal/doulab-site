@@ -21,7 +21,7 @@ We started **Doulab** to answer a stubborn question: *How do you make innovation
 
 Our purpose is simple: **help unlock global prosperity by helping others create better futures**. In practice, that means making innovation **repeatable** and foresight **practical**—so plans become outcomes you can measure.
 
-**Default next step:** get a baseline in **15–20 minutes** with **[ClarityScan®](/services/clarityscan)**, or **[book a short discovery call](/contact)**.
+**Default next step:** get a baseline in **15–20 minutes** with **[ClarityScan®](/services/clarityscan)**, or **[book a short discovery call](https://booking.doulab.net/discovery)**.
 
 <!-- truncate -->
 
@@ -164,9 +164,9 @@ Yes. We’ve adapted MCF + IMM for public contexts (e.g., **RedLab**) where gove
 ## Start here
 
 Prefer proof before plans? **[Get your baseline with ClarityScan®](/services/clarityscan)** and see exactly where to focus.  
-Prefer a conversation? **[Book a discovery call](/contact)** and we’ll map goals, constraints, and a fit-for-purpose path.
+Prefer a conversation? **[Book a discovery call](https://booking.doulab.net/discovery)** and we’ll map goals, constraints, and a fit-for-purpose path.
 
 <div className="btn-row" style={{marginTop: '0.5rem'}}>
   <a className="btn-primary" href="/services/clarityscan" aria-label="Get your baseline with ClarityScan">Get your baseline</a>
-  <a className="btn-secondary" href="/contact" aria-label="Talk to Doulab">Talk to us</a>
+  <a className="btn-secondary" href="https://booking.doulab.net/discovery" aria-label="Talk to Doulab">Talk to us</a>
 </div>

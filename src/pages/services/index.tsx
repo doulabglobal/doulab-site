@@ -158,7 +158,7 @@ export default function ServicesPage(): ReactNode {
                     title="Ready to make innovation repeatable?"
                     body="Start with a quick diagnostic or book a discovery call. We'll co-create the path from insight to results."
                     primaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic', newTab: true }}
-                    secondaryCta={{ to: '/contact', label: 'Talk to us', dataCta: 'cta.services.final.contact' }}
+                    secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us', dataCta: 'cta.services.final.contact' }}
                 />
             </main>
         </Layout>

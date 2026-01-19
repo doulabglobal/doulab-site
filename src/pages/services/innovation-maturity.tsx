@@ -372,7 +372,7 @@ export default function InnovationMaturityProgram(): ReactNode {
 
             <details className="card">
               <summary><strong>How is pricing structured?</strong></summary>
-              <p>Scope-based. We’ll shape a right-sized plan during intake. <Link to="/contact">Talk to us</Link>.</p>
+              <p>Scope-based. We’ll shape a right-sized plan during intake. <Link to="https://booking.doulab.net/discovery">Talk to us</Link>.</p>
             </details>
 
             <details className="card">
@@ -408,4 +408,3 @@ export default function InnovationMaturityProgram(): ReactNode {
     </Layout>
   );
 }
-

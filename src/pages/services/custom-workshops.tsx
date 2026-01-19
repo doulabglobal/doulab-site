@@ -153,7 +153,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <p className="microcopy">Default content can be customized during our first discovery call.</p>
               <p className="microcopy">Typically schedules within 1–2 weeks.</p>
               <div className="cardFooter">
-                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.halfday.brief">
+                <Link to="https://booking.doulab.net/discovery" className="cardCta" data-cta="cta.services.workshops.formats.halfday.brief">
                   Start a half-day brief →
                 </Link>
                 <a
@@ -187,7 +187,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <p className="microcopy">Default content can be customized during our first discovery call.</p>
               <p className="microcopy">Typically schedules within 1–2 weeks.</p>
               <div className="cardFooter">
-                <Link to="/contact" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">
+                <Link to="https://booking.doulab.net/discovery" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">
                   Start a full-day brief →
                 </Link>
                 <Link
@@ -224,7 +224,7 @@ export default function CustomWorkshopsPage(): ReactNode {
                   View workshop details →
                 </Link>
                 <Link
-                  to="/contact"
+                  to="https://booking.doulab.net/discovery"
                   className="cardCta"
                   data-cta="cta.services.workshops.formats.innovation_readiness.brief"
                   aria-label="Start a brief for the Innovation Readiness & Governance Workshop"

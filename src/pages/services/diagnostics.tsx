@@ -48,7 +48,7 @@ export default function DiagnosticsPage() {
                                 <Link className="buttonPrimary" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.hero.clarityscan">
                                     Start with ClarityScan®
                                 </Link>
-                                <Link className="buttonSecondary" to="/contact" data-cta="cta.diagnostics.hero.contact">
+                                <Link className="buttonSecondary" to="https://booking.doulab.net/discovery" data-cta="cta.diagnostics.hero.contact">
                                     Talk to us
                                 </Link>
                             </div>
@@ -187,7 +187,7 @@ export default function DiagnosticsPage() {
                         </article>
                     </div>
                     <p className={`lead ${styles.leadTop}`}>
-                        Want to preview the format? <Link to="/contact" data-cta="cta.diagnostics.sample_brief">Ask for a sample findings brief</Link>.
+                        Want to preview the format? <Link to="https://booking.doulab.net/briefing" data-cta="cta.diagnostics.sample_brief">Ask for a sample findings brief</Link>.
                     </p>
                 </section>
 
@@ -227,7 +227,7 @@ export default function DiagnosticsPage() {
                             >
                                 Start ClarityScan®
                             </Link>
-                            <Link className="buttonSecondary" to="/contact" data-cta="cta.diagnostics.final.contact">
+                            <Link className="buttonSecondary" to="https://booking.doulab.net/discovery" data-cta="cta.diagnostics.final.contact">
                                 Talk to us
                             </Link>
                         </div>

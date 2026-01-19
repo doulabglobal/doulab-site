@@ -154,7 +154,7 @@ export default function CoachingMentoringPage(): ReactNode {
                 <li><strong>1 async hour</strong> / month</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.lite">
+                <Link className="cardCta" to="https://booking.doulab.net/discovery" data-cta="cta.services.coaching.retainer.lite">
                   Enquire about Lite →
                 </Link>
               </div>
@@ -169,7 +169,7 @@ export default function CoachingMentoringPage(): ReactNode {
                 <li><strong>2 async hours</strong> / month</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.standard">
+                <Link className="cardCta" to="https://booking.doulab.net/discovery" data-cta="cta.services.coaching.retainer.standard">
                   Enquire about Standard →
                 </Link>
               </div>
@@ -184,7 +184,7 @@ export default function CoachingMentoringPage(): ReactNode {
                 <li><strong>3 async hours</strong> / month</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.pro">
+                <Link className="cardCta" to="https://booking.doulab.net/discovery" data-cta="cta.services.coaching.retainer.pro">
                   Enquire about Pro →
                 </Link>
               </div>
@@ -199,7 +199,7 @@ export default function CoachingMentoringPage(): ReactNode {
                 <li><strong>4 async hours</strong> / month</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="/contact" data-cta="cta.services.coaching.retainer.enterprise">
+                <Link className="cardCta" to="https://booking.doulab.net/discovery" data-cta="cta.services.coaching.retainer.enterprise">
                   Enquire about Enterprise →
                 </Link>
               </div>

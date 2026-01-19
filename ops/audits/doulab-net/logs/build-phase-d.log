@@ -1,0 +1,16 @@
+
+> doulab.site@0.9.0 prebuild
+> node scripts/strip-bom.cjs
+
+
+> doulab.site@0.9.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[WARNING] Tags [ecosystems, governance, coordination, innovation-maturity, caribbean] used in 2026-01-19-coordination-threshold.md are not defined in tags.yml
+[90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mΓä╣[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Server: Compiled successfully in 4.22s
+[90m[[90mwebpackbar[90m][39m [32mΓ£ö[39m Client: Compiled successfully in 1.29m
+[SUCCESS] Generated static files in "build".
+[INFO] Use `npm run serve` command to test your build locally.

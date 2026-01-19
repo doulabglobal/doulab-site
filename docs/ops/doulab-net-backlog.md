@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D10 complete (commit mapping pending).
+Phase D status: D0 intake; D1 blocked; D2-D10 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -560,4 +560,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - ClarityScan remains paid-first via Stripe Checkout.
   - No direct calendar provider URLs remain for conversion intents.
 - Status: Done
-- Commits: TBD
+- Commits: 5e53b64

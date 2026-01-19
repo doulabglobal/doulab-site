@@ -131,7 +131,7 @@ export default function CustomWorkshopsPage(): ReactNode {
         </section>
 
         {/* Formats */}
-        <section className="section" id="cw-formats" aria-labelledby="cw-formats-title">
+        <section className="section customWorkshopsFormats" id="cw-formats" aria-labelledby="cw-formats-title">
           <h2 id="cw-formats-title">Workshop formats</h2>
           <div className="cardGrid">
             {/* Half-day custom */}

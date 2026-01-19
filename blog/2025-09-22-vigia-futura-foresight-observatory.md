@@ -222,4 +222,4 @@ Join us now as a founding partner:
 
 Early partners will gain first access to data, shape the indices design, and position themselves as leaders in regional foresight.
 
-📅 Book a discovery session with our team and explore how Vigía Futura can help your organization lead, not follow, in shaping the futures of Latin America and the Caribbean.
+📅 [Book a discovery session](https://booking.doulab.net/discovery) with our team and explore how Vigía Futura can help your organization lead, not follow, in shaping the futures of Latin America and the Caribbean.

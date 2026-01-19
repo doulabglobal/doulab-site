@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D9 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D10 complete (commit mapping pending).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -551,3 +551,13 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Notes: DOM attribute not verified; selectors updated to cover both cases.
 - Status: Done
 - Commits: d48006a
+
+### D10
+- Description: Sitewide booking-link audit + normalization (blog, services, shared CTAs).
+- Rationale: Ensure booking CTAs point to canonical routes and avoid stale provider URLs.
+- Acceptance criteria:
+  - Booking CTAs use canonical booking.doulab.net routes for briefing/discovery/workshops.
+  - ClarityScan remains paid-first via Stripe Checkout.
+  - No direct calendar provider URLs remain for conversion intents.
+- Status: Done
+- Commits: TBD

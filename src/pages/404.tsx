@@ -17,7 +17,7 @@ export default function NotFound() {
           subtitle="The link you followed doesn’t exist, but we can get you back on track."
           primaryCta={{
             label: 'Book',
-            to: 'https://booking.doulab.net/',
+            to: 'https://booking.doulab.net/discovery',
             external: true,
             dataCta: 'cta.404.book',
             ariaLabel: 'Book with Doulab',

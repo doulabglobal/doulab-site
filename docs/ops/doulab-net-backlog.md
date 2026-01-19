@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: C9/C10 complete; C3/C5/C11 pending.
-Phase D status: D0 intake; D1 blocked; D2-D6 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D8 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -531,7 +531,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Blog posts no longer display "Edit this page" links.
 - Status: Done
-- Commits: TBD
+- Commits: c272c6c
 
 ### D8
 - Description: Homepage dark-mode surface parity for "How we work" cards and final CTA.
@@ -540,4 +540,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - "How we work" cards use dark surfaces in dark mode.
   - Final CTA uses a dark surface with readable text in dark mode.
 - Status: Done
-- Commits: TBD
+- Commits: c272c6c

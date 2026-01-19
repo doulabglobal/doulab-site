@@ -1,15 +1,27 @@
 ---
-title: From Activation to Continuity: Why Startup Ecosystem Outcomes Plateau
-description: Why startup ecosystems in Latin America and the Caribbean often struggle to compound outcomes beyond early activation—and how to interpret the plateau through coordination, governance, and maturity.
-tags:
-  - ecosystems
-  - latin-america
-  - caribbean
-  - innovation
-  - governance
-  - coordination
-  - maturity
+title: "From Potential to Capability: when startup ecosystems hit their coordination threshold"
+description: "Why startup ecosystems often plateau after early activation — and how coordination, governance, and innovation maturity explain the break in compounding outcomes."
+slug: /coordination-threshold-ecosystems
+authors: [luis]
+tags: [ecosystems, governance, coordination, innovation-maturity, latin-america, caribbean]
+keywords:
+  - startup ecosystems
+  - coordination capacity
+  - innovation maturity
+  - ecosystem governance
+  - compounding outcomes
+  - latin america innovation
+  - caribbean ecosystems
+  - incubation and acceleration
+  - institutional learning
+  - policy and innovation systems
+hide_table_of_contents: false
+image: /img/social/2026-01-19-coordination-threshold.jpg
 ---
+
+> **TL;DR** — Many startup ecosystems generate increasing activity but struggle to compound results over time. Once ecosystems reach a certain scale, **coordination capacity, governance arrangements, and innovation maturity** become binding constraints. Without shared learning, progression logic, and institutional continuity, outcomes reset between cohorts instead of accumulating across them.
+
+<!--truncate-->
 
 ## Summary
 - Many startup ecosystems, particularly in Latin America and the Caribbean, show strong entrepreneurial momentum and increasing activity.

@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: C9/C10 complete; C3/C5/C11 pending.
-Phase D status: D0 intake; D1 blocked; D2-D6 complete (commit mapping pending).
+Phase D status: D0 intake; D1 blocked; D2-D6 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -490,7 +490,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - CTA surface and text are readable in dark mode without light-mode regressions.
 - Status: Done
-- Commits: TBD
+- Commits: 27c5348
 
 ### D3
 - Description: Sitewide canonical booking link audit + normalization.
@@ -499,7 +499,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Booking CTAs point to canonical booking.doulab.net routes.
   - ClarityScan paid-first links remain Stripe Checkout.
 - Status: Done
-- Commits: TBD
+- Commits: 27c5348
 
 ### D4
 - Description: Blog Mermaid/diagram theme parity (dark/light).
@@ -507,7 +507,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Mermaid diagrams render with readable contrast in light and dark.
 - Status: Done
-- Commits: TBD
+- Commits: 27c5348
 
 ### D5
 - Description: Replace SQL/Sheets instrumentation example with diagram in clarityscan-decision-latency.
@@ -515,7 +515,7 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Section contains a Mermaid diagram that reflects the instrumentation flow.
 - Status: Done
-- Commits: TBD
+- Commits: 27c5348
 
 ### D6
 - Description: Blog booking/service CTA link audit + consistency pass.
@@ -523,4 +523,4 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 - Acceptance criteria:
   - Blog conversion CTAs use canonical booking routes.
 - Status: Done
-- Commits: TBD
+- Commits: 27c5348

@@ -2,7 +2,7 @@
 
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
-Phase D status: D0 intake; D1 blocked; D2-D13 complete (mapped).
+Phase D status: D0 intake; D1 blocked; D2-D14 complete (mapped).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
 
@@ -589,3 +589,11 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - CTA cards render as visible cards with button CTAs.
 - Status: Done
 - Commits: d7b352d
+
+### D14
+- Description: Define missing blog tags to remove tags.yml build warning.
+- Rationale: Ensure blog tags registry matches post tags to avoid build warnings.
+- Acceptance criteria:
+  - tags.yml defines ecosystems, governance, coordination, innovation-maturity, and caribbean.
+- Status: Done
+- Commits: 0c6f0e7

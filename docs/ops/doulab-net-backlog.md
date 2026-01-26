@@ -641,3 +641,15 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Blog cards match Doulab card styling in light/dark modes.
 - Status: Done
 - Commits: d1291a8, 727366a, 03e9f1a
+
+## Content - Research & Resources
+
+### RR-01
+- Description: Publish Innovation Lab Guide (Q2 2024) as MDX resource.
+- Rationale: Make the Innovation Lab guide discoverable and maintainable in docs.
+- Acceptance criteria:
+  - PDF converted to MDX with structured headings and references.
+  - Doc wired in sidebar and Research & Resources landing.
+  - Author metadata added; formatting pass applied for readability.
+- Status: Done
+- Commits: 5ed3bfe, 15be694

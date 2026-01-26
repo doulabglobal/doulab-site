@@ -45,6 +45,7 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - Current version: v0.9.0
 - Latest merged hardening commits: f6930624, fd90198a, 55c258b, 0275390, 9de859c
 - Current phase status: Phase C IN PROGRESS
+- Latest pass note: Innovation Lab Guide (Q2 2024) published; see backlog for evidence.
 
 ## Docs/Ops manifest (canonical references)
 - docs/ops/404-spec.md

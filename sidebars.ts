@@ -8,6 +8,7 @@ const sidebars: SidebarsConfig = {
             collapsed: false,
             items: [
                 'research-resources/distributed-federated-agentic-ai',
+                'research-resources/innovation-lab-guide-q2-2024-en',
                 'releases', // New entry for Website Releases
             ],
         },

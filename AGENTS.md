@@ -90,6 +90,9 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - docs/ops/phase-b8-p3-closeout.md
 - docs/ops/phase-c0-case-studies-ia-audit.md
 - docs/ops/phase-c11-service-conversion-audit.md
+- docs/ops/phase-c12-conversion-ux-spec.md (Phase C12 UX specification and conversion evidence)
+- docs/ops/phase-c-closeout.md (Phase C formal closeout document and evidence log)
+- docs/ops/phase-d-closeout.md (Phase D formal closeout document and evidence log)
 - docs/ops/security-headers-review.md
 - ops/audits/doulab-net/lighthouse-2026-01-18.pdf (reference only)
 - ops/audits/doulab-net/logs/build-cf.log (reference only)

@@ -39,6 +39,7 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - B6 freeze must tag a release version (if tags are used).
 
 ## Per-pass governance updates (hard rule)
+- pending: governance pass - backlog evidence updated; scope expanded (examples, diagrams, RedLab case, references); implementation: 3a7c974; ensured pass compliance.
 - ce12728 (amended): governance pass — backlog evidence updated; QA cleanup evidence recorded (7f15e38); ensured pass compliance.
 - fa48be4 (amended): governance pass — backlog evidence updated; fixed PDF→MDX encoding artifact; ensured pass compliance.
 - Every pass MUST update:

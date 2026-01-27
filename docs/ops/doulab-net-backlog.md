@@ -646,8 +646,8 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
 
 ### RR-01
 - Description: Publish Innovation Lab Guide (Q2 2024) as MDX resource.
-  - Evidence: 5ed3bfe, 15be694, 3f4f55f, 4cd7334, c497a77, 0272dac, 7f15e38
-  - Scope: PDF→MDX conversion, sidebar wiring, landing link, formatting + author metadata, in-text citation italics, Mermaid diagrams (VILF / IMM / foresight loop), neutrality and executive readability polish, Deduplicated references, Neutrality wording adjustments, Fixed Kaplan & Norton citation integration, Diagram caption normalization, Hyphen/spacing artifact cleanup.
+  - Evidence: 5ed3bfe, 15be694, 3f4f55f, 4cd7334, c497a77, 0272dac, 7f15e38, 3a7c974
+  - Scope: PDF→MDX conversion, sidebar wiring, landing link, formatting + author metadata, in-text citation italics, Mermaid diagrams (VILF / IMM / foresight loop), neutrality and executive readability polish, Deduplicated references, Neutrality wording adjustments, Fixed Kaplan & Norton citation integration, Diagram caption normalization, Hyphen/spacing artifact cleanup, examples across sections, additional diagrams (MCF 2.2 loop, IMM snapshot, VILF network), RedLab national network case study, references strengthened and expanded.
 - Rationale: Make the Innovation Lab guide discoverable and maintainable in docs.
 - Acceptance criteria:
   - PDF converted to MDX with structured headings and references.

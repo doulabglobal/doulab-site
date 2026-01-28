@@ -655,3 +655,170 @@ Each item includes ID, description, rationale, acceptance criteria, and commit m
   - Author metadata added; formatting pass applied for readability.
 - Status: Done
 - Commits: 5ed3bfe, 15be694
+
+### BACKLOG — Innovation Lab Guide (Deep Review & Grounding Pass)
+
+**Objective:**  
+Strengthen the Innovation Lab Guide to publication-grade, long-term (10+ year) relevance by grounding claims with evidence and examples, validating logic consistency, eliminating AI-generated textual signals, improving editorial quality, enhancing UX/UI and visual hierarchy, and preparing the document for eventual chapterization into a book-like structure.
+
+---
+
+#### P0 — Credibility & Correctness (Blocking)
+
+- **BL-ILG-P0-01 — Remove internal editorial note**
+  - Remove the editorial/conversion note currently present at the very top of the guide.
+  - Rationale: breaks editorial immersion and signals draft/internal status.
+
+- **BL-ILG-P0-02 — Correct DARPA Heilmeier Catechism link**
+  - Replace any incorrect DARPA Heilmeier link with:
+    `https://www.darpa.mil/about/heilmeier-catechism`
+  - Ensure citation is rendered as *(DARPA, n.d.)*.
+
+- **BL-ILG-P0-03 — Fix GP Strategies misattribution**
+  - Current claim: “Framework comparisons show how Stage-Gate and Lean Startup differ in governance and cadence (GP Strategies).”
+  - Issue: cited GP Strategies article does not discuss Stage-Gate vs Lean Startup.
+  - Required action:
+    - Either replace the source with a legitimate Stage-Gate vs Lean comparison, OR
+    - Rewrite the claim so it accurately reflects the GP Strategies article (“Innovation Frameworks: What They Are and How to Build One”).
+  - This item MUST be resolved before publication.
+
+- **BL-ILG-P0-04 — Xerox PARC / Roland Berger citation alignment**
+  - Update visible text to reflect the actual publication title:
+    “What innovators can still learn from Xerox PARC”
+  - Preserve the correct existing link.
+  - If the subheading “How skunkworks can play a vital role…” is mentioned, it must be framed as a subtitle, not the article title.
+
+---
+
+#### P0 — Academic Rigor & Evidence Gaps
+
+- **BL-ILG-P0-05 — Unsupported claims audit**
+  - Identify every claim, hypothesis, or assessment that:
+    - Lacks a citation
+    - Lacks a concrete real-world example
+    - Presents an implicit causal relationship without justification
+  - For each instance, apply ONE of:
+    - Add a credible source
+    - Add a real-world example (public sector, regulated industry, or enterprise)
+    - Reframe as a bounded interpretation or hypothesis
+
+- **BL-ILG-P0-06 — MCF 2.2 / IMM / VILF / Vigía Futura causal logic validation**
+  - Explicitly validate and, where needed, clarify:
+    - Why MCF precedes IMM
+    - Why IMM is required before network scaling (VILF)
+    - Why foresight (Vigía Futura) operates as an external sensing loop rather than a lab-internal function
+  - Add short causal explanations where logic is currently implicit.
+
+- **BL-ILG-P0-07 — RedLab case study evidence separation**
+  - For the RedLab example:
+    - Clearly separate **publicly verifiable facts** (with sources) from
+      **Practitioner note (non-public detail)**.
+    - No unlabelled internal knowledge may appear as factual statements.
+    - Ensure at least one public press or official source is cited.
+
+---
+
+#### P1 — Editorial Quality (Publisher Readiness)
+
+- **BL-ILG-P1-01 — Editorial voice normalization**
+  - Remove or rewrite language that reads as:
+    - Promotional
+    - Consulting-style persuasion
+    - Overly generic abstraction
+  - Replace with evidence-led, neutral, publication-grade prose.
+
+- **BL-ILG-P1-02 — Repetition & formula detection**
+  - Identify repeated rhetorical structures (e.g., identical “So what?” endings).
+  - Replace with varied, section-specific takeaways:
+    - “Key takeaway”
+    - “Decision implication”
+    - “Common misinterpretation”
+
+- **BL-ILG-P1-03 — Example formatting consistency**
+  - Standardize all examples into short case vignettes:
+    - Context
+    - Intervention
+    - Outcome
+    - Lesson
+    - Source
+  - Avoid “bolted-on” examples.
+
+---
+
+#### P1 — AI-Generated Text Signal Removal
+
+- **BL-ILG-P1-04 — AI-pattern language pass**
+  - Identify and revise:
+    - Overuse of abstract nouns without anchors
+    - Symmetric, templated paragraph endings
+    - Vague phrases (“designed to be scalable”, “aligned with goals”) without operational meaning
+  - Replace with concrete mechanisms, metrics, or examples.
+
+- **BL-ILG-P1-05 — Citation integrity check**
+  - Ensure all citations:
+    - Directly support the surrounding claim
+    - Are not decorative or generic
+  - Remove or replace weakly connected citations.
+
+---
+
+#### P2 — Structure, UX/UI & Visual Design
+
+- **BL-ILG-P2-01 — NYY-style hero header**
+  - Add a New York–style hero header at the top of the guide, consistent with the most recent Doulab article:
+    - Title
+    - Subtitle
+    - Metadata row (author, date, reading time)
+    - Optional CTA (e.g., “Explore chapters”)
+  - Must follow the same MDX/component pattern already used on the site.
+
+- **BL-ILG-P2-02 — Scanability & progressive disclosure**
+  - Break long paragraphs (>6 lines) into lead sentence + bullets.
+  - Use admonitions (`tip`, `note`, `caution`) for:
+    - Definitions
+    - Decision gates
+    - Failure modes
+  - Use `<details>` blocks for deep dives.
+
+- **BL-ILG-P2-03 — Diagram comprehension**
+  - Ensure every diagram:
+    - Has a one-line explanation of the decision it supports
+    - Does not rely solely on visual meaning
+
+---
+
+#### P3 — Structural Evolution (Deferred, Do NOT execute yet)
+
+- **BL-ILG-P3-01 - Chapterization (book-like structure)**
+  - Split the guide into chapters under a new folder:
+    `/docs/research-resources/innovation-lab-guide/`
+  - Introduce chapter openers and end-of-chapter summaries.
+  - Status: Done
+  - Evidence: 1adaf042, f6864158, 35dd2775, fdf231ed
+
+- **BL-ILG-P3-02 - Landing chapter ("book cover")**
+  - Create a landing MDX with:
+    - NYY hero
+    - Reading path
+    - Chapter list
+  - Status: Done
+  - Evidence: 1adaf042, f6864158, 35dd2775, fdf231ed
+
+- **BL-ILG-P3-03 - Sidebar & navigation update**
+  - Update sidebars and internal links after chapter split.
+  - Add redirects if required.
+  - Status: Done
+  - Evidence: 1adaf042, f6864158, 35dd2775, fdf231ed
+
+> **Note:** P3 items are explicitly deferred until P0-P2 are completed and validated.
+
+Completion note: Guide split into /docs/research-resources/innovation-lab-guide/; legacy route redirects to the new landing; sidebar lists chapters 01–11; landing card updated.
+
+---
+
+**Exit criteria for this backlog block:**
+- All P0 items resolved and verified.
+- P1 items resolved or explicitly justified.
+- P2 items implemented or scheduled.
+- P3 items remain deferred with no partial execution.
+

@@ -61,3 +61,22 @@
     gap: 16px;
   }
 }
+
+/* Prevent long tokens (e.g., URLs) from overflowing cards */
+.value {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.value a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.value code,
+.value pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}

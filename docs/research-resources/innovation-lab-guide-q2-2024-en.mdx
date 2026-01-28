@@ -12,6 +12,8 @@ tags:
   - frameworks
 ---
 
+import CaseVignetteCard from "@site/src/components/CaseVignetteCard/CaseVignetteCard";
+
 <div className="nnyHero">
   <section className="heroBanner" aria-labelledby="innovation-lab-hero-title">
     <h1 id="innovation-lab-hero-title" className="heroTitle">
@@ -77,12 +79,14 @@ Whether you are a government entity seeking to solve complex societal issues or 
 Finally, we explore the role of National Innovation Lab Networks, which can accelerate innovation at the national level and align cross-institution portfolios. By applying the principles and processes outlined in this guide, organizations can build durable innovation capacity and adapt as conditions change.
 
 
-**Case vignette**
-- **Context:** A cross-government scan of innovation labs examined mandate clarity and evidence standards. 
-- **Intervention:** Comparative review of mandates and evidence practices across public labs.
-- **Outcome:** The scan linked mandate clarity and evidence standards to public value outcomes.
-- **Lesson:** Mandate clarity and evidence standards shape public value outcomes.
-- **Source:** OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)
+<CaseVignetteCard
+  title="Public lab mandate clarity"
+  context="A cross-government scan of innovation labs examined mandate clarity and evidence standards."
+  intervention="Comparative review of mandates and evidence practices across public labs."
+  outcome="The scan linked mandate clarity and evidence standards to public value outcomes."
+  lesson="Mandate clarity and evidence standards shape public value outcomes."
+  source={<>OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)</>}
+/>
 
 **Key takeaway:** Evidence standards and mandate clarity should be treated as explicit inputs to lab design decisions.
 
@@ -124,12 +128,14 @@ Finally, we explore the role of National Innovation Lab Networks, which can acce
 - **Integration:** The four elements connect evidence, maturity, governance, and foresight into a single system.
 
 
-**Case vignette**
-- **Context:** DARPA uses structured questions to test assumptions before scaling.
-- **Intervention:** The Heilmeier Catechism frames decision gates and evidence thresholds.
-- **Outcome:** Assumptions are tested earlier in the lifecycle.
-- **Lesson:** Structured questions can support evidence-based scaling decisions.
-- **Source:** DARPA, n.d. (https://www.darpa.mil/about/heilmeier-catechism)
+<CaseVignetteCard
+  title="Heilmeier gate framing"
+  context="DARPA uses structured questions to test assumptions before scaling."
+  intervention="The Heilmeier Catechism frames decision gates and evidence thresholds."
+  outcome="Assumptions are tested earlier in the lifecycle."
+  lesson="Structured questions can support evidence-based scaling decisions."
+  source={<>DARPA, n.d. (https://www.darpa.mil/about/heilmeier-catechism)</>}
+/>
 
 
 ## The Core Logic (One Page)
@@ -156,12 +162,14 @@ Operationally, this shows up as explicit decision gates, evidence criteria, and 
 - **Foresight:** A structured capability that supplies signals, scenarios, and strategic options.
 
 
-**Case vignette**
-- **Context:** Xerox PARC is used as a reference point for lab output that struggled to scale.
-- **Intervention:** Analysis focused on governance choices and capability reuse.
-- **Outcome:** Governance and reuse patterns were linked to whether lab output scaled into durable impact.
-- **Lesson:** Governance design and reuse mechanisms affect scale-out of lab outputs.
-- **Source:** Roland Berger, 2025 (https://www.rolandberger.com/en/Insights/Publications/What-innovators-can-still-learn-from-Xerox-PARC.html)
+<CaseVignetteCard
+  title="Xerox PARC governance reuse"
+  context="Xerox PARC is used as a reference point for lab output that struggled to scale."
+  intervention="Analysis focused on governance choices and capability reuse."
+  outcome="Governance and reuse patterns were linked to whether lab output scaled into durable impact."
+  lesson="Governance design and reuse mechanisms affect scale-out of lab outputs."
+  source={<>Roland Berger, 2025 (https://www.rolandberger.com/en/Insights/Publications/What-innovators-can-still-learn-from-Xerox-PARC.html)</>}
+/>
 
 **Decision implication:** Governance and reuse mechanisms should be treated as design variables, not afterthoughts.
 
@@ -187,12 +195,14 @@ The introduction of MCF 2.2 supports the view that innovations are not merely cr
 It encourages leaders, innovators, and change-makers to create spaces where innovation can be tested and governed, guided by the principles and processes outlined in the subsequent sections. This guide aims to help organizations navigate innovation challenges, leveraging the MicroCanvas Framework (MCF 2.2) to foster a culture of continuous improvement and adaptability.
 
 
-**Case vignette**
-- **Context:** Manufacturing leaders reported disruption pressure in industrial sectors.
-- **Intervention:** Structured innovation programs were framed as a response to that pressure.
-- **Outcome:** The report connected disruption pressure to the adoption of structured programs.
-- **Lesson:** Disruption pressure can motivate structured innovation programs in manufacturing.
-- **Source:** McKinsey & Company, 2018 (https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/how%20industrial%20companies%20can%20respond%20to%20disruptive%20forces/disruptive-forces-in-the-industrial-sectors.pdf)
+<CaseVignetteCard
+  title="Industrial disruption response"
+  context="Manufacturing leaders reported disruption pressure in industrial sectors."
+  intervention="Structured innovation programs were framed as a response to that pressure."
+  outcome="The report connected disruption pressure to the adoption of structured programs."
+  lesson="Disruption pressure can motivate structured innovation programs in manufacturing."
+  source={<>McKinsey & Company, 2018 (https://www.mckinsey.com/~/media/mckinsey/industries/automotive%20and%20assembly/our%20insights/how%20industrial%20companies%20can%20respond%20to%20disruptive%20forces/disruptive-forces-in-the-industrial-sectors.pdf)</>}
+/>
 
 **Common misinterpretation:** Innovation labs are only idea generators rather than evidence-driven operating units.
 
@@ -224,12 +234,14 @@ The objectives below translate that purpose into operational aims.
 For this reason, this guide's primary purpose is: "Support organizations in shaping future outcomes." The rest of the guide focuses on practical steps and evidence-led decisions. Luis Santiago
 
 
-**Case vignette**
-- **Context:** A financial services innovation program needed to move from ideas to delivery with clearer evidence gates.
-- **Intervention:** Evidence thresholds were used to decide which initiatives moved forward.
-- **Outcome:** Decision gates clarified which ideas could proceed to delivery.
-- **Lesson:** Evidence gates can reduce ambiguity between ideation and delivery.
-- **Source:** Doulab, n.d. (https://doulab.net/case-studies/afp-siembra)
+<CaseVignetteCard
+  title="Financial services evidence gates"
+  context="A financial services innovation program needed to move from ideas to delivery with clearer evidence gates."
+  intervention="Evidence thresholds were used to decide which initiatives moved forward."
+  outcome="Decision gates clarified which ideas could proceed to delivery."
+  lesson="Evidence gates can reduce ambiguity between ideation and delivery."
+  source={<>Doulab, n.d. (https://doulab.net/case-studies/afp-siembra)</>}
+/>
 
 **What to measure:** Evidence quality at each gate, decision cycle time, and outcome tracking against stated objectives.
 
@@ -246,12 +258,14 @@ Moreover, the sheer variety of innovation frameworks and methodologies can be ov
 It aims to equip leaders and innovation practitioners with the knowledge and tools needed to create labs that generate solutions and align with organizational strategic goals.
 
 
-**Case vignette**
-- **Context:** Public-sector labs face scrutiny on how investments align to mission outcomes.
-- **Intervention:** Comparative reviews assessed portfolio alignment to mission outcomes.
-- **Outcome:** Portfolio alignment was used to justify lab investment decisions.
-- **Lesson:** Mission-aligned portfolios can support investment justification in public labs.
-- **Source:** OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)
+<CaseVignetteCard
+  title="Public lab portfolio alignment"
+  context="Public-sector labs face scrutiny on how investments align to mission outcomes."
+  intervention="Comparative reviews assessed portfolio alignment to mission outcomes."
+  outcome="Portfolio alignment was used to justify lab investment decisions."
+  lesson="Mission-aligned portfolios can support investment justification in public labs."
+  source={<>OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)</>}
+/>
 
 
 ## What is Innovation?
@@ -341,12 +355,14 @@ Finally, the Continuous *(*Mitzkus, 2024*)* phase in MCF 2.2, which emphasizes o
 They serve as a comprehensive guide to navigating the complex process of bringing new ideas to fruition and ensuring they are sustainable and effective in the market.
 
 
-**Case vignette**
-- **Context:** Digital platforms faced early scaling pressure without validated evidence.
-- **Intervention:** Validation gates were emphasized before scaling.
-- **Outcome:** The pattern of premature scaling and stall risk was documented.
-- **Lesson:** Disciplined validation can reduce premature scaling risk.
-- **Source:** Startup Genome, 2011 (https://startupgenome.com/articles/a-deep-dive-into-the-anatomy-of-premature-scaling-new-infographic)
+<CaseVignetteCard
+  title="Premature scaling risk"
+  context="Digital platforms faced early scaling pressure without validated evidence."
+  intervention="Validation gates were emphasized before scaling."
+  outcome="The pattern of premature scaling and stall risk was documented."
+  lesson="Disciplined validation can reduce premature scaling risk."
+  source={<>Startup Genome, 2011 (https://startupgenome.com/articles/a-deep-dive-into-the-anatomy-of-premature-scaling-new-infographic)</>}
+/>
 
 
 ## Innovation Frameworks
@@ -397,22 +413,26 @@ While existing innovation frameworks provide structured methodologies for managi
 
 These limitations highlight the importance of selecting or adapting innovation frameworks that address specific business needs and are flexible enough to evolve with changing market conditions and organizational dynamics. Adapting frameworks to fit an organization's unique context, rather than adopting them wholesale, can help mitigate these shortcomings and enhance the overall effectiveness of the innovation process.
 
-**Case vignette**
-- **Context:** A product organization used Stage-Gate, Lean Startup, and Design Thinking within a traditional governance environment.
-- **Intervention:** Stage-Gate checkpoints, rapid pivots, and non-linear ideation were used concurrently.
-- **Outcome:** Governance cadence slowed approvals and strategic coherence weakened across iterations.
-- **Lesson:** Frameworks often need adaptation to organizational cadence and decision rights.
-- **Source:** Practitioner observation (illustrative)
+<CaseVignetteCard
+  title="Frameworks under governance"
+  context="A product organization used Stage-Gate, Lean Startup, and Design Thinking within a traditional governance environment."
+  intervention="Stage-Gate checkpoints, rapid pivots, and non-linear ideation were used concurrently."
+  outcome="Governance cadence slowed approvals and strategic coherence weakened across iterations."
+  lesson="Frameworks often need adaptation to organizational cadence and decision rights."
+  source={<>Practitioner observation (illustrative)</>}
+/>
 
 Sources like "The Innovator's Dilemma" *(*Christensen C. M., 1997*)* and articles from Harvard Business Review frequently discuss these issues, providing deeper insights into the practical challenges of applying innovation frameworks in real-world settings.
 
 
-**Case vignette**
-- **Context:** An overview of innovation frameworks summarized common structure and adaptation choices.
-- **Intervention:** Framework types and selection considerations were described for practitioners.
-- **Outcome:** The overview provided guidance on structuring frameworks for organizational fit.
-- **Lesson:** Framework selection benefits from alignment to context and execution constraints.
-- **Source:** Donovan & Grace, n.d. (https://www.gpstrategies.com/resources/article/innovation-frameworks-what-they-are-and-how-to-build-one/)
+<CaseVignetteCard
+  title="Framework selection overview"
+  context="An overview of innovation frameworks summarized common structure and adaptation choices."
+  intervention="Framework types and selection considerations were described for practitioners."
+  outcome="The overview provided guidance on structuring frameworks for organizational fit."
+  lesson="Framework selection benefits from alignment to context and execution constraints."
+  source={<>Donovan & Grace, n.d. (https://www.gpstrategies.com/resources/article/innovation-frameworks-what-they-are-and-how-to-build-one/)</>}
+/>
 
 **Key takeaway:** Framework selection works best when evidence standards and governance cadence are explicit.
 
@@ -493,12 +513,14 @@ The core components of MCF 2.2 include:
 </details>
 
 
-**Case vignette**
-- **Context:** A public-sector network sought to align lab methods and decision gates.
-- **Intervention:** Shared methods and decision gates were documented and applied across labs.
-- **Outcome:** Labs aligned around common evidence standards.
-- **Lesson:** Shared methods and decision gates can support cross-lab alignment.
-- **Source:** Doulab, n.d. (https://doulab.net/case-studies/ogtic-redlab)
+<CaseVignetteCard
+  title="RedLab shared methods"
+  context="A public-sector network sought to align lab methods and decision gates."
+  intervention="Shared methods and decision gates were documented and applied across labs."
+  outcome="Labs aligned around common evidence standards."
+  lesson="Shared methods and decision gates can support cross-lab alignment."
+  source={<>Doulab, n.d. (https://doulab.net/case-studies/ogtic-redlab)</>}
+/>
 
 
 ## The Innovation Lab
@@ -572,12 +594,14 @@ Successful Innovation Labs often share several relevant components contributing 
 These components are often instrumental in the successful operation of Innovation Labs. They help them generate novel ideas and implement them in ways that significantly benefit their parent organizations and support sustained impact and innovation.
 
 
-**Case vignette**
-- **Context:** Public labs were reviewed across multiple jurisdictions.
-- **Intervention:** Reviews compared governance, evidence standards, and delivery alignment.
-- **Outcome:** Evidence and delivery alignment emerged as recurring concerns.
-- **Lesson:** Governance and evidence standards shape delivery alignment in public labs.
-- **Source:** OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)
+<CaseVignetteCard
+  title="Public lab delivery alignment"
+  context="Public labs were reviewed across multiple jurisdictions."
+  intervention="Reviews compared governance, evidence standards, and delivery alignment."
+  outcome="Evidence and delivery alignment emerged as recurring concerns."
+  lesson="Governance and evidence standards shape delivery alignment in public labs."
+  source={<>OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)</>}
+/>
 
 
 ## The 5 Failure Modes of Innovation Labs (and How to Prevent Them)
@@ -612,12 +636,14 @@ Common failure modes observed in practice include:
 :::
 
 
-**Case vignette**
-- **Context:** Xerox PARC is referenced in analysis of lab outputs that did not scale.
-- **Intervention:** Governance gaps and capability reuse were assessed.
-- **Outcome:** Gaps and limited reuse were linked to scaling barriers.
-- **Lesson:** Governance design and reuse mechanisms affect scale-out of lab outputs.
-- **Source:** Roland Berger, 2025 (https://www.rolandberger.com/en/Insights/Publications/What-innovators-can-still-learn-from-Xerox-PARC.html)
+<CaseVignetteCard
+  title="Xerox PARC governance gaps"
+  context="Xerox PARC is referenced in analysis of lab outputs that did not scale."
+  intervention="Governance gaps and capability reuse were assessed."
+  outcome="Gaps and limited reuse were linked to scaling barriers."
+  lesson="Governance design and reuse mechanisms affect scale-out of lab outputs."
+  source={<>Roland Berger, 2025 (https://www.rolandberger.com/en/Insights/Publications/What-innovators-can-still-learn-from-Xerox-PARC.html)</>}
+/>
 
 
 ## Setting Up an Innovation Lab using The MicroCanvas Framework (MCF 2.2)
@@ -753,40 +779,50 @@ An Innovation Lab can provide a supportive environment that is well-equipped to 
 
 Each type of innovation lab requires a tailored approach to team structure and staffing, leveraging diverse skills and backgrounds to meet specific innovation goals. This strategic alignment of team composition supports the labs in addressing the unique challenges they aim to solve, whether in the corporate, academic, government, community, or independent sectors.
 
-**Case vignette**
-- **Context:** A corporate innovation lab needed deep technical and delivery skills.
-- **Intervention:** Senior engineers, data scientists, and product managers were staffed alongside business unit leads.
-- **Outcome:** Cross-functional staffing supported prototype delivery and integration.
-- **Lesson:** Mixed internal and external roles can support corporate lab delivery.
-- **Source:** Chesbrough, 2006
+<CaseVignetteCard
+  title="Corporate lab staffing mix"
+  context="A corporate innovation lab needed deep technical and delivery skills."
+  intervention="Senior engineers, data scientists, and product managers were staffed alongside business unit leads."
+  outcome="Cross-functional staffing supported prototype delivery and integration."
+  lesson="Mixed internal and external roles can support corporate lab delivery."
+  source={<>Chesbrough, 2006</>}
+/>
 
-**Case vignette**
-- **Context:** A university-affiliated lab operated across academic and industry domains.
-- **Intervention:** Faculty, graduate researchers, and industry consultants collaborated on research-driven projects.
-- **Outcome:** Interdisciplinary staffing supported applied research delivery.
-- **Lesson:** Academic-industry teams can support research-driven lab missions.
-- **Source:** Etzkowitz & Leydesdorff, 2000
+<CaseVignetteCard
+  title="University lab staffing"
+  context="A university-affiliated lab operated across academic and industry domains."
+  intervention="Faculty, graduate researchers, and industry consultants collaborated on research-driven projects."
+  outcome="Interdisciplinary staffing supported applied research delivery."
+  lesson="Academic-industry teams can support research-driven lab missions."
+  source={<>Etzkowitz & Leydesdorff, 2000</>}
+/>
 
-**Case vignette**
-- **Context:** A government innovation lab focused on service delivery in healthcare.
-- **Intervention:** Policy analysts, public health experts, and technologists were staffed together.
-- **Outcome:** Service design and delivery alignment improved.
-- **Lesson:** Public-sector labs benefit from policy and technical staffing alignment.
-- **Source:** Mulgan, 2014
+<CaseVignetteCard
+  title="Government lab staffing"
+  context="A government innovation lab focused on service delivery in healthcare."
+  intervention="Policy analysts, public health experts, and technologists were staffed together."
+  outcome="Service design and delivery alignment improved."
+  lesson="Public-sector labs benefit from policy and technical staffing alignment."
+  source={<>Mulgan, 2014</>}
+/>
 
-**Case vignette**
-- **Context:** An independent lab worked on environmental technology programs.
-- **Intervention:** Project-based environmental scientists joined permanent commercialization staff.
-- **Outcome:** Technical research and commercialization planning were paired.
-- **Lesson:** Flexible staffing can support independent lab adaptability.
-- **Source:** Westley & Antadze, 2010
+<CaseVignetteCard
+  title="Independent lab staffing"
+  context="An independent lab worked on environmental technology programs."
+  intervention="Project-based environmental scientists joined permanent commercialization staff."
+  outcome="Technical research and commercialization planning were paired."
+  lesson="Flexible staffing can support independent lab adaptability."
+  source={<>Westley & Antadze, 2010</>}
+/>
 
-**Case vignette**
-- **Context:** A community lab addressed urban food access challenges.
-- **Intervention:** Local farmers, urban planners, and community organizers staffed the lab.
-- **Outcome:** Community needs informed project selection and delivery.
-- **Lesson:** Community staffing can align lab work with local needs.
-- **Source:** Moore & Westley, 2011
+<CaseVignetteCard
+  title="Community lab staffing"
+  context="A community lab addressed urban food access challenges."
+  intervention="Local farmers, urban planners, and community organizers staffed the lab."
+  outcome="Community needs informed project selection and delivery."
+  lesson="Community staffing can align lab work with local needs."
+  source={<>Moore & Westley, 2011</>}
+/>
 
 We suggest using the previously mentioned Team Structure process to create an initial team structure aligned with the lab's objectives and transformative purpose. During the first three stages of the lab's lifecycle (Discovery, Validation, and Efficiency), the team structure will likely change as the lab learns how to operate efficiently. The lab might also consider outsourcing some of its core functions (sales and marketing, finance and accounting, IT, and other support functions, including coaching and mentoring) as it develops a viable business model until it reaches a maturity level that allows for permanent staffing.
 
@@ -804,33 +840,41 @@ The operational model of an Innovation Lab outlines the methods and processes th
 
 With a robust operational model that includes project management protocols, resource allocation, workflows, and performance indicators, Innovation Labs can enhance their efficiency and effectiveness while contributing to organizational innovation goals.
 
-**Case vignette**
-- **Context:** A lab needed faster iteration cycles across projects.
-- **Intervention:** Agile project management practices were adopted in the operating model.
-- **Outcome:** Iteration cadence improved and project flow became more predictable.
-- **Lesson:** Agile practices can support iteration cadence in lab operations.
-- **Source:** Sutherland, 2014
+<CaseVignetteCard
+  title="Agile lab cadence"
+  context="A lab needed faster iteration cycles across projects."
+  intervention="Agile project management practices were adopted in the operating model."
+  outcome="Iteration cadence improved and project flow became more predictable."
+  lesson="Agile practices can support iteration cadence in lab operations."
+  source={<>Sutherland, 2014</>}
+/>
 
-**Case vignette**
-- **Context:** A lab portfolio required differentiated funding levels.
-- **Intervention:** A tiered funding model prioritized resources by strategic value.
-- **Outcome:** Funding decisions aligned with portfolio tiers and evidence gates.
-- **Lesson:** Tiered funding can support resource allocation discipline.
-- **Source:** Kaplan, 2012
+<CaseVignetteCard
+  title="Tiered funding discipline"
+  context="A lab portfolio required differentiated funding levels."
+  intervention="A tiered funding model prioritized resources by strategic value."
+  outcome="Funding decisions aligned with portfolio tiers and evidence gates."
+  lesson="Tiered funding can support resource allocation discipline."
+  source={<>Kaplan, 2012</>}
+/>
 
-**Case vignette**
-- **Context:** Distributed teams needed shared workflows and coordination.
-- **Intervention:** Collaboration platforms were integrated into the workflow design.
-- **Outcome:** Remote coordination improved and workflows became more consistent.
-- **Lesson:** Collaboration platforms can support workflow consistency.
-- **Source:** O'Reilly & Tushman, 2016
+<CaseVignetteCard
+  title="Collaboration platform workflows"
+  context="Distributed teams needed shared workflows and coordination."
+  intervention="Collaboration platforms were integrated into the workflow design."
+  outcome="Remote coordination improved and workflows became more consistent."
+  lesson="Collaboration platforms can support workflow consistency."
+  source={<>O'Reilly & Tushman, 2016</>}
+/>
 
-**Case vignette**
-- **Context:** Leadership needed consistent performance visibility across projects.
-- **Intervention:** Balanced scorecard metrics were applied to innovation outputs and outcomes.
-- **Outcome:** Performance reporting became consistent across financial and non-financial indicators.
-- **Lesson:** Balanced scorecards can support multi-dimensional performance tracking.
-- **Source:** Kaplan & Norton, 1996
+<CaseVignetteCard
+  title="Balanced scorecard tracking"
+  context="Leadership needed consistent performance visibility across projects."
+  intervention="Balanced scorecard metrics were applied to innovation outputs and outcomes."
+  outcome="Performance reporting became consistent across financial and non-financial indicators."
+  lesson="Balanced scorecards can support multi-dimensional performance tracking."
+  source={<>Kaplan & Norton, 1996</>}
+/>
 
 ### Integrating MCF 2.2 Processes into the Innovation Lab's project lifecycle
 
@@ -904,12 +948,14 @@ Here's how you can effectively measure the success of Innovation Labs:
 
 Using these metrics and KPIs allows organizations to evaluate the success of their Innovation Labs comprehensively and align innovation work with broader strategic objectives.
 
-**Case vignette**
-- **Context:** Labs needed a consistent way to define decision gates and evidence thresholds.
-- **Intervention:** Structured questions from the Heilmeier Catechism were used to frame gates.
-- **Outcome:** Decision gates and evidence needs were clarified before scaling.
-- **Lesson:** Structured questions can support evidence-based gate design.
-- **Source:** DARPA, n.d. (https://www.darpa.mil/about/heilmeier-catechism)
+<CaseVignetteCard
+  title="Heilmeier gate design"
+  context="Labs needed a consistent way to define decision gates and evidence thresholds."
+  intervention="Structured questions from the Heilmeier Catechism were used to frame gates."
+  outcome="Decision gates and evidence needs were clarified before scaling."
+  lesson="Structured questions can support evidence-based gate design."
+  source={<>DARPA, n.d. (https://www.darpa.mil/about/heilmeier-catechism)</>}
+/>
 
 
 ## Innovation Labs and Maturity: The Role of the Innovation Maturity Model (IMM)
@@ -967,12 +1013,14 @@ flowchart LR
 
 Labs are often more effective when designed for their maturity level rather than an aspirational end state. Tooling without maturity alignment can increase risk by creating process debt and fragile operating expectations.
 
-**Case vignette**
-- **Context:** An innovation maturity program aligned capability growth to evidence thresholds.
-- **Intervention:** Maturity assessments were tied to resourcing decisions.
-- **Outcome:** Capability growth followed evidence thresholds rather than ambition alone.
-- **Lesson:** Maturity-aligned resourcing can reduce premature scaling risks.
-- **Source:** Doulab, n.d. (https://doulab.net/services/innovation-maturity)
+<CaseVignetteCard
+  title="Maturity-based resourcing"
+  context="An innovation maturity program aligned capability growth to evidence thresholds."
+  intervention="Maturity assessments were tied to resourcing decisions."
+  outcome="Capability growth followed evidence thresholds rather than ambition alone."
+  lesson="Maturity-aligned resourcing can reduce premature scaling risks."
+  source={<>Doulab, n.d. (https://doulab.net/services/innovation-maturity)</>}
+/>
 
 **Decision implication:** Maturity assessment should determine governance load and resourcing before expanding portfolio scope.
 
@@ -1064,26 +1112,32 @@ National Innovation Lab Networks require implementation with several strategic o
 
 - **Sustain a responsive innovation ecosystem**: Foster ongoing collaboration among universities, government, and industry to keep the innovation pipeline responsive to current and future needs. This sustainability emphasis helps keep investments in innovation producing long-term benefits. *(*Nonaka & Takeuchi, 1995*)*.
 
-**Case vignette**
-- **Context:** Distributed rural labs focused on agricultural research in regions with distinct needs.
-- **Intervention:** A national network aligned local agricultural research to a shared food security agenda.
-- **Outcome:** Research pipelines were coordinated across labs to reduce duplication and focus on shared priorities.
-- **Lesson:** Alignment mechanisms help convert localized research into national innovation capacity.
-- **Source:** Etzkowitz & Leydesdorff, 2000
+<CaseVignetteCard
+  title="Rural labs food security"
+  context="Distributed rural labs focused on agricultural research in regions with distinct needs."
+  intervention="A national network aligned local agricultural research to a shared food security agenda."
+  outcome="Research pipelines were coordinated across labs to reduce duplication and focus on shared priorities."
+  lesson="Alignment mechanisms help convert localized research into national innovation capacity."
+  source={<>Etzkowitz & Leydesdorff, 2000</>}
+/>
 
-**Case vignette**
-- **Context:** A national innovation agenda prioritized renewable energy commercialization.
-- **Intervention:** Universities and energy firms coordinated through a lab network to develop and test technologies.
-- **Outcome:** Joint projects supported the path from research to market-ready pilots.
-- **Lesson:** Cross-sector coordination can shorten the path from discovery to commercialization.
-- **Source:** Porter, 1998
+<CaseVignetteCard
+  title="Renewable energy commercialization"
+  context="A national innovation agenda prioritized renewable energy commercialization."
+  intervention="Universities and energy firms coordinated through a lab network to develop and test technologies."
+  outcome="Joint projects supported the path from research to market-ready pilots."
+  lesson="Cross-sector coordination can shorten the path from discovery to commercialization."
+  source={<>Porter, 1998</>}
+/>
 
-**Case vignette**
-- **Context:** A country sought to build international competitiveness in biotechnology.
-- **Intervention:** A national network concentrated funding and talent to support biotech hubs and shared infrastructure.
-- **Outcome:** The network supported cluster visibility and attracted partner interest.
-- **Lesson:** Concentrated capability development can raise global visibility when governance supports it.
-- **Source:** Chesbrough, 2006
+<CaseVignetteCard
+  title="Biotech cluster scaling"
+  context="A country sought to build international competitiveness in biotechnology."
+  intervention="A national network concentrated funding and talent to support biotech hubs and shared infrastructure."
+  outcome="The network supported cluster visibility and attracted partner interest."
+  lesson="Concentrated capability development can raise global visibility when governance supports it."
+  source={<>Chesbrough, 2006</>}
+/>
 
 ### Structure of National Innovation Lab Networks
 
@@ -1097,33 +1151,41 @@ The structure of National Innovation Lab Networks facilitates collaboration acro
 
 - **Support Services and Shared Resources**: National Innovation Lab Networks often provide support services and shared resources to enhance labs' capabilities nationwide. These include access to advanced research facilities, legal and commercial expertise, and funding opportunities. *(*Nonaka & Takeuchi, 1995*)*.
 
-**Case vignette**
-- **Context:** Multiple sectors required coordination under a national economic plan.
-- **Intervention:** A central agency coordinated research priorities across labs.
-- **Outcome:** Resource allocation decisions became more consistent across sectors.
-- **Lesson:** Central coordination clarifies priority trade-offs when multiple labs compete for resources.
-- **Source:** Chesbrough, 2006
+<CaseVignetteCard
+  title="Central coordination agency"
+  context="Multiple sectors required coordination under a national economic plan."
+  intervention="A central agency coordinated research priorities across labs."
+  outcome="Resource allocation decisions became more consistent across sectors."
+  lesson="Central coordination clarifies priority trade-offs when multiple labs compete for resources."
+  source={<>Chesbrough, 2006</>}
+/>
 
-**Case vignette**
-- **Context:** A coastal region built specialization in marine biotechnology.
-- **Intervention:** Regional hubs aligned with local universities and industry partners.
-- **Outcome:** Domain expertise deepened and knowledge sharing improved across regions.
-- **Lesson:** Regional hubs can focus specialization while staying connected to national standards.
-- **Source:** Etzkowitz & Leydesdorff, 2000
+<CaseVignetteCard
+  title="Marine biotech regional hubs"
+  context="A coastal region built specialization in marine biotechnology."
+  intervention="Regional hubs aligned with local universities and industry partners."
+  outcome="Domain expertise deepened and knowledge sharing improved across regions."
+  lesson="Regional hubs can focus specialization while staying connected to national standards."
+  source={<>Etzkowitz & Leydesdorff, 2000</>}
+/>
 
-**Case vignette**
-- **Context:** Cross-border innovation required shared platforms for collaboration.
-- **Intervention:** A multi-country network established joint forums and shared project pipelines.
-- **Outcome:** Joint initiatives were launched across sectors and geographies.
-- **Lesson:** Collaboration platforms reduce friction in multi-institution innovation.
-- **Source:** Porter, 1998
+<CaseVignetteCard
+  title="Cross-border collaboration platforms"
+  context="Cross-border innovation required shared platforms for collaboration."
+  intervention="A multi-country network established joint forums and shared project pipelines."
+  outcome="Joint initiatives were launched across sectors and geographies."
+  lesson="Collaboration platforms reduce friction in multi-institution innovation."
+  source={<>Porter, 1998</>}
+/>
 
-**Case vignette**
-- **Context:** Labs needed shared commercialization services without duplicating investment.
-- **Intervention:** A network offered shared access to legal, patent, and market advisory services.
-- **Outcome:** Labs reduced time-to-market and improved access to specialized expertise.
-- **Lesson:** Shared services can reduce costs while raising baseline capability.
-- **Source:** Nonaka & Takeuchi, 1995
+<CaseVignetteCard
+  title="Shared commercialization services"
+  context="Labs needed shared commercialization services without duplicating investment."
+  intervention="A network offered shared access to legal, patent, and market advisory services."
+  outcome="Labs reduced time-to-market and improved access to specialized expertise."
+  lesson="Shared services can reduce costs while raising baseline capability."
+  source={<>Nonaka & Takeuchi, 1995</>}
+/>
 
 This structured approach enables National Innovation Lab Networks to operate efficiently and effectively, maximizing the impact of their collective efforts and ensuring that innovations developed within the network can significantly contribute to national development goals.
 
@@ -1172,47 +1234,59 @@ Establishing and maintaining a successful National Innovation Lab Network involv
 
 - **Measuring impact consistently**: Implement comprehensive metrics that accurately reflect the network's impact on both innovation outcomes and broader societal and economic indicators.
 
-**Case vignette**
-- **Context:** Network coordination required visibility across multiple labs.
-- **Intervention:** A shared dashboard tracked projects and decisions across labs.
-- **Outcome:** Decision-making cadence improved through shared visibility.
-- **Lesson:** Shared visibility tools can support coordination across entities.
-- **Source:** Chesbrough, 2006 (Practitioner observation aligned with cited context)
+<CaseVignetteCard
+  title="Network dashboard visibility"
+  context="Network coordination required visibility across multiple labs."
+  intervention="A shared dashboard tracked projects and decisions across labs."
+  outcome="Decision-making cadence improved through shared visibility."
+  lesson="Shared visibility tools can support coordination across entities."
+  source={<>Chesbrough, 2006 (Practitioner observation aligned with cited context)</>}
+/>
 
-**Case vignette**
-- **Context:** Multi-lab programs needed stable funding to sustain operations.
-- **Intervention:** Matching funds combined public and private investment.
-- **Outcome:** Funding stability improved through shared incentives.
-- **Lesson:** Matching funds can improve funding stability in networks.
-- **Source:** Etzkowitz & Leydesdorff, 2000
+<CaseVignetteCard
+  title="Matching funds stability"
+  context="Multi-lab programs needed stable funding to sustain operations."
+  intervention="Matching funds combined public and private investment."
+  outcome="Funding stability improved through shared incentives."
+  lesson="Matching funds can improve funding stability in networks."
+  source={<>Etzkowitz & Leydesdorff, 2000</>}
+/>
 
-**Case vignette**
-- **Context:** National objectives and local priorities needed alignment.
-- **Intervention:** A tiered governance model set national direction with local discretion.
-- **Outcome:** Local labs retained flexibility while aligning to national priorities.
-- **Lesson:** Tiered governance can balance national objectives and local autonomy.
-- **Source:** Etzkowitz & Leydesdorff, 2000
+<CaseVignetteCard
+  title="Tiered governance alignment"
+  context="National objectives and local priorities needed alignment."
+  intervention="A tiered governance model set national direction with local discretion."
+  outcome="Local labs retained flexibility while aligning to national priorities."
+  lesson="Tiered governance can balance national objectives and local autonomy."
+  source={<>Etzkowitz & Leydesdorff, 2000</>}
+/>
 
-**Case vignette**
-- **Context:** Network IP ownership required consistent treatment across labs.
-- **Intervention:** A centralized IP office managed filings, licensing, and revenue terms.
-- **Outcome:** IP decisions followed shared standards across institutions.
-- **Lesson:** Centralized IP management can reduce fragmentation in networks.
-- **Source:** Etzkowitz & Leydesdorff, 2000
+<CaseVignetteCard
+  title="Centralized IP management"
+  context="Network IP ownership required consistent treatment across labs."
+  intervention="A centralized IP office managed filings, licensing, and revenue terms."
+  outcome="IP decisions followed shared standards across institutions."
+  lesson="Centralized IP management can reduce fragmentation in networks."
+  source={<>Etzkowitz & Leydesdorff, 2000</>}
+/>
 
-**Case vignette**
-- **Context:** Technology capability in labs risked lagging behind market change.
-- **Intervention:** Regular technology audits paired with targeted equipment upgrades.
-- **Outcome:** Labs maintained up-to-date tools and practices.
-- **Lesson:** Periodic audits can maintain technological relevance.
-- **Source:** Kline & Rosenberg, 1986
+<CaseVignetteCard
+  title="Technology audit cadence"
+  context="Technology capability in labs risked lagging behind market change."
+  intervention="Regular technology audits paired with targeted equipment upgrades."
+  outcome="Labs maintained up-to-date tools and practices."
+  lesson="Periodic audits can maintain technological relevance."
+  source={<>Kline & Rosenberg, 1986</>}
+/>
 
-**Case vignette**
-- **Context:** Network impact was difficult to compare across institutions.
-- **Intervention:** Standardized impact assessment tools were adopted.
-- **Outcome:** Impact reporting became more comparable and consistent.
-- **Lesson:** Common metrics can improve impact reporting consistency.
-- **Source:** Freeman, 1987
+<CaseVignetteCard
+  title="Standardized impact metrics"
+  context="Network impact was difficult to compare across institutions."
+  intervention="Standardized impact assessment tools were adopted."
+  outcome="Impact reporting became more comparable and consistent."
+  lesson="Common metrics can improve impact reporting consistency."
+  source={<>Freeman, 1987</>}
+/>
 
 ### Future Trends and Opportunities
 
@@ -1226,42 +1300,52 @@ As National Innovation Lab Networks continue to evolve, several future trends an
 
 - **Enhanced Public Engagement and Innovation Literacy**: Future trends suggest increased focus on public engagement and innovation literacy.
 
-**Case vignette**
-- **Context:** Networks sought faster signal detection in complex innovation portfolios.
-- **Intervention:** AI tools were used to scan emerging technologies and market needs.
-- **Outcome:** Portfolio teams identified signals more quickly.
-- **Lesson:** AI tooling can support earlier signal detection.
-- **Source:** Russell & Norvig, 2016
+<CaseVignetteCard
+  title="AI signal scanning"
+  context="Networks sought faster signal detection in complex innovation portfolios."
+  intervention="AI tools were used to scan emerging technologies and market needs."
+  outcome="Portfolio teams identified signals more quickly."
+  lesson="AI tooling can support earlier signal detection."
+  source={<>Russell & Norvig, 2016</>}
+/>
 
-**Case vignette**
-- **Context:** National labs pursued sustainability-aligned innovation priorities.
-- **Intervention:** Programs focused on renewable energy and sustainable agriculture.
-- **Outcome:** Portfolio focus shifted toward sustainability outcomes.
-- **Lesson:** Sustainability priorities can shape innovation portfolios.
-- **Source:** Elkington, 1997
+<CaseVignetteCard
+  title="Sustainability portfolio shift"
+  context="National labs pursued sustainability-aligned innovation priorities."
+  intervention="Programs focused on renewable energy and sustainable agriculture."
+  outcome="Portfolio focus shifted toward sustainability outcomes."
+  lesson="Sustainability priorities can shape innovation portfolios."
+  source={<>Elkington, 1997</>}
+/>
 
-**Case vignette**
-- **Context:** Cross-border challenges required coordinated responses.
-- **Intervention:** Labs partnered with peers abroad on shared problem domains.
-- **Outcome:** Collaboration expanded beyond national boundaries.
-- **Lesson:** Cross-border partnerships can extend network capacity.
-- **Source:** Friedman, 2007
+<CaseVignetteCard
+  title="Cross-border lab partnerships"
+  context="Cross-border challenges required coordinated responses."
+  intervention="Labs partnered with peers abroad on shared problem domains."
+  outcome="Collaboration expanded beyond national boundaries."
+  lesson="Cross-border partnerships can extend network capacity."
+  source={<>Friedman, 2007</>}
+/>
 
-**Case vignette**
-- **Context:** Labs sought public input on innovation priorities.
-- **Intervention:** Public workshops and early-stage engagement were used.
-- **Outcome:** Input informed portfolio choices and increased legitimacy.
-- **Lesson:** Early public engagement can inform portfolio direction.
-- **Source:** Lane, 1999
+<CaseVignetteCard
+  title="Public engagement workshops"
+  context="Labs sought public input on innovation priorities."
+  intervention="Public workshops and early-stage engagement were used."
+  outcome="Input informed portfolio choices and increased legitimacy."
+  lesson="Early public engagement can inform portfolio direction."
+  source={<>Lane, 1999</>}
+/>
 
 These developments are often described as reshaping national and international innovation practice over time, with a stronger emphasis on collaboration, intelligence, and sustainability.
 
-**Case vignette**
-- **Context:** RedLab launched as a national network of public innovation labs.
-- **Intervention:** Governance and shared methods were documented publicly.
-- **Outcome:** The launch narrative emphasized shared methods and evidence.
-- **Lesson:** Public documentation can clarify how networks coordinate shared methods.
-- **Source:** Doulab, n.d.; El Caribe, 2023 (https://doulab.net/case-studies/ogtic-redlab, https://www.elcaribe.com.do/panorama/ogtic-lanza-la-red-de-laboratorios-de-innovacion-redlab/)
+<CaseVignetteCard
+  title="RedLab public launch"
+  context="RedLab launched as a national network of public innovation labs."
+  intervention="Governance and shared methods were documented publicly."
+  outcome="The launch narrative emphasized shared methods and evidence."
+  lesson="Public documentation can clarify how networks coordinate shared methods."
+  source={<>Doulab, n.d.; El Caribe, 2023 (https://doulab.net/case-studies/ogtic-redlab, https://www.elcaribe.com.do/panorama/ogtic-lanza-la-red-de-laboratorios-de-innovacion-redlab/)</>}
+/>
 
 
 ## Innovation Labs in a World of Uncertainty: Strategic Foresight and Vigía Futura
@@ -1290,12 +1374,14 @@ Vigía Futura is a strategic foresight capability and regional observatory that 
   - **Owner:** Lab director and governance committee.
   - **How it changes portfolio decisions:** Protects long-horizon capabilities from short-term bias.
 
-**Case vignette**
-- **Context:** Public innovation labs sought to link foresight signals to portfolio choices.
-- **Intervention:** Practice reviews documented how signals informed portfolio decisions.
-- **Outcome:** Foresight inputs were linked to portfolio decisions in public labs.
-- **Lesson:** Foresight signals can inform portfolio choice when documented and reviewed.
-- **Source:** OECD OPSI, 2023
+<CaseVignetteCard
+  title="Foresight signal linkage"
+  context="Public innovation labs sought to link foresight signals to portfolio choices."
+  intervention="Practice reviews documented how signals informed portfolio decisions."
+  outcome="Foresight inputs were linked to portfolio decisions in public labs."
+  lesson="Foresight signals can inform portfolio choice when documented and reviewed."
+  source={<>OECD OPSI, 2023</>}
+/>
 
 :::note[Decision gates]
 Decision support: determine when foresight inputs justify a portfolio shift or new experimentation cycle.
@@ -1315,12 +1401,14 @@ flowchart TB
   F --> A
 ```
 
-**Case vignette**
-- **Context:** Global practice reviews assessed foresight inputs in public labs.
-- **Intervention:** Reviews compared how inputs shaped portfolio choices.
-- **Outcome:** Foresight inputs were linked to portfolio choice patterns.
-- **Lesson:** Practice reviews can show how foresight inputs shape portfolios.
-- **Source:** OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)
+<CaseVignetteCard
+  title="Foresight practice reviews"
+  context="Global practice reviews assessed foresight inputs in public labs."
+  intervention="Reviews compared how inputs shaped portfolio choices."
+  outcome="Foresight inputs were linked to portfolio choice patterns."
+  lesson="Practice reviews can show how foresight inputs shape portfolios."
+  source={<>OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)</>}
+/>
 
 **Common misinterpretation:** Foresight replaces experimentation rather than supplying inputs that labs must test and validate.
 
@@ -1361,12 +1449,14 @@ flowchart TB
 - Deliver a governance review and publish updated decision rules.
 
 
-**Case vignette**
-- **Context:** National lab programs used cadence and evidence gates to manage delivery.
-- **Intervention:** Checklists and decision gates were documented in program guidance.
-- **Outcome:** Cadence and evidence gates were used to manage portfolio flow.
-- **Lesson:** Cadenced checklists can support evidence gates in national lab programs.
-- **Source:** Doulab, n.d. (https://doulab.net/case-studies/ogtic-redlab)
+<CaseVignetteCard
+  title="National program checklists"
+  context="National lab programs used cadence and evidence gates to manage delivery."
+  intervention="Checklists and decision gates were documented in program guidance."
+  outcome="Cadence and evidence gates were used to manage portfolio flow."
+  lesson="Cadenced checklists can support evidence gates in national lab programs."
+  source={<>Doulab, n.d. (https://doulab.net/case-studies/ogtic-redlab)</>}
+/>
 
 
 ## Conclusion
@@ -1382,12 +1472,14 @@ Moreover, as public engagement and innovation literacy grow, there is an opportu
 This guide has explored the multifaceted aspects of establishing, running, and scaling National Innovation Lab Networks, providing a roadmap for nations seeking to coordinate collective capabilities. The system-level view that connects MicroCanvas Framework (MCF 2.2), IMM, VILF, and Vigía Futura emphasizes adaptability, institutional learning, and decision integrity under uncertainty. It suggests that policymakers, industry leaders, and academics can support these networks while keeping their innovation systems responsive rather than final.
 
 
-**Case vignette**
-- **Context:** Cross-country lab reviews assessed governance and evidence practices.
-- **Intervention:** Reviews compared governance models and evidence standards.
-- **Outcome:** Evidence-led governance was linked to network sustainability.
-- **Lesson:** Evidence-led governance can support network durability over time.
-- **Source:** OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)
+<CaseVignetteCard
+  title="Governance durability reviews"
+  context="Cross-country lab reviews assessed governance and evidence practices."
+  intervention="Reviews compared governance models and evidence standards."
+  outcome="Evidence-led governance was linked to network sustainability."
+  lesson="Evidence-led governance can support network durability over time."
+  source={<>OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)</>}
+/>
 
 **What to measure:** Portfolio reuse rate, evidence quality over time, and decision-cycle stability across labs.
 
@@ -1462,12 +1554,14 @@ This guide has explored the multifaceted aspects of establishing, running, and s
 
 
 
-**Case vignette**
-- **Context:** Reference sources document lab operations across sectors.
-- **Intervention:** OECD OPSI reviews were used to compare governance and evidence practices.
-- **Outcome:** Cross-sector patterns in lab operations were identified.
-- **Lesson:** Comparative reviews can surface governance and evidence patterns.
-- **Source:** OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)
+<CaseVignetteCard
+  title="Cross-sector lab review"
+  context="Reference sources document lab operations across sectors."
+  intervention="OECD OPSI reviews were used to compare governance and evidence practices."
+  outcome="Cross-sector patterns in lab operations were identified."
+  lesson="Comparative reviews can surface governance and evidence patterns."
+  source={<>OECD OPSI, 2023 (https://oecd-opsi.org/blog/innovation-labs-through-the-looking-glass/)</>}
+/>
 
 
 ## Appendices
@@ -1544,10 +1638,12 @@ After more than 250 micro sprints with customers ranging from the financial and 
 
 As work continues, MCF 2.2 may evolve and incorporate new tools as technologies mature, including artificial intelligence. This section is a forward-looking observation rather than a prediction of outcomes.
 
-**Case vignette**
-- **Context:** R&D contexts used structured question frameworks to guide decisions.
-- **Intervention:** Decision gates and evidence logs aligned to structured question formats.
-- **Outcome:** Evidence logs mapped to gate decisions.
-- **Lesson:** Structured question frameworks can support decision gate design.
-- **Source:** DARPA, n.d. (https://www.darpa.mil/about/heilmeier-catechism)
+<CaseVignetteCard
+  title="R&D structured questions"
+  context="R&D contexts used structured question frameworks to guide decisions."
+  intervention="Decision gates and evidence logs aligned to structured question formats."
+  outcome="Evidence logs mapped to gate decisions."
+  lesson="Structured question frameworks can support decision gate design."
+  source={<>DARPA, n.d. (https://www.darpa.mil/about/heilmeier-catechism)</>}
+/>
 

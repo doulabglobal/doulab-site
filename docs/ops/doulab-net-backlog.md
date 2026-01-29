@@ -822,3 +822,334 @@ Completion note: Guide split into /docs/research-resources/innovation-lab-guide/
 - P2 items implemented or scheduled.
 - P3 items remain deferred with no partial execution.
 
+## Daily Check Log (Migrated from CHECKLOG.md)
+
+### LOG-2025-08-30-01
+- Description: Build - Broken-link checker silenced by switching footer RSS/Sitemap to href (external-style); full build passes.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-02
+- Description: Routing - Resolved duplicate /contact (kept src/pages/contact/index.tsx as canonical).
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-03
+- Description: DX - Removed BOM from package.json; pinned engines.node to ^22 and updated CF Pages to Node 22.x.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-04
+- Description: TS - Fixed JSX errors via tsconfig (jsx: react-jsx, libs/types) and corrected `<link rel="preload">` attribute casing (imageSrcSet/imageSizes).
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-05
+- Description: Blog - Replaced authors.yml with Luis Santiago; published inaugural post "Introducing Doulab."; links/buttons use global styles.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-06
+- Description: Insights - Latest whitepapers (docs tag=whitepaper) + 3 latest posts from /blog/rss.xml render correctly.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-07
+- Description: UI/UX - Canonical .subnav shared (About + Vig｛ Futura); active/hover set to Doulab purple in light/dark.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-08
+- Description: UI/UX - Footer background set to Doulab purple (light+dark); navbar hover/active states unified.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-09
+- Description: Dark Mode - Secondary buttons: transparent with white text by default; card/process-step/Docs cards surfaces fixed; section copy lightened; final CTA transparent with high-contrast text.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-10
+- Description: Pages - Work with Us migrated off page CSS module to custom.css utilities; hero preload added; content+a11y pass.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-11
+- Description: Pages - About: fixed broken anchor to /what-we-do#service-pillars; copy tightened.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-30-12
+- Description: Pages - Vig｛ Futura: switched to canonical .subnav; hero preload attrs fixed; copy tightened.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-30).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-27-01
+- Description: Repo sync - Force-with-lease pushed local main over remote; created remote backup branch backup-main-preforce-20250827-205022 (and tag backup/origin-main-20250827-205022).
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-27).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-27-02
+- Description: Docs - Updated README.md to align with Doulab Website project (Cloudflare migration, privacy-first, contribution workflow, status checklist).
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-27).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-27-03
+- Description: Docs - Added releases.md to sidebars.ts (Research & Resources); optional navbar/footer link prepared.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-27).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-27-04
+- Description: Infra - Switched to production-only on Cloudflare; removed staging + GitHub Pages deploys; purged GTM; set single SITE_URL; kept Cloudflare Analytics.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-27).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-27-05
+- Description: Infra - Removed leftover GTM/Consent code, replaced Root.tsx and ConsentBanner.tsx with privacy-first stubs, disabled manual CF beacon (auto-injection enabled), purged cache, pinned Node 20.16.0 in CF Pages.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-27).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-01
+- Description: Web - Lighthouse fixes (hero LCP preload + AVIF/WEBP picture fallback, explicit image dimensions, AA contrast colors); fixed docs typing in index.tsx.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-02
+- Description: IA - Updated navbar to target IA (Home, What we do, Case Studies, Insights, About, Contact).
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-03
+- Description: IA - Added What we do page stub with Products, Proof, and Next steps sections.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-04
+- Description: IA - Added Case Studies page stub with featured examples and method note.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-05
+- Description: IA - Added Insights page stub with highlights and links to docs/releases.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-06
+- Description: IA - Improved About page with canonical tag (SEO).
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-07
+- Description: IA - Added Contact page stub with next steps and email CTA.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-28-08
+- Description: Web - Homepage styles consolidated into src/css/custom.css; restored centered .section wrapper & 3-up card grid.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-28).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-2025-08-29-01
+- Description: Web - v0.4 Site-wide service pages & content refresh.
+- Rationale: Migrated from CHECKLOG.md daily entry (2025-08-29).
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-01
+- Description: Footer - fixed "Connect" links to real routes; standardized labels ("Insights", "What we do").
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-02
+- Description: Insights - auto-list 3 latest whitepapers (docs tag=whitepaper) + 3 latest blog posts via /blog/rss.xml; added safe client parsing, CTAs.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-03
+- Description: _headers - added RSS rules & tightened security headers (CSP additions, caching for assets, no-store for RSS).
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-04
+- Description: Home - card hover border/raise; "The Problem" horizontal reel; section centering normalized via custom.css.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-05
+- Description: About - timeline grouped by year; consolidated to shared styles; accessibility pass (headings/nav).
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-06
+- Description: What we do - hero + grid aligned to shared tokens; final CTA uses standardized .finalCta pattern.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-07
+- Description: Case Studies - consistent cards; "How we measure" icons & semantics; final CTA standardized.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-08
+- Description: Services (index) - migrated off page CSS; image preload attr fix (imageSrcSet/imageSizes); consistent cards + CTA.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-09
+- Description: Services/ClarityScan - productized copy; pricing/format cards; FAQ; Calendly CTA.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-10
+- Description: Services/Custom Workshops - agendas aligned to IMM & MCF phases; outcomes and CTAs standardized.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-11
+- Description: Services/Innovation Maturity - phase model clarified; outcomes/stat cards; CTA standardized.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-12
+- Description: Services/Coaching & Mentoring - tiers, outcomes, cadence; privacy-first copy; CTA standardized.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-13
+- Description: Services/Diagnostics - built full page (why/what/how, options, FAQ, CTA).
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-14
+- Description: Vig｛ Futura - subnav with intersection observer; sections (Radar/Briefings/Labs/Training/Roadmap); consistent cards & CTA.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-DONE-15
+- Description: Research & Resources - safe MDX (.md) with shared components; featured whitepaper + frameworks; authoring tips; final CTA.
+- Rationale: Migrated from CHECKLOG.md Done list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Done
+
+### LOG-PENDING-01
+- Description: Add remaining customers to About timeline and enrich proof logos (SVG, high-DPI).
+- Rationale: Migrated from CHECKLOG.md Pending / Next list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Pending
+
+### LOG-PENDING-02
+- Description: Unify hero images (sizes, aspect, preload hints) across all service pages.
+- Rationale: Migrated from CHECKLOG.md Pending / Next list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Pending
+
+### LOG-PENDING-03
+- Description: Normalize card body lengths site-wide for perfect grid homogeneity.
+- Rationale: Migrated from CHECKLOG.md Pending / Next list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Pending
+
+### LOG-PENDING-04
+- Description: Privacy-first contact form (serverless handler + minimal fields) and spam protection.
+- Rationale: Migrated from CHECKLOG.md Pending / Next list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Pending
+
+### LOG-PENDING-05
+- Description: Blog: add per-post images/og tags and ensure tag=whitepaper discipline in docs.
+- Rationale: Migrated from CHECKLOG.md Pending / Next list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Pending
+
+### LOG-PENDING-06
+- Description: Monitoring: LCP/CLS check post-deploy; review CF Pages cache & headers in staging.
+- Rationale: Migrated from CHECKLOG.md Pending / Next list.
+- Acceptance criteria:
+  - Entry preserved from daily check log.
+- Status: Pending
+

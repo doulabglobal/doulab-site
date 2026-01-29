@@ -27,3 +27,11 @@ dev-server.log
 
 temp_*
 tmp_*
+
+# Docusaurus / build outputs
+.docusaurus.bak-*/
+build-*/
+build-ci-*/
+
+# Scratch artifacts
+bytes.txt

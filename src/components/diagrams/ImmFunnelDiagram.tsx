@@ -54,8 +54,7 @@ export default function ImmFunnelDiagram({
         <div className="immFunnel__bar immFunnel__bar--p5">
           <div className="immFunnel__label immFunnel__label--small">
             CONTINUOUS
-            <br />
-            IMPROVEMENT
+            <span className="immFunnel__labelSub">IMPROVEMENT</span>
           </div>
         </div>
       </div>

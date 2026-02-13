@@ -422,6 +422,29 @@ a:hover {
     box-shadow: 0 10px 24px rgba(0,0,0,.08)
 }
 
+/* Hero diagram: same footprint as the image (16:9) */
+.components-hero__media {
+    width: 100%;
+}
+
+.heroDiagram {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.heroDiagram svg {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.heroDiagram > div {
+    width: 100%;
+    height: 100%;
+}
+
 .heroCtas {
     display: flex;
     gap: .75rem;

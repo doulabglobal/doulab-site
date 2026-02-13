@@ -39,6 +39,9 @@ type HeroProps = {
 
     /** Control eager loading (default false; opt-in for true LCP heroes) */
     eager?: boolean;
+
+    /** Optional right-side visual (e.g., diagram) */
+    rightVisual?: React.ReactNode;
 };
 
 export default function Hero({
@@ -56,38 +59,43 @@ export default function Hero({
     id = 'hero',
     ariaLabelledbyId = 'page-hero-title',
     eager = false,
+    rightVisual,
 }: HeroProps) {
     const jpg = `${imageBase}.jpg`;
     const webp = `${imageBase}.webp`;
     const avif = `${imageBase}.avif`;
+    const showImage = !rightVisual;
 
-    const ImgTag = (
+    const ImgTag = showImage ? (
         <picture>
             <source srcSet={avif} type="image/avif" />
             <source srcSet={webp} type="image/webp" />
-                <img loading={eager ? 'eager' : 'lazy'}
-                    src={jpg}
-                    alt={imageAlt}
-                    fetchPriority={eager ? 'high' as const : undefined}
-                    decoding="async"
-                    width={width}
-                    height={height}
+            <img
+                loading={eager ? 'eager' : 'lazy'}
+                src={jpg}
+                alt={imageAlt}
+                fetchPriority={eager ? 'high' as const : undefined}
+                decoding="async"
+                width={width}
+                height={height}
                 className={`heroImage ${'components-hero__image'}`}
             />
         </picture>
-    );
+    ) : null;
 
     return (
         <section className="heroBanner" id={id} aria-labelledby={ariaLabelledbyId}>
-            <Head>
-                <link
-                    rel="preload"
-                    as="image"
-                    href={jpg}
-                    imageSrcSet={`${avif} 1x, ${webp} 1x, ${jpg} 1x`}
-                    imageSizes={imageSizes}
-                />
-            </Head>
+            {showImage && (
+                <Head>
+                    <link
+                        rel="preload"
+                        as="image"
+                        href={jpg}
+                        imageSrcSet={`${avif} 1x, ${webp} 1x, ${jpg} 1x`}
+                        imageSizes={imageSizes}
+                    />
+                </Head>
+            )}
 
             {/* Two-column layout, matching home: text left, image right */}
             <div className={'components-hero__layout'}>
@@ -160,7 +168,13 @@ export default function Hero({
                 </div>
 
                 <div className={'components-hero__media'}>
-                    {ImgTag}
+                    {rightVisual ? (
+                        <div className="heroDiagram" aria-label="IMM phases diagram">
+                            {rightVisual}
+                        </div>
+                    ) : (
+                        ImgTag
+                    )}
                 </div>
             </div>
         </section>

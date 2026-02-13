@@ -4,6 +4,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
+import Mermaid from '@theme/Mermaid';
 
 // Icons (tree-shaken)
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -151,6 +152,41 @@ export default function InnovationMaturityProgram(): ReactNode {
     ],
   };
 
+  const immHeroDiagram = `
+flowchart TD
+  classDef spine fill:#ffffff,stroke:#111827,stroke-width:2px;
+  classDef phase fill:#ffffff,stroke:#111827,stroke-width:1px;
+  classDef gate fill:#ffffff,stroke:#111827,stroke-dasharray: 4 3;
+
+  %% Main vertical delivery phases
+  P2["Phase 02 — Structured Discovery & Validation"]:::phase
+  G2["Gate: Problem/Solution fit<br/>Decision memo"]:::gate
+  P3["Phase 03 — Efficiency"]:::phase
+  G3["Gate: Operational readiness<br/>Decision memo"]:::gate
+  P4["Phase 04 — Scaling"]:::phase
+  G4["Gate: Scale-up decision<br/>Decision memo"]:::gate
+  P5["Phase 05 — Continuous Improvement"]:::phase
+  G5["Gate: Long-term operating review<br/>Decision memo"]:::gate
+
+  P2 --> G2 --> P3 --> G3 --> P4 --> G4 --> P5 --> G5 --> P2
+
+  %% Transversal capability spine
+  subgraph P1["Phase 01 — Foundations (Capability spine)"]
+    direction TB
+    S1["Domain baseline<br/>+ phase readiness"]:::spine
+    S2["Innovation Governance Framework<br/>(roles, cadence, gates)"]:::spine
+    S3["Evidence-first discipline<br/>(thresholds, decision memos)"]:::spine
+    S4["OKRs + KPIs<br/>(innovation program)"]:::spine
+    S5["Innovation OS<br/>(templates, tooling, evidence packs)"]:::spine
+  end
+
+  %% Spine is transversal (feeds each phase)
+  P1 --> P2
+  P1 --> P3
+  P1 --> P4
+  P1 --> P5
+`;
+
   return (
     <Layout
       title="Innovation Maturity Model Program (IMM-P)® | Doulab"
@@ -158,14 +194,6 @@ export default function InnovationMaturityProgram(): ReactNode {
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/innovation-maturity" />
-        {/* Preload hero (two-column Hero component uses this base) */}
-        <link
-          rel="preload"
-          as="image"
-          href="/img/imm-program.jpg"
-          imageSrcSet="/img/imm-program.avif 1x, /img/imm-program.webp 1x, /img/imm-program.jpg 1x"
-          imageSizes="(max-width: 700px) 100vw, 600px"
-        />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
         {/* Use a dedicated social card if you have it */}
@@ -188,6 +216,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           imageAlt="IMM-P® program illustration"
           width={1600}
           height={900}
+          rightVisual={<Mermaid value={immHeroDiagram} />}
           primaryCta={{
             to: 'https://booking.doulab.net/discovery',
             label: 'Book a discovery call',

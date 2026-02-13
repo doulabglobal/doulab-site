@@ -422,17 +422,21 @@ a:hover {
     box-shadow: 0 10px 24px rgba(0,0,0,.08)
 }
 
-/* Hero diagram: same footprint as the image (16:9) */
-.components-hero__media {
-    width: 100%;
-}
-
+/* IMM Hero diagram — maximize readability inside 16:9 hero footprint */
 .heroDiagram {
     width: 100%;
     aspect-ratio: 16 / 9;
     display: grid;
     place-items: center;
     overflow: hidden;
+    padding: 8px;
+}
+
+.heroDiagram > div {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
 }
 
 .heroDiagram svg {
@@ -440,9 +444,15 @@ a:hover {
     height: 100% !important;
 }
 
-.heroDiagram > div {
-    width: 100%;
-    height: 100%;
+.heroDiagram svg text {
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    .heroDiagram {
+        aspect-ratio: 4 / 3;
+        padding: 6px;
+    }
 }
 
 .heroCtas {

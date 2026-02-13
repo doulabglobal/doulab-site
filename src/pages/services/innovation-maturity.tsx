@@ -44,7 +44,7 @@ export default function InnovationMaturityProgram(): ReactNode {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'How long does IMM-P® run?',
+        name: 'How long does the program take?',
         acceptedAnswer: {
           '@type': 'Answer',
           text:
@@ -62,7 +62,7 @@ export default function InnovationMaturityProgram(): ReactNode {
       },
       {
         '@type': 'Question',
-        name: 'Who should participate?',
+        name: 'Who should be involved?',
         acceptedAnswer: {
           '@type': 'Answer',
           text:
@@ -175,7 +175,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           title="Innovation Maturity Model Program (IMM-P)®"
           subtitle="Assess. Strengthen. Accelerate."
           body={
-            'IMM-P® is Doulab’s innovation maturity program (IMM 2.2) designed to strengthen how teams make decisions under uncertainty. We baseline capability, install governance and evidence gates, and run structured delivery using the MicroCanvas Framework (MCF 2.2) across five phases, from Foundations to Continuous Improvement.'
+            'IMM-P® helps your team make better innovation decisions under uncertainty. We establish a clear baseline, align decision owners, and install a simple operating cadence that makes progress measurable. Delivery runs through five structured phases using the MicroCanvas Framework (MCF 2.2).'
           }
           imageBase="/img/imm-program"
           imageAlt="IMM-P® program illustration"
@@ -337,6 +337,29 @@ export default function InnovationMaturityProgram(): ReactNode {
           </div>
         </section>
 
+        {/* How we work — quick steps */}
+        <section className="section" id="imm-how-we-work" aria-labelledby="imm-how-we-work-title">
+          <h2 id="imm-how-we-work-title">How we work</h2>
+          <div className="grid grid-3">
+            <article className="card" aria-labelledby="imm-step-baseline">
+              <h3 id="imm-step-baseline">Baseline</h3>
+              <p>Establish domain scores, capability readiness, and key decision owners.</p>
+            </article>
+            <article className="card" aria-labelledby="imm-step-align">
+              <h3 id="imm-step-align">Align</h3>
+              <p>Agree on goals, evidence criteria, and operating cadence with leadership and core teams.</p>
+            </article>
+            <article className="card" aria-labelledby="imm-step-experiments">
+              <h3 id="imm-step-experiments">Run experiments</h3>
+              <p>Design and execute focused discovery, validation, and optimization cycles.</p>
+            </article>
+            <article className="card" aria-labelledby="imm-step-institutionalize">
+              <h3 id="imm-step-institutionalize">Institutionalize</h3>
+              <p>Embed learnings into routines, metrics, and ongoing operating rhythm.</p>
+            </article>
+          </div>
+        </section>
+
         {/* Program structure */}
         <section className="section" id="program-structure" aria-labelledby="program-structure">
           <Heading as="h2" id="program-structure">
@@ -352,15 +375,15 @@ export default function InnovationMaturityProgram(): ReactNode {
             <BookOpen className="cardIcon" aria-hidden="true" />
             <h3 id="phase-01-title">Phase 01 — Foundations (Readiness &amp; Operating System)</h3>
             <ul>
-              <li>Maturity baseline: domain scoring, culture, governance, decision logic</li>
-              <li>Innovation Governance Framework: roles, cadence, intake, decision owners, gate criteria</li>
-              <li>Evidence-first discipline: thresholds, decision memos, and learning capture</li>
-              <li>Culture &amp; mindset: leadership rituals, meeting hygiene, and accountability norms</li>
-              <li>Agile operating setup: boards, sprint rhythm, review/retro cadence</li>
-              <li>Innovation program OKRs &amp; KPIs: measurement plan and reporting cadence</li>
-              <li>Pilot candidate selection: sequencing, constraints, and risk scan</li>
-              <li>Innovation OS blueprint: tooling, templates, evidence packs, decision memo format</li>
-              <li>Phase gate: readiness review + next-phase plan</li>
+              <li>Baseline maturity (domain scoring, culture, governance, decision logic)</li>
+              <li>Install innovation governance (roles, cadence, intake, decision owners, gate criteria)</li>
+              <li>Establish evidence discipline (thresholds, decision memos, learning capture)</li>
+              <li>Reinforce culture & mindset (leadership rituals, meeting hygiene, accountability norms)</li>
+              <li>Set agile operating setup (boards, sprint rhythm, review/retro cadence)</li>
+              <li>Define program OKRs & KPIs (measurement plan, reporting cadence)</li>
+              <li>Select pilot candidates (sequencing, constraints, risk scan)</li>
+              <li>Build the Innovation OS blueprint (tooling, templates, evidence packs, decision memo format)</li>
+              <li>Run phase gate (readiness review + next-phase plan)</li>
             </ul>
             <p>
               <strong>Key deliverables:</strong> Domain baseline; governance framework; OKRs/KPIs; pilot shortlist &amp; criteria; Innovation OS blueprint; readiness decision memo.
@@ -372,15 +395,15 @@ export default function InnovationMaturityProgram(): ReactNode {
             <Target className="cardIcon" aria-hidden="true" />
             <h3 id="phase-02-title">Phase 02 — Structured Discovery &amp; Validation</h3>
             <ul>
-              <li>Customer insights: segments, interviews, jobs/pains/gains, alternatives</li>
-              <li>Problem definition: problem statements, constraints, strategic objectives, OKR alignment</li>
-              <li>Solution exploration: alternatives, value proposition, differentiation</li>
-              <li>Prototyping: user stories, flows, low-to-mid fidelity prototypes</li>
-              <li>Experimentation: hypotheses, test design, evidence loops, kill criteria</li>
-              <li>Validation infrastructure: tracking, synthesis, and decision trails</li>
-              <li>GTM outline: channels, onboarding, retention levers, early sales motions</li>
-              <li>Business model validation signals: viability checks and operating assumptions</li>
-              <li>Phase gate: problem/solution fit decision memo</li>
+              <li>Synthesize customer insights (segments, interviews, jobs/pains/gains, alternatives)</li>
+              <li>Define the problem (problem statements, constraints, strategic objectives, OKR alignment)</li>
+              <li>Explore solutions (alternatives, value proposition, differentiation)</li>
+              <li>Prototype workflows (user stories, flows, low-to-mid fidelity prototypes)</li>
+              <li>Run experiments (hypotheses, test design, evidence loops, kill criteria)</li>
+              <li>Stand up validation infrastructure (tracking, synthesis, decision trails)</li>
+              <li>Outline GTM (channels, onboarding, retention levers, early sales motions)</li>
+              <li>Check business model signals (viability checks, operating assumptions)</li>
+              <li>Run phase gate (problem/solution fit decision memo)</li>
             </ul>
             <p>
               <strong>Key deliverables:</strong> Research synthesis; problem &amp; objective set; validated value proposition; experiment results; pilot plan; updated model; decision memo.
@@ -392,14 +415,14 @@ export default function InnovationMaturityProgram(): ReactNode {
             <LineChart className="cardIcon" aria-hidden="true" />
             <h3 id="phase-03-title">Phase 03 — Efficiency (Process, Automation, Quality)</h3>
             <ul>
-              <li>Process mapping: bottleneck removal, SOPs, handoffs, and operating latency reduction</li>
-              <li>Automation &amp; integrations: workflows, data pipelines, and system boundaries</li>
-              <li>Data-driven decision cadence: dashboards and governance review rhythm</li>
-              <li>Quality controls: defect prevention, acceptance criteria, and reliability practices</li>
-              <li>Risk &amp; compliance integration: controls and checklists as you operationalize</li>
-              <li>Cross-team alignment: interfaces, ownership, and escalation paths</li>
-              <li>Continuous improvement loop: retrospectives, backlog hygiene, and operating upgrades</li>
-              <li>Phase gate: operational readiness + pilot expansion memo</li>
+              <li>Map processes (bottleneck removal, SOPs, handoffs, latency reduction)</li>
+              <li>Implement automation & integrations (workflows, data pipelines, system boundaries)</li>
+              <li>Establish data-driven cadence (dashboards, governance review rhythm)</li>
+              <li>Strengthen quality controls (defect prevention, acceptance criteria, reliability practices)</li>
+              <li>Integrate risk & compliance (controls, checklists)</li>
+              <li>Align cross-team interfaces (ownership, escalation paths)</li>
+              <li>Run continuous improvement loops (retrospectives, backlog hygiene, operating upgrades)</li>
+              <li>Run phase gate (operational readiness + pilot expansion memo)</li>
             </ul>
             <p>
               <strong>Key deliverables:</strong> Process audit &amp; actions; automation plan; QA/risk plan; dashboards; operating cadence; expansion decision memo.
@@ -411,14 +434,14 @@ export default function InnovationMaturityProgram(): ReactNode {
             <Rocket className="cardIcon" aria-hidden="true" />
             <h3 id="phase-04-title">Phase 04 — Scaling (Infrastructure, Partnerships, Growth)</h3>
             <ul>
-              <li>Scaling strategy: roadmap, sequencing, and capacity planning</li>
-              <li>Infrastructure &amp; org alignment: roles, talent plan, and operating model adjustments</li>
-              <li>Partner ecosystem: selection, governance, and interface management</li>
-              <li>Growth operating system: metrics, targets, and experimentation at scale</li>
-              <li>GTM expansion: sales/marketing systems and repeatable onboarding</li>
-              <li>Financial model for scale: unit economics, scenarios, risk and contingency</li>
-              <li>Internationalization considerations (where relevant)</li>
-              <li>Phase gate: scale-up decision memo</li>
+              <li>Set scaling strategy (roadmap, sequencing, capacity planning)</li>
+              <li>Align infrastructure & org (roles, talent plan, operating model adjustments)</li>
+              <li>Develop partner ecosystem (selection, governance, interface management)</li>
+              <li>Build growth operating system (metrics, targets, experimentation at scale)</li>
+              <li>Expand GTM (sales/marketing systems, repeatable onboarding)</li>
+              <li>Model scale economics (unit economics, scenarios, risk and contingency)</li>
+              <li>Address internationalization considerations (where relevant)</li>
+              <li>Run phase gate (scale-up decision memo)</li>
             </ul>
             <p>
               <strong>Key deliverables:</strong> Scaling plan; partner map; growth KPI system; GTM expansion plan; finance model; talent/org plan; scale decision memo.
@@ -430,14 +453,14 @@ export default function InnovationMaturityProgram(): ReactNode {
             <Shield className="cardIcon" aria-hidden="true" />
             <h3 id="phase-05-title">Phase 05 — Continuous Improvement (Learning &amp; Resilience)</h3>
             <ul>
-              <li>Continuous learning system: feedback loops, retrospectives, and portfolio reviews</li>
-              <li>Knowledge management: reusable playbooks, patterns, and institutional memory</li>
-              <li>Trend sensing &amp; foresight: signals, scenarios, and adaptive strategy refresh</li>
-              <li>Impact measurement: outcomes tracking and stakeholder communication</li>
-              <li>Resilience playbook: risks, continuity, and sustainability practices</li>
-              <li>Operating refresh cadence: quarterly reviews, governance upgrades, OKR recalibration</li>
-              <li>Long-term roadmap: capability upgrades and maturity targets</li>
-              <li>Phase gate: long-term operating review memo</li>
+              <li>Install continuous learning system (feedback loops, retrospectives, portfolio reviews)</li>
+              <li>Build knowledge management (playbooks, patterns, institutional memory)</li>
+              <li>Run trend sensing & foresight (signals, scenarios, adaptive strategy refresh)</li>
+              <li>Track impact (outcomes, stakeholder communication)</li>
+              <li>Maintain resilience playbook (risks, continuity, sustainability practices)</li>
+              <li>Refresh operating cadence (quarterly reviews, governance upgrades, OKR recalibration)</li>
+              <li>Set long-term roadmap (capability upgrades, maturity targets)</li>
+              <li>Run phase gate (long-term operating review memo)</li>
             </ul>
             <p>
               <strong>Key deliverables:</strong> Continuous improvement strategy; foresight inputs; impact measures; resilience plan; long-term roadmap; operating review memo.
@@ -457,7 +480,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           <div className={`faqList ${'pages-b4-p2__faqListGrid'} immFaqGrid`}>
             <details className="card">
               <summary>
-                <strong>How long does IMM-P® run?</strong>
+                <strong>How long does the program take?</strong>
               </summary>
               <p>Most teams start with a 12-week core track focused on Foundations plus Structured Discovery &amp; Validation. Larger rollouts extend to 24+ weeks across all five phases with additional pilots and operating cadence improvements.</p>
             </details>
@@ -471,21 +494,21 @@ export default function InnovationMaturityProgram(): ReactNode {
 
             <details className="card">
               <summary>
-                <strong>Who should participate?</strong>
+                <strong>Who should be involved?</strong>
               </summary>
               <p>A cross-functional core team and visible decision owners. We help you staff roles and install a lightweight Innovation Governance Framework aligned to your operating reality.</p>
             </details>
 
             <details className="card">
               <summary>
-                <strong>Do we need an innovation lab or PMO first?</strong>
+                <strong>Do we need a lab or PMO first?</strong>
               </summary>
               <p>No. IMM-P® installs the minimal governance and cadence you need. If you already have a lab/PMO, we integrate and strengthen gates, artifacts, and accountability.</p>
             </details>
 
             <details className="card">
               <summary>
-                <strong>How does ClarityScan® fit?</strong>
+                <strong>Where does ClarityScan® fit?</strong>
               </summary>
               <p>We run a <Link to="/services/clarityscan">ClarityScan®</Link> in Phase 01 to establish domain scores and phase readiness, align decision owners, and define the first evidence gates.</p>
             </details>
@@ -506,14 +529,14 @@ export default function InnovationMaturityProgram(): ReactNode {
 
             <details className="card">
               <summary>
-                <strong>Is the program remote?</strong>
+                <strong>Can the program run remotely?</strong>
               </summary>
               <p>Yes. Remote-first by design, with optional on-site kickoffs or checkpoints.</p>
             </details>
 
             <details className="card">
               <summary>
-                <strong>What do we get at the end?</strong>
+                <strong>What do we receive at the end?</strong>
               </summary>
               <p>Domain scores and phase readiness overlays, evidence packs and decision memos at each gate, a pilot plan (or shipped pilot), a working governance cadence, and reusable playbooks/templates aligned to MCF 2.2.</p>
             </details>

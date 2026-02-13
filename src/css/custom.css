@@ -472,6 +472,20 @@ a:hover {
     }
 }
 
+/* IMM Hero Mermaid: hide edges so it looks like a funnel stack (layout still uses real links) */
+.heroDiagram .edgePath path {
+    stroke: transparent !important;
+}
+
+.heroDiagram .arrowheadPath {
+    fill: transparent !important;
+    stroke: transparent !important;
+}
+
+.heroDiagram .edgeLabel {
+    display: none !important;
+}
+
 .heroCtas {
     display: flex;
     gap: .75rem;

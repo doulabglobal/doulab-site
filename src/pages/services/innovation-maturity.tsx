@@ -157,38 +157,32 @@ export default function InnovationMaturityProgram(): ReactNode {
   "theme": "base",
   "flowchart": {
     "useMaxWidth": true,
-    "nodeSpacing": 10,
-    "rankSpacing": 10,
-    "padding": 6
+    "nodeSpacing": 12,
+    "rankSpacing": 14
   },
   "themeVariables": {
     "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
     "fontSize": "22px",
-    "lineColor": "#ffffff",
+    "lineColor": "#6b7280",
     "mainBkg": "#ffffff"
   }
 }}%%
 
 flowchart TB
-  %% Funnel-style stack (no arrows to avoid extra vertical spacing)
   classDef blue fill:#0B5ED7,stroke:#0B5ED7,color:#ffffff,stroke-width:0px;
   classDef teal fill:#00A6C8,stroke:#00A6C8,color:#ffffff,stroke-width:0px;
   classDef green fill:#57C000,stroke:#57C000,color:#0b0f19,stroke-width:0px;
   classDef orange fill:#FF8A00,stroke:#FF8A00,color:#0b0f19,stroke-width:0px;
   classDef red fill:#F26B5E,stroke:#F26B5E,color:#ffffff,stroke-width:0px;
 
-  P1["PHASE 01 — FOUNDATIONS<br/>(capability spine)<br/>Baseline • Roles • Metrics"]:::blue
+  P1["PHASE 01 — FOUNDATIONS (capability spine)"]:::blue
   D["PHASE 02 — DISCOVERY"]:::teal
   V["PHASE 02 — VALIDATION"]:::green
   E["PHASE 03 — EFFICIENCY"]:::orange
   S["PHASE 04 — SCALING"]:::red
   CI["PHASE 05 — CONTINUOUS IMPROVEMENT"]:::red
 
-  %% Invisible links just to stack (no visible arrows)
-  P1 --- D --- V --- E --- S --- CI
-
-  %% Make links invisible
-  linkStyle default stroke:transparent,stroke-width:0px;
+  P1 --> D --> V --> E --> S --> CI
 `;
 
   return (

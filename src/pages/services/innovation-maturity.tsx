@@ -157,49 +157,34 @@ export default function InnovationMaturityProgram(): ReactNode {
   "theme": "base",
   "flowchart": {
     "curve": "linear",
-    "nodeSpacing": 34,
-    "rankSpacing": 34
+    "nodeSpacing": 28,
+    "rankSpacing": 26,
+    "useMaxWidth": true
   },
   "themeVariables": {
     "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
     "fontSize": "26px",
     "lineColor": "#6b7280",
-    "textColor": "#ffffff",
     "mainBkg": "#ffffff"
   }
 }}%%
 
 flowchart TB
-  %% --- Color tokens (match the previous hero image vibe) ---
-  %% Blue / Teal / Green / Orange / Red + Purple accent for spine
-  classDef p1 fill:#0B5ED7,stroke:#0B5ED7,color:#ffffff,stroke-width:2px;
-  classDef p2 fill:#00A6C8,stroke:#00A6C8,color:#ffffff,stroke-width:2px;
-  classDef p3 fill:#57C000,stroke:#57C000,color:#0b0f19,stroke-width:2px;
-  classDef p4 fill:#FF8A00,stroke:#FF8A00,color:#0b0f19,stroke-width:2px;
-  classDef p5 fill:#F26B5E,stroke:#F26B5E,color:#ffffff,stroke-width:2px;
-  classDef spine fill:#6D28D9,stroke:#6D28D9,color:#ffffff,stroke-width:2px;
-  classDef hint fill:#ffffff,stroke:#d1d5db,color:#111827,stroke-width:1px;
+  classDef blue fill:#0B5ED7,stroke:#0B5ED7,color:#ffffff,stroke-width:2px;
+  classDef teal fill:#00A6C8,stroke:#00A6C8,color:#ffffff,stroke-width:2px;
+  classDef green fill:#57C000,stroke:#57C000,color:#0b0f19,stroke-width:2px;
+  classDef orange fill:#FF8A00,stroke:#FF8A00,color:#0b0f19,stroke-width:2px;
+  classDef red fill:#F26B5E,stroke:#F26B5E,color:#ffffff,stroke-width:2px;
 
-  %% --- Phase blocks (minimal text, hero-safe) ---
-  P1["PHASE 01 — FOUNDATIONS"]:::p1
-  P2["PHASE 02 — DISCOVER & VALIDATE"]:::p2
-  P3["PHASE 03 — EFFICIENCY"]:::p3
-  P4["PHASE 04 — SCALING"]:::p5
-  P5["PHASE 05 — CONTINUOUS IMPROVEMENT"]:::p5
+  P1["PHASE 01 — FOUNDATIONS<br/>(capability spine)<br/>Baseline • Roles • Metrics"]:::blue
+  D["PHASE 02 — DISCOVERY"]:::teal
+  V["PHASE 02 — VALIDATION"]:::green
+  E["PHASE 03 — EFFICIENCY"]:::orange
+  S["PHASE 04 — SCALING"]:::red
+  CI["PHASE 05 — CONTINUOUS<br/>IMPROVEMENT"]:::red
 
-  %% --- Spine (transversal) shown as a “capability spine” label + arrow loop ---
-  S["Phase 01 is a capability spine<br/>that supports every phase"]:::spine
+  P1 --> D --> V --> E --> S --> CI
 
-  %% --- Vertical funnel-like flow (simple) ---
-  P1 --> P2 --> P3 --> P4 --> P5
-
-  %% --- Spine points to the whole chain (transversal) ---
-  S -.-> P2
-  S -.-> P3
-  S -.-> P4
-  S -.-> P5
-
-  %% --- Keep diagram compact / emphasize vertical stack ---
   linkStyle default stroke:#6b7280,stroke-width:2px;
 `;
 

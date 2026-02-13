@@ -422,14 +422,14 @@ a:hover {
     box-shadow: 0 10px 24px rgba(0,0,0,.08)
 }
 
-/* IMM Hero diagram — maximize readability inside 16:9 hero footprint */
+/* IMM Hero diagram — scale to fit, no clipping */
 .heroDiagram {
     width: 100%;
     aspect-ratio: 16 / 9;
     display: grid;
     place-items: center;
     overflow: hidden;
-    padding: 8px;
+    padding: 6px;
 }
 
 .heroDiagram > div {
@@ -441,7 +441,8 @@ a:hover {
 
 .heroDiagram svg {
     width: 100% !important;
-    height: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
 }
 
 .heroDiagram svg text {
@@ -452,6 +453,11 @@ a:hover {
     .heroDiagram {
         aspect-ratio: 4 / 3;
         padding: 6px;
+    }
+
+    .heroDiagram svg {
+        width: 100% !important;
+        height: auto !important;
     }
 }
 

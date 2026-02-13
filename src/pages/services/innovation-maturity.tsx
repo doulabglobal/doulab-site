@@ -188,13 +188,60 @@ export default function InnovationMaturityProgram(): ReactNode {
             dataCta: 'cta.services.imm.hero.discovery',
           }}
           secondaryCta={{
-            to: '/services/innovation-maturity#imm-structure',
+            to: '#program-structure',
             label: 'See program structure',
             dataCta: 'cta.services.imm.hero.see_structure',
             ariaLabel: 'See program structure',
           }}
           ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2."
         />
+
+        <section className="section immWhatYouGet" id="imm-what-you-get" aria-labelledby="imm-what-you-get-title">
+          <h2 id="imm-what-you-get-title">What you get</h2>
+          <p className="sectionLead">
+            A pragmatic, evidence-based operating model your team can run every week—so innovation decisions become repeatable, measurable, and less risky.
+          </p>
+
+          <div className="grid grid-3">
+            <article className="card" aria-labelledby="imm-deliverable-baseline">
+              <h3 id="imm-deliverable-baseline">Baseline + scorecard</h3>
+              <p>A domain-level baseline (capability + readiness) with clear gaps, strengths, and priority actions.</p>
+            </article>
+
+            <article className="card" aria-labelledby="imm-deliverable-gates">
+              <h3 id="imm-deliverable-gates">Evidence gates</h3>
+              <p>A lightweight governance layer: what counts as evidence, when to stop, and when to scale.</p>
+            </article>
+
+            <article className="card" aria-labelledby="imm-deliverable-cadence">
+              <h3 id="imm-deliverable-cadence">Delivery cadence</h3>
+              <p>A weekly operating rhythm (checkpoints, reviews, artifacts) aligned to your maturity phase.</p>
+            </article>
+
+            <article className="card" aria-labelledby="imm-deliverable-artifacts">
+              <h3 id="imm-deliverable-artifacts">Standard artifacts</h3>
+              <p>Reusable templates: problem framing, experiments, decision logs, KPIs/OKRs, and risk notes.</p>
+            </article>
+
+            <article className="card" aria-labelledby="imm-deliverable-roadmap">
+              <h3 id="imm-deliverable-roadmap">90-day roadmap</h3>
+              <p>A phased plan with measurable outcomes and ownership—so progress is visible to leadership.</p>
+            </article>
+          </div>
+
+          <p className="microcopy immWhatYouGetProof">
+            Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates).
+          </p>
+
+          <div className="btn-row">
+            <a className="btn-primary" href="https://booking.doulab.net/discovery">
+              Book a discovery call
+            </a>
+            <Link className="btn-secondary" to="#program-structure">
+              See program structure
+            </Link>
+          </div>
+        </section>
 
         {/* Who is it for? */}
         <section className="section" id="imm-who" aria-labelledby="imm-who-title">
@@ -303,8 +350,8 @@ export default function InnovationMaturityProgram(): ReactNode {
         </section>
 
         {/* Program structure */}
-        <section className="section" id="imm-structure" aria-labelledby="imm-structure">
-          <Heading as="h2" id="imm-structure">
+        <section className="section" id="program-structure" aria-labelledby="program-structure">
+          <Heading as="h2" id="program-structure">
             Program structure (IMM-P®)
           </Heading>
           <p className="sectionLead">

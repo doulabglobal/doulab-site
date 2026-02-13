@@ -22,7 +22,7 @@ export default function ImmFunnelDiagram({
         <path
           d="M40,200 C20,160 20,110 40,70 C60,30 100,20 150,25"
           fill="none"
-          strokeWidth="10"
+          strokeWidth="7"
           strokeLinecap="round"
           markerEnd="url(#immArrowHead)"
         />

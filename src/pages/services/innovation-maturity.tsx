@@ -156,36 +156,39 @@ export default function InnovationMaturityProgram(): ReactNode {
 %%{init: {
   "theme": "base",
   "flowchart": {
-    "curve": "linear",
-    "nodeSpacing": 28,
-    "rankSpacing": 26,
-    "useMaxWidth": true
+    "useMaxWidth": true,
+    "nodeSpacing": 10,
+    "rankSpacing": 10,
+    "padding": 6
   },
   "themeVariables": {
     "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
     "fontSize": "22px",
-    "lineColor": "#6b7280",
+    "lineColor": "#ffffff",
     "mainBkg": "#ffffff"
   }
 }}%%
 
 flowchart TB
-  classDef blue fill:#0B5ED7,stroke:#0B5ED7,color:#ffffff,stroke-width:2px;
-  classDef teal fill:#00A6C8,stroke:#00A6C8,color:#ffffff,stroke-width:2px;
-  classDef green fill:#57C000,stroke:#57C000,color:#0b0f19,stroke-width:2px;
-  classDef orange fill:#FF8A00,stroke:#FF8A00,color:#0b0f19,stroke-width:2px;
-  classDef red fill:#F26B5E,stroke:#F26B5E,color:#ffffff,stroke-width:2px;
+  %% Funnel-style stack (no arrows to avoid extra vertical spacing)
+  classDef blue fill:#0B5ED7,stroke:#0B5ED7,color:#ffffff,stroke-width:0px;
+  classDef teal fill:#00A6C8,stroke:#00A6C8,color:#ffffff,stroke-width:0px;
+  classDef green fill:#57C000,stroke:#57C000,color:#0b0f19,stroke-width:0px;
+  classDef orange fill:#FF8A00,stroke:#FF8A00,color:#0b0f19,stroke-width:0px;
+  classDef red fill:#F26B5E,stroke:#F26B5E,color:#ffffff,stroke-width:0px;
 
   P1["PHASE 01 — FOUNDATIONS<br/>(capability spine)<br/>Baseline • Roles • Metrics"]:::blue
   D["PHASE 02 — DISCOVERY"]:::teal
   V["PHASE 02 — VALIDATION"]:::green
   E["PHASE 03 — EFFICIENCY"]:::orange
   S["PHASE 04 — SCALING"]:::red
-  CI["PHASE 05 — CONTINUOUS<br/>IMPROVEMENT"]:::red
+  CI["PHASE 05 — CONTINUOUS IMPROVEMENT"]:::red
 
-  P1 --> D --> V --> E --> S --> CI
+  %% Invisible links just to stack (no visible arrows)
+  P1 --- D --- V --- E --- S --- CI
 
-  linkStyle default stroke:#6b7280,stroke-width:2px;
+  %% Make links invisible
+  linkStyle default stroke:transparent,stroke-width:0px;
 `;
 
   return (

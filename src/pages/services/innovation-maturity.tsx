@@ -317,7 +317,8 @@ export default function InnovationMaturityProgram(): ReactNode {
             Five phases. Weekly masterclasses + clinics. Clear gates, owners, and decision criteria. Evidence stays in the loop.
           </p>
 
-          {/* Phase 01 */}
+          <div className="immPhaseStack">
+            {/* Phase 01 */}
           <article className="card" aria-labelledby="phase-01-title">
             <BookOpen className="cardIcon" aria-hidden="true" />
             <h3 id="phase-01-title">Phase 01 — Foundations (Readiness &amp; Operating System)</h3>
@@ -413,6 +414,7 @@ export default function InnovationMaturityProgram(): ReactNode {
               <strong>Key deliverables:</strong> Continuous improvement strategy; foresight inputs; impact measures; resilience plan; long-term roadmap; operating review memo.
             </p>
           </article>
+          </div>
 
           <p className={`microcopy ${'pages-b4-p2__microcopyTop'}`}>
             Method backbone: <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework (MCF 2.2)</Link> + IMM 2.2 (domain scoring, phase readiness, evidence gates).
@@ -423,7 +425,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <section className="section" id="imm-faq" aria-labelledby="imm-faq-title">
           <h2 id="imm-faq-title">IMM-P® — Frequently asked questions</h2>
 
-          <div className={`faqList ${'pages-b4-p2__faqListGrid'}`}>
+          <div className={`faqList ${'pages-b4-p2__faqListGrid'} immFaqGrid`}>
             <details className="card">
               <summary>
                 <strong>How long does IMM-P® run?</strong>

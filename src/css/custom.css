@@ -1422,6 +1422,25 @@ html[data-theme='dark'] .mermaid svg .note {
   order: -1;
 }
 
+/* IMM landing page — layout helpers */
+.immPhaseStack {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 996px) {
+  .immFaqGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    align-items: start;
+  }
+}
+
+.immFaqGrid > .card {
+  height: fit-content;
+}
+
 
 /* ---- migrated from pages/book-clarityscan-success.module.css ---- */
 .pages-book-clarityscan-success__main {

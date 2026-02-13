@@ -526,9 +526,9 @@ export default function InnovationMaturityProgram(): ReactNode {
             </article>
           </div>
 
-          <div className="ctaRow" style={{ marginTop: '1rem' }}>
+          <div className="immDeliveryCtas">
             <Link
-              className="button button--primary button--lg"
+              className="buttonPrimary"
               to="https://booking.doulab.net/discovery"
               data-cta="cta.services.imm.delivery.discovery"
               aria-label="Book a discovery call to choose a delivery option"
@@ -536,7 +536,7 @@ export default function InnovationMaturityProgram(): ReactNode {
               Book a discovery call
             </Link>
             <Link
-              className="button button--secondary button--lg"
+              className="buttonSecondary"
               to="#program-structure"
               data-cta="cta.services.imm.delivery.see_structure"
               aria-label="Jump to program structure"
@@ -680,7 +680,14 @@ export default function InnovationMaturityProgram(): ReactNode {
             ].map(({ key, type, alt }) => (
               <div key={key} className="proofLogo" role="listitem">
                 {type === 'svg' ? (
-                  <img src={`/img/logos/optimized/${key}.svg`} alt={alt} loading="lazy" width="160" height="56" />
+                  <img
+                    className="proofLogo__svg"
+                    src={`/img/logos/optimized/${key}.svg`}
+                    alt={alt}
+                    loading="lazy"
+                    width={160}
+                    height={56}
+                  />
                 ) : (
                   <picture>
                     <source srcSet={`/img/logos/optimized/${key}.avif`} type="image/avif" />

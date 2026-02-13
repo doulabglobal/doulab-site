@@ -833,6 +833,41 @@ a:hover {
   padding: 0.5rem 0.75rem;
 }
 
+/* --- IMM proof strip: ensure SVGs render with stable dimensions --- */
+.proofLogo__svg {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* --- IMM delivery CTAs: match Hero button styles + add spacing --- */
+.immDeliveryCtas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+/* If any delivery section uses btn-* classes, make them visually consistent (safety net) */
+.immDeliveryCtas .btn-primary {
+  background: var(--dl-indigo);
+  color: var(--dl-white);
+  border-radius: .5rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .6rem 1rem;
+}
+
+.immDeliveryCtas .btn-secondary {
+  color: var(--dl-indigo);
+  border: 1px solid var(--dl-indigo);
+  background: transparent;
+  border-radius: .5rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: .6rem 1rem;
+}
+
 /* Proof strip placeholders (IMM-P) */
 .proofStrip--placeholders .proofLogo--placeholder {
   height: 56px;

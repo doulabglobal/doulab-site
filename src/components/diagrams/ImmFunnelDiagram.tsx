@@ -36,11 +36,10 @@ export default function ImmFunnelDiagram({
         </div>
 
         <div className="immFunnel__bar immFunnel__bar--p2">
-          <div className="immFunnel__label">DISCOVERY</div>
-        </div>
-
-        <div className="immFunnel__bar immFunnel__bar--p2b">
-          <div className="immFunnel__label">VALIDATION</div>
+          <div className="immFunnel__label immFunnel__label--p2">
+            STRUCTURED DISCOVERY
+            <span className="immFunnel__labelSub"> &amp; VALIDATION</span>
+          </div>
         </div>
 
         <div className="immFunnel__bar immFunnel__bar--p3">

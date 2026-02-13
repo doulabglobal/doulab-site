@@ -532,8 +532,7 @@ a:hover {
     height: 84px;
     clip-path: polygon(6% 0%, 94% 0%, 88% 100%, 12% 100%);
 }
-.immFunnel__bar--p2 { width: 92%; }
-.immFunnel__bar--p2b { width: 84%; }
+.immFunnel__bar--p2 { width: 88%; }
 .immFunnel__bar--p3 { width: 76%; }
 .immFunnel__bar--p4 { width: 68%; }
 .immFunnel__bar--p5 {
@@ -572,6 +571,12 @@ a:hover {
 .immFunnel__label--small {
     font-size: 16px;
     line-height: 1.05;
+}
+
+.immFunnel__label--p2 {
+    font-size: 20px;
+    line-height: 1.05;
+    letter-spacing: 0.4px;
 }
 
 .immFunnel__labelSub {

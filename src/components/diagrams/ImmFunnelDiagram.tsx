@@ -11,24 +11,10 @@ export default function ImmFunnelDiagram({
 }: Props) {
   return (
     <div className={`immFunnel ${className}`} role="img" aria-label={ariaLabel}>
-      <svg className="immFunnel__arrow" viewBox="0 0 100 100" aria-hidden="true">
-        <defs>
-          <marker id="immArrowHead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
-            <path d="M0,0 L10,5 L0,10 Z" />
-          </marker>
-        </defs>
-
-        {/* Straight arrow from bottom (CI) up to top (Foundations) */}
-        <line
-          x1="50"
-          y1="92"
-          x2="50"
-          y2="10"
-          strokeWidth="6"
-          strokeLinecap="round"
-          markerEnd="url(#immArrowHead)"
-        />
-      </svg>
+      <div className="immFunnel__simpleArrow" aria-hidden="true">
+        <span className="immFunnel__arrowLine" />
+        <span className="immFunnel__arrowHead">▲</span>
+      </div>
 
       <div className="immFunnel__stack">
         <div className="immFunnel__bar immFunnel__bar--p1">
@@ -52,9 +38,9 @@ export default function ImmFunnelDiagram({
         </div>
 
         <div className="immFunnel__bar immFunnel__bar--p5">
-          <div className="immFunnel__pill" aria-hidden="true">
+          <div className="immFunnel__label immFunnel__label--small">
             CONTINUOUS
-            <span className="immFunnel__pillSub">IMPROVEMENT</span>
+            <span className="immFunnel__labelSub">IMPROVEMENT</span>
           </div>
         </div>
       </div>

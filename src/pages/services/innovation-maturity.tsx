@@ -229,9 +229,6 @@ export default function InnovationMaturityProgram(): ReactNode {
             </article>
           </div>
 
-          <p className="microcopy immWhatYouGetProof">
-            Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates).
-          </p>
         </section>
 
         {/* Who is it for? */}
@@ -574,3 +571,4 @@ export default function InnovationMaturityProgram(): ReactNode {
     </Layout>
   );
 }
+

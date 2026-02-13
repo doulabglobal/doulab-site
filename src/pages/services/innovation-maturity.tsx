@@ -232,15 +232,6 @@ export default function InnovationMaturityProgram(): ReactNode {
           <p className="microcopy immWhatYouGetProof">
             Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates).
           </p>
-
-          <div className="btn-row">
-            <a className="btn-primary" href="https://booking.doulab.net/discovery">
-              Book a discovery call
-            </a>
-            <Link className="btn-secondary" to="#program-structure">
-              See program structure
-            </Link>
-          </div>
         </section>
 
         {/* Who is it for? */}

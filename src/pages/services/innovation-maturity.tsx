@@ -4,7 +4,6 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Heading from '@theme/Heading';
-import Mermaid from '@theme/Mermaid';
 
 // Icons (tree-shaken)
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -21,6 +20,7 @@ import Workflow from 'lucide-react/dist/esm/icons/workflow';
 import Hero from '../../components/Hero';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 import FinalCta from '../../components/FinalCta';
+import ImmFunnelDiagram from '../../components/diagrams/ImmFunnelDiagram';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 export default function InnovationMaturityProgram(): ReactNode {
@@ -152,39 +152,6 @@ export default function InnovationMaturityProgram(): ReactNode {
     ],
   };
 
-  const immHeroDiagram = `
-%%{init: {
-  "theme": "base",
-  "flowchart": {
-    "useMaxWidth": true,
-    "nodeSpacing": 12,
-    "rankSpacing": 14
-  },
-  "themeVariables": {
-    "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
-    "fontSize": "22px",
-    "lineColor": "#6b7280",
-    "mainBkg": "#ffffff"
-  }
-}}%%
-
-flowchart TB
-  classDef blue fill:#0B5ED7,stroke:#0B5ED7,color:#ffffff,stroke-width:0px;
-  classDef teal fill:#00A6C8,stroke:#00A6C8,color:#ffffff,stroke-width:0px;
-  classDef green fill:#57C000,stroke:#57C000,color:#0b0f19,stroke-width:0px;
-  classDef orange fill:#FF8A00,stroke:#FF8A00,color:#0b0f19,stroke-width:0px;
-  classDef red fill:#F26B5E,stroke:#F26B5E,color:#ffffff,stroke-width:0px;
-
-  P1["PHASE 01 — FOUNDATIONS (capability spine)"]:::blue
-  D["PHASE 02 — DISCOVERY"]:::teal
-  V["PHASE 02 — VALIDATION"]:::green
-  E["PHASE 03 — EFFICIENCY"]:::orange
-  S["PHASE 04 — SCALING"]:::red
-  CI["PHASE 05 — CONTINUOUS IMPROVEMENT"]:::red
-
-  P1 --> D --> V --> E --> S --> CI
-`;
-
   return (
     <Layout
       title="Innovation Maturity Model Program (IMM-P)® | Doulab"
@@ -214,7 +181,7 @@ flowchart TB
           imageAlt="IMM-P® program illustration"
           width={1600}
           height={900}
-          rightVisual={<Mermaid value={immHeroDiagram} />}
+          rightVisual={<ImmFunnelDiagram />}
           primaryCta={{
             to: 'https://booking.doulab.net/discovery',
             label: 'Book a discovery call',

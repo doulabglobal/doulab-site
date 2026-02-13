@@ -11,11 +11,6 @@ export default function ImmFunnelDiagram({
 }: Props) {
   return (
     <div className={`immFunnel ${className}`} role="img" aria-label={ariaLabel}>
-      <div className="immFunnel__simpleArrow" aria-hidden="true">
-        <span className="immFunnel__arrowHead">▲</span>
-        <span className="immFunnel__arrowLine" />
-      </div>
-
       <div className="immFunnel__stack">
         <div className="immFunnel__bar immFunnel__bar--p1">
           <div className="immFunnel__label">FOUNDATIONS</div>
@@ -23,9 +18,9 @@ export default function ImmFunnelDiagram({
         </div>
 
         <div className="immFunnel__bar immFunnel__bar--p2">
-          <div className="immFunnel__label immFunnel__label--p2">
+          <div className="immFunnel__label">
             STRUCTURED DISCOVERY
-            <span className="immFunnel__labelSub"> &amp; VALIDATION</span>
+            <span className="immFunnel__labelSub">&amp; VALIDATION</span>
           </div>
         </div>
 
@@ -38,8 +33,9 @@ export default function ImmFunnelDiagram({
         </div>
 
         <div className="immFunnel__bar immFunnel__bar--p5">
-          <div className="immFunnel__verticalLabel" aria-label="Continuous Improvement">
-            CONTINUOUS IMPROVEMENT
+          <div className="immFunnel__label">
+            CONTINUOUS
+            <span className="immFunnel__labelSub">IMPROVEMENT</span>
           </div>
         </div>
       </div>

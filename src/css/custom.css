@@ -819,16 +819,50 @@ a:hover {
         transition: filter .2s,opacity .2s,transform .2s
     }
 
-        .proofStrip img:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: translateY(-1px)
-        }
+.proofStrip img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: translateY(-1px)
+}
+
+/* Proof strip placeholders (IMM-P) */
+.proofStrip--placeholders .proofLogo--placeholder {
+  height: 56px;
+  width: 100%;
+  max-width: 180px;
+  border-radius: 12px;
+  border: 1px dashed var(--dl-border);
+  background: var(--ifm-background-surface-color, #fff);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--dl-gray-600);
+  opacity: 0.9;
+}
+
+:is(html.theme-dark, html[data-theme='dark']) .proofStrip--placeholders .proofLogo--placeholder {
+  border-color: rgba(255,255,255,.18);
+  color: #c7cad1;
+  background: #111318;
+}
+
+@media (max-width: 800px) {
+  .proofStrip--placeholders .proofLogo--placeholder {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proofStrip--placeholders .proofLogo--placeholder {
+    max-width: 100%;
+  }
+}
 
 @media (max-width:800px) {
-    .proofStrip {
-        grid-template-columns: repeat(3,1fr)
-    }
+  .proofStrip {
+    grid-template-columns: repeat(3,1fr)
+  }
 }
 
 @media (max-width:480px) {

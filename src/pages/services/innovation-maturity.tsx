@@ -469,7 +469,85 @@ export default function InnovationMaturityProgram(): ReactNode {
           </div>
 
           <p className={`microcopy ${'pages-b4-p2__microcopyTop'}`}>
-            Method backbone: <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework (MCF 2.2)</Link> + IMM 2.2 (domain scoring, phase readiness, evidence gates).
+            Method backbone:{' '}
+            <Link
+              to="/docs/research-resources/microcanvas"
+              data-cta="cta.services.imm.method_backbone.microcanvas"
+              aria-label="Open MicroCanvas Framework documentation"
+            >
+              MicroCanvas Framework (MCF 2.2)
+            </Link>{' '}
+            + IMM 2.2 (domain scoring, phase readiness, evidence gates).
+          </p>
+        </section>
+
+        <section className="section" id="imm-delivery" aria-labelledby="imm-delivery-title">
+          <h2 id="imm-delivery-title">Delivery options</h2>
+          <p className="sectionLead">
+            Choose the operating cadence that matches your constraints. We keep the same gates and artifacts—only the depth and rollout
+            change.
+          </p>
+
+          <div className="cardGrid">
+            <article className="card" aria-labelledby="imm-delivery-core">
+              <h3 id="imm-delivery-core">12-week core track</h3>
+              <p>
+                Foundations + Structured Discovery &amp; Validation. Best for teams that need a fast baseline, clear gates, and a first pilot
+                plan.
+              </p>
+              <ul>
+                <li>Domain baseline + phase readiness</li>
+                <li>Governance cadence installed (weekly)</li>
+                <li>Evidence gates + decision memos</li>
+              </ul>
+            </article>
+
+            <article className="card" aria-labelledby="imm-delivery-extended">
+              <h3 id="imm-delivery-extended">24+ week rollout</h3>
+              <p>Full five-phase journey with deeper operating-system installation, pilots, and efficiency/scaling improvements.</p>
+              <ul>
+                <li>Phase-by-phase delivery + gates</li>
+                <li>Pilot execution support</li>
+                <li>Operating cadence reinforcement</li>
+              </ul>
+            </article>
+
+            <article className="card" aria-labelledby="imm-delivery-multiteam">
+              <h3 id="imm-delivery-multiteam">Multi-team / portfolio</h3>
+              <p>For institutions and larger organizations running multiple initiatives. Adds portfolio governance and standardization.</p>
+              <ul>
+                <li>Intake + prioritization model</li>
+                <li>Portfolio reviews + auditability</li>
+                <li>Shared playbooks &amp; templates</li>
+              </ul>
+            </article>
+          </div>
+
+          <div className="btn-row" style={{ marginTop: '1rem' }}>
+            <Link
+              className="btn-primary"
+              to="https://booking.doulab.net/discovery"
+              data-cta="cta.services.imm.delivery.discovery"
+              aria-label="Book a discovery call to choose a delivery option"
+            >
+              Book a discovery call
+            </Link>
+            <Link
+              className="btn-secondary"
+              to="#program-structure"
+              data-cta="cta.services.imm.delivery.see_structure"
+              aria-label="Jump to program structure"
+            >
+              See program structure
+            </Link>
+          </div>
+
+          <p className="microcopy" style={{ marginTop: '0.5rem' }}>
+            Prefer starting with a baseline?{' '}
+            <Link to="/services/clarityscan" data-cta="cta.services.imm.delivery.learn_clarityscan" aria-label="Learn about ClarityScan baseline">
+              Learn about ClarityScan®
+            </Link>
+            .
           </p>
         </section>
 
@@ -510,7 +588,13 @@ export default function InnovationMaturityProgram(): ReactNode {
               <summary>
                 <strong>Where does ClarityScan® fit?</strong>
               </summary>
-              <p>We run a <Link to="/services/clarityscan">ClarityScan®</Link> in Phase 01 to establish domain scores and phase readiness, align decision owners, and define the first evidence gates.</p>
+              <p>
+                We run a{' '}
+                <Link to="/services/clarityscan" data-cta="cta.services.imm.faq.clarityscan" aria-label="Open ClarityScan service page">
+                  ClarityScan®
+                </Link>{' '}
+                in Phase 01 to establish domain scores and phase readiness, align decision owners, and define the first evidence gates.
+              </p>
             </details>
 
             <details className="card">
@@ -552,7 +636,17 @@ export default function InnovationMaturityProgram(): ReactNode {
               <summary>
                 <strong>How is pricing structured?</strong>
               </summary>
-              <p>Scope-based. We’ll shape a right-sized plan during intake. <Link to="https://booking.doulab.net/discovery">Talk to us</Link>.</p>
+              <p>
+                Scope-based. We’ll shape a right-sized plan during intake.{' '}
+                <Link
+                  to="https://booking.doulab.net/discovery"
+                  data-cta="cta.services.imm.faq.pricing.discovery"
+                  aria-label="Book a discovery call to discuss IMM pricing"
+                >
+                  Talk to us
+                </Link>
+                .
+              </p>
             </details>
 
             <details className="card">
@@ -564,9 +658,44 @@ export default function InnovationMaturityProgram(): ReactNode {
           </div>
         </section>
 
+        <section className="section section--tight" id="imm-proof" aria-labelledby="imm-proof-title">
+          <h2 id="imm-proof-title">Trusted by teams building public and private innovation</h2>
+          <p className="sectionLead">
+            We’ll replace these placeholders with your confirmed logos (SVG/PNG) once you share the filenames.
+          </p>
+
+          <div className="proofStrip proofStrip--placeholders" role="list" aria-label="Client and partner logo placeholders">
+            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 1">
+              Logo 1
+            </div>
+            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 2">
+              Logo 2
+            </div>
+            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 3">
+              Logo 3
+            </div>
+            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 4">
+              Logo 4
+            </div>
+            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 5">
+              Logo 5
+            </div>
+          </div>
+
+          <p className="microcopy" style={{ textAlign: 'center', marginTop: '0.75rem' }}>
+            Want to see a relevant example?{' '}
+            <Link to="#imm-related" data-cta="cta.services.imm.proof.see_case_studies" aria-label="Jump to related case studies">
+              Explore case studies
+            </Link>
+            .
+          </p>
+        </section>
+
         {/* Related case studies — shared component in canonical order */}
-        <section className="section" id="imm-related" aria-labelledby="imm-related-title">
-          <h2 id="imm-related-title">Related case studies</h2>
+        <section className="section" id="imm-related" aria-labelledby="imm-related">
+          <Heading as="h2" id="imm-related">
+            Related case studies
+          </Heading>
           <CaseStudyCards slugs={['afp-siembra', 'alpha-inversiones', 'fundapec', 'ogtic-redlab']} />
         </section>
 

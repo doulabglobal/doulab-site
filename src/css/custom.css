@@ -542,7 +542,9 @@ a:hover {
 .immFunnel__bar--p4 { width: 68%; }
 .immFunnel__bar--p5 {
     width: 56%;
-    height: 70px;
+    height: 86px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     clip-path: polygon(10% 0%, 90% 0%, 84% 100%, 16% 100%);
 }
 

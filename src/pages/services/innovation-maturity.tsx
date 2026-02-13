@@ -163,7 +163,7 @@ export default function InnovationMaturityProgram(): ReactNode {
   },
   "themeVariables": {
     "fontFamily": "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial",
-    "fontSize": "26px",
+    "fontSize": "22px",
     "lineColor": "#6b7280",
     "mainBkg": "#ffffff"
   }

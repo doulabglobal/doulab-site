@@ -504,7 +504,10 @@ export default function InnovationMaturityProgram(): ReactNode {
 
             <article className="card" aria-labelledby="imm-delivery-extended">
               <h3 id="imm-delivery-extended">24+ week rollout</h3>
-              <p>Full five-phase journey with deeper operating-system installation, pilots, and efficiency/scaling improvements.</p>
+              <p>
+                Two 12-week cycles covering Foundations plus Structured Discovery &amp; Validation, followed by Efficiency, Scaling, and
+                Continuous Improvement.
+              </p>
               <ul>
                 <li>Phase-by-phase delivery + gates</li>
                 <li>Pilot execution support</li>
@@ -523,9 +526,9 @@ export default function InnovationMaturityProgram(): ReactNode {
             </article>
           </div>
 
-          <div className="btn-row" style={{ marginTop: '1rem' }}>
+          <div className="ctaRow" style={{ marginTop: '1rem' }}>
             <Link
-              className="btn-primary"
+              className="button button--primary button--lg"
               to="https://booking.doulab.net/discovery"
               data-cta="cta.services.imm.delivery.discovery"
               aria-label="Book a discovery call to choose a delivery option"
@@ -533,7 +536,7 @@ export default function InnovationMaturityProgram(): ReactNode {
               Book a discovery call
             </Link>
             <Link
-              className="btn-secondary"
+              className="button button--secondary button--lg"
               to="#program-structure"
               data-cta="cta.services.imm.delivery.see_structure"
               aria-label="Jump to program structure"
@@ -664,22 +667,29 @@ export default function InnovationMaturityProgram(): ReactNode {
             We’ll replace these placeholders with your confirmed logos (SVG/PNG) once you share the filenames.
           </p>
 
-          <div className="proofStrip proofStrip--placeholders" role="list" aria-label="Client and partner logo placeholders">
-            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 1">
-              Logo 1
-            </div>
-            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 2">
-              Logo 2
-            </div>
-            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 3">
-              Logo 3
-            </div>
-            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 4">
-              Logo 4
-            </div>
-            <div className="proofLogo proofLogo--placeholder" role="listitem" aria-label="Logo placeholder 5">
-              Logo 5
-            </div>
+          <div className="proofStrip" role="list" aria-label="Selected organizations">
+            {[
+              { key: 'afpsiembra', type: 'raster', alt: 'AFP Siembra logo' },
+              { key: 'alpha', type: 'raster', alt: 'Alpha logo' },
+              { key: 'cven-logo-h-color', type: 'svg', alt: 'C-Ven Tecnologías logo' },
+              { key: 'fundapec', type: 'raster', alt: 'Fundapec logo' },
+              { key: 'mentorpill', type: 'raster', alt: 'MentorPill logo' },
+              { key: 'ogtic_horizontal_fullcolor', type: 'raster', alt: 'OGTIC logo' },
+              { key: 'pharmakun', type: 'raster', alt: 'Pharmakun logo' },
+              { key: 'su', type: 'raster', alt: 'SU logo' },
+            ].map(({ key, type, alt }) => (
+              <div key={key} className="proofLogo" role="listitem">
+                {type === 'svg' ? (
+                  <img src={`/img/logos/optimized/${key}.svg`} alt={alt} loading="lazy" width="160" height="56" />
+                ) : (
+                  <picture>
+                    <source srcSet={`/img/logos/optimized/${key}.avif`} type="image/avif" />
+                    <source srcSet={`/img/logos/optimized/${key}.webp`} type="image/webp" />
+                    <img src={`/img/logos/optimized/${key}.png`} alt={alt} loading="lazy" width="160" height="56" />
+                  </picture>
+                )}
+              </div>
+            ))}
           </div>
 
           <p className="microcopy" style={{ textAlign: 'center', marginTop: '0.75rem' }}>

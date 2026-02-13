@@ -12,8 +12,8 @@ export default function ImmFunnelDiagram({
   return (
     <div className={`immFunnel ${className}`} role="img" aria-label={ariaLabel}>
       <div className="immFunnel__simpleArrow" aria-hidden="true">
-        <span className="immFunnel__arrowLine" />
         <span className="immFunnel__arrowHead">▲</span>
+        <span className="immFunnel__arrowLine" />
       </div>
 
       <div className="immFunnel__stack">
@@ -38,9 +38,8 @@ export default function ImmFunnelDiagram({
         </div>
 
         <div className="immFunnel__bar immFunnel__bar--p5">
-          <div className="immFunnel__label immFunnel__label--small">
-            CONTINUOUS
-            <span className="immFunnel__labelSub">IMPROVEMENT</span>
+          <div className="immFunnel__verticalLabel" aria-label="Continuous Improvement">
+            CONTINUOUS IMPROVEMENT
           </div>
         </div>
       </div>

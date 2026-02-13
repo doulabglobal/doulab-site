@@ -669,33 +669,20 @@ export default function InnovationMaturityProgram(): ReactNode {
 
           <div className="proofStrip" role="list" aria-label="Selected organizations">
             {[
-              { key: 'afpsiembra', type: 'raster', alt: 'AFP Siembra logo' },
-              { key: 'alpha', type: 'raster', alt: 'Alpha logo' },
-              { key: 'cven-logo-h-color', type: 'svg', alt: 'C-Ven Tecnologías logo' },
-              { key: 'fundapec', type: 'raster', alt: 'Fundapec logo' },
-              { key: 'mentorpill', type: 'raster', alt: 'MentorPill logo' },
-              { key: 'ogtic_horizontal_fullcolor', type: 'raster', alt: 'OGTIC logo' },
-              { key: 'pharmakun', type: 'raster', alt: 'Pharmakun logo' },
-              { key: 'su', type: 'raster', alt: 'SU logo' },
-            ].map(({ key, type, alt }) => (
-              <div key={key} className="proofLogo" role="listitem">
-                {type === 'svg' ? (
-                  <img
-                    className="proofLogo__svg"
-                    src={`/img/logos/optimized/${key}.svg`}
-                    alt={alt}
-                    loading="lazy"
-                    width={160}
-                    height={56}
-                  />
-                ) : (
-                  <picture>
-                    <source srcSet={`/img/logos/optimized/${key}.avif`} type="image/avif" />
-                    <source srcSet={`/img/logos/optimized/${key}.webp`} type="image/webp" />
-                    <img src={`/img/logos/optimized/${key}.png`} alt={alt} loading="lazy" width="160" height="56" />
-                  </picture>
-                )}
-              </div>
+              { key: 'afpsiembra', alt: 'AFP Siembra logo' },
+              { key: 'alpha', alt: 'Alpha logo' },
+              { key: 'cven-logo-h-color', alt: 'C-Ven Technologies' },
+              { key: 'fundapec', alt: 'Fundapec logo' },
+              { key: 'mentorpill', alt: 'MentorPill logo' },
+              { key: 'ogtic_horizontal_fullcolor', alt: 'OGTIC logo' },
+              { key: 'pharmakun', alt: 'Pharmakun logo' },
+              { key: 'su', alt: 'SU logo' },
+            ].map(({ key, alt }) => (
+              <picture key={key} className="proofLogo" role="listitem">
+                <source srcSet={`/img/logos/optimized/${key}.avif`} type="image/avif" />
+                <source srcSet={`/img/logos/optimized/${key}.webp`} type="image/webp" />
+                <img src={`/img/logos/optimized/${key}.png`} alt={alt} loading="lazy" width="160" height="60" />
+              </picture>
             ))}
           </div>
 

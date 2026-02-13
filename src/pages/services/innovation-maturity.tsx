@@ -175,7 +175,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           title="Innovation Maturity Model Program (IMM-P)®"
           subtitle="Assess. Strengthen. Accelerate."
           body={
-            'IMM-P® is Doulab’s domain-based maturity program (IMM 2.2) to strengthen how teams make decisions under uncertainty. We baseline capability, install governance and evidence gates, and run structured delivery using the MicroCanvas Framework (MCF 2.2) across five phases — from Foundations to Continuous Improvement.'
+            'IMM-P® is Doulab’s innovation maturity program (IMM 2.2) designed to strengthen how teams make decisions under uncertainty. We baseline capability, install governance and evidence gates, and run structured delivery using the MicroCanvas Framework (MCF 2.2) across five phases, from Foundations to Continuous Improvement.'
           }
           imageBase="/img/imm-program"
           imageAlt="IMM-P® program illustration"
@@ -193,7 +193,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             dataCta: 'cta.services.imm.hero.see_structure',
             ariaLabel: 'See program structure',
           }}
-          ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates)."
+          ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2."
         />
 
         {/* Who is it for? */}

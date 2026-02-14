@@ -664,7 +664,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <section className="section section--tight" id="imm-proof" aria-labelledby="imm-proof-title">
           <h2 id="imm-proof-title">Trusted by teams building public and private innovation</h2>
           <p className="sectionLead">
-            We’ll replace these placeholders with your confirmed logos (SVG/PNG) once you share the filenames.
+            Trusted by teams building public and private innovation programs.
           </p>
 
           <div className="proofStrip" role="list" aria-label="Selected organizations">

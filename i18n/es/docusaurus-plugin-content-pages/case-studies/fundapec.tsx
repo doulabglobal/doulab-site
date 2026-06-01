@@ -8,15 +8,16 @@ import FinalCta from '@site/src/components/FinalCta';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CaseFundapec(): ReactNode {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: 'https://doulab.net/case-studies' },
-      { '@type': 'ListItem', position: 3, name: 'FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos', item: 'https://doulab.net/case-studies/fundapec' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 3, name: 'FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos', item: localizedUrl('/case-studies/fundapec') },
     ],
   };
 
@@ -24,13 +25,13 @@ export default function CaseFundapec(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'CaseStudy',
     name: 'FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos',
-    url: 'https://doulab.net/case-studies/fundapec',
+    url: localizedUrl('/case-studies/fundapec'),
     inLanguage: 'es',
     description:
       'Comunidad FUNDAPEC rediseñada y relanzada tras una exploración de nuevos modelos de negocio, ahora un motor de participación confiable con gobernanza clara y analítica como fuente única de verdad.',
-    image: 'https://doulab.net/img/social/og-fundapec.jpg',
-    primaryImageOfPage: 'https://doulab.net/img/social/og-fundapec.jpg',
-    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: 'https://doulab.net' },
+    image: localizedUrl('/img/social/og-fundapec.jpg'),
+    primaryImageOfPage: localizedUrl('/img/social/og-fundapec.jpg'),
+    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: localizedUrl('/') },
     about: {
       '@type': 'Organization',
       name: 'FUNDAPEC',
@@ -39,7 +40,7 @@ export default function CaseFundapec(): ReactNode {
     author: {
       '@type': 'Organization',
       name: 'Doulab',
-      url: 'https://doulab.net',
+      url: localizedUrl('/'),
     },
   };
 
@@ -48,19 +49,17 @@ export default function CaseFundapec(): ReactNode {
       title="FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos | Caso de éxito"
       description="Rediseñamos y relanzamos Comunidad FUNDAPEC tras una exploración de nuevos modelos de negocio, creando un motor de participación confiable con gobernanza clara y analítica como fuente única de verdad."
     >
+      <PageMetadata slug="/case-studies/fundapec" ogImage="/img/social/og-fundapec.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/case-studies/fundapec" />
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos | Caso de éxito | Doulab"
+          content="FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos | Caso de éxito"
         />
         <meta
           property="og:description"
           content="Rediseñamos y relanzamos Comunidad FUNDAPEC tras una exploración de nuevos modelos de negocio, creando un motor de participación confiable con gobernanza clara y analítica como fuente única de verdad."
         />
-        {/* 1200×630 branded social card */}
-        <meta property="og:image" content="https://doulab.net/img/social/og-fundapec.jpg" />
         <meta property="og:image:alt" content="Comunidad FUNDAPEC, plataforma de exalumnos y participación." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />

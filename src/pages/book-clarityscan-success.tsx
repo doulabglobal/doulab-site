@@ -4,6 +4,7 @@ import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { CLARITYSCAN_BOOKING_URL } from '../constants/urls';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 export default function BookClarityScanSuccessPage() {
   useEffect(() => {
@@ -18,8 +19,8 @@ export default function BookClarityScanSuccessPage() {
 
   return (
     <Layout title="ClarityScan payment successful" description="ClarityScan payment confirmed. Schedule your diagnostic via Microsoft Bookings.">
+      <PageMetadata slug="/book-clarityscan-success" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/book-clarityscan-success" />
         <meta name="robots" content="noindex,follow" />
         <meta property="og:title" content="ClarityScan payment successful" />
         <meta property="og:description" content="Payment confirmed. Use the link to schedule your ClarityScan diagnostic." />

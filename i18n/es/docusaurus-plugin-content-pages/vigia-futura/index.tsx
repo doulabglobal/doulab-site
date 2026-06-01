@@ -8,6 +8,7 @@ import Hero from '@site/src/components/Hero';
 import FinalCta from '@site/src/components/FinalCta';
 import Pillars from '@site/src/components/imm/Pillars';
 import Roadmap from '@site/src/components/imm/Roadmap';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 type SectionDef = { id: string; label: string };
 
@@ -53,15 +54,14 @@ export default function VigiaFuturaPage() {
       title="Vigía Futura, Observatorio de Prospectiva e Innovación"
       description="Vigía Futura es el observatorio de prospectiva e innovación de Doulab. Publica el Índice Nacional de Madurez en Innovación y Transformación Digital, y cura señales, escenarios y benchmarks entre países."
     >
+      <PageMetadata slug="/vigia-futura" ogImage="/img/vigia-futura-hero.png" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/vigia-futura" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Vigía Futura, Observatorio de Prospectiva e Innovación | Doulab" />
+        <meta property="og:title" content="Vigía Futura, Observatorio de Prospectiva e Innovación" />
         <meta
           property="og:description"
           content="Vigía Futura es el observatorio de prospectiva e innovación de Doulab. Publica el Índice Nacional de Madurez en Innovación y Transformación Digital, y cura señales, escenarios y benchmarks entre países."
         />
-        <meta property="og:image" content="https://doulab.net/img/vigia-futura-hero.png" />
         <meta property="og:image:alt" content="Vigía Futura, observatorio de prospectiva e innovación" />
         <meta name="twitter:card" content="summary_large_image" />
         <link

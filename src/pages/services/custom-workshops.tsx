@@ -17,6 +17,7 @@ import ClipboardList from 'lucide-react/dist/esm/icons/clipboard-list';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CustomWorkshopsPage(): ReactNode {
   // JSON-LD
@@ -25,8 +26,8 @@ export default function CustomWorkshopsPage(): ReactNode {
     '@type': 'Service',
     name: 'Custom Workshops',
     serviceType: 'Innovation workshop facilitation',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/custom-workshops',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/custom-workshops'),
     areaServed: ['Global'],
     description:
       'Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day, on-site or remote. Half-day or full-day, on-site or remote. We scope on a 20-min discovery call.',
@@ -37,10 +38,9 @@ export default function CustomWorkshopsPage(): ReactNode {
       title="Custom Workshops: Align decisions & accelerate outcomes"
       description="Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day formats, on-site or remote."
     >
+      <PageMetadata slug="/services/custom-workshops" ogImage="/img/social/og-workshops.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/custom-workshops" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-workshops.jpg" />
         <meta property="og:image:alt" content="Doulab: Custom Workshops" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload (shared Hero uses this base) */}

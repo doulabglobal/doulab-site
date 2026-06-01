@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata from '@site/src/lib/pageMetadata';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -19,11 +20,10 @@ export default function ServicesPage(): ReactNode {
             title="Services: Structured innovation, diagnostics, workshops & foresight"
             description="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes; privacy-first."
         >
+            <PageMetadata slug="/services" ogImage="/img/docusaurus-social-card.jpg" />
             <Head>
-                <link rel="canonical" href="https://doulab.net/services" />
-                <meta property="og:title" content="Services - Structured innovation, diagnostics, workshops & foresight | Doulab" />
+                <meta property="og:title" content="Services - Structured innovation, diagnostics, workshops & foresight" />
                 <meta property="og:description" content="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes." />
-                <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
                 <meta property="og:image:alt" content="Doulab: Services" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="author" content="Luis Santiago Arias" />

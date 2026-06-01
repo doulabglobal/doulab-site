@@ -8,15 +8,16 @@ import FinalCta from '../../components/FinalCta';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CaseAfpSiembra(): ReactNode {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Case studies', item: 'https://doulab.net/case-studies' },
-      { '@type': 'ListItem', position: 3, name: 'AFP Siembra: Alcanza and SILAB', item: 'https://doulab.net/case-studies/afp-siembra' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Case studies', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 3, name: 'AFP Siembra: Alcanza and SILAB', item: localizedUrl('/case-studies/afp-siembra') },
     ],
   };
 
@@ -24,11 +25,11 @@ export default function CaseAfpSiembra(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'CaseStudy',
     name: 'AFP Siembra: Alcanza and SILAB',
-    url: 'https://doulab.net/case-studies/afp-siembra',
+    url: localizedUrl('/case-studies/afp-siembra'),
     inLanguage: 'en',
     description:
       'From strategy to repeatable delivery, a digital savings product and an innovation lab co created.',
-    image: 'https://doulab.net/img/social/og-afp-siembra.jpg',
+    image: localizedUrl('/img/social/og-afp-siembra.jpg'),
     about: {
       '@type': 'Organization',
       name: 'AFP Siembra',
@@ -37,7 +38,7 @@ export default function CaseAfpSiembra(): ReactNode {
     author: {
       '@type': 'Organization',
       name: 'Doulab',
-      url: 'https://doulab.net',
+      url: localizedUrl('/'),
     },
   };
 
@@ -68,15 +69,13 @@ export default function CaseAfpSiembra(): ReactNode {
       title="AFP Siembra: Alcanza and SILAB | Case Study"
       description="From strategy to repeatable delivery, a digital savings product and an innovation lab co created."
     >
+      <PageMetadata slug="/case-studies/afp-siembra" ogImage="/img/social/og-afp-siembra.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/case-studies/afp-siembra" />
-        <meta property="og:title" content="AFP Siembra: Alcanza and SILAB | Case Study | Doulab" />
+        <meta property="og:title" content="AFP Siembra: Alcanza and SILAB | Case Study" />
         <meta
           property="og:description"
           content="From strategy to repeatable delivery, a digital savings product and an innovation lab co created."
         />
-        {/* Use a 1200×630 social card, not the wide card image */}
-        <meta property="og:image" content="https://doulab.net/img/social/og-afp-siembra.jpg" />
         <meta property="og:image:alt" content="AFP Siembra, Alcanza product and SILAB innovation lab." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />

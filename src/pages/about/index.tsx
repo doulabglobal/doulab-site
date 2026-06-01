@@ -5,6 +5,7 @@ import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 // Icons (tree-shaken)
@@ -20,10 +21,10 @@ export default function AboutPage(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Doulab',
-    url: 'https://doulab.net',
+    url: localizedUrl('/'),
     logo: {
       '@type': 'ImageObject',
-      url: 'https://doulab.net/img/doulab.png',
+      url: localizedUrl('/img/doulab.png'),
       width: 512,
       height: 512,
     },
@@ -37,7 +38,7 @@ export default function AboutPage(): ReactNode {
       {
         '@type': 'ContactPoint',
         contactType: 'sales',
-        url: 'https://doulab.net/contact',
+        url: localizedUrl('/contact'),
         availableLanguage: ['en', 'es'],
       },
     ],
@@ -80,8 +81,8 @@ export default function AboutPage(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'About', item: 'https://doulab.net/about' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'About', item: localizedUrl('/about') },
     ],
   };
 
@@ -90,15 +91,14 @@ export default function AboutPage(): ReactNode {
       title="About"
       description="Discover Doulab’s vision, story, and service model. Innovation made repeatable."
     >
+      <PageMetadata slug="/about" ogImage="/img/social/og-about.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/about" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="About | Doulab" />
+        <meta property="og:title" content="About" />
         <meta
           property="og:description"
           content="Discover Doulab’s vision, story, and service model. Innovation made repeatable."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-about.jpg" />
         <meta property="og:image:alt" content="About Doulab, innovation, foresight, and repeatable delivery." />
         <meta name="twitter:card" content="summary_large_image" />
 

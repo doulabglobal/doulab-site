@@ -13,6 +13,7 @@ import CheckCircle2 from 'lucide-react/dist/esm/icons/check-circle-2';
 import Hero from '../../components/Hero';
 import type { JSX } from 'react';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 
 export default function WorkWithUsPage(): JSX.Element {
@@ -21,11 +22,10 @@ export default function WorkWithUsPage(): JSX.Element {
             title="Work with Doulab"
             description="Practical ways to start: diagnose, align, and build capability so strategy turns into sustained results."
         >
+            <PageMetadata slug="/work-with-us" ogImage="/img/docusaurus-social-card.jpg" />
             <Head>
-                <link rel="canonical" href="https://doulab.net/work-with-us" />
                 <meta property="og:title" content="Work with Doulab" />
                 <meta property="og:description" content="Practical ways to start: diagnose, align, and build capability so strategy turns into sustained results." />
-                <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
                 <meta property="og:image:alt" content="Doulab: Work with us" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="author" content="Luis Santiago Arias" />

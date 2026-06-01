@@ -5,12 +5,13 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import { CLARITYSCAN_BOOKING_URL } from '@site/src/constants/urls';
 import PageHeader from '@site/src/components/PageHeader/PageHeader';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 export default function BookClarityScanPage() {
   return (
     <Layout title="Agenda ClarityScan® en línea" description="Agenda un ClarityScan® en línea en minutos.">
+      <PageMetadata slug="/book-clarityscan" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/book-clarityscan" />
         <meta name="robots" content="noindex,follow" />
         <meta property="og:title" content="Agenda ClarityScan® en línea" />
         <meta property="og:description" content="Agenda un ClarityScan® en línea en minutos." />

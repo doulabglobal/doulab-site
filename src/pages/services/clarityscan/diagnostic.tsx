@@ -20,6 +20,7 @@ import Radar from '../../../components/imm/Radar';
 import MaturityLadder from '../../../components/imm/MaturityLadder';
 import Roadmap from '../../../components/imm/Roadmap';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../../constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function ClarityScanTier2Page(): ReactNode {
   const serviceSchema = {
@@ -27,14 +28,14 @@ export default function ClarityScanTier2Page(): ReactNode {
     '@type': 'Service',
     name: 'ClarityScan® Tier 2: Diagnostic',
     serviceType: 'Innovation Maturity Diagnostic Engagement',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/clarityscan/diagnostic',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/clarityscan/diagnostic'),
     areaServed: ['Global'],
     description:
       'ClarityScan® Tier 2 Diagnostic is a scoped, role-segmented innovation maturity engagement. Delivers baseline vs target radar, prioritized gap matrix, and a 90-day roadmap.',
     isRelatedTo: [
-      { '@type': 'Service', name: 'ClarityScan® Tier 1: Snapshot', url: 'https://doulab.net/services/clarityscan' },
-      { '@type': 'Service', name: 'ClarityScan® Tier 3: Audit', url: 'https://doulab.net/services/clarityscan/audit' },
+      { '@type': 'Service', name: 'ClarityScan® Tier 1: Snapshot', url: localizedUrl('/services/clarityscan') },
+      { '@type': 'Service', name: 'ClarityScan® Tier 3: Audit', url: localizedUrl('/services/clarityscan/audit') },
     ],
   };
 
@@ -43,16 +44,15 @@ export default function ClarityScanTier2Page(): ReactNode {
       title="ClarityScan® Tier 2: Diagnostic"
       description="ClarityScan® Tier 2 is a scoped, role-segmented innovation maturity diagnostic. Baseline vs target radar, prioritized gap matrix, and a 90-day roadmap."
     >
+      <PageMetadata slug="/services/clarityscan/diagnostic" ogImage="/img/social/og-clarityscan.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/clarityscan/diagnostic" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="ClarityScan® Tier 2: Diagnostic | Doulab" />
+        <meta property="og:title" content="ClarityScan® Tier 2: Diagnostic" />
         <meta
           property="og:description"
           content="A scoped, role-segmented innovation maturity diagnostic. Baseline vs target, prioritized gaps, and a 90-day roadmap."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
         <meta property="og:image:alt" content="ClarityScan® Tier 2 Diagnostic" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

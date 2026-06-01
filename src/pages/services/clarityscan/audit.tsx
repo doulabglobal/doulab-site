@@ -24,6 +24,7 @@ import Radar from '../../../components/imm/Radar';
 import MaturityLadder from '../../../components/imm/MaturityLadder';
 import EvidenceMeter from '../../../components/imm/EvidenceMeter';
 import Roadmap from '../../../components/imm/Roadmap';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function ClarityScanTier3Page(): ReactNode {
   const serviceSchema = {
@@ -31,14 +32,14 @@ export default function ClarityScanTier3Page(): ReactNode {
     '@type': 'Service',
     name: 'ClarityScan® Tier 3: Audit',
     serviceType: 'Evidence-backed Innovation Maturity Audit',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/clarityscan/audit',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/clarityscan/audit'),
     areaServed: ['Global'],
     description:
       'ClarityScan® Tier 3 Audit is an evidence-backed, audit-ready innovation maturity engagement. Every domain score is supported by documented artifacts and tied to IMM-P® phase readiness gates.',
     isRelatedTo: [
-      { '@type': 'Service', name: 'ClarityScan® Tier 1: Snapshot', url: 'https://doulab.net/services/clarityscan' },
-      { '@type': 'Service', name: 'ClarityScan® Tier 2: Diagnostic', url: 'https://doulab.net/services/clarityscan/diagnostic' },
+      { '@type': 'Service', name: 'ClarityScan® Tier 1: Snapshot', url: localizedUrl('/services/clarityscan') },
+      { '@type': 'Service', name: 'ClarityScan® Tier 2: Diagnostic', url: localizedUrl('/services/clarityscan/diagnostic') },
     ],
   };
 
@@ -47,16 +48,15 @@ export default function ClarityScanTier3Page(): ReactNode {
       title="ClarityScan® Tier 3: Audit"
       description="ClarityScan® Tier 3 Audit is an evidence-backed, audit-ready innovation maturity engagement. Every score is documented; deliverable is a governance-grade dossier."
     >
+      <PageMetadata slug="/services/clarityscan/audit" ogImage="/img/social/og-clarityscan.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/clarityscan/audit" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="ClarityScan® Tier 3: Audit | Doulab" />
+        <meta property="og:title" content="ClarityScan® Tier 3: Audit" />
         <meta
           property="og:description"
           content="Evidence-backed innovation maturity audit. Documented scores, phase readiness gates, governance-grade dossier."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
         <meta property="og:image:alt" content="ClarityScan® Tier 3 Audit" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

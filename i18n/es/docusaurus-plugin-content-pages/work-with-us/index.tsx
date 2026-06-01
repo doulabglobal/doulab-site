@@ -13,6 +13,7 @@ import CheckCircle2 from 'lucide-react/dist/esm/icons/check-circle-2';
 import Hero from '@site/src/components/Hero';
 import type { JSX } from 'react';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 
 export default function WorkWithUsPage(): JSX.Element {
@@ -21,11 +22,10 @@ export default function WorkWithUsPage(): JSX.Element {
             title="Trabaja con Doulab"
             description="Formas prácticas de empezar: diagnostica, alinea y construye capacidad para que la estrategia se convierta en resultados sostenidos."
         >
+            <PageMetadata slug="/work-with-us" ogImage="/img/docusaurus-social-card.jpg" />
             <Head>
-                <link rel="canonical" href="https://doulab.net/work-with-us" />
                 <meta property="og:title" content="Trabaja con Doulab" />
                 <meta property="og:description" content="Formas prácticas de empezar: diagnostica, alinea y construye capacidad para que la estrategia se convierta en resultados sostenidos." />
-                <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
                 <meta property="og:image:alt" content="Doulab: Trabaja con nosotros" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="author" content="Luis Santiago Arias" />

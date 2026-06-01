@@ -24,6 +24,7 @@ import Pillars from '@site/src/components/imm/Pillars';
 import Radar from '@site/src/components/imm/Radar';
 import MaturityLadder from '@site/src/components/imm/MaturityLadder';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function ClarityScanPage(): ReactNode {
   // JSON-LD schema (Service) with Tier 1 offer
@@ -32,8 +33,8 @@ export default function ClarityScanPage(): ReactNode {
     '@type': 'Service',
     name: 'ClarityScan®',
     serviceType: 'Diagnóstico de madurez en innovación y prospectiva',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/clarityscan',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/clarityscan'),
     areaServed: ['Global'],
     description:
       'Un diagnóstico por niveles de madurez en innovación y prospectiva. El Nivel 1 Snapshot entrega una línea base en la misma semana; el Nivel 2 Diagnóstico y el Nivel 3 Auditoría escalan a engagements más profundos.',
@@ -52,11 +53,10 @@ export default function ClarityScanPage(): ReactNode {
       title="ClarityScan®: diagnóstico por niveles de madurez en innovación"
       description="ClarityScan® es un diagnóstico por niveles de madurez en innovación y prospectiva. El Nivel 1 Snapshot (CHF 150) entrega una línea base en la misma semana; el Nivel 2 Diagnóstico y el Nivel 3 Auditoría escalan a engagements más profundos."
     >
+      <PageMetadata slug="/services/clarityscan" ogImage="/img/social/og-clarityscan.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/clarityscan" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
         <meta property="og:image:alt" content="ClarityScan®: diagnóstico por niveles de madurez en innovación" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload */}

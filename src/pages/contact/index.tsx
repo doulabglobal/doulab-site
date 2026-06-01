@@ -13,6 +13,7 @@ import Clock from 'lucide-react/dist/esm/icons/clock';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 const EMAIL = 'hello@doulab.net';
 
@@ -21,9 +22,9 @@ export default function Contact(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     name: 'Contact Doulab',
-    url: 'https://doulab.net/contact',
-    mainEntityOfPage: 'https://doulab.net/contact',
-    about: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
+    url: localizedUrl('/contact'),
+    mainEntityOfPage: localizedUrl('/contact'),
+    about: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
     contactPoint: [
       { '@type': 'ContactPoint', contactType: 'Business', email: EMAIL, availableLanguage: ['en', 'es'] },
     ],
@@ -33,8 +34,8 @@ export default function Contact(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://doulab.net/contact' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Contact', item: localizedUrl('/contact') },
     ],
   };
 
@@ -43,12 +44,11 @@ export default function Contact(): ReactNode {
       title="Contact"
       description="Start a discovery call or send us a brief. Privacy first, no third-party forms."
     >
+      <PageMetadata slug="/contact" ogImage="/img/social/og-contact.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/contact" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Contact | Doulab" />
+        <meta property="og:title" content="Contact" />
         <meta property="og:description" content="Start a discovery call or send us a brief. Privacy first, no third-party forms." />
-        <meta property="og:image" content="https://doulab.net/img/social/og-contact.jpg" />
         <meta property="og:image:alt" content="Doulab, Contact" />
         <meta name="twitter:card" content="summary_large_image" />
 

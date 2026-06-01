@@ -20,6 +20,7 @@ import Radar from '@site/src/components/imm/Radar';
 import MaturityLadder from '@site/src/components/imm/MaturityLadder';
 import Roadmap from '@site/src/components/imm/Roadmap';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function ClarityScanTier2Page(): ReactNode {
   const serviceSchema = {
@@ -27,14 +28,14 @@ export default function ClarityScanTier2Page(): ReactNode {
     '@type': 'Service',
     name: 'ClarityScan® Nivel 2: Diagnóstico',
     serviceType: 'Engagement de diagnóstico de madurez en innovación',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/clarityscan/diagnostic',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/clarityscan/diagnostic'),
     areaServed: ['Global'],
     description:
       'ClarityScan® Nivel 2 Diagnóstico es un engagement de madurez en innovación con alcance definido y segmentado por rol. Entrega el radar de línea base vs objetivo, una matriz priorizada de brechas y una hoja de ruta de 90 días.',
     isRelatedTo: [
-      { '@type': 'Service', name: 'ClarityScan® Nivel 1: Snapshot', url: 'https://doulab.net/services/clarityscan' },
-      { '@type': 'Service', name: 'ClarityScan® Nivel 3: Auditoría', url: 'https://doulab.net/services/clarityscan/audit' },
+      { '@type': 'Service', name: 'ClarityScan® Nivel 1: Snapshot', url: localizedUrl('/services/clarityscan') },
+      { '@type': 'Service', name: 'ClarityScan® Nivel 3: Auditoría', url: localizedUrl('/services/clarityscan/audit') },
     ],
   };
 
@@ -43,16 +44,15 @@ export default function ClarityScanTier2Page(): ReactNode {
       title="ClarityScan® Nivel 2: Diagnóstico"
       description="ClarityScan® Nivel 2 es un diagnóstico de madurez en innovación con alcance definido y segmentado por rol. Radar de línea base vs objetivo, matriz priorizada de brechas y una hoja de ruta de 90 días."
     >
+      <PageMetadata slug="/services/clarityscan/diagnostic" ogImage="/img/social/og-clarityscan.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/clarityscan/diagnostic" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="ClarityScan® Nivel 2: Diagnóstico | Doulab" />
+        <meta property="og:title" content="ClarityScan® Nivel 2: Diagnóstico" />
         <meta
           property="og:description"
           content="Un diagnóstico de madurez en innovación con alcance definido y segmentado por rol. Línea base vs objetivo, brechas priorizadas y una hoja de ruta de 90 días."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
         <meta property="og:image:alt" content="ClarityScan® Nivel 2 Diagnóstico" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

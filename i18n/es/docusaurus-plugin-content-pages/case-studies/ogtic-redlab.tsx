@@ -8,15 +8,16 @@ import FinalCta from '@site/src/components/FinalCta';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CaseOgticRedlab(): ReactNode {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: 'https://doulab.net/case-studies' },
-      { '@type': 'ListItem', position: 3, name: 'OGTIC: Red de Laboratorios de Innovación RedLab', item: 'https://doulab.net/case-studies/ogtic-redlab' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 3, name: 'OGTIC: Red de Laboratorios de Innovación RedLab', item: localizedUrl('/case-studies/ogtic-redlab') },
     ],
   };
 
@@ -24,13 +25,13 @@ export default function CaseOgticRedlab(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'CaseStudy',
     name: 'OGTIC: Red de Laboratorios de Innovación RedLab',
-    url: 'https://doulab.net/case-studies/ogtic-redlab',
+    url: localizedUrl('/case-studies/ogtic-redlab'),
     inLanguage: 'es',
     description:
       'Una red de innovación del sector público construida mediante capacidad estructurada, cohortes y entrega basada en evidencia.',
-    image: 'https://doulab.net/img/social/og-ogtic-redlab.jpg',
-    primaryImageOfPage: 'https://doulab.net/img/social/og-ogtic-redlab.jpg',
-    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: 'https://doulab.net' },
+    image: localizedUrl('/img/social/og-ogtic-redlab.jpg'),
+    primaryImageOfPage: localizedUrl('/img/social/og-ogtic-redlab.jpg'),
+    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: localizedUrl('/') },
     about: {
       '@type': 'Organization',
       name: 'OGTIC, RedLab',
@@ -39,7 +40,7 @@ export default function CaseOgticRedlab(): ReactNode {
     author: {
       '@type': 'Organization',
       name: 'Doulab',
-      url: 'https://doulab.net',
+      url: localizedUrl('/'),
     },
   };
 
@@ -48,20 +49,18 @@ export default function CaseOgticRedlab(): ReactNode {
       title="OGTIC: Red de Laboratorios de Innovación RedLab | Caso de éxito"
       description="Ayudamos a diseñar y facilitar RedLab con métodos compartidos, gobernanza y cadencia, para que los equipos públicos pasen de ideas a evidencia y entrega."
     >
+      <PageMetadata slug="/case-studies/ogtic-redlab" ogImage="/img/social/og-ogtic-redlab.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/case-studies/ogtic-redlab" />
         <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="OGTIC: Red de Laboratorios de Innovación RedLab | Caso de éxito | Doulab"
+          content="OGTIC: Red de Laboratorios de Innovación RedLab | Caso de éxito"
         />
         <meta
           property="og:description"
           content="Ayudamos a diseñar y facilitar RedLab con métodos compartidos, gobernanza y cadencia, para que los equipos públicos pasen de ideas a evidencia y entrega."
         />
         <meta name="keywords" content="innovación en sector público, laboratorios de innovación, gobernanza, MicroCanvas, Programa IMM-P®, RedLab, OGTIC" />
-        {/* Prefer a 1200×630 branded social card */}
-        <meta property="og:image" content="https://doulab.net/img/social/og-ogtic-redlab.jpg" />
         <meta property="og:image:alt" content="OGTIC, Red de Laboratorios de Innovación, sesiones de cohorte RedLab." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />

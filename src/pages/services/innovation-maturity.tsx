@@ -24,6 +24,7 @@ import Radar from '../../components/imm/Radar';
 import MaturityLadder from '../../components/imm/MaturityLadder';
 import EvidenceMeter from '../../components/imm/EvidenceMeter';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function InnovationMaturityProgram(): ReactNode {
   // JSON-LD schema (service)
@@ -32,8 +33,8 @@ export default function InnovationMaturityProgram(): ReactNode {
     '@type': 'Service',
     name: 'Innovation Maturity Model Program (IMM-P)®',
     serviceType: 'Innovation capability acceleration',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/innovation-maturity',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/innovation-maturity'),
     description:
       'IMM-P® is the program that operationalizes the Innovation Maturity Model (IMM 2.2): five domains, a five-rung capability progression, and phase-readiness gates backed by evidence.',
     areaServed: ['Global'],
@@ -123,13 +124,13 @@ export default function InnovationMaturityProgram(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://doulab.net/services' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: localizedUrl('/services') },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Innovation Maturity Model Program (IMM-P)®',
-        item: 'https://doulab.net/services/innovation-maturity',
+        item: localizedUrl('/services/innovation-maturity'),
       },
     ],
   };
@@ -251,11 +252,10 @@ export default function InnovationMaturityProgram(): ReactNode {
       title="Innovation Maturity Model Program (IMM-P)®"
       description="IMM is the model. IMM-P® is the program that runs your team through it: five domains, five maturity rungs, and phase-readiness gates backed by evidence."
     >
+      <PageMetadata slug="/services/innovation-maturity" ogImage="/img/social/og-imm-program.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/innovation-maturity" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-imm-program.jpg" />
         <meta property="og:image:alt" content="IMM-P®: the program that operationalizes the Innovation Maturity Model" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

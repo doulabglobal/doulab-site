@@ -3,6 +3,7 @@ import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import PageHeader from '@site/src/components/PageHeader/PageHeader';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 export default function TermsAndConditions(): ReactNode {
   const pageTitle = 'Términos y Condiciones | Doulab';
@@ -11,8 +12,8 @@ export default function TermsAndConditions(): ReactNode {
 
   return (
     <Layout title={pageTitle} description={description}>
+      <PageMetadata slug="/privacy-terms" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/privacy-terms" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
         <meta name="robots" content="noindex,follow" />

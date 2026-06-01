@@ -8,6 +8,7 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import Pillars from '../../components/imm/Pillars';
 import Roadmap from '../../components/imm/Roadmap';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 type SectionDef = { id: string; label: string };
 
@@ -53,15 +54,14 @@ export default function VigiaFuturaPage() {
       title="Vigía Futura, Foresight and Innovation Observatory"
       description="Vigía Futura is Doulab's foresight and innovation observatory. It publishes the National Innovation Maturity and Digital Transformation Index and curates signals, scenarios, and benchmarks across countries."
     >
+      <PageMetadata slug="/vigia-futura" ogImage="/img/vigia-futura-hero.png" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/vigia-futura" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Vigía Futura, Foresight and Innovation Observatory | Doulab" />
+        <meta property="og:title" content="Vigía Futura, Foresight and Innovation Observatory" />
         <meta
           property="og:description"
           content="Vigía Futura is Doulab's foresight and innovation observatory. It publishes the National Innovation Maturity and Digital Transformation Index and curates signals, scenarios, and benchmarks across countries."
         />
-        <meta property="og:image" content="https://doulab.net/img/vigia-futura-hero.png" />
         <meta property="og:image:alt" content="Vigía Futura, foresight and innovation observatory" />
         <meta name="twitter:card" content="summary_large_image" />
         <link

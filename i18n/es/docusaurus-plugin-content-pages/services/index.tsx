@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import Hero from '@site/src/components/Hero';
 import FinalCta from '@site/src/components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata from '@site/src/lib/pageMetadata';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
@@ -19,11 +20,10 @@ export default function ServicesPage(): ReactNode {
             title="Servicios: innovación estructurada, diagnósticos, talleres y prospectiva"
             description="Programas, talleres, diagnósticos y prospectiva para hacer que la innovación sea repetible. Líneas base, decisiones con puntos de control y resultados medibles; con la privacidad primero."
         >
+            <PageMetadata slug="/services" ogImage="/img/docusaurus-social-card.jpg" />
             <Head>
-                <link rel="canonical" href="https://doulab.net/services" />
-                <meta property="og:title" content="Servicios, innovación estructurada, diagnósticos, talleres y prospectiva | Doulab" />
+                <meta property="og:title" content="Servicios, innovación estructurada, diagnósticos, talleres y prospectiva" />
                 <meta property="og:description" content="Programas, talleres, diagnósticos y prospectiva para hacer que la innovación sea repetible. Líneas base, decisiones con puntos de control y resultados medibles." />
-                <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
                 <meta property="og:image:alt" content="Doulab: Servicios" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="author" content="Luis Santiago Arias" />

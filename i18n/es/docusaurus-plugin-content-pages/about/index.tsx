@@ -6,6 +6,7 @@ import Link from '@docusaurus/Link';
 import Hero from '@site/src/components/Hero';
 import FinalCta from '@site/src/components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 // Icons (tree-shaken)
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -20,10 +21,10 @@ export default function AboutPage(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Doulab',
-    url: 'https://doulab.net',
+    url: localizedUrl('/'),
     logo: {
       '@type': 'ImageObject',
-      url: 'https://doulab.net/img/doulab.png',
+      url: localizedUrl('/img/doulab.png'),
       width: 512,
       height: 512,
     },
@@ -37,7 +38,7 @@ export default function AboutPage(): ReactNode {
       {
         '@type': 'ContactPoint',
         contactType: 'sales',
-        url: 'https://doulab.net/contact',
+        url: localizedUrl('/contact'),
         availableLanguage: ['en', 'es'],
       },
     ],
@@ -80,8 +81,8 @@ export default function AboutPage(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Acerca de', item: 'https://doulab.net/about' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Acerca de', item: localizedUrl('/about') },
     ],
   };
 
@@ -90,15 +91,14 @@ export default function AboutPage(): ReactNode {
       title="Acerca de"
       description="Conoce la visión, la historia y el modelo de servicio de Doulab. Innovación hecha repetible."
     >
+      <PageMetadata slug="/about" ogImage="/img/social/og-about.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/about" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Acerca de | Doulab" />
+        <meta property="og:title" content="Acerca de" />
         <meta
           property="og:description"
           content="Conoce la visión, la historia y el modelo de servicio de Doulab. Innovación hecha repetible."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-about.jpg" />
         <meta property="og:image:alt" content="Acerca de Doulab, innovación, prospectiva y entrega repetible." />
         <meta name="twitter:card" content="summary_large_image" />
 

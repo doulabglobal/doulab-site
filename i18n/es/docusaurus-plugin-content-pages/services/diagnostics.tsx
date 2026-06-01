@@ -11,6 +11,7 @@ import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Users from 'lucide-react/dist/esm/icons/users';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata from '@site/src/lib/pageMetadata';
 
 export default function DiagnosticsPage() {
     return (
@@ -18,8 +19,8 @@ export default function DiagnosticsPage() {
             title="Diagnósticos: ClarityScan®, Prospectiva y Modelo Operativo"
             description="Evaluaciones basadas en evidencia que establecen la línea base de Estrategia, Cultura, Proceso, Resultados y convierten brechas en un plan 30/60/90. Construido sobre MicroCanvas® 2.2 e IMM-P®; con privacidad primero."
         >
+            <PageMetadata slug="/services/diagnostics" />
             <Head>
-                <link rel="canonical" href="https://doulab.net/services/diagnostics" />
                 {/* Preload hero LCP image (PNG) with next-gen alternatives */}
                 <link
                     rel="preload"

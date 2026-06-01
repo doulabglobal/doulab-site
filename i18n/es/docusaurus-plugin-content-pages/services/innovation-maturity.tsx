@@ -24,6 +24,7 @@ import Radar from '@site/src/components/imm/Radar';
 import MaturityLadder from '@site/src/components/imm/MaturityLadder';
 import EvidenceMeter from '@site/src/components/imm/EvidenceMeter';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function InnovationMaturityProgram(): ReactNode {
   // JSON-LD schema (service)
@@ -32,8 +33,8 @@ export default function InnovationMaturityProgram(): ReactNode {
     '@type': 'Service',
     name: 'Programa del Modelo de Madurez en Innovación (IMM-P)®',
     serviceType: 'Aceleración de la capacidad de innovación',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/innovation-maturity',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/innovation-maturity'),
     description:
       'IMM-P® es el programa que operacionaliza el Modelo de Madurez en Innovación (IMM 2.2): cinco dominios, una progresión de capacidad de cinco peldaños y puntos de control de preparación por fase respaldados por evidencia.',
     areaServed: ['Global'],
@@ -123,13 +124,13 @@ export default function InnovationMaturityProgram(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Servicios', item: 'https://doulab.net/services' },
+      { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Servicios', item: localizedUrl('/services') },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Programa del Modelo de Madurez en Innovación (IMM-P)®',
-        item: 'https://doulab.net/services/innovation-maturity',
+        item: localizedUrl('/services/innovation-maturity'),
       },
     ],
   };
@@ -251,11 +252,10 @@ export default function InnovationMaturityProgram(): ReactNode {
       title="Programa del Modelo de Madurez en Innovación (IMM-P)®"
       description="IMM es el modelo. IMM-P® es el programa que lleva a tu equipo a través de él: cinco dominios, cinco peldaños de madurez y puntos de control de preparación por fase respaldados por evidencia."
     >
+      <PageMetadata slug="/services/innovation-maturity" ogImage="/img/social/og-imm-program.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/innovation-maturity" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-imm-program.jpg" />
         <meta property="og:image:alt" content="IMM-P®: el programa que operacionaliza el Modelo de Madurez en Innovación" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

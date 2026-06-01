@@ -21,6 +21,7 @@ import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CoachingMentoringPage(): ReactNode {
   // JSON-LD
@@ -29,8 +30,8 @@ export default function CoachingMentoringPage(): ReactNode {
     '@type': 'Service',
     name: 'Coaching & Mentoring',
     serviceType: 'Executive and team coaching for innovation',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/coaching-mentoring',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/coaching-mentoring'),
     description:
       'Personalized guidance for leaders and teams to turn strategy into execution and build repeatable innovation using MCF v2.2 and IMM-P®.',
     areaServed: ['Global'],
@@ -72,10 +73,9 @@ export default function CoachingMentoringPage(): ReactNode {
       title="Coaching & Mentoring: Practical guidance, real momentum"
       description="1:1 and team coaching to turn strategy into execution, build repeatable innovation, and move faster with less risk."
     >
+      <PageMetadata slug="/services/coaching-mentoring" ogImage="/img/social/og-coaching.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/coaching-mentoring" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-coaching.jpg" />
         <meta property="og:image:alt" content="Doulab: Coaching & Mentoring" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload (shared Hero uses this base) */}

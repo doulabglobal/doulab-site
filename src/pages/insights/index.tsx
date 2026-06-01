@@ -11,6 +11,7 @@ import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Newspaper from 'lucide-react/dist/esm/icons/newspaper';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 type DocMeta = { id: string; title: string; description?: string; permalink: string; tags?: string[] };
 type DocsVersion = { isLast?: boolean; docs: DocMeta[] };
@@ -168,11 +169,10 @@ export default function Insights(): ReactNode {
       title="Insights, Research and Resources"
       description="Research, resources, and whitepapers from Doulab, practical, testable, and open."
     >
+      <PageMetadata slug="/insights" ogImage="/img/social/og-insights.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/insights" />
-        <meta property="og:title" content="Insights, Research and Resources | Doulab" />
+        <meta property="og:title" content="Insights, Research and Resources" />
         <meta property="og:description" content="Research, resources, and whitepapers from Doulab, practical, testable, and open." />
-        <meta property="og:image" content="https://doulab.net/img/social/og-insights.jpg" />
         <meta property="og:image:alt" content="Doulab, Insights" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />
@@ -183,8 +183,8 @@ export default function Insights(): ReactNode {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
-              { '@type': 'ListItem', position: 2, name: 'Insights', item: 'https://doulab.net/insights' },
+              { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl('/') },
+              { '@type': 'ListItem', position: 2, name: 'Insights', item: localizedUrl('/insights') },
             ],
           })}
         </script>

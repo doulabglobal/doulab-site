@@ -17,6 +17,7 @@ import ClipboardList from 'lucide-react/dist/esm/icons/clipboard-list';
 import Hero from '@site/src/components/Hero';
 import FinalCta from '@site/src/components/FinalCta';
 import CaseStudyCards from '@site/src/components/case-studies/CaseStudyCards';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CustomWorkshopsPage(): ReactNode {
   // JSON-LD
@@ -25,8 +26,8 @@ export default function CustomWorkshopsPage(): ReactNode {
     '@type': 'Service',
     name: 'Talleres a medida',
     serviceType: 'Facilitación de talleres de innovación',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/custom-workshops',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/custom-workshops'),
     areaServed: ['Global'],
     description:
       'Sesiones orientadas a resultados para alinear equipos, decidir más rápido y crear momentum. Medio día o día completo, presencial o remoto. Medio día o día completo, presencial o remoto. Definimos el alcance en una llamada de descubrimiento de 20 min.',
@@ -37,10 +38,9 @@ export default function CustomWorkshopsPage(): ReactNode {
       title="Talleres a medida: Alinea decisiones y acelera resultados"
       description="Sesiones orientadas a resultados para alinear equipos, decidir más rápido y crear momentum. Formatos de medio día o día completo, presencial o remoto."
     >
+      <PageMetadata slug="/services/custom-workshops" ogImage="/img/social/og-workshops.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/custom-workshops" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-workshops.jpg" />
         <meta property="og:image:alt" content="Doulab: Talleres a medida" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload (shared Hero uses this base) */}

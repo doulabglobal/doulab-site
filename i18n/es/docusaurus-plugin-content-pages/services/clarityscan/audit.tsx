@@ -24,6 +24,7 @@ import Radar from '@site/src/components/imm/Radar';
 import MaturityLadder from '@site/src/components/imm/MaturityLadder';
 import EvidenceMeter from '@site/src/components/imm/EvidenceMeter';
 import Roadmap from '@site/src/components/imm/Roadmap';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function ClarityScanTier3Page(): ReactNode {
   const serviceSchema = {
@@ -31,14 +32,14 @@ export default function ClarityScanTier3Page(): ReactNode {
     '@type': 'Service',
     name: 'ClarityScan® Nivel 3: Auditoría',
     serviceType: 'Auditoría de madurez en innovación respaldada por evidencia',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/clarityscan/audit',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/clarityscan/audit'),
     areaServed: ['Global'],
     description:
       'ClarityScan® Nivel 3 Auditoría es un engagement de madurez en innovación respaldado por evidencia y listo para auditoría. Cada puntuación de dominio está respaldada por artefactos documentados y vinculada a los puntos de control de preparación por fase de IMM-P®.',
     isRelatedTo: [
-      { '@type': 'Service', name: 'ClarityScan® Nivel 1: Snapshot', url: 'https://doulab.net/services/clarityscan' },
-      { '@type': 'Service', name: 'ClarityScan® Nivel 2: Diagnóstico', url: 'https://doulab.net/services/clarityscan/diagnostic' },
+      { '@type': 'Service', name: 'ClarityScan® Nivel 1: Snapshot', url: localizedUrl('/services/clarityscan') },
+      { '@type': 'Service', name: 'ClarityScan® Nivel 2: Diagnóstico', url: localizedUrl('/services/clarityscan/diagnostic') },
     ],
   };
 
@@ -47,16 +48,15 @@ export default function ClarityScanTier3Page(): ReactNode {
       title="ClarityScan® Nivel 3: Auditoría"
       description="ClarityScan® Nivel 3 Auditoría es un engagement de madurez en innovación respaldado por evidencia, listo para auditoría. Cada puntuación está documentada; el entregable es un dossier de grado gobernanza."
     >
+      <PageMetadata slug="/services/clarityscan/audit" ogImage="/img/social/og-clarityscan.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/clarityscan/audit" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="ClarityScan® Nivel 3: Auditoría | Doulab" />
+        <meta property="og:title" content="ClarityScan® Nivel 3: Auditoría" />
         <meta
           property="og:description"
           content="Auditoría de madurez en innovación respaldada por evidencia. Puntuaciones documentadas, puntos de control de preparación por fase, dossier de grado gobernanza."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
         <meta property="og:image:alt" content="ClarityScan® Nivel 3 Auditoría" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

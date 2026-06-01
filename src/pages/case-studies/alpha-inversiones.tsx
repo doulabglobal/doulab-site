@@ -8,15 +8,16 @@ import FinalCta from '../../components/FinalCta';
 import Admonition from '@theme/Admonition';
 import Mermaid from '@theme/Mermaid';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function CaseAlphaInversiones(): ReactNode {
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
-      { '@type': 'ListItem', position: 2, name: 'Case studies', item: 'https://doulab.net/case-studies' },
-      { '@type': 'ListItem', position: 3, name: 'Alpha Inversiones: Alpha Escalable and Alpha en Línea', item: 'https://doulab.net/case-studies/alpha-inversiones' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: localizedUrl('/') },
+      { '@type': 'ListItem', position: 2, name: 'Case studies', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 3, name: 'Alpha Inversiones: Alpha Escalable and Alpha en Línea', item: localizedUrl('/case-studies/alpha-inversiones') },
     ],
   };
 
@@ -24,13 +25,13 @@ export default function CaseAlphaInversiones(): ReactNode {
     '@context': 'https://schema.org',
     '@type': 'CaseStudy',
     name: 'Alpha Inversiones: Alpha Escalable and Alpha en Línea',
-    url: 'https://doulab.net/case-studies/alpha-inversiones',
+    url: localizedUrl('/case-studies/alpha-inversiones'),
     inLanguage: 'en',
     description:
       'Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea.',
-    image: 'https://doulab.net/img/social/og-alpha-inversiones.jpg',
-    primaryImageOfPage: 'https://doulab.net/img/social/og-alpha-inversiones.jpg',
-    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: 'https://doulab.net' },
+    image: localizedUrl('/img/social/og-alpha-inversiones.jpg'),
+    primaryImageOfPage: localizedUrl('/img/social/og-alpha-inversiones.jpg'),
+    isPartOf: { '@type': 'WebSite', name: 'Doulab', url: localizedUrl('/') },
     about: {
       '@type': 'Organization',
       name: 'Alpha Inversiones',
@@ -39,7 +40,7 @@ export default function CaseAlphaInversiones(): ReactNode {
     author: {
       '@type': 'Organization',
       name: 'Doulab',
-      url: 'https://doulab.net',
+      url: localizedUrl('/'),
     },
   };
 
@@ -48,18 +49,16 @@ export default function CaseAlphaInversiones(): ReactNode {
       title="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study"
       description="Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea."
     >
+      <PageMetadata slug="/case-studies/alpha-inversiones" ogImage="/img/social/og-alpha-inversiones.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/case-studies/alpha-inversiones" />
         <meta
           property="og:title"
-          content="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study | Doulab"
+          content="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study"
         />
         <meta
           property="og:description"
           content="Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea."
         />
-        {/* Prefer a 1200×630 brand social card for this page */}
-        <meta property="og:image" content="https://doulab.net/img/social/og-alpha-inversiones.jpg" />
         <meta property="og:image:alt" content="Alpha Inversiones, program and delivery snapshots." />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="author" content="Luis Santiago Arias" />

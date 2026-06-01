@@ -6,6 +6,7 @@ import Hero from '@site/src/components/Hero';
 import FinalCta from '@site/src/components/FinalCta';
 import CaseStudyCards from '@site/src/components/case-studies/CaseStudyCards';
 import { CLARITYSCAN_CHECKOUT_URL } from '@site/src/constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 // Tree-shaken icons
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
@@ -17,15 +18,14 @@ export default function CaseStudies(): ReactNode {
       title="Casos de éxito, resultados y entrega repetible"
       description="Proyectos seleccionados y resultados medibles de Doulab, con puntos de control claros, paquetes de evidencia e indicadores."
     >
+      <PageMetadata slug="/case-studies" ogImage="/img/social/og-case-studies.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/case-studies" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Casos de éxito, resultados y entrega repetible | Doulab" />
+        <meta property="og:title" content="Casos de éxito, resultados y entrega repetible" />
         <meta
           property="og:description"
           content="Proyectos seleccionados y resultados medibles de Doulab, con puntos de control claros, paquetes de evidencia e indicadores."
         />
-        <meta property="og:image" content="https://doulab.net/img/social/og-case-studies.jpg" />
         <meta
           property="og:image:alt"
           content="Imagen principal de casos de éxito, degradado índigo abstracto con acentos de marca Doulab."
@@ -38,8 +38,8 @@ export default function CaseStudies(): ReactNode {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://doulab.net/' },
-              { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: 'https://doulab.net/case-studies' },
+              { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
+              { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
             ],
           })}
         </script>
@@ -50,10 +50,10 @@ export default function CaseStudies(): ReactNode {
             '@context': 'https://schema.org',
             '@type': 'ItemList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, url: 'https://doulab.net/case-studies/afp-siembra' },
-              { '@type': 'ListItem', position: 2, url: 'https://doulab.net/case-studies/alpha-inversiones' },
-              { '@type': 'ListItem', position: 3, url: 'https://doulab.net/case-studies/fundapec' },
-              { '@type': 'ListItem', position: 4, url: 'https://doulab.net/case-studies/ogtic-redlab' },
+              { '@type': 'ListItem', position: 1, url: localizedUrl('/case-studies/afp-siembra') },
+              { '@type': 'ListItem', position: 2, url: localizedUrl('/case-studies/alpha-inversiones') },
+              { '@type': 'ListItem', position: 3, url: localizedUrl('/case-studies/fundapec') },
+              { '@type': 'ListItem', position: 4, url: localizedUrl('/case-studies/ogtic-redlab') },
             ],
           })}
         </script>

@@ -19,7 +19,12 @@
         "forceConsistentCasingInFileNames": true,
 
         "lib": [ "ES2022", "DOM", "DOM.Iterable" ],
-        "types": [ "react", "react-dom", "node" ]
+        "types": [ "react", "react-dom", "node" ],
+
+        "baseUrl": ".",
+        "paths": {
+            "@site/*": [ "./*" ]
+        }
     },
     "include": [
         "src",

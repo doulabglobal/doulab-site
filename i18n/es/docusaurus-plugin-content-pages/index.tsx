@@ -7,6 +7,7 @@ import { useAllDocsData } from '@docusaurus/plugin-content-docs/client';
 import Hero from '@site/src/components/Hero';
 import FinalCta from '@site/src/components/FinalCta';
 import CaseStudyCards from '@site/src/components/case-studies/CaseStudyCards';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 // Icons (tree-shaken imports)
 import Search from 'lucide-react/dist/esm/icons/search';
@@ -597,12 +598,11 @@ export default function Home(): ReactNode {
 
   return (
     <Layout title={pageTitle} description={description}>
+      <PageMetadata slug="/" ogImage="/img/social/default-og.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/" />
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content="https://doulab.net/img/social/default-og.jpg" />
         <meta property="og:image:alt" content="Doulab, innovación, prospectiva y entrega repetible." />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">
@@ -610,8 +610,8 @@ export default function Home(): ReactNode {
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: 'Doulab',
-            url: 'https://doulab.net/',
-            logo: 'https://doulab.net/img/logo.png',
+            url: localizedUrl('/'),
+            logo: localizedUrl('/img/logo.png'),
             sameAs: ['https://www.linkedin.com/company/doulab'],
           })}
         </script>
@@ -619,10 +619,10 @@ export default function Home(): ReactNode {
           {JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
-            url: 'https://doulab.net/',
+            url: localizedUrl('/'),
             potentialAction: {
               '@type': 'SearchAction',
-              target: 'https://doulab.net/search?q={query}',
+              target: localizedUrl('/search?q={query}'),
               'query-input': 'required name=query',
             },
           })}

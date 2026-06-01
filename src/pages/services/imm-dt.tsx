@@ -11,6 +11,7 @@ import Roadmap from '../../components/imm/Roadmap';
 import Radar from '../../components/imm/Radar';
 import MaturityLadder from '../../components/imm/MaturityLadder';
 import EvidenceMeter from '../../components/imm/EvidenceMeter';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -27,8 +28,8 @@ export default function IMMDTPage(): ReactNode {
     '@type': 'Service',
     name: 'IMM-DT: Digital Transformation Maturity',
     serviceType: 'Digital Transformation Diagnostic & Roadmap',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://www.doulab.net' },
-    url: 'https://www.doulab.net/services/imm-dt',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/imm-dt'),
     areaServed: ['Latin America', 'Caribbean', 'Global'],
     description:
       'The digital transformation vertical of IMM. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates. Delivered through the IMM-P® program.',
@@ -39,9 +40,9 @@ export default function IMMDTPage(): ReactNode {
       title="IMM-DT: Digital Transformation Maturity"
       description="IMM-DT is the digital transformation vertical of IMM, delivered through the IMM-P® program. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates."
     >
+      <PageMetadata slug="/services/imm-dt" />
       <Head>
-        <link rel="canonical" href="https://www.doulab.net/services/imm-dt" />
-        <meta property="og:title" content="IMM-DT: Digital Transformation Maturity | Doulab" />
+        <meta property="og:title" content="IMM-DT: Digital Transformation Maturity" />
         <meta
           property="og:description"
           content="The digital transformation vertical of IMM, delivered through the IMM-P® program. Baseline maturity, prioritize gaps, sequence a 0–36 month roadmap."

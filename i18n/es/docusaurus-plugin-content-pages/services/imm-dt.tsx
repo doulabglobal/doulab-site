@@ -11,6 +11,7 @@ import Roadmap from '@site/src/components/imm/Roadmap';
 import Radar from '@site/src/components/imm/Radar';
 import MaturityLadder from '@site/src/components/imm/MaturityLadder';
 import EvidenceMeter from '@site/src/components/imm/EvidenceMeter';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -27,8 +28,8 @@ export default function IMMDTPage(): ReactNode {
     '@type': 'Service',
     name: 'IMM-DT: Madurez en Transformación Digital',
     serviceType: 'Diagnóstico y Hoja de Ruta de Transformación Digital',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://www.doulab.net' },
-    url: 'https://www.doulab.net/services/imm-dt',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/imm-dt'),
     areaServed: ['Latinoamérica', 'Caribe', 'Global'],
     description:
       'La vertical de transformación digital de IMM. Establece la línea base de madurez de TD a través de estrategia, proceso, cultura, tecnología y gobernanza; secuencia una hoja de ruta de 0 a 36 meses con puntos de control respaldados por evidencia. Entregada a través del programa IMM-P®.',
@@ -39,9 +40,9 @@ export default function IMMDTPage(): ReactNode {
       title="IMM-DT: Madurez en Transformación Digital"
       description="IMM-DT es la vertical de transformación digital de IMM, entregada a través del programa IMM-P®. Establece la línea base de madurez de TD a través de estrategia, proceso, cultura, tecnología y gobernanza; secuencia una hoja de ruta de 0 a 36 meses con puntos de control respaldados por evidencia."
     >
+      <PageMetadata slug="/services/imm-dt" />
       <Head>
-        <link rel="canonical" href="https://www.doulab.net/services/imm-dt" />
-        <meta property="og:title" content="IMM-DT: Madurez en Transformación Digital | Doulab" />
+        <meta property="og:title" content="IMM-DT: Madurez en Transformación Digital" />
         <meta
           property="og:description"
           content="La vertical de transformación digital de IMM, entregada a través del programa IMM-P®. Establece la línea base de madurez, prioriza brechas, secuencia una hoja de ruta de 0 a 36 meses."

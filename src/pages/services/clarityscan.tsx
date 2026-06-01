@@ -24,6 +24,7 @@ import Pillars from '../../components/imm/Pillars';
 import Radar from '../../components/imm/Radar';
 import MaturityLadder from '../../components/imm/MaturityLadder';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
+import PageMetadata, { localizedUrl } from '@site/src/lib/pageMetadata';
 
 export default function ClarityScanPage(): ReactNode {
   // JSON-LD schema (Service) with Tier 1 offer
@@ -32,8 +33,8 @@ export default function ClarityScanPage(): ReactNode {
     '@type': 'Service',
     name: 'ClarityScan®',
     serviceType: 'Innovation/Foresight Maturity Diagnostic',
-    provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
-    url: 'https://doulab.net/services/clarityscan',
+    provider: { '@type': 'Organization', name: 'Doulab', url: localizedUrl('/') },
+    url: localizedUrl('/services/clarityscan'),
     areaServed: ['Global'],
     description:
       'A tiered innovation/foresight maturity diagnostic. Tier 1 Snapshot delivers a same-week baseline; Tier 2 Diagnostic and Tier 3 Audit scale to deeper engagements.',
@@ -52,11 +53,10 @@ export default function ClarityScanPage(): ReactNode {
       title="ClarityScan®: Tiered innovation maturity diagnostic"
       description="ClarityScan® is a tiered innovation/foresight maturity diagnostic. Tier 1 Snapshot (CHF 150) delivers a same-week baseline; Tier 2 Diagnostic and Tier 3 Audit scale to deeper engagements."
     >
+      <PageMetadata slug="/services/clarityscan" ogImage="/img/social/og-clarityscan.jpg" />
       <Head>
-        <link rel="canonical" href="https://doulab.net/services/clarityscan" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
         <meta property="og:image:alt" content="ClarityScan®: tiered innovation maturity diagnostic" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload */}

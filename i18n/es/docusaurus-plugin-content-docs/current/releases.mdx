@@ -1,0 +1,389 @@
+---
+id: releases
+title: Versiones del sitio web
+sidebar_label: Versiones
+description: Notas de versión y actualizaciones importantes del sitio web de Doulab.
+hide_title: true
+---
+
+import EntityHeader from '@site/src/components/docs/EntityHeader';
+
+<EntityHeader
+  title="Versiones del sitio web"
+  subtitle="Notas de versión y actualizaciones importantes del sitio web de Doulab."
+  entityLabel="Sitio web de Doulab"
+  badges={['Notas de versión']}
+  updated="2026-01-16"
+/>
+
+Esta página registra hitos y actualizaciones notables del sitio web de Doulab.  
+Para tareas de desarrollo diario, consulta el `CHECKLOG.md` interno.
+
+---
+
+## 2026-01-16 - v0.9.0
+
+### Pulido de UX (Fase B4)
+- Se completaron las pasadas de pulido de UX B4 en páginas de marketing, servicios, legales y casos de estudio.
+- Se estandarizaron encabezados, cuadrículas de tarjetas, espaciado de CTA y se eliminaron los estilos en línea restantes.
+
+### Normalización de reservas (Fase B3)
+- Se aplicaron rutas canónicas de booking.doulab.net en todos los CTA.
+
+### Endurecimiento (Pasadas 1-3)
+- Compuertas de CI, encabezados de seguridad, notas de cumplimiento GDPR/CH y 404 personalizado/noindex.
+
+### Confiabilidad y legales
+- Se corrigieron anclas rotas con IDs explícitos en los encabezados.
+- Nombre y dirección legales corregidos a Santiago Arias Consulting ("Doulab"), Mettlenstrasse 45, 8193 Eglisau, Suiza.
+
+### Rendimiento (Fase B5)
+- Captura de línea base y optimizaciones de bajo riesgo en la decodificación de imágenes debajo del pliegue.
+- Paridad de build/verify capturada y mantenida.
+
+---
+
+## 2026-01-15 - v0.8.0
+
+### Normalización de reservas (Fase B3)
+- Rutas canónicas de booking.doulab.net (discovery/clarityscan/advisory/hdworkshop/fdworkshop + raíz).
+- Se eliminaron enlaces de Calendly/Microsoft booking en src/** + docs/** (ops/auditorías excluidos).
+
+### Confiabilidad
+- Se corrigieron anclas rotas usando IDs de encabezados de Docusaurus.
+
+### Refactor de UI (Fase B2 Pasada 1)
+- Se añadieron primitivas PageHeader + CardGrid.
+- Se redujeron estilos en línea (Hero + FinalCta migrados a CSS modules).
+
+### Paridad de docs (Fase B2 Pasada 2)
+- Se añadieron EntityHeader + DocBadges solo para docs.
+- Convertidos: docs/intro, docs/releases, docs/research-resources/index al patrón de encabezado MDX.
+
+---
+
+## 2025-09-28 - v0.7.3
+
+### Aspectos destacados
+- Whitepaper de IA federada reconstruido para mayor rigor y estabilidad: IMM-P © estandarizado, símbolo de copyright corregido, errores de análisis MDX resueltos, y andamiaje académico añadido (preguntas de investigación, metodología, pilotos, análisis comparativo, amenazas/limitaciones, ética/cumplimiento, TCO, repetibilidad, riesgos/mitigaciones, lista de comprobación UX, evidencia mínima, glosario, snapshot de estilo).
+- La página de Innovation Readiness Workshop ahora enlaza a servicios/docs principales y usa el CTA de reservas en vivo.
+
+### UX y CTA
+- Se cableó el CTA "Book a discovery call" del hero en la página de Innovation Readiness Workshop a la URL de reservas configurada (refleja el CTA final).
+- Se añadió una sección de enlaces relacionados en la página del taller apuntando a ClarityScan, programa IMM-P, Talleres a Medida y el whitepaper de IA federada distribuida.
+
+### Contenido y docs
+- Se estandarizó el uso de IMM-P © en todo el whitepaper y se actualizó el front matter para corregir rupturas de build de MDX.
+- Se restauró el contenido del whitepaper desde respaldo y se aseguró que los operadores de comparación estén escapados para satisfacer MDX.
+
+### Seguimientos conocidos
+- Reemplazar el marcador BOOKINGS_URL con el enlace final de Microsoft Bookings cuando esté disponible.
+
+---
+
+## 2025-09-24 - v0.7.2
+
+### Aspectos destacados
+- Nueva entrada de blog: "Vigía Futura: Why Latin America Needs a Strategic Foresight Observatory"
+- Stripe Checkout ahora impulsa las compras de ClarityScan® con una única fuente de verdad para el CTA.
+- Se añadió una página de éxito post-pago que muestra inmediatamente el enlace de Microsoft Bookings.
+
+### UX y CTA
+- Se redirigió cada CTA "Book a ClarityScan® online" al checkout de Stripe (inicio, servicios, casos de estudio, contacto, What We Do, Work With Us, Vigía Futura, etc.).
+- Se introdujo una página que abre automáticamente la página de Microsoft Bookings y mantiene un CTA de respaldo en pantalla.
+- Se estandarizó el texto de reserva a "ClarityScan®" en todo el flujo.
+
+### Contenido y taxonomía
+- Se añadieron etiquetas de blog `foresight` y `latin-america` para la próxima cobertura de señales y regional.
+
+### DX y mantenimiento
+- Se introdujo `src/constants/urls.ts` para que las URLs de reserva y checkout de ClarityScan® vivan en un único lugar reutilizable.
+
+## 2025-09-13 - v0.7.1
+
+### Aspectos destacados
+- Confiabilidad de tarjetas de blog: se corrigieron las tarjetas "Latest from the blog" de la página de inicio e Insights que enlazaban a una ruta sin prefijo (riesgo de 404). Los enlaces ahora se normalizan para vivir siempre bajo `/blog`.
+- Nueva entrada: "ClarityScan®: how a 30-45 minute baseline reduces decision latency".
+
+### UX y CTA
+- Se añadieron/estandarizaron CTA directos "Book a ClarityScan® online" en todo el sitio, apuntando a Outlook Bookings.
+  - Home: CTA secundario del hero + CTA final (`src/pages/index.tsx`).
+  - Insights: CTA final (`src/pages/insights/index.tsx`).
+  - About: CTA final (`src/pages/about/index.tsx`).
+  - Contact: CTA final (`src/pages/contact/index.tsx`).
+  - Casos de estudio: CTA final en AFP Siembra, Alpha Inversiones, FUNDAPEC, OGTIC/RedLab e índice (`src/pages/case-studies/*`).
+  - Vigía Futura: CTA final (`src/pages/vigia-futura/index.tsx`).
+  - Servicios: CTA final de la página ClarityScan (`src/pages/services/clarityscan.tsx`).
+- Enlaces de reserva específicos por servicio donde corresponde:
+  - Talleres a Medida: se añadió un enlace de reserva de medio día en la página y CTA final (`src/pages/services/custom-workshops.tsx`).
+  - Coaching y Mentoría, Madurez en Innovación: los CTA finales incluyen "Book a ClarityScan® online" como rampa de entrada (`src/pages/services/coaching-mentoring.tsx`, `src/pages/services/innovation-maturity.tsx`).
+- Se añadió la página canónica de redirección de reservas: `/book-clarityscan` (`src/pages/book-clarityscan.tsx`).
+
+### Cambios técnicos
+- Actualización del parser RSS de la página de inicio para normalizar enlaces del mismo origen a `/blog`.
+  - `src/pages/index.tsx:391` (`useLatestBlogPosts`) garantiza que los enlaces del mismo origen que no comienzan con `/blog` reciban el prefijo.
+- Parser RSS/Atom de la página Insights actualizado con la misma normalización.
+  - `src/pages/insights/index.tsx:25` (`sameOriginToRelative`) prefija los enlaces del mismo origen con `/blog`.
+- Se eliminaron las redirecciones estáticas temporales (no necesarias tras la normalización).
+
+### Notas de QA
+- Se verificó que el build de desarrollo resuelva las tarjetas de las últimas entradas a `/blog/<slug>`.
+- Los enlaces externos y URLs de blog con fecha permanecen sin cambios.
+
+### Seguimientos conocidos
+- Los permalinks de etiquetas del blog se ven duplicados (p. ej., `/blog/tags/blog/tags/...`) en metadatos de desarrollo; investigar la configuración de taxonomía y la salida del plugin.
+
+---
+
+## 2025-09-08 - v0.7
+
+### Aspectos destacados
+- Nuevo componente compartido **FinalCta** usado en páginas clave.
+- Páginas de casos de estudio totalmente renovadas y alineadas a **MCF 2.1** + **IMM-P®**.
+- Diagramas Mermaid **habilitados y tematizados** en los Docs.
+- Hub de **Research & Resources** actualizado, incluyendo un whitepaper completo con diagramas.
+
+### Componentización y DX
+- **Nuevo:** `FinalCta` (tipado)  
+  - Acepta **ya sea** `to` (interno) **o** `href` (externo) con `aria-label` opcional.  
+  - Adoptado en: `/what-we-do`, `/contact` (listo para mayor reutilización).
+- **Nuevo:** `CaseStudyCards`  
+  - Orden canónico, texto alternativo consistente y etiquetas de CTA.  
+  - Usado en: índice de `/case-studies` y `/services/innovation-maturity` ("Casos de estudio relacionados").
+- **Limpieza de props:** se eliminó el remanente `isExternal`; `FinalCta` ahora maneja los tipos de enlace.
+
+### Estándares de nomenclatura y copy (sitio-wide)
+- Estandarizado a **Innovation Maturity Model Program (IMM-P®)** con la marca ®.
+- Título de sección normalizado a **"Who it's for?"** (forma de pregunta) donde corresponde.
+- Se eliminaron fragmentos dispersos de "Privacy & guardrails"; página dedicada de **Privacy** programada.
+
+### Casos de estudio — páginas
+- **Índice:** `/case-studies/index.tsx`  
+  - Se reemplazaron tarjetas manuales con `<CaseStudyCards />`.  
+  - Se corrigió el encabezado (**"How we measure progress"**) y se añadió línea que referencia **IMM-P® gates: Discovery → Validation → Efficiency → Scale**.
+- **AFP Siembra:** `/case-studies/afp-siembra.tsx`  
+  - Se estandarizaron hero/metadatos; se añadió cronología; se clarificó el lenguaje de "evidence packs" y gobernanza.
+- **Alpha Inversiones:** `/case-studies/alpha-inversiones.tsx`  
+  - Pasada completa de contenido; se clarificó el programa **Alpha Escalable** y los resultados de **Alpha en Línea**; se ajustó gobernanza + cadencia.
+- **FUNDAPEC:** `/case-studies/fundapec.tsx`  
+  - Reescritura profunda para reflejar **Track A (nuevos modelos de negocio) → decisión → Track B (rediseño de plataforma)**.  
+  - Gobernanza clara (Comunicaciones es dueño de no-code), bucles de evidencia, recorridos simplificados.  
+  - Resultados con números: legado ~20k "inscripciones" → **4k miembros validados**; **515 activos** (desde ~10 hace un año).  
+  - Cronología: Inicio (dic 2023) → Decisión (jun 2024) → Construcción (jul-nov 2024) → Relanzamiento (nov 2024) → Punto de control de crecimiento (sep 2025).
+- **OGTIC / RedLab:** `/case-studies/ogtic-redlab.tsx`  
+  - Referencia explícita a **MCF 2.1** como método compartido e **IMM-P®** como columna vertebral de la cohorte; resultados reformulados en torno al aumento de capacidad.
+
+### Servicios — páginas
+- **IMM-P®:** `/services/innovation-maturity.tsx`  
+  - Nombre del programa estandarizado.  
+  - Estructura completa del programa añadida (Fases 01-05: Pre-Discovery → Discovery & Validation → Efficiency → Scaling → Continuous Improvement) con temas, puntos de control y entregables.  
+  - Se añadió **"Who it's for?"**; "Casos de estudio relacionados" usa `<CaseStudyCards />`.  
+  - FAQ restaurada y pulida.
+- **What we do:** `/what-we-do/index.tsx`  
+  - Hero/copy alineado a **MCF 2.1** + **IMM-P®**.  
+  - Se añadió **"Who it's for?"**; se refinaron Productos y Programas, Números, riel de Proceso; `FinalCta` estandarizado.
+- **ClarityScan:** `/services/clarityscan/index.tsx`  
+  - Puntuación normalizada (comillas UTF-8/guiones); flujo de 30 minutos clarificado; JSON-LD validado.  
+  - Microcopy alineado: "Construido sobre MicroCanvas® v2.1 y puntos de control IMM-P®."
+- **Coaching y Mentoría:** `/services/coaching-mentoring.tsx`  
+  - Pasada de copy/A11y; métodos clarificados (MCF v2.1 + IMM-P®); retainers empaquetados.  
+  - FAQ en página + FAQ JSON-LD.
+- **Talleres a Medida:** `/services/custom-workshops.tsx`  
+  - Resultados/formatos clarificados; referencia consistente a **MicroCanvas® + IMM-P®**.
+
+### Páginas principales
+- **Home:** `/index.tsx`  
+  - Pasada de consistencia (head/meta, etiquetas, CTA).  
+  - Tira de **Research + Resources**: se corrigió el estilo de la tarjeta "Latest from the blog"; se añadió la tarjeta "Latest from our research".
+- **Insights:** `/insights/index.tsx`  
+  - **Orden de destacados:** MicroCanvas (anclado) → últimos del **Blog** (top 3 vía RSS) → últimos **Whitepapers** (etiqueta docs `whitepaper`, top 3).  
+  - Cuadrícula dedicada "From the Blog" + CTA "Ver todas las entradas del blog".  
+  - OG meta y A11y consistentes con patrones compartidos.
+- **About:** `/about/index.tsx`  
+  - Enlaces corregidos: **Coaching y mentoría** → `/services/coaching-mentoring`; **Talleres** → `/services/custom-workshops`.  
+  - Story/pilares alineados al nombre **IMM-P®**; JSON-LD intacto.
+- **Contact:** `/contact/index.tsx`  
+  - Hero convertido al componente compartido `Hero` con fuentes **contact-hero** y `fetchPriority` válido.  
+  - Opciones privacy-first y un "What to expect" con compuerta (refleja la cadencia IMM).  
+  - El bloque final usa **`FinalCta`** (mailto en `primaryCta`).
+
+### Docs y whitepapers
+- **Mermaid habilitado y tematizado:**  
+  - `markdown.mermaid: true` + `@docusaurus/theme-mermaid` añadidos.  
+  - Se movieron las opciones de runtime a `themeConfig.mermaid.options` (esquema válido), se eliminó `securityLevel` no soportado.  
+  - Se aumentaron los tamaños de fuente de los diagramas, colores alineados a la marca y contraste mejorado.  
+- **Hub Research & Resources:** `/docs/research-resources/index.md`  
+  - Destacado **Distributed Federated Agentic AI**; lista de Frameworks actualizada (MCF v2.1, IMM-P®).  
+  - Consejos claros de autoría (usar `tags: ['whitepaper']`, ordenamiento por prefijo de fecha).  
+- **Whitepaper:** `/docs/research-resources/distributed-federated-agentic-ai.md`  
+  - Pasada editorial completa; diagramas Mermaid **envueltos en admoniciones** (arquitectura, mindmap de principios de diseño, secuencia de interacción, registro de riesgos).  
+  - Se añadió sección de **interacción entre módulos de referencia** y alineación explícita con **MCF 2.1** + **IMM-P®** (plano de proyecto, no solo técnico).  
+  - Sección de referencias expandida (W3C DID/VC, NIST AI-RMF, ISO/IEC 42001, EU AI Act, RFC 9380, WebAuthn).
+
+### Accesibilidad, SEO y rendimiento
+- Texto `alt` descriptivo y `aria-labelledby` por sección; íconos decorativos con `aria-hidden`.
+- Canonicals + `og:`/`twitter:card` auditados y añadidos donde faltaban.
+- Precargas de hero: props React correctas (`imageSrcSet`, `imageSizes`) y `width/height` explícitos para CLS.
+
+### Infraestructura y configuración
+- **Config de Docusaurus:**  
+  - Mermaid habilitado; tema añadido; opciones movidas bajo `themeConfig.mermaid.options`; clave `securityLevel` no soportada eliminada.  
+  - El grupo "More" del footer ahora incluye explícitamente enlaces **RSS (XML)** y **Atom (XML)**.
+- **Headers/CSP:**  
+  - Se eliminaron líneas de comentario de `_headers` (error de parser de Cloudflare).  
+  - CSP sigue siendo estricto (`default-src 'self'`; solo Cloudflare Insights permitido para scripts; caché larga para `/assets/*` y `/img/*`).
+
+### Correcciones
+- Build: se eliminó `<` perdido de `/services/innovation-maturity.tsx` (error de parseo de Babel).
+- Módulo no encontrado: se añadió `src/components/case-studies/CaseStudyCards.tsx` y se corrigieron imports.
+- Codificación: se eliminaron secuencias mojibake en las páginas de servicios.
+- Contact hero: `fetchPriority` corregido (nombre de prop React), nombres base de archivo corregidos.
+
+### Seguimientos conocidos
+- Añadir página dedicada de **Privacy** (reemplaza notas en página de "Privacy & guardrails").  
+- Migrar CTA manuales restantes a **`FinalCta`** donde sea práctico.  
+- Considerar **Status/Uptime** y **Changelog RSS** si comenzamos a publicar actualizaciones de infraestructura.
+
+---
+
+## 2025-09-04
+
+### Insights
+- Estructura de página y copy del hero estandarizados.  
+- Los destacados incluyen tarjeta anclada de MicroCanvas y los top 3 whitepapers (de docs, etiqueta `whitepaper`).  
+- Sección separada "From the Blog" (RSS solo cliente con `no-store`).  
+- Imagen OG actualizada: `/img/social/og-insights.jpg`.  
+- A11y: alts descriptivos, width/height explícitos y `aria-labelledby` apropiado.
+
+### Casos de estudio
+- Nuevo/reescrito: `/case-studies/afp-siembra`  
+  - Hero de dos columnas estandarizado y meta canónica/OG.  
+  - Secciones: Contexto → Lo que hicimos → Cronología → Resultados → Destacados → CTA final.  
+  - Se añadió llamado "Sistema: MCF + IMM-P" con enlaces internos.
+
+### Docs
+- Ampliado: **MicroCanvas Framework (v2.1)** → `/docs/research-resources/microcanvas`  
+  - Enlace claro a https://themicrocanvas.com  
+  - Consejos de inicio y referencias relacionadas (IMM-P).
+
+### Estandarización IMM-P
+- Se adoptó "Innovation Maturity Model — Program (IMM-P)" en páginas principales:  
+  - Índice de Casos de estudio (descripción + subtítulo hero).  
+  - Caso AFP Siembra (llamado de sistema).  
+  - Servicios: Coaching y Mentoría, Talleres a Medida, Madurez en Innovación.  
+  - Contact: "Línea base rápida (MCF 2.1 + IMM-P)".  
+  - About: texto de historia y pilares (UTF-8 limpio).
+
+### Servicios (copy + A11y)
+- ClarityScan: hero y CTA limpios; JSON-LD actualizado; puntuación estandarizada.  
+- Madurez en Innovación: renombrado a IMM-P; hero/cuerpo reescritos; CTA estandarizados.  
+- Coaching y Mentoría: copy limpio; "MCF v2.1 + IMM-P"; retainers clarificados.  
+- Talleres a Medida: copy limpio; "MicroCanvas + IMM-P"; formatos/resultados clarificados.
+
+### Contact
+- Página reescrita con opciones privacy-first y un "What to expect" con compuerta.  
+- Línea base actualizada a "MCF 2.1 + IMM-P".
+
+### Assets y técnica
+- Se añadió `/img/social/og-insights.jpg` para previsualizaciones sociales consistentes.  
+- Typecheck pasa. Si ocurre bloqueo en Windows/Dropbox, limpiar `.docusaurus` y reiniciar el servidor de desarrollo.
+
+### Seguimientos conocidos
+- Validar la lista de tarjetas **Top 3 blog posts** de "Research & Resources" contra el RSS en producción.
+
+---
+
+## 2025-09-01
+
+### v0.5.0 — Lanzamiento del blog, intro narrativa, agregador Research & Resources, modo oscuro, endurecimiento del build
+
+**Contenido e IA**
+- **Blog lanzado** con RSS en `/blog/rss.xml`, metadatos de autor y avatar (`/img/authors/luis.jpg`).  
+- **Entrada intro reescrita** ("Introducing Doulab: innovation made repeatable"): estructura narrativa; tarjetas escaneables; CTAs y rutas internas preservadas; puntuación UTF-8.  
+- **Home → Research & Resources** ahora muestra:  
+  1) **MicroCanvas Framework v2.1** (anclado primero)  
+  2) **Top 3 whitepapers más recientes** (etiqueta docs `whitepaper`)  
+  3) **Top 3 entradas de blog más recientes** (RSS cliente).  
+- **About:** enlace canónico, pulido de accesibilidad, corrección de precarga de hero, ancla estable `#service-pillars`.  
+- **Vigía Futura:** página completa con precarga de hero (`imageSrcSet`/`imageSizes`), subnav en página vía `IntersectionObserver`, tarjetas/CTA consistentes.
+
+**Diseño y UX**
+- Pulido de modo oscuro en componentes; estilos compartidos + pasada A11y.
+
+**Componentes**
+- `WhitepaperCards.tsx`: corregido JSX, tipado y layout 3-up.
+
+**Taxonomía y previsualizaciones del blog**
+- `tags.yml` definido; marcador de truncamiento añadido a la entrada intro.
+
+**Build y Tooling**
+- Dedupe de React: runtime único anclado (`react@18.2.0`, `react-dom@18.2.0`, `scheduler@0.23.0`).  
+- Correcciones de codificación/BOM; fuentes normalizadas a UTF-8.  
+- Hooks de Husky v10: `pre-commit` = `npm run typecheck`, `pre-push` = `npm run verify`.  
+- Scripts: `typecheck`, `verify`, `check:blog`, `check:anchors`, más helpers de limpieza/corrección.  
+- Corrección de build en Cloudflare: Husky CI-safe; el build pasa de extremo a extremo.  
+- Engines de Node relajados a `20.x` para Cloudflare.
+
+**Higiene de repo**
+- Se ignoró `.vs/`; se añadió `package-lock.json`.
+
+**Infra / Headers**
+- Reglas de `_headers` para RSS (no-store) y CSP ajustado; caché larga para `/assets/*` y `/img/*`.
+
+**Próximo**
+- Microcopy menor de la página de inicio aún en cola para limpieza.
+
+---
+
+## 2025-08-29
+
+### v0.4 — Recuperación de legado y renovación de Servicios
+- Proyecto recuperado desde snapshot de Dropbox; Node runtime anclado a 20.16.0 para Cloudflare.  
+- Reinstalación limpia de dependencias y build; se preservó el `CHECKLOG.md` interno.
+
+### v0.4 — Páginas de servicio, cronología de About, RSS de Insights
+- **Footer:** se corrigieron rutas y etiquetas de "Connect".  
+- **Insights:** lista automática de últimos whitepapers (etiqueta `whitepaper`) y 3 últimas entradas de blog (RSS local); se añadieron CTAs.  
+- **Headers/CSP:** se añadió regla `/blog/rss.xml` (no-store) y se ajustaron encabezados de seguridad; caché larga para `/assets/*` y `/img/*`.  
+- **Página de inicio:** se restauró el hover raise de las tarjetas; secciones centradas; reel horizontal "The Problem".  
+- **About:** cronología agrupada por año; pulido de A11y y copy.  
+- **Servicios:** índice + ClarityScan + Talleres a Medida + Madurez en Innovación + Coaching y Mentoría + Diagnósticos, migrados a estilos compartidos.  
+- **Vigía Futura:** seccionado con subnav; tarjetas accesibles y consistentes.  
+- **Research & Resources:** `.md` MDX-safe con whitepaper destacado, frameworks y CTA final.
+
+---
+
+## 2025-08-28
+
+### v0.3 — Rendimiento y A11y
+- LCP de hero optimizado (precarga + fallbacks AVIF/WebP).  
+- Se añadieron width/height explícitos para CLS.  
+- Contraste de enlaces/botones mejorado para AA.  
+- Tipado de datos de docs corregido para Latest Whitepapers.
+
+### v0.2 — Privacidad y limpieza de infra
+- Se eliminó todo código GTM/GA; solo Cloudflare Web Analytics.  
+- Entorno de build anclado a Node 20.16.0; purga de caché + redeploy.
+
+### Andamiaje IA
+- Navbar alineado a la IA objetivo: Home, What we do, Case Studies, Insights, About, Contact.  
+- Nuevas páginas andamiadas y estandarizadas: What we do, Case Studies, Insights, Contact.  
+- About: canónico + pulido de A11y.
+
+### Consolidación CSS de página de inicio y reel "The Problem"
+- Estilos consolidados a `src/css/custom.css`; se restauró el wrapper centrado `.section`; `.cardGrid` 3-up consistente.  
+- Se elevó el efecto hover de tarjeta; reel con scroll-snap para "The Problem".
+
+### Mejoras de la página de inicio
+- Controles de carrusel, amigables a reduced-motion; tira de Proof/Numbers; teaser de Casos de estudio.  
+- Se estandarizó `data-cta`; meta title mejorado; precarga de imagen LCP validada.
+
+---
+
+## 2025-08-27
+
+### v0.1 — Migración a Cloudflare
+- Hosting migrado a **Cloudflare Pages**.  
+- Se reemplazó Google Analytics con **Cloudflare Web Analytics**.  
+- README actualizado con flujo de trabajo y lista de estado.  
+- Se establecieron notas de versión públicas bajo **/docs/releases**.

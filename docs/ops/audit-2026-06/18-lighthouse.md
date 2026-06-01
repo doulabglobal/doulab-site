@@ -526,6 +526,48 @@ The original v1 top opp `uses-text-compression` (43s) and the dev-only `unminifi
 
 Source-side Phase 1 work delivered the predicted Performance gains. The two stubborn prod BP/SEO regressions are both **infrastructure-side** (Cloudflare configuration + deploy artifacts), not source-code issues — both should be raised to whoever owns Cloudflare Pages admin for doulab-site.
 
+### LH-NEW-002 — RESOLVED 2026-06-01
+
+User disabled Cloudflare's Content-Signal robots.txt feature at the zone level. Verification: `curl https://www.doulab.net/robots.txt` now returns the `static/robots.txt` content (`User-agent: *`, `Allow: /`, `Sitemap: https://www.doulab.net/sitemap.xml`).
+
+A follow-up Lighthouse run (prod-v3, post-robots-fix) confirmed the SEO category lift:
+
+| Page | SEO prod-v2 | SEO prod-v3 | Delta |
+|---|---|---|---|
+| `/` | 92 | **100** | +8 |
+| `/services` | 92 | **100** | +8 |
+| `/services/clarityscan` | 92 | **100** | +8 |
+| `/case-studies` | 92 | **100** | +8 |
+| `/about` | 85 | **92** | +7 (still under 100 from the `link-text` issue per LH-NEW-004) |
+
+Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v3/*.json`.
+
+### LH-NEW-003 — REDIAGNOSED as Cloudflare Bot Fight Mode
+
+Original symptom: 6 lazily-loaded JS chunks 503 on every prod Lighthouse run. Original theory was deploy-ops (wrangler upload failure).
+
+**Actual root cause: Cloudflare Bot Fight Mode / Super Bot Fight Mode is challenging headless-Chrome-class clients (Lighthouse, Playwright, synthetic monitors). The chunks themselves are healthy.**
+
+Diagnostic evidence:
+- All 6 chunks return **HTTP 200** when fetched with `curl` (default headers and with Chrome-class UA + Brotli encoding). Sizes 4.5–20 KB, `cf-cache-status: REVALIDATED`, valid `ETag` and `Cache-Control: max-age=31536000, immutable`.
+- Rapid-fire 10x curl on the same chunk: 10/10 returned 200 (no rate limit triggered from a normal client).
+- Playwright (same headless Chromium that Lighthouse uses) **times out on `page.goto(/, { waitUntil: 'networkidle' })` with 30s timeout** trying to load the homepage. It receives the 503-stamped responses for prefetched chunks and never reaches network-idle.
+- Chunks correspond to the 6 most-prefetched routes: `/about-dff` (b455e532), `/case-studies-4d7` (cacd93e4), `/contact-fb2` (2833a959), `/insights-c29` (b6cfc9b9), `/services/clarityscan-3f8` (851420db), `/what-we-do-c58` (8a53a06c) — i.e., Docusaurus's standard navbar prefetch set on the homepage.
+- Same 6 chunks 503 across deploys with refreshing content hashes (`851420db.fd232067.js` -> `851420db.7696665a.js`) — proving these are NOT stale, the route-id portion is what CF is fingerprinting.
+
+Real-user impact: **zero**. The 503 is exclusively reported by automated tooling. Visitors on real browsers fetch these chunks 200 and the homepage renders normally.
+
+Lighthouse impact: persistent **BP -21** sitewide (the `errors-in-console` audit reports the 503s). This is the entire residual BP gap after the truth-and-integrity pass; without it, BP would be ~100 across the board.
+
+Recommendation (Cloudflare zone-level):
+- **Option A (simplest):** Disable **Bot Fight Mode** (or **Super Bot Fight Mode**) for the `doulab.net` zone. Cloudflare dashboard -> `doulab.net` -> **Security** -> **Bots**. The free Bot Fight Mode toggle is on by default for many zones.
+- **Option B (preserves bot protection):** Add a WAF custom rule that **Skips** Bot Fight Mode for paths under `/assets/js/`, `/assets/css/`, and the static image directories. Cloudflare dashboard -> `doulab.net` -> **Security** -> **WAF** -> **Custom rules** -> "Skip" action.
+- **Option C (preserves bot protection, narrow scope):** Allowlist the User-Agent string `Chrome-Lighthouse` and the IP ranges Google's automated tooling uses. Useful if PageSpeed Insights is the only Lighthouse client you care about.
+
+Not a source-code fix.
+
+Verification after the change: re-run prod Lighthouse against any page and confirm `errors-in-console` audit passes; BP should jump from 78-79 to ~95-100 sitewide.
+
 ---
 
 ## Live verification — 2026-06-01 (clean run v2)

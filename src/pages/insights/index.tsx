@@ -415,8 +415,8 @@ export default function Insights(): ReactNode {
         <FinalCta
           id="insights-final"
           ariaLabelledbyId="insights-final-title"
-          title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
+          title="Ready to move from reading to running?"
+          body="Get a baseline in 15–20 minutes with ClarityScan® Tier 1 (CHF 150), or book a 20-minute discovery call."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.insights.final.clarityscan' }}
           secondaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,
@@ -424,7 +424,7 @@ export default function Insights(): ReactNode {
             dataCta: 'cta.insights.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Get a baseline in 15 to 20 minutes for CHF 150. Or book a 20-min discovery call."
         />
       </main>
     </Layout>

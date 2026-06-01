@@ -84,7 +84,7 @@ export default function CaseStudies(): ReactNode {
             ariaLabel: 'Explore ClarityScan',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', external: true }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Read the work, then book a 20-min discovery call to discuss yours."
         />
 
         {/* Outcome focus line under the hero */}
@@ -150,8 +150,8 @@ export default function CaseStudies(): ReactNode {
         <FinalCta
           id="cases-final"
           ariaLabelledbyId="cta-title"
-          title="Ready to make innovation repeatable?"
-          body="Start small, get your baseline in 15–20 minutes."
+          title="See yourself in any of these?"
+          body="Tell us about the work you are scoping. 20-minute discovery call, no prep required."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.cases.final.clarityscan' }}
           secondaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,
@@ -159,7 +159,7 @@ export default function CaseStudies(): ReactNode {
             dataCta: 'cta.cases.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="20-min discovery call. No prep required."
         />
       </main>
     </Layout>

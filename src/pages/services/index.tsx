@@ -49,7 +49,7 @@ export default function ServicesPage(): ReactNode {
                     height={400}
                     primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     secondaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
-                    ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+                    ctaNote="Tier 1 ClarityScan is online-bookable for CHF 150. Programs and workshops are scoped on a discovery call."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
                     eager
@@ -171,8 +171,8 @@ export default function ServicesPage(): ReactNode {
                 <FinalCta
                     id="services-final"
                     ariaLabelledbyId="services-cta-title"
-                    title="Ready to make innovation repeatable?"
-                    body="Start with a quick diagnostic or book a discovery call. We'll co-create the path from insight to results."
+                    title="Pick the service that fits your moment."
+                    body="Tier 1 ClarityScan® is online-bookable. Workshops, programs, and coaching are scoped on a 20-minute discovery call."
                     primaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Start with a diagnostic', dataCta: 'cta.services.final.diagnostic', newTab: true }}
                     secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us', dataCta: 'cta.services.final.contact' }}
                 />

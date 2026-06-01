@@ -75,7 +75,7 @@ export default function ClarityScanPage(): ReactNode {
             external: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us about T2 / T3', dataCta: 'cta.services.clarityscan.hero.contact' }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Tier 1 paid via secure Stripe checkout. Tiers 2 and 3 scoped on a 20-min discovery call."
         />
 
         {/* Who is it for? */}
@@ -244,7 +244,7 @@ export default function ClarityScanPage(): ReactNode {
             newTab: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us about T2 / T3', dataCta: 'cta.services.clarityscan.final.contact' }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Tier 1: receipt and booking link by email. Discovery call: 20 minutes, no prep required."
         />
       </main>
     </Layout>

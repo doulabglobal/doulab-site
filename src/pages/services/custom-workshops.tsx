@@ -29,7 +29,7 @@ export default function CustomWorkshopsPage(): ReactNode {
     url: 'https://doulab.net/services/custom-workshops',
     areaServed: ['Global'],
     description:
-      'Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day, on-site or remote. Built on MicroCanvas® v2.2 and IMM-P® gates.',
+      'Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day, on-site or remote. Half-day or full-day, on-site or remote. We scope on a 20-min discovery call.',
   };
 
   return (

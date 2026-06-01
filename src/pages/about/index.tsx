@@ -134,7 +134,7 @@ export default function AboutPage(): ReactNode {
             ariaLabel: 'See what Doulab does',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.about.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Tier 1 takes 15 to 20 minutes. CHF 150, paid via secure Stripe checkout."
           id="about-hero"
           ariaLabelledbyId="about-hero-title"
         />
@@ -276,8 +276,8 @@ export default function AboutPage(): ReactNode {
         <FinalCta
           id="about-final"
           ariaLabelledbyId="about-final-title"
-          title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
+          title="Want a quick read on where you stand?"
+          body="Start with ClarityScan® Tier 1 (15–20 minutes, CHF 150), or book a 20-minute discovery call to map fit."
           primaryCta={{ to: '/services/clarityscan', label: 'Start with ClarityScan®', dataCta: 'cta.about.final.clarityscan' }}
           secondaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,
@@ -285,7 +285,7 @@ export default function AboutPage(): ReactNode {
             dataCta: 'cta.about.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Tier 1: receipt and booking link by email. No prep required."
         />
       </main>
     </Layout>

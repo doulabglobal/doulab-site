@@ -96,7 +96,7 @@ export default function WorkWithUsPage(): JSX.Element {
                     height={400}
                     primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.wwu.hero.explore_clarityscan' }}
                     secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.wwu.hero.book_clarityscan_online', external: true, ariaLabel: 'Book a ClarityScan online via Stripe Checkout' }}
-                    ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+                    ctaNote="Partnership or referral? Book a 20-min discovery call."
                     id="wwu-hero"
                     ariaLabelledbyId="wwu-hero-title"
                 />

@@ -116,7 +116,7 @@ export default function WhatWeDo(): ReactNode {
             ariaLabel: 'Explore ClarityScan',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.whatwedo.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Start with ClarityScan Tier 1 (CHF 150) or book a 20-min discovery call."
           id="whatwedo-hero"
           ariaLabelledbyId="whatwedo-hero-title"
         />
@@ -323,8 +323,8 @@ export default function WhatWeDo(): ReactNode {
         <FinalCta
           id="whatwedo-final"
           ariaLabelledbyId="whatwedo-final-title"
-          title="Ready to make innovation repeatable?"
-          body="Start with a quick diagnostic or book a discovery call. We will meet you where you are and co‑create the path forward."
+          title="Pick the offer that fits where you are."
+          body="Start with a CHF 150 ClarityScan® Tier 1 read, scope a Tier 2 / Tier 3 diagnostic, or book a 20-minute discovery call."
           primaryCta={{
             to: '/services/clarityscan',
             label: 'Start with ClarityScan®',
@@ -336,7 +336,7 @@ export default function WhatWeDo(): ReactNode {
             dataCta: 'cta.whatwedo.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="No prep required. We confirm a time within 2 business days."
         />
       </main>
     </Layout>

@@ -103,7 +103,7 @@ export default function CaseOgticRedlab(): ReactNode {
             ariaLabel: 'Explore ClarityScan',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Public-sector innovation lab relevance? Book a 20-min discovery call."
         />
 
         {/* At a glance */}

@@ -110,7 +110,7 @@ export default function CoachingMentoringPage(): ReactNode {
             label: 'Start with a diagnostic',
             dataCta: 'cta.services.coaching.hero.clarityscan',
           }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="20-min discovery call. We confirm scope and rhythm within 2 business days."
         />
 
         {/* Who is it for? (standardized audience tiles) */}
@@ -278,7 +278,7 @@ export default function CoachingMentoringPage(): ReactNode {
           body="Tell us your goals and constraints. We’ll recommend the retainer that fits and start making progress fast."
           primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.discovery' }}
           secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
-          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
+          ctaNote="Pick a 20-min discovery slot. No prep required."
         />
       </main>
     </Layout>

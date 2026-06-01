@@ -110,8 +110,8 @@ export default function AboutPage(): ReactNode {
         <link
           rel="preload"
           as="image"
-          href="/img/about.jpg"
-          imageSrcSet="/img/about.avif 1x, /img/about.webp 1x, /img/about.jpg 1x"
+          href="/img/about.png"
+          imageSrcSet="/img/about.avif 1x, /img/about.webp 1x, /img/about.png 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
           fetchPriority="high"
         />
@@ -129,9 +129,9 @@ export default function AboutPage(): ReactNode {
           height={900}
           primaryCta={{
             to: '/what-we-do',
-            label: 'Learn more',
+            label: 'See what we do',
             dataCta: 'cta.about.hero.learn_more',
-            ariaLabel: 'Learn more about what we do',
+            ariaLabel: 'See what Doulab does',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.about.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
           ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."

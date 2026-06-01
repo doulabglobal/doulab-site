@@ -92,8 +92,8 @@ export default function WhatWeDo(): ReactNode {
         <link
           rel="preload"
           as="image"
-          href="/img/services-hero.jpg"
-          imageSrcSet="/img/services-hero.avif 1x, /img/services-hero.webp 1x, /img/services-hero.jpg 1x"
+          href="/img/services-hero.png"
+          imageSrcSet="/img/services-hero.avif 1x, /img/services-hero.webp 1x, /img/services-hero.png 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
           fetchPriority="high"
         />

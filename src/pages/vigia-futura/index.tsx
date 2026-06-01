@@ -80,15 +80,15 @@ export default function VigiaFuturaPage() {
           property="og:description"
           content="A strategic foresight observatory that surfaces signals, maps risks, and translates insight into action."
         />
-        <meta property="og:image" content="https://doulab.net/img/vigia-futura-hero.jpg" />
+        <meta property="og:image" content="https://doulab.net/img/vigia-futura-hero.png" />
         <meta property="og:image:alt" content="Vigía Futura, foresight observatory" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload (React camelCase attrs) */}
         <link
           rel="preload"
           as="image"
-          href="/img/vigia-futura-hero.jpg"
-          imageSrcSet="/img/vigia-futura-hero.avif 1x, /img/vigia-futura-hero.webp 1x, /img/vigia-futura-hero.jpg 1x"
+          href="/img/vigia-futura-hero.png"
+          imageSrcSet="/img/vigia-futura-hero.avif 1x, /img/vigia-futura-hero.webp 1x, /img/vigia-futura-hero.png 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
         />
       </Head>

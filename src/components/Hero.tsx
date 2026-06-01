@@ -61,7 +61,9 @@ export default function Hero({
     eager = false,
     rightVisual,
 }: HeroProps) {
-    const jpg = `${imageBase}.jpg`;
+    // Fallback raster is .png across the doulab.net hero set; modern browsers
+    // pick the AVIF/WebP source first, the raster only loads in the rare fallback case.
+    const raster = `${imageBase}.png`;
     const webp = `${imageBase}.webp`;
     const avif = `${imageBase}.avif`;
     const showImage = !rightVisual;
@@ -72,7 +74,7 @@ export default function Hero({
             <source srcSet={webp} type="image/webp" />
             <img
                 loading={eager ? 'eager' : 'lazy'}
-                src={jpg}
+                src={raster}
                 alt={imageAlt}
                 fetchPriority={eager ? 'high' as const : undefined}
                 decoding="async"
@@ -90,8 +92,8 @@ export default function Hero({
                     <link
                         rel="preload"
                         as="image"
-                        href={jpg}
-                        imageSrcSet={`${avif} 1x, ${webp} 1x, ${jpg} 1x`}
+                        href={raster}
+                        imageSrcSet={`${avif} 1x, ${webp} 1x, ${raster} 1x`}
                         imageSizes={imageSizes}
                     />
                 </Head>

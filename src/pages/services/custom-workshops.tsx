@@ -47,8 +47,8 @@ export default function CustomWorkshopsPage(): ReactNode {
         <link
           rel="preload"
           as="image"
-          href="/img/workshops-hero.jpg"
-          imageSrcSet="/img/workshops-hero.avif 1x, /img/workshops-hero.webp 1x, /img/workshops-hero.jpg 1x"
+          href="/img/workshops-hero.png"
+          imageSrcSet="/img/workshops-hero.avif 1x, /img/workshops-hero.webp 1x, /img/workshops-hero.png 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
         />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

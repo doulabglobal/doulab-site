@@ -50,8 +50,8 @@ export default function ClarityScanPage(): ReactNode {
         <link
           rel="preload"
           as="image"
-          href="/img/clarityscan-hero.jpg"
-          imageSrcSet="/img/clarityscan-hero.avif 1x, /img/clarityscan-hero.webp 1x, /img/clarityscan-hero.jpg 1x"
+          href="/img/clarityscan-hero.png"
+          imageSrcSet="/img/clarityscan-hero.avif 1x, /img/clarityscan-hero.webp 1x, /img/clarityscan-hero.png 1x"
           imageSizes="(max-width: 700px) 100vw, 600px"
         />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>

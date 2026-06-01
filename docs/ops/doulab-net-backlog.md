@@ -440,6 +440,24 @@ Audit deliverables landed; implementation in 4 sub-phases:
 
 **F-6 — Full 19-role re-audit at the end**
 - User directive: once the F-batch backlog is drained, run the full 19-role multi-role audit again (per `feedback_full_audit_at_backlog_end` memory).
+
+### F-1 (RESOLVED 2026-06-01)
+- Sitewide link underline now only on `:hover` and `:focus-visible`. Inverts the prior E-R3 always-on body-text underline rule. Pillars titleLink also reversed. Commits: 66fb4fabd4a77bb29064270afed52e711e0184ae (custom.css), d35f4bb180754caf5426bda7aa9755e6f61967a5 (Pillars).
+
+### F-3 (RESOLVED 2026-06-01)
+- `.cardFooter` switched to flex-row + flex-wrap with gap; children flex:1 1 auto. Two CTAs side-by-side on desktop; column collapse at <= 600 px. Commit: 66fb4fabd4a77bb29064270afed52e711e0184ae.
+
+### F-4 (RESOLVED 2026-06-01)
+- MaturityLadder gained optional `layout?: 'auto' | 'wrap'` prop. `'wrap'` enables flex-wrap so 5 rungs split ~3+2 on desktop. Wired on the Tier 1 "Where you sit today" ladder. Commits: d35f4bb180754caf5426bda7aa9755e6f61967a5 (component), 1a00c44cf9cd77425f732f051640211ac1c2624e (wire-up).
+
+### F-5 (RESOLVED 2026-06-01)
+- Tier 3 "What Tier 3 delivers" grid restructured: EvidenceMeter now spans full row via `gridColumn: '1 / -1'`, placing it on row 2 below the MaturityLadder (row 1 holds Radar + MaturityLadder; row 3 holds Roadmap). Commit: 1a00c44cf9cd77425f732f051640211ac1c2624e.
+
+### F-2 (PARTIAL — page-level + component-level dark-mode parity shipped)
+- Page-level: 11 inline-style color updates across `index.tsx`, `clarityscan.tsx`, `imm-dt.tsx`, `clarityscan/diagnostic.tsx`. Replaced too-dark brand tokens (--dl-indigo, --dl-slate) with Infima `--ifm-heading-color` / `--ifm-color-emphasis-*` / `--ifm-color-primary` for dark-mode parity.
+- Component-level: dark-mode overrides added to Radar, MaturityLadder, EvidenceMeter module CSS (Pillars + Roadmap inspected and confirmed OK without override).
+- Residual follow-up: `--ifm-color-primary` is set to #38249a but has no dark-mode lighter variant. Should be addressed in a small commit on `src/css/custom.css` (5-min job).
+- Commits: 66fb4fabd4a77bb29064270afed52e711e0184ae (custom.css), d35f4bb180754caf5426bda7aa9755e6f61967a5 (components), 1a00c44cf9cd77425f732f051640211ac1c2624e (pages).
 - Description: 29 `style-src-attr` CSP Report-Only violations on the production home page.
 - T5 diagnostic (commit pending under T5 prompt; agent declined to swizzle): the violations split as follows:
   - 5 `style-src-attr` from `@docusaurus/core` BaseUrlIssueBanner inline injection (line 6 of build/index.html). NOT swizzlable — lives in @docusaurus/core, not theme-classic. Recommended follow-up: set `baseUrlIssueBanner: false` in `docusaurus.config.ts` to disable the dev-only banner injection entirely (the banner only fires on baseUrl misconfiguration).

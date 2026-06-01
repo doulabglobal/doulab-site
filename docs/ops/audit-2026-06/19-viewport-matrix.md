@@ -676,3 +676,69 @@ Desktop anchors (768 / 1280 / 1366 / 1920) are now fully covered for all rebuilt
 ### Net verdict
 
 The Phase C re-sweep closes both VP-NEW-002 (harness fix verified — full 108/108 capture, resumable, retry-tolerant) and VP-NEW-003 (desktop anchors now cover the rebuilt pages, with no defects on the new semantic components themselves). The newly-complete desktop coverage immediately paid for itself by surfacing **VP-NEW-004**, a high-severity column-collapse defect on the IMM-DT and ClarityScan T3 tabular sections that is invisible at mobile widths. Phase E rebuilds remain otherwise visually clean across all six anchors; VP-NEW-004 should be triaged before the E-R1 close-out is signed off.
+
+
+## Phase C close-out — viewport prod-v5.2 (post-T-pass deploy, 2026-06-01)
+
+### Context
+
+Final verification sweep after the Phase C "T-pass" deploy, which shipped:
+
+- `cardGrid` auto-fit balance for trailing rows (homepage Service Pillars + Research/Resources).
+- Container-query-driven `Roadmap` layout for cleaner rendering at narrow widths.
+- `EvidenceMeter` sizing fix to prevent gauge overflow at 1366px.
+- IMM / IMM-P® extension paragraph recheck (services-innovation-maturity top of page).
+- `Pillars` `href` plumbing so Vigía Framework Family titles render as links.
+- Problem-section response-button contrast (no more indigo-on-indigo).
+
+Sweep harness: `ops/audits/doulab-net/viewport-2026-06-prod-v5.2/sweep.mjs` (verbatim copy of the v5.1 robust harness, written into a fresh v5.2 directory per the `feedback_clean_viewport_screenshots` rule). Same 18 pages × 6 anchors = 108 captures, same retry/throttle/resumable logic.
+
+### Coverage
+
+**108 / 108 captured** (no NO-SHOT, no non-200 responses, no retries needed on second attempt).
+
+| Anchor    | Captured | Notes |
+|-----------|----------|-------|
+| 360x640   | 18 / 18  | clean |
+| 390x844   | 18 / 18  | clean |
+| 768x1024  | 18 / 18  | clean |
+| 1280x800  | 18 / 18  | clean |
+| 1366x768  | 18 / 18  | clean |
+| 1920x1080 | 18 / 18  | clean |
+
+Manifest: `ops/audits/doulab-net/viewport-2026-06-prod-v5.2/results.json`.
+
+### Spot-check results
+
+| Capture | Verdict |
+|---------|---------|
+| `home/1920x1080.png` | **Clean.** Problem-section response buttons readable (white-on-indigo + outlined variants — no longer indigo-on-indigo). Service Pillars cardGrid balances the trailing row (3+3 layout, no orphan card). Research + Resources grid balanced. |
+| `services-imm-dt/1280x800.png` | **Clean.** Pillars row of 5 colored phase cards renders horizontally. "How IMM-DT delivers" and "Who IMM-DT is for" tabular sections render as proper multi-column blocks — no vertical-ribbon column collapse. Roadmap renders cleanly. |
+| `services-clarityscan-audit/1366x768.png` | **Clean.** Pillars + EvidenceMeter (72 gauge — no overflow on the gauge or its label band) + phase readiness cascade Roadmap all readable. "How Tier 3 works" tabular section renders as a proper 4-column block (no collapse). |
+| `services-clarityscan-diagnostic/1280x800.png` | **Clean.** Radar + MaturityLadder + Priority Matrix (2×2 grid contained, no overflow on the "Quick wins / Strategic bets / Fill-ins / Reconsider" cells) + 90-day 4-step Roadmap horizontal cascade all render properly. |
+| `services-innovation-maturity/1920x1080.png` | **Clean.** IMM-P® extension paragraph ("IMM-P® is the program form of IMM…") visible near the top, immediately under the hero. Pillars + MaturityLadder + Radar + Roadmap + EvidenceMeter (72 gauge) all render correctly. |
+| `vigia-futura/1280x800.png` | **Clean.** Framework Family Pillars show 4 colored cards (IMM / ITM / MIL / MTL) with titles rendered as links (anchor styling — distinct from the body text, signalling navigability). Roadmap + Network section render cleanly. |
+
+All six T-pass intents verified:
+
+- Homepage Problem-section response buttons readable. **CONFIRMED.**
+- IMM-DT and ClarityScan T3 tabular sections no longer column-collapse at desktop widths. **CONFIRMED.**
+- ClarityScan T2 priority matrix no longer overflows. **CONFIRMED.**
+- Roadmap renders cleanly at narrow widths via container queries. **CONFIRMED** (clean at 768 and 1280 in spot-checks).
+- EvidenceMeter renders cleanly without overflow. **CONFIRMED** (1366 and 1920 spot-checks).
+- cardGrid layouts balance trailing rows. **CONFIRMED.**
+- Vigía Framework Family pillars show as linked. **CONFIRMED.**
+
+### VP-NEW-004 / 005 / 006 status
+
+- **VP-NEW-004** (IMM-DT + ClarityScan T3 tabular column collapse): **RESOLVED.** Tables render as multi-column blocks at every desktop anchor inspected; no vertical-ribbon defect remains.
+- **VP-NEW-005** (ClarityScan T2 priority matrix overflow): **RESOLVED.** 2×2 grid is contained within page bounds at 1280×800.
+- **VP-NEW-006** (Vigía Framework Family titles not linked): **RESOLVED.** Pillar titles now render with anchor styling.
+
+### New findings
+
+None. No new visual defects observed in the spot-check sample, and the full-coverage manifest shows no failed captures.
+
+### Net verdict
+
+**Phase C close-out is GREEN.** The v5.2 sweep captured all 108 screenshots cleanly, every T-pass intent is visually confirmed at the representative anchors, and VP-NEW-004 / 005 / 006 are all RESOLVED. No new defects filed. The viewport surface is ready for Phase E sign-off.

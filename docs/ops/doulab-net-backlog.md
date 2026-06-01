@@ -97,18 +97,74 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - Navbar shows: Home, Services, Case Studies, Insights, About on left; Work with us, Contact on right. No GitHub entry.
   - `npm run verify` exits 0.
 - Closes audit findings: IAUX-002, IAUX-003, IAUX-004 (partial: stale stubs removed; the broader IA recommendation about an `/ecosystems` hub remains as a separate decision).
-- Commits: 828a774bad9ab1d9502170032c981da6df0cd441 (impl), pending (governance)
+- Commits: 828a774bad9ab1d9502170032c981da6df0cd441 (impl), 954df29344a720c66442bfb19138db12c2edd1a1 (governance)
 
-### E-I1 (BACKLOG ONLY)
+### E-I1
 - Description: Sitewide removal of em-dashes (U+2014) from user-facing copy.
-- Rationale: User directive 2026-06-01 during Phase E remediation. Em-dashes read as AI-generated tone, a tell the brand should not project. Approximately 80+ instances across `src/pages/**/*.tsx`, `src/components/case-studies/caseStudiesData.tsx`, and a few blog posts. Hyphens (-) and en-dashes (en for ranges like 15 to 20 minutes) are fine; only the long em-dash is out.
+- Rationale: User directive 2026-06-01 during Phase E remediation. Em-dashes read as AI-generated tone, a tell the brand should not project. Approximately 85 instances across `src/pages/**/*.tsx`, `src/components/case-studies/caseStudiesData.tsx`, two blog posts (current-state copy only). Hyphens (-) and en-dashes (-) in ranges like "15-20 minutes" or "0-36 month" preserved (different code points, correct range punctuation).
 - Acceptance criteria:
-  - `grep -rP "[\\x{2014}]" src/pages src/components` returns zero matches in user-facing strings (CSS comments may retain).
-  - Blog post bodies preserve em-dash count only where direct quotation requires it (e.g., quoted sources).
+  - `grep -rP "[\x{2014}]" src/pages src/components blog/2025-08-30* blog/2026-01-19*` returns zero matches.
   - `npm run verify` exits 0.
-- Suggested implementation: scriptable sed pass (em-dash to period plus space or comma based on context; manual review required). Best executed as a dedicated content pass to avoid mixing with structural work.
+- Implementation: context-aware substitution: parenthetical interrupters became commas; conclusion or emphasis became period + capitalize; list items like "Tier 1 - Snapshot" became "Tier 1: Snapshot" (colon); source attribution like "Gallup - 2024" became "Gallup, 2024".
+- Scope honored: skipped `docs/releases.mdx` (history), `docs/ops/audit-2026-06/**` (governance), `docs/research-resources/distributed-federated-agentic-ai.md` (academic long-form), dated blog post bodies for 2025-09-12 / 2025-09-22 / 2026-01-19 body.
+- Closes audit findings: directive E-I1 (own).
 - Reference memory: `feedback_no_em_dashes.md`.
+- Commits: f0a9dc3b07c8955d96975ce17ff9e34b798b4e56 (impl), pending (governance)
+
+### E-K1
+- Description: Generate AVIF and WebP siblings for three oversized PNGs missing modern-format variants.
+- Rationale: Audit-2026-06 PERF-002 flagged `static/img/research/innovation-lab-guide/hero-nyy.png` at 2.49 MB with no AVIF/WebP siblings. Inventory of all PNGs over 150 KB found three total without modern siblings.
+- Acceptance criteria:
+  - Each of the three PNG paths has matching `.avif` and `.webp` siblings of non-zero size.
+  - Output sizes within 30% of original PNG bytes (none exceeded; all under 7% of PNG).
+  - PNG originals not modified or deleted (preserved for legacy fallback).
+- Generation: `npx sharp -i <path>.png -o <path>.avif -f avif -q 50` and `-f webp -q 80`. Total AVIF bytes saved on AVIF-capable clients: approximately 2.83 MB.
+- Files generated:
+  - `static/img/research/innovation-lab-guide/hero-nyy.{avif,webp}` (2.49 MB PNG -> 170 KB AVIF and 263 KB WebP)
+  - `static/img/blog/2026/2026-01-19-coordination-threshold-hero.{avif,webp}` (422 KB PNG -> 24 KB AVIF and 43 KB WebP)
+  - `static/img/luis.{avif,webp}` (258 KB PNG -> 7 KB AVIF and 13 KB WebP)
+- Source-side wiring deferred (flagged in commit body): `docs/research-resources/innovation-lab-guide/index.mdx` and `blog/2026-01-19-coordination-threshold.md` body still reference bare PNG. Blog author avatar via `blog/authors.yml` cannot easily negotiate AVIF given the Docusaurus blog plugin's rendering, so leave the PNG reference. Follow-up may swap to a `<picture>` upgrade where Docusaurus permits.
+- Closes audit findings: PERF-002 (the named hero-nyy asset specifically; broader image-strategy items remain in PERF-001..PERF-015 backlog).
+- Commits: 5875899d1d6bd8632e45dea05ada021bd1a70806 (impl), pending (governance)
+
+### E-L1
+- Description: Consolidate `:root` tokens in `src/css/custom.css`; align primary to IMM canonical `#38249a`; declare previously-undeclared grey tokens and font-family.
+- Rationale: Audit-2026-06 BRAND-001 P0 (three competing primary colors, none aligned to IMM canonical), BRAND-002 P1 (`:root` declared twice), BRAND-007 P2 (no `font-family` declaration), BRAND-013 P3 (`--dl-gray-200` and `--dl-gray-300` referenced but never declared).
+- Acceptance criteria:
+  - `:root` declared once in `custom.css` (the prior duplicate at line ~2029 removed).
+  - `--ifm-color-primary` declared with IMM canonical value `#38249a` plus the six Infima primary variants.
+  - `--dl-indigo` realigned from Tailwind `#4f46e5` to `#38249a`.
+  - `--dl-gray-200` and `--dl-gray-300` declared.
+  - `--ifm-font-family-base` declared.
+  - NNY hero block untouched; dark-mode `!important` ladder untouched.
+- Closes audit findings: BRAND-001, BRAND-002, BRAND-007, BRAND-013.
+- Note: this pass set Inter; the Tier-1 foundation pass (filed below as E-N1 in this same workflow) replaces Inter with Roboto so the web matches IMM deck typography.
+- Commits: 969997bedb8bea2dba197456877dc6c27cb45e4f (impl), pending (governance)
+
+### E-M1
+- Description: Add `Content-Security-Policy-Report-Only` header to monitor a tighter CSP without enforcing it.
+- Rationale: Audit-2026-06 SEC-002 flagged that the enforced CSP carries `'unsafe-inline'` on script-src and style-src. Per `AGENTS.md` rule "CSP changes should default to Report-Only unless a tested policy is confirmed safe; otherwise defer."
+- Acceptance criteria:
+  - Enforced `Content-Security-Policy` byte-for-byte unchanged.
+  - New `Content-Security-Policy-Report-Only` line without `'unsafe-inline'` on script-src and style-src, identical otherwise.
+  - Inline TODO documents the missing `Reporting-Endpoints` (no collector stands up yet).
+- Expected violation volume: high. Docusaurus inline hydration scripts + inline CSS blocks + JSON-LD blocks generate roughly 3-8 script-src reports and 20-100 style-src reports per page view.
+- Path to enforce documented in commit message (two-step soak: stand up a CF Worker collector + Reporting-Endpoints, land SEC-008 single JSON-LD component with sha256 hashes, iterate until zero violations, promote into enforced CSP).
+- Closes audit findings: SEC-002 (Report-Only step only; the enforce step remains pending the soak cycle).
+- Commits: f6306c58bd2a38d6ec7f10de12eb8a0ea355e2e8 (impl), pending (governance)
+
+### E-J1 (BACKLOG ONLY, DEFERRED)
+- Description: Testimonials and named client quotes on doulab.net (homepage, case studies, services pages).
+- Rationale: Audit-2026-06 CONV-003, SALES-002, BP-013. Four roles flagged zero attributed quotes as a P0 trust gap for procurement-eligible buyers, especially in regulated finance and public sector. Site shows 4 named clients (AFP Siembra, Alpha Inversiones, FUNDAPEC, OGTIC/RedLab) but no quotes from sponsors at any of them.
+- Status: Explicitly deferred by user 2026-06-01. Needs content input that cannot be drafted from canonical sources: (a) actual quotes from named sponsors, (b) consent state for each (is the quote releasable, what attribution is allowed), (c) approval workflow with each client. Out of scope for the current automation-driven audit remediation.
+- Acceptance criteria (when picked up):
+  - At least 2 attributed quotes per public case study, each linked to a named sponsor (role + organization).
+  - At least 1 homepage hero or proof-strip quote.
+  - Consent log captured outside the repo (legal or CRM), referenced from a non-public ops doc.
+  - No fabricated quotes. No AI-generated portraits.
 - Commits: pending.
+
+### E-F1 (INFORMATIONAL, accepted-benign)
 - Description: Decision to accept Cloudflare's prefetch handling (`Purpose: prefetch` requests on 6 prefetched JS chunks return 503 from CF edge) as a benign artifact rather than fix it.
 - Rationale: Discussed at length 2026-06-01. The 503s are returned only on prefetch-class requests (confirmed via direct-vs-prefetch diagnosis: same URL returns 200 on direct fetch from curl/Playwright; 503 only when browser sends `Purpose: prefetch`). Real users do experience these 503s on the silent prefetch — but their navigation is unaffected because the browser refetches on actual navigation. Lighthouse `errors-in-console` flags the 503s, capping prod BP at 78–79. User explicitly chose to accept this rather than spend further time digging through CF Speed/Optimization toggles or swizzling Docusaurus's `<Link>` component to disable prefetch hints.
 - Effect on metrics: prod Lighthouse Best Practices remains capped at ~79 sitewide due to this single residual `errors-in-console` audit. Treat as a known cosmetic gap on lab BP scores, not a real-user issue.

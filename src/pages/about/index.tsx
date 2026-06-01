@@ -128,7 +128,7 @@ export default function AboutPage(): ReactNode {
           width={1600}
           height={900}
           primaryCta={{
-            to: '/what-we-do',
+            to: '/services',
             label: 'See what we do',
             dataCta: 'cta.about.hero.learn_more',
             ariaLabel: 'See what Doulab does',
@@ -169,7 +169,7 @@ export default function AboutPage(): ReactNode {
             making foresight usable in everyday decisions.
           </p>
           <p className="microcopy">
-            See how we work in practice. <Link to="/what-we-do#who" data-cta="cta.about.story.process">How we work</Link>.
+            See how we work in practice. <Link to="/services" data-cta="cta.about.story.process">How we work</Link>.
           </p>
         </section>
 
@@ -265,7 +265,7 @@ export default function AboutPage(): ReactNode {
           {/* Cross-link to services overview */}
           <p className={`microcopy ${'pages-b4-p1__microcopyTop'}`}>
             Want the full overview?{' '}
-            <Link to="/what-we-do" data-cta="cta.about.to_whatwedo">
+            <Link to="/services" data-cta="cta.about.to_whatwedo">
               See services overview
             </Link>
             .

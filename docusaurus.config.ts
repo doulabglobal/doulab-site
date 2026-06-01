@@ -89,12 +89,12 @@ const config: Config = {
       logo: { alt: 'Doulab Logo', src: 'img/logo.svg' },
       items: [
         { to: '/', label: 'Home', position: 'left' },
-        { to: '/what-we-do', label: 'What we do', position: 'left' },
+        { to: '/services', label: 'Services', position: 'left' },
         { to: '/case-studies', label: 'Case Studies', position: 'left' },
         { to: '/insights', label: 'Insights', position: 'left' },
         { to: '/about', label: 'About', position: 'left' },
+        { to: '/work-with-us', label: 'Work with us', position: 'right' },
         { to: '/contact', label: 'Contact', position: 'right' },
-        { href: 'https://github.com/doulabglobal', label: 'GitHub', position: 'right' },
       ],
     },
 
@@ -102,9 +102,9 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'What we do',
+          title: 'Services',
           items: [
-            { label: 'Overview', to: '/what-we-do' },
+            { label: 'Overview', to: '/services' },
             { label: 'Case Studies', to: '/case-studies' },
             { label: 'Vigía Futura', to: '/vigia-futura' },
             { label: 'Insights', to: '/insights' },

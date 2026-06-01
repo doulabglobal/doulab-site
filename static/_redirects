@@ -1,0 +1,7 @@
+# Cloudflare Pages _redirects
+# Format: SOURCE DESTINATION STATUS
+
+# /what-we-do consolidated into /services (E-H1, 2026-06-01).
+# The two URLs hosted near-duplicate service grids; /services is now the canonical hub.
+/what-we-do /services 301
+/what-we-do/* /services/:splat 301

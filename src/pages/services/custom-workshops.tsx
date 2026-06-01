@@ -65,7 +65,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           width={1600}
           height={900}
           primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.discovery' }}
-          secondaryCta={{ to: '/what-we-do', label: 'See what we do', dataCta: 'cta.services.workshops.hero.services' }}
+          secondaryCta={{ to: '/services', label: 'See our services', dataCta: 'cta.services.workshops.hero.services' }}
           ctaNote="Built on MicroCanvas® v2.2 and IMM-P® gates."
         />
 

@@ -268,7 +268,7 @@ export default function WorkWithUsPage(): JSX.Element {
                     </ul>
                     <p className={`microcopy ${'pages-work-with-us-work-with-us__microcopyTight'}`}>
                         New to us? See our Programs and Coaching &amp; mentoring on the{' '}
-                        <Link to="/what-we-do">What we do</Link> page.
+                        <Link to="/services">Services</Link> page.
                     </p>
                 </section>
 

@@ -1,12 +1,31 @@
 /* ===== Doulab global tokens ===== */
 :root {
-    --dl-indigo: #4f46e5;
-    --dl-indigo-dark: #4338ca;
+    /* Infima primary aligned to IMM canonical brand (#38249a) per audit BRAND-001 */
+    --ifm-color-primary: #38249a;
+    --ifm-color-primary-dark: #32218b;
+    --ifm-color-primary-darker: #2f1f83;
+    --ifm-color-primary-darkest: #271a6c;
+    --ifm-color-primary-light: #3f29ac;
+    --ifm-color-primary-lighter: #432cb4;
+    --ifm-color-primary-lightest: #5440c4;
+
+    /* Site font stack: Inter sitewide (BRAND-007) */
+    --ifm-font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    /* Doulab brand tokens; --dl-indigo realigned from Tailwind indigo to IMM canonical (BRAND-001) */
+    --dl-indigo: #38249a;
+    --dl-indigo-dark: #271a6c;
     --dl-gray-700: #444;
     --dl-gray-600: #555;
+    --dl-gray-300: #d1d5db; /* declared for DocBadges/EntityHeader (BRAND-013) */
+    --dl-gray-200: #e5e7eb; /* declared for DocBadges/EntityHeader (BRAND-013) */
     --dl-border: #e5e7eb;
     --dl-bg-soft: #f9f9f9;
     --dl-white: #fff;
+}
+
+body {
+    font-family: var(--ifm-font-family-base);
 }
 
 /* ===== Docs styling (Research & Resources) ===== */
@@ -2025,16 +2044,7 @@ html[data-theme='dark'] .mermaid svg .note {
 
 /* ---- migrated from pages/work-with-us/index.module.css ---- */
 /* Work with Us page â€” aligned to site tokens/components (hero, sections, cards, CTAs) */
-
-:root {
-    --dl-indigo: #4f46e5;
-    --dl-indigo-dark: #4338ca;
-    --dl-gray-700: #444;
-    --dl-gray-600: #555;
-    --dl-border: #e5e7eb;
-    --dl-bg-soft: #f9f9f9;
-    --dl-white: #fff;
-}
+/* Duplicate :root block removed (BRAND-002); tokens consolidated to top of file. */
 
 /* Hero */
 .pages-work-with-us-index__heroBanner {

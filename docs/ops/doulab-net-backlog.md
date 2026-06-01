@@ -453,11 +453,12 @@ Audit deliverables landed; implementation in 4 sub-phases:
 ### F-5 (RESOLVED 2026-06-01)
 - Tier 3 "What Tier 3 delivers" grid restructured: EvidenceMeter now spans full row via `gridColumn: '1 / -1'`, placing it on row 2 below the MaturityLadder (row 1 holds Radar + MaturityLadder; row 3 holds Roadmap). Commit: 1a00c44cf9cd77425f732f051640211ac1c2624e.
 
-### F-2 (PARTIAL — page-level + component-level dark-mode parity shipped)
+### F-2 (RESOLVED 2026-06-01)
 - Page-level: 11 inline-style color updates across `index.tsx`, `clarityscan.tsx`, `imm-dt.tsx`, `clarityscan/diagnostic.tsx`. Replaced too-dark brand tokens (--dl-indigo, --dl-slate) with Infima `--ifm-heading-color` / `--ifm-color-emphasis-*` / `--ifm-color-primary` for dark-mode parity.
 - Component-level: dark-mode overrides added to Radar, MaturityLadder, EvidenceMeter module CSS (Pillars + Roadmap inspected and confirmed OK without override).
-- Residual follow-up: `--ifm-color-primary` is set to #38249a but has no dark-mode lighter variant. Should be addressed in a small commit on `src/css/custom.css` (5-min job).
-- Commits: 66fb4fabd4a77bb29064270afed52e711e0184ae (custom.css), d35f4bb180754caf5426bda7aa9755e6f61967a5 (components), 1a00c44cf9cd77425f732f051640211ac1c2624e (pages).
+- Token-level (close-out): added the full dark-mode primary ladder in `src/css/custom.css` so `--ifm-color-primary` and its 6 siblings shift to a lighter shade of the IMM indigo axis (#8a7ad6 base) when `html[data-theme='dark']` is active. Eliminates the prior PARTIAL residual where Infima primary inherited the light-mode #38249a on dark backgrounds.
+- Display + interaction follow-up (dd76b65, same session): user flagged that surfaces still resolving to `--dl-indigo` (which does not auto-flip) read as too-dark purple on dark backgrounds. Added dark-mode overrides: `.heroSubtitle` + `.pages-work-with-us-index__heroSubtitle` → white (display text needs max contrast, not a tinted accent); `.navbar__link:hover/:focus/--active` + `.pages-work-with-us-index__subnav a` → Doulab green (interaction signal, distinct from inactive, brand-tied); audit.tsx "Evidence-backed radar" h3 inline indigo dropped so it inherits `--ifm-heading-color` and auto-flips.
+- Commits: 66fb4fabd4a77bb29064270afed52e711e0184ae (custom.css initial), d35f4bb180754caf5426bda7aa9755e6f61967a5 (components), 1a00c44cf9cd77425f732f051640211ac1c2624e (pages), a19f1a8 (dark-mode primary ladder close-out), dd76b65 (display + interaction overrides for non-auto-flipping --dl-indigo surfaces).
 - Description: 29 `style-src-attr` CSP Report-Only violations on the production home page.
 - T5 diagnostic (commit pending under T5 prompt; agent declined to swizzle): the violations split as follows:
   - 5 `style-src-attr` from `@docusaurus/core` BaseUrlIssueBanner inline injection (line 6 of build/index.html). NOT swizzlable — lives in @docusaurus/core, not theme-classic. Recommended follow-up: set `baseUrlIssueBanner: false` in `docusaurus.config.ts` to disable the dev-only banner injection entirely (the banner only fires on baseUrl misconfiguration).

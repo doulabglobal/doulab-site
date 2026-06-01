@@ -6,4 +6,4 @@ Allow: /
 Disallow: /book-clarityscan
 Disallow: /docs/ops/
 
-Sitemap: https://www.doulab.net/sitemap.xml
+Sitemap: https://www.doulab.net/sitemap_index.xml

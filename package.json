@@ -7,6 +7,7 @@
     "prepare": "node scripts/prepare.cjs",
     "preinstall": "node scripts/strip-bom.cjs",
     "prebuild": "node scripts/strip-bom.cjs",
+    "postbuild": "node scripts/fix-sitemaps.mjs",
     "typecheck": "tsc",
     "build:dry": "docusaurus build --no-minify --out-dir build-dry",
     "check:links": "node scripts/check-anchors.mjs",

@@ -62,7 +62,24 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - LH-NEW-003 — 6× 503 errors on lazily-loaded JS chunks persist through fresh deploy (deploy-ops investigation).
   - LH-NEW-004 — `/about` SEO regression (link-text).
 - Production Lighthouse mobile Perf gain after C1+B1 deploy: +12 to +21 per page (64–78 → 82–93). Desktop home 97 → 98. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v2/`.
-- Commits: 5f2433162032eb13d131f7d3bd9325ec912ecd77 (impl), pending (governance)
+- Commits: 5f2433162032eb13d131f7d3bd9325ec912ecd77 (impl), 76f6340d6aff37e382f87279692850decc8758cd (governance)
+
+### E-E1
+- Description: Image preload + format hygiene + `/about` link-text fix.
+- Rationale: Lighthouse production verification (prod-v2/v3) confirmed two image-handling defects. (1) Six pages preload an LCP image at a `.jpg` URL that does not exist on disk — `<link rel="preload" href="/img/{about,clarityscan-hero,services-hero,workshops-hero,coaching-hero,vigia-futura-hero}.jpg">` all 404 in production (verified via `curl https://www.doulab.net/img/clarityscan-hero.jpg` returning 404). Modern browsers picked the AVIF/WebP source from the `imageSrcSet` so the page rendered, but the preload itself was wasted on every page load and the picture fallback `<img>` would 404 for the rare browser without AVIF/WebP. (2) `Hero.tsx` hardcoded `${imageBase}.jpg` as the fallback raster across every page that uses the component — same root cause. (3) Lighthouse `link-text` audit failed on `/about` because the hero primary CTA used the visible label "Learn more"; Lighthouse evaluates visible text, not `aria-label`, so the descriptive aria-label was insufficient.
+- Acceptance criteria:
+  - `find static/img -name '*.png' -type f | xargs -I{} basename {}` matches every preload `href` (no broken JPG references in src/pages).
+  - Hero component fallback raster matches the actual file on disk (.png everywhere doulab.net uses it).
+  - Visible label on the `/about` hero primary CTA is descriptive (not "Learn more").
+  - `npm run verify` exits 0.
+- Closes audit findings: LH-NEW-004 (`/about` link-text); partial close of PERF-002 (Hero preload now only fires when image source is correct, but the eager-only gating is deferred to a future pass).
+- Commits: f994f0c13a29eececfd3c87e4e642356a7d845d2 (impl), pending (governance)
+
+### E-F1 — INFORMATIONAL (no commit yet)
+- Description: Decision to accept Cloudflare's prefetch handling (`Purpose: prefetch` requests on 6 prefetched JS chunks return 503 from CF edge) as a benign artifact rather than fix it.
+- Rationale: Discussed at length 2026-06-01. The 503s are returned only on prefetch-class requests (confirmed via direct-vs-prefetch diagnosis: same URL returns 200 on direct fetch from curl/Playwright; 503 only when browser sends `Purpose: prefetch`). Real users do experience these 503s on the silent prefetch — but their navigation is unaffected because the browser refetches on actual navigation. Lighthouse `errors-in-console` flags the 503s, capping prod BP at 78–79. User explicitly chose to accept this rather than spend further time digging through CF Speed/Optimization toggles or swizzling Docusaurus's `<Link>` component to disable prefetch hints.
+- Effect on metrics: prod Lighthouse Best Practices remains capped at ~79 sitewide due to this single residual `errors-in-console` audit. Treat as a known cosmetic gap on lab BP scores, not a real-user issue.
+- Open: if BP ever needs to be lifted (e.g., for a procurement-eligible Lighthouse threshold), revisit with one of: CF dashboard → Speed → Optimization → Speculation Rules toggle, or source-side swizzle of `theme-classic/NavbarItem/DefaultNavbarItem` to drop prefetch on internal links.
 
 ## P0
 

@@ -22,7 +22,18 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - 19 role files + 1 consolidated index under docs/ops/audit-2026-06/.
   - Live Lighthouse JSONs + Playwright viewport PNGs under ops/audits/doulab-net/.
   - AGENTS.md manifest updated with all new ops artifacts.
-- Commits: 8d314807d22162378fa8a70df4890e64206fc426 (impl), pending (governance)
+- Commits: 8d314807d22162378fa8a70df4890e64206fc426 (impl), 9e6e4ee7c8a29940abb5b61772dfba0ebe9a3bf0 (governance)
+
+### E-B1
+- Description: Fix dev-server compilation overlay (LH-NEW-001, VP-NEW-001), defer Docusaurus v4 future flag to planned phase, exclude docs/ops from public docs build (CODE-001), align canonical to www.doulab.net, ship valid robots.txt (SEO-003).
+- Rationale: `future:{v4:true}` cascaded to require `@docusaurus/faster` (not installed) and strict MDX-3 (rejected legacy `<!-- truncate -->` and exposed ~47 SSG errors from zero-byte MDX pages). Reverted v4 pending a proper migration; installed faster as exact dep so re-enabling is a one-line change; migrated 3 truncate-only blog posts to MDX-3 syntax. Excluding `docs/ops/**` removes the governance info-leak surfaced by CODE-001. www-vs-apex canonical alignment removes the 301 redirect penalty visible in the production Lighthouse.
+- Acceptance criteria:
+  - `npm run verify` (typecheck + production build) exits 0.
+  - Local production preview (`build:dry` + `docusaurus serve`) renders without any Webpack overlay.
+  - `https://www.doulab.net/robots.txt` is a valid robots.txt (when redeployed).
+  - `docs/ops/*` URLs return 404 on next deploy.
+- Closes audit findings: LH-NEW-001, VP-NEW-001, SEO-003, CODE-001 (partial — manual `docs/ops/*` indexing concern is resolved).
+- Commits: ec083380b670acbab8a6f659a0cbd4f5228e8d08 (impl), pending (governance)
 
 ## P0
 

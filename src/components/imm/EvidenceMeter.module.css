@@ -1,0 +1,91 @@
+/* EvidenceMeter: semicircular speedometer for an evidence-quality score. */
+
+.wrap {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chartBox {
+  width: 100%;
+  max-width: 360px;
+  min-width: 200px;
+}
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: visible;
+}
+
+.zoneRed {
+  fill: var(--dl-red, #d64545);
+  fill-opacity: 0.85;
+  stroke: none;
+}
+
+.zoneAmber {
+  fill: var(--dl-amber, #f0b429);
+  fill-opacity: 0.9;
+  stroke: none;
+}
+
+.zoneGreen {
+  fill: var(--dl-green, #1f9d55);
+  fill-opacity: 0.9;
+  stroke: none;
+}
+
+.tick {
+  stroke: var(--ifm-color-emphasis-800, #374151);
+  stroke-width: 1.2;
+  opacity: 0.7;
+}
+
+.needle {
+  fill: var(--dl-slate, #484854);
+  stroke: var(--dl-slate, #484854);
+  stroke-width: 1;
+  stroke-linejoin: round;
+}
+
+.hub {
+  fill: var(--ifm-card-background-color, #fff);
+  stroke: var(--dl-slate, #484854);
+  stroke-width: 2;
+}
+
+.readout {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.score {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  font-weight: 700;
+  color: var(--ifm-heading-color, #1f2937);
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.scoreValue {
+  font-size: 2.25rem;
+}
+
+.scoreUnit {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700, #4b5563);
+}
+
+.label {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800, #374151);
+}

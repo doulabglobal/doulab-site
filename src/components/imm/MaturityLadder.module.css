@@ -1,0 +1,152 @@
+/* MaturityLadder: ordered capability rungs.
+   Vertical (top = highest) below 768px; horizontal (left = lowest) above. */
+
+.wrap {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  margin: 2rem 0;
+}
+
+.title {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 0 1.25rem;
+  color: var(--ifm-heading-color, #1f2937);
+}
+
+.track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Vertical layout (mobile): top = highest maturity */
+@media (max-width: 767px) {
+  .track {
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+  }
+}
+
+/* Horizontal layout (>= 768px): leftmost = lowest */
+@media (min-width: 768px) {
+  .track {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.rung {
+  position: relative;
+  flex: 1 1 0;
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  padding: 0.75rem 0.85rem;
+  border-radius: 8px;
+  background: var(--dl-slate, #484854);
+  color: #fff;
+  border: 2px solid transparent;
+  min-height: 56px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 767px) {
+  .rung {
+    align-items: center;
+  }
+}
+
+.muted {
+  background: var(--dl-slate, #484854);
+  opacity: 0.6;
+}
+
+.current {
+  background: var(--dl-indigo, #38249a);
+  opacity: 1;
+  box-shadow:
+    0 2px 6px rgba(56, 36, 154, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.target {
+  background: transparent;
+  color: var(--ifm-color-content, #1f2937);
+  border: 2px dashed var(--dl-green, #1f9d55);
+  opacity: 1;
+}
+
+/* If a rung is both current and target, current wins for fill; target adds border */
+.current.target {
+  background: var(--dl-indigo, #38249a);
+  color: #fff;
+  border: 2px dashed var(--dl-green, #1f9d55);
+}
+
+.rungNumber {
+  flex: 0 0 auto;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.18);
+  color: inherit;
+}
+
+.target .rungNumber {
+  background: rgba(31, 157, 85, 0.15);
+  color: var(--dl-green, #1f9d55);
+}
+
+.rungBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.rungLabelRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.rungLabel {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.rungDesc {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  opacity: 0.9;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.badgeCurrent {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--dl-indigo, #38249a);
+}
+
+.badgeTarget {
+  background: var(--dl-green, #1f9d55);
+  color: #fff;
+}

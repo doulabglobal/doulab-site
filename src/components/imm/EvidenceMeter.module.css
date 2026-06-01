@@ -6,12 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .chartBox {
   width: 100%;
   max-width: 360px;
-  min-width: 200px;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .svg {

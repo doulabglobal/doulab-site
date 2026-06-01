@@ -1,0 +1,141 @@
+{
+  "rows": [
+    {
+      "file": "about-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/about",
+      "performance": 69,
+      "accessibility": 92,
+      "best-practices": 100,
+      "seo": 92
+    },
+    {
+      "file": "book-clarityscan-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/book-clarityscan",
+      "performance": 70,
+      "accessibility": 96,
+      "best-practices": 100,
+      "seo": 66
+    },
+    {
+      "file": "case-studies-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/case-studies",
+      "performance": 73,
+      "accessibility": 93,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "contact-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/contact",
+      "performance": 70,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "home-desktop-v2.json",
+      "ff": "desktop",
+      "url": "http://localhost:3001/",
+      "performance": 94,
+      "accessibility": 92,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "home-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/",
+      "performance": 67,
+      "accessibility": 93,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "insights-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/insights",
+      "performance": 66,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "services-clarityscan-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/services/clarityscan",
+      "performance": 68,
+      "accessibility": 92,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "services-innovation-maturity-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/services/innovation-maturity",
+      "performance": 66,
+      "accessibility": 93,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "services-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/services",
+      "performance": 66,
+      "accessibility": 100,
+      "best-practices": 100,
+      "seo": 100
+    },
+    {
+      "file": "what-we-do-mobile-v2.json",
+      "ff": "mobile",
+      "url": "http://localhost:3001/what-we-do",
+      "performance": 55,
+      "accessibility": 98,
+      "best-practices": 100,
+      "seo": 100
+    }
+  ],
+  "opps": [
+    {
+      "id": "uses-text-compression",
+      "total": 43660,
+      "n": 11,
+      "title": "Enable text compression"
+    },
+    {
+      "id": "unused-javascript",
+      "total": 13550,
+      "n": 11,
+      "title": "Reduce unused JavaScript"
+    },
+    {
+      "id": "unminified-javascript",
+      "total": 13250,
+      "n": 11,
+      "title": "Minify JavaScript"
+    },
+    {
+      "id": "unused-css-rules",
+      "total": 7620,
+      "n": 11,
+      "title": "Reduce unused CSS"
+    },
+    {
+      "id": "render-blocking-resources",
+      "total": 7246,
+      "n": 10,
+      "title": "Eliminate render-blocking resources"
+    },
+    {
+      "id": "unminified-css",
+      "total": 3000,
+      "n": 10,
+      "title": "Minify CSS"
+    }
+  ]
+}

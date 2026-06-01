@@ -1,0 +1,114 @@
+{
+  "rows": [
+    {
+      "file": "about-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/about",
+      "performance": 52,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 92
+    },
+    {
+      "file": "case-studies-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/case-studies",
+      "performance": 55,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "contact-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/contact",
+      "performance": 52,
+      "accessibility": 96,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "home-desktop.json",
+      "formFactor": "desktop",
+      "url": "http://localhost:3000/",
+      "performance": 45,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "home-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/",
+      "performance": 49,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "insights-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/insights",
+      "performance": 49,
+      "accessibility": 96,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "services-clarityscan-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/services/clarityscan",
+      "performance": 51,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "services-innovation-maturity-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/services/innovation-maturity",
+      "performance": 51,
+      "accessibility": 89,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "services-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/services",
+      "performance": 52,
+      "accessibility": 96,
+      "best-practices": 96,
+      "seo": 100
+    },
+    {
+      "file": "what-we-do-mobile.json",
+      "formFactor": "mobile",
+      "url": "http://localhost:3000/what-we-do",
+      "performance": 51,
+      "accessibility": 95,
+      "best-practices": 96,
+      "seo": 100
+    }
+  ],
+  "opps": [
+    {
+      "id": "unused-javascript",
+      "totalMs": 1050,
+      "pages": 7,
+      "title": "Reduce unused JavaScript"
+    },
+    {
+      "id": "unminified-css",
+      "totalMs": 750,
+      "pages": 5,
+      "title": "Minify CSS"
+    },
+    {
+      "id": "unminified-javascript",
+      "totalMs": 150,
+      "pages": 1,
+      "title": "Minify JavaScript"
+    }
+  ]
+}

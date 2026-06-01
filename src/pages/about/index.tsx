@@ -50,7 +50,7 @@ export default function AboutPage(): ReactNode {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What is the MicroCanvas® Framework, MCF 2.1?',
+        name: 'What is the MicroCanvas® Framework, MCF 2.2?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'A modular set of canvases that makes innovation repeatable, from discovery to delivery.',
@@ -134,7 +134,7 @@ export default function AboutPage(): ReactNode {
             ariaLabel: 'Learn more about what we do',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.about.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
           id="about-hero"
           ariaLabelledbyId="about-hero-title"
         />
@@ -163,7 +163,7 @@ export default function AboutPage(): ReactNode {
             consistently, and how can we make a practical recipe to do them well again and again?</em>
           </p>
           <p>
-            That quest led to the <strong>MicroCanvas® Framework, MCF 2.1</strong> and the
+            That quest led to the <strong>MicroCanvas® Framework, MCF 2.2</strong> and the
             <strong> Innovation Maturity Model Program, IMM-P®</strong>. Together they guide teams end to end and help
             leaders measure and improve capability. Today, we extend that work with <strong>Vigía Futura</strong>,
             making foresight usable in everyday decisions.
@@ -285,7 +285,7 @@ export default function AboutPage(): ReactNode {
             dataCta: 'cta.about.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
       </main>
     </Layout>

@@ -1,5 +1,5 @@
 // src/pages/book-clarityscan.tsx
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -7,17 +7,6 @@ import { CLARITYSCAN_BOOKING_URL } from '../constants/urls';
 import PageHeader from '../components/PageHeader/PageHeader';
 
 export default function BookClarityScanPage() {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Open booking in a new tab to keep the site context
-      try {
-        window.open(CLARITYSCAN_BOOKING_URL, '_blank', 'noopener,noreferrer');
-      } catch {
-        // noop; page shows manual link below
-      }
-    }
-  }, []);
-
   return (
     <Layout title="Book ClarityScan® Online" description="Book a ClarityScan® online in minutes.">
       <Head>
@@ -28,10 +17,10 @@ export default function BookClarityScanPage() {
       </Head>
 
       <main className={`container ${'pages-book-clarityscan__main'}`}>
-        <PageHeader title="Booking ClarityScan®." body={<p>We are opening the booking page in a new tab.</p>} />
-        <p role="status" aria-live="polite">
-          Redirecting you to our Outlook booking page. If nothing happens, use the direct link below.
-        </p>
+        <PageHeader
+          title="Book your ClarityScan®."
+          body={<p>Pick a time that works for you. The booking page opens in a new tab.</p>}
+        />
         <p>
           <a
             className="buttonPrimary"
@@ -40,7 +29,7 @@ export default function BookClarityScanPage() {
             rel="noopener noreferrer"
             data-cta="cta.book_clarityscan.redirect"
           >
-            Open booking in a new tab
+            Open the booking page
           </a>
         </p>
         <p className="microcopy">

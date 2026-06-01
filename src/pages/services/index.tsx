@@ -46,9 +46,9 @@ export default function ServicesPage(): ReactNode {
                     imageAlt="Our Services"
                     width={600}
                     height={400}
-                    primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScanr online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
+                    primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     secondaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
-                    ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+                    ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
                     eager
@@ -71,7 +71,7 @@ export default function ServicesPage(): ReactNode {
                             <h3 id="svc-diagnostics">ClarityScan®: Know where you stand</h3>
                             <p>A rapid, evidence-based scan to baseline innovation/foresight maturity and surface gaps.</p>
                             <ul>
-                                <li>Baseline maturity map (MCF 2.1 + IMM®)</li>
+                                <li>Baseline maturity map (MCF 2.2 + IMM-P®)</li>
                                 <li>Gap analysis with prioritized next steps</li>
                             </ul>
                             <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
@@ -104,7 +104,7 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-programs">
                             <Layers className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-programs">Programs: Build innovation capacity</h3>
-                            <p>Multi-phase IMM® journeys to embed governance, process, and skills.</p>
+                            <p>Multi-phase IMM-P® journeys to embed governance, process, and skills.</p>
                             <ul>
                                 <li>12+12 weeks: Discovery/Validation → Efficiency/Scale</li>
                                 <li>Gated decisions, KPIs, and cadence</li>

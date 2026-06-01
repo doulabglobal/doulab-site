@@ -75,7 +75,7 @@ export default function ClarityScanPage(): ReactNode {
             external: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us', dataCta: 'cta.services.clarityscan.hero.contact' }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
 
         {/* Who is it for? */}
@@ -161,12 +161,12 @@ export default function ClarityScanPage(): ReactNode {
           body="Run ClarityScan® and get your maturity snapshot plus the exact next steps to take."
           primaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,
-            label: 'Book a ClarityScanr online',
+            label: 'Book a ClarityScan® online',
             dataCta: 'cta.services.clarityscan.final.book_clarityscan_booking',
             newTab: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us', dataCta: 'cta.services.clarityscan.final.contact' }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
       </main>
     </Layout>

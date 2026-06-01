@@ -106,7 +106,7 @@ export default function CaseAlphaInversiones(): ReactNode {
             ariaLabel: 'Explore ClarityScan',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
 
         {/* At a glance */}
@@ -198,7 +198,7 @@ export default function CaseAlphaInversiones(): ReactNode {
 
           <h3>Training and capacity building</h3>
           <ul>
-            <li>Trained 30 employees in the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework, MCF 2.1</Link> through structured workshops.</li>
+            <li>Trained 30 employees in the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework, MCF 2.2</Link> through structured workshops.</li>
             <li>Ran 12 week Innovation Maturity Model Program, IMM P, cycles across discovery, validation, and development over 24 months.</li>
           </ul>
 

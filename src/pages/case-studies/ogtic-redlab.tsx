@@ -103,7 +103,7 @@ export default function CaseOgticRedlab(): ReactNode {
             ariaLabel: 'Explore ClarityScan',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.cases.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
 
         {/* At a glance */}
@@ -132,7 +132,7 @@ export default function CaseOgticRedlab(): ReactNode {
           </p>
           <p>
             Doulab partnered with OGTIC to design and facilitate Cohorts 01 and 02, anchored in the{' '}
-            <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework, MCF 2.1</Link> and the{' '}
+            <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework, MCF 2.2</Link> and the{' '}
             <Link to="/services/innovation-maturity">Innovation Maturity Model Program, IMM-P®</Link>. The aim was to give
             public servants effective tools and a repeatable process that position RedLab as a pillar for public
             innovation.
@@ -173,7 +173,7 @@ export default function CaseOgticRedlab(): ReactNode {
             </li>
             <li>
               <strong>Shared method:</strong> Adopted{' '}
-              <Link to="/docs/research-resources/microcanvas">MCF 2.1</Link> for problem framing, value definition, and experiment
+              <Link to="/docs/research-resources/microcanvas">MCF 2.2</Link> for problem framing, value definition, and experiment
               design across institutions.
             </li>
             <li>

@@ -25,7 +25,7 @@ export default function WhatWeDo(): ReactNode {
   return (
     <Layout
       title="What we do, Programs, Diagnostics and Foresight | Doulab"
-      description="Programs, diagnostics, and foresight to make innovation repeatable with MicroCanvas® 2.1 and IMM-P®."
+      description="Programs, diagnostics, and foresight to make innovation repeatable with MicroCanvas® 2.2 and IMM-P®."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/what-we-do" />
@@ -33,7 +33,7 @@ export default function WhatWeDo(): ReactNode {
         <meta property="og:title" content="What we do, Programs, Diagnostics and Foresight | Doulab" />
         <meta
           property="og:description"
-          content="Programs, diagnostics, and foresight that make innovation repeatable with MicroCanvas 2.1 and IMM-P."
+          content="Programs, diagnostics, and foresight that make innovation repeatable with MicroCanvas 2.2 and IMM-P."
         />
         <meta property="og:image" content="https://doulab.net/img/social/og-what-we-do.jpg" />
         <meta property="og:image:alt" content="Doulab, Programs, diagnostics, and foresight." />
@@ -104,7 +104,7 @@ export default function WhatWeDo(): ReactNode {
         <Hero
           title="What we do"
           subtitle="Innovation architecture, diagnostics, and foresight, built to make delivery repeatable."
-          body="We install the culture, process, and cadence for innovation to scale, using MicroCanvas® 2.1 and the Innovation Maturity Model Program, IMM-P®."
+          body="We install the culture, process, and cadence for innovation to scale, using MicroCanvas® 2.2 and the Innovation Maturity Model Program, IMM-P®."
           imageBase="/img/services-hero"
           imageAlt="What we do, services overview"
           width={1600}
@@ -116,7 +116,7 @@ export default function WhatWeDo(): ReactNode {
             ariaLabel: 'Explore ClarityScan',
           }}
           secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.whatwedo.hero.book_clarityscan_online', ariaLabel: 'Book a ClarityScan online via Stripe Checkout', external: true }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
           id="whatwedo-hero"
           ariaLabelledbyId="whatwedo-hero-title"
         />
@@ -193,7 +193,7 @@ export default function WhatWeDo(): ReactNode {
               <h3 id="diagnostics-title">Diagnostics</h3>
               <p>Fast baselines on maturity, risks, and constraints to anchor decisions.</p>
               <ul>
-                <li>ClarityScan® baseline, MCF 2.1 and IMM-P®</li>
+                <li>ClarityScan® baseline, MCF 2.2 and IMM-P®</li>
                 <li>Maturity map and prioritized risk shortlist</li>
               </ul>
               <p className="microcopy">What you get, a baseline, a shortlist of risks, and a 30, 60, 90 plan.</p>
@@ -302,7 +302,7 @@ export default function WhatWeDo(): ReactNode {
           <ul className="processRail" role="list">
             <li className="processStep" role="listitem">
               <Search className="stepIcon" aria-hidden="true" /><h4>Diagnose</h4>
-              <p>Baseline maturity, risks, and constraints with MCF 2.1 and IMM-P®.</p>
+              <p>Baseline maturity, risks, and constraints with MCF 2.2 and IMM-P®.</p>
             </li>
             <li className="processStep" role="listitem">
               <AlignJustify className="stepIcon" aria-hidden="true" /><h4>Align</h4>
@@ -336,7 +336,7 @@ export default function WhatWeDo(): ReactNode {
             dataCta: 'cta.whatwedo.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
       </main>
     </Layout>

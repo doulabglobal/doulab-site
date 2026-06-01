@@ -478,7 +478,7 @@ function ResearchResourcesSection() {
         <source srcSet="/img/mcf-card.webp" type="image/webp" />
         <img loading="lazy"
           src="/img/mcf-card.jpg"
-          alt="MicroCanvas Framework v2.1, modular canvases for innovation."
+          alt="MicroCanvas Framework v2.2, modular canvases for innovation."
           width={1200}
           height={720}
           decoding="async"
@@ -486,10 +486,10 @@ function ResearchResourcesSection() {
         />
       </picture>
       <Lightbulb className="cardIcon" aria-hidden={true} />
-      <h3>MicroCanvas Framework v2.1</h3>
+      <h3>MicroCanvas Framework v2.2</h3>
       <p>Open toolkit to diagnose, design, and scale innovation with reusable canvases.</p>
       <p className="microcopy">
-        Learn the framework in our docs, <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.1</Link>.
+        Learn the framework in our docs, <Link to="/docs/research-resources/microcanvas">MicroCanvas v2.2</Link>.
       </p>
       <div className="cardFooter">
         <a

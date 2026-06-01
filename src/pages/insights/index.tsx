@@ -239,14 +239,14 @@ export default function Insights(): ReactNode {
         <section className="section" id="start" aria-labelledby="start-title">
           <h2 id="start-title">Start here</h2>
           <div className="cardGrid">
-            {/* MicroCanvas Framework v2.1 */}
+            {/* MicroCanvas Framework v2.2 */}
             <article className="card" aria-labelledby="start-mcf-title">
               <picture>
                 <source srcSet="/img/mcf-card.avif" type="image/avif" />
                 <source srcSet="/img/mcf-card.webp" type="image/webp" />
                 <img loading="lazy"
                   src="/img/mcf-card.jpg"
-                  alt="MicroCanvas Framework v2.1, open-source canvases"
+                  alt="MicroCanvas Framework v2.2, open-source canvases"
                   width={1200}
                   height={720}
                   decoding="async"
@@ -254,7 +254,7 @@ export default function Insights(): ReactNode {
                 />
               </picture>
               <Lightbulb className="cardIcon" aria-hidden="true" />
-              <h3 id="start-mcf-title">MicroCanvas Framework v2.1</h3>
+              <h3 id="start-mcf-title">MicroCanvas Framework v2.2</h3>
               <p>Open-source canvases to diagnose, design, and scale innovation.</p>
               <p className="microcopy"><strong>Framework</strong></p>
               <div className="cardFooter">
@@ -424,7 +424,7 @@ export default function Insights(): ReactNode {
             dataCta: 'cta.insights.final.book_clarityscan_booking',
             newTab: true,
           }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
       </main>
     </Layout>

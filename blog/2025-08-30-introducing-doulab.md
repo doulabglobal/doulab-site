@@ -1,6 +1,6 @@
 ---
 title: "Introducing Doulab: innovation made repeatable"
-description: "Why Doulab exists, how the MicroCanvas® Framework and IMM® help teams ship outcomes reliably, and where to start."
+description: "Why Doulab exists, how the MicroCanvas® Framework and IMM-P® help teams ship outcomes reliably, and where to start."
 slug: /introducing-doulab
 authors: [luis]
 tags: [announcement, mcf, imm, clarityscan, vigia-futura, innovation]
@@ -23,7 +23,7 @@ Our purpose is simple: **help unlock global prosperity by helping others create 
 
 **Default next step:** get a baseline in **15–20 minutes** with **[ClarityScan®](/services/clarityscan)**, or **[book a short discovery call](https://booking.doulab.net/discovery)**.
 
-<!-- truncate -->
+{/* truncate */}
 
 ## What gets in the way (the problem)
 
@@ -82,7 +82,7 @@ Across startups and institutions, the blockers rhyme. Here are the most common o
 We built two pieces that make the work feel less like guesswork:
 
 - The **MicroCanvas® Framework (MCF)**, a set of lightweight canvases that move teams from discovery to delivery—without weeks of meetings.  
-- The **Innovation Maturity Model (IMM®)**, a structured way to baseline capability, prioritize gaps, and install practice across strategy, culture, process, and results.
+- The **Innovation Maturity Model — Program (IMM-P®)**, a structured way to baseline capability, prioritize gaps, and install practice across strategy, culture, process, and results.
 
 Used together, MCF + IMM reduce **decision latency** (fewer stalls), shorten **cycle time** (smaller bets, faster feedback), improve **signal quality** (evidence in planning & delivery), and raise **capability** (measurable progress across IMM dimensions).
 

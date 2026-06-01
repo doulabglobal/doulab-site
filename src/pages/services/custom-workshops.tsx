@@ -1,4 +1,4 @@
-﻿// src/pages/services/custom-workshops.tsx
+// src/pages/services/custom-workshops.tsx
 import React, { type ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -29,7 +29,7 @@ export default function CustomWorkshopsPage(): ReactNode {
     url: 'https://doulab.net/services/custom-workshops',
     areaServed: ['Global'],
     description:
-      'Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day, on-site or remote. Built on MicroCanvas® v2.1 and IMM-P® gates.',
+      'Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day, on-site or remote. Built on MicroCanvas® v2.2 and IMM-P® gates.',
   };
 
   return (
@@ -66,7 +66,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           height={900}
           primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Start a workshop brief', dataCta: 'cta.services.workshops.hero.discovery' }}
           secondaryCta={{ to: '/what-we-do', label: 'See what we do', dataCta: 'cta.services.workshops.hero.services' }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM-P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM-P® gates."
         />
 
         {/* Who is it for? (standardized audience tiles) */}
@@ -206,7 +206,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <h3 id="cw-format-innovation-readiness">Innovation Readiness &amp; Governance Workshop (8 hours)</h3>
               <p>
                 A structured <strong>8-hour hybrid</strong> journey for innovation and strategy teams, combining foresight,
-                MicroCanvas® 2.1, IMM-P® and governance of the work cells and cross-functional teams to make execution predictable and aligned.
+                MicroCanvas® 2.2, IMM-P® and governance of the work cells and cross-functional teams to make execution predictable and aligned.
               </p>
               <ul>
                 <li>Format: 4 hours in person (Day 1) + 4 hours online (Day 2)</li>

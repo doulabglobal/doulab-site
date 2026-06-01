@@ -10,7 +10,7 @@ export default function InnovationReadinessWorkshopPage() {
   return (
     <Layout
       title="Innovation Readiness & Governance Workshop"
-      description="An 8-hour hybrid workshop that aligns foresight, culture, MicroCanvas® 2.1, IMM-P and governance so teams can innovate with clarity and predictable execution."
+      description="An 8-hour hybrid workshop that aligns foresight, culture, MicroCanvas® 2.2, IMM-P and governance so teams can innovate with clarity and predictable execution."
     >
       <main className={'pages-services-innovation-readiness-workshop__page'}>
         {/* Hero */}
@@ -164,7 +164,7 @@ export default function InnovationReadinessWorkshopPage() {
                 </p>
               </div>
               <div className={'pages-services-innovation-readiness-workshop__card'}>
-                <h3>Structured thinking with MicroCanvas® 2.1</h3>
+                <h3>Structured thinking with MicroCanvas® 2.2</h3>
                 <p>
                   The ability to structure problems, customers, value, friction
                   and feasibility in a repeatable way.
@@ -274,7 +274,7 @@ export default function InnovationReadinessWorkshopPage() {
                       <strong>1:30–2:30</strong> – Purpose, identity and culture: individual and team-level reflection.
                     </li>
                     <li>
-                      <strong>2:30–4:00</strong> – MicroCanvas® 2.1 working blocks (problem, segment, value, friction and feasibility).
+                      <strong>2:30–4:00</strong> – MicroCanvas® 2.2 working blocks (problem, segment, value, friction and feasibility).
                     </li>
                   </ul>
                 </div>
@@ -501,7 +501,7 @@ export default function InnovationReadinessWorkshopPage() {
               <div className={'pages-services-innovation-readiness-workshop__card'}>
                 <h3>ClarityScan readiness baseline</h3>
                 <p>
-                  Run a fast maturity scan (MCF 2.1 + IMM-P) to ground the workshop in evidence.
+                  Run a fast maturity scan (MCF 2.2 + IMM-P) to ground the workshop in evidence.
                 </p>
                 <Link className={'pages-services-innovation-readiness-workshop__secondaryButton'} to="/services/clarityscan">
                   Explore ClarityScan

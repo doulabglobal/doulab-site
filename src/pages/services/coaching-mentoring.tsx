@@ -32,7 +32,7 @@ export default function CoachingMentoringPage(): ReactNode {
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
     url: 'https://doulab.net/services/coaching-mentoring',
     description:
-      'Personalized guidance for leaders and teams to turn strategy into execution and build repeatable innovation using MCF v2.1 and IMM-P®.',
+      'Personalized guidance for leaders and teams to turn strategy into execution and build repeatable innovation using MCF v2.2 and IMM-P®.',
     areaServed: ['Global'],
   };
 
@@ -95,7 +95,7 @@ export default function CoachingMentoringPage(): ReactNode {
         <Hero
           title="Coaching & Mentoring"
           subtitle="Practical guidance. Real momentum."
-          body="1:1 and team coaching that helps leaders turn strategy into execution, build repeatable innovation, and navigate change with clarity — grounded in MicroCanvas® v2.1 and IMM-P®."
+          body="1:1 and team coaching that helps leaders turn strategy into execution, build repeatable innovation, and navigate change with clarity — grounded in MicroCanvas® v2.2 and IMM-P®."
           imageBase="/img/services-hero"
           imageAlt="Coaching & mentoring — services overview"
           width={1600}
@@ -110,7 +110,7 @@ export default function CoachingMentoringPage(): ReactNode {
             label: 'Start with a diagnostic',
             dataCta: 'cta.services.coaching.hero.clarityscan',
           }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
 
         {/* Who is it for? (standardized audience tiles) */}
@@ -226,7 +226,7 @@ export default function CoachingMentoringPage(): ReactNode {
             <article className="card" aria-labelledby="cm-methods">
               <Target className="cardIcon" aria-hidden="true" />
               <h3 id="cm-methods">Repeatable methods</h3>
-              <p>MCF v2.1 + IMM-P® playbooks you can reuse across teams and initiatives.</p>
+              <p>MCF v2.2 + IMM-P® playbooks you can reuse across teams and initiatives.</p>
               <ul>
                 <li>Reusable canvases</li>
                 <li>Evidence-first loops</li>
@@ -278,7 +278,7 @@ export default function CoachingMentoringPage(): ReactNode {
           body="Tell us your goals and constraints. We’ll recommend the retainer that fits and start making progress fast."
           primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Book an intro call', dataCta: 'cta.services.coaching.final.discovery' }}
           secondaryCta={{ href: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.coaching.final.book_clarityscan_booking', newTab: true }}
-          ctaNote="Built on MicroCanvas® v2.1 and IMM‑P® gates."
+          ctaNote="Built on MicroCanvas® v2.2 and IMM‑P® gates."
         />
       </main>
     </Layout>

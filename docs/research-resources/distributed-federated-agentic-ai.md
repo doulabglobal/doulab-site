@@ -1,7 +1,7 @@
 ---
 id: distributed-federated-agentic-ai
 title: "Distributed Federated Agentic AI: A Blueprint for Next-Generation Decentralized Governance"
-description: "A Doulab whitepaper outlining a trust-centric, evidence-based framework for distributed and agentic intelligence systems, integrating MCF 2.1, IMM-P &copy;, and Vigia Futura foresight mechanisms."
+description: "A Doulab whitepaper outlining a trust-centric, evidence-based framework for distributed and agentic intelligence systems, integrating MCF 2.2, IMM-P®, and Vigia Futura foresight mechanisms."
 sidebar_label: Distributed Federated Agentic AI
 tags: [whitepaper]
 hide_title: false
@@ -284,9 +284,9 @@ graph TD
 
 ---
 
-### 9) Program blueprint with MCF 2.1 and IMM‑P
+### 9) Program blueprint with MCF 2.2 and IMM‑P
 
-This is not only a technical architecture. It is a delivery program that uses **MicroCanvas Framework (MCF) 2.1** and the **Innovation Maturity Model Program (IMM‑P)** to reduce risk and build capability.
+This is not only a technical architecture. It is a delivery program that uses **MicroCanvas Framework (MCF) 2.2** and the **Innovation Maturity Model Program (IMM‑P)** to reduce risk and build capability.
 
 **Gates and cadence**
 
@@ -358,7 +358,7 @@ We do not automate institutions. We equip them. A federated and agentic design l
 ## Research Questions and Hypotheses
 
 - RQ1: Does a federated, evidence-gated model increase trust and accountability versus centralized AI operations?
-- RQ2: Does staged maturation (MCF 2.1 x IMM-P &copy;) reduce operational and governance risk during scale-up?
+- RQ2: Does staged maturation (MCF 2.2 x IMM-P®) reduce operational and governance risk during scale-up?
 - RQ3: Do human-in-the-loop gates plus evidence packs reduce harmful outputs and bias without blocking delivery?
 - H1: Nodes with evidence gates and conformance tests will show lower incident rates and faster recovery than baseline.
 - H2: Transparency plus appeals improves user trust scores and lowers dispute rates.
@@ -450,7 +450,7 @@ We do not automate institutions. We equip them. A federated and agentic design l
 ## Glossary
 
 - Evidence Pack: a bundle of artifacts (logs, decisions, metrics) tied to a gate.
-- Gate: a governance checkpoint mapped to IMM-P &copy; and MCF stages.
+- Gate: a governance checkpoint mapped to IMM-P® and MCF stages.
 - SLO/SLI: service level objective/indicator for operational reliability.
 - Vigia Futura: foresight observatory feeding signals into Pre-Discovery.
 - Federation Node: an autonomous domain participating with shared protocols.

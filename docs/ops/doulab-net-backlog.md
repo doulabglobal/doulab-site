@@ -73,9 +73,18 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - Visible label on the `/about` hero primary CTA is descriptive (not "Learn more").
   - `npm run verify` exits 0.
 - Closes audit findings: LH-NEW-004 (`/about` link-text); partial close of PERF-002 (Hero preload now only fires when image source is correct, but the eager-only gating is deferred to a future pass).
-- Commits: f994f0c13a29eececfd3c87e4e642356a7d845d2 (impl), pending (governance)
+- Commits: f994f0c13a29eececfd3c87e4e642356a7d845d2 (impl), 053064ab8e5e3a0f76aca0b9e1f629f9511a0f13 (governance)
 
-### E-F1 — INFORMATIONAL (no commit yet)
+### E-G1
+- Description: Phase 1 conversion polish — de-boilerplate `ctaNote` slots and diversify duplicated `FinalCta` headlines/bodies across 13 pages.
+- Rationale: Audit-2026-06 findings CONV-010 (`ctaNote` slot used for brand-mark trivia instead of risk-reduction microcopy), BP-005 / BP-012 (mere-exposure ® boilerplate density), BP-010 (FinalCta "Ready to make innovation repeatable?" verbatim on 6 pages), COPY-007 ("co-create the path forward" identical body sentence appearing on 4+ surfaces). The `ctaNote` slot is the highest-leverage microcopy position on a page (sits directly under the primary CTA); using it for "Built on MicroCanvas® v2.2 and IMM‑P® gates." across 20 instances was decorative noise. Replaced with per-page risk-reduction microcopy: pricing + payment expectation on ClarityScan booking CTAs (Tier 1 CHF 150, secure Stripe checkout), duration + prep expectation on discovery-call CTAs (20-min, no prep, 2-business-day confirm), sector-relevance pivots on case-study CTAs. Brand attribution kept ONLY on the IMM-P® flagship and IMM-DT vertical pages (legitimate framework provenance). FinalCta canonical "Ready to make innovation repeatable?" retained on the homepage only; the 5 other surfaces got distinct, context-specific headlines + bodies.
+- Acceptance criteria:
+  - `grep -rn "Built on MicroCanvas® v2.2 and IMM" src/pages/` returns matches only in `services/innovation-maturity.tsx` and `services/imm-dt.tsx`.
+  - `grep -rn "Ready to make innovation repeatable" src/pages/` returns a single match in `src/pages/index.tsx`.
+  - `grep -rn "co-create the path forward" src/pages/` returns zero matches.
+  - `npm run verify` exits 0; pre-push hook re-verifies.
+- Closes audit findings: CONV-010, BP-005, BP-010, BP-012, COPY-007.
+- Commits: 73c2f860a958e576d7951a97340be9c582c584c2 (impl), pending (governance)
 - Description: Decision to accept Cloudflare's prefetch handling (`Purpose: prefetch` requests on 6 prefetched JS chunks return 503 from CF edge) as a benign artifact rather than fix it.
 - Rationale: Discussed at length 2026-06-01. The 503s are returned only on prefetch-class requests (confirmed via direct-vs-prefetch diagnosis: same URL returns 200 on direct fetch from curl/Playwright; 503 only when browser sends `Purpose: prefetch`). Real users do experience these 503s on the silent prefetch — but their navigation is unaffected because the browser refetches on actual navigation. Lighthouse `errors-in-console` flags the 503s, capping prod BP at 78–79. User explicitly chose to accept this rather than spend further time digging through CF Speed/Optimization toggles or swizzling Docusaurus's `<Link>` component to disable prefetch hints.
 - Effect on metrics: prod Lighthouse Best Practices remains capped at ~79 sitewide due to this single residual `errors-in-console` audit. Treat as a known cosmetic gap on lab BP scores, not a real-user issue.

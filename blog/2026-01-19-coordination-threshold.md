@@ -21,7 +21,7 @@ image: /img/blog/2026/2026-01-19-coordination-threshold-hero.png
 
 > **TL;DR** — Many startup ecosystems generate increasing activity but struggle to compound results over time. Once ecosystems reach a certain scale, **coordination capacity, governance arrangements, and innovation maturity** become binding constraints. Without shared learning, progression logic, and institutional continuity, outcomes reset between cohorts instead of accumulating across them.
 
-<!--truncate-->
+{/* truncate */}
 
 <div className="nnyHero nnyHero--image">
   <img

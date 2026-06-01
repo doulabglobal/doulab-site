@@ -1,0 +1,9 @@
+# https://www.doulab.net/robots.txt
+User-agent: *
+Allow: /
+
+# Internal/private routes
+Disallow: /book-clarityscan
+Disallow: /docs/ops/
+
+Sitemap: https://www.doulab.net/sitemap.xml

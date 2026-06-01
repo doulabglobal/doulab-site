@@ -2,14 +2,18 @@ import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-const SITE_URL = 'https://doulab.net';
+const SITE_URL = 'https://www.doulab.net';
 
 const config: Config = {
   title: 'Doulab',
   tagline: 'We unlock global prosperity by helping others create better futures',
   favicon: 'img/favicon.ico',
 
-  future: { v4: true },
+  // future: { v4: true } — disabled 2026-06-01 during audit. v4 enables strict MDX-3
+  // and requires @docusaurus/faster; surfaces latent issues (legacy <!-- comments -->,
+  // empty MDX pages, blog metadata). Re-enable as a planned migration (Phase 4 in
+  // docs/ops/audit-2026-06/00-index.md), not as a flip-the-switch.
+  future: {},
 
   url: SITE_URL,
   baseUrl: '/',
@@ -34,6 +38,7 @@ const config: Config = {
         docs: {
           routeBasePath: '/docs',
           include: ['**/*.md', '**/*.mdx'],
+          exclude: ['ops/**'],
           sidebarPath: require.resolve('./sidebars.ts'),
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,

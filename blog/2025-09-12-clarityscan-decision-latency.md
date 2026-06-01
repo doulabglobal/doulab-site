@@ -23,7 +23,7 @@ image: /img/social/2025-09-12-clarityscan-decision-latency.jpg
 
 Reducing median decision latency shortens the path from policy idea to working service, improving outcomes and trust.
 
-<!--truncate-->
+{/* truncate */}
 
 Here’s a scenario to illustrate the problem we’re solving:
 

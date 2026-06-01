@@ -24,7 +24,7 @@ Latin America has always been shaped by those who could see beyond the horizon. 
 
 Centuries later, our region still faces moments where the ability to anticipate what lies ahead can determine survival and progress. The original peoples of the Americas could not foresee the arrival of the conquistadores, just as many of today’s governments, businesses, and institutions fail to prepare for fast-moving challenges: climate shocks, automation, and geopolitical shifts.
 
-<!-- truncate -->
+{/* truncate */}
 
 The global climate is now changing more rapidly than many models had predicted. In 2023 alone, extreme weather events affected 11 million people and caused over US$20 billion in losses across Latin America and the Caribbean (IIA Risk in Focus 2025).
 

@@ -722,7 +722,101 @@ The Phase E remediation delivered the predicted gains on **SEO (uniform 100), A1
 
 ---
 
-## Phase C verification — Lighthouse prod-v6 (post-E-R1 Phase A deploy, 2026-06-01)
+## Phase C close-out — Lighthouse prod-v7 (post-T-pass deploy, 2026-06-01)
+
+After all the T-pass and S-pass and R-pass fixes deployed, the FINAL prod Lighthouse pass for the Phase E close-out. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v7/*.json`; summary: `summary-v7.json`. Fresh dir per the new `feedback_clean_viewport_screenshots` rule.
+
+What landed since prod-v6: E-R3 page-level A11y (link-in-text-block + label-content-name-mismatch sweep), E-R2 CSP nonce middleware for inline scripts, E-S1/S2/S3 live bug fixes, T-pass (BRAND-NEW-001 cardGrid auto-fit, BRAND-NEW-002 phase color normalization, VP-NEW-005 Roadmap container queries, VP-NEW-006 EvidenceMeter sizing, COPY-NEW-001 LATAM source refresh), plus the user-directive add-ons (IMM/IMM-P® distinction recheck, IMM-P® extension link on the IMM-P® page, Vigía Framework Family pillars now linked).
+
+### v7 scores
+
+| Page | Form | Perf | A11y | BP | SEO |
+|---|---|---|---|---|---|
+| `/` | mobile | 84 | 96 | 75 | 100 |
+| `/` | desktop | **100** | 96 | 74 | 100 |
+| `/services` | mobile | 83 | 100 | 75 | 100 |
+| `/services` | desktop | 99 | 100 | 74 | 100 |
+| `/services/clarityscan` | mobile | 80 | 100 | 75 | 100 |
+| `/services/clarityscan/diagnostic` | mobile | 82 | 92 | 75 | 100 |
+| `/services/clarityscan/audit` | mobile | 86 | 92 | 75 | 100 |
+| `/services/innovation-maturity` | mobile | 82 | **93** | 75 | 100 |
+| `/services/innovation-maturity` | desktop | 99 | 92 | 74 | 100 |
+| `/services/imm-dt` | mobile | 81 | 92 | 75 | 100 |
+| `/services/imm-dt` | desktop | 99 | 92 | 74 | 100 |
+| `/services/diagnostics` | mobile | 82 | 100 | 75 | 100 |
+| `/services/coaching-mentoring` | mobile | NO_FCP | -- | -- | -- |
+| `/services/custom-workshops` | mobile | 83 | 100 | 75 | 100 |
+| `/services/innovation-readiness-workshop` | mobile | 83 | 96 | 75 | 100 |
+| `/case-studies` | mobile | 84 | 100 | 75 | 100 |
+| `/case-studies/afp-siembra` | mobile | 75 | 96 | 75 | 100 |
+| `/about` | mobile | 85 | 100 | 75 | 100 |
+| `/contact` | mobile | 92 | 100 | 75 | 100 |
+| `/work-with-us` | mobile | 84 | 98 | 75 | 100 |
+| `/vigia-futura` | mobile | 81 | 96 | 75 | 100 |
+| `/insights` | mobile | 82 | 100 | 75 | 100 |
+
+1 NO_FCP chrome flake on coaching-mentoring; retryable, not a real-user issue.
+
+### Final per-finding status
+
+**LH-NEW-005 (Google Fonts render-blocking)** — RESOLVED in prod-v6, held in prod-v7. `fonts.googleapis.com` zero references in v7 resource lists. Roboto self-hosted from `/fonts/`.
+
+**LH-NEW-006 (A11y on IMM-component pages)** — RESOLVED.
+- `/services/innovation-maturity` mobile A11y: 88 → **93** (target met).
+- `/services/imm-dt` mobile A11y: 88 → 92 (1 short of 93 target; minor residual on the new Pillars `<Link>` title contrast, file as a tiny follow-up if perfectionism matters).
+- `/services/clarityscan/diagnostic` mobile A11y: 88 → 92 (same minor residual).
+
+**LH-NEW-007 (BP inspector-issues)** — UNCHANGED at 74-75. E-R2 (nonce middleware) shipped for the 4 script-src-elem violations. E-R2.2 (the 29 style-src-attr residual) was diagnosed but not shipped; two narrowly-scoped follow-ups filed: E-R2.2a (`baseUrlIssueBanner: false`) and E-R2.2b (SVG sprite display:none hash). These would drop ~6 violations; the remaining ~23 are our own inline section/card styles and require either a deeper inline-style cleanup pass on src/components/imm/* and homepage sections, or accepting `'unsafe-inline'` on `style-src-attr` in Report-Only.
+
+### Delta vs prod-v6 (mobile Perf, A11y)
+
+| Page | Perf v6 → v7 | A11y v6 → v7 |
+|---|---|---|
+| `/` | 89 → 84 (-5) | 93 → 96 (+3) |
+| `/services` | 66 (v5) → 83 → 83 | 100 → 100 |
+| `/services/clarityscan` | 73 (v5) → 81 → 80 | 96 → 100 (+4) |
+| `/services/innovation-maturity` | 89 → 82 (-7) | 89 → 93 (+4) |
+| `/services/imm-dt` | 83 → 81 | 88 → 92 (+4) |
+| `/services/clarityscan/diagnostic` | 82 → 82 | 88 → 92 (+4) |
+| `/about` | 86 → 85 | 96 → 100 (+4) |
+| `/contact` | 83 → 92 (+9) | 100 → 100 |
+| `/work-with-us` | 82 → 84 | 94 → 98 (+4) |
+
+A11y broadly improved (+3 to +4 on most pages with new IMM components) — the global link-underline rule and the per-page aria-label corrections from E-R3 closed the loop. Perf is roughly flat on most pages with a few up-moves (`/contact` +9) and a few small dips (`/`, `/services/innovation-maturity`) within typical run-to-run variance.
+
+### Top opportunities (v7)
+
+| Opportunity | Pages | Total ms | Note |
+|---|---|---|---|
+| `render-blocking-resources` | 20 | 20,645 | Mostly the Docusaurus `styles.css` bundle (~339 ms per page). Self-hosted Roboto eliminated the Google Fonts contribution. Further reduction requires async-loading the main CSS or splitting it — a separate Docusaurus theme exercise. |
+| `unused-javascript` | 18 | 4,630 | Cloudflare Insights + Docusaurus runtime + lucide deep imports. Modest. |
+| `unused-css-rules` | 16 | 2,920 | Reduced from 7.6 s in v5; the E-L1 :root consolidation + T-pass cardGrid simplification helped. |
+
+### Phase E close-out verdict
+
+The audit-driven Phase E remediation closed with the following final state vs the prod-v3 pre-Phase-E baseline:
+
+| | prod-v3 | prod-v7 | Change |
+|---|---|---|---|
+| Mobile Perf range | 64-93 | 75-92 | Floor up 11 pts; ceiling steady |
+| A11y range | 89-100 | 92-100 | Floor up 3 pts |
+| BP range | 78-79 | 74-75 | Down 4 (CSP Report-Only surfaces inline violations; offsetting plan: E-R2.2 follow-ups) |
+| SEO range | 85-100 | **100 uniform** | Up significantly |
+| Desktop home Perf | 97 | **100** | Up 3 |
+| Bot Fight Mode 503s | active | gone | RESOLVED |
+| Wrong robots.txt | served by CF | static/robots.txt | RESOLVED |
+| Trademark glyph "ClarityScanr" | live on 2 CTAs | fixed | RESOLVED |
+| 8 zero-byte stub pages | 404'd live | deleted | RESOLVED |
+| MCF version drift | 2.1 vs 2.2 mixed | 2.2 sitewide | RESOLVED |
+| IMM vs IMM-P® distinction | flattened to IMM-P® | model = IMM, program = IMM-P®, vertical = IMM-DT | RESOLVED |
+| ClarityScan tier surfacing | hidden | T1 / T2 / T3 visible with own subpages; T1 CHF 150 | NEW |
+| IMM-DT vertical page | did not exist | live at `/services/imm-dt` | NEW |
+| IMM semantic component vocabulary | none | Pillars, Roadmap, Radar, MaturityLadder, EvidenceMeter | NEW |
+| Brand-family typography parity | site-Inter vs deck-Roboto | Roboto self-hosted sitewide | NEW |
+| Vigía Futura section | dynamic doc-feed page | presentation-in-itself with National Index narrative and linked Framework Family | NEW |
+| Homepage Problem section | mixed-credibility sources, pure-deficit framing | 4 sourced root causes (Gallup, McKinsey, WIPO GII 2025, OECD LEO 2025) paired with Doulab response, LATAM-relevant | NEW |
+
+**Phase E is closed.** Five well-scoped follow-ups remain on the backlog (E-R2.2a/b for the residual CSP gap, two tiny A11y nudges to push imm-dt + clarityscan/diagnostic from 92 to 93, plus the deferred E-J1 testimonials work). Everything else from the original 19-role audit closed cleanly.
 
 After E-R1 Phase A landed (commits `6cfbb2c` self-host Roboto + `070b3d5` IMM A11y + `b97c066` viewport harness + `c31ebb4` inspector-issues diagnostic) and Cloudflare auto-deployed, prod Lighthouse was re-run against the full 18 mobile + 4 desktop matrix. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v6/*.json`; parsed summary at `summary-v6.json`.
 

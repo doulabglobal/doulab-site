@@ -564,7 +564,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `npm run verify` exits 0.
 - Status: RESOLVED 2026-06-02.
 - Commits: dd8700d (impl + sweep + tsconfig paths fix).
-### G-2 (P0) — `book-clarityscan-success.tsx` auto-popup + false-success removal + paid-conversion event (bilingual)
+### G-2 (RESOLVED 2026-06-02) — `book-clarityscan-success.tsx` auto-popup + false-success removal + paid-conversion event (bilingual)
 - Description: Remove the `useEffect` `window.open` from `src/pages/book-clarityscan-success.tsx` AND `i18n/es/docusaurus-plugin-content-pages/book-clarityscan-success.tsx`. Render explicit payment summary (amount, receipt id, email) and a prominent "Step 2 of 2: Schedule your session" manual-click button. Emit `cta.conversion.clarityscan.paid` with `{ locale, path }` on mount (depends on G-7 click-delegate landing first, or fire a one-off `window.cfBeacon` until then).
 - Rationale: Carried from audit-2026-06 CONV-002, now doubled by ES. Modern browsers block the popup whenever the Stripe redirect counts as non-user-initiated; when blocked, the copy "We already opened the scheduling page in a new tab for you" / "Ya abrimos la página de agendamiento" is literally false. No payment summary, no conversion event, no locale-aware support fallback — the highest-trust moment in the funnel (visitor just spent CHF 150) is mishandled in both locales.
 - Closes: CONV-2026-07-002, ANLT-007, BEHE-001, partial BEHP-009 adjacency.
@@ -573,9 +573,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `grep -n "window.open" src/pages/book-clarityscan-success.tsx i18n/es/docusaurus-plugin-content-pages/book-clarityscan-success.tsx` returns no matches.
   - Both pages render payment-summary block + Step 2 of 2 button.
   - `cta.conversion.clarityscan.paid` event fires once per mount with locale property (verify via DevTools or CF Analytics).
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 030f2e9 (impl).
 ### G-3 (RESOLVED 2026-06-02) — Vigía Futura blog OG image broken in both locales
 - Description: Create `static/img/social/vigia-futura-foresight.{jpg,webp,avif}` (1200×630 derived from `static/img/vigia-futura-hero.{avif,png,webp}`) OR rewrite the frontmatter `image:` in both `blog/2025-09-22-vigia-futura-foresight-observatory.md:17` and `i18n/es/docusaurus-plugin-content-blog/2025-09-22-vigia-futura-foresight-observatory.md:17` to a path that exists. Recommendation: ship the asset, keep the path.
 - Rationale: BLOG-002 from audit-2026-06 still unresolved; ES launch now duplicates the broken share preview. Anyone sharing the Vigía Futura blog post on LinkedIn or Twitter in either locale gets no image. While here, add a `verify:build` check that fails if a blog `image:` frontmatter path does not exist under `static/`.
@@ -596,7 +595,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - Re-capture `viewport-2026-07-prod-v1/es/case-studies/1366x768.png` shows ES CTA label.
 - Status: RESOLVED 2026-06-02.
 - Commits: 2e997d6 (impl, wave 1).
-### G-5 (P1) — Sitemap-per-locale hreflang annotations + sitemap_index
+### G-5 (RESOLVED 2026-06-02) — Sitemap-per-locale hreflang annotations + sitemap_index
 - Description: Inject `<xhtml:link rel="alternate" hreflang="…" href="…">` alternates into every `<url>` entry of both `build/sitemap.xml` and `build/es/sitemap.xml`. Publish `build/sitemap_index.xml` listing both per-locale sitemaps. Update `static/robots.txt` to point at the index. Inject `<link rel="alternate" hreflang="en|es|x-default" href="…">` into every page `<head>` via a small Docusaurus plugin or theme `Root` swizzle.
 - Rationale: SEO-2026-07-003 / I18N-005 / I18N-020. Both sitemaps are flat `<urlset>` lists with no `xhtml:link` children; no `sitemap_index.xml`; `robots.txt` points only at the EN sitemap. Combined with G-1, Google has no signal that `/services/clarityscan` and `/es/services/clarityscan` are translation pairs. This is the single largest cross-locale discoverability win.
 - Closes: SEO-2026-07-003, I18N-005, I18N-020, hreflang half of I18N-007 risk.
@@ -606,9 +605,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `build/sitemap_index.xml` exists and lists both per-locale sitemaps.
   - Every `build/**/*.html` `<head>` contains the three hreflang `<link rel="alternate">` entries.
   - `static/robots.txt` `Sitemap:` directive points at the index.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 030f2e9 (impl, postbuild script + robots).
 ### G-6 (RESOLVED 2026-06-02) — Doubled `/blog/tags/blog/tags/*` URLs (year-old defect)
 - Description: Strip `permalink:` lines from every entry in `blog/tags.yml` (Docusaurus prefixes `/blog/tags/` automatically). Rebuild and verify both `build/blog/tags/` and `build/es/blog/tags/` directories no longer contain `blog/tags/blog/tags/` subdirectories; verify both sitemaps no longer list doubled URLs.
 - Rationale: SEO-2026-07-004 / audit-2026-06 SEO-001 — never resolved. 15 doubled URLs per locale (30 total) currently ship as real duplicate-content pages, polluting the index. Single-file fix.
@@ -620,7 +618,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - Neither sitemap contains `/blog/tags/blog/tags/`.
 - Status: RESOLVED 2026-06-02.
 - Commits: 2e997d6 (impl, wave 1).
-### G-7 (P1) — `data-cta` click delegate with locale-namespaced events + analytics taxonomy fixes
+### G-7 (RESOLVED 2026-06-02) — `data-cta` click delegate with locale-namespaced events + analytics taxonomy fixes
 - Description: Ship `src/components/cta-events.ts` (~40 lines): document-level click delegate that reads `[data-cta]` attribute and emits a CF Web Analytics custom event with `{ cta, locale, path }`. Locale derived from `document.documentElement.lang` or `location.pathname.startsWith('/es/')`. Load once from `src/theme/Root.tsx`. Concurrent rename: the six `wwu_*` ids in `src/pages/work-with-us/index.tsx` and the ES mirror to `cta.wwu.<slot>.<intent>` (snake-case to dot, add `cta.` prefix). Add `scripts/verify-analytics.mjs` to `verify:build`: (1) grep `build/**/*.html` and `build/**/*.js` for forbidden trackers; (2) assert ES `data-cta` set is a subset of EN set.
 - Rationale: ANLT-006 (P0) — 99 EN + 99 ES `data-cta` taggings produce zero event data because no click delegate exists. ANLT-002 — `wwu_*` ids break the `cta.*` grep filter. ANLT-013 — no CI guard ensures ES translation passes don't translate analytics keys. CONV-2026-07-004 — locale is not a dimension, ES funnel performance is unmeasurable. Unlocks ANLT-007, -010, -014, -015 downstream.
 - Closes: ANLT-001, ANLT-002, ANLT-006, ANLT-013, CONV-2026-07-004; enables G-2's event emission.
@@ -629,9 +627,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `grep -rn 'data-cta="wwu_' src/ i18n/` returns nothing.
   - Click on any `[data-cta]` element fires a CF Analytics custom event with the expected `{ cta, locale, path }` payload.
   - `npm run verify:build` fails on a synthetic ES file containing a new `data-cta` value not present in EN.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 4de3d47 (impl).
 ### G-8 (P1) — Bilingual pricing infrastructure (needs Luis decision)
 - Description: Decide currency strategy for ES/LATAM: (a) keep CHF as premium signal + add mental-accounting microcopy (BEHE-004 / -011), (b) dual-display `CHF 150 (~USD 165)` everywhere, or (c) split Stripe SKU into per-locale Price IDs (CHF for EN, USD for ES). Implement chosen path: per-locale Stripe Checkout constants in `src/constants/urls.ts`, per-locale Stripe success URL configuration (so `/es/services/clarityscan` payers land on `/es/book-clarityscan-success`, not the EN page), publish "from CHF X" anchors on T2/T3/IMM-P®/Workshop tiers (SALES-101).
 - Rationale: CONV-2026-07-001 (P0), CONV-2026-07-011, BEHE-004 / -011, SALES-101, SALES-112. ES buyer pays in unfamiliar currency, lands on EN booking page, returns to EN success page; LATAM committee buyers cannot bracket spend on T2/T3/IMM-P® because no anchor is published. Open question for Luis blocks G-8 design but not G-8 filing.

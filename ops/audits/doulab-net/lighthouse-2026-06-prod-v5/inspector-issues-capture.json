@@ -1,0 +1,720 @@
+{
+  "url": "https://www.doulab.net/",
+  "capturedAt": "2026-06-01T16:52:03.147Z",
+  "notes": [],
+  "issues": [
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "script-src-elem",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 5,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 1
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 20,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 2
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "script-src-elem",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 3
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 5
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 6
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 7
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 8
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 9
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 10
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 11
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 12
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 13
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 14
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 15
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 16
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 17
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 18
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 19
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 20
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 21
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 22
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 23
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 24
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 25
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 26
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 27
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 28
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 29
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 30
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 31
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "style-src-attr",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 23,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 32
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "script-src-elem",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "url": "https://www.doulab.net/",
+              "lineNumber": 25,
+              "columnNumber": 0
+            },
+            "violatingNodeId": 36
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "ContentSecurityPolicyIssue",
+        "details": {
+          "contentSecurityPolicyIssueDetails": {
+            "violatedDirective": "script-src-elem",
+            "isReportOnly": true,
+            "contentSecurityPolicyViolationType": "kInlineViolation",
+            "sourceCodeLocation": {
+              "scriptId": "11",
+              "url": "https://www.doulab.net/",
+              "lineNumber": 25,
+              "columnNumber": 388
+            },
+            "violatingNodeId": 43
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "DeprecationIssue",
+        "details": {
+          "deprecationIssueDetails": {
+            "affectedFrame": {
+              "frameId": "CCC30A7EEE7F3B9AE4F7F263547B27DC"
+            },
+            "sourceCodeLocation": {
+              "scriptId": "15",
+              "url": "https://www.doulab.net/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+              "lineNumber": 0,
+              "columnNumber": 7416
+            },
+            "type": "SharedStorage"
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "DeprecationIssue",
+        "details": {
+          "deprecationIssueDetails": {
+            "affectedFrame": {
+              "frameId": "CCC30A7EEE7F3B9AE4F7F263547B27DC"
+            },
+            "sourceCodeLocation": {
+              "scriptId": "15",
+              "url": "https://www.doulab.net/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+              "lineNumber": 0,
+              "columnNumber": 7416
+            },
+            "type": "PersistentQuotaType"
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "DeprecationIssue",
+        "details": {
+          "deprecationIssueDetails": {
+            "affectedFrame": {
+              "frameId": "CCC30A7EEE7F3B9AE4F7F263547B27DC"
+            },
+            "sourceCodeLocation": {
+              "scriptId": "15",
+              "url": "https://www.doulab.net/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+              "lineNumber": 0,
+              "columnNumber": 7416
+            },
+            "type": "Fledge"
+          }
+        }
+      }
+    },
+    {
+      "issue": {
+        "code": "PerformanceIssue",
+        "details": {
+          "performanceIssueDetails": {
+            "performanceIssueType": "DocumentCookie",
+            "sourceCodeLocation": {
+              "scriptId": "15",
+              "url": "https://www.doulab.net/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+              "lineNumber": 0,
+              "columnNumber": 7416
+            }
+          }
+        }
+      }
+    }
+  ],
+  "networkFailures": [
+    {
+      "url": "https://www.doulab.net/assets/js/2833a959.6d64363f.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.doulab.net/assets/js/b455e532.5f082aaa.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.doulab.net/assets/js/b6cfc9b9.0c0d178c.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.doulab.net/assets/js/515c1255.ec23e3a9.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.doulab.net/assets/js/851420db.6373d797.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.doulab.net/assets/js/6017ac29.8658ae6d.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    },
+    {
+      "url": "https://www.doulab.net/assets/js/cacd93e4.74602693.js",
+      "status": 503,
+      "statusText": "",
+      "mimeType": "text/plain"
+    }
+  ],
+  "consoleErrors": []
+}

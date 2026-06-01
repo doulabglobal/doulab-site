@@ -774,32 +774,15 @@ a:hover {
 
 .cardGrid {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    gap: 1rem
-}
-
-    .cardGrid .card {
-        grid-column: span 4
-    }
-
-@media (max-width:960px) {
-    .cardGrid {
-        grid-template-columns: repeat(6,1fr)
-    }
-
-        .cardGrid .card {
-            grid-column: span 6
-        }
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    align-items: stretch
 }
 
 @media (max-width:600px) {
     .cardGrid {
         grid-template-columns: 1fr
     }
-
-        .cardGrid .card {
-            grid-column: span 1
-        }
 }
 
 /* Horizontal reel */

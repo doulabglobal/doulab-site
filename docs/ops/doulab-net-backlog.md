@@ -111,6 +111,27 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Reference memory: `feedback_no_em_dashes.md`.
 - Commits: f0a9dc3b07c8955d96975ce17ff9e34b798b4e56 (impl), pending (governance)
 
+### E-I2 (IN PROGRESS — ES launch, phased)
+- Description: Bilingual rollout. ES locale at `/es/*` (Docusaurus default routing), full mirror of EN content.
+- Rationale: Doulab serves LATAM clients; bilingual parity is a buyer-facing requirement.
+- Scope decisions 2026-06-01: full mirror (all pages, all docs, all blog posts), Claude drafts (user reviews), `/es/` prefix (single deploy, hreflang auto-handled).
+- Acceptance criteria (final):
+  - `i18n: { defaultLocale: 'en', locales: ['en','es'] }` in docusaurus.config.ts.
+  - Navbar shows localeDropdown (right position).
+  - Every TSX page in `src/pages/**` has an ES counterpart under `i18n/es/docusaurus-plugin-content-pages/**`.
+  - Every MDX doc in `docs/**` has an ES counterpart under `i18n/es/docusaurus-plugin-content-docs/current/**`.
+  - Every blog post in `blog/**` has an ES counterpart under `i18n/es/docusaurus-plugin-content-blog/**`.
+  - `npm run build` produces both `build/` (EN) and `build/es/` (ES) without errors.
+  - Internal links resolve correctly under both locales.
+  - hreflang + sitemap-per-locale verified.
+- Phases:
+  - **ES-A scaffold (DONE 2026-06-01, 3760aab)**: config + locale dropdown + chrome JSON (navbar, footer, blog options, docs current, code.json auto-filled). Build green for both locales; untranslated content falls back to EN.
+  - **ES-B pages**: translate `src/pages/**` (home, services + 6 sub, case-studies + 4 details, about, contact, work-with-us, vigia-futura, insights, book-clarityscan, privacy-terms, terms-and-conditions, 404).
+  - **ES-C docs**: translate `docs/research-resources/**` including the multi-chapter innovation-lab-guide (~80 min read).
+  - **ES-D blog**: translate every post under `blog/**`.
+  - **ES-E verify**: full bilingual build + QA (hreflang, sitemap, locale dropdown UX, link integrity).
+- Commits: 3760aab (ES-A scaffold).
+
 ### E-K1
 - Description: Generate AVIF and WebP siblings for three oversized PNGs missing modern-format variants.
 - Rationale: Audit-2026-06 PERF-002 flagged `static/img/research/innovation-lab-guide/hero-nyy.png` at 2.49 MB with no AVIF/WebP siblings. Inventory of all PNGs over 150 KB found three total without modern siblings.

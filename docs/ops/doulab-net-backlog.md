@@ -548,6 +548,219 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Effect on metrics: prod Lighthouse Best Practices remains capped at ~79 sitewide due to this single residual `errors-in-console` audit. Treat as a known cosmetic gap on lab BP scores, not a real-user issue.
 - Open: if BP ever needs to be lifted (e.g., for a procurement-eligible Lighthouse threshold), revisit with one of: CF dashboard → Speed → Optimization → Speculation Rules toggle, or source-side swizzle of `theme-classic/NavbarItem/DefaultNavbarItem` to drop prefetch on internal links.
 
+## G-batch (audit-2026-07 remediation, filed 2026-06-02)
+
+Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingual role files. Severity per audit; P0 ship first, P1 follow in G-2. Each entry cites the originating role-file ID for traceability. Bilingual scope is the default: EN + ES touched in the same commit.
+
+### G-1 (P0) — Locale-aware page metadata helper
+- Description: Build `src/lib/page-metadata.ts` (or equivalent) that derives `canonical`, `og:url`, `og:image`, `hreflang` alternates, JSON-LD `url` / `inLanguage` from `(slug, locale, siteConfig)`. Apply to every `src/pages/**/*.tsx` and remove hand-rolled `<link rel="canonical">` strings.
+- Rationale: Every ES page currently declares `<link rel="canonical" href="https://doulab.net/<en-path>">` and per-page `og:image` as `https://doulab.net/...` (apex host, EN path). Google interprets the ES pages as duplicates of the EN pages and drops them from the index — the entire E-I2 ES launch is invisible to organic search. Same root cause for og:image apex-vs-www inconsistency and EN-URL JSON-LD on ES pages. One architectural change closes the largest SEO regression on the property.
+- Closes: IAUX-101, SEO-2026-07-001, SEO-2026-07-002, SEO-2026-07-006, SEO-2026-07-009.
+- Files to change: `src/pages/about/index.tsx`, `src/pages/contact/index.tsx`, `src/pages/services/*.tsx` (8), `src/pages/case-studies/*.tsx` (5), `src/pages/vigia-futura/index.tsx`, `src/pages/index.tsx`, `src/pages/work-with-us/index.tsx`, `src/pages/insights/index.tsx`, `src/pages/services/clarityscan/{audit,diagnostic}.tsx`, `src/pages/book-clarityscan*.tsx`, `src/pages/privacy-terms.tsx`, `src/pages/terms-and-conditions.tsx`, `src/pages/404.tsx`; plus all 26 ES mirrors under `i18n/es/docusaurus-plugin-content-pages/`.
+- Acceptance criteria:
+  - Build output `build/es/about.html` has `<link rel="canonical" href="https://www.doulab.net/es/about">`; spot-check 6 more ES routes.
+  - No hard-coded `https://doulab.net/` strings in `src/pages/**` or `i18n/es/**` (grep guard in `verify:build`).
+  - `og:image` resolves to a single canonical host across both locales.
+  - `npm run verify` exits 0.
+- Status: Open.
+- Commits: pending.
+
+### G-2 (P0) — `book-clarityscan-success.tsx` auto-popup + false-success removal + paid-conversion event (bilingual)
+- Description: Remove the `useEffect` `window.open` from `src/pages/book-clarityscan-success.tsx` AND `i18n/es/docusaurus-plugin-content-pages/book-clarityscan-success.tsx`. Render explicit payment summary (amount, receipt id, email) and a prominent "Step 2 of 2: Schedule your session" manual-click button. Emit `cta.conversion.clarityscan.paid` with `{ locale, path }` on mount (depends on G-7 click-delegate landing first, or fire a one-off `window.cfBeacon` until then).
+- Rationale: Carried from audit-2026-06 CONV-002, now doubled by ES. Modern browsers block the popup whenever the Stripe redirect counts as non-user-initiated; when blocked, the copy "We already opened the scheduling page in a new tab for you" / "Ya abrimos la página de agendamiento" is literally false. No payment summary, no conversion event, no locale-aware support fallback — the highest-trust moment in the funnel (visitor just spent CHF 150) is mishandled in both locales.
+- Closes: CONV-2026-07-002, ANLT-007, BEHE-001, partial BEHP-009 adjacency.
+- Files to change: `src/pages/book-clarityscan-success.tsx`; `i18n/es/docusaurus-plugin-content-pages/book-clarityscan-success.tsx`. Consider extraction into a shared `src/components/checkout/SuccessPage.tsx` to prevent EN/ES drift (per CODE-101 + ANLT-011).
+- Acceptance criteria:
+  - `grep -n "window.open" src/pages/book-clarityscan-success.tsx i18n/es/docusaurus-plugin-content-pages/book-clarityscan-success.tsx` returns no matches.
+  - Both pages render payment-summary block + Step 2 of 2 button.
+  - `cta.conversion.clarityscan.paid` event fires once per mount with locale property (verify via DevTools or CF Analytics).
+- Status: Open.
+- Commits: pending.
+
+### G-3 (P0) — Vigía Futura blog OG image broken in both locales
+- Description: Create `static/img/social/vigia-futura-foresight.{jpg,webp,avif}` (1200×630 derived from `static/img/vigia-futura-hero.{avif,png,webp}`) OR rewrite the frontmatter `image:` in both `blog/2025-09-22-vigia-futura-foresight-observatory.md:17` and `i18n/es/docusaurus-plugin-content-blog/2025-09-22-vigia-futura-foresight-observatory.md:17` to a path that exists. Recommendation: ship the asset, keep the path.
+- Rationale: BLOG-002 from audit-2026-06 still unresolved; ES launch now duplicates the broken share preview. Anyone sharing the Vigía Futura blog post on LinkedIn or Twitter in either locale gets no image. While here, add a `verify:build` check that fails if a blog `image:` frontmatter path does not exist under `static/`.
+- Closes: BLOG-002, partial SEO-2026-07-007.
+- Files to change: `static/img/social/vigia-futura-foresight.{jpg,webp,avif}` (new); `blog/2025-09-22-vigia-futura-foresight-observatory.md` (optional path edit); ES mirror.
+- Acceptance criteria:
+  - `curl -I https://www.doulab.net/img/social/vigia-futura-foresight.jpg` returns 200 after deploy.
+  - LinkedIn/Twitter preview tools (or a fetch with `User-Agent: facebookexternalhit`) return the Doulab card, not the boilerplate.
+- Status: Open.
+- Commits: pending.
+
+### G-4 (P0) — ES case-studies cards show EN "Read the case →"
+- Description: Translate the project-card CTA on `/es/case-studies` from EN "Read the case →" to ES "Leer el caso →" (or the i18n-glossary-canonical choice from G-9). Likely a hardcoded string in the case-studies index component rather than a `<Translate>` entry; if the component is shared, refactor to consume a locale-aware label.
+- Rationale: BRAND-107 image-confirmed at `viewport-2026-07-prod-v1/es/case-studies/1366x768.png`. Brand-integrity break: every card surrounding label (sector, capabilities, description) is in Spanish; the conversion CTA in English breaks the locale promise on a high-intent surface.
+- Closes: BRAND-107.
+- Files to change: `i18n/es/docusaurus-plugin-content-pages/case-studies/index.tsx` (single file fix per brief). If the CTA is in `src/components/case-studies/CaseStudyCards.tsx`, refactor to accept a `ctaLabel` prop and pass the ES translation from the ES page.
+- Acceptance criteria:
+  - `grep -n "Read the case" i18n/es/docusaurus-plugin-content-pages/case-studies/` returns nothing.
+  - Re-capture `viewport-2026-07-prod-v1/es/case-studies/1366x768.png` shows ES CTA label.
+- Status: Open.
+- Commits: pending.
+
+### G-5 (P1) — Sitemap-per-locale hreflang annotations + sitemap_index
+- Description: Inject `<xhtml:link rel="alternate" hreflang="…" href="…">` alternates into every `<url>` entry of both `build/sitemap.xml` and `build/es/sitemap.xml`. Publish `build/sitemap_index.xml` listing both per-locale sitemaps. Update `static/robots.txt` to point at the index. Inject `<link rel="alternate" hreflang="en|es|x-default" href="…">` into every page `<head>` via a small Docusaurus plugin or theme `Root` swizzle.
+- Rationale: SEO-2026-07-003 / I18N-005 / I18N-020. Both sitemaps are flat `<urlset>` lists with no `xhtml:link` children; no `sitemap_index.xml`; `robots.txt` points only at the EN sitemap. Combined with G-1, Google has no signal that `/services/clarityscan` and `/es/services/clarityscan` are translation pairs. This is the single largest cross-locale discoverability win.
+- Closes: SEO-2026-07-003, I18N-005, I18N-020, hreflang half of I18N-007 risk.
+- Files to change: new `plugins/hreflang-alternates/` (small Docusaurus plugin) OR theme `Root` swizzle; `static/robots.txt`; `docusaurus.config.ts` sitemap-plugin config block.
+- Acceptance criteria:
+  - `build/sitemap.xml` `<url>` entries contain `<xhtml:link rel="alternate" hreflang="en" …/>` + `hreflang="es"` + `hreflang="x-default"`.
+  - `build/sitemap_index.xml` exists and lists both per-locale sitemaps.
+  - Every `build/**/*.html` `<head>` contains the three hreflang `<link rel="alternate">` entries.
+  - `static/robots.txt` `Sitemap:` directive points at the index.
+- Status: Open.
+- Commits: pending.
+
+### G-6 (P1) — Doubled `/blog/tags/blog/tags/*` URLs (year-old defect)
+- Description: Strip `permalink:` lines from every entry in `blog/tags.yml` (Docusaurus prefixes `/blog/tags/` automatically). Rebuild and verify both `build/blog/tags/` and `build/es/blog/tags/` directories no longer contain `blog/tags/blog/tags/` subdirectories; verify both sitemaps no longer list doubled URLs.
+- Rationale: SEO-2026-07-004 / audit-2026-06 SEO-001 — never resolved. 15 doubled URLs per locale (30 total) currently ship as real duplicate-content pages, polluting the index. Single-file fix.
+- Closes: SEO-2026-07-004, audit-2026-06 SEO-001 (carryover).
+- Files to change: `blog/tags.yml` (delete `permalink:` line from each entry).
+- Acceptance criteria:
+  - `grep -n "permalink:" blog/tags.yml` returns nothing.
+  - `find build -path "*/blog/tags/blog/tags/*" -type d` returns nothing.
+  - Neither sitemap contains `/blog/tags/blog/tags/`.
+- Status: Open.
+- Commits: pending.
+
+### G-7 (P1) — `data-cta` click delegate with locale-namespaced events + analytics taxonomy fixes
+- Description: Ship `src/components/cta-events.ts` (~40 lines): document-level click delegate that reads `[data-cta]` attribute and emits a CF Web Analytics custom event with `{ cta, locale, path }`. Locale derived from `document.documentElement.lang` or `location.pathname.startsWith('/es/')`. Load once from `src/theme/Root.tsx`. Concurrent rename: the six `wwu_*` ids in `src/pages/work-with-us/index.tsx` and the ES mirror to `cta.wwu.<slot>.<intent>` (snake-case to dot, add `cta.` prefix). Add `scripts/verify-analytics.mjs` to `verify:build`: (1) grep `build/**/*.html` and `build/**/*.js` for forbidden trackers; (2) assert ES `data-cta` set is a subset of EN set.
+- Rationale: ANLT-006 (P0) — 99 EN + 99 ES `data-cta` taggings produce zero event data because no click delegate exists. ANLT-002 — `wwu_*` ids break the `cta.*` grep filter. ANLT-013 — no CI guard ensures ES translation passes don't translate analytics keys. CONV-2026-07-004 — locale is not a dimension, ES funnel performance is unmeasurable. Unlocks ANLT-007, -010, -014, -015 downstream.
+- Closes: ANLT-001, ANLT-002, ANLT-006, ANLT-013, CONV-2026-07-004; enables G-2's event emission.
+- Files to change: new `src/components/cta-events.ts`; new `scripts/verify-analytics.mjs`; `src/theme/Root.tsx`; `src/pages/work-with-us/index.tsx` + ES mirror; `package.json` (wire verify-analytics into `verify:build`).
+- Acceptance criteria:
+  - `grep -rn 'data-cta="wwu_' src/ i18n/` returns nothing.
+  - Click on any `[data-cta]` element fires a CF Analytics custom event with the expected `{ cta, locale, path }` payload.
+  - `npm run verify:build` fails on a synthetic ES file containing a new `data-cta` value not present in EN.
+- Status: Open.
+- Commits: pending.
+
+### G-8 (P1) — Bilingual pricing infrastructure (needs Luis decision)
+- Description: Decide currency strategy for ES/LATAM: (a) keep CHF as premium signal + add mental-accounting microcopy (BEHE-004 / -011), (b) dual-display `CHF 150 (~USD 165)` everywhere, or (c) split Stripe SKU into per-locale Price IDs (CHF for EN, USD for ES). Implement chosen path: per-locale Stripe Checkout constants in `src/constants/urls.ts`, per-locale Stripe success URL configuration (so `/es/services/clarityscan` payers land on `/es/book-clarityscan-success`, not the EN page), publish "from CHF X" anchors on T2/T3/IMM-P®/Workshop tiers (SALES-101).
+- Rationale: CONV-2026-07-001 (P0), CONV-2026-07-011, BEHE-004 / -011, SALES-101, SALES-112. ES buyer pays in unfamiliar currency, lands on EN booking page, returns to EN success page; LATAM committee buyers cannot bracket spend on T2/T3/IMM-P® because no anchor is published. Open question for Luis blocks G-8 design but not G-8 filing.
+- Closes (conditional on decision): CONV-2026-07-001, CONV-2026-07-011, SALES-101 (partial — workshop + coaching tier bands need separate decisions), BEHE-011.
+- Files to change: `src/constants/urls.ts`; Stripe Dashboard SKU/Price config (out-of-repo); `src/pages/services/clarityscan.tsx` + tier subpages + ES mirrors; per-tier pricing copy on `services/{coaching-mentoring,custom-workshops,innovation-readiness-workshop,innovation-maturity}.tsx` + ES mirrors.
+- Acceptance criteria:
+  - Decision documented in `docs/ops/decisions/` (currency stance for ES).
+  - ES Stripe payment redirects to `/es/book-clarityscan-success` (verify in Stripe Dashboard or via paid test transaction).
+  - T2, T3, IMM-P®, workshop pages each carry a published anchor or stated "Custom".
+- Status: Open (blocked on Luis currency decision).
+- Commits: pending.
+
+### G-9 (P1) — `--dl-green-text` token + A11Y contrast remediation
+- Description: Introduce paired tokens `--dl-green-text` (darker variant, ~`#3f8a1f` or `#2f7a3f`, ≥4.5:1 on white) and `--dl-green` (brand fill) in `src/css/custom.css`. Replace inline `style={{ color: 'var(--dl-green, …)' }}` with a class that uses `--dl-green-text` on `src/pages/services/imm-dt.tsx`, `services/clarityscan/diagnostic.tsx`, `src/pages/index.tsx`, and `src/components/imm/MaturityLadder.module.css`. Flip `.badgeTarget` text color from `#fff` to `#0b0e19`. Flip IMM funnel labels on `--p2` and `--p4` / `--p5` bars to `#0b0e19` (matches existing `--p2b` / `--p3` convention at `custom.css:690-691`). Add inline-prose-link underline carve-out: `main p a:not(.buttonPrimary):not(.buttonSecondary):not(.cardCta) { text-decoration: underline; text-decoration-thickness: from-font; text-underline-offset: 2px; }`. (Requires Luis sign-off because it crosses `feedback_links_underline_on_hover` — minimum carve-out needed to clear WCAG 1.4.1.)
+- Rationale: A11Y-2007-01 / -02 / -03 / -07, LH-006a/b. `--dl-green` on white = 2.15:1 in 4+ places; IMM funnel labels white-on-cyan/coral = 2.88-2.98:1; inline prose links `#38249a` on body text = 1.5:1 with no underline. Drives a11y scores to 88-89 across the IMM/ClarityScan family. T9 cross-role theme.
+- Closes: A11Y-2007-01, A11Y-2007-02, A11Y-2007-03, A11Y-2007-07, LH-006a/b (partial — A11Y-2007-04/-05 role-allowed-list goes in G-10).
+- Files to change: `src/css/custom.css` (token block + funnel label colors + prose-link rule); `src/components/imm/MaturityLadder.module.css`; `src/pages/services/imm-dt.tsx`; `src/pages/services/clarityscan/diagnostic.tsx`; `src/pages/index.tsx`; ES mirrors where inline styles exist.
+- Acceptance criteria:
+  - Lighthouse `color-contrast` audit passes on `/services/imm-dt`, `/services/clarityscan/diagnostic`, `/services/innovation-maturity`, `/` (both locales).
+  - Lighthouse `link-in-text-block` audit passes on the same set.
+  - Visual diff vs prior viewport-2026-07 sweep shows no regressions on dark mode.
+- Status: Open (prose-link carve-out blocked on Luis approval).
+- Commits: pending.
+
+### G-10 (P1) — `.heroSubtitle text-align: justify` mobile fix
+- Description: Inside `@media (max-width: 700px)` in `src/css/custom.css`, add `.components-hero__subtitle, .pages-b4-p2__heroSubtitleJustify, [class*="hero__subtitle"] { text-align: left; }`. Optionally add `text-wrap: balance` + `max-inline-size: ~52ch` on `.heroSubtitle` site-wide so longer ES copy wraps cleanly without overflow.
+- Rationale: BRAND-105 / MOBL-001 / MOBL-006 / MOBL-007 / MOBL-009 / VP-001 / VP-002, image-confirmed P0 in three locations: `/es/contact` 390x844 H1 has ~50-80 px word-rivers, `/case-studies` 360x640 has rivers in BOTH locales, `/es/home` 360x640 hero is unreadable. Single most visible mobile defect on the ES surface, and image-confirmed not ES-only.
+- Closes: BRAND-105, MOBL-001, MOBL-002, MOBL-006, MOBL-007, MOBL-008, MOBL-009, VP-001, VP-002.
+- Files to change: `src/css/custom.css:1459-1461, 1744-1746` + new mobile media block.
+- Acceptance criteria:
+  - Re-capture `viewport-2026-07-prod-v1/{en,es}/{home,contact,case-studies}/360x640.png` and `390x844.png`; rivers gone.
+  - Desktop hero (≥800 px) typography unchanged.
+- Status: Open.
+- Commits: pending.
+
+### G-11 (P1) — `| Doulab | Doulab` duplicate title-suffix sweep
+- Description: Remove the trailing `| Doulab` from every page-local `title=` string in `src/pages/**` (~25 files); let Docusaurus's `<Layout>` append the site title once. Mirror in ES locale.
+- Rationale: SEO-2026-07-005, confirmed across `build/about.html`, `build/contact.html`, `build/services/clarityscan.html`, `build/vigia-futura.html`, `build/case-studies.html`, plus all ES counterparts. Titles lose 8-12 visible characters of SERP pixel budget to the duplicate suffix; some long titles get truncated before the brand renders once. Trivial sweep.
+- Closes: SEO-2026-07-005.
+- Files to change: `src/pages/**/*.tsx` (every page that sets `<Layout title="…">` or equivalent); `i18n/es/docusaurus-plugin-content-pages/**/*.tsx`.
+- Acceptance criteria:
+  - `grep -rn 'title=".* | Doulab"' src/pages i18n/es/docusaurus-plugin-content-pages` returns nothing.
+  - `build/**/*.html` contains exactly one `| Doulab` per `<title>`.
+- Status: Open.
+- Commits: pending.
+
+### G-12 (P1) — Em-dashes in ES blog bodies (no-em-dash rule violation)
+- Description: Replace 6 em-dash (U+2014) instances in `i18n/es/docusaurus-plugin-content-blog/2025-09-12-clarityscan-decision-latency.md` (TL;DR + 4 References list + 1 body) and `i18n/es/docusaurus-plugin-content-blog/2026-01-19-coordination-threshold.md:22` (TL;DR) with colons, en-dashes, commas, or parentheses per the per-instance fit. Confirm with Luis that the EN dated-body grandfather does NOT extend to ES (ES surface launched after the exclusion).
+- Rationale: BLOG-004, COPY-112. The `feedback_no_em_dashes` rule applies to user-facing copy on every Doulab property; ES blog bodies are net-new surface launched in commit `eb1c8c8` and not subject to the EN dated-body grandfather. EN pages and `i18n/es/.../pages/` confirmed clean; only ES blog corpus needs the sweep.
+- Closes: BLOG-004 (ES scope only).
+- Files to change: `i18n/es/docusaurus-plugin-content-blog/2025-09-12-clarityscan-decision-latency.md`; `i18n/es/docusaurus-plugin-content-blog/2026-01-19-coordination-threshold.md`.
+- Acceptance criteria:
+  - `grep -P "\xe2\x80\x94" i18n/es/docusaurus-plugin-content-blog/` returns nothing.
+- Status: Open (pending Luis confirmation on ES exclusion).
+- Commits: pending.
+
+### G-13 (P1) — Microsoft Bookings ES service types (locale-aware booking URLs)
+- Description: Provision ES Microsoft Bookings services (`/discovery-es`, `/briefing-es`, optionally `/clarityscan-es`, `/clarityscan-t2`, `/clarityscan-t3`) with Spanish meeting agenda copy. Add `BOOKING_DISCOVERY_URL_EN/ES`, `BOOKING_BRIEFING_URL_EN/ES` constants in `src/constants/urls.ts`. Migrate the 14 EN call sites and 14 ES call sites to import the locale-correct constant (consider a `bookingDiscoveryUrl(locale)` helper). Append `?src=<area>-<slot>-<locale>` per G-7's analytics convention.
+- Rationale: CONV-2026-07-005 (P1), CONV-2026-07-010, ANLT-009. All booking exits currently go to a single English Microsoft Bookings instance; ES visitor clicks Spanish CTA and lands on EN calendar. 14+ literal `https://booking.doulab.net/discovery` strings × 2 locales = 28 sites with no locale-aware routing.
+- Closes: CONV-2026-07-005, CONV-2026-07-010 (partial — T2/T3 tier-specific calendars are the second half), ANLT-009.
+- Files to change: Microsoft Bookings admin (out-of-repo); `src/constants/urls.ts`; 14 EN page files + 14 ES mirrors that hard-code `booking.doulab.net/{discovery,briefing}`.
+- Acceptance criteria:
+  - `grep -rn "https://booking.doulab.net/" src/pages i18n/es/docusaurus-plugin-content-pages` returns no literal strings (all via constants/helper).
+  - Click on `/es/contact` discovery CTA navigates to the ES Bookings service.
+- Status: Open (Microsoft Bookings provisioning blocked on Luis confirmation).
+- Commits: pending.
+
+### G-14 (P1) — Glossary canonicalization sweep (Gate, Case studies, CTA verbs, MCF version, cocrear)
+- Description: Create `docs/ops/i18n-glossary.md` documenting canonical ES choices: **Gate → compuerta** (replace `punto de control` 10× and untranslated `gate` 1×); **Case studies → Casos de éxito** (update `navbar.json:19`, `footer.json:23`, `index.tsx:293`); **CTA verbs → Reserva** (paid Stripe) / **Agenda** (free booking) / **Empieza** (navigational); **MCF version → `MicroCanvas® Framework 2.2` / `MCF 2.2`** (sweep `MicroCanvas® Framework 2.1` 8× in `services/innovation-readiness-workshop.tsx` EN+ES); **cocrear** (no hyphen, RAE-current). Add CI grep guards. Translate the ~96 Mermaid node labels in 4 ES case-study files using the new glossary.
+- Rationale: I18N-001 (P0), I18N-002 (P0), I18N-003, I18N-004, COPY-102, COPY-103, COPY-105, COPY-106, COPY-115, T6 cross-role theme. Glossary drift across translation batches; same concept appears under different labels in nav, body, links, mermaid. Buyer building a mental model cannot tell whether these are the same construct.
+- Closes: I18N-001, I18N-002, I18N-003, I18N-004, COPY-102, COPY-103, COPY-105, COPY-106, COPY-115.
+- Files to change: new `docs/ops/i18n-glossary.md`; `i18n/es/docusaurus-theme-classic/{navbar,footer}.json`; `i18n/es/docusaurus-plugin-content-pages/case-studies/{index,afp-siembra,alpha-inversiones,fundapec,ogtic-redlab}.tsx`; `i18n/es/docusaurus-plugin-content-pages/services/imm-dt.tsx`, `index.tsx`, `contact/index.tsx`; `i18n/es/docusaurus-plugin-content-docs/current/research-resources/{distributed-federated-agentic-ai.md, innovation-lab-guide/07-imm-maturity.mdx, releases.mdx}`; `src/pages/services/innovation-readiness-workshop.tsx` + ES mirror; `scripts/verify-glossary.mjs` (new).
+- Acceptance criteria:
+  - `grep -n "punto de control" i18n/es/` returns matches only in monitoring/dashboard contexts (zero in IMM-P® gate references).
+  - `grep -n "MicroCanvas® Framework 2.1\|MCF 2.1" src/ i18n/` returns nothing.
+  - Mermaid diagrams in ES case studies have Spanish node labels.
+- Status: Open (canonical confirmations blocked on Luis open questions).
+- Commits: pending.
+
+### G-15 (P0 carry-over) — Domain canon: MCF, VIF, home brand-marks, IMM-P® in diagnostics
+- Description: Four-part single commit. (a) `vigia-futura/index.tsx:150` EN+ES: `Methodology Coherence Framework` → `MicroCanvas Framework` (consider adding ®). (b) `vigia-futura/index.tsx:154` EN+ES + `docs/research-resources/index.mdx:99` EN+ES: `Vigía Incubation Framework` → `Vigía Incubanet Framework` (do not localize — `Incubanet` is a proper noun). (c) `src/pages/index.tsx:77,79,90,92`: restore `®` on `ClarityScan` and `í` accent on `Vigía Futura`; verify ES home parity. (d) `src/pages/services/diagnostics.tsx:19,44`: bare `IMM` → `IMM-P®` in "Built on …" credit lines; mirror ES.
+- Rationale: DOMN-001 (P0), DOMN-002 (P0), DOMN-003 (P0), DOMN-004 (P0), T11 cross-role theme. Single-pass canon-integrity sweep; each piece is a 2-4 line edit. Highest-visibility brand drift on the site.
+- Closes: DOMN-001, DOMN-002, DOMN-003, DOMN-004 (parts a-d).
+- Files to change: see Description.
+- Acceptance criteria:
+  - `grep -rn "Methodology Coherence Framework" src/ i18n/` returns nothing.
+  - `grep -rn "Vigía Incubation Framework\|Vigia Incubation Framework" src/ i18n/ docs/` returns nothing.
+  - `grep -rn "Vigia Futura" src/` returns nothing (accent restored).
+  - `grep -n "Built on MicroCanvas® 2.2 and IMM[^-]" src/pages/services/diagnostics.tsx i18n/es/docusaurus-plugin-content-pages/services/diagnostics.tsx` returns nothing.
+- Status: Open.
+- Commits: pending.
+
+### G-16 (P0) — IMM-DT ES translation parity verification
+- Description: Read `i18n/es/docusaurus-plugin-content-pages/services/imm-dt.tsx` in full. Diff against EN to find untranslated holdouts (six-horizon roadmap labels `Baseline`, `First wins`, `Process anchoring`, `Cohort progression`, `Scale and govern`, `Compounding`; five-rung DT ladder labels; "What IMM-DT does not do" boundary; pilot reference). Translate any holdouts using the G-14 glossary.
+- Rationale: DOMN-010 (P0). Per brief: "any drift in domain framing between EN and ES is a P0 brand-integrity issue". IMM-DT is the digital-transformation vertical of IMM-P®; if ES roadmap labels remain in English, the page reads as half-translated on the highest-trafficked vertical.
+- Closes: DOMN-010.
+- Files to change: `i18n/es/docusaurus-plugin-content-pages/services/imm-dt.tsx`.
+- Acceptance criteria:
+  - Side-by-side diff of EN vs ES shows only translated-string differences, no untranslated literals.
+- Status: Open.
+- Commits: pending.
+
+### G-17 (P0 ethics) — ClarityScan time-claim reconciliation (15-20 vs 30-45)
+- Description: Adjudicate canonical truth with Luis (split-product Path A: Tier 1 Snapshot 15-20 min self-serve + named ClarityScan Conversation 30-45 min analyst-led; or Path B: unify on 30-45 across all surfaces). Sweep 14+ EN + ES surfaces accordingly (home, services/clarityscan, services pages, about, insights, case-study finals, blog `2025-09-12-clarityscan-decision-latency.md` lines 22/30/32/106/108/116). Update the `Hero.tsx:33` JSDoc example so future pages don't copy the stale claim.
+- Rationale: BEHP-001 (P0 ethics), BEHP-002 (P0 ethics), BEHP-011 (P3), BLOG-001 (P0), audit-2026-06 BP-003 — never resolved. A product whose entire pitch is "decision latency" cannot maintain a time-promise drift; expectancy violation on time-to-baseline is the failure mode the buyer is paying to eliminate. Now doubled by ES.
+- Closes: BEHP-001, BEHP-002, BEHP-011, BLOG-001 (delete `.bak` as part of sweep).
+- Files to change: depends on path. Path A: rename `book-clarityscan*` / Stripe SKU, add ClarityScan-Conversation surface, edit blog post headline; Path B: edit 14+ surfaces site-wide. Either path includes `blog/_backup_2025-09-12-clarityscan-decision-latency.bak` deletion.
+- Acceptance criteria:
+  - `grep -rn "15 to 20\|15-20\|15 a 20" src/ i18n/ blog/` returns matches only on Path-A-consistent surfaces (or none on Path B).
+  - `grep -rn "30 to 45\|30-45\|30 a 45" src/ i18n/ blog/` returns matches consistent with chosen path.
+  - `blog/_backup_*.bak` deleted; `*.bak` added to `.gitignore`.
+- Status: Open (blocked on Luis adjudication of Path A vs B).
+- Commits: pending.
+
+### G-18 (P1) — Privacy-terms processor accuracy (Microsoft Bookings, Stripe hedge, CF Pages Functions)
+- Description: Three-part edit in both EN and ES `privacy-terms.tsx` and `docs/ops/gdpr-compliance.md`. (a) Replace every "Google Calendar appointment links" / "enlaces de citas de Google Calendar" with "Microsoft Bookings (Microsoft 365)" / "Microsoft Bookings (Microsoft 365)" in the data-sharing and processor sections. (b) Drop "if applicable" hedge on Stripe line in `gdpr-compliance.md:23`. (c) Expand "Cloudflare Pages (hosting and analytics)" to "Cloudflare Pages (hosting, analytics, and edge HTML processing for security headers)" to disclose `functions/_middleware.ts` per-request edge processing.
+- Rationale: SEC-101 (P1) — largest GDPR/nFADP accuracy gap, doubled by ES. SEC-102 (P2). SEC-103 (P2). Audit-2026-06 SEC-009 / SEC-006 never resolved.
+- Closes: SEC-101, SEC-102, SEC-103.
+- Files to change: `src/pages/privacy-terms.tsx:91-95,113-115,144-155,247-249`; `i18n/es/docusaurus-plugin-content-pages/privacy-terms.tsx:91-94,112-115,144-155,246-249`; `docs/ops/gdpr-compliance.md:10,22,23`.
+- Acceptance criteria:
+  - `grep -rn "Google Calendar" src/pages/privacy-terms.tsx i18n/es/docusaurus-plugin-content-pages/privacy-terms.tsx docs/ops/gdpr-compliance.md` returns nothing.
+  - `grep -n "if applicable" docs/ops/gdpr-compliance.md` returns nothing on the Stripe line.
+- Status: Open (depends on Luis SEC-101 confirmation).
+- Commits: pending.
+
 ## P0
 
 ### B-P0-01

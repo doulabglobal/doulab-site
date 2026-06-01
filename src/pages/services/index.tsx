@@ -12,6 +12,7 @@ import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Layers from 'lucide-react/dist/esm/icons/layers';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Radar from 'lucide-react/dist/esm/icons/radar';
+import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 
 export default function ServicesPage(): ReactNode {
     return (
@@ -69,17 +70,17 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-diagnostics">
                             <Search className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-diagnostics">ClarityScan®: Know where you stand</h3>
-                            <p>A rapid, evidence-based scan to baseline innovation/foresight maturity and surface gaps.</p>
+                            <p>A tiered, evidence-based diagnostic to baseline innovation/foresight maturity and surface gaps.</p>
                             <ul>
-                                <li>Baseline maturity map (MCF 2.2 + IMM-P®)</li>
-                                <li>Gap analysis with prioritized next steps</li>
+                                <li>Tier 1 Snapshot — CHF 150, bookable online</li>
+                                <li>Tier 2 Diagnostic and Tier 3 Audit — scope-based</li>
                             </ul>
                             <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
-                                    Run a diagnostic →
+                                    Explore tiers →
                                 </Link>
-                                <Link href={CLARITYSCAN_CHECKOUT_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
-                                    Book online →
+                                <Link href={CLARITYSCAN_CHECKOUT_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan Tier 1 Snapshot online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
+                                    Book Tier 1 →
                                 </Link>
                             </div>
                         </article>
@@ -112,6 +113,22 @@ export default function ServicesPage(): ReactNode {
                             <div className="cardFooter">
                                 <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.services.card.programs" aria-label="Explore innovation maturity program">
                                     Join the IMM Program →
+                                </Link>
+                            </div>
+                        </article>
+
+                        {/* IMM-DT vertical */}
+                        <article className="card" aria-labelledby="svc-imm-dt">
+                            <Settings2 className="cardIcon" aria-hidden="true" />
+                            <h3 id="svc-imm-dt">IMM-DT: Digital transformation maturity</h3>
+                            <p>The digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance — then sequence a 0–36 month roadmap.</p>
+                            <ul>
+                                <li>Built on MCF v2.2 + IMM-P® 2.2 (domain scoring, phase readiness)</li>
+                                <li>Pilot reference: FUNDAPEC fintech transformation</li>
+                            </ul>
+                            <div className="cardFooter">
+                                <Link to="/services/imm-dt" className="cardCta" data-cta="cta.services.card.imm-dt" aria-label="Explore IMM-DT digital transformation maturity">
+                                    Explore IMM-DT →
                                 </Link>
                             </div>
                         </article>

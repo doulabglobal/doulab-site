@@ -1,0 +1,108 @@
+{
+  "rows": [
+    {
+      "file": "about-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/about",
+      "performance": 92,
+      "accessibility": 92,
+      "best-practices": 79,
+      "seo": 85
+    },
+    {
+      "file": "case-studies-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/case-studies",
+      "performance": 90,
+      "accessibility": 93,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "contact-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/contact",
+      "performance": 89,
+      "accessibility": 100,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "home-desktop.json",
+      "ff": "desktop",
+      "url": "https://www.doulab.net/",
+      "performance": 98,
+      "accessibility": 92,
+      "best-practices": 78,
+      "seo": 92
+    },
+    {
+      "file": "home-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/",
+      "performance": 91,
+      "accessibility": 93,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "insights-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/insights",
+      "performance": 92,
+      "accessibility": 100,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "services-clarityscan-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/services/clarityscan",
+      "performance": 93,
+      "accessibility": 92,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "services-innovation-maturity-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/services/innovation-maturity",
+      "performance": 82,
+      "accessibility": 93,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "services-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/services",
+      "performance": 92,
+      "accessibility": 100,
+      "best-practices": 79,
+      "seo": 92
+    },
+    {
+      "file": "what-we-do-mobile.json",
+      "ff": "mobile",
+      "url": "https://www.doulab.net/what-we-do",
+      "performance": 89,
+      "accessibility": 98,
+      "best-practices": 79,
+      "seo": 92
+    }
+  ],
+  "opps": [
+    {
+      "id": "render-blocking-resources",
+      "total": 2496,
+      "n": 9,
+      "title": "Eliminate render-blocking resources"
+    },
+    {
+      "id": "unused-javascript",
+      "total": 1830,
+      "n": 8,
+      "title": "Reduce unused JavaScript"
+    }
+  ]
+}

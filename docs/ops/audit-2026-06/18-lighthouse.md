@@ -463,6 +463,71 @@ Note: `unminified-css` and `unminified-javascript` are **dev-mode-only** signals
 
 ---
 
+## Production verification — 2026-06-01 (post-E.B1+E.C1 deploy, v2)
+
+After the B1 (build hygiene) and C1 (Phase 1 truth & integrity) commits were merged and Cloudflare Pages auto-deployed (commit hash 44ba808), Lighthouse was re-run against `https://www.doulab.net/`. 9 mobile + 1 desktop. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v2/*.json`.
+
+### Production scores — pre vs post
+
+| Page | Form factor | Perf prod-v1 | Perf prod-v2 | Δ |
+|---|---|---|---|---|
+| `/` | mobile | 70 | **91** | **+21** |
+| `/` | desktop | 97 | **98** | +1 |
+| `/what-we-do` | mobile | 72 | **89** | +17 |
+| `/services` | mobile | (n/a) | **92** | new |
+| `/services/clarityscan` | mobile | 72 | **93** | +21 |
+| `/services/innovation-maturity` | mobile | 64 | **82** | +18 |
+| `/case-studies` | mobile | 78 | **90** | +12 |
+| `/about` | mobile | (n/a) | **92** | new |
+| `/contact` | mobile | (n/a) | **89** | new |
+| `/insights` | mobile | (n/a) | **92** | new |
+
+**A11y** moved from 92–98 to 92–100. **SEO** went from uniform 92 to 85–92 (regression on `/about`, see LH-NEW-004 below). **Best Practices remains stuck at 78–79** — same as pre-deploy. The www canonical fix removed the 301 penalty but the two underlying BP failures persist (see LH-NEW-002, LH-NEW-003).
+
+### Remaining top opportunities (top 2 cumulative)
+
+| Audit ID | Pages | Total ms | Note |
+|---|---|---|---|
+| `render-blocking-resources` | 9 | 2,496 | Real, production-relevant. Tied to `06-performance.md` PERF-006/007 (defer/preload lucide-react synchronous imports + CSS). |
+| `unused-javascript` | 8 | 1,830 | Real. Tied to PERF-baseline + CODE-011 deep lucide imports. |
+
+The original v1 top opp `uses-text-compression` (43s) and the dev-only `unminified-*` opportunities have all disappeared — Cloudflare's Brotli + production minification did their job exactly as predicted.
+
+### New findings from this run
+
+**LH-NEW-002 — Cloudflare-injected `Content-Signal` robots.txt overrides the static file**
+- severity: P1
+- impact: 3 (SEO `robots-txt` audit fails sitewide; Lighthouse SEO −2 to −8)
+- effort: S (dashboard-only change in Cloudflare Pages settings)
+- location: Cloudflare Pages config, not source
+- observation: B1 added a valid `static/robots.txt` referencing the sitemap. The deploy succeeded (371 files uploaded). But `https://www.doulab.net/robots.txt` still returns Cloudflare's auto-injected `Content-Signal` robots that Lighthouse rejects as invalid. CF Pages is overriding the static file at the edge.
+- recommendation: Disable "Content Signals" in Cloudflare Pages → doulab-site → Settings → Speed/Bot management (or similar). Confirm with a curl against `/robots.txt` after the change. Not fixable from source.
+- evidence: `curl https://www.doulab.net/robots.txt` returns content starting with `# As a condition of accessing this website...` rather than the `User-agent: *` / `Sitemap:` content of `static/robots.txt`.
+
+**LH-NEW-003 — 6× 503 errors on JS chunks persist through fresh deploy**
+- severity: P1
+- impact: 4 (entire BP score is capped at 79; `errors-in-console` audit fails)
+- effort: M (investigate wrangler upload; possibly re-run deploy with verbose logging)
+- location: Cloudflare Pages deploy artifacts, not source
+- observation: 6 lazily-loaded JS chunks return HTTP 503 from the CDN even on the fresh post-deploy build (chunk hashes are CURRENT, e.g. `2833a959.2783ef16.js`, not stale from v1). The build:cf log showed all 371 files uploaded; either some failed silently or these chunks are referenced by the prefetch manifest but never actually emitted.
+- recommendation: (1) Re-deploy with wrangler verbose logging to confirm every file emitted in `build/assets/js/*` is uploaded. (2) Spot-check by curling each chunk URL directly against CF and against `npm run serve` locally to isolate where the 503 originates. (3) If they reference deleted routes (the 8 zero-byte page deletions in C1), check that the sitemap and Docusaurus route manifest are fully regenerated. Not a source-code fix in the obvious sense, but a deploy-ops investigation.
+- evidence: Playwright network capture shows 503 on `/assets/js/{2833a959,cacd93e4,8a53a06c,851420db,b6cfc9b9,b455e532}.*.js` against `https://www.doulab.net/`.
+
+**LH-NEW-004 — `/about` SEO regression (link-text + robots-txt)**
+- severity: P2
+- impact: 2 (one page only; SEO 92 → 85)
+- effort: S
+- location: `src/pages/about/index.tsx`
+- observation: The Lighthouse SEO `link-text` audit fails on `/about` (links without descriptive text — likely generic "Learn more" or "→" arrows). Plus the sitewide `robots-txt` fail (LH-NEW-002).
+- recommendation: Audit `/about` for generic anchor text; ensure every link has descriptive text or `aria-label`. This finding ladders into the broader SEO-012 generic-anchor-text issue from `05-seo.md`.
+- evidence: `lighthouse-2026-06-prod-v2/about-mobile.json` audit `link-text` failing.
+
+### Verdict
+
+Source-side Phase 1 work delivered the predicted Performance gains. The two stubborn prod BP/SEO regressions are both **infrastructure-side** (Cloudflare configuration + deploy artifacts), not source-code issues — both should be raised to whoever owns Cloudflare Pages admin for doulab-site.
+
+---
+
 ## Live verification — 2026-06-01 (clean run v2)
 
 The v1 live run was contaminated by a Webpack "Compiled with problems" overlay on every page (LH-NEW-001). Root cause diagnosed and resolved in-session:

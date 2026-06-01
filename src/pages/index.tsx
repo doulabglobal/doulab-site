@@ -262,15 +262,15 @@ function ServicesSection() {
         <div className="card">
           <Search className="cardIcon" aria-hidden={true} />
           <h3>Diagnostics, Know Where You Stand</h3>
-          <p>Map innovation maturity and pinpoint gaps with an evidence-based baseline.</p>
+          <p>Map innovation maturity and pinpoint gaps with an evidence-based baseline. Start with ClarityScan® Tier 1 (CHF 150) or scope a deeper Tier 2 / Tier 3 engagement.</p>
           <div className="cardFooter">
             <Link
               to="/services/clarityscan"
               className="cardCta"
               data-cta="cta.home.services.clarityscan"
-              aria-label="Start with ClarityScan, diagnostics baseline"
+              aria-label="Explore ClarityScan tiers"
             >
-              Start with ClarityScan® →
+              Explore ClarityScan® tiers →
             </Link>
           </div>
         </div>

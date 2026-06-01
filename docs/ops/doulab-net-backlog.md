@@ -111,7 +111,7 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Reference memory: `feedback_no_em_dashes.md`.
 - Commits: f0a9dc3b07c8955d96975ce17ff9e34b798b4e56 (impl), pending (governance)
 
-### E-I2 (IN PROGRESS — ES launch, phased)
+### E-I2 (ES launch — ES-A/B/C/D done, ES-E verified, reconciliation pending)
 - Description: Bilingual rollout. ES locale at `/es/*` (Docusaurus default routing), full mirror of EN content.
 - Rationale: Doulab serves LATAM clients; bilingual parity is a buyer-facing requirement.
 - Scope decisions 2026-06-01: full mirror (all pages, all docs, all blog posts), Claude drafts (user reviews), `/es/` prefix (single deploy, hreflang auto-handled).
@@ -126,11 +126,21 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - hreflang + sitemap-per-locale verified.
 - Phases:
   - **ES-A scaffold (DONE 2026-06-01, 3760aab)**: config + locale dropdown + chrome JSON (navbar, footer, blog options, docs current, code.json auto-filled). Build green for both locales; untranslated content falls back to EN.
-  - **ES-B pages**: translate `src/pages/**` (home, services + 6 sub, case-studies + 4 details, about, contact, work-with-us, vigia-futura, insights, book-clarityscan, privacy-terms, terms-and-conditions, 404).
-  - **ES-C docs**: translate `docs/research-resources/**` including the multi-chapter innovation-lab-guide (~80 min read).
-  - **ES-D blog**: translate every post under `blog/**`.
-  - **ES-E verify**: full bilingual build + QA (hreflang, sitemap, locale dropdown UX, link integrity).
-- Commits: 3760aab (ES-A scaffold).
+  - **ES-B pages (DONE 2026-06-01, eb1c8c8)**: 26 src/pages files translated. Fan-out used: 4 parallel general-purpose subagents on disjoint scopes (A1 home+services hub+ClarityScan family; A2 IMM cluster+remaining services; A3 case-studies+insights+vigia-futura; A4 utility pages).
+  - **ES-C docs (DONE 2026-06-01, eb1c8c8)**: 18 docs files translated including all 11 innovation-lab-guide chapters. Mermaid labels + reference lists kept in EN by design.
+  - **ES-D blog (DONE 2026-06-01, eb1c8c8)**: 4 blog posts translated. Tag slugs reverted to EN to keep tag-page URLs consistent across locales.
+  - **ES-E verify (DONE 2026-06-01)**: `npm run build` produces both `build/` and `build/es/` cleanly. Post-translation fix: bulk rewrite of relative imports in 25 ES TSX files from `../../components/...` to `@site/src/...` aliases (i18n source dir does not resolve relative-to-src). Broken-anchor warnings on both locales are pre-existing (same set as EN-only build).
+- Commits: 3760aab (ES-A scaffold), eb1c8c8 (ES-B/C/D + import-alias fix + tag-slug revert).
+
+### E-I2-R1 (pending — ES glossary reconciliation pass)
+- Description: Normalize glossary drift across the parallel translation batches.
+- Findings:
+  - "Gate" rendered as both "Punto de control" (Pages-A2, Docs-A) and "Compuerta" (Pages-A3). Canonical: "Punto de control".
+  - "Case studies" rendered as "Casos de estudio" (chrome JSON, navbar/footer) and "Casos de éxito" (case-studies/index body). Canonical: "Casos de estudio" (matches the URL slug `/case-studies` semantic).
+  - Possibly other minor drift discoverable by sweep.
+- Approach: scripted grep + canonical-term replacement, single small impl commit, no governance churn.
+- Status: not blocking. Site builds clean; only an editorial polish item.
+- Commits: pending.
 
 ### E-K1
 - Description: Generate AVIF and WebP siblings for three oversized PNGs missing modern-format variants.

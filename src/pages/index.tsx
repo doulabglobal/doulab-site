@@ -48,9 +48,9 @@ function ProblemSection() {
           'https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx',
         sourceLabel: 'Gallup, State of the Global Workplace 2024',
         response:
-          'IMM-P installs culture, cadence, and capability gates so engagement has somewhere to land.',
+          'IMM-P® installs culture, cadence, and capability gates so engagement has somewhere to land.',
         responseHref: '/services/innovation-maturity',
-        responseLabel: 'IMM-P program',
+        responseLabel: 'IMM-P® program',
       },
       {
         Icon: GitBranch,

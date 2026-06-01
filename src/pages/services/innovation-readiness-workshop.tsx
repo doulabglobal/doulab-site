@@ -10,7 +10,7 @@ export default function InnovationReadinessWorkshopPage() {
   return (
     <Layout
       title="Innovation Readiness & Governance Workshop"
-      description="An 8-hour hybrid workshop that aligns foresight, culture, MicroCanvas® 2.2, IMM-P and governance so teams can innovate with clarity and predictable execution."
+      description="An 8-hour hybrid workshop that aligns foresight, culture, MicroCanvas® 2.2, IMM-P® and governance so teams can innovate with clarity and predictable execution."
     >
       <main className={'pages-services-innovation-readiness-workshop__page'}>
         {/* Hero */}
@@ -24,7 +24,7 @@ export default function InnovationReadinessWorkshopPage() {
             </p>
             <p className={'pages-services-innovation-readiness-workshop__heroBody'}>
               An 8-hour hybrid workshop that integrates foresight, culture, the
-              MicroCanvas® Framework 2.1, IMM-P and work-cell governance so your
+              MicroCanvas® Framework 2.1, IMM-P® and work-cell governance so your
               innovation initiatives become predictable, aligned and
               evidence-based.
             </p>
@@ -171,7 +171,7 @@ export default function InnovationReadinessWorkshopPage() {
                 </p>
               </div>
               <div className={'pages-services-innovation-readiness-workshop__card'}>
-                <h3>Evidence-based execution with IMM-P</h3>
+                <h3>Evidence-based execution with IMM-P®</h3>
                 <p>
                   A practical understanding of how to move from ideas to
                   hypotheses, experiments and evidence gates.
@@ -238,7 +238,7 @@ export default function InnovationReadinessWorkshopPage() {
                     and the integrated model.
                   </li>
                   <li>
-                    <strong>IMM-P execution system</strong> - how to structure
+                    <strong>IMM-P® execution system</strong> - how to structure
                     hypotheses, experiments and evidence gates.
                   </li>
                   <li>
@@ -285,7 +285,7 @@ export default function InnovationReadinessWorkshopPage() {
                       <strong>0:00–0:30</strong> – Re-anchor, recap and alignment on goals.
                     </li>
                     <li>
-                      <strong>0:30–2:00</strong> – IMM-P execution system: hypotheses, experiments and evidence gates.
+                      <strong>0:30–2:00</strong> – IMM-P® execution system: hypotheses, experiments and evidence gates.
                     </li>
                     <li>
                       <strong>2:00–3:00</strong> – Governance of the célula de trabajo: roles, cadences and decision rules, with simulation.
@@ -327,7 +327,7 @@ export default function InnovationReadinessWorkshopPage() {
                 </p>
               </div>
               <div className={'pages-services-innovation-readiness-workshop__card'}>
-                <h3>IMM-P</h3>
+                <h3>IMM-P®</h3>
                 <p>
                   To bring discipline to how ideas are validated, evidence is
                   used and decisions are made across maturity levels.
@@ -480,7 +480,7 @@ export default function InnovationReadinessWorkshopPage() {
               and execution governance.
             </p>
             <p className={'pages-services-innovation-readiness-workshop__bodyText'}>
-              We are the authors of the MicroCanvas® Framework 2.1 and the IMM-P
+              We are the authors of the MicroCanvas® Framework 2.1 and the IMM-P®
               Innovation Maturity and Methodology Program, and work with public
               and private organizations to turn innovation into a repeatable,
               evidence-based capability. This workshop is facilitated personally
@@ -501,14 +501,14 @@ export default function InnovationReadinessWorkshopPage() {
               <div className={'pages-services-innovation-readiness-workshop__card'}>
                 <h3>ClarityScan readiness baseline</h3>
                 <p>
-                  Run a fast maturity scan (MCF 2.2 + IMM-P) to ground the workshop in evidence.
+                  Run a fast maturity scan (MCF 2.2 + IMM) to ground the workshop in evidence.
                 </p>
                 <Link className={'pages-services-innovation-readiness-workshop__secondaryButton'} to="/services/clarityscan">
                   Explore ClarityScan
                 </Link>
               </div>
               <div className={'pages-services-innovation-readiness-workshop__card'}>
-                <h3>IMM-P program</h3>
+                <h3>IMM-P® program</h3>
                 <p>
                   Multi-phase journey to embed evidence gates, governance, and delivery cadence.
                 </p>

@@ -222,7 +222,7 @@ export default function AboutPage(): ReactNode {
                   to="/services/innovation-maturity"
                   className="cardCta"
                   data-cta="cta.about.pillars.programs"
-                  aria-label="Explore IMM-P"
+                  aria-label="Explore IMM-P®"
                 >
                   Explore IMM-P® →
                 </Link>

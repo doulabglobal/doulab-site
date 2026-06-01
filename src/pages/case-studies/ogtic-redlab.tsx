@@ -59,7 +59,7 @@ export default function CaseOgticRedlab(): ReactNode {
           property="og:description"
           content="We helped design and facilitate RedLab with shared methods, governance, and cadence so public teams move from ideas to evidence and delivery."
         />
-        <meta name="keywords" content="public sector innovation, innovation labs, governance, MicroCanvas, IMM Program, RedLab, OGTIC" />
+        <meta name="keywords" content="public sector innovation, innovation labs, governance, MicroCanvas, IMM-P® Program, RedLab, OGTIC" />
         {/* Prefer a 1200×630 branded social card */}
         <meta property="og:image" content="https://doulab.net/img/social/og-ogtic-redlab.jpg" />
         <meta property="og:image:alt" content="OGTIC, Red de Laboratorios de Innovación, RedLab cohort sessions." />
@@ -273,7 +273,7 @@ flowchart LR
 flowchart TB
     A[Before: Isolated Labs]
     B[Shared MCF Method]
-    C[IMM-P Gate Cadence]
+    C[IMM-P® Gate Cadence]
     D[After: Network Delivery]
 `} />
           </Admonition>

@@ -105,7 +105,7 @@ You don’t need a moonshot to get moving. We right-size entry points and build 
   </article>
   <article className="card">
     <h3>Programs: build innovation capacity</h3>
-    <p>Structured journeys, like IMM, that install culture, process, and metrics to scale reliably.</p>
+    <p>Structured journeys, like IMM-P®, that install culture, process, and metrics to scale reliably.</p>
     <div className="cardFooter"><a className="cardCta" href="/services/innovation-maturity">Explore programs →</a></div>
   </article>
   <article className="card">
@@ -132,7 +132,7 @@ We start where you are and build momentum:
 
 **Custom workshops** create alignment, prioritization, and a 30–60–90 plan in one focused day. See **[workshop options](/services/custom-workshops)**.
 
-**Programs (IMM-P)** install operating rhythms, governance, and instrumentation so outcomes become reliable. Explore the **[IMM Program](/services/innovation-maturity)**.
+**Programs (IMM-P®)** install operating rhythms, governance, and instrumentation so outcomes become reliable. Explore the **[IMM-P® Program](/services/innovation-maturity)**.
 
 **Coaching & mentoring** unblock high-stakes priorities for execs, product, and GTM leaders. Learn more about **[coaching & mentoring](/services/coaching-mentoring)**.
 

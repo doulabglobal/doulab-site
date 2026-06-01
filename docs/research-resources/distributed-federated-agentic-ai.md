@@ -284,9 +284,9 @@ graph TD
 
 ---
 
-### 9) Program blueprint with MCF 2.2 and IMM‑P
+### 9) Program blueprint with MCF 2.2 and IMM-P®
 
-This is not only a technical architecture. It is a delivery program that uses **MicroCanvas Framework (MCF) 2.2** and the **Innovation Maturity Model Program (IMM‑P)** to reduce risk and build capability.
+This is not only a technical architecture. It is a delivery program that uses **MicroCanvas Framework (MCF) 2.2** and the **Innovation Maturity Model Program (IMM-P®)** to reduce risk and build capability.
 
 **Gates and cadence**
 

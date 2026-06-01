@@ -112,7 +112,7 @@ export default function ServicesPage(): ReactNode {
                             </ul>
                             <div className="cardFooter">
                                 <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.services.card.programs" aria-label="Explore innovation maturity program">
-                                    Join the IMM Program →
+                                    Join the IMM-P® Program →
                                 </Link>
                             </div>
                         </article>
@@ -121,9 +121,9 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-imm-dt">
                             <Settings2 className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-imm-dt">IMM-DT: Digital transformation maturity</h3>
-                            <p>The digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance, then sequence a 0–36 month roadmap.</p>
+                            <p>The digital transformation vertical of IMM. Baseline DT maturity across strategy, process, culture, technology and governance, then sequence a 0–36 month roadmap.</p>
                             <ul>
-                                <li>Built on MCF v2.2 + IMM-P® 2.2 (domain scoring, phase readiness)</li>
+                                <li>Built on MCF v2.2 + IMM 2.2 (domain scoring, phase readiness)</li>
                                 <li>Pilot reference: FUNDAPEC fintech transformation</li>
                             </ul>
                             <div className="cardFooter">

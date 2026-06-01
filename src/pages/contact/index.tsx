@@ -175,7 +175,7 @@ export default function Contact(): ReactNode {
             <article className="card" aria-labelledby="step2">
               <ClipboardList className="cardIcon" aria-hidden="true" />
               <h3 id="step2">2) Light diagnostic</h3>
-              <p>Quick baseline, MCF 2.2 and IMM-P®, to pinpoint capability gaps.</p>
+              <p>Quick baseline, MCF 2.2 and IMM, to pinpoint capability gaps.</p>
               <ul>
                 <li>Output: findings and options</li>
                 <li>Owner: joint working session</li>

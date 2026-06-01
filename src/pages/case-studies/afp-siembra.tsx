@@ -246,7 +246,7 @@ flowchart LR
 flowchart TB
     A[Before: Ad-hoc Product Delivery]
     B[MCF Workshops + Evidence Packs]
-    C[IMM-P Gate Reviews]
+    C[IMM-P® Gate Reviews]
     D[After: SILAB Delivery Cadence]
 `} />
           </Admonition>

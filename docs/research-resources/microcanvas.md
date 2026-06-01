@@ -24,5 +24,5 @@ Getting started
 
 Related
 
-- Innovation Maturity Model — Program (IMM-P): structured cadence and gates to operationalize innovation at org level.
+- Innovation Maturity Model — Program (IMM-P®): structured cadence and gates to operationalize innovation at org level.
 - Our coaching and workshops: apply MCF to your context with hands-on support.

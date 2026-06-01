@@ -199,12 +199,12 @@ export default function CaseAlphaInversiones(): ReactNode {
           <h3>Training and capacity building</h3>
           <ul>
             <li>Trained 30 employees in the <Link to="/docs/research-resources/microcanvas">MicroCanvas Framework, MCF 2.2</Link> through structured workshops.</li>
-            <li>Ran 12 week Innovation Maturity Model Program, IMM P, cycles across discovery, validation, and development over 24 months.</li>
+            <li>Ran 12 week Innovation Maturity Model Program, IMM-P®, cycles across discovery, validation, and development over 24 months.</li>
           </ul>
 
           <h3>Innovation pipeline</h3>
           <ul>
-            <li>Six project pitches at the end of IMM P, focused on scalability, digital experience, and the customer journey.</li>
+            <li>Six project pitches at the end of IMM-P®, focused on scalability, digital experience, and the customer journey.</li>
             <li>Initiatives spanned CX, omnichannel, data driven decision making, and project management culture, PMO.</li>
           </ul>
 
@@ -247,7 +247,7 @@ export default function CaseAlphaInversiones(): ReactNode {
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
     A[Problem Context] --> B[Evidence / Signals]
-    B --> C[Intervention: Run IMM-P Program]
+    B --> C[Intervention: Run IMM-P® Program]
     C --> D[Enablers: Committee + Gate Reviews]
     D --> E[Capability: Innovation Pipeline]
     E --> F[Outcomes: Aligned Decisions + Scalable Delivery]
@@ -258,7 +258,7 @@ flowchart LR
 flowchart TB
     A[Before: Task-based Execution]
     B[MCF Training + Workshops]
-    C[IMM-P Cadence + Governance]
+    C[IMM-P® Cadence + Governance]
     D[After: Role-based Delivery]
 `} />
           </Admonition>

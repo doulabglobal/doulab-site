@@ -31,20 +31,20 @@ export default function IMMDTPage(): ReactNode {
     url: 'https://www.doulab.net/services/imm-dt',
     areaServed: ['Latin America', 'Caribbean', 'Global'],
     description:
-      'The digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates.',
+      'The digital transformation vertical of IMM. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates. Delivered through the IMM-P® program.',
   };
 
   return (
     <Layout
       title="IMM-DT: Digital Transformation Maturity | Doulab"
-      description="IMM-DT is the digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates."
+      description="IMM-DT is the digital transformation vertical of IMM, delivered through the IMM-P® program. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates."
     >
       <Head>
         <link rel="canonical" href="https://www.doulab.net/services/imm-dt" />
         <meta property="og:title" content="IMM-DT: Digital Transformation Maturity | Doulab" />
         <meta
           property="og:description"
-          content="The digital transformation vertical of IMM-P®. Baseline maturity, prioritize gaps, sequence a 0–36 month roadmap."
+          content="The digital transformation vertical of IMM, delivered through the IMM-P® program. Baseline maturity, prioritize gaps, sequence a 0–36 month roadmap."
         />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
@@ -53,8 +53,8 @@ export default function IMMDTPage(): ReactNode {
       <main>
         <Hero
           title="IMM-DT"
-          subtitle="The digital transformation vertical of IMM-P®."
-          body="IMM-DT extends the Innovation Maturity Model (IMM 2.2), delivered through the IMM-P® program, to the digital transformation domain. We baseline DT maturity across strategy, process, culture, technology and governance; benchmark against regional peers; and sequence a phased 0–36 month roadmap with evidence-backed readiness gates. Currently in pilot with a regulated-finance partner in the Dominican Republic."
+          subtitle="The digital transformation vertical of IMM."
+          body="IMM-DT extends the Innovation Maturity Model (IMM 2.2) to the digital transformation domain. Engagements take the IMM-P® program form with the IMM-DT vertical layer. We baseline DT maturity across strategy, process, culture, technology and governance; benchmark against regional peers; and sequence a phased 0–36 month roadmap with evidence-backed readiness gates. Currently in pilot with a regulated-finance partner in the Dominican Republic."
           imageBase="/img/services-hero"
           imageAlt="IMM-DT: Digital Transformation Maturity"
           width={600}

@@ -66,7 +66,7 @@ export default function ClarityScanTier3Page(): ReactNode {
         <Hero
           title="ClarityScan® Tier 3 / Audit"
           subtitle="Evidence-backed. Audit-ready. Designed to stand up to review."
-          body="Tier 3 turns the diagnostic into a governance-grade dossier. Every domain score is supported by documented artifacts, decisions, and observed practice. Phase readiness gates align with the IMM-P® 5-phase model. Built for regulated finance, public-sector digital programs, and multilateral engagements where the diagnostic must stand up to internal audit, regulator review, and institutional learning loops."
+          body="Tier 3 turns the diagnostic into a governance-grade dossier. Every domain score is supported by documented artifacts, decisions, and observed practice. Phase readiness gates align with the IMM 5-phase model and feed directly into an IMM-P® engagement. Built for regulated finance, public-sector digital programs, and multilateral engagements where the diagnostic must stand up to internal audit, regulator review, and institutional learning loops."
           imageBase="/img/clarityscan-hero"
           imageAlt="ClarityScan® Tier 3 Audit visual"
           width={1600}
@@ -228,7 +228,7 @@ export default function ClarityScanTier3Page(): ReactNode {
             <li><strong>Decision log:</strong> every gate decision, its criteria, the evidence used, and the dissent recorded.</li>
             <li><strong>Risk register:</strong> identified risks, owners, mitigations, and review cadence.</li>
             <li><strong>Governance model specification:</strong> roles, decision rights, intake, escalation, and gate criteria.</li>
-            <li><strong>Phase readiness scorecard:</strong> per-phase readiness against the IMM-P® 5-phase model.</li>
+            <li><strong>Phase readiness scorecard:</strong> per-phase readiness against the IMM 5-phase model, ready to feed an IMM-P® engagement.</li>
             <li><strong>Multi-year roadmap:</strong> sequenced initiatives across phases, with measurable outcomes and ownership.</li>
           </ul>
         </section>

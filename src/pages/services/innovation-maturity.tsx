@@ -290,6 +290,15 @@ export default function InnovationMaturityProgram(): ReactNode {
           ctaNote="Built on MicroCanvas® v2.2 plus IMM 2.2."
         />
 
+        {/* IMM-P® as the program form of IMM */}
+        <section className="section section--tight" id="imm-program-relationship" aria-labelledby="imm-program-relationship-title">
+          <Heading as="h2" id="imm-program-relationship-title">IMM-P® is the program form of IMM</Heading>
+          <p className="sectionLead">
+            <strong>IMM-P® is the program form of <Link to="#imm-model" data-cta="cta.services.imm.intro.see_model" aria-label="Jump to the IMM model section">IMM</Link>, the Innovation Maturity Model.</strong>{' '}
+            IMM defines the capability and measurement framework: five domains, five maturity rungs, and phase-readiness criteria. IMM-P® is the structured engagement that takes a team through it, installing the cadence, governance, and evidence discipline that move you up the ladder.
+          </p>
+        </section>
+
         {/* The IMM model: five domains */}
         <section className="section" id="imm-model" aria-labelledby="imm-model-title">
           <Heading as="h2" id="imm-model-title">The model: five IMM domains</Heading>

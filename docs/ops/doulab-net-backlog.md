@@ -577,7 +577,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open.
 - Commits: pending.
 
-### G-3 (P0) — Vigía Futura blog OG image broken in both locales
+### G-3 (RESOLVED 2026-06-02) — Vigía Futura blog OG image broken in both locales
 - Description: Create `static/img/social/vigia-futura-foresight.{jpg,webp,avif}` (1200×630 derived from `static/img/vigia-futura-hero.{avif,png,webp}`) OR rewrite the frontmatter `image:` in both `blog/2025-09-22-vigia-futura-foresight-observatory.md:17` and `i18n/es/docusaurus-plugin-content-blog/2025-09-22-vigia-futura-foresight-observatory.md:17` to a path that exists. Recommendation: ship the asset, keep the path.
 - Rationale: BLOG-002 from audit-2026-06 still unresolved; ES launch now duplicates the broken share preview. Anyone sharing the Vigía Futura blog post on LinkedIn or Twitter in either locale gets no image. While here, add a `verify:build` check that fails if a blog `image:` frontmatter path does not exist under `static/`.
 - Closes: BLOG-002, partial SEO-2026-07-007.
@@ -585,10 +585,9 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Acceptance criteria:
   - `curl -I https://www.doulab.net/img/social/vigia-futura-foresight.jpg` returns 200 after deploy.
   - LinkedIn/Twitter preview tools (or a fetch with `User-Agent: facebookexternalhit`) return the Doulab card, not the boilerplate.
-- Status: Open.
-- Commits: pending.
-
-### G-4 (P0) — ES case-studies cards show EN "Read the case →"
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
+### G-4 (RESOLVED 2026-06-02) — ES case-studies cards show EN "Read the case →"
 - Description: Translate the project-card CTA on `/es/case-studies` from EN "Read the case →" to ES "Leer el caso →" (or the i18n-glossary-canonical choice from G-9). Likely a hardcoded string in the case-studies index component rather than a `<Translate>` entry; if the component is shared, refactor to consume a locale-aware label.
 - Rationale: BRAND-107 image-confirmed at `viewport-2026-07-prod-v1/es/case-studies/1366x768.png`. Brand-integrity break: every card surrounding label (sector, capabilities, description) is in Spanish; the conversion CTA in English breaks the locale promise on a high-intent surface.
 - Closes: BRAND-107.
@@ -596,9 +595,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Acceptance criteria:
   - `grep -n "Read the case" i18n/es/docusaurus-plugin-content-pages/case-studies/` returns nothing.
   - Re-capture `viewport-2026-07-prod-v1/es/case-studies/1366x768.png` shows ES CTA label.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
 ### G-5 (P1) — Sitemap-per-locale hreflang annotations + sitemap_index
 - Description: Inject `<xhtml:link rel="alternate" hreflang="…" href="…">` alternates into every `<url>` entry of both `build/sitemap.xml` and `build/es/sitemap.xml`. Publish `build/sitemap_index.xml` listing both per-locale sitemaps. Update `static/robots.txt` to point at the index. Inject `<link rel="alternate" hreflang="en|es|x-default" href="…">` into every page `<head>` via a small Docusaurus plugin or theme `Root` swizzle.
 - Rationale: SEO-2026-07-003 / I18N-005 / I18N-020. Both sitemaps are flat `<urlset>` lists with no `xhtml:link` children; no `sitemap_index.xml`; `robots.txt` points only at the EN sitemap. Combined with G-1, Google has no signal that `/services/clarityscan` and `/es/services/clarityscan` are translation pairs. This is the single largest cross-locale discoverability win.
@@ -612,7 +610,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open.
 - Commits: pending.
 
-### G-6 (P1) — Doubled `/blog/tags/blog/tags/*` URLs (year-old defect)
+### G-6 (RESOLVED 2026-06-02) — Doubled `/blog/tags/blog/tags/*` URLs (year-old defect)
 - Description: Strip `permalink:` lines from every entry in `blog/tags.yml` (Docusaurus prefixes `/blog/tags/` automatically). Rebuild and verify both `build/blog/tags/` and `build/es/blog/tags/` directories no longer contain `blog/tags/blog/tags/` subdirectories; verify both sitemaps no longer list doubled URLs.
 - Rationale: SEO-2026-07-004 / audit-2026-06 SEO-001 — never resolved. 15 doubled URLs per locale (30 total) currently ship as real duplicate-content pages, polluting the index. Single-file fix.
 - Closes: SEO-2026-07-004, audit-2026-06 SEO-001 (carryover).
@@ -621,9 +619,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `grep -n "permalink:" blog/tags.yml` returns nothing.
   - `find build -path "*/blog/tags/blog/tags/*" -type d` returns nothing.
   - Neither sitemap contains `/blog/tags/blog/tags/`.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
 ### G-7 (P1) — `data-cta` click delegate with locale-namespaced events + analytics taxonomy fixes
 - Description: Ship `src/components/cta-events.ts` (~40 lines): document-level click delegate that reads `[data-cta]` attribute and emits a CF Web Analytics custom event with `{ cta, locale, path }`. Locale derived from `document.documentElement.lang` or `location.pathname.startsWith('/es/')`. Load once from `src/theme/Root.tsx`. Concurrent rename: the six `wwu_*` ids in `src/pages/work-with-us/index.tsx` and the ES mirror to `cta.wwu.<slot>.<intent>` (snake-case to dot, add `cta.` prefix). Add `scripts/verify-analytics.mjs` to `verify:build`: (1) grep `build/**/*.html` and `build/**/*.js` for forbidden trackers; (2) assert ES `data-cta` set is a subset of EN set.
 - Rationale: ANLT-006 (P0) — 99 EN + 99 ES `data-cta` taggings produce zero event data because no click delegate exists. ANLT-002 — `wwu_*` ids break the `cta.*` grep filter. ANLT-013 — no CI guard ensures ES translation passes don't translate analytics keys. CONV-2026-07-004 — locale is not a dimension, ES funnel performance is unmeasurable. Unlocks ANLT-007, -010, -014, -015 downstream.
@@ -660,7 +657,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open (prose-link carve-out blocked on Luis approval).
 - Commits: pending.
 
-### G-10 (P1) — `.heroSubtitle text-align: justify` mobile fix
+### G-10 (RESOLVED 2026-06-02) — `.heroSubtitle text-align: justify` mobile fix
 - Description: Inside `@media (max-width: 700px)` in `src/css/custom.css`, add `.components-hero__subtitle, .pages-b4-p2__heroSubtitleJustify, [class*="hero__subtitle"] { text-align: left; }`. Optionally add `text-wrap: balance` + `max-inline-size: ~52ch` on `.heroSubtitle` site-wide so longer ES copy wraps cleanly without overflow.
 - Rationale: BRAND-105 / MOBL-001 / MOBL-006 / MOBL-007 / MOBL-009 / VP-001 / VP-002, image-confirmed P0 in three locations: `/es/contact` 390x844 H1 has ~50-80 px word-rivers, `/case-studies` 360x640 has rivers in BOTH locales, `/es/home` 360x640 hero is unreadable. Single most visible mobile defect on the ES surface, and image-confirmed not ES-only.
 - Closes: BRAND-105, MOBL-001, MOBL-002, MOBL-006, MOBL-007, MOBL-008, MOBL-009, VP-001, VP-002.
@@ -668,10 +665,9 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Acceptance criteria:
   - Re-capture `viewport-2026-07-prod-v1/{en,es}/{home,contact,case-studies}/360x640.png` and `390x844.png`; rivers gone.
   - Desktop hero (≥800 px) typography unchanged.
-- Status: Open.
-- Commits: pending.
-
-### G-11 (P1) — `| Doulab | Doulab` duplicate title-suffix sweep
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
+### G-11 (RESOLVED 2026-06-02) — `| Doulab | Doulab` duplicate title-suffix sweep
 - Description: Remove the trailing `| Doulab` from every page-local `title=` string in `src/pages/**` (~25 files); let Docusaurus's `<Layout>` append the site title once. Mirror in ES locale.
 - Rationale: SEO-2026-07-005, confirmed across `build/about.html`, `build/contact.html`, `build/services/clarityscan.html`, `build/vigia-futura.html`, `build/case-studies.html`, plus all ES counterparts. Titles lose 8-12 visible characters of SERP pixel budget to the duplicate suffix; some long titles get truncated before the brand renders once. Trivial sweep.
 - Closes: SEO-2026-07-005.
@@ -679,9 +675,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Acceptance criteria:
   - `grep -rn 'title=".* | Doulab"' src/pages i18n/es/docusaurus-plugin-content-pages` returns nothing.
   - `build/**/*.html` contains exactly one `| Doulab` per `<title>`.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
 ### G-12 (P1) — Em-dashes in ES blog bodies (no-em-dash rule violation)
 - Description: Replace 6 em-dash (U+2014) instances in `i18n/es/docusaurus-plugin-content-blog/2025-09-12-clarityscan-decision-latency.md` (TL;DR + 4 References list + 1 body) and `i18n/es/docusaurus-plugin-content-blog/2026-01-19-coordination-threshold.md:22` (TL;DR) with colons, en-dashes, commas, or parentheses per the per-instance fit. Confirm with Luis that the EN dated-body grandfather does NOT extend to ES (ES surface launched after the exclusion).
 - Rationale: BLOG-004, COPY-112. The `feedback_no_em_dashes` rule applies to user-facing copy on every Doulab property; ES blog bodies are net-new surface launched in commit `eb1c8c8` and not subject to the EN dated-body grandfather. EN pages and `i18n/es/.../pages/` confirmed clean; only ES blog corpus needs the sweep.
@@ -715,7 +710,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open (canonical confirmations blocked on Luis open questions).
 - Commits: pending.
 
-### G-15 (P0 carry-over) — Domain canon: MCF, VIF, home brand-marks, IMM-P® in diagnostics
+### G-15 (RESOLVED 2026-06-02) — Domain canon: MCF, VIF, home brand-marks, IMM-P® in diagnostics
 - Description: Four-part single commit. (a) `vigia-futura/index.tsx:150` EN+ES: `Methodology Coherence Framework` → `MicroCanvas Framework` (consider adding ®). (b) `vigia-futura/index.tsx:154` EN+ES + `docs/research-resources/index.mdx:99` EN+ES: `Vigía Incubation Framework` → `Vigía Incubanet Framework` (do not localize — `Incubanet` is a proper noun). (c) `src/pages/index.tsx:77,79,90,92`: restore `®` on `ClarityScan` and `í` accent on `Vigía Futura`; verify ES home parity. (d) `src/pages/services/diagnostics.tsx:19,44`: bare `IMM` → `IMM-P®` in "Built on …" credit lines; mirror ES.
 - Rationale: DOMN-001 (P0), DOMN-002 (P0), DOMN-003 (P0), DOMN-004 (P0), T11 cross-role theme. Single-pass canon-integrity sweep; each piece is a 2-4 line edit. Highest-visibility brand drift on the site.
 - Closes: DOMN-001, DOMN-002, DOMN-003, DOMN-004 (parts a-d).
@@ -725,19 +720,17 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `grep -rn "Vigía Incubation Framework\|Vigia Incubation Framework" src/ i18n/ docs/` returns nothing.
   - `grep -rn "Vigia Futura" src/` returns nothing (accent restored).
   - `grep -n "Built on MicroCanvas® 2.2 and IMM[^-]" src/pages/services/diagnostics.tsx i18n/es/docusaurus-plugin-content-pages/services/diagnostics.tsx` returns nothing.
-- Status: Open.
-- Commits: pending.
-
-### G-16 (P0) — IMM-DT ES translation parity verification
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
+### G-16 (RESOLVED 2026-06-02) — IMM-DT ES translation parity verification
 - Description: Read `i18n/es/docusaurus-plugin-content-pages/services/imm-dt.tsx` in full. Diff against EN to find untranslated holdouts (six-horizon roadmap labels `Baseline`, `First wins`, `Process anchoring`, `Cohort progression`, `Scale and govern`, `Compounding`; five-rung DT ladder labels; "What IMM-DT does not do" boundary; pilot reference). Translate any holdouts using the G-14 glossary.
 - Rationale: DOMN-010 (P0). Per brief: "any drift in domain framing between EN and ES is a P0 brand-integrity issue". IMM-DT is the digital-transformation vertical of IMM-P®; if ES roadmap labels remain in English, the page reads as half-translated on the highest-trafficked vertical.
 - Closes: DOMN-010.
 - Files to change: `i18n/es/docusaurus-plugin-content-pages/services/imm-dt.tsx`.
 - Acceptance criteria:
   - Side-by-side diff of EN vs ES shows only translated-string differences, no untranslated literals.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: 2e997d6 (impl, wave 1).
 ### G-17 (P0 ethics) — ClarityScan time-claim reconciliation (15-20 vs 30-45)
 - Description: Adjudicate canonical truth with Luis (split-product Path A: Tier 1 Snapshot 15-20 min self-serve + named ClarityScan Conversation 30-45 min analyst-led; or Path B: unify on 30-45 across all surfaces). Sweep 14+ EN + ES surfaces accordingly (home, services/clarityscan, services pages, about, insights, case-study finals, blog `2025-09-12-clarityscan-decision-latency.md` lines 22/30/32/106/108/116). Update the `Hero.tsx:33` JSDoc example so future pages don't copy the stale claim.
 - Rationale: BEHP-001 (P0 ethics), BEHP-002 (P0 ethics), BEHP-011 (P3), BLOG-001 (P0), audit-2026-06 BP-003 — never resolved. A product whose entire pitch is "decision latency" cannot maintain a time-promise drift; expectancy violation on time-to-baseline is the failure mode the buyer is paying to eliminate. Now doubled by ES.

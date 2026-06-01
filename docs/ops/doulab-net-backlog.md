@@ -190,6 +190,38 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Closes audit findings: BP-002 (mixed-credibility sources, pure-deficit framing), partial COPY-007 (homepage Problem block specifically; the global FinalCta still uses the canonical "Ready to make innovation repeatable?" headline as intended).
 - Commits: f0ee1337eb0af531fb0ef38a54ebb60f475f4ff6 (impl), pending (governance)
 
+### E-Q4
+- Description: Three new IMM-aligned semantic React components (`<Radar>`, `<MaturityLadder>`, `<EvidenceMeter>`).
+- Rationale: ClarityScan tier subpages and the IMM-P / IMM-DT page rebuilds need a visual vocabulary matching the IMM design system. Radar shows multi-axis domain scoring, MaturityLadder shows capability progression with current+target rungs, EvidenceMeter shows a confidence/score gauge with red/amber/green zones.
+- Acceptance criteria:
+  - 6 new files under `src/components/imm/` (3 .tsx + 3 .module.css).
+  - All three components accept `ariaLabel`, render accessible SVG with `<title>`, mirror numeric data as text for screen readers.
+  - Components use IMM tokens (`var(--dl-indigo, #38249a)`, etc.) with hex fallbacks; Roboto via inherited `--ifm-font-family-base`.
+  - `npm run verify` exits 0 (pre-push hook re-verifies).
+- Commits: b4563da9ae7f67efd43db1bd4e2c71e40a54f7db (impl), pending (governance)
+
+### E-Q5
+- Description: Vigía Futura page rebuilt as presentation-in-itself; adds the National Innovation Maturity and Digital Transformation Index narrative and the Vigía Futura Network block.
+- Rationale: Per user directive 2026-06-01, the Vigía Futura section should function as its own presentation, surfacing the foresight observatory work and the IMM-grounded national index. The Doulab + UNPHU MoU (`Vigia Futura/MoU/DOULAB + UNPHU - Vigia Futura MOU - 2025.10.09.pdf`, 29 MB, not opened) establishes the partnership behind this work; the public site MUST NOT name UNPHU or any specific partner.
+- Implementation: 8-section narrative arc (hero, why an observatory, framework family pillars, network, the Index, roadmap, working with us, FinalCta). Uses `<Pillars>` for the Vigía Framework Family (VIF, VILF, IMM, IMM-P®, MEL on shared MCF v2.2 foundation) and for the Index dimensions (five IMM domains plus IMM-DT vertical). Uses `<Roadmap>` for the 5-horizon roll-out (0-6 mo now, 6-12 mo now, 12-18 mo next, 18-30 mo next, 30-48 mo later) with Index v1 at the 12-18 month horizon.
+- Sources cited (no fabricated numbers): OECD Strategic Foresight, WEF readiness/competitiveness, the site's own coordination-threshold blog post.
+- IMM vs IMM-P distinction respected: IMM (model), IMM-P® (program), IMM-DT (DT vertical), never IMM® bare.
+- Hard constraint honored: no UNPHU mention; aspirational positioning only.
+- Removed the prior "Latest from the radar" docs feed; reintroducing as a signal-library teaser is a separate pass.
+- Commits: 68d0433bb94ac555d6862dd17bc700f0f525f907 (impl), pending (governance)
+
+### E-Q6
+- Description: Restore IMM (model) vs IMM-P® (program) terminology distinction across the pages not owned by Q1-Q5.
+- Rationale: The E-C1 sweep over-corrected, flattening "IMM" to "IMM-P®" even where the meaning was the maturity model itself. Per `Vigia Futura/vilf/VILF-1.0-master_1.md` 5-spine architecture: IMM is the capability spine (the model, no marks); IMM-P® is the execution spine (the program, registered mark); IMM-DT is the digital transformation vertical.
+- Implementation: 31 changes across 12 files (24 IMM -> IMM-P®, 7 IMM-P® -> IMM). Notable judgment calls:
+  - "vertical of IMM-P®" -> "vertical of IMM" (verticals extend the model, not the program).
+  - "Built on MicroCanvas® 2.2 and IMM-P®" -> "and IMM" on diagnostic pages (a diagnostic measures against the model).
+  - "fast maturity scan (MCF 2.2 + IMM-P)" -> "+ IMM" (a scan measures against the model).
+  - Normalized U+2011 non-breaking hyphen to regular `-` in `IMM-P®` references in the federated-AI whitepaper.
+- Files outside scope (owned by Q1-Q5): `services/innovation-maturity.tsx`, `services/imm-dt.tsx`, `services/clarityscan.tsx`, `vigia-futura/index.tsx`, `src/components/imm/*`. These will apply the rule in their own passes.
+- Flagged for follow-up: `docusaurus.config.ts` footer copyright still says "MicroCanvas® and IMM® are registered marks". Violates the "never IMM® bare" rule. Out of scope for this agent; future small pass.
+- Commits: 084eda201281fdb1c8c636c5723849a516af5cd4 (impl), pending (governance)
+
 ### E-J1 (BACKLOG ONLY, DEFERRED)
 - Description: Testimonials and named client quotes on doulab.net (homepage, case studies, services pages).
 - Rationale: Audit-2026-06 CONV-003, SALES-002, BP-013. Four roles flagged zero attributed quotes as a P0 trust gap for procurement-eligible buyers, especially in regulated finance and public sector. Site shows 4 named clients (AFP Siembra, Alpha Inversiones, FUNDAPEC, OGTIC/RedLab) but no quotes from sponsors at any of them.

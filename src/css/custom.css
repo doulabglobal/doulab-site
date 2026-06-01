@@ -233,15 +233,31 @@ body {
 
 /* ===== Shared sitewide utilities ===== */
 
-/* E-R3: ensure inline links in body text are visually distinguishable beyond color.
-   Excludes button-class links so primary/secondary CTAs keep their non-underlined style.
+/* F-1 (2026-06-01, feedback_links_underline_on_hover): ALL site links — including
+   button-class CTAs — show their underline ONLY on :hover and :focus-visible.
+   Default state is text-decoration: none. Inverts the prior E-R3 always-on underline.
    Scoped to body-text containers so navbar/footer/in-card CTAs are not affected. */
 .markdown a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
 article a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
 .section p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
 .sectionLead a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
 .microcopy a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink) {
+    text-decoration: none;
+    text-underline-offset: 2px;
+}
+
+.markdown a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):hover,
+.markdown a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):focus-visible,
+article a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):hover,
+article a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):focus-visible,
+.section p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):hover,
+.section p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):focus-visible,
+.sectionLead a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):hover,
+.sectionLead a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):focus-visible,
+.microcopy a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):hover,
+.microcopy a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink):focus-visible {
     text-decoration: underline;
+    text-decoration-thickness: 2px;
     text-underline-offset: 2px;
 }
 
@@ -338,13 +354,27 @@ article a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):n
         margin-bottom: .25rem
     }
 
+/* F-3 (feedback_card_cta_layout): card CTAs render side-by-side on desktop.
+   Stacking only on mobile (<= 600px) via the breakpoint below. */
 .cardFooter {
     margin-top: auto;
     padding-top: .5rem;
     border-top: 1px dashed var(--dl-border);
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
-    gap: .5rem
+    gap: .5rem;
+}
+
+.cardFooter > * {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    .cardFooter {
+        flex-direction: column;
+    }
 }
 
 .ctaBriefingCards .card {
@@ -1607,8 +1637,14 @@ html[data-theme='dark'] .mermaid svg .note {
 
 .pages-b4-p1__problemCard a {
   color: var(--ifm-color-primary);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+.pages-b4-p1__problemCard a:hover,
+.pages-b4-p1__problemCard a:focus-visible {
   text-decoration: underline;
-  text-decoration-thickness: from-font;
+  text-decoration-thickness: 2px;
   text-underline-offset: 2px;
 }
 

@@ -302,8 +302,14 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Mobile rendering is correct (collapse intentionally happens at narrow widths); only desktop breaks.
 - Evidence: 8 PNGs across the two pages at desktop anchors under `ops/audits/doulab-net/viewport-2026-06-prod-v5.1/`.
 - Acceptance: full re-sweep at desktop anchors shows readable tabular sections.
-- Status: BACKLOG; not in scope for E-R1 close-out.
-- Commits: pending.
+- Status: **RESOLVED**.
+- Two distinct root causes:
+  1. IMM-DT (page-level): the `<CardGrid>` component's CSS-module targeted `:global(.components-cardgrid-cardgrid__card)` children with `grid-column: span 4`, but the page passed `className="card"` children. Cards fell back to `grid-column: auto` inside `repeat(12, 1fr)`, ~80 px each, forcing one character per line.
+  2. ClarityScan T3 (component-level, page workaround): `<Roadmap>` is not intrinsically responsive when placed inside narrow grid cells (< ~500 px).
+- Fixes:
+  - IMM-DT: replaced `<CardGrid>` with `<div className="cardGrid">` on the two affected sections; the global `.cardGrid` class targets `.card` children correctly and collapses to one column at narrow widths.
+  - ClarityScan T3: outer grid tightened to `minmax(280px, 1fr)`; the Roadmap cell now spans the full container via `style={{ gridColumn: '1 / -1' }}`. Follow-up flagged in a code comment: `<Roadmap>` component should be made intrinsically responsive in a future pass.
+- Commits: e53363058e46fe4a072dd33a09e90c3512876817 (impl), pending (governance)
 
 ### E-R2 (BACKLOG, filed from R4 diagnostic findings)
 - Description: Page-level CSP cleanup to clear the LH-NEW-007 inspector-issues audit.
@@ -316,8 +322,14 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - Lighthouse `inspector-issues` audit passes on prod.
   - Lighthouse BP >= 95 sitewide.
   - CSP enforcement extended (no `unsafe-inline` on script-src; style-src either uses nonces or stays with `unsafe-inline` if Docusaurus inline styles cannot be eliminated entirely).
-- Status: BACKLOG; not in scope for the E-R1 close-out.
-- Commits: pending.
+- Status: **PARTIAL — script-src-elem fix shipped; style-src-attr residual filed for follow-up.**
+- Implementation summary:
+  - `functions/_middleware.ts` (NEW): Cloudflare Pages middleware. Generates per-request nonce, regex-injects `nonce="..."` on inline `<script>` tags in HTML responses, sets the response `Content-Security-Policy` with `script-src 'self' 'nonce-<value>'` (no `'unsafe-inline'`). Drops the 4 `script-src-elem` violations to 0 once deployed.
+  - `static/_headers`: enforced and Report-Only CSP unchanged byte-for-byte; comment block documents the middleware override contract.
+  - `src/components/**` survey: 3 `style={{...}}` occurrences in IMM components are CSS custom-property setters (legitimate per the IMM dynamic-property pattern); KEPT.
+  - `src/theme/**` survey: no inline styles; no edits.
+- Residual: the 29 `style-src-attr` Report-Only violations come from Docusaurus core hydration HTML (theme-color tokens, runtime inline styles), not from authored components. Three paths for a future pass: (a) accept `'unsafe-inline'` on `style-src-attr` in Report-Only, (b) swizzle the Docusaurus theme components that emit inline styles, (c) accept the report-only signal and never enforce `style-src-attr` strictly. Filed as **E-R2.2** in the next backlog batch.
+- Commits: d72cf32e8e4eb372fa281f565356f848070fb61f (impl), pending (governance)
 
 ### E-R3 (BACKLOG, filed from R2 follow-up findings)
 - Description: Page-level `link-in-text-block` + `label-content-name-mismatch` A11y fixes.

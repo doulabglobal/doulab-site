@@ -11,7 +11,14 @@
   # SEC-002 (audit-2026-06): parallel Report-Only CSP. Tightens script-src/style-src by removing 'unsafe-inline'.
   # Expected report volume is HIGH on first deploy: Docusaurus emits inline runtime/hydration scripts and inline styles on every page; JSON-LD blocks (contact, case-studies, work-with-us) will also fire script-src violations. Treat as monitoring-only until SEC-008 (JSON-LD hashing) and a nonce strategy land.
   # TODO(reporting-endpoint): no Cloudflare Worker / report collector is configured yet. `report-to` and `report-uri` are omitted so violations surface only via browser DevTools / Cloudflare Pages logs. When an endpoint exists, add `Reporting-Endpoints: default="https://<host>/csp-report"` and append `report-to default; report-uri https://<host>/csp-report` to the policy below.
-  Content-Security-Policy-Report-Only: default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
+  # E-R2.2b (2026-06-01): style-src-attr separate directive with sha256 hash for
+  # the SVG sprite container's `style="display: none;"` declaration injected by
+  # @docusaurus/theme-classic at plugin-load time (theme-classic/src/index.ts).
+  # The base64 sha256 below is computed over the EXACT byte sequence inside the
+  # style="" attribute: `display: none;`.
+  # When CSP3 style-src-attr is matched by the browser, this allowlists ONLY that
+  # one inline-style declaration. All other inline style= attributes still report.
+  Content-Security-Policy-Report-Only: default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; style-src-attr 'sha256-biLFinpqYMtWHmXfkA1BPeCY0/fNt46SAZ+BBk5YUog='; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
   X-Frame-Options: DENY
   Cross-Origin-Opener-Policy: same-origin
   Referrer-Policy: strict-origin-when-cross-origin

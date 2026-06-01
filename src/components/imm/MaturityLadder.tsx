@@ -10,12 +10,20 @@ export type Rung = {
   description?: string;
 };
 
+export type MaturityLadderLayout = 'auto' | 'wrap';
+
 export type MaturityLadderProps = {
   rungs: Rung[];
   current: number; // 1-based
   target?: number; // 1-based
   title?: string;
   ariaLabel?: string;
+  /**
+   * Desktop layout strategy. `'auto'` (default) keeps the original single-row
+   * horizontal track. `'wrap'` enables flex-wrap so longer ladders (e.g. 5
+   * rungs) split into multiple rows on desktop. Mobile collapse rule unchanged.
+   */
+  layout?: MaturityLadderLayout;
 };
 
 export default function MaturityLadder({
@@ -24,6 +32,7 @@ export default function MaturityLadder({
   target,
   title,
   ariaLabel,
+  layout = 'auto',
 }: MaturityLadderProps): ReactNode {
   const total = rungs.length;
   const titleId = title ? 'maturity-ladder-title' : undefined;
@@ -41,7 +50,7 @@ export default function MaturityLadder({
         </h2>
       ) : null}
       <ol
-        className={styles.track}
+        className={`${styles.track} ${layout === 'wrap' ? styles.trackWrap : ''}`}
         aria-label={
           ariaLabel ??
           `Maturity ladder, currently at rung ${current} of ${total}`

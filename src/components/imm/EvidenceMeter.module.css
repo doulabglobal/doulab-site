@@ -91,3 +91,22 @@
   font-weight: 500;
   color: var(--ifm-color-emphasis-800, #374151);
 }
+
+/* F-2 dark-mode parity: the slate needle/hub-stroke is a brand color and does
+   not auto-flip. On the dark theme it reads as a near-invisible silhouette
+   against the dark page background. Re-tint the chrome elements (needle, hub
+   stroke, tick marks) so the gauge stays readable. Zone fills (red/amber/green)
+   remain brand-true. */
+[data-theme='dark'] .needle {
+  fill: var(--ifm-color-emphasis-300);
+  stroke: var(--ifm-color-emphasis-300);
+}
+
+[data-theme='dark'] .hub {
+  stroke: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .tick {
+  stroke: var(--ifm-color-emphasis-500);
+  opacity: 0.9;
+}

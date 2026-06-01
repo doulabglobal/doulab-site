@@ -134,3 +134,17 @@
   background: transparent;
   border: 1.5px dashed var(--dl-purple, #964590);
 }
+
+/* F-2 dark-mode parity: the indigo baseline fill at 0.3 alpha is washed out
+   against the dark surface. Lift the fill alpha and use a brighter ring/axis
+   stroke so the radar geometry remains legible. Brand colors (indigo, purple)
+   are preserved for fill identity. */
+[data-theme='dark'] .baseline {
+  fill-opacity: 0.45;
+}
+
+[data-theme='dark'] .ring,
+[data-theme='dark'] .axis {
+  stroke: var(--ifm-color-emphasis-500);
+  opacity: 0.85;
+}

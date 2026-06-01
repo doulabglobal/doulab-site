@@ -73,11 +73,9 @@
 
 .titleLink {
   color: inherit;
-  /* E-R3.1 a11y nudge: stronger underline contrast on light accent backgrounds.
-     rgba(255,255,255,0.9) maintains the soft link look while clearing the
-     WCAG 1.4.11 3:1 graphical-object threshold on amber and green caps. */
-  text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.9);
+  /* F-1: rest state has no underline; hover/focus-visible reveals it.
+     Preserves the bolder thickness and offset for hover affordance. */
+  text-decoration: none;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s ease;
@@ -86,7 +84,11 @@
 .titleLink:hover,
 .titleLink:focus-visible {
   color: inherit;
+  /* WCAG 1.4.11: white-on-accent underline clears 3:1 against amber/green caps. */
+  text-decoration: underline;
   text-decoration-color: #fff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .body {

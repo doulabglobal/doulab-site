@@ -33,7 +33,20 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - `https://www.doulab.net/robots.txt` is a valid robots.txt (when redeployed).
   - `docs/ops/*` URLs return 404 on next deploy.
 - Closes audit findings: LH-NEW-001, VP-NEW-001, SEO-003, CODE-001 (partial — manual `docs/ops/*` indexing concern is resolved).
-- Commits: ec083380b670acbab8a6f659a0cbd4f5228e8d08 (impl), pending (governance)
+- Commits: ec083380b670acbab8a6f659a0cbd4f5228e8d08 (impl), 3f1036f3628c52f633c947450c98801209027903 (governance)
+
+### E-C1
+- Description: Phase 1 truth & integrity sweep. Trademark glyph + mark normalization (ClarityScan®/IMM-P®/MicroCanvas®), MCF version normalization to v2.2 sitewide (current-state copy only; release history and dated blog bodies preserved), 8 zero-byte stub MDX page deletions, remove auto window.open on book-clarityscan.
+- Rationale: Closes the highest-impact, lowest-effort tier of audit findings — items that make the site say true and consistent things about its own products. The "ClarityScanr" broken-glyph was on the two primary booking CTAs; bare "IMM®" violated the canonical that only IMM-P® is registered; v2.1/v2.2 split made the site appear to roll backward between pages; zero-byte stubs shipped as live blank routes; the book-clarityscan auto-popup was blocked by enterprise IT and mobile browsers, leaving a misleading "Redirecting…" state. All replacements grounded in canonical sources (IMM\AGENTS.md §17, IMM\v2.2 sources, FUNDAPEC kickoff).
+- Acceptance criteria:
+  - Grep for "ClarityScanr" in src/ returns zero matches.
+  - Grep for "MCF 2.1" / "MicroCanvas® v2.1" in src/pages/ and current-state docs returns zero matches.
+  - Grep for "IMM®" (not "IMM-P®") in src/pages/ and current-state docs returns zero matches.
+  - `find src/pages -name "*.md" -size 0` returns nothing.
+  - book-clarityscan.tsx contains no `window.open(` call.
+  - `npm run verify` exits 0.
+- Closes audit findings: COPY-001, COPY-002, COPY-003, IAUX-001, DOM-003, BP-009, plus the conversion auto-popup theme flagged by 10 roles in 00-index.md theme T8.
+- Commits: 789781416d44cf722b4a75574eaf0a0744f659ea (impl), pending (governance)
 
 ## P0
 

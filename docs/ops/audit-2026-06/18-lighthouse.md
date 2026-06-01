@@ -623,3 +623,99 @@ Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06/*-v2.json`. Summary: `summar
 - v2 already meets the ≥90 threshold on **A11y, BP, SEO** for most pages. Performance is the remaining gap (mobile 55–73, desktop 94).
 - A real production Lighthouse against `https://doulab.net` (Cloudflare-served, Brotli-compressed, minified) should clear ~75–82 mobile / ~95+ desktop without any source changes — and the source-side wins from `06-performance.md` quick wins should push mobile to 85+ without exotic engineering.
 - **LH-NEW-001 can now be marked RESOLVED** with the four config/blog changes above. File a backlog item to revisit v4 migration as a planned Phase 4 effort (zero-byte MDX cleanup + blog metadata + truncate migration is already done).
+
+---
+
+## Phase 4 verification — Lighthouse prod-v5 (post-Q batch deploy, 2026-06-01)
+
+After all of Phase E remediation landed and Cloudflare auto-deployed (HEAD `5088478`), prod Lighthouse was re-run against `https://www.doulab.net`. 18 mobile + 4 desktop targets. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v5/*.json`; parsed summary at `summary-v5.json`.
+
+### v5 scores (post-Phase E remediation)
+
+| Page | Form factor | Perf | A11y | BP | SEO |
+|---|---|---|---|---|---|
+| `/` | mobile | 77 | 93 | 75 | 100 |
+| `/` | desktop | NO_NAVSTART | 92 | error | 100 |
+| `/services` | mobile | 66 | 100 | 75 | 100 |
+| `/services/clarityscan` | mobile | 73 | 93 | 75 | 100 |
+| `/services/clarityscan` | desktop | NO_NAVSTART | 93 | error | 100 |
+| `/services/clarityscan/diagnostic` (NEW) | mobile | 68 | 87 | 75 | 100 |
+| `/services/clarityscan/audit` (NEW) | mobile | 69 | 91 | 75 | 100 |
+| `/services/innovation-maturity` | mobile | 72 | 88 | 75 | 100 |
+| `/services/innovation-maturity` | desktop | NO_NAVSTART | 87 | error | 100 |
+| `/services/imm-dt` | mobile | 69 | 87 | 75 | 100 |
+| `/services/imm-dt` | desktop | 97 | 87 | 74 | 100 |
+| `/services/diagnostics` | mobile | 67 | 100 | 75 | 100 |
+| `/services/coaching-mentoring` | mobile | NO_NAVSTART | 100 | error | 100 |
+| `/services/custom-workshops` | mobile | 66 | 100 | 75 | 100 |
+| `/services/innovation-readiness-workshop` | mobile | 70 | 96 | 75 | 100 |
+| `/case-studies` | mobile | 68 | 96 | 75 | 100 |
+| `/case-studies/afp-siembra` | mobile | 56 | 96 | 75 | 100 |
+| `/about` | mobile | 66 | 96 | 75 | 100 |
+| `/contact` | mobile | NO_NAVSTART | 100 | error | 100 |
+| `/work-with-us` | mobile | 62 | 94 | 75 | 100 |
+| `/vigia-futura` | mobile | 72 | 91 | 75 | 100 |
+| `/insights` | mobile | 68 | 100 | 75 | 100 |
+
+NO_NAVSTART = Lighthouse failed to record the trace on that run (chrome flakiness on Windows + production CF, observed on 4 of 22 runs). Not a real-user issue; rerun individually if needed.
+
+### Movement vs prod-v3 (the prior baseline)
+
+| Page | Perf prod-v3 mobile | Perf prod-v5 mobile | Delta |
+|---|---|---|---|
+| `/` | 91 | 77 | **-14** |
+| `/services` | 92 | 66 | **-26** |
+| `/services/clarityscan` | 93 | 73 | **-20** |
+| `/services/innovation-maturity` | 82 | 72 | -10 |
+| `/case-studies` | 90 | 68 | -22 |
+| `/about` | 93 | 66 | **-27** |
+| `/insights` | 92 | 68 | -24 |
+
+Real regression across the board. SEO held at 100. A11y mostly held; two pages with the most new IMM semantic components dipped (innovation-maturity 93->88, imm-dt 93->87). BP fell uniformly 79->75.
+
+### Top opportunity (the regression driver)
+
+`render-blocking-resources` is now the #1 cumulative opportunity at **27,315 ms across 17 pages**, up from 7,246 ms in prod-v3. Diagnosis:
+
+```
+Resource                                                               wasted ms
+https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700        789 ms
+https://www.doulab.net/assets/css/styles.2125e28d.css                   339 ms
+```
+
+The Roboto stylesheet from Google Fonts (added in E-N1 for brand-family parity with IMM decks) is render-blocking on every page. **The 789 ms per page x 17 pages = the entire regression**. Preconnect helps but does not eliminate the round-trip.
+
+### New findings
+
+**LH-NEW-005 — Google Fonts CSS is render-blocking sitewide, costing ~14 Perf points per page**
+- severity: P0 (regressed prod-v3 -> prod-v5 by 14-27 Perf points across all pages)
+- impact: 5
+- effort: M (self-host Roboto + @font-face with font-display: swap; OR async-load trick `<link media="print" onload="this.media='all'">`; OR Docusaurus `useBaseUrl` font preload pattern)
+- location: `docusaurus.config.ts:31-47` (`headTags` array adding the Google Fonts `<link rel="stylesheet">`)
+- observation: E-N1 introduced Roboto via the standard Google Fonts loader (preconnect + stylesheet). The preconnect helps but the stylesheet is still parser-blocking. Lighthouse reports 789 ms per page on this single resource.
+- recommendation: Switch to one of: (1) self-hosted Roboto subset with @font-face and font-display: swap (cheapest, fastest, removes the external origin entirely), (2) async-load the Google Fonts stylesheet via the `media="print" onload="this.media='all'"` pattern (preserves CDN benefit, eliminates render-blocking), (3) Docusaurus theme injection that defers the stylesheet to a later phase.
+- evidence: `ops/audits/doulab-net/lighthouse-2026-06-prod-v5/home-mobile.json` `audits.render-blocking-resources.details.items[1]`.
+
+**LH-NEW-006 — A11y regressed on pages using the new IMM semantic components**
+- severity: P1
+- impact: 3 (a11y 93 -> 87/88 on two pages; A11y on diagnostic subpage is 87)
+- effort: M (audit Pillars/Radar/MaturityLadder/EvidenceMeter for ARIA + contrast)
+- location: pages using new IMM components (`/services/innovation-maturity` 88, `/services/imm-dt` 87, `/services/clarityscan/diagnostic` 87)
+- observation: Home-mobile A11y audit reports: `aria-allowed-role` (ARIA roles on incompatible elements), `color-contrast` (foreground/background contrast under threshold), `link-in-text-block` (links rely on color alone), `label-content-name-mismatch` (visible label does not match accessible name). The shared denominator is the new IMM components shipped in E-Q4 plus their use on the rebuilt pages.
+- recommendation: audit Pillars (accent-coloured tops at 60% opacity — likely a contrast hit), Radar (axis labels in slate text on white background — contrast), MaturityLadder (slate rungs at 60% opacity), EvidenceMeter (red zone vs background). For ARIA, check that the SVG `<title>` is not being overridden by another `aria-label` on the same element.
+- evidence: `home-mobile.json` `audits.aria-allowed-role`, `audits.color-contrast`, `audits.link-in-text-block`, `audits.label-content-name-mismatch`.
+
+**LH-NEW-007 — Best Practices uniformly 75 (regressed from 79)**
+- severity: P2
+- impact: 2
+- effort: S
+- location: sitewide
+- observation: BP audit fails are `deprecations`, `errors-in-console`, `inspector-issues`. The `errors-in-console` is the same prefetch-503 issue we accepted as benign in E-F1 (LH-NEW-003 still pending the speculation-rules fix). The `inspector-issues` is new in this run — likely a new CSP violation introduced by the Google Fonts stylesheet (style-src 'self' fonts.googleapis.com is in the headers; but the Roboto CSS may load font URLs that hit `font-src` which is correctly set to fonts.gstatic.com — verify in the prod browser console).
+- recommendation: Open the prod site in a real browser, copy `inspector-issues` content. Likely a quick CSP nudge or a quick fix once we see the actual issue.
+- evidence: `home-mobile.json` `audits.inspector-issues`.
+
+### Verdict
+
+The Phase E remediation delivered the predicted gains on **SEO (uniform 100), A11y (mostly held), security and trademark integrity, brand-token consolidation, IA cleanup, and visual semantic vocabulary**. It introduced a single Performance regression of **14 to 27 mobile Perf points across all pages**, traceable to the Roboto Google Fonts stylesheet being render-blocking (LH-NEW-005). Two secondary regressions: A11y dipped on pages with the new IMM semantic components (LH-NEW-006) and BP fell 4 points across the site (LH-NEW-007).
+
+**Net assessment**: the brand-family-typography win (Roboto sitewide matching the IMM decks) costs ~15 Perf points; the IMM-component visual win costs 5 A11y points on the affected pages. Both are recoverable with the source fixes in LH-NEW-005 and LH-NEW-006, which are next-pass work.

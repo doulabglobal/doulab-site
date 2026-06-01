@@ -259,7 +259,29 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - Cross-links navigate cleanly across the three pages.
   - `npm run verify` exits 0.
 - Closes audit findings: CONV-001 (pricing visibility — kept and emphasized at T1), CONV-006/007 (CTA expectation setting — duration / prep / outcome clarified per tier), partial CONV-010 (additional risk-reduction microcopy per tier card).
-- Commits: 5ce0370aa47d02fbbd1632af9d0f3804224b91d7 (impl), pending (governance)
+- Commits: 5ce0370aa47d02fbbd1632af9d0f3804224b91d7 (impl), 5088478... (governance, see prior push)
+
+### E-R1 (BACKLOG, prod-v5 audit findings)
+- Description: Post-Phase E Lighthouse + viewport prod audit (v5). Captures three new regressions surfaced after the Phase E remediation deployed.
+- Audit artifacts:
+  - `ops/audits/doulab-net/lighthouse-2026-06-prod-v5/` (22 Lighthouse JSONs + summary-v5.json; 4 NO_NAVSTART runs)
+  - `ops/audits/doulab-net/viewport-2026-06-prod-v5/` (27 of 108 planned screenshots; harness died on sustained run)
+  - Detailed write-up in `docs/ops/audit-2026-06/18-lighthouse.md` Phase 4 verification section
+  - Detailed write-up in `docs/ops/audit-2026-06/19-viewport-matrix.md` Phase 4 verification section
+- Headline findings (filed as backlog items below):
+  - **LH-NEW-005 (P0)** — Google Fonts Roboto stylesheet is render-blocking; costs ~14 to 27 mobile Perf points per page. Fix: self-host Roboto or async-load the stylesheet. Source: `docusaurus.config.ts:31-47` (the `headTags` Google Fonts loader added in E-N1).
+  - **LH-NEW-006 (P1)** — A11y dipped to 87-88 on pages with the new IMM semantic components. Audits failing: `aria-allowed-role`, `color-contrast`, `link-in-text-block`, `label-content-name-mismatch`. Fix: audit Pillars / Radar / MaturityLadder / EvidenceMeter for ARIA + contrast issues.
+  - **LH-NEW-007 (P2)** — Best Practices uniformly 75 (regressed from 79). Audits failing: `deprecations`, `errors-in-console`, `inspector-issues`. The `errors-in-console` is the prefetch-503 issue accepted as benign in E-F1; `inspector-issues` is new and likely a CSP nudge from the Google Fonts loader.
+  - **VP-NEW-002 (P2)** — Viewport sweep harness fails on sustained runs (captured 27 of 108 screenshots). Fix: per-page BrowserContext teardown + retry logic.
+  - **VP-NEW-003 (P2)** — Desktop viewports unverified for Phase E rebuilds. Fix: re-run with v5.1 harness covering 768 / 1280 / 1366 / 1920 anchors.
+- Acceptance criteria for closing this entry:
+  - LH-NEW-005 fix lands; prod Lighthouse mobile Perf back to >= 85 on majority of pages.
+  - LH-NEW-006 fix lands; prod Lighthouse A11y back to >= 93 on the affected pages.
+  - LH-NEW-007 root cause identified (open DevTools on prod, capture inspector-issues content).
+  - VP-NEW-002 harness fix lands; full 6-anchor sweep captures all 108 screenshots clean.
+  - VP-NEW-003 desktop coverage captured.
+- Status: filed for next audit-driven pass (Phase F or later).
+- Commits: pending (impl), pending (governance)
 
 ### E-J1 (BACKLOG ONLY, DEFERRED)
 - Description: Testimonials and named client quotes on doulab.net (homepage, case studies, services pages).

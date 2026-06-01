@@ -1,0 +1,448 @@
+{
+  "rows": [
+    {
+      "fname": "about-mobile.json",
+      "url": "https://www.doulab.net/about",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 96,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "case-studies-afp-siembra-mobile.json",
+      "url": "https://www.doulab.net/case-studies/afp-siembra",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 96,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "case-studies-mobile.json",
+      "url": "https://www.doulab.net/case-studies",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 96,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "contact-mobile.json",
+      "url": "https://www.doulab.net/contact",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 100,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "home-desktop.json",
+      "url": "https://www.doulab.net/",
+      "ff": "desktop",
+      "perf": 0,
+      "a11y": 92,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "home-mobile.json",
+      "url": "https://www.doulab.net/",
+      "ff": "mobile",
+      "perf": 77,
+      "a11y": 93,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "insights-mobile.json",
+      "url": "https://www.doulab.net/insights",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 100,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "services-clarityscan-audit-mobile.json",
+      "url": "https://www.doulab.net/services/clarityscan/audit",
+      "ff": "mobile",
+      "perf": 69,
+      "a11y": 91,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-clarityscan-desktop.json",
+      "url": "https://www.doulab.net/services/clarityscan",
+      "ff": "desktop",
+      "perf": 0,
+      "a11y": 93,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "services-clarityscan-diagnostic-mobile.json",
+      "url": "https://www.doulab.net/services/clarityscan/diagnostic",
+      "ff": "mobile",
+      "perf": 68,
+      "a11y": 87,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-clarityscan-mobile.json",
+      "url": "https://www.doulab.net/services/clarityscan",
+      "ff": "mobile",
+      "perf": 73,
+      "a11y": 93,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-coaching-mentoring-mobile.json",
+      "url": "https://www.doulab.net/services/coaching-mentoring",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 100,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "services-custom-workshops-mobile.json",
+      "url": "https://www.doulab.net/services/custom-workshops",
+      "ff": "mobile",
+      "perf": 66,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-diagnostics-mobile.json",
+      "url": "https://www.doulab.net/services/diagnostics",
+      "ff": "mobile",
+      "perf": 67,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-imm-dt-desktop.json",
+      "url": "https://www.doulab.net/services/imm-dt",
+      "ff": "desktop",
+      "perf": 97,
+      "a11y": 87,
+      "bp": 74,
+      "seo": 100
+    },
+    {
+      "fname": "services-imm-dt-mobile.json",
+      "url": "https://www.doulab.net/services/imm-dt",
+      "ff": "mobile",
+      "perf": 69,
+      "a11y": 87,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-innovation-maturity-desktop.json",
+      "url": "https://www.doulab.net/services/innovation-maturity",
+      "ff": "desktop",
+      "perf": 0,
+      "a11y": 87,
+      "bp": 0,
+      "seo": 100
+    },
+    {
+      "fname": "services-innovation-maturity-mobile.json",
+      "url": "https://www.doulab.net/services/innovation-maturity",
+      "ff": "mobile",
+      "perf": 72,
+      "a11y": 88,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-innovation-readiness-workshop-mobile.json",
+      "url": "https://www.doulab.net/services/innovation-readiness-workshop",
+      "ff": "mobile",
+      "perf": 70,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "services-mobile.json",
+      "url": "https://www.doulab.net/services",
+      "ff": "mobile",
+      "perf": 66,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "vigia-futura-mobile.json",
+      "url": "https://www.doulab.net/vigia-futura",
+      "ff": "mobile",
+      "perf": 72,
+      "a11y": 91,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "fname": "work-with-us-mobile.json",
+      "url": "https://www.doulab.net/work-with-us",
+      "ff": "mobile",
+      "perf": 0,
+      "a11y": 94,
+      "bp": 0,
+      "seo": 100
+    }
+  ],
+  "topOpps": [
+    {
+      "id": "render-blocking-resources",
+      "title": "Eliminate render-blocking resources",
+      "totalMs": 18401,
+      "pages": 11
+    },
+    {
+      "id": "unused-javascript",
+      "title": "Reduce unused JavaScript",
+      "totalMs": 3380,
+      "pages": 11
+    },
+    {
+      "id": "unused-css-rules",
+      "title": "Reduce unused CSS",
+      "totalMs": 1010,
+      "pages": 6
+    },
+    {
+      "id": "server-response-time",
+      "title": "Initial server response time was short",
+      "totalMs": 102,
+      "pages": 1
+    }
+  ],
+  "deltas": [
+    {
+      "fname": "about-mobile.json",
+      "perf_v3": 93,
+      "perf_v5": 0,
+      "dperf": -93,
+      "seo_v3": 92,
+      "seo_v5": 100,
+      "dseo": 8,
+      "bp_v3": 79,
+      "bp_v5": 0,
+      "dbp": -79
+    },
+    {
+      "fname": "case-studies-mobile.json",
+      "perf_v3": 92,
+      "perf_v5": 0,
+      "dperf": -92,
+      "seo_v3": 100,
+      "seo_v5": 100,
+      "dseo": 0,
+      "bp_v3": 79,
+      "bp_v5": 0,
+      "dbp": -79
+    },
+    {
+      "fname": "home-mobile.json",
+      "perf_v3": 87,
+      "perf_v5": 77,
+      "dperf": -10,
+      "seo_v3": 100,
+      "seo_v5": 100,
+      "dseo": 0,
+      "bp_v3": 79,
+      "bp_v5": 75,
+      "dbp": -4
+    },
+    {
+      "fname": "services-clarityscan-mobile.json",
+      "perf_v3": 89,
+      "perf_v5": 73,
+      "dperf": -16,
+      "seo_v3": 100,
+      "seo_v5": 100,
+      "dseo": 0,
+      "bp_v3": 79,
+      "bp_v5": 75,
+      "dbp": -4
+    },
+    {
+      "fname": "services-mobile.json",
+      "perf_v3": 91,
+      "perf_v5": 66,
+      "dperf": -25,
+      "seo_v3": 100,
+      "seo_v5": 100,
+      "dseo": 0,
+      "bp_v3": 79,
+      "bp_v5": 75,
+      "dbp": -4
+    }
+  ],
+  "failures": {
+    "performance": [
+      {
+        "id": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "pages": 22
+      },
+      {
+        "id": "unsized-images",
+        "title": "Image elements do not have explicit `width` and `height`",
+        "pages": 22
+      },
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "pages": 12
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "pages": 12
+      },
+      {
+        "id": "total-blocking-time",
+        "title": "Total Blocking Time",
+        "pages": 12
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "pages": 12
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "pages": 12
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "pages": 12
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "pages": 12
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "pages": 12
+      },
+      {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "pages": 12
+      },
+      {
+        "id": "unused-css-rules",
+        "title": "Reduce unused CSS",
+        "pages": 12
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "pages": 12
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "pages": 11
+      },
+      {
+        "id": "mainthread-work-breakdown",
+        "title": "Minimize main-thread work",
+        "pages": 11
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "pages": 11
+      },
+      {
+        "id": "bootup-time",
+        "title": "Reduce JavaScript execution time",
+        "pages": 9
+      },
+      {
+        "id": "forced-reflow-insight",
+        "title": "Forced reflow",
+        "pages": 3
+      },
+      {
+        "id": "lcp-discovery-insight",
+        "title": "LCP request discovery",
+        "pages": 3
+      },
+      {
+        "id": "lcp-lazy-loaded",
+        "title": "Largest Contentful Paint image was lazily loaded",
+        "pages": 3
+      }
+    ],
+    "accessibility": [
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "pages": 14
+      },
+      {
+        "id": "link-in-text-block",
+        "title": "Links rely on color to be distinguishable.",
+        "pages": 13
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "pages": 12
+      },
+      {
+        "id": "aria-required-children",
+        "title": "Elements with an ARIA `[role]` that require children to contain a specific `[role]` are missing some or all of those required children.",
+        "pages": 7
+      },
+      {
+        "id": "aria-allowed-role",
+        "title": "Uses ARIA roles on incompatible elements",
+        "pages": 4
+      },
+      {
+        "id": "heading-order",
+        "title": "Heading elements are not in a sequentially-descending order",
+        "pages": 1
+      }
+    ],
+    "best-practices": [
+      {
+        "id": "deprecations",
+        "title": "Uses deprecated APIs",
+        "pages": 22
+      },
+      {
+        "id": "errors-in-console",
+        "title": "Browser errors were logged to the console",
+        "pages": 22
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "pages": 22
+      },
+      {
+        "id": "valid-source-maps",
+        "title": "Missing source maps for large first-party JavaScript",
+        "pages": 1
+      }
+    ]
+  }
+}

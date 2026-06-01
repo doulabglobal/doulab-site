@@ -547,3 +547,66 @@ The site renders cleanly across all 6 anchors and 11 pages. No new P0 layout def
 
 - v2.1 (next): add render-context pass + DOM-measurement of tap targets via Playwright `page.evaluate`. Add `/work-with-us`, `/services/innovation-readiness-workshop`, and `/vigia-futura` to the page list.
 - v3 (Phase 1 closeout): re-sweep after Phase 1 fixes (truth & integrity) and tag confirmed-resolved findings with commit hashes per AGENTS.md governance pattern.
+
+---
+
+## Phase 4 verification — viewport prod-v5 (post-Q batch deploy, 2026-06-01)
+
+After all of Phase E remediation landed and Cloudflare auto-deployed (HEAD `5088478`), the viewport sweep was re-run against `https://www.doulab.net` for the full public page list including the new ClarityScan tier subpages.
+
+### Coverage (partial)
+
+The Playwright harness covered **18 pages** but completed only **27 of the planned 108 screenshots** (target was 6 anchors x 18 pages). The sweep died part-way through the 390x844 anchor pass (see `sweep.log` tail ending at `services-coaching-mentoring @ 390x844`). Likely cause: Playwright browser-context exhaustion under sustained load against a Cloudflare-fronted origin, or session-level rate limit. The harness needs a per-page browser context teardown + retry logic before the next run.
+
+Coverage actually captured (per page):
+- 2 anchors: `/`, `/services`, `/services/clarityscan`, `/services/clarityscan/diagnostic`, `/services/clarityscan/audit`, `/services/innovation-maturity`, `/services/imm-dt`, `/services/diagnostics`, `/services/coaching-mentoring`
+- 1 anchor only: the rest (about, case-studies, case-studies/afp-siembra, contact, custom-workshops, innovation-readiness-workshop, insights, vigia-futura, work-with-us)
+
+This is enough to spot-check rendering of the new IMM components on the 360x640 and 390x844 anchors but **does not validate the desktop range (1280, 1366, 1920)**. A v5.1 re-sweep is needed.
+
+### Component verification (best-effort from available screenshots)
+
+Spot-checked the available 360x640 and 390x844 captures:
+
+| Component | Page | 360x640 | 390x844 |
+|---|---|---|---|
+| `<Pillars>` | `/services/imm-dt` | render OK | render OK |
+| `<Pillars>` | `/vigia-futura` | render OK (single anchor only — 390x844 missing) | not captured |
+| `<Roadmap>` | `/services/imm-dt` | render OK | render OK |
+| `<Roadmap>` | `/vigia-futura` | render OK | not captured |
+| `<Radar>` | `/services/innovation-maturity` | render OK | render OK |
+| `<Radar>` | `/services/clarityscan` | render OK | render OK |
+| `<Radar>` | `/services/clarityscan/diagnostic` | render OK | render OK |
+| `<Radar>` | `/services/clarityscan/audit` | render OK | render OK |
+| `<MaturityLadder>` | `/services/innovation-maturity` | render OK | render OK |
+| `<MaturityLadder>` | `/services/clarityscan` | render OK | render OK |
+| `<MaturityLadder>` | `/services/clarityscan/diagnostic` | render OK | render OK |
+| `<MaturityLadder>` | `/services/clarityscan/audit` | render OK | render OK |
+| `<EvidenceMeter>` | `/services/innovation-maturity` | render OK | render OK |
+| `<EvidenceMeter>` | `/services/clarityscan/audit` | render OK | render OK |
+
+The new IMM semantic components render at small mobile widths (360 and 390). Larger viewport rendering (768+) remains unverified in this pass.
+
+### New findings
+
+**VP-NEW-002 — Viewport sweep harness fails on sustained runs**
+- severity: P2
+- impact: 3 (incomplete audit coverage)
+- effort: M (harness fix)
+- location: `ops/audits/doulab-net/viewport-2026-06-prod-v5/sweep.mjs`
+- observation: The harness died after roughly 27 captures. Likely Playwright `browserContext` not torn down per-page, exhausting browser resources or hitting a Cloudflare ratelimit threshold on sustained requests.
+- recommendation: refactor the harness to (a) tear down and recreate `BrowserContext` per page, (b) add a short delay (250 ms) between captures, (c) retry on failure with exponential backoff, (d) log per-page success / failure with timestamps. Land the harness as `package.json` script `audit:viewport` so reruns are one-command.
+- evidence: `ops/audits/doulab-net/viewport-2026-06-prod-v5/sweep.log` ends abruptly after services-coaching-mentoring @ 390x844.
+
+**VP-NEW-003 — Desktop viewports unverified for the Phase E rebuilds**
+- severity: P2 (potential layout regressions hidden)
+- impact: 3
+- effort: S (re-run the sweep with a working harness covering 768/1280/1366/1920)
+- location: all 18 public pages, anchors 768x1024 / 1280x800 / 1366x768 / 1920x1080
+- observation: the v5 sweep stopped before the desktop anchors were captured. The rebuilt pages (innovation-maturity, imm-dt, clarityscan, clarityscan/diagnostic, clarityscan/audit, vigia-futura) carry significant new semantic-component content; visual regressions at desktop widths are not yet validated.
+- recommendation: re-run the viewport sweep with the v5.1 harness fix from VP-NEW-002 to capture the missing anchors.
+- evidence: missing PNGs under `ops/audits/doulab-net/viewport-2026-06-prod-v5/<page>/<anchor>.png`.
+
+### Verdict
+
+Phase E rebuilds **render cleanly on the small mobile anchors that were captured** — the new IMM semantic components (Pillars, Roadmap, Radar, MaturityLadder, EvidenceMeter) appear in their target positions and degrade reasonably at 360 width. Desktop validation is **incomplete** due to a harness limitation (VP-NEW-002) and needs a v5.1 re-sweep before the audit can be marked complete.

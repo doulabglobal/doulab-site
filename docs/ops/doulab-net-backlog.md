@@ -222,6 +222,45 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Flagged for follow-up: `docusaurus.config.ts` footer copyright still says "MicroCanvas® and IMM® are registered marks". Violates the "never IMM® bare" rule. Out of scope for this agent; future small pass.
 - Commits: 084eda201281fdb1c8c636c5723849a516af5cd4 (impl), pending (governance)
 
+### E-Q1
+- Description: Rebuild the IMM-P® service page around the IMM semantic component vocabulary. The page now reads like an IMM deck and visually distinguishes IMM (the model) from IMM-P® (the program).
+- Rationale: The previous page leaned on generic CardGrid + bullet list sections that did not encode the epistemic structure the brand depends on. Per the IMM design system (see `IMM/design-system-spec.md`), the page should use semantic patterns: model = `<Pillars>` of domains; capability = `<MaturityLadder>`; snapshot = `<Radar>`; program = `<Roadmap>` of phases; gate = `<EvidenceMeter>`.
+- Implementation: 12-section flow Hero -> Model (Pillars, 5 domains) -> Capability progression (MaturityLadder, 5 rungs current=2 target=4) -> Maturity snapshot example (Radar 50/65/40/55/45 + target 75/75/70/75/75) -> Program (Roadmap, 5 phases with state mapping) -> Phase-readiness gate example (EvidenceMeter score=72) -> ClarityScan tier reference -> Who delivers -> Proof strip -> Related case studies -> FAQ -> FinalCta. Removed 5 generic card-grid sections that were duplicative. FAQ updated with the IMM-vs-IMM-P® question. JSON-LD Service + FAQ + Breadcrumb schemas preserved. 2 prior uses of "leverage" replaced with "add value".
+- Acceptance criteria:
+  - `<Pillars>`, `<MaturityLadder>`, `<Radar>`, `<Roadmap>`, `<EvidenceMeter>` all rendered with example fictional data and "Example output" captions.
+  - IMM vs IMM-P® distinction visible in hero subtitle / body and consistent throughout.
+  - `grep "—" src/pages/services/innovation-maturity.tsx` returns no em-dashes.
+  - `npm run verify` exits 0.
+- Closes audit findings: DOM-005 (phase visualization), DOM-002/007/008 (5-domain consistency), partial BRAND-005 (orphan visual system on services), partial COPY-008 (jargon density restructured around semantic vocabulary), COPY-011 (12+12 weeks vs phases conflict reframed).
+- Commits: 2fd5bddc5697388ee1295c54dfaf5d067ed13d7d (impl), pending (governance)
+
+### E-Q2
+- Description: Expand the IMM-DT vertical page with concrete engagement-output previews; restore the IMM vs IMM-P® distinction where this page got it wrong.
+- Rationale: After E-O1 the page used `<Pillars>` and `<Roadmap>` correctly, but did not yet show what the engagement actually produces. Plus the page conflated "the maturity model" with "the program" in four spots.
+- Implementation: NEW section "What an IMM-DT engagement produces" with three deliverable previews (Radar with target overlay; MaturityLadder with DT-specific rungs Manual operations -> Digitized workflows -> Connected platforms -> Data-driven decisions -> Continuous transformation; EvidenceMeter score=68). NEW "What an IMM-DT engagement does not do" block setting honest boundaries (measurement instrument, not execution capacity). 4 IMM vs IMM-P® corrections (hero body, hero ctaNote, final ctaNote, Pillars lead + foundation label, pilot reference). FUNDAPEC named publicly consistent with the existing case-study tone.
+- Acceptance criteria:
+  - The three deliverable previews render with example fictional data and "Example output" captions.
+  - IMM (model) and IMM-P® (program) used correctly throughout.
+  - `npm run verify` exits 0.
+- Commits: 404991fcf02f0e47d33dd07a2808f75353c00e89 (impl), pending (governance)
+
+### E-Q3
+- Description: ClarityScan® visual tier treatment: rework `/services/clarityscan` as overview + Tier 1 detail, add NEW subpages `/services/clarityscan/diagnostic` (Tier 2) and `/services/clarityscan/audit` (Tier 3).
+- Rationale: Per user directive 2026-06-01 ("on ClarityScan consider what people would like to see visually... the radars, the domains... demo examples of what they get... maybe each tier after 1 get their own subpage"). The previous single-page tier section did not show buyers what they receive per tier.
+- Implementation:
+  - Overview page (`/services/clarityscan`): Hero with tiered positioning; What every tier measures (`<Pillars>` 5 IMM domains); The three tiers (3-card grid linking to T1 detail anchor, /diagnostic, /audit); Tier 1 Snapshot detail with inline `<Radar>` and `<MaturityLadder>`; How Tier 1 works; What Tier 1 does not include; FinalCta.
+  - Tier 2 subpage (NEW): Hero; What T2 delivers (`<Radar>` baseline + target, `<MaturityLadder>` current=2 target=4, inline 2x2 priority matrix as CSS-grid, `<Roadmap>` 0-30/30-60/60-90 days); Who T2 is for; How T2 works (Scope/Survey/Synthesize/Decide); Boundaries; FinalCta.
+  - Tier 3 subpage (NEW): Hero; What T3 delivers (`<Radar>` evidence-backed + target, `<MaturityLadder>`, `<EvidenceMeter>` score=72, `<Roadmap>` 5-phase cascade matching IMM-P® phases); Who T3 is for; What an audit-grade dossier contains; How T3 works; Compliance posture; Compare across tiers; FinalCta.
+- All example data labeled "Example output" to prevent confusion with real client deliverables.
+- JSON-LD: overview Service with offers (CHF 150 T1); T2 and T3 Service without offers and `isRelatedTo` cross-links.
+- Acceptance criteria:
+  - Three URLs exist: `/services/clarityscan`, `/services/clarityscan/diagnostic`, `/services/clarityscan/audit`.
+  - All five IMM semantic components render across the tier set with example data.
+  - Cross-links navigate cleanly across the three pages.
+  - `npm run verify` exits 0.
+- Closes audit findings: CONV-001 (pricing visibility — kept and emphasized at T1), CONV-006/007 (CTA expectation setting — duration / prep / outcome clarified per tier), partial CONV-010 (additional risk-reduction microcopy per tier card).
+- Commits: 5ce0370aa47d02fbbd1632af9d0f3804224b91d7 (impl), pending (governance)
+
 ### E-J1 (BACKLOG ONLY, DEFERRED)
 - Description: Testimonials and named client quotes on doulab.net (homepage, case studies, services pages).
 - Rationale: Audit-2026-06 CONV-003, SALES-002, BP-013. Four roles flagged zero attributed quotes as a P0 trust gap for procurement-eligible buyers, especially in regulated finance and public sector. Site shows 4 named clients (AFP Siembra, Alpha Inversiones, FUNDAPEC, OGTIC/RedLab) but no quotes from sponsors at any of them.

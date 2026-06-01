@@ -43,10 +43,10 @@ function ProblemSection() {
         Icon: AlertTriangle,
         title: 'Culture is not wired for innovation',
         detail:
-          'Only 21 percent of employees worldwide are engaged at work, a persistent drag on any change effort.',
+          'Global employee engagement fell to 21 percent in 2024, the second drop in twelve years, costing the world economy an estimated 438 billion dollars. Latin America and the Caribbean sits higher at 31 percent, yet two thirds of the regional workforce is still not engaged.',
         sourceHref:
           'https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx',
-        sourceLabel: 'Gallup, State of the Global Workplace 2024',
+        sourceLabel: 'Gallup, State of the Global Workplace 2025',
         response:
           'IMM-P® installs culture, cadence, and capability gates so engagement has somewhere to land.',
         responseHref: '/services/innovation-maturity',
@@ -56,10 +56,10 @@ function ProblemSection() {
         Icon: GitBranch,
         title: 'Strategy stalls between intent and execution',
         detail:
-          'About 70 percent of large change programs fall short of their stated goals, a figure McKinsey has tracked across two decades.',
+          'McKinsey research finds that fewer than one in three organizational transformations succeed at improving performance and sustaining the gains. Two decades of survey data show the rate has not moved.',
         sourceHref:
-          'https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/losing-from-day-one-why-even-successful-transformations-fall-short',
-        sourceLabel: 'McKinsey, Losing from day one (2021)',
+          'https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/successful-transformations',
+        sourceLabel: 'McKinsey, The science behind successful organizational transformations',
         response:
           'MCF canvases turn strategy into small, testable bets with explicit owners and decision points.',
         responseHref: '/docs/research-resources/microcanvas',
@@ -69,9 +69,10 @@ function ProblemSection() {
         Icon: Eye,
         title: 'Decisions outrun the evidence',
         detail:
-          'Harvard Business School Online reports that data-driven firms are roughly three times more likely to report measurable improvement in decisions than peers that rely on intuition.',
-        sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-        sourceLabel: 'HBS Online, Data-driven decision-making',
+          'The WIPO Global Innovation Index 2025 finds Latin America and the Caribbean lost ground this year, with most economies stagnating and the region overtaken by Central and Southern Asia. Chile ranks 51, Brazil 52, Mexico 58, and the regional input to output gap reflects weak evidence to decision linkages.',
+        sourceHref:
+          'https://www.wipo.int/web-publications/global-innovation-index-2025/en/gii-2025-results.html',
+        sourceLabel: 'WIPO, Global Innovation Index 2025',
         response:
           'ClarityScan produces a one-page maturity baseline so the next decision sits on signal, not opinion.',
         responseHref: '/services/clarityscan',
@@ -81,10 +82,10 @@ function ProblemSection() {
         Icon: Compass,
         title: 'Foresight is missing from the planning cycle',
         detail:
-          'The OECD finds that organizations with formal strategic foresight practices adapt faster to disruption and identify opportunities earlier than peers without them.',
+          'The OECD Latin American Economic Outlook 2025 warns that the region risks a third decade of low growth without active production transformation strategies that pair foresight, digital adoption, and green industrial policy. Regional GDP grew only about 2 percent in 2024.',
         sourceHref:
-          'https://www.oecd.org/en/about/programmes/strategic-foresight.html',
-        sourceLabel: 'OECD, Strategic Foresight',
+          'https://www.oecd.org/en/publications/latin-american-economic-outlook-2025_80e48de5-en.html',
+        sourceLabel: 'OECD, Latin American Economic Outlook 2025',
         response:
           'Vigia Futura supplies signal scans and scenario briefings so plans absorb the curve before it arrives.',
         responseHref: '/vigia-futura',

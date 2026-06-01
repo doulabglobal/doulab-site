@@ -374,13 +374,42 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Status: BACKLOG.
 - Commits: pending.
 
-### BRAND-NEW-002 (BACKLOG, surfaced 2026-06-01)
-- Description: Phase color normalization. User noted on the `/services/clarityscan/audit` "Phase readiness cascade" that phase accent colors may not be consistent with how phases are colored elsewhere on the site (e.g., `/services/innovation-maturity` IMM-P® cycle Roadmap, `/services/imm-dt` IMM-DT roadmap horizons).
-- Severity: P2 (brand consistency).
-- Effort: S (audit the 4-5 places that paint IMM-P phases and ensure the same phase index maps to the same `--dl-*` token everywhere).
-- Fix path: cross-check Roadmap state mapping (`now` / `next` / `later`) and any per-phase color assignments on innovation-maturity.tsx, imm-dt.tsx, clarityscan/audit.tsx, clarityscan/diagnostic.tsx. Pick one canonical phase-to-color map and apply.
-- Status: BACKLOG.
-- Commits: pending.
+### BRAND-NEW-002 (RESOLVED)
+- Description: Phase color normalization.
+- Canonical IMM-P® 5-phase state map documented and verified across the two 5-phase Roadmap instances (innovation-maturity.tsx and clarityscan/audit.tsx): Foundations → now/indigo, Structured Discovery → now/purple, Efficiency → next/green, Scaling → next/amber, Continuous Improvement → later/slate. imm-dt.tsx (6-horizon 0-36mo) and clarityscan/diagnostic.tsx (3-horizon 90-day) use different roadmap shapes so the canonical 5-phase map does not apply to them.
+- Commits: 5909d9926d03362e7cd3986dea31eb5855719ee0 (impl, bundled with IMM/IMM-P + extension link), pending (governance)
+
+### BRAND-NEW-001 (RESOLVED)
+- Description: cardGrid trailing-row imbalance with 4 or 5 cards.
+- Fix: switched `.cardGrid` from `repeat(12, 1fr)` + `.card { grid-column: span 4 }` to `repeat(auto-fit, minmax(280px, 1fr))` with `align-items: stretch`. Trailing rows now balanced for any card count.
+- Commits: c12156525961673d21265c9e450b920271bf2a4d (impl), pending (governance)
+
+### VP-NEW-005 (RESOLVED)
+- Description: Roadmap component intrinsic responsiveness.
+- Fix: switched `Roadmap.module.css` `.wrap` from viewport-based `@media` to `@container roadmap (max-width: 767px)` with `container-type: inline-size`. Roadmap now collapses based on its OWN parent width instead of the viewport.
+- Page-level `gridColumn: 1/-1` workarounds in audit.tsx and diagnostic.tsx are now functionally redundant but kept (harmless).
+- Commits: c9be5bbff8fb7c572b7b31174b18ca628272da52 (impl), pending (governance)
+
+### VP-NEW-006 (RESOLVED)
+- Description: EvidenceMeter overflow in narrow grid cells.
+- Fix: `.chartBox` `min-width: 200px` → `min-width: 0; width: 100%; box-sizing: border-box`. SVG scales cleanly to whatever container width is available.
+- Commits: c9be5bbff8fb7c572b7b31174b18ca628272da52 (impl, bundled with VP-NEW-005), pending (governance)
+
+### COPY-NEW-001 (RESOLVED)
+- Description: Homepage Problem section sources refresh.
+- Implementation: 3 of 4 sources updated to 2025 editions; the fourth is McKinsey's perpetually-maintained transformation synthesis. LATAM/Caribbean relevance now explicit in 3 of 4 cards. Sources: Gallup State of the Global Workplace 2025, McKinsey "The science behind successful organizational transformations", WIPO Global Innovation Index 2025 (LATAM specific), OECD Latin American Economic Outlook 2025.
+- Commits: b4d6f514f782060c69869d33892fa7f492989770 (impl), pending (governance)
+
+### E-R2.2 (ACCEPTED-BENIGN, residual after T5 diagnostic)
+- Description: 29 `style-src-attr` CSP Report-Only violations on the production home page.
+- T5 diagnostic (commit pending under T5 prompt; agent declined to swizzle): the violations split as follows:
+  - 5 `style-src-attr` from `@docusaurus/core` BaseUrlIssueBanner inline injection (line 6 of build/index.html). NOT swizzlable — lives in @docusaurus/core, not theme-classic. Recommended follow-up: set `baseUrlIssueBanner: false` in `docusaurus.config.ts` to disable the dev-only banner injection entirely (the banner only fires on baseUrl misconfiguration).
+  - 1 `style-src-attr` from theme-classic SVG sprite wrapper (line 19; `<svg style="display:none">`). NOT swizzlable — injected at the plugin level via `injectHtmlTags`. Recommended follow-up: accept-benign OR widen Report-Only `style-src-attr` to include a sha256 hash for that single declaration.
+  - ~23 `style-src-attr` from our own IMM components and homepage section inline styles (line 22). These are CSS-custom-property setters (legitimate per the IMM dynamic-property pattern) and inline section-wrapper styles. Acceptable surface; would require either a larger swizzle effort or accepting `'unsafe-inline'` on `style-src-attr` in Report-Only.
+- Status: ACCEPTED-BENIGN for now. Two narrowly-scoped follow-ups filed:
+  - E-R2.2a: set `baseUrlIssueBanner: false` in config (5 violation drop).
+  - E-R2.2b: add hash for SVG sprite display:none (1 violation drop).
+- Commits: no impl (T5 declined to ship a no-op swizzle).
 
 ### E-R3 (BACKLOG, filed from R2 follow-up findings)
 - Description: Page-level `link-in-text-block` + `label-content-name-mismatch` A11y fixes.

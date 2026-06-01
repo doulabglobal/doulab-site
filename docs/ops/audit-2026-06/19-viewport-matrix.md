@@ -610,3 +610,69 @@ The new IMM semantic components render at small mobile widths (360 and 390). Lar
 ### Verdict
 
 Phase E rebuilds **render cleanly on the small mobile anchors that were captured** — the new IMM semantic components (Pillars, Roadmap, Radar, MaturityLadder, EvidenceMeter) appear in their target positions and degrade reasonably at 360 width. Desktop validation is **incomplete** due to a harness limitation (VP-NEW-002) and needs a v5.1 re-sweep before the audit can be marked complete.
+
+## Phase C verification — viewport prod-v5.1 (post-E-R1 Phase A deploy, 2026-06-01)
+
+### Context
+
+This section verifies the close-out of **VP-NEW-002** (harness early-exit bug, fixed in E-R1.3 commit `b97c066`) and **VP-NEW-003** (desktop coverage gap on the rebuilt IMM pages). The v5.1 harness was run end-to-end against the live `https://www.doulab.net` production deploy from the `ops/audits/doulab-net/viewport-2026-06-prod-v5.1/` directory. The harness now runs to completion across all 18 pages x 6 anchors.
+
+### Coverage
+
+| Metric | Target | Captured |
+|---|---|---|
+| Total screenshots | 108 | **108** |
+| Pages | 18 | 18 |
+| Anchors per page | 6 | 6 |
+| Zero-byte PNGs | 0 | 0 |
+| HTTP failures | 0 | 0 (all 200) |
+
+Two transient `page.goto` timeouts were retried automatically (`case-studies-afp-siembra @ 768x1024` and `work-with-us @ 1366x768`); both succeeded on attempt 2. No page was lost.
+
+### Per-anchor totals
+
+| Anchor | Captured / 18 |
+|---|---|
+| 360x640 | 18/18 |
+| 390x844 | 18/18 |
+| 768x1024 | 18/18 |
+| 1280x800 | 18/18 |
+| 1366x768 | 18/18 |
+| 1920x1080 | 18/18 |
+
+### Spot-check observations
+
+- `home/1920x1080.png` — rebuilt Problem section renders cleanly; "Our Service Pillars", "Proof, by the numbers", Case Studies, Research + Resources, and Principles all stack correctly with no overflow or FOUC. Desktop layout is clean.
+- `services-imm-dt/1280x800.png` — header, "What IMM-DT measures" pillar strip, Radar + MaturityLadder + EvidenceMeter cluster, and "The IMM-DT roadmap" Roadmap component all render in their target positions. **However**, the "How IMM-DT delivers" and "Who IMM-DT is for" tables collapse to extremely narrow columns producing one-character-per-line vertical text. Same defect at 1366x768 and 1920x1080.
+- `services-clarityscan-audit/1366x768.png` — Radar, MaturityLadder, EvidenceMeter (gauge at 72), and Roadmap all render correctly. The "How Tier 3 works" / "Phase results" tabular block exhibits the same severe column-narrowing defect as IMM-DT, producing a tall ribbon of vertical single-character text. Persists at 1920x1080.
+- `vigia-futura/768x1024.png` — narrative arc ("Why an observatory, and why now", three Vigia pillars, "The Vigia Futura Network", "The National Innovation Maturity and Digital Transformation observatory", "Roll-out roadmap", "Working with Vigia Futura") renders cleanly with appropriate tablet stacking. No defects.
+- `services-imm-dt/360x640.png` — mobile collapse is clean: pillars stack vertically, Radar/MaturityLadder/EvidenceMeter render in single column, Roadmap pivots to vertical step list. No clipping or overflow.
+
+The four IMM semantic components (`<Pillars>`, `<Roadmap>`, `<Radar>`, `<MaturityLadder>`, `<EvidenceMeter>`) render correctly across the full desktop anchor range (768 / 1280 / 1366 / 1920) on `services-imm-dt` and `services-clarityscan-audit`. The defect noted above is isolated to a separate tabular block, not to the new semantic components.
+
+### VP-NEW-002 status: **RESOLVED**
+
+The v5.1 harness captured 108/108 screenshots without early exit. The resumable-skip logic worked, the per-page retry recovered both transient timeouts, and `results.json` records `captured: true` for every entry.
+
+### VP-NEW-003 status: **RESOLVED (with new finding)**
+
+Desktop anchors (768 / 1280 / 1366 / 1920) are now fully covered for all rebuilt pages. The new IMM semantic components themselves are visually clean across the desktop range. Coverage gap is closed. A separate tabular-layout defect surfaced on the rebuilt T2/T3 pages and is filed below as VP-NEW-004 — it does not block the closure of VP-NEW-003 (which was strictly about coverage), but it is a genuine new defect uncovered by the now-complete desktop pass.
+
+### New findings
+
+#### VP-NEW-004 — IMM-DT and ClarityScan T3 tabular sections collapse to vertical single-character columns at all desktop widths
+
+- severity: high (significant visual defect on flagship Phase E rebuild pages)
+- location:
+  - `services-imm-dt` — the "How IMM-DT delivers" and "Who IMM-DT is for" tables, at 768x1024, 1280x800, 1366x768, 1920x1080
+  - `services-clarityscan-audit` — the "How Tier 3 works" / "Phase results" matrix at the same four anchors
+- observation: each table column appears to be sized to fit only the narrowest cell content, forcing the wider cells to wrap one character per line and producing a tall ribbon of vertical text. Mobile widths (360, 390) collapse this content acceptably to a single-column stack, so the defect is desktop-grid-specific.
+- likely cause: a CSS grid or table-layout rule on the rebuilt component (probably `table-layout: fixed` without explicit column widths, or a CSS grid with `grid-template-columns: repeat(N, min-content)`) — not a content issue.
+- evidence:
+  - `ops/audits/doulab-net/viewport-2026-06-prod-v5.1/services-imm-dt/{768x1024,1280x800,1366x768,1920x1080}.png`
+  - `ops/audits/doulab-net/viewport-2026-06-prod-v5.1/services-clarityscan-audit/{768x1024,1280x800,1366x768,1920x1080}.png`
+- recommendation: inspect the MDX/component source for the "How <X> delivers" and "How Tier 3 works" blocks and audit the column-width strategy. Likely a one-line fix in component CSS.
+
+### Net verdict
+
+The Phase C re-sweep closes both VP-NEW-002 (harness fix verified — full 108/108 capture, resumable, retry-tolerant) and VP-NEW-003 (desktop anchors now cover the rebuilt pages, with no defects on the new semantic components themselves). The newly-complete desktop coverage immediately paid for itself by surfacing **VP-NEW-004**, a high-severity column-collapse defect on the IMM-DT and ClarityScan T3 tabular sections that is invisible at mobile widths. Phase E rebuilds remain otherwise visually clean across all six anchors; VP-NEW-004 should be triaged before the E-R1 close-out is signed off.

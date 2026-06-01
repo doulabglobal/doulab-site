@@ -6,7 +6,6 @@ import Link from '@docusaurus/Link';
 
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
-import CardGrid from '../../components/CardGrid/CardGrid';
 import Pillars from '../../components/imm/Pillars';
 import Roadmap from '../../components/imm/Roadmap';
 import Radar from '../../components/imm/Radar';
@@ -226,7 +225,7 @@ export default function IMMDTPage(): ReactNode {
         {/* How IMM-DT delivers */}
         <section className="section" id="how" aria-labelledby="how-title">
           <h2 id="how-title">How IMM-DT delivers</h2>
-          <CardGrid>
+          <div className="cardGrid">
             <article className="card">
               <Layers className="cardIcon" aria-hidden="true" />
               <h3>1. Kickoff diagnostic</h3>
@@ -242,13 +241,13 @@ export default function IMMDTPage(): ReactNode {
               <h3>3. Benchmark</h3>
               <p>Compare against regional peers (e.g., fintech reference set for financial services) to make “good” concrete.</p>
             </article>
-          </CardGrid>
+          </div>
         </section>
 
         {/* Who it's for */}
         <section className="section" id="who" aria-labelledby="who-title">
           <h2 id="who-title">Who IMM-DT is for</h2>
-          <CardGrid>
+          <div className="cardGrid">
             <article className="card">
               <Settings2 className="cardIcon" aria-hidden="true" />
               <h3>Financial services</h3>
@@ -264,7 +263,7 @@ export default function IMMDTPage(): ReactNode {
               <h3>Mid-to-large organizations</h3>
               <p>Enterprises moving from one-off digital initiatives to a repeatable, governed transformation operating model.</p>
             </article>
-          </CardGrid>
+          </div>
         </section>
 
         {/* Pilot reference */}

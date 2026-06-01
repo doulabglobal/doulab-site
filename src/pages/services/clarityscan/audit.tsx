@@ -95,7 +95,7 @@ export default function ClarityScanTier3Page(): ReactNode {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
               gap: '2rem',
               alignItems: 'start',
               marginTop: '1.5rem',
@@ -151,7 +151,13 @@ export default function ClarityScanTier3Page(): ReactNode {
               </p>
             </div>
 
-            <div>
+            {/*
+              VP-NEW-004 follow-up: Roadmap component's internal layout collapses to one-char-per-line
+              when its parent cell is narrower than ~500px. Forcing this item to span the full grid row
+              (gridColumn: 1 / -1) gives Roadmap the full container width. The root fix belongs in
+              src/components/imm/Roadmap (make it intrinsically responsive); flagged for follow-up.
+            */}
+            <div style={{ gridColumn: '1 / -1' }}>
               <h3 style={{ color: 'var(--dl-amber, #F59E0B)' }}>Phase readiness cascade</h3>
               <Roadmap
                 ariaLabel="Example Tier 3 cascade across the five IMM-P phases"

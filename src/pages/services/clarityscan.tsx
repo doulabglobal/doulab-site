@@ -260,7 +260,7 @@ export default function ClarityScanPage(): ReactNode {
             }}
           >
             <div>
-              <h3 style={{ color: 'var(--dl-indigo, #4F46E5)' }}>Domain radar</h3>
+              <h3 style={{ color: 'var(--ifm-heading-color)' }}>Domain radar</h3>
               <Radar
                 ariaLabel="Example Tier 1 domain radar with five IMM domains"
                 title="Five-domain maturity snapshot"
@@ -281,6 +281,7 @@ export default function ClarityScanPage(): ReactNode {
                 ariaLabel="Example Tier 1 maturity ladder with current rung 2"
                 title="Where you sit today"
                 current={2}
+                layout="wrap"
                 rungs={[
                   { label: 'Foundations', description: 'Ad-hoc practice; little shared discipline.' },
                   { label: 'Structured Discovery', description: 'Repeatable framing, interviews, and assumption tests.' },

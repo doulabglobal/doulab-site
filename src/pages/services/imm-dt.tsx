@@ -127,7 +127,7 @@ export default function IMMDTPage(): ReactNode {
             }}
           >
             <div>
-              <h3 style={{ color: 'var(--dl-indigo, #4F46E5)' }}>Domain radar</h3>
+              <h3 style={{ color: 'var(--ifm-heading-color)' }}>Domain radar</h3>
               <Radar
                 ariaLabel="Example IMM-DT domain radar with five axes and a target overlay"
                 title="Five-domain DT maturity snapshot"

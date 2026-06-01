@@ -133,7 +133,7 @@ function ProblemSection() {
                 style={{
                   marginTop: '1rem',
                   paddingTop: '0.75rem',
-                  borderTop: '1px dashed var(--dl-slate, #5a6473)',
+                  borderTop: '1px dashed var(--ifm-color-emphasis-300)',
                 }}
               >
                 <p
@@ -142,7 +142,7 @@ function ProblemSection() {
                     letterSpacing: '0.06em',
                     textTransform: 'uppercase',
                     margin: '0 0 0.35rem 0',
-                    color: 'var(--dl-indigo, #3b3f8f)',
+                    color: 'var(--ifm-heading-color)',
                     fontWeight: 600,
                   }}
                 >

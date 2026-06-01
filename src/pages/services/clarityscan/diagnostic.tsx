@@ -98,7 +98,7 @@ export default function ClarityScanTier2Page(): ReactNode {
             }}
           >
             <div>
-              <h3 style={{ color: 'var(--dl-indigo, #4F46E5)' }}>Baseline vs target radar</h3>
+              <h3 style={{ color: 'var(--ifm-heading-color)' }}>Baseline vs target radar</h3>
               <Radar
                 ariaLabel="Example Tier 2 domain radar with baseline scores and target overlay"
                 title="Baseline vs target"
@@ -272,7 +272,7 @@ export default function ClarityScanTier2Page(): ReactNode {
 // Inline 2x2 priority matrix. Pure CSS-grid, no new dependencies.
 function PriorityMatrix(): ReactNode {
   const cellBase: React.CSSProperties = {
-    border: '1px solid var(--dl-slate, #64748B)',
+    border: '1px solid var(--ifm-color-emphasis-300)',
     borderRadius: '8px',
     padding: '0.75rem',
     background: 'var(--ifm-background-surface-color, #fff)',
@@ -295,22 +295,22 @@ function PriorityMatrix(): ReactNode {
       >
         {/* Row 1: top label */}
         <div />
-        <div style={{ gridColumn: '2 / span 2', textAlign: 'center', fontSize: '0.85rem', color: 'var(--dl-slate, #64748B)' }}>
+        <div style={{ gridColumn: '2 / span 2', textAlign: 'center', fontSize: '0.85rem', color: 'var(--ifm-color-emphasis-700)' }}>
           Impact (high ↑)
         </div>
 
         {/* Row 2: top quadrants */}
-        <div style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', textAlign: 'center', fontSize: '0.85rem', color: 'var(--dl-slate, #64748B)' }}>
+        <div style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', textAlign: 'center', fontSize: '0.85rem', color: 'var(--ifm-color-emphasis-700)' }}>
           Effort (low ←)
         </div>
-        <div style={{ ...cellBase, borderColor: 'var(--dl-green, #10B981)' }}>
-          <strong style={{ color: 'var(--dl-green, #10B981)' }}>Quick wins</strong>
+        <div style={{ ...cellBase, borderColor: 'var(--dl-green, #72c53c)' }}>
+          <strong style={{ color: 'var(--dl-green, #72c53c)' }}>Quick wins</strong>
           <p style={{ margin: '0.3rem 0 0', fontSize: '0.9rem' }}>
             Decision memo template. Weekly portfolio review.
           </p>
         </div>
-        <div style={{ ...cellBase, borderColor: 'var(--dl-indigo, #4F46E5)' }}>
-          <strong style={{ color: 'var(--dl-indigo, #4F46E5)' }}>Strategic bets</strong>
+        <div style={{ ...cellBase, borderColor: 'var(--ifm-color-primary)' }}>
+          <strong style={{ color: 'var(--ifm-color-primary)' }}>Strategic bets</strong>
           <p style={{ margin: '0.3rem 0 0', fontSize: '0.9rem' }}>
             Evidence-gate governance model. Cross-unit cadence.
           </p>
@@ -318,14 +318,14 @@ function PriorityMatrix(): ReactNode {
 
         {/* Row 3: bottom quadrants */}
         <div />
-        <div style={{ ...cellBase, borderColor: 'var(--dl-slate, #64748B)' }}>
-          <strong style={{ color: 'var(--dl-slate, #64748B)' }}>Fill-ins</strong>
+        <div style={{ ...cellBase, borderColor: 'var(--ifm-color-emphasis-500)' }}>
+          <strong style={{ color: 'var(--ifm-color-emphasis-800)' }}>Fill-ins</strong>
           <p style={{ margin: '0.3rem 0 0', fontSize: '0.9rem' }}>
             Templates cleanup. Shared glossary.
           </p>
         </div>
-        <div style={{ ...cellBase, borderColor: 'var(--dl-amber, #F59E0B)' }}>
-          <strong style={{ color: 'var(--dl-amber, #F59E0B)' }}>Reconsider</strong>
+        <div style={{ ...cellBase, borderColor: 'var(--dl-amber, #f59e0b)' }}>
+          <strong style={{ color: 'var(--dl-amber, #f59e0b)' }}>Reconsider</strong>
           <p style={{ margin: '0.3rem 0 0', fontSize: '0.9rem' }}>
             Bespoke dashboards. One-off offsites.
           </p>
@@ -333,7 +333,7 @@ function PriorityMatrix(): ReactNode {
 
         {/* Row 4: bottom label */}
         <div />
-        <div style={{ gridColumn: '2 / span 2', textAlign: 'center', fontSize: '0.85rem', color: 'var(--dl-slate, #64748B)' }}>
+        <div style={{ gridColumn: '2 / span 2', textAlign: 'center', fontSize: '0.85rem', color: 'var(--ifm-color-emphasis-700)' }}>
           Effort (high →)
         </div>
       </div>

@@ -24,11 +24,15 @@ image: /img/blog/2026/2026-01-19-coordination-threshold-hero.png
 {/* truncate */}
 
 <div className="nnyHero nnyHero--image">
-  <img
-    src="/img/blog/2026/2026-01-19-coordination-threshold-hero.png"
-    alt="Editorial hero: coordination threshold in startup ecosystems"
-    loading="eager"
-  />
+  <picture>
+    <source srcSet="/img/blog/2026/2026-01-19-coordination-threshold-hero.avif" type="image/avif" />
+    <source srcSet="/img/blog/2026/2026-01-19-coordination-threshold-hero.webp" type="image/webp" />
+    <img
+      src="/img/blog/2026/2026-01-19-coordination-threshold-hero.png"
+      alt="Editorial hero: coordination threshold in startup ecosystems"
+      loading="eager"
+    />
+  </picture>
 </div>
 
 

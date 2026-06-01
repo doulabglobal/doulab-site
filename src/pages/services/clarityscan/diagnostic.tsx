@@ -134,7 +134,7 @@ export default function ClarityScanTier2Page(): ReactNode {
               </p>
             </div>
 
-            <div>
+            <div style={{ gridColumn: '1 / -1' }}>
               <h3 style={{ color: 'var(--dl-amber, #F59E0B)' }}>Priority matrix: impact vs effort</h3>
               <PriorityMatrix />
               <p className="microcopy" style={{ marginTop: '0.75rem' }}>
@@ -142,7 +142,7 @@ export default function ClarityScanTier2Page(): ReactNode {
               </p>
             </div>
 
-            <div>
+            <div style={{ gridColumn: '1 / -1' }}>
               <h3 style={{ color: 'var(--dl-green, #10B981)' }}>90-day roadmap snippet</h3>
               <Roadmap
                 ariaLabel="Example Tier 2 ninety-day roadmap with three horizons"

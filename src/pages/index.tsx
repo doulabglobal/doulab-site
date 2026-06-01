@@ -153,7 +153,6 @@ function ProblemSection() {
                   className="cardCta"
                   data-cta={`cta.home.problem.response.${idx}`}
                   aria-label={`Learn about ${c.responseLabel}`}
-                  style={{ color: 'var(--dl-indigo, #3b3f8f)' }}
                 >
                   {c.responseLabel} <ArrowRight size={14} aria-hidden={true} />
                 </Link>

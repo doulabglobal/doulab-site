@@ -73,8 +73,12 @@
 
 .titleLink {
   color: inherit;
+  /* E-R3.1 a11y nudge: stronger underline contrast on light accent backgrounds.
+     rgba(255,255,255,0.9) maintains the soft link look while clearing the
+     WCAG 1.4.11 3:1 graphical-object threshold on amber and green caps. */
   text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.55);
+  text-decoration-color: rgba(255, 255, 255, 0.9);
+  text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   transition: text-decoration-color 0.15s ease;
 }

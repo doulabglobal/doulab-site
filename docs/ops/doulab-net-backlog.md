@@ -123,9 +123,9 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - `static/img/research/innovation-lab-guide/hero-nyy.{avif,webp}` (2.49 MB PNG -> 170 KB AVIF and 263 KB WebP)
   - `static/img/blog/2026/2026-01-19-coordination-threshold-hero.{avif,webp}` (422 KB PNG -> 24 KB AVIF and 43 KB WebP)
   - `static/img/luis.{avif,webp}` (258 KB PNG -> 7 KB AVIF and 13 KB WebP)
-- Source-side wiring deferred (flagged in commit body): `docs/research-resources/innovation-lab-guide/index.mdx` and `blog/2026-01-19-coordination-threshold.md` body still reference bare PNG. Blog author avatar via `blog/authors.yml` cannot easily negotiate AVIF given the Docusaurus blog plugin's rendering, so leave the PNG reference. Follow-up may swap to a `<picture>` upgrade where Docusaurus permits.
+- Source-side wiring CLOSED 2026-06-01 (86572eb): both bare-PNG body refs (`docs/research-resources/innovation-lab-guide/index.mdx` and `blog/2026-01-19-coordination-threshold.md`) now wrapped in `<picture>` with AVIF + WebP `<source>` siblings. Capable clients negotiate down from the 2.49 MB / 422 KB PNG fallbacks to the 170 KB / 24 KB AVIFs. Blog author avatar via `blog/authors.yml` remains on PNG by design (Docusaurus blog plugin does not negotiate alternate formats for author images).
 - Closes audit findings: PERF-002 (the named hero-nyy asset specifically; broader image-strategy items remain in PERF-001..PERF-015 backlog).
-- Commits: 5875899d1d6bd8632e45dea05ada021bd1a70806 (impl), pending (governance)
+- Commits: 5875899d1d6bd8632e45dea05ada021bd1a70806 (sibling generation), 86572eb (source-side `<picture>` wiring).
 
 ### E-L1
 - Description: Consolidate `:root` tokens in `src/css/custom.css`; align primary to IMM canonical `#38249a`; declare previously-undeclared grey tokens and font-family.

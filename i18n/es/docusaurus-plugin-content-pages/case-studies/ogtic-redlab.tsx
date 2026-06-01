@@ -45,7 +45,7 @@ export default function CaseOgticRedlab(): ReactNode {
 
   return (
     <Layout
-      title="OGTIC: Red de Laboratorios de Innovación RedLab | Caso de éxito | Doulab"
+      title="OGTIC: Red de Laboratorios de Innovación RedLab | Caso de éxito"
       description="Ayudamos a diseñar y facilitar RedLab con métodos compartidos, gobernanza y cadencia, para que los equipos públicos pasen de ideas a evidencia y entrega."
     >
       <Head>

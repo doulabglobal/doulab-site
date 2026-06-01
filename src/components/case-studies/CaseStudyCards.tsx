@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Translate, { translate } from '@docusaurus/Translate';
 import { CASE_STUDIES, type CaseStudy } from './caseStudiesData';
 
 type Props = {
@@ -33,23 +34,52 @@ function Card({ cs }: { cs: CaseStudy }) {
       </picture>
 
       <h3 id={`cs-${cs.slug}-title`}>
-        <Link to={cs.to} data-cta={`${cs.dataCtaBase}.title`} aria-label={`Read ${cs.title} case study`}>
+        <Link
+          to={cs.to}
+          data-cta={`${cs.dataCtaBase}.title`}
+          aria-label={translate(
+            { id: 'caseStudies.card.titleAriaLabel', message: 'Read {title} case study' },
+            { title: cs.title },
+          )}
+        >
           {cs.title}
         </Link>
       </h3>
 
       {(cs.sector || cs.capabilities) && (
         <>
-          {cs.sector && <p className="microcopy"><strong>Sector:</strong> {cs.sector}</p>}
-          {cs.capabilities && <p className="microcopy"><strong>Capabilities:</strong> {cs.capabilities}</p>}
+          {cs.sector && (
+            <p className="microcopy">
+              <strong>
+                <Translate id="caseStudies.card.sectorLabel">Sector:</Translate>
+              </strong>{' '}
+              {cs.sector}
+            </p>
+          )}
+          {cs.capabilities && (
+            <p className="microcopy">
+              <strong>
+                <Translate id="caseStudies.card.capabilitiesLabel">Capabilities:</Translate>
+              </strong>{' '}
+              {cs.capabilities}
+            </p>
+          )}
         </>
       )}
 
       <p>{cs.excerpt}</p>
 
       <div className="cardFooter">
-        <Link className="cardCta" to={cs.to} data-cta={cs.dataCtaBase} aria-label={`Read ${cs.title} case study`}>
-          Read the case →
+        <Link
+          className="cardCta"
+          to={cs.to}
+          data-cta={cs.dataCtaBase}
+          aria-label={translate(
+            { id: 'caseStudies.card.ctaAriaLabel', message: 'Read {title} case study' },
+            { title: cs.title },
+          )}
+        >
+          <Translate id="caseStudies.card.cta">Read the case →</Translate>
         </Link>
       </div>
     </article>

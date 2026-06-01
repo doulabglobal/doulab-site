@@ -45,7 +45,7 @@ export default function CaseFundapec(): ReactNode {
 
   return (
     <Layout
-      title="FUNDAPEC: New business models and alumni platform | Case Study | Doulab"
+      title="FUNDAPEC: New business models and alumni platform | Case Study"
       description="We redesigned and relaunched Comunidad FUNDAPEC after a new business models exploration, creating a reliable engagement engine with clear governance and single source of truth analytics."
     >
       <Head>

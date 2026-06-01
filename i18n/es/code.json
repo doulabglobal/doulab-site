@@ -325,5 +325,20 @@
   "theme.tags.tagsPageTitle": {
     "message": "Etiquetas",
     "description": "The title of the tag list page"
+  },
+  "caseStudies.card.titleAriaLabel": {
+    "message": "Leer el caso de {title}"
+  },
+  "caseStudies.card.sectorLabel": {
+    "message": "Sector:"
+  },
+  "caseStudies.card.capabilitiesLabel": {
+    "message": "Capacidades:"
+  },
+  "caseStudies.card.ctaAriaLabel": {
+    "message": "Leer el caso de {title}"
+  },
+  "caseStudies.card.cta": {
+    "message": "Leer el caso →"
   }
 }

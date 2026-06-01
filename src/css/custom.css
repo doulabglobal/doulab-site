@@ -594,6 +594,19 @@ a:hover {
         max-height: 100% !important;
         max-width: 100% !important;
     }
+
+    /* G-10: kill text-align: justify on hero subtitles at narrow widths so
+       long ES strings don't render with catastrophic word-rivers on mobile.
+       Targets both the global .heroSubtitle and the page-scoped
+       .components-hero__subtitle / .pages-b4-p2__heroSubtitleJustify, plus
+       a guard for any future class matching [class*="hero__subtitle"]. */
+    .heroSubtitle,
+    .components-hero__subtitle,
+    .pages-b4-p2__heroSubtitleJustify,
+    [class*="hero__subtitle"] {
+        text-align: left;
+        text-wrap: balance;
+    }
 }
 
 /* IMM Hero Mermaid: hide edges so it looks like a funnel stack (layout still uses real links) */

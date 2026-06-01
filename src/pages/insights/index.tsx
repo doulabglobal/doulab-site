@@ -165,7 +165,7 @@ export default function Insights(): ReactNode {
 
   return (
     <Layout
-      title="Insights, Research and Resources | Doulab"
+      title="Insights, Research and Resources"
       description="Research, resources, and whitepapers from Doulab, practical, testable, and open."
     >
       <Head>

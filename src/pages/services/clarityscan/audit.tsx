@@ -44,7 +44,7 @@ export default function ClarityScanTier3Page(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan® Tier 3: Audit | Doulab"
+      title="ClarityScan® Tier 3: Audit"
       description="ClarityScan® Tier 3 Audit is an evidence-backed, audit-ready innovation maturity engagement. Every score is documented; deliverable is a governance-grade dossier."
     >
       <Head>

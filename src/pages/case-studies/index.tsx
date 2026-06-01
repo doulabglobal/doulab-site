@@ -14,7 +14,7 @@ import LineChart from 'lucide-react/dist/esm/icons/line-chart';
 export default function CaseStudies(): ReactNode {
   return (
     <Layout
-      title="Case Studies, Outcomes and Repeatable Delivery | Doulab"
+      title="Case Studies, Outcomes and Repeatable Delivery"
       description="Selected projects and measurable outcomes from Doulab, with clear checkpoints, evidence packs, and KPIs."
     >
       <Head>

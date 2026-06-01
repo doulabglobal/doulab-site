@@ -34,7 +34,7 @@ export default function CustomWorkshopsPage(): ReactNode {
 
   return (
     <Layout
-      title="Custom Workshops: Align decisions & accelerate outcomes | Doulab"
+      title="Custom Workshops: Align decisions & accelerate outcomes"
       description="Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day formats, on-site or remote."
     >
       <Head>

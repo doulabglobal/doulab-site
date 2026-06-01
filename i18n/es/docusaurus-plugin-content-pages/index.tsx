@@ -74,9 +74,9 @@ function ProblemSection() {
           'https://www.wipo.int/web-publications/global-innovation-index-2025/en/gii-2025-results.html',
         sourceLabel: 'OMPI, Índice Mundial de Innovación 2025',
         response:
-          'ClarityScan produce una línea base de madurez en una página, para que la siguiente decisión se apoye en señal y no en opinión.',
+          'ClarityScan® produce una línea base de madurez en una página, para que la siguiente decisión se apoye en señal y no en opinión.',
         responseHref: '/services/clarityscan',
-        responseLabel: 'Diagnóstico ClarityScan',
+        responseLabel: 'Diagnóstico ClarityScan®',
       },
       {
         Icon: Compass,

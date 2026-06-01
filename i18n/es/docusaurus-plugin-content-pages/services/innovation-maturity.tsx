@@ -248,7 +248,7 @@ export default function InnovationMaturityProgram(): ReactNode {
 
   return (
     <Layout
-      title="Programa del Modelo de Madurez en Innovación (IMM-P)® | Doulab"
+      title="Programa del Modelo de Madurez en Innovación (IMM-P)®"
       description="IMM es el modelo. IMM-P® es el programa que lleva a tu equipo a través de él: cinco dominios, cinco peldaños de madurez y puntos de control de preparación por fase respaldados por evidencia."
     >
       <Head>

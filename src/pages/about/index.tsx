@@ -87,7 +87,7 @@ export default function AboutPage(): ReactNode {
 
   return (
     <Layout
-      title="About | Doulab"
+      title="About"
       description="Discover Doulab’s vision, story, and service model. Innovation made repeatable."
     >
       <Head>

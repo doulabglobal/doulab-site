@@ -16,7 +16,7 @@ export default function DiagnosticsPage() {
     return (
         <Layout
             title="Diagnostics: ClarityScan®, Foresight & Operating Model"
-            description="Evidence-based scans that baseline Strategy, Culture, Process, Results and turn gaps into a 30/60/90 plan. Built on MicroCanvas® 2.2 and IMM; privacy-first."
+            description="Evidence-based scans that baseline Strategy, Culture, Process, Results and turn gaps into a 30/60/90 plan. Built on MicroCanvas® 2.2 and IMM-P®; privacy-first."
         >
             <Head>
                 <link rel="canonical" href="https://doulab.net/services/diagnostics" />
@@ -41,7 +41,7 @@ export default function DiagnosticsPage() {
                             </p>
                             <p className="heroText">
                                 Evidence-based scans that baseline <strong>Strategy</strong>, <strong>Culture</strong>, <strong>Process</strong>, and <strong>Results</strong>, then convert gaps into a
-                                clear <strong>30/60/90-day plan</strong>. Built on MicroCanvas® 2.2 and IMM; privacy-first by design.
+                                clear <strong>30/60/90-day plan</strong>. Built on MicroCanvas® 2.2 and IMM-P®; privacy-first by design.
                             </p>
                             <div className="heroCtas">
                                 <Link className="buttonPrimary" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.hero.clarityscan">
@@ -182,7 +182,7 @@ export default function DiagnosticsPage() {
                         <article className="card" aria-label="Reusable artifacts">
                             <FileText className="cardIcon" aria-hidden="true" />
                             <h3>Reusable artifacts</h3>
-                            <p>Concise brief you can share; aligned with MicroCanvas® 2.2 and IMM terminology.</p>
+                            <p>Concise brief you can share; aligned with MicroCanvas® 2.2 and IMM-P® terminology.</p>
                         </article>
                     </div>
                     <p className={`lead ${'pages-b4-p2__leadTop'}`}>

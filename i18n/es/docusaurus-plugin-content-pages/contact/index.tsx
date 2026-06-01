@@ -40,7 +40,7 @@ export default function Contact(): ReactNode {
 
   return (
     <Layout
-      title="Contacto | Doulab"
+      title="Contacto"
       description="Inicia una llamada de descubrimiento o envíanos un brief. Privacidad primero, sin formularios de terceros."
     >
       <Head>

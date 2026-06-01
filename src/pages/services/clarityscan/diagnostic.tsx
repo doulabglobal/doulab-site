@@ -40,7 +40,7 @@ export default function ClarityScanTier2Page(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan® Tier 2: Diagnostic | Doulab"
+      title="ClarityScan® Tier 2: Diagnostic"
       description="ClarityScan® Tier 2 is a scoped, role-segmented innovation maturity diagnostic. Baseline vs target radar, prioritized gap matrix, and a 90-day roadmap."
     >
       <Head>

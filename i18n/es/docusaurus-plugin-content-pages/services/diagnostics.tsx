@@ -16,7 +16,7 @@ export default function DiagnosticsPage() {
     return (
         <Layout
             title="Diagnósticos: ClarityScan®, Prospectiva y Modelo Operativo"
-            description="Evaluaciones basadas en evidencia que establecen la línea base de Estrategia, Cultura, Proceso, Resultados y convierten brechas en un plan 30/60/90. Construido sobre MicroCanvas® 2.2 e IMM; con privacidad primero."
+            description="Evaluaciones basadas en evidencia que establecen la línea base de Estrategia, Cultura, Proceso, Resultados y convierten brechas en un plan 30/60/90. Construido sobre MicroCanvas® 2.2 e IMM-P®; con privacidad primero."
         >
             <Head>
                 <link rel="canonical" href="https://doulab.net/services/diagnostics" />
@@ -41,7 +41,7 @@ export default function DiagnosticsPage() {
                             </p>
                             <p className="heroText">
                                 Evaluaciones basadas en evidencia que establecen la línea base de <strong>Estrategia</strong>, <strong>Cultura</strong>, <strong>Proceso</strong> y <strong>Resultados</strong>, y luego convierten brechas en un
-                                <strong> plan claro de 30/60/90 días</strong>. Construido sobre MicroCanvas® 2.2 e IMM; con privacidad primero por diseño.
+                                <strong> plan claro de 30/60/90 días</strong>. Construido sobre MicroCanvas® 2.2 e IMM-P®; con privacidad primero por diseño.
                             </p>
                             <div className="heroCtas">
                                 <Link className="buttonPrimary" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.hero.clarityscan">
@@ -182,7 +182,7 @@ export default function DiagnosticsPage() {
                         <article className="card" aria-label="Artefactos reutilizables">
                             <FileText className="cardIcon" aria-hidden="true" />
                             <h3>Artefactos reutilizables</h3>
-                            <p>Brief conciso que puedes compartir; alineado con la terminología de MicroCanvas® 2.2 e IMM.</p>
+                            <p>Brief conciso que puedes compartir; alineado con la terminología de MicroCanvas® 2.2 e IMM-P®.</p>
                         </article>
                     </div>
                     <p className={`lead ${'pages-b4-p2__leadTop'}`}>

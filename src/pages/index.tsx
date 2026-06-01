@@ -74,9 +74,9 @@ function ProblemSection() {
           'https://www.wipo.int/web-publications/global-innovation-index-2025/en/gii-2025-results.html',
         sourceLabel: 'WIPO, Global Innovation Index 2025',
         response:
-          'ClarityScan produces a one-page maturity baseline so the next decision sits on signal, not opinion.',
+          'ClarityScan® produces a one-page maturity baseline so the next decision sits on signal, not opinion.',
         responseHref: '/services/clarityscan',
-        responseLabel: 'ClarityScan diagnostic',
+        responseLabel: 'ClarityScan® diagnostic',
       },
       {
         Icon: Compass,
@@ -87,9 +87,9 @@ function ProblemSection() {
           'https://www.oecd.org/en/publications/latin-american-economic-outlook-2025_80e48de5-en.html',
         sourceLabel: 'OECD, Latin American Economic Outlook 2025',
         response:
-          'Vigia Futura supplies signal scans and scenario briefings so plans absorb the curve before it arrives.',
+          'Vigía Futura supplies signal scans and scenario briefings so plans absorb the curve before it arrives.',
         responseHref: '/vigia-futura',
-        responseLabel: 'Vigia Futura observatory',
+        responseLabel: 'Vigía Futura observatory',
       },
     ],
     []

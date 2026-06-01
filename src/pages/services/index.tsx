@@ -16,7 +16,7 @@ import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 export default function ServicesPage(): ReactNode {
     return (
         <Layout
-            title="Services: Structured innovation, diagnostics, workshops & foresight | Doulab"
+            title="Services: Structured innovation, diagnostics, workshops & foresight"
             description="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes; privacy-first."
         >
             <Head>

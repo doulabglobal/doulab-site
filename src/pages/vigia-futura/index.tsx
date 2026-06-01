@@ -50,7 +50,7 @@ export default function VigiaFuturaPage() {
 
   return (
     <Layout
-      title="Vigía Futura, Foresight and Innovation Observatory | Doulab"
+      title="Vigía Futura, Foresight and Innovation Observatory"
       description="Vigía Futura is Doulab's foresight and innovation observatory. It publishes the National Innovation Maturity and Digital Transformation Index and curates signals, scenarios, and benchmarks across countries."
     >
       <Head>
@@ -147,11 +147,11 @@ export default function VigiaFuturaPage() {
           </p>
           <Pillars
             ariaLabel="Vigía Framework Family pillars"
-            foundationLabel="Common foundation: MCF v2.2 (Methodology Coherence Framework)"
+            foundationLabel="Common foundation: MCF v2.2 (MicroCanvas® Framework)"
             pillars={[
               {
                 title: 'VIF',
-                body: 'Vigía Incubation Framework. Architecture and operating standards for national public-private incubator networks.',
+                body: 'Vigía Incubanet Framework. Architecture and operating standards for national public-private incubator networks.',
                 accent: 'indigo',
                 href: 'https://vif.doulab.net',
               },

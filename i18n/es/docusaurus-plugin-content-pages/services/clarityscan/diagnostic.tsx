@@ -40,7 +40,7 @@ export default function ClarityScanTier2Page(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan® Nivel 2: Diagnóstico | Doulab"
+      title="ClarityScan® Nivel 2: Diagnóstico"
       description="ClarityScan® Nivel 2 es un diagnóstico de madurez en innovación con alcance definido y segmentado por rol. Radar de línea base vs objetivo, matriz priorizada de brechas y una hoja de ruta de 90 días."
     >
       <Head>

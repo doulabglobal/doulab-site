@@ -49,7 +49,7 @@ export default function ClarityScanPage(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan®: diagnóstico por niveles de madurez en innovación | Doulab"
+      title="ClarityScan®: diagnóstico por niveles de madurez en innovación"
       description="ClarityScan® es un diagnóstico por niveles de madurez en innovación y prospectiva. El Nivel 1 Snapshot (CHF 150) entrega una línea base en la misma semana; el Nivel 2 Diagnóstico y el Nivel 3 Auditoría escalan a engagements más profundos."
     >
       <Head>

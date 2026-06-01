@@ -36,7 +36,7 @@ export default function IMMDTPage(): ReactNode {
 
   return (
     <Layout
-      title="IMM-DT: Digital Transformation Maturity | Doulab"
+      title="IMM-DT: Digital Transformation Maturity"
       description="IMM-DT is the digital transformation vertical of IMM, delivered through the IMM-P® program. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates."
     >
       <Head>

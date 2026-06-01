@@ -45,7 +45,7 @@ export default function CaseAlphaInversiones(): ReactNode {
 
   return (
     <Layout
-      title="Alpha Inversiones: Alpha Escalable y Alpha en Línea | Caso de éxito | Doulab"
+      title="Alpha Inversiones: Alpha Escalable y Alpha en Línea | Caso de éxito"
       description="Entrega guiada por evidencia con puntos de control claros y resultados medibles en Alpha Escalable y Alpha en Línea."
     >
       <Head>

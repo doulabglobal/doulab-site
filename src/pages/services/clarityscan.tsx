@@ -49,7 +49,7 @@ export default function ClarityScanPage(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan®: Tiered innovation maturity diagnostic | Doulab"
+      title="ClarityScan®: Tiered innovation maturity diagnostic"
       description="ClarityScan® is a tiered innovation/foresight maturity diagnostic. Tier 1 Snapshot (CHF 150) delivers a same-week baseline; Tier 2 Diagnostic and Tier 3 Audit scale to deeper engagements."
     >
       <Head>

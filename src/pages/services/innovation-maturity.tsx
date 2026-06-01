@@ -248,7 +248,7 @@ export default function InnovationMaturityProgram(): ReactNode {
 
   return (
     <Layout
-      title="Innovation Maturity Model Program (IMM-P)® | Doulab"
+      title="Innovation Maturity Model Program (IMM-P)®"
       description="IMM is the model. IMM-P® is the program that runs your team through it: five domains, five maturity rungs, and phase-readiness gates backed by evidence."
     >
       <Head>

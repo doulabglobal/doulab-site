@@ -45,7 +45,7 @@ export default function CaseAlphaInversiones(): ReactNode {
 
   return (
     <Layout
-      title="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study | Doulab"
+      title="Alpha Inversiones: Alpha Escalable and Alpha en Línea | Case Study"
       description="Evidence led delivery with clear checkpoints and measurable outcomes across Alpha Escalable and Alpha en Línea."
     >
       <Head>

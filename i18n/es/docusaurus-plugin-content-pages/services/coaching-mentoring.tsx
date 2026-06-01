@@ -69,7 +69,7 @@ export default function CoachingMentoringPage(): ReactNode {
 
   return (
     <Layout
-      title="Coaching y Mentoría: Guía práctica, momentum real | Doulab"
+      title="Coaching y Mentoría: Guía práctica, momentum real"
       description="Coaching 1:1 y de equipos para convertir la estrategia en ejecución, construir innovación repetible y moverse más rápido con menos riesgo."
     >
       <Head>

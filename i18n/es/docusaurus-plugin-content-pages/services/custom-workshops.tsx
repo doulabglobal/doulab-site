@@ -34,7 +34,7 @@ export default function CustomWorkshopsPage(): ReactNode {
 
   return (
     <Layout
-      title="Talleres a medida: Alinea decisiones y acelera resultados | Doulab"
+      title="Talleres a medida: Alinea decisiones y acelera resultados"
       description="Sesiones orientadas a resultados para alinear equipos, decidir más rápido y crear momentum. Formatos de medio día o día completo, presencial o remoto."
     >
       <Head>

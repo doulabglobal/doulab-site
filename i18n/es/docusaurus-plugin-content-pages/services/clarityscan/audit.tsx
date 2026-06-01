@@ -44,7 +44,7 @@ export default function ClarityScanTier3Page(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan® Nivel 3: Auditoría | Doulab"
+      title="ClarityScan® Nivel 3: Auditoría"
       description="ClarityScan® Nivel 3 Auditoría es un engagement de madurez en innovación respaldado por evidencia, listo para auditoría. Cada puntuación está documentada; el entregable es un dossier de grado gobernanza."
     >
       <Head>

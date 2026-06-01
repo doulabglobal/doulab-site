@@ -1,75 +1,60 @@
 announcement:
   label: Announcement
-  permalink: /blog/tags/announcement
   description: Product and company news
 
 mcf:
   label: MicroCanvas
-  permalink: /blog/tags/mcf
   description: MicroCanvas® methods and tools
 
 imm:
   label: IMM
-  permalink: /blog/tags/imm
   description: Innovation Maturity Model® practice
 
 clarityscan:
   label: ClarityScan
-  permalink: /blog/tags/clarityscan
   description: Diagnostics and capability baselines
 
 diagnostics:
   label: Diagnostics
-  permalink: /blog/tags/diagnostics
   description: Quick baselines, risk mapping, and evidence-first next steps
 
 decision-latency:
   label: Decision latency
-  permalink: /blog/tags/decision-latency
   description: Reducing time-to-decision with evidence and clear ownership
 
 ecosystems:
   label: Ecosystems
-  permalink: /blog/tags/ecosystems
   description: Startup and innovation ecosystems, ecosystem dynamics, and system-level outcomes
 
 governance:
   label: Governance
-  permalink: /blog/tags/governance
   description: Governance structures, coordination mechanisms, and decision systems for innovation
 
 coordination:
   label: Coordination
-  permalink: /blog/tags/coordination
   description: Coordination capacity, transaction costs, and cross-actor alignment in ecosystems
 
 innovation-maturity:
   label: Innovation maturity
-  permalink: /blog/tags/innovation-maturity
   description: Readiness, progression, and maturity dynamics across organizations and systems
 
 caribbean:
   label: Caribbean
-  permalink: /blog/tags/caribbean
   description: Ecosystem and innovation dynamics across Caribbean contexts
 
 
 vigia-futura:
   label: Vigía Futura
-  permalink: /blog/tags/vigia-futura
   description: Foresight radar, briefings, and labs
 
 innovation:
   label: Innovation
-  permalink: /blog/tags/innovation
   description: Culture, delivery systems, and outcomes
 
 foresight:
   label: Foresight
-  permalink: /blog/tags/foresight
   description: Strategic foresight, signals, scenarios, and decision support
 
 latin-america:
   label: Latin America
-  permalink: /blog/tags/latin-america
   description: Regional context across LAC markets, policy, and ecosystems

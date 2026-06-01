@@ -65,7 +65,7 @@ export default function CaseAfpSiembra(): ReactNode {
 
   return (
     <Layout
-      title="AFP Siembra: Alcanza and SILAB | Case Study | Doulab"
+      title="AFP Siembra: Alcanza and SILAB | Case Study"
       description="From strategy to repeatable delivery, a digital savings product and an innovation lab co created."
     >
       <Head>

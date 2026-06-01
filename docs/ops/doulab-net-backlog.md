@@ -84,7 +84,31 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - `grep -rn "co-create the path forward" src/pages/` returns zero matches.
   - `npm run verify` exits 0; pre-push hook re-verifies.
 - Closes audit findings: CONV-010, BP-005, BP-010, BP-012, COPY-007.
-- Commits: 73c2f860a958e576d7951a97340be9c582c584c2 (impl), pending (governance)
+- Commits: 73c2f860a958e576d7951a97340be9c582c584c2 (impl), a27420fb8b2924aeddfbafc768ef1475b3e6c32f (governance)
+
+### E-H1
+- Description: IA consolidation. (1) Consolidate `/what-we-do` into `/services` via Cloudflare 301 plus internal cross-ref updates plus delete the source page. (2) Surface `/work-with-us` in the navbar. (3) Delete two stale stub pages under `/ecosystems/`. (4) Drop GitHub from the main navbar (kept in footer).
+- Rationale: Audit-2026-06 IAUX-002, IAUX-003, IAUX-004. `/what-we-do` and `/services` hosted duplicate 5-card service grids and confused the IA; navbar said "What we do" but the deep-link tree lived under `/services/*`. `/work-with-us` is a fully-built 330-line conversion page that had been unreachable from the main nav. `/ecosystems/redlab.tsx` and `/ecosystems/red-incubadoras.tsx` shipped with "Page in progress." and "Launching 2025." placeholders, now stale at mid-2026. GitHub in main nav is low-value for a marketing-site audience.
+- Acceptance criteria:
+  - `static/_redirects` returns 301 from `/what-we-do` to `/services` on prod (after CF deploy).
+  - `grep -rn "/what-we-do" src/` returns zero matches in source pages (only CSS comments reference the old module).
+  - `src/pages/what-we-do/` is gone.
+  - `src/pages/ecosystems/{redlab,red-incubadoras}.tsx` are gone.
+  - Navbar shows: Home, Services, Case Studies, Insights, About on left; Work with us, Contact on right. No GitHub entry.
+  - `npm run verify` exits 0.
+- Closes audit findings: IAUX-002, IAUX-003, IAUX-004 (partial: stale stubs removed; the broader IA recommendation about an `/ecosystems` hub remains as a separate decision).
+- Commits: 828a774bad9ab1d9502170032c981da6df0cd441 (impl), pending (governance)
+
+### E-I1 (BACKLOG ONLY)
+- Description: Sitewide removal of em-dashes (U+2014) from user-facing copy.
+- Rationale: User directive 2026-06-01 during Phase E remediation. Em-dashes read as AI-generated tone, a tell the brand should not project. Approximately 80+ instances across `src/pages/**/*.tsx`, `src/components/case-studies/caseStudiesData.tsx`, and a few blog posts. Hyphens (-) and en-dashes (en for ranges like 15 to 20 minutes) are fine; only the long em-dash is out.
+- Acceptance criteria:
+  - `grep -rP "[\\x{2014}]" src/pages src/components` returns zero matches in user-facing strings (CSS comments may retain).
+  - Blog post bodies preserve em-dash count only where direct quotation requires it (e.g., quoted sources).
+  - `npm run verify` exits 0.
+- Suggested implementation: scriptable sed pass (em-dash to period plus space or comma based on context; manual review required). Best executed as a dedicated content pass to avoid mixing with structural work.
+- Reference memory: `feedback_no_em_dashes.md`.
+- Commits: pending.
 - Description: Decision to accept Cloudflare's prefetch handling (`Purpose: prefetch` requests on 6 prefetched JS chunks return 503 from CF edge) as a benign artifact rather than fix it.
 - Rationale: Discussed at length 2026-06-01. The 503s are returned only on prefetch-class requests (confirmed via direct-vs-prefetch diagnosis: same URL returns 200 on direct fetch from curl/Playwright; 503 only when browser sends `Purpose: prefetch`). Real users do experience these 503s on the silent prefetch — but their navigation is unaffected because the browser refetches on actual navigation. Lighthouse `errors-in-console` flags the 503s, capping prod BP at 78–79. User explicitly chose to accept this rather than spend further time digging through CF Speed/Optimization toggles or swizzling Docusaurus's `<Link>` component to disable prefetch hints.
 - Effect on metrics: prod Lighthouse Best Practices remains capped at ~79 sitewide due to this single residual `errors-in-console` audit. Treat as a known cosmetic gap on lab BP scores, not a real-user issue.

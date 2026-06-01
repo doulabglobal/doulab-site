@@ -114,7 +114,6 @@ export default function Contact(): ReactNode {
                   className="cardCta"
                   href="https://booking.doulab.net/discovery"
                   data-cta="cta.contact.card.discovery"
-                  aria-label="Book a discovery call"
                 >
                   Book a discovery call
                 </a>
@@ -134,7 +133,6 @@ export default function Contact(): ReactNode {
                   className="cardCta"
                   href="https://booking.doulab.net/briefing"
                   data-cta="cta.contact.card.briefing"
-                  aria-label="Request a briefing"
                 >
                   Request a briefing
                 </a>
@@ -150,7 +148,7 @@ export default function Contact(): ReactNode {
                 <li>Cloudflare Web Analytics only</li>
               </ul>
               <div className="cardFooter">
-                <Link className="cardCta" to="/docs/releases" data-cta="cta.contact.card.privacy_more" aria-label="See what changed">
+                <Link className="cardCta" to="/docs/releases" data-cta="cta.contact.card.privacy_more">
                   See what changed
                 </Link>
               </div>

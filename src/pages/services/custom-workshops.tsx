@@ -218,7 +218,7 @@ export default function CustomWorkshopsPage(): ReactNode {
                   to="/services/innovation-readiness-workshop"
                   className="cardCta"
                   data-cta="cta.services.workshops.formats.innovation_readiness.view"
-                  aria-label="View the Innovation Readiness & Governance Workshop details"
+                  aria-label="View workshop details for the Innovation Readiness and Governance Workshop"
                 >
                   View workshop details →
                 </Link>

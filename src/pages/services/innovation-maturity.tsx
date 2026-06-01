@@ -394,7 +394,7 @@ export default function InnovationMaturityProgram(): ReactNode {
                 <Link
                   to="/services/clarityscan"
                   data-cta="cta.services.imm.tiers.t1"
-                  aria-label="Open ClarityScan Tier 1 Snapshot"
+                  aria-label="See ClarityScan Tier 1 Snapshot"
                 >
                   See Tier 1 Snapshot
                 </Link>
@@ -408,7 +408,7 @@ export default function InnovationMaturityProgram(): ReactNode {
                 <Link
                   to="/services/clarityscan/diagnostic"
                   data-cta="cta.services.imm.tiers.t2"
-                  aria-label="Open ClarityScan Tier 2 Diagnostic"
+                  aria-label="See ClarityScan Tier 2 Diagnostic"
                 >
                   See Tier 2 Diagnostic
                 </Link>
@@ -422,7 +422,7 @@ export default function InnovationMaturityProgram(): ReactNode {
                 <Link
                   to="/services/clarityscan/audit"
                   data-cta="cta.services.imm.tiers.t3"
-                  aria-label="Open ClarityScan Tier 3 Audit"
+                  aria-label="See ClarityScan Tier 3 Audit"
                 >
                   See Tier 3 Audit
                 </Link>
@@ -559,7 +559,7 @@ export default function InnovationMaturityProgram(): ReactNode {
                 <Link
                   to="https://booking.doulab.net/discovery"
                   data-cta="cta.services.imm.faq.pricing.discovery"
-                  aria-label="Book a discovery call to discuss IMM-P pricing"
+                  aria-label="Talk to us, book a discovery call to discuss IMM-P pricing"
                 >
                   Talk to us
                 </Link>

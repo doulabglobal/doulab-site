@@ -186,7 +186,7 @@ export default function ClarityScanPage(): ReactNode {
                   className="cardCta"
                   to="#tier-1-detail"
                   data-cta="cta.services.clarityscan.tier1.see_detail"
-                  aria-label="See Tier 1 Snapshot detail below"
+                  aria-label="See Tier 1 Snapshot detail below on this page"
                 >
                   See Tier 1 detail →
                 </Link>
@@ -207,7 +207,7 @@ export default function ClarityScanPage(): ReactNode {
                   className="cardCta"
                   to="/services/clarityscan/diagnostic"
                   data-cta="cta.services.clarityscan.tier2.see_detail"
-                  aria-label="Open the Tier 2 Diagnostic detail page"
+                  aria-label="See Tier 2 Diagnostic detail page"
                 >
                   See Tier 2 detail →
                 </Link>
@@ -228,7 +228,7 @@ export default function ClarityScanPage(): ReactNode {
                   className="cardCta"
                   to="/services/clarityscan/audit"
                   data-cta="cta.services.clarityscan.tier3.see_detail"
-                  aria-label="Open the Tier 3 Audit detail page"
+                  aria-label="See Tier 3 Audit detail page"
                 >
                   See Tier 3 detail →
                 </Link>

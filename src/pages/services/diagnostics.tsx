@@ -92,7 +92,7 @@ export default function DiagnosticsPage() {
                                 <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan">
                                     Run ClarityScan® →
                                 </Link>
-                                <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book a ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
+                                <Link className="cardCta" href={CLARITYSCAN_CHECKOUT_URL} data-cta="cta.diagnostics.offer.clarityscan.book_online" aria-label="Book ClarityScan online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
                                     Book online →
                                 </Link>
                             </div>

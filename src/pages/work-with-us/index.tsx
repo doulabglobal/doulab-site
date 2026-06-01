@@ -129,7 +129,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                     href={CLARITYSCAN_CHECKOUT_URL}
                                     className="cardCta"
                                     data-cta="wwu_start_clarityscan_book_online"
-                                    aria-label="Book a ClarityScan online"
+                                    aria-label="Book ClarityScan online via Stripe Checkout"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -151,7 +151,6 @@ export default function WorkWithUsPage(): JSX.Element {
                                     data-cta="wwu_start_workshop"
                                     data-section="wwu"
                                     data-step="cards"
-                                    aria-label="Start a custom workshop sprint"
                                 >
                                     Start a workshop sprint →
                                 </Link>
@@ -307,7 +306,6 @@ export default function WorkWithUsPage(): JSX.Element {
                                 data-cta="wwu_footer_clarityscan"
                                 data-section="wwu"
                                 data-step="final"
-                                aria-label="Start with a ClarityScan diagnostic"
                             >
                                 Start with ClarityScan®
                             </Link>
@@ -317,7 +315,6 @@ export default function WorkWithUsPage(): JSX.Element {
                                 data-cta="wwu_footer_contact"
                                 data-section="wwu"
                                 data-step="final"
-                                aria-label="Talk to us"
                             >
                                 Talk to us
                             </Link>

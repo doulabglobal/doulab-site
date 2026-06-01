@@ -188,7 +188,6 @@ export default function AboutPage(): ReactNode {
                   to="/services/clarityscan"
                   className="cardCta"
                   data-cta="cta.about.pillars.diagnostics"
-                  aria-label="Start with ClarityScan, diagnostics baseline"
                 >
                   Start with ClarityScan® →
                 </Link>
@@ -204,7 +203,6 @@ export default function AboutPage(): ReactNode {
                   to="/services/custom-workshops"
                   className="cardCta"
                   data-cta="cta.about.pillars.workshops"
-                  aria-label="Explore workshops"
                 >
                   Explore workshops →
                 </Link>
@@ -222,7 +220,6 @@ export default function AboutPage(): ReactNode {
                   to="/services/innovation-maturity"
                   className="cardCta"
                   data-cta="cta.about.pillars.programs"
-                  aria-label="Explore IMM-P®"
                 >
                   Explore IMM-P® →
                 </Link>
@@ -238,7 +235,6 @@ export default function AboutPage(): ReactNode {
                   to="/services/coaching-mentoring"
                   className="cardCta"
                   data-cta="cta.about.pillars.coaching"
-                  aria-label="Explore coaching and mentoring"
                 >
                   Explore coaching and mentoring →
                 </Link>
@@ -254,7 +250,6 @@ export default function AboutPage(): ReactNode {
                   to="/vigia-futura"
                   className="cardCta"
                   data-cta="cta.about.pillars.futures"
-                  aria-label="Discover Vigía Futura"
                 >
                   Discover Vigía Futura →
                 </Link>

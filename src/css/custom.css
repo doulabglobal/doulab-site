@@ -232,6 +232,19 @@ body {
 }
 
 /* ===== Shared sitewide utilities ===== */
+
+/* E-R3: ensure inline links in body text are visually distinguishable beyond color.
+   Excludes button-class links so primary/secondary CTAs keep their non-underlined style.
+   Scoped to body-text containers so navbar/footer/in-card CTAs are not affected. */
+.markdown a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
+article a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
+.section p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
+.sectionLead a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink),
+.microcopy a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
 .section {
     margin: 3rem auto;
     max-width: 1200px;

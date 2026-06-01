@@ -206,7 +206,6 @@ function ServicesSection() {
               to="/services/clarityscan"
               className="cardCta"
               data-cta="cta.home.services.clarityscan"
-              aria-label="Explore ClarityScan tiers"
             >
               Explore ClarityScan® tiers →
             </Link>

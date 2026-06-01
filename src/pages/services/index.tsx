@@ -76,10 +76,10 @@ export default function ServicesPage(): ReactNode {
                                 <li>Tier 2 Diagnostic and Tier 3 Audit: scope-based</li>
                             </ul>
                             <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
-                                <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
+                                <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan tiers">
                                     Explore tiers →
                                 </Link>
-                                <Link href={CLARITYSCAN_CHECKOUT_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book a ClarityScan Tier 1 Snapshot online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
+                                <Link href={CLARITYSCAN_CHECKOUT_URL} className="cardCta" data-cta="cta.services.card.diagnostics.book_online" aria-label="Book Tier 1 ClarityScan Snapshot online via Stripe Checkout" target="_blank" rel="noopener noreferrer">
                                     Book Tier 1 →
                                 </Link>
                             </div>
@@ -95,7 +95,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Decision &amp; roadmap facilitation</li>
                             </ul>
                             <div className="cardFooter">
-                                <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.services.card.workshops" aria-label="Explore custom workshops">
+                                <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.services.card.workshops" aria-label="Start a workshop sprint with custom workshops">
                                     Start a workshop sprint →
                                 </Link>
                             </div>
@@ -111,7 +111,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Gated decisions, KPIs, and cadence</li>
                             </ul>
                             <div className="cardFooter">
-                                <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.services.card.programs" aria-label="Explore innovation maturity program">
+                                <Link to="/services/innovation-maturity" className="cardCta" data-cta="cta.services.card.programs" aria-label="Join the IMM-P innovation maturity program">
                                     Join the IMM-P® Program →
                                 </Link>
                             </div>
@@ -127,7 +127,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Pilot reference: FUNDAPEC fintech transformation</li>
                             </ul>
                             <div className="cardFooter">
-                                <Link to="/services/imm-dt" className="cardCta" data-cta="cta.services.card.imm-dt" aria-label="Explore IMM-DT digital transformation maturity">
+                                <Link to="/services/imm-dt" className="cardCta" data-cta="cta.services.card.imm-dt">
                                     Explore IMM-DT →
                                 </Link>
                             </div>
@@ -143,7 +143,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Rituals for delivery cadence</li>
                             </ul>
                             <div className="cardFooter">
-                                <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.services.card.coaching" aria-label="Explore coaching and mentoring">
+                                <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.services.card.coaching" aria-label="View coaching options for coaching and mentoring">
                                     View coaching options →
                                 </Link>
                             </div>

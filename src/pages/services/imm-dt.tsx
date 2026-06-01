@@ -9,6 +9,9 @@ import FinalCta from '../../components/FinalCta';
 import CardGrid from '../../components/CardGrid/CardGrid';
 import Pillars from '../../components/imm/Pillars';
 import Roadmap from '../../components/imm/Roadmap';
+import Radar from '../../components/imm/Radar';
+import MaturityLadder from '../../components/imm/MaturityLadder';
+import EvidenceMeter from '../../components/imm/EvidenceMeter';
 
 import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -52,25 +55,25 @@ export default function IMMDTPage(): ReactNode {
         <Hero
           title="IMM-DT"
           subtitle="The digital transformation vertical of IMM-P®."
-          body="IMM-DT extends the Innovation Maturity Model: Program (IMM-P®) to the digital transformation domain. We baseline DT maturity across strategy, process, culture, technology and governance; benchmark against regional peers; and sequence a phased 0–36 month roadmap with evidence-backed readiness gates."
+          body="IMM-DT extends the Innovation Maturity Model (IMM 2.2), delivered through the IMM-P® program, to the digital transformation domain. We baseline DT maturity across strategy, process, culture, technology and governance; benchmark against regional peers; and sequence a phased 0–36 month roadmap with evidence-backed readiness gates. Currently in pilot with a regulated-finance partner in the Dominican Republic."
           imageBase="/img/services-hero"
           imageAlt="IMM-DT: Digital Transformation Maturity"
           width={600}
           height={400}
           primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us about IMM-DT', dataCta: 'cta.services.imm-dt.hero.contact' }}
           secondaryCta={{ to: '/services/innovation-maturity', label: 'See IMM-P® (umbrella program)', dataCta: 'cta.services.imm-dt.hero.imm-p' }}
-          ctaNote="Built on MicroCanvas® v2.2 + IMM-P® 2.2 (domain scoring, phase readiness, evidence gates)."
+          ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates)."
         />
 
         {/* What IMM-DT measures */}
         <section className="section" id="dimensions" aria-labelledby="dimensions-title">
           <h2 id="dimensions-title">What IMM-DT measures</h2>
           <p className="sectionLead">
-            Five domains, scored as per the IMM-P® 2.2 model, applied to the digital transformation problem space.
+            Five domains, scored against the IMM 2.2 maturity model, applied to the digital transformation problem space.
           </p>
           <Pillars
             ariaLabel="IMM-DT measurement domains"
-            foundationLabel="IMM-P® 2.2 maturity model"
+            foundationLabel="IMM 2.2 maturity model"
             pillars={[
               {
                 icon: <Target aria-hidden="true" />,
@@ -104,6 +107,75 @@ export default function IMMDTPage(): ReactNode {
               },
             ]}
           />
+        </section>
+
+        {/* What an IMM-DT engagement produces */}
+        <section className="section" id="deliverables" aria-labelledby="deliverables-title">
+          <h2 id="deliverables-title">What an IMM-DT engagement produces</h2>
+          <p className="sectionLead">
+            A short tour of the artifacts the IMM-P® program produces when delivered as IMM-DT. The values below are
+            illustrative, not real client scores.
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '2rem',
+              alignItems: 'start',
+              marginTop: '1.5rem',
+              fontFamily: 'var(--ifm-font-family-base, Roboto, sans-serif)',
+            }}
+          >
+            <div>
+              <h3 style={{ color: 'var(--dl-indigo, #4F46E5)' }}>Domain radar</h3>
+              <Radar
+                ariaLabel="Example IMM-DT domain radar with five axes and a target overlay"
+                title="Five-domain DT maturity snapshot"
+                domains={[
+                  { name: 'Strategy', score: 55 },
+                  { name: 'Process', score: 40 },
+                  { name: 'Culture', score: 60 },
+                  { name: 'Technology', score: 50 },
+                  { name: 'Governance', score: 45 },
+                ]}
+                target={[75, 70, 75, 75, 70]}
+                caption="Example output. Real engagement scores are evidence-backed."
+              />
+            </div>
+
+            <div>
+              <h3 style={{ color: 'var(--dl-purple, #7C3AED)' }}>Maturity ladder</h3>
+              <MaturityLadder
+                ariaLabel="Example DT maturity ladder with current rung 2 and target rung 4"
+                title="DT maturity progression"
+                current={2}
+                target={4}
+                rungs={[
+                  { label: 'Manual operations', description: 'Paper-bound or spreadsheet-bound work; little system support.' },
+                  { label: 'Digitized workflows', description: 'Core workflows digitized in line-of-business systems.' },
+                  { label: 'Connected platforms', description: 'Systems integrated; data flows across the value chain.' },
+                  { label: 'Data-driven decisions', description: 'Decisions backed by trusted data and shared metrics.' },
+                  { label: 'Continuous transformation', description: 'Institutional learning compounds; the operating model adapts.' },
+                ]}
+              />
+              <p className="microcopy" style={{ marginTop: '0.75rem' }}>
+                Example progression. We meet you at your current rung and sequence the climb.
+              </p>
+            </div>
+
+            <div>
+              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>Phase readiness gate</h3>
+              <EvidenceMeter
+                ariaLabel="Example phase readiness meter at 68 out of 100"
+                score={68}
+                label="Phase 2 to Phase 3 readiness, example"
+              />
+              <p className="microcopy" style={{ marginTop: '0.75rem' }}>
+                Gate opens at 75 percent evidence quality.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* The IMM-DT roadmap */}
@@ -200,13 +272,27 @@ export default function IMMDTPage(): ReactNode {
           <h2 id="pilot-title">Pilot reference</h2>
           <p>
             IMM-DT is in early production with <Link to="/case-studies/fundapec">FUNDAPEC</Link>, a digital transformation
-            engagement in the Dominican Republic. The work applies MCF v2.2 and IMM-P® 2.2 to a multi-month maturity
-            diagnostic, regional fintech benchmarking, and a phased 0–36 month roadmap. We are currently extending the
-            template to additional verticals.
+            engagement in the Dominican Republic. The engagement profile is representative of the work: regulated finance,
+            multi-month duration, multi-stakeholder cohorts across directive, middle management, and operations. The work
+            applies MicroCanvas® v2.2 and the IMM-P® program with the IMM 2.2 maturity model to a multi-month diagnostic,
+            regional fintech benchmarking, and a phased 0–36 month roadmap. We are currently extending the template to
+            additional verticals.
           </p>
           <p className="microcopy">
             For organizations not yet ready for a full IMM-DT engagement, start with <Link to="/services/clarityscan">ClarityScan®</Link>
             {' '}Tier 1 (CHF 150) for a fast read on innovation maturity.
+          </p>
+        </section>
+
+        {/* What IMM-DT does NOT do */}
+        <section className="section" id="boundaries" aria-labelledby="boundaries-title">
+          <h2 id="boundaries-title">What IMM-DT does not do</h2>
+          <p>
+            IMM-DT is a measurement and roadmap instrument. It is not a replacement for execution capacity. The engagement
+            produces an evidence-backed baseline, a benchmark, a sequenced roadmap, and phase-readiness gates. Acting on the
+            findings requires a sponsor with decision rights and a delivery team with the capacity to ship. IMM-DT does not
+            implement core systems, run change management, or replace internal program leadership. Where those needs surface,
+            we name them clearly in the roadmap and help you scope the right partners.
           </p>
         </section>
 
@@ -221,7 +307,7 @@ export default function IMMDTPage(): ReactNode {
             dataCta: 'cta.services.imm-dt.final.contact',
           }}
           secondaryCta={{ to: '/services/clarityscan', label: 'Or start with ClarityScan® Tier 1', dataCta: 'cta.services.imm-dt.final.clarityscan' }}
-          ctaNote="Built on MicroCanvas® v2.2 + IMM-P® 2.2 (domain scoring, phase readiness, evidence gates)."
+          ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates)."
         />
       </main>
     </Layout>

@@ -73,6 +73,19 @@
     --dl-red: #dc2626;
 }
 
+/* F-2 close-out: dark-mode lighter siblings of the IMM primary so links,
+   focus rings, and other primary-derived surfaces remain readable on the
+   Docusaurus dark background. Hues stay on the IMM indigo axis. */
+:is(html.theme-dark, html[data-theme='dark']) {
+    --ifm-color-primary: #8a7ad6;
+    --ifm-color-primary-dark: #7a6acc;
+    --ifm-color-primary-darker: #6f5fc4;
+    --ifm-color-primary-darkest: #5b4cb0;
+    --ifm-color-primary-light: #9a8bdc;
+    --ifm-color-primary-lighter: #a497e0;
+    --ifm-color-primary-lightest: #b8aee8;
+}
+
 body {
     font-family: var(--ifm-font-family-base);
 }

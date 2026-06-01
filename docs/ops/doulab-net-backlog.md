@@ -280,8 +280,37 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - LH-NEW-007 root cause identified (open DevTools on prod, capture inspector-issues content).
   - VP-NEW-002 harness fix lands; full 6-anchor sweep captures all 108 screenshots clean.
   - VP-NEW-003 desktop coverage captured.
-- Status: filed for next audit-driven pass (Phase F or later).
-- Commits: pending (impl), pending (governance)
+- Status: Phase A impl landed; Phase C re-audit pending.
+- Phase A commits (impl):
+  - E-R1.1 (self-host Roboto): 6cfbb2c9383fb990d1e0c2e72e664ef2cd5d2351
+  - E-R1.2 (IMM component A11y fixes): 070b3d52f07caae4741666a2017568d8b22929df
+  - E-R1.3 (viewport harness v5.1): b97c066cc6c950172748588dd31f9569fdc010a0
+  - E-R1.4 (inspector-issues diagnostic): c31ebb4e33ec61cc332a4e41dd7b508cd5519405
+- Phase A governance: pending (this commit)
+- Phase C verification: pending (re-run prod Lighthouse + viewport sweep after Cloudflare deploys).
+
+### E-R2 (BACKLOG, filed from R4 diagnostic findings)
+- Description: Page-level CSP cleanup to clear the LH-NEW-007 inspector-issues audit.
+- Rationale: R4 (commit c31ebb4) captured 33 CSP Report-Only violations on the production home page: 29 `style-src-attr` from inline `style=` attributes that Docusaurus components emit, and 4 `script-src-elem` from inline `<script>` tags in `<head>` (theme-init color-mode bootstrap). These violations are surfaced by Lighthouse's `inspector-issues` audit and are the entire reason BP is capped at 75.
+- Fix path (multi-pass, sequenced):
+  1. **Strip inline style= attributes from Docusaurus theme overrides and any `style={{...}}` props in `src/components/`**. Expected to drop the 29 style violations to near zero. Page-level pass; touches multiple TSX files.
+  2. **Add nonces or sha256 hashes for the inline <head> scripts** via a Cloudflare Pages middleware that sets the CSP header per request. Drops the 4 script violations to zero. Ops-level change.
+  3. Once the Report-Only is at zero violations, **promote the policy into the enforced CSP**, completing SEC-002.
+- Acceptance criteria:
+  - Lighthouse `inspector-issues` audit passes on prod.
+  - Lighthouse BP >= 95 sitewide.
+  - CSP enforcement extended (no `unsafe-inline` on script-src; style-src either uses nonces or stays with `unsafe-inline` if Docusaurus inline styles cannot be eliminated entirely).
+- Status: BACKLOG; not in scope for the E-R1 close-out.
+- Commits: pending.
+
+### E-R3 (BACKLOG, filed from R2 follow-up findings)
+- Description: Page-level `link-in-text-block` + `label-content-name-mismatch` A11y fixes.
+- Rationale: R2 (commit 070b3d5) fixed the component-level A11y issues but observed that two of the four failing Lighthouse audits trace to page-level patterns: inline `<a>` elements inside `<p>` or article text without underline (link-in-text-block) and CTA labels where the visible text and aria-label disagree (label-content-name-mismatch).
+- Fix path:
+  - Add a global `text-decoration: underline` rule for `<a>` inside paragraphs and article text in `src/css/custom.css`, OR add inline class to each link.
+  - Sweep `src/pages/**/*.tsx` for `<a aria-label="X">Y</a>` patterns where X and Y do not share substring; align or drop the aria-label.
+- Status: BACKLOG; not in scope for E-R1.
+- Commits: pending.
 
 ### E-J1 (BACKLOG ONLY, DEFERRED)
 - Description: Testimonials and named client quotes on doulab.net (homepage, case studies, services pages).

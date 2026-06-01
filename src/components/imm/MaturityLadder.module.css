@@ -61,7 +61,7 @@
 
 .muted {
   background: var(--dl-slate, #484854);
-  opacity: 0.6;
+  opacity: 0.92;
 }
 
 .current {
@@ -128,7 +128,7 @@
 .rungDesc {
   font-size: 0.8rem;
   line-height: 1.35;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .badge {

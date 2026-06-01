@@ -42,7 +42,6 @@ export default function MaturityLadder({
       ) : null}
       <ol
         className={styles.track}
-        role="list"
         aria-label={
           ariaLabel ??
           `Maturity ladder, currently at rung ${current} of ${total}`

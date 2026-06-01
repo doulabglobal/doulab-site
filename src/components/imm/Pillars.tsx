@@ -41,9 +41,8 @@ export default function Pillars({
   ariaLabel = 'Pillars',
 }: PillarsProps): ReactNode {
   return (
-    <div
+    <section
       className={styles.wrap}
-      role="group"
       aria-label={ariaLabel}
     >
       <div className={styles.grid}>
@@ -79,6 +78,6 @@ export default function Pillars({
       {foundationLabel ? (
         <div className={styles.foundationCaption}>{foundationLabel}</div>
       ) : null}
-    </div>
+    </section>
   );
 }

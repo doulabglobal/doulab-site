@@ -81,7 +81,6 @@ export default function Radar({
   return (
     <figure
       className={styles.wrap}
-      role="group"
       aria-label={ariaLabel ?? title ?? 'Radar chart'}
     >
       {title ? <figcaption className={styles.title}>{title}</figcaption> : null}

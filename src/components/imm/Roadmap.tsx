@@ -48,7 +48,7 @@ export default function Roadmap({
       {title ? (
         <h2 id={titleId} className={styles.title}>{title}</h2>
       ) : null}
-      <ol className={styles.track} role="list">
+      <ol className={styles.track}>
         {horizons.map((h, i) => {
           const state = h.state ?? 'later';
           const style = {

@@ -112,6 +112,6 @@
 .stateNext .label { font-weight: 600; }
 .stateNext .pill { background: var(--dl-purple, #964590); }
 
-.stateLater { opacity: 0.85; }
+.stateLater { opacity: 1; }
 .stateLater .label { font-weight: 500; }
 .stateLater .pill { background: var(--dl-slate, #484854); }

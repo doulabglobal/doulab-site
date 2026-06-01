@@ -97,7 +97,6 @@ export default function EvidenceMeter({
   return (
     <figure
       className={styles.wrap}
-      role="group"
       aria-label={titleText}
     >
       <div className={styles.chartBox}>

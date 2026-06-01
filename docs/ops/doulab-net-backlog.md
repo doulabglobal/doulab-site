@@ -400,7 +400,46 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Implementation: 3 of 4 sources updated to 2025 editions; the fourth is McKinsey's perpetually-maintained transformation synthesis. LATAM/Caribbean relevance now explicit in 3 of 4 cards. Sources: Gallup State of the Global Workplace 2025, McKinsey "The science behind successful organizational transformations", WIPO Global Innovation Index 2025 (LATAM specific), OECD Latin American Economic Outlook 2025.
 - Commits: b4d6f514f782060c69869d33892fa7f492989770 (impl), pending (governance)
 
-### E-R2.2 (ACCEPTED-BENIGN, residual after T5 diagnostic)
+### E-R2.2a (RESOLVED 2026-06-01)
+- baseUrlIssueBanner disabled in `docusaurus.config.ts` themeConfig. Drops 5 of the 29 `style-src-attr` Report-Only violations. Commit: b2f93a532fe938a75b3d7afe24a96f1f9e648e06.
+
+### E-R2.2b (RESOLVED 2026-06-01)
+- SVG sprite `display:none` allowlisted via `sha256-biLFinpqYMtWHmXfkA1BPeCY0/fNt46SAZ+BBk5YUog=` on Report-Only `style-src-attr` directive in `static/_headers`. Drops 1 violation. Commit: 609676de481ab2bbca96e0db0b4e6067891a550f.
+
+### E-R3.1 (RESOLVED 2026-06-01)
+- Pillars title-link underline contrast strengthened (rgba 0.55 → 0.9, thickness 2px). Target: A11y 92 → 93 on `/services/imm-dt` and `/services/clarityscan/diagnostic`. Commit: fea5828d7a8192c85cf76a34eb676fa2d7434a27.
+- Note: this commit will be partially reverted in the next pass per the new user directive: links should show their underline ONLY on :hover/:focus-visible. The contrast bump still helps focus-visible.
+
+### Mermaid Roboto (RESOLVED 2026-06-01)
+- docusaurus.config.ts mermaid fontFamily switched from Inter-led to Roboto-led. Brand-family typography unification complete (Roboto sitewide: body + headings + diagrams + IMM presentations). Bundled into commit b2f93a532fe938a75b3d7afe24a96f1f9e648e06.
+
+### Footer copyright IMM mark (RESOLVED 2026-06-01)
+- "MicroCanvas® and IMM® are registered marks" → "MicroCanvas® and IMM-P® are registered marks". Closes the E-Q6 flag. Bundled into commit b2f93a532fe938a75b3d7afe24a96f1f9e648e06.
+
+### NEW Phase F directives (2026-06-01, opened for next fan-out)
+
+**F-1 — Links underline only on :hover / :focus-visible (sitewide)**
+- User directive: all site links, including button-class CTAs (.cardCta, .buttonPrimary, .buttonSecondary, etc.) and inline body links, must show their underline ONLY on :hover and :focus-visible. Never on default state.
+- Inverts the prior E-R3 default-underline-for-body-text rule.
+- Touches: `src/css/custom.css` (global rules), possibly `src/components/imm/Pillars.module.css` (titleLink), any other component CSS that hardcodes `text-decoration: underline` at rest.
+
+**F-2 — Dark / light mode parity (sitewide audit + fixes)**
+- User directive: every page and every element must render correctly in BOTH light and dark mode.
+- Touches: every IMM component module CSS, custom.css dark-mode `[data-theme="dark"]` ladder, every page with hardcoded hex colors or inline `style={{ color: '#...' }}`.
+
+**F-3 — Card CTA layout: side-by-side on desktop**
+- User directive: when a card has two CTAs, they render side-by-side on desktop (never stacked vertically). Mobile may stack.
+- Touches: `.cardFooter` global class, any per-component card-footer overrides, any TSX that wraps CTAs in a column flex.
+
+**F-4 — "Where you sit today" cards: 2 rows on desktop**
+- User directive: identify the section titled "Where you sit today" (or similar capability-progression cards) and ensure it renders in 2 rows on desktop instead of 1.
+- Likely target: a MaturityLadder usage somewhere with 5 rungs, OR the IMM-P page capability progression section.
+
+**F-5 — Tier 3 "What Tier 3 delivers" visual order: EvidenceMeter below MaturityLadder**
+- User directive: on `/services/clarityscan/audit`, the Phase readiness gauge (EvidenceMeter) currently shows BEHIND Phase progression (MaturityLadder), suggesting wrong z-order or grid position. Fix: position gauge BELOW the ladder in the layout, not behind.
+
+**F-6 — Full 19-role re-audit at the end**
+- User directive: once the F-batch backlog is drained, run the full 19-role multi-role audit again (per `feedback_full_audit_at_backlog_end` memory).
 - Description: 29 `style-src-attr` CSP Report-Only violations on the production home page.
 - T5 diagnostic (commit pending under T5 prompt; agent declined to swizzle): the violations split as follows:
   - 5 `style-src-attr` from `@docusaurus/core` BaseUrlIssueBanner inline injection (line 6 of build/index.html). NOT swizzlable — lives in @docusaurus/core, not theme-classic. Recommended follow-up: set `baseUrlIssueBanner: false` in `docusaurus.config.ts` to disable the dev-only banner injection entirely (the banner only fires on baseUrl misconfiguration).

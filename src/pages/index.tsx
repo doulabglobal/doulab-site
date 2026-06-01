@@ -1,5 +1,5 @@
 // src/pages/index.tsx
-import React, { type ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import React, { type ReactNode, useEffect, useMemo, useState } from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
@@ -9,245 +9,183 @@ import FinalCta from '../components/FinalCta';
 import CaseStudyCards from '../components/case-studies/CaseStudyCards';
 
 // Icons (tree-shaken imports)
-import type { LucideIcon } from 'lucide-react';
 import Search from 'lucide-react/dist/esm/icons/search';
 import Layers from 'lucide-react/dist/esm/icons/layers';
 import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Radar from 'lucide-react/dist/esm/icons/radar';
 import AlertTriangle from 'lucide-react/dist/esm/icons/alert-triangle';
-import FileWarning from 'lucide-react/dist/esm/icons/file-warning';
-import EyeOff from 'lucide-react/dist/esm/icons/eye-off';
-import CircleSlash from 'lucide-react/dist/esm/icons/circle-slash';
-import UserX from 'lucide-react/dist/esm/icons/user-x';
-import AlertOctagon from 'lucide-react/dist/esm/icons/alert-octagon';
-import Frown from 'lucide-react/dist/esm/icons/frown';
+import GitBranch from 'lucide-react/dist/esm/icons/git-branch';
+import Compass from 'lucide-react/dist/esm/icons/compass';
+import Gauge from 'lucide-react/dist/esm/icons/gauge';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Eye from 'lucide-react/dist/esm/icons/eye';
-import ChevronLeft from 'lucide-react/dist/esm/icons/chevron-left';
-import ChevronRight from 'lucide-react/dist/esm/icons/chevron-right';
 
 // Blog item (from RSS)
 type BlogItem = { title: string; href: string; description?: string; external: boolean; image?: string };
 
-function usePrefersReducedMotion() {
-  const [prefers, setPrefers] = useState(false);
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('matchMedia' in window)) return;
-    const m = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setPrefers(!!m.matches);
-    update();
-    m.addEventListener?.('change', update);
-    return () => m.removeEventListener?.('change', update);
-  }, []);
-  return prefers;
-}
-
 // ========== Sections ==========
 function ProblemSection() {
-  const prefersReduced = usePrefersReducedMotion();
-  const reelRef = useRef<HTMLDivElement | null>(null);
-  const reelId = 'problem-reel';
-  const hintId = 'problem-reel-hint';
-
-  const scrollByAmount = (dir: 'prev' | 'next') => {
-    const el = reelRef.current;
-    if (!el) return;
-    const amount = Math.max(280, el.clientWidth * 0.9) * (dir === 'prev' ? -1 : 1);
-    el.scrollBy({ left: amount, behavior: prefersReduced ? 'auto' : 'smooth' });
-  };
-
-  const onKeyDown: React.KeyboardEventHandler<HTMLDivElement> = (e) => {
-    if (e.key === 'ArrowLeft') {
-      e.preventDefault();
-      scrollByAmount('prev');
-    }
-    if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      scrollByAmount('next');
-    }
-  };
-
-  type Problem = {
-    Icon: LucideIcon;
-    cause: string;
-    effect: string;
-    metric: string;
+  type Cause = {
+    Icon: typeof AlertTriangle;
+    title: string;
+    detail: string;
     sourceHref: string;
     sourceLabel: string;
-    pillar: string;
+    response: string;
+    responseHref: string;
+    responseLabel: string;
   };
 
-  const problems: Problem[] = useMemo(
+  const causes: Cause[] = useMemo(
     () => [
       {
         Icon: AlertTriangle,
-        cause: "Innovation isn't embedded as a cultural value",
-        effect: 'Change meets resistance, efforts feel sporadic and engagement stays low.',
-        metric: 'Global engagement about 20 to 23 percent, indicating persistent culture headwinds.',
+        title: 'Culture is not wired for innovation',
+        detail:
+          'Only 21 percent of employees worldwide are engaged at work, a persistent drag on any change effort.',
         sourceHref:
-          'https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx',
+          'https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx',
         sourceLabel: 'Gallup, State of the Global Workplace 2024',
-        pillar: 'Culture + Innovation Mindset',
+        response:
+          'IMM-P installs culture, cadence, and capability gates so engagement has somewhere to land.',
+        responseHref: '/services/innovation-maturity',
+        responseLabel: 'IMM-P program',
       },
       {
-        Icon: FileWarning,
-        cause: 'Strategy is treated as a static document',
-        effect: 'Short-term pivots multiply, OKRs drift and teams lose direction.',
-        metric: 'Around 70% of employees report misalignment with strategy.',
+        Icon: GitBranch,
+        title: 'Strategy stalls between intent and execution',
+        detail:
+          'About 70 percent of large change programs fall short of their stated goals, a figure McKinsey has tracked across two decades.',
         sourceHref:
-          'https://www.forbes.com/sites/johnkotter/2013/07/09/heres-why-ceo-strategies-fall-on-deaf-ears/',
-        sourceLabel: 'Forbes, When strategy fails to land',
-        pillar: 'Planning Mindset + Leadership Development',
-      },
-      {
-        Icon: EyeOff,
-        cause: 'Decisions lack reliable evidence and testing',
-        effect: 'ROI suffers as opinions outrun data and validated learning.',
-        metric: 'Data-driven organizations are more likely to improve decisions.',
-        sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
-        sourceLabel: 'HBS Online, Data-driven decisions',
-        pillar: 'Evidence-Based Decision-Making',
-      },
-      {
-        Icon: CircleSlash,
-        cause: 'Process debt compounds across teams',
-        effect: 'Work stalls, value delivery slows as exceptions become the norm.',
-        metric: 'Hidden costs surface as throughput and quality degrade.',
-        sourceHref:
-          'https://www.mckinsey.com/capabilities/operations/our-insights/reducing-complexity-with-operational-excellence',
-        sourceLabel: 'McKinsey, Reducing complexity',
-        pillar: 'Operating Model + Delivery',
-      },
-      {
-        Icon: UserX,
-        cause: 'Customers are not clearly defined or prioritized',
-        effect: 'Solutions miss the mark, uptake and retention suffer.',
-        metric: 'Teams move without shared understanding of users.',
-        sourceHref: 'https://www.intercom.com/blog/customer-segmentation/',
-        sourceLabel: 'Intercom, Segmentation primer',
-        pillar: 'Segmentation + JTBD',
-      },
-      {
-        Icon: AlertOctagon,
-        cause: 'Risk is untracked across portfolio',
-        effect: 'Effort piles into low-confidence bets, timelines slip.',
-        metric: 'Governance lacks clear gates, owners, or evidence packs.',
-        sourceHref: 'https://www.atlassian.com/agile/project-management/risk-management',
-        sourceLabel: 'Atlassian, Risk management',
-        pillar: 'Governance + Gate Reviews',
-      },
-      {
-        Icon: Frown,
-        cause: 'Value is not measured end-to-end',
-        effect: 'Teams optimize for activity instead of outcomes.',
-        metric: 'Dashboards track vanity metrics over learning or ROI.',
-        sourceHref:
-          'https://www.accenture.com/content/dam/accenture/final/capabilities/technology/software-engineering/document/Accenture-Report-ITL-IPS.pdf',
-        sourceLabel: 'Accenture, Value untangled',
-        pillar: 'Business Intelligence Maturity',
+          'https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/losing-from-day-one-why-even-successful-transformations-fall-short',
+        sourceLabel: 'McKinsey, Losing from day one (2021)',
+        response:
+          'MCF canvases turn strategy into small, testable bets with explicit owners and decision points.',
+        responseHref: '/docs/research-resources/microcanvas',
+        responseLabel: 'MicroCanvas Framework',
       },
       {
         Icon: Eye,
-        cause: 'Foresight is missing from the planning cycle',
-        effect: 'Teams react to shocks instead of shaping possible futures.',
-        metric: 'Foresight improves resilience and long-term performance.',
+        title: 'Decisions outrun the evidence',
+        detail:
+          'Harvard Business School Online reports that data-driven firms are roughly three times more likely to report measurable improvement in decisions than peers that rely on intuition.',
+        sourceHref: 'https://online.hbs.edu/blog/post/data-driven-decision-making',
+        sourceLabel: 'HBS Online, Data-driven decision-making',
+        response:
+          'ClarityScan produces a one-page maturity baseline so the next decision sits on signal, not opinion.',
+        responseHref: '/services/clarityscan',
+        responseLabel: 'ClarityScan diagnostic',
+      },
+      {
+        Icon: Compass,
+        title: 'Foresight is missing from the planning cycle',
+        detail:
+          'The OECD finds that organizations with formal strategic foresight practices adapt faster to disruption and identify opportunities earlier than peers without them.',
         sourceHref:
-          'https://www.weforum.org/stories/2024/01/strategic-foresight-help-companies-survive-thrive/',
-        sourceLabel: 'WEF, Why foresight matters',
-        pillar: 'Foresight + Strategic Anticipation',
+          'https://www.oecd.org/en/about/programmes/strategic-foresight.html',
+        sourceLabel: 'OECD, Strategic Foresight',
+        response:
+          'Vigia Futura supplies signal scans and scenario briefings so plans absorb the curve before it arrives.',
+        responseHref: '/vigia-futura',
+        responseLabel: 'Vigia Futura observatory',
       },
     ],
     []
   );
 
   return (
-    <section className="section" id="problems" aria-labelledby="problem-title">
-      <h2 id="problem-title">The Problem</h2>
+    <section className="section imm-problem-cluster" id="problems" aria-labelledby="problem-title">
+      <h2 id="problem-title">Where strategy meets reality</h2>
       <p className="sectionLead">
-        Entrepreneurship and innovation are hard, until you make them a repeatable process. Below are
-        common patterns we fix.
+        The gap between strategy and shipped outcomes is a measurement problem: decision latency,
+        cycle time, and signal quality. Four root causes drive most of it. Each one is solvable with
+        the right scaffolding.
       </p>
 
-      <div className={'pages-b4-p1__buttonRow'}>
-        <button
-          type="button"
-          className="buttonSecondary"
-          aria-controls={reelId}
-          aria-label="Scroll problems left"
-          data-cta="cta.home.problem.prev"
-          onClick={() => scrollByAmount('prev')}
-        >
-          <ChevronLeft size={18} aria-hidden="true" /> Prev
-        </button>
+      <div className="cardGrid imm-cause-chain" role="list" aria-label="Root causes and Doulab responses">
+        {causes.map((c, idx) => {
+          const Icon = c.Icon;
+          return (
+            <article
+              className="card"
+              role="listitem"
+              key={idx}
+              style={{ borderTop: '4px solid var(--dl-amber, #c47f17)' }}
+            >
+              <Icon
+                className="cardIcon"
+                aria-hidden={true}
+                style={{ color: 'var(--dl-amber, #c47f17)' }}
+              />
+              <h3>{c.title}</h3>
+              <p>{c.detail}</p>
+              <p className="microcopy">
+                Source:{' '}
+                <a href={c.sourceHref} target="_blank" rel="noopener noreferrer">
+                  {c.sourceLabel}
+                </a>
+              </p>
 
-        <div
-          id={reelId}
-          ref={reelRef}
-          className="cardReel"
-          role="group"
-          aria-roledescription="carousel"
-          aria-label="Common problems carousel"
-          aria-describedby={hintId}
-          tabIndex={0}
-          onKeyDown={onKeyDown}
-        >
-          {problems.map((item, idx) => {
-            const Icon = item.Icon;
-            return (
               <div
-                className={`card ${'pages-b4-p1__problemCard'}`}
-                role="group"
-                aria-roledescription="slide"
-                key={idx}
+                className="imm-decision-card"
+                style={{
+                  marginTop: '1rem',
+                  paddingTop: '0.75rem',
+                  borderTop: '1px dashed var(--dl-slate, #5a6473)',
+                }}
               >
-                <Icon className="cardIcon" aria-hidden={true} />
-                <h3>{item.cause}</h3>
-                <p><strong>{item.effect}</strong></p>
-                <p><em>{item.metric}</em></p>
-                <p>
-                  <a href={item.sourceHref} target="_blank" rel="noopener noreferrer">
-                    {item.sourceLabel}
-                  </a>
+                <p
+                  style={{
+                    fontSize: '0.78rem',
+                    letterSpacing: '0.06em',
+                    textTransform: 'uppercase',
+                    margin: '0 0 0.35rem 0',
+                    color: 'var(--dl-indigo, #3b3f8f)',
+                    fontWeight: 600,
+                  }}
+                >
+                  How Doulab responds
                 </p>
-                <p><strong>{item.pillar}</strong></p>
+                <p style={{ margin: '0 0 0.5rem 0' }}>{c.response}</p>
+                <Link
+                  to={c.responseHref}
+                  className="cardCta"
+                  data-cta={`cta.home.problem.response.${idx}`}
+                  aria-label={`Learn about ${c.responseLabel}`}
+                  style={{ color: 'var(--dl-indigo, #3b3f8f)' }}
+                >
+                  {c.responseLabel} <ArrowRight size={14} aria-hidden={true} />
+                </Link>
               </div>
-            );
-          })}
-        </div>
-
-        <button
-          type="button"
-          className="buttonPrimary"
-          aria-controls={reelId}
-          aria-label="Scroll problems right"
-          data-cta="cta.home.problem.next"
-          onClick={() => scrollByAmount('next')}
-        >
-          Next <ChevronRight size={18} aria-hidden={true} />
-        </button>
+            </article>
+          );
+        })}
       </div>
 
-      <p id={hintId} className="microcopy">Hint, use left and right arrows or scroll horizontally</p>
-
-      {/* Centered follow-up block + CTAs */}
-      <div className={'pages-b4-p1__centerText'}>
-        <p className="sectionLead">If these resonate, start with a quick baseline.</p>
-        <p className="microcopy">Get your baseline in 15 to 20 minutes, do not lose another cycle.</p>
-        <div className={`heroCtas ${'pages-b4-p1__ctaRowCenter'}`}>
-          <Link
-            to="/services/clarityscan"
-            className="buttonPrimary"
-            data-cta="cta.home.problem.clarityscan"
-            aria-label="Start with ClarityScan, diagnostics baseline"
-          >
-            Start with ClarityScan®
-          </Link>
-        </div>
-        <div className={`heroCtas ${'pages-b4-p1__ctaRowCenter'} ${'pages-b4-p1__ctaRowTight'}`}>
-          <Link to="https://booking.doulab.net/discovery" className="buttonSecondary" data-cta="cta.home.problem.book_call">
-            Book a discovery call
-          </Link>
-        </div>
+      <div
+        className={'pages-b4-p1__centerText'}
+        style={{
+          marginTop: '2rem',
+          padding: '1.25rem 1.5rem',
+          borderLeft: '4px solid var(--dl-green, #2f7a3f)',
+          background: 'var(--ifm-color-emphasis-100, rgba(47,122,63,0.06))',
+          borderRadius: '0 8px 8px 0',
+        }}
+      >
+        <p style={{ margin: 0, display: 'inline-flex', gap: '0.6rem', alignItems: 'flex-start' }}>
+          <Gauge
+            size={20}
+            aria-hidden={true}
+            style={{ color: 'var(--dl-green, #2f7a3f)', flexShrink: 0, marginTop: '0.15rem' }}
+          />
+          <span>
+            <strong style={{ color: 'var(--dl-green, #2f7a3f)' }}>What we measure.</strong>{' '}
+            Decision latency, cycle time, signal quality, and capability growth across IMM
+            dimensions. No activity counts dressed up as outcomes. Named client deltas are published
+            in each case study when consent allows.
+          </span>
+        </p>
       </div>
     </section>
   );

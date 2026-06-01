@@ -7,20 +7,22 @@ import Heading from '@theme/Heading';
 
 // Icons (tree-shaken)
 import Layers from 'lucide-react/dist/esm/icons/layers';
-import Target from 'lucide-react/dist/esm/icons/target';
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import ClipboardCheck from 'lucide-react/dist/esm/icons/clipboard-check';
 import Users from 'lucide-react/dist/esm/icons/users';
-import Gauge from 'lucide-react/dist/esm/icons/gauge';
 import LineChart from 'lucide-react/dist/esm/icons/line-chart';
 import Shield from 'lucide-react/dist/esm/icons/shield';
-import BookOpen from 'lucide-react/dist/esm/icons/book-open';
 import Workflow from 'lucide-react/dist/esm/icons/workflow';
 
 import Hero from '../../components/Hero';
 import CaseStudyCards from '../../components/case-studies/CaseStudyCards';
 import FinalCta from '../../components/FinalCta';
 import ImmFunnelDiagram from '../../components/diagrams/ImmFunnelDiagram';
+import Pillars from '../../components/imm/Pillars';
+import Roadmap from '../../components/imm/Roadmap';
+import Radar from '../../components/imm/Radar';
+import MaturityLadder from '../../components/imm/MaturityLadder';
+import EvidenceMeter from '../../components/imm/EvidenceMeter';
 import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 
 export default function InnovationMaturityProgram(): ReactNode {
@@ -33,7 +35,7 @@ export default function InnovationMaturityProgram(): ReactNode {
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://doulab.net' },
     url: 'https://doulab.net/services/innovation-maturity',
     description:
-      'A structured, gated program that installs repeatable innovation capability using the MicroCanvas Framework (MCF v2.2) and IMM 2.2 governance (domain-based scoring, phase readiness, and evidence-backed decision gates).',
+      'IMM-P® is the program that operationalizes the Innovation Maturity Model (IMM 2.2): five domains, a five-rung capability progression, and phase-readiness gates backed by evidence.',
     areaServed: ['Global'],
   };
 
@@ -44,47 +46,20 @@ export default function InnovationMaturityProgram(): ReactNode {
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'What is the difference between IMM and IMM-P®?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'IMM is the model: five domains, five maturity rungs, and phase-readiness gates. IMM-P® is the program that runs an organization through the model, installing the cadence, governance, and evidence discipline needed to climb the ladder.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'How long does the program take?',
         acceptedAnswer: {
           '@type': 'Answer',
           text:
-            'Most teams start with a 12-week core track focused on Foundations plus Structured Discovery & Validation. Larger rollouts extend to 24+ weeks across all five phases with additional pilots and operating cadence improvements.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What’s the time commitment per week?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Expect a weekly masterclass (60–90 minutes), one clinic (60 minutes), plus focused team time for experiments and delivery. Cadence is tailored to your context and constraints.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Who should be involved?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'A cross-functional core team (product/ops, CX, tech/data) plus visible decision owners. We help you staff roles and install a lightweight Innovation Governance Framework aligned to your operating reality.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do we need an innovation lab or PMO in place?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'No. IMM-P® installs the minimal governance and cadence you need. If you already have a lab or PMO, we integrate with it and strengthen decision gates, artifacts, and accountability.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How does ClarityScan® fit into the program?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'ClarityScan® is the Phase 01 baseline. It establishes domain scores and phase readiness, aligns decision owners, and defines the first evidence gates. It becomes your before/after reference.',
+            'Most teams start with a 12-week core track focused on Foundations and Structured Discovery and Validation. Larger rollouts extend to 24+ weeks across all five phases.',
         },
       },
       {
@@ -93,7 +68,16 @@ export default function InnovationMaturityProgram(): ReactNode {
         acceptedAnswer: {
           '@type': 'Answer',
           text:
-            'Both. Scoring is domain-based (how you decide, govern, learn, and scale) and it also produces phase readiness overlays for Structured Discovery & Validation, Efficiency, Scaling, and Continuous Improvement.',
+            'Both. Scoring is domain-based across five domains (Evidence, Decision logic, Culture, Iteration, Systemic and AI governance). The same instrument produces phase-readiness overlays for the five IMM-P® phases.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Where does ClarityScan® fit?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'ClarityScan® is the entry-level diagnostic that feeds an IMM-P® engagement. Tier 1 is the snapshot, Tier 2 is the diagnostic, and Tier 3 is the evidence-backed audit. Any tier establishes the baseline IMM-P® builds on.',
         },
       },
       {
@@ -102,7 +86,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         acceptedAnswer: {
           '@type': 'Answer',
           text:
-            'Tier 1 and Tier 2 can run as scored assessments. Tier 3 requires evidence documentation for auditability, compliance, and institutional learning.',
+            'Tier 1 and Tier 2 can run as scored assessments. Tier 3 requires evidence documentation for auditability, compliance, and institutional learning. IMM-P® phase gates open at 75 percent evidence quality.',
         },
       },
       {
@@ -110,7 +94,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         name: 'Can IMM-P® run remote?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. IMM-P® is remote-first. We can add on-site kickoffs or checkpoints where it creates leverage.',
+          text: 'Yes. IMM-P® is remote-first. On-site kickoffs or checkpoints can be added where they add value.',
         },
       },
       {
@@ -119,25 +103,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         acceptedAnswer: {
           '@type': 'Answer',
           text:
-            'Domain scores and phase readiness overlays, evidence packs and decision memos at each gate, a pilot plan (or shipped pilot), a working governance cadence, and reusable playbooks/templates aligned to MCF 2.2.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do we need engineering resources on day one?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Not necessarily. Early phases can run with interviews, prototypes, and concierge tests. As you move into pilots and scale, dedicated engineering or vendor capacity becomes valuable.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How is pricing structured?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text:
-            'Pricing depends on scope, number of teams, and phase depth. We’ll shape a right-sized plan during intake.',
+            'Domain scores and phase-readiness overlays, evidence packs and decision memos at each gate, a pilot plan or shipped pilot, a working governance cadence, and reusable playbooks aligned to MCF 2.2.',
         },
       },
       {
@@ -152,30 +118,158 @@ export default function InnovationMaturityProgram(): ReactNode {
     ],
   };
 
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://doulab.net/' },
+      { '@type': 'ListItem', position: 2, name: 'Services', item: 'https://doulab.net/services' },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Innovation Maturity Model Program (IMM-P)®',
+        item: 'https://doulab.net/services/innovation-maturity',
+      },
+    ],
+  };
+
+  // IMM model: the five domains
+  const immDomains = [
+    {
+      icon: <ClipboardCheck aria-hidden="true" />,
+      title: 'Evidence and epistemic discipline',
+      body: 'How you separate assumptions from evidence, set thresholds, and refuse to commit resources without proof.',
+      accent: 'indigo' as const,
+    },
+    {
+      icon: <Workflow aria-hidden="true" />,
+      title: 'Decision logic and governance',
+      body: 'How you allocate capital, structure gates, document decisions, and hold owners accountable.',
+      accent: 'purple' as const,
+    },
+    {
+      icon: <Users aria-hidden="true" />,
+      title: 'Culture and behavior',
+      body: 'Whether teams invalidate safely, learn without blame, and collaborate across functional boundaries.',
+      accent: 'green' as const,
+    },
+    {
+      icon: <LineChart aria-hidden="true" />,
+      title: 'Iteration and adaptive improvement',
+      body: 'How quickly you learn, iterate, and institutionalize what works across initiatives.',
+      accent: 'amber' as const,
+    },
+    {
+      icon: <Shield aria-hidden="true" />,
+      title: 'Systemic and AI governance',
+      body: 'Data governance, auditability, lifecycle controls, and impact oversight as complexity increases.',
+      accent: 'slate' as const,
+    },
+  ];
+
+  // IMM-P® phases as a roadmap
+  const immpPhases = [
+    {
+      range: 'Phase 1',
+      label: 'Foundations',
+      body: 'Baseline maturity, install governance, establish evidence discipline, build the Innovation OS blueprint.',
+      initiatives: [
+        'Domain baseline and readiness review',
+        'Governance roles, intake, decision owners',
+        'Pilot shortlist and operating cadence',
+      ],
+      state: 'now' as const,
+    },
+    {
+      range: 'Phase 2',
+      label: 'Structured Discovery and Validation',
+      body: 'Problem framing, customer insight synthesis, hypothesis testing, validated value proposition.',
+      initiatives: [
+        'Research synthesis and problem set',
+        'Experiments with kill criteria',
+        'Problem and solution fit decision memo',
+      ],
+      state: 'now' as const,
+    },
+    {
+      range: 'Phase 3',
+      label: 'Efficiency',
+      body: 'Process, automation, and quality. Operational readiness for pilot expansion.',
+      initiatives: [
+        'Process audit and automation plan',
+        'Quality controls and risk integration',
+        'Operating cadence with dashboards',
+      ],
+      state: 'next' as const,
+    },
+    {
+      range: 'Phase 4',
+      label: 'Scaling',
+      body: 'Infrastructure, partnerships, and growth. Scale economics and repeatable go-to-market.',
+      initiatives: [
+        'Scaling plan and capacity model',
+        'Partner ecosystem governance',
+        'Growth operating system',
+      ],
+      state: 'next' as const,
+    },
+    {
+      range: 'Phase 5',
+      label: 'Continuous Improvement',
+      body: 'Learning system, foresight, resilience, and long-term roadmap.',
+      initiatives: [
+        'Knowledge management and playbooks',
+        'Trend sensing and scenarios',
+        'Quarterly operating review',
+      ],
+      state: 'later' as const,
+    },
+  ];
+
+  // IMM capability progression rungs
+  const immRungs = [
+    { label: 'Foundations', description: 'Initial governance and intake. Decisions exist but evidence is ad hoc.' },
+    { label: 'Structured Discovery', description: 'Repeatable problem framing and experimentation with documented gates.' },
+    { label: 'Efficiency', description: 'Process discipline, automation, and quality controls in place across initiatives.' },
+    { label: 'Scaling', description: 'Portfolio governance, partner ecosystems, and growth systems operating at scale.' },
+    { label: 'Continuous Improvement', description: 'Institutional learning, foresight, and resilience as standing capabilities.' },
+  ];
+
+  // Example radar snapshot (fictional, clearly labeled)
+  const radarDomains = [
+    { name: 'Evidence', score: 50 },
+    { name: 'Decision logic', score: 65 },
+    { name: 'Culture', score: 40 },
+    { name: 'Iteration', score: 55 },
+    { name: 'Systemic and AI', score: 45 },
+  ];
+  const radarTarget = [75, 75, 70, 75, 75];
+
   return (
     <Layout
       title="Innovation Maturity Model Program (IMM-P)® | Doulab"
-      description="A domain-based, evidence-first program to baseline and strengthen innovation capability, improving decision-making under uncertainty across Discovery & Validation, Efficiency, Scaling, and Continuous Improvement, built on MicroCanvas® v2.2 and IMM-P® gates."
+      description="IMM is the model. IMM-P® is the program that runs your team through it: five domains, five maturity rungs, and phase-readiness gates backed by evidence."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/innovation-maturity" />
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Luis Santiago Arias" />
-        {/* Use a dedicated social card if you have it */}
         <meta property="og:image" content="https://doulab.net/img/social/og-imm-program.jpg" />
-        <meta property="og:image:alt" content="IMM-P®: structured, gated innovation program by Doulab" />
+        <meta property="og:image:alt" content="IMM-P®: the program that operationalizes the Innovation Maturity Model" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Head>
 
       <main>
-        {/* Standardized two-column hero */}
+        {/* Hero */}
         <Hero
-          title="Innovation Maturity Model Program (IMM-P)®"
-          subtitle="Assess. Strengthen. Accelerate."
+          title="IMM is the model. IMM-P® is the program."
+          subtitle="Measure innovation maturity. Then climb the ladder, gate by gate."
           body={
-            'IMM-P® helps your team make better innovation decisions under uncertainty. We establish a clear baseline, align decision owners, and install a simple operating cadence that makes progress measurable. Delivery runs through five structured phases using the MicroCanvas Framework (MCF 2.2).'
+            'The Innovation Maturity Model (IMM) measures how an organization decides under uncertainty across five domains and five maturity rungs. IMM-P® is the program that runs your team through it, installing the cadence, governance, and evidence discipline that move you up the ladder. Built on MicroCanvas Framework (MCF 2.2).'
           }
           imageBase="/img/imm-program"
           imageAlt="IMM-P® program illustration"
@@ -188,287 +282,73 @@ export default function InnovationMaturityProgram(): ReactNode {
             dataCta: 'cta.services.imm.hero.discovery',
           }}
           secondaryCta={{
-            to: '#program-structure',
-            label: 'See program structure',
-            dataCta: 'cta.services.imm.hero.see_structure',
-            ariaLabel: 'See program structure',
+            to: '#imm-model',
+            label: 'See the model',
+            dataCta: 'cta.services.imm.hero.see_model',
+            ariaLabel: 'Jump to the IMM model section',
           }}
-          ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2."
+          ctaNote="Built on MicroCanvas® v2.2 plus IMM 2.2."
         />
 
-        <section className="section immWhatYouGet" id="imm-what-you-get" aria-labelledby="imm-what-you-get-title">
-          <h2 id="imm-what-you-get-title">What you get</h2>
-          <p className="sectionLead">
-            A pragmatic, evidence-based operating model your team can run every week, so innovation decisions become repeatable, measurable, and less risky.
-          </p>
-
-          <div className="grid grid-3">
-            <article className="card" aria-labelledby="imm-deliverable-baseline">
-              <h3 id="imm-deliverable-baseline">Baseline + scorecard</h3>
-              <p>A domain-level baseline (capability + readiness) with clear gaps, strengths, and priority actions.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-deliverable-gates">
-              <h3 id="imm-deliverable-gates">Evidence gates</h3>
-              <p>A lightweight governance layer: what counts as evidence, when to stop, and when to scale.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-deliverable-cadence">
-              <h3 id="imm-deliverable-cadence">Delivery cadence</h3>
-              <p>A weekly operating rhythm (checkpoints, reviews, artifacts) aligned to your maturity phase.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-deliverable-artifacts">
-              <h3 id="imm-deliverable-artifacts">Standard artifacts</h3>
-              <p>Reusable templates: problem framing, experiments, decision logs, KPIs/OKRs, and risk notes.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-deliverable-roadmap">
-              <h3 id="imm-deliverable-roadmap">90-day roadmap</h3>
-              <p>A phased plan with measurable outcomes and ownership, so progress is visible to leadership.</p>
-            </article>
-          </div>
-
-        </section>
-
-        {/* Who is it for? */}
-        <section className="section" id="imm-who" aria-labelledby="imm-who-title">
-          <h2 id="imm-who-title">Who is it for?</h2>
-          <div className="cardGrid">
-            <article className="card" aria-labelledby="imm-startups">
-              <Rocket className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-startups">Startups</h3>
-              <p>From idea to validated model with evidence gates, faster iteration, and measurable maturity improvements.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-public">
-              <ClipboardCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-public">Public institutions</h3>
-              <p>Innovation governance for complex environments: transparent decision trails, capability building, and scalable operating cadence.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-private">
-              <Users className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-private">Private organizations</h3>
-              <p>A repeatable system for innovation delivery: governance, metrics, and operating rhythm that turns strategy into outcomes.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-accelerators">
-              <Workflow className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-accelerators">Incubators &amp; accelerators</h3>
-              <p>Improve cohort quality with evidence-first evaluation, clear stage gates, and reusable playbooks aligned to MCF 2.2.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-academia">
-              <BookOpen className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-academia">Academic institutions</h3>
-              <p>Research-to-impact pipelines, experimentation discipline, and governance for applied innovation programs and labs.</p>
-            </article>
-          </div>
-        </section>
-
-        {/* Outcomes */}
-        <section className="section" id="imm-outcomes" aria-labelledby="imm-outcomes-title">
-          <h2 id="imm-outcomes-title">What you can expect</h2>
-          <div className="cardGrid">
-            <article className="card" aria-labelledby="imm-momentum">
-              <Workflow className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-momentum">Momentum</h3>
-              <p>Faster decision cycles, tighter experiments, and clear gates that reduce waste and increase learning velocity.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-clarity">
-              <Gauge className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-clarity">Clarity</h3>
-              <p>Domain scores, phase readiness overlays, and KPIs that translate strategy into operating reality.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-capability">
-              <Layers className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-capability">Capability</h3>
-              <p>Reusable playbooks, decision memos, and governance routines your teams can sustain long after the program.</p>
-            </article>
-          </div>
-        </section>
-
-        {/* IMM 2.2 model */}
+        {/* The IMM model: five domains */}
         <section className="section" id="imm-model" aria-labelledby="imm-model-title">
-          <h2 id="imm-model-title">How IMM 2.2 measures maturity</h2>
+          <Heading as="h2" id="imm-model-title">The model: five IMM domains</Heading>
           <p className="sectionLead">
-            IMM 2.2 measures maturity through domain scoring with phase readiness overlays. Each question is scored individually; advanced assessments require evidence documentation for auditability.
+            IMM scores maturity across five domains. Each domain is measured with evidence; together they describe how an
+            organization actually makes innovation decisions under uncertainty.
           </p>
-
-          <div className="cardGrid">
-            <article className="card" aria-labelledby="imm-domain-1">
-              <ClipboardCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-domain-1">Evidence &amp; epistemic discipline</h3>
-              <p>How you separate assumptions from evidence and enforce thresholds before committing resources.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-domain-2">
-              <Workflow className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-domain-2">Decision logic &amp; governance</h3>
-              <p>How you allocate capital, define gates, document decisions, and maintain accountability.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-domain-3">
-              <Users className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-domain-3">Culture &amp; behavior</h3>
-              <p>Whether teams can invalidate safely, learn without blame, and collaborate across boundaries.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-domain-4">
-              <LineChart className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-domain-4">Iteration &amp; adaptive improvement</h3>
-              <p>How quickly you learn, iterate, and institutionalize what works across initiatives.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-domain-5">
-              <Shield className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-domain-5">Systemic &amp; AI governance</h3>
-              <p>Data governance, auditability, lifecycle controls, and impact oversight as complexity increases.</p>
-            </article>
-
-            <article className="card" aria-labelledby="imm-tiers">
-              <Layers className="cardIcon" aria-hidden="true" />
-              <h3 id="imm-tiers">Tiered delivery</h3>
-              <p>Tier 1 snapshot, Tier 2 diagnostic, Tier 3 evidence-backed audit: one internal master instrument.</p>
-            </article>
-          </div>
+          <Pillars
+            pillars={immDomains}
+            foundationLabel="Innovation maturity, measured."
+            ariaLabel="The five IMM domains on a shared foundation of measured maturity"
+          />
         </section>
 
-        {/* How we work — quick steps */}
-        <section className="section" id="imm-how-we-work" aria-labelledby="imm-how-we-work-title">
-          <h2 id="imm-how-we-work-title">How we work</h2>
-          <div className="grid grid-3">
-            <article className="card" aria-labelledby="imm-step-baseline">
-              <h3 id="imm-step-baseline">Baseline</h3>
-              <p>Establish domain scores, capability readiness, and key decision owners.</p>
-            </article>
-            <article className="card" aria-labelledby="imm-step-align">
-              <h3 id="imm-step-align">Align</h3>
-              <p>Agree on goals, evidence criteria, and operating cadence with leadership and core teams.</p>
-            </article>
-            <article className="card" aria-labelledby="imm-step-experiments">
-              <h3 id="imm-step-experiments">Run experiments</h3>
-              <p>Design and execute focused discovery, validation, and optimization cycles.</p>
-            </article>
-            <article className="card" aria-labelledby="imm-step-institutionalize">
-              <h3 id="imm-step-institutionalize">Institutionalize</h3>
-              <p>Embed learnings into routines, metrics, and ongoing operating rhythm.</p>
-            </article>
-          </div>
+        {/* Capability progression */}
+        <section className="section" id="imm-ladder" aria-labelledby="imm-ladder-title">
+          <Heading as="h2" id="imm-ladder-title">The capability progression</Heading>
+          <p className="sectionLead">
+            IMM defines five rungs of capability. Most teams start somewhere in the middle. IMM-P® meets you wherever you are
+            and sequences the climb, one phase-readiness gate at a time.
+          </p>
+          <MaturityLadder
+            rungs={immRungs}
+            current={2}
+            target={4}
+            ariaLabel="IMM capability progression with five rungs, example current rung two and target rung four"
+          />
+          <p className="microcopy" style={{ marginTop: '0.75rem' }}>
+            Example positioning. Your actual current and target rungs are set during the ClarityScan® baseline.
+          </p>
         </section>
 
-        {/* Program structure */}
-        <section className="section" id="program-structure" aria-labelledby="program-structure">
-          <Heading as="h2" id="program-structure">
-            Program structure (IMM-P®)
-          </Heading>
+        {/* Sample maturity snapshot (radar) */}
+        <section className="section" id="imm-snapshot" aria-labelledby="imm-snapshot-title">
+          <Heading as="h2" id="imm-snapshot-title">What a maturity snapshot looks like</Heading>
           <p className="sectionLead">
-            Five phases. Weekly masterclasses + clinics. Clear gates, owners, and decision criteria. Evidence stays in the loop.
+            A real IMM-P® engagement opens with a domain-level snapshot. Current scores anchor the baseline; target scores
+            define the climb. The example below is fictional and shown only to make the deliverable visible.
           </p>
+          <Radar
+            domains={radarDomains}
+            target={radarTarget}
+            caption="Example output, illustrative only. Scores are fictional."
+            ariaLabel="Example IMM radar snapshot across five domains with current and target overlays"
+          />
+        </section>
 
-          <div className="immPhaseStack">
-            {/* Phase 01 */}
-          <article className="card" aria-labelledby="phase-01-title">
-            <BookOpen className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-01-title">Phase 01: Foundations (Readiness &amp; Operating System)</h3>
-            <ul>
-              <li>Baseline maturity (domain scoring, culture, governance, decision logic)</li>
-              <li>Install innovation governance (roles, cadence, intake, decision owners, gate criteria)</li>
-              <li>Establish evidence discipline (thresholds, decision memos, learning capture)</li>
-              <li>Reinforce culture & mindset (leadership rituals, meeting hygiene, accountability norms)</li>
-              <li>Set agile operating setup (boards, sprint rhythm, review/retro cadence)</li>
-              <li>Define program OKRs & KPIs (measurement plan, reporting cadence)</li>
-              <li>Select pilot candidates (sequencing, constraints, risk scan)</li>
-              <li>Build the Innovation OS blueprint (tooling, templates, evidence packs, decision memo format)</li>
-              <li>Run phase gate (readiness review + next-phase plan)</li>
-            </ul>
-            <p>
-              <strong>Key deliverables:</strong> Domain baseline; governance framework; OKRs/KPIs; pilot shortlist &amp; criteria; Innovation OS blueprint; readiness decision memo.
-            </p>
-          </article>
-
-          {/* Phase 02 */}
-          <article className="card" aria-labelledby="phase-02-title">
-            <Target className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-02-title">Phase 02: Structured Discovery &amp; Validation</h3>
-            <ul>
-              <li>Synthesize customer insights (segments, interviews, jobs/pains/gains, alternatives)</li>
-              <li>Define the problem (problem statements, constraints, strategic objectives, OKR alignment)</li>
-              <li>Explore solutions (alternatives, value proposition, differentiation)</li>
-              <li>Prototype workflows (user stories, flows, low-to-mid fidelity prototypes)</li>
-              <li>Run experiments (hypotheses, test design, evidence loops, kill criteria)</li>
-              <li>Stand up validation infrastructure (tracking, synthesis, decision trails)</li>
-              <li>Outline GTM (channels, onboarding, retention levers, early sales motions)</li>
-              <li>Check business model signals (viability checks, operating assumptions)</li>
-              <li>Run phase gate (problem/solution fit decision memo)</li>
-            </ul>
-            <p>
-              <strong>Key deliverables:</strong> Research synthesis; problem &amp; objective set; validated value proposition; experiment results; pilot plan; updated model; decision memo.
-            </p>
-          </article>
-
-          {/* Phase 03 */}
-          <article className="card" aria-labelledby="phase-03-title">
-            <LineChart className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-03-title">Phase 03: Efficiency (Process, Automation, Quality)</h3>
-            <ul>
-              <li>Map processes (bottleneck removal, SOPs, handoffs, latency reduction)</li>
-              <li>Implement automation & integrations (workflows, data pipelines, system boundaries)</li>
-              <li>Establish data-driven cadence (dashboards, governance review rhythm)</li>
-              <li>Strengthen quality controls (defect prevention, acceptance criteria, reliability practices)</li>
-              <li>Integrate risk & compliance (controls, checklists)</li>
-              <li>Align cross-team interfaces (ownership, escalation paths)</li>
-              <li>Run continuous improvement loops (retrospectives, backlog hygiene, operating upgrades)</li>
-              <li>Run phase gate (operational readiness + pilot expansion memo)</li>
-            </ul>
-            <p>
-              <strong>Key deliverables:</strong> Process audit &amp; actions; automation plan; QA/risk plan; dashboards; operating cadence; expansion decision memo.
-            </p>
-          </article>
-
-          {/* Phase 04 */}
-          <article className="card" aria-labelledby="phase-04-title">
-            <Rocket className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-04-title">Phase 04: Scaling (Infrastructure, Partnerships, Growth)</h3>
-            <ul>
-              <li>Set scaling strategy (roadmap, sequencing, capacity planning)</li>
-              <li>Align infrastructure & org (roles, talent plan, operating model adjustments)</li>
-              <li>Develop partner ecosystem (selection, governance, interface management)</li>
-              <li>Build growth operating system (metrics, targets, experimentation at scale)</li>
-              <li>Expand GTM (sales/marketing systems, repeatable onboarding)</li>
-              <li>Model scale economics (unit economics, scenarios, risk and contingency)</li>
-              <li>Address internationalization considerations (where relevant)</li>
-              <li>Run phase gate (scale-up decision memo)</li>
-            </ul>
-            <p>
-              <strong>Key deliverables:</strong> Scaling plan; partner map; growth KPI system; GTM expansion plan; finance model; talent/org plan; scale decision memo.
-            </p>
-          </article>
-
-          {/* Phase 05 */}
-          <article className="card" aria-labelledby="phase-05-title">
-            <Shield className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-05-title">Phase 05: Continuous Improvement (Learning &amp; Resilience)</h3>
-            <ul>
-              <li>Install continuous learning system (feedback loops, retrospectives, portfolio reviews)</li>
-              <li>Build knowledge management (playbooks, patterns, institutional memory)</li>
-              <li>Run trend sensing & foresight (signals, scenarios, adaptive strategy refresh)</li>
-              <li>Track impact (outcomes, stakeholder communication)</li>
-              <li>Maintain resilience playbook (risks, continuity, sustainability practices)</li>
-              <li>Refresh operating cadence (quarterly reviews, governance upgrades, OKR recalibration)</li>
-              <li>Set long-term roadmap (capability upgrades, maturity targets)</li>
-              <li>Run phase gate (long-term operating review memo)</li>
-            </ul>
-            <p>
-              <strong>Key deliverables:</strong> Continuous improvement strategy; foresight inputs; impact measures; resilience plan; long-term roadmap; operating review memo.
-            </p>
-          </article>
-          </div>
-
-          <p className={`microcopy ${'pages-b4-p2__microcopyTop'}`}>
+        {/* The program: IMM-P® phases as a roadmap */}
+        <section className="section" id="imm-program" aria-labelledby="imm-program-title">
+          <Heading as="h2" id="imm-program-title">The program: IMM-P® phases</Heading>
+          <p className="sectionLead">
+            IMM-P® runs in five sequential phases. Each phase ends at a readiness gate: evidence is reviewed, a decision memo
+            is written, and the next phase opens only when the gate passes.
+          </p>
+          <Roadmap
+            horizons={immpPhases}
+            ariaLabel="The five IMM-P® phases from Foundations through Continuous Improvement"
+          />
+          <p className="microcopy" style={{ marginTop: '0.75rem' }}>
             Method backbone:{' '}
             <Link
               to="/docs/research-resources/microcanvas"
@@ -477,196 +357,94 @@ export default function InnovationMaturityProgram(): ReactNode {
             >
               MicroCanvas Framework (MCF 2.2)
             </Link>{' '}
-            + IMM 2.2 (domain scoring, phase readiness, evidence gates).
+            plus IMM 2.2 (domain scoring, phase readiness, evidence gates).
           </p>
         </section>
 
-        <section className="section" id="imm-delivery" aria-labelledby="imm-delivery-title">
-          <h2 id="imm-delivery-title">Delivery options</h2>
+        {/* Example gate readout */}
+        <section className="section" id="imm-gate" aria-labelledby="imm-gate-title">
+          <Heading as="h2" id="imm-gate-title">What a phase-readiness gate looks like</Heading>
           <p className="sectionLead">
-            Choose the operating cadence that matches your constraints. We keep the same gates and artifacts; only the depth and rollout
-            change.
+            Every IMM-P® phase ends at a gate. The gate is a structured review of evidence quality, decision logic, and
+            artifacts. The example below shows a Phase 2 to Phase 3 readout right at the boundary.
           </p>
+          <EvidenceMeter
+            score={72}
+            label="Phase 2 to Phase 3 readiness, example"
+            ariaLabel="Example evidence meter showing a phase-readiness score of 72 out of 100"
+          />
+          <p className="microcopy" style={{ marginTop: '0.75rem', textAlign: 'center' }}>
+            Gate opens at 75 percent evidence quality. Below the threshold, the team iterates and re-presents.
+          </p>
+        </section>
 
+        {/* Tiers reference */}
+        <section className="section" id="imm-tiers" aria-labelledby="imm-tiers-title">
+          <Heading as="h2" id="imm-tiers-title">Where to start: the ClarityScan® tiers</Heading>
+          <p className="sectionLead">
+            ClarityScan® is the entry-level diagnostic that feeds an IMM-P® engagement. Pick the tier that matches the depth
+            of evidence you need.
+          </p>
           <div className="cardGrid">
-            <article className="card" aria-labelledby="imm-delivery-core">
-              <h3 id="imm-delivery-core">12-week core track</h3>
+            <article className="card" aria-labelledby="imm-tier-1">
+              <Layers className="cardIcon" aria-hidden="true" />
+              <h3 id="imm-tier-1">Tier 1: Snapshot</h3>
+              <p>A scored baseline across the five IMM domains with a phase-readiness overlay. Best for fast alignment.</p>
               <p>
-                Foundations + Structured Discovery &amp; Validation. Best for teams that need a fast baseline, clear gates, and a first pilot
-                plan.
-              </p>
-              <ul>
-                <li>Domain baseline + phase readiness</li>
-                <li>Governance cadence installed (weekly)</li>
-                <li>Evidence gates + decision memos</li>
-              </ul>
-            </article>
-
-            <article className="card" aria-labelledby="imm-delivery-extended">
-              <h3 id="imm-delivery-extended">24+ week rollout</h3>
-              <p>
-                Two 12-week cycles covering Foundations plus Structured Discovery &amp; Validation, followed by Efficiency, Scaling, and
-                Continuous Improvement.
-              </p>
-              <ul>
-                <li>Phase-by-phase delivery + gates</li>
-                <li>Pilot execution support</li>
-                <li>Operating cadence reinforcement</li>
-              </ul>
-            </article>
-
-            <article className="card" aria-labelledby="imm-delivery-multiteam">
-              <h3 id="imm-delivery-multiteam">Multi-team / portfolio</h3>
-              <p>For institutions and larger organizations running multiple initiatives. Adds portfolio governance and standardization.</p>
-              <ul>
-                <li>Intake + prioritization model</li>
-                <li>Portfolio reviews + auditability</li>
-                <li>Shared playbooks &amp; templates</li>
-              </ul>
-            </article>
-          </div>
-
-          <div className="immDeliveryCtas">
-            <Link
-              className="buttonPrimary"
-              to="https://booking.doulab.net/discovery"
-              data-cta="cta.services.imm.delivery.discovery"
-              aria-label="Book a discovery call to choose a delivery option"
-            >
-              Book a discovery call
-            </Link>
-            <Link
-              className="buttonSecondary"
-              to="#program-structure"
-              data-cta="cta.services.imm.delivery.see_structure"
-              aria-label="Jump to program structure"
-            >
-              See program structure
-            </Link>
-          </div>
-
-          <p className="microcopy" style={{ marginTop: '0.5rem' }}>
-            Prefer starting with a baseline?{' '}
-            <Link to="/services/clarityscan" data-cta="cta.services.imm.delivery.learn_clarityscan" aria-label="Learn about ClarityScan baseline">
-              Learn about ClarityScan®
-            </Link>
-            .
-          </p>
-        </section>
-
-        {/* FAQ — keep 2-column layout via existing grid class */}
-        <section className="section" id="imm-faq" aria-labelledby="imm-faq-title">
-          <h2 id="imm-faq-title">IMM-P®: Frequently asked questions</h2>
-
-          <div className={`faqList ${'pages-b4-p2__faqListGrid'} immFaqGrid`}>
-            <details className="card">
-              <summary>
-                <strong>How long does the program take?</strong>
-              </summary>
-              <p>Most teams start with a 12-week core track focused on Foundations plus Structured Discovery &amp; Validation. Larger rollouts extend to 24+ weeks across all five phases with additional pilots and operating cadence improvements.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>What’s the time commitment per week?</strong>
-              </summary>
-              <p>Expect a weekly masterclass (60–90 minutes), one clinic (60 minutes), plus team time for experiments and delivery. Cadence is tailored to your context.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Who should be involved?</strong>
-              </summary>
-              <p>A cross-functional core team and visible decision owners. We help you staff roles and install a lightweight Innovation Governance Framework aligned to your operating reality.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Do we need a lab or PMO first?</strong>
-              </summary>
-              <p>No. IMM-P® installs the minimal governance and cadence you need. If you already have a lab/PMO, we integrate and strengthen gates, artifacts, and accountability.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Where does ClarityScan® fit?</strong>
-              </summary>
-              <p>
-                We run a{' '}
-                <Link to="/services/clarityscan" data-cta="cta.services.imm.faq.clarityscan" aria-label="Open ClarityScan service page">
-                  ClarityScan®
-                </Link>{' '}
-                in Phase 01 to establish domain scores and phase readiness, align decision owners, and define the first evidence gates.
-              </p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Is IMM 2.2 domain-based or phase-based?</strong>
-              </summary>
-              <p>Both. Scoring is domain-based (how you decide, govern, learn, and scale) and it also produces phase readiness overlays for Structured Discovery &amp; Validation, Efficiency, Scaling, and Continuous Improvement.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Do you require evidence for scoring?</strong>
-              </summary>
-              <p>Tier 1 and Tier 2 can run as scored assessments. Tier 3 requires evidence documentation for auditability, compliance, and institutional learning.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Can the program run remotely?</strong>
-              </summary>
-              <p>Yes. Remote-first by design, with optional on-site kickoffs or checkpoints.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>What do we receive at the end?</strong>
-              </summary>
-              <p>Domain scores and phase readiness overlays, evidence packs and decision memos at each gate, a pilot plan (or shipped pilot), a working governance cadence, and reusable playbooks/templates aligned to MCF 2.2.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>Do we need engineering on day one?</strong>
-              </summary>
-              <p>Not necessarily. Early phases can run with interviews, prototypes, and concierge tests. Later phases benefit from dedicated engineering or vendor capacity.</p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>How is pricing structured?</strong>
-              </summary>
-              <p>
-                Scope-based. We’ll shape a right-sized plan during intake.{' '}
                 <Link
-                  to="https://booking.doulab.net/discovery"
-                  data-cta="cta.services.imm.faq.pricing.discovery"
-                  aria-label="Book a discovery call to discuss IMM pricing"
+                  to="/services/clarityscan"
+                  data-cta="cta.services.imm.tiers.t1"
+                  aria-label="Open ClarityScan Tier 1 Snapshot"
                 >
-                  Talk to us
+                  See Tier 1 Snapshot
                 </Link>
-                .
               </p>
-            </details>
-
-            <details className="card">
-              <summary>
-                <strong>How do you handle data and privacy?</strong>
-              </summary>
-              <p>Privacy-first analytics only. You own your data. We operate under NDAs and follow your security and compliance requirements.</p>
-            </details>
+            </article>
+            <article className="card" aria-labelledby="imm-tier-2">
+              <ClipboardCheck className="cardIcon" aria-hidden="true" />
+              <h3 id="imm-tier-2">Tier 2: Diagnostic</h3>
+              <p>A deeper scored diagnostic with interviews, artifact review, and a prioritized action plan.</p>
+              <p>
+                <Link
+                  to="/services/clarityscan/diagnostic"
+                  data-cta="cta.services.imm.tiers.t2"
+                  aria-label="Open ClarityScan Tier 2 Diagnostic"
+                >
+                  See Tier 2 Diagnostic
+                </Link>
+              </p>
+            </article>
+            <article className="card" aria-labelledby="imm-tier-3">
+              <Shield className="cardIcon" aria-hidden="true" />
+              <h3 id="imm-tier-3">Tier 3: Audit</h3>
+              <p>An evidence-backed audit with documented artifacts for auditability, compliance, and institutional learning.</p>
+              <p>
+                <Link
+                  to="/services/clarityscan/audit"
+                  data-cta="cta.services.imm.tiers.t3"
+                  aria-label="Open ClarityScan Tier 3 Audit"
+                >
+                  See Tier 3 Audit
+                </Link>
+              </p>
+            </article>
           </div>
         </section>
 
-        <section className="section section--tight" id="imm-proof" aria-labelledby="imm-proof-title">
-          <h2 id="imm-proof-title">Trusted by teams building public and private innovation</h2>
+        {/* Who delivers */}
+        <section className="section" id="imm-delivers" aria-labelledby="imm-delivers-title">
+          <Heading as="h2" id="imm-delivers-title">Who delivers IMM-P®</Heading>
           <p className="sectionLead">
-            Trusted by teams building public and private innovation programs.
+            An IMM-P® engagement is led by Doulab principals with deep experience in innovation governance, evidence
+            discipline, and operating cadence. Delivery is remote-first, with on-site kickoffs or checkpoints when they
+            add value. Your core team provides the cross-functional capacity (product or operations, customer or
+            citizen experience, technology or data) and visible decision owners.
           </p>
+        </section>
 
+        {/* Proof strip */}
+        <section className="section section--tight" id="imm-proof" aria-labelledby="imm-proof-title">
+          <Heading as="h2" id="imm-proof-title">Trusted by teams building public and private innovation</Heading>
           <div className="proofStrip" role="list" aria-label="Selected organizations">
             {[
               { key: 'afpsiembra', alt: 'AFP Siembra logo' },
@@ -685,46 +463,144 @@ export default function InnovationMaturityProgram(): ReactNode {
               </picture>
             ))}
           </div>
-
-          <p className="microcopy" style={{ textAlign: 'center', marginTop: '0.75rem' }}>
-            Want to see a relevant example?{' '}
-            <Link to="#imm-related" data-cta="cta.services.imm.proof.see_case_studies" aria-label="Jump to related case studies">
-              Explore case studies
-            </Link>
-            .
-          </p>
         </section>
 
-        {/* Related case studies — shared component in canonical order */}
-        <section className="section" id="imm-related" aria-labelledby="imm-related">
-          <Heading as="h2" id="imm-related">
+        {/* Related case studies */}
+        <section className="section" id="imm-related" aria-labelledby="imm-related-title">
+          <Heading as="h2" id="imm-related-title">
             Related case studies
           </Heading>
           <CaseStudyCards slugs={['afp-siembra', 'alpha-inversiones', 'fundapec', 'ogtic-redlab']} />
         </section>
 
-        {/* Final CTA — standardized component */}
+        {/* FAQ */}
+        <section className="section" id="imm-faq" aria-labelledby="imm-faq-title">
+          <Heading as="h2" id="imm-faq-title">IMM-P®: Frequently asked questions</Heading>
+
+          <div className={`faqList ${'pages-b4-p2__faqListGrid'} immFaqGrid`}>
+            <details className="card">
+              <summary>
+                <strong>What is the difference between IMM and IMM-P®?</strong>
+              </summary>
+              <p>
+                IMM is the model: five domains, five maturity rungs, and phase-readiness gates. IMM-P® is the program that
+                runs an organization through the model, installing the cadence, governance, and evidence discipline needed
+                to climb the ladder.
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>How long does the program take?</strong>
+              </summary>
+              <p>
+                Most teams start with a 12-week core track focused on Foundations plus Structured Discovery and Validation.
+                Larger rollouts extend to 24+ weeks across all five phases.
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>Is IMM 2.2 domain-based or phase-based?</strong>
+              </summary>
+              <p>
+                Both. Scoring is domain-based across the five IMM domains. The same instrument produces phase-readiness
+                overlays for the five IMM-P® phases.
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>Where does ClarityScan® fit?</strong>
+              </summary>
+              <p>
+                ClarityScan® is the entry-level diagnostic that feeds an IMM-P® engagement. Tier 1 Snapshot, Tier 2
+                Diagnostic, or Tier 3 Audit all establish the baseline IMM-P® builds on. See{' '}
+                <Link to="/services/clarityscan" data-cta="cta.services.imm.faq.clarityscan" aria-label="Open ClarityScan service page">
+                  ClarityScan®
+                </Link>
+                .
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>Do you require evidence for scoring?</strong>
+              </summary>
+              <p>
+                Tier 1 and Tier 2 can run as scored assessments. Tier 3 requires evidence documentation. IMM-P® phase gates
+                open at 75 percent evidence quality.
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>Can the program run remotely?</strong>
+              </summary>
+              <p>Yes. IMM-P® is remote-first by design, with optional on-site kickoffs or checkpoints.</p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>What do we receive at the end?</strong>
+              </summary>
+              <p>
+                Domain scores and phase-readiness overlays, evidence packs and decision memos at each gate, a pilot plan or
+                shipped pilot, a working governance cadence, and reusable playbooks aligned to MCF 2.2.
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>How is pricing structured?</strong>
+              </summary>
+              <p>
+                Scope-based. We shape a right-sized plan during intake.{' '}
+                <Link
+                  to="https://booking.doulab.net/discovery"
+                  data-cta="cta.services.imm.faq.pricing.discovery"
+                  aria-label="Book a discovery call to discuss IMM-P pricing"
+                >
+                  Talk to us
+                </Link>
+                .
+              </p>
+            </details>
+
+            <details className="card">
+              <summary>
+                <strong>How do you handle data and privacy?</strong>
+              </summary>
+              <p>
+                Privacy-first analytics only. You own your data. We operate under NDAs and follow your security and
+                compliance requirements.
+              </p>
+            </details>
+          </div>
+        </section>
+
+        {/* Final CTA */}
         <FinalCta
           id="imm-cta"
           ariaLabelledbyId="imm-cta-title"
-          title="Ready to accelerate your innovation maturity?"
-          body="Kick off with a quick baseline or talk with our team about running IMM-P® in your organization."
+          title="Ready to scope an IMM-P® engagement?"
+          body="Book a discovery call to scope your IMM-P® engagement, or start with a ClarityScan® Tier 1 Snapshot to establish your baseline."
           primaryCta={{
-            href: CLARITYSCAN_CHECKOUT_URL,
-            label: 'Book a ClarityScan® online',
-            dataCta: 'cta.services.imm.final.book_clarityscan_booking',
-            newTab: true,
-            ariaLabel: 'Book a ClarityScan baseline assessment',
-          }}
-          secondaryCta={{
             to: 'https://booking.doulab.net/discovery',
             label: 'Book a discovery call',
             dataCta: 'cta.services.imm.final.discovery',
+            ariaLabel: 'Book a discovery call to scope an IMM-P engagement',
           }}
-          ctaNote="Built on MicroCanvas® v2.2 + IMM 2.2 (domain scoring, phase readiness, evidence gates)."
+          secondaryCta={{
+            href: CLARITYSCAN_CHECKOUT_URL,
+            label: 'Start with ClarityScan® Tier 1',
+            dataCta: 'cta.services.imm.final.book_clarityscan_t1',
+            newTab: true,
+            ariaLabel: 'Book a ClarityScan Tier 1 Snapshot',
+          }}
+          ctaNote="Built on MicroCanvas® v2.2 plus IMM 2.2 (domain scoring, phase readiness, evidence gates)."
         />
       </main>
     </Layout>
   );
 }
-

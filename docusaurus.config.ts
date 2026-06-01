@@ -9,10 +9,13 @@ const config: Config = {
   tagline: 'We unlock global prosperity by helping others create better futures',
   favicon: 'img/favicon.ico',
 
-  // future: { v4: true } — disabled 2026-06-01 during audit. v4 enables strict MDX-3
-  // and requires @docusaurus/faster; surfaces latent issues (legacy <!-- comments -->,
-  // empty MDX pages, blog metadata). Re-enable as a planned migration (Phase 4 in
-  // docs/ops/audit-2026-06/00-index.md), not as a flip-the-switch.
+  // V4 migration trial 2026-06-01: enabled `future: { v4: true, faster: true }`
+  // briefly, then reverted. v4 caused every doc page and every blog page to
+  // fail SSG with `TypeError: Cannot read properties of undefined (reading
+  // 'id')` in DocItem, and produced doubled blog tag URLs like
+  // `/blog/tags/blog/tags/announcement`. Not a flip-the-switch migration on
+  // this site — needs root-cause work in DocItem theme path + blog tag
+  // route generation. Tracked as E-V4 in docs/ops/doulab-net-backlog.md.
   future: {},
 
   url: SITE_URL,

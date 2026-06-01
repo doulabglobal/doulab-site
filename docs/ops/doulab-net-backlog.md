@@ -132,6 +132,28 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - **ES-E verify (DONE 2026-06-01)**: `npm run build` produces both `build/` and `build/es/` cleanly. Post-translation fix: bulk rewrite of relative imports in 25 ES TSX files from `../../components/...` to `@site/src/...` aliases (i18n source dir does not resolve relative-to-src). Broken-anchor warnings on both locales are pre-existing (same set as EN-only build).
 - Commits: 3760aab (ES-A scaffold), eb1c8c8 (ES-B/C/D + import-alias fix + tag-slug revert).
 
+### E-V4 (Docusaurus v4 future-flag migration — TRIAL REVERTED 2026-06-01)
+- Description: Enable `future: { v4: true, faster: true }` on @docusaurus/core 3.10.1. v4 GA is not yet released (`npm view @docusaurus/core dist-tags` shows `latest: 3.10.1`); the v4 future flag lights up the v4-flavored behaviors (strict MDX-3, the @docusaurus/faster Rspack-based bundler) inside v3.
+- Surface scan before trial (clean):
+  - `<!--` legacy comments: only 3 files, all under `docs/ops/**` which the docs preset excludes from build. Not a blocker.
+  - Empty MDX pages: none.
+- Trial result (FAILED):
+  - Every doc page failed SSG with `TypeError: Cannot read properties of undefined (reading 'id')` in DocItem (the theme-classic doc-item component). Errored pages: `/docs/intro`, `/docs/releases`, `/docs/research-resources`, `/docs/research-resources/distributed-federated-agentic-ai`, `/docs/research-resources/microcanvas`, `/docs/research-resources/innovation-lab-guide` + all 11 chapter pages + `innovation-lab-guide-q2-2024-en`. 18 doc pages.
+  - Every blog page failed: `/blog`, `/blog/authors/luis`, all 4 individual posts.
+  - Blog tag URLs were doubly-prefixed: `/blog/tags/blog/tags/announcement`, `/blog/tags/blog/tags/caribbean`, etc. — 14 tag pages, all 404-bound. Smells like a v4 path-prefix bug interacting with our config.
+- Hypothesis: under v4 SSG, DocItem expects a frontmatter/sidebar shape that some of our docs are missing OR a v4 routing change is double-prefixing. Needs investigation, not blind-fix.
+- Status: REVERTED to `future: {}`. Build green again after revert. v4 migration is NOT a flip-the-switch on this site; needs a focused investigation pass.
+- Recommended next investigation:
+  - Reproduce the DocItem error on a minimal v4 surface (one doc page, no sidebar).
+  - Check whether `sidebars.ts` shape needs updating for v4 strict (the `id` it can't read may be a sidebar item reference).
+  - Check whether the blog tag double-prefix is a regression in 3.10.1 + v4 flag OR caused by something in our blog plugin config.
+  - Once minimal repro works, expand surface, fix, then re-enable in a planned commit.
+- Acceptance criteria (when picked up):
+  - `future: { v4: true, faster: true }` in docusaurus.config.ts.
+  - `npm run build` produces both `build/` and `build/es/` cleanly.
+  - All 18 doc pages render. All blog routes render. Blog tag URLs single-prefixed (`/blog/tags/announcement`, not `/blog/tags/blog/tags/announcement`).
+- Commits: pending (trial+revert lives in a single doc-update commit — no impl committed).
+
 ### E-I2-R1 (pending — ES glossary reconciliation pass)
 - Description: Normalize glossary drift across the parallel translation batches.
 - Findings:

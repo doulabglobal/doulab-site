@@ -79,12 +79,20 @@ const config: Config = {
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
 
+    // E-R2.2a (2026-06-01): disable the dev-only BaseUrlIssueBanner. It injects
+    // 5 inline style= attributes into rendered HTML and trips the CSP Report-Only
+    // style-src-attr. The banner only fires on a baseUrl misconfig, which is not
+    // a real risk for our pinned config.
+    baseUrlIssueBanner: false,
+
     // Mermaid styling (valid keys only)
     mermaid: {
       theme: { light: 'neutral', dark: 'dark' },
       options: {
+        // Aligned to Roboto sitewide (Phase E close-out). Mermaid diagrams now
+        // render in the same typeface as IMM presentations and the rest of the site.
         fontFamily:
-          "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial",
+          "Roboto, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Helvetica, Arial",
         themeVariables: {
           fontSize: '16px',
           lineColor: '#1F2A44',
@@ -156,7 +164,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Doulab. MicroCanvas® and IMM® are registered marks.`,
+      copyright: `© ${new Date().getFullYear()} Doulab. MicroCanvas® and IMM-P® are registered marks.`,
     },
 
     prism: {

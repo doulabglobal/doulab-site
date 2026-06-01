@@ -26,22 +26,20 @@ const config: Config = {
   // Enable ```mermaid fences
   markdown: { mermaid: true, hooks: { onBrokenMarkdownLinks: 'warn' } },
 
-  // BRAND-007 (revised): load Roboto from Google Fonts so site typography matches IMM presentations.
-  // CSP additions for fonts.googleapis.com (style-src) and fonts.gstatic.com (font-src) live in static/_headers.
+  // BRAND-007 (revised) / LH-NEW-005 (E-R1.1): Roboto is self-hosted from /static/fonts.
+  // The prior Google Fonts <link rel="stylesheet"> loader was render-blocking and cost
+  // ~15 Lighthouse Performance points sitewide. @font-face declarations live in
+  // src/css/custom.css; preload below warms the most-used face (weight 400) without
+  // blocking render. CSP no longer needs fonts.googleapis.com / fonts.gstatic.com.
   headTags: [
     {
       tagName: 'link',
-      attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    },
-    {
-      tagName: 'link',
-      attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
-    },
-    {
-      tagName: 'link',
       attributes: {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+        rel: 'preload',
+        as: 'font',
+        href: '/fonts/roboto-regular.woff2',
+        type: 'font/woff2',
+        crossorigin: 'anonymous',
       },
     },
   ],

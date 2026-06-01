@@ -118,7 +118,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                 <Link
                                     to="/services/clarityscan"
                                     className="cardCta"
-                                    data-cta="wwu_start_clarityscan"
+                                    data-cta="cta.wwu.start.clarityscan"
                                     data-section="wwu"
                                     data-step="cards"
                                     aria-label="Ejecuta un diagnóstico ClarityScan"
@@ -128,7 +128,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                 <Link
                                     href={CLARITYSCAN_CHECKOUT_URL}
                                     className="cardCta"
-                                    data-cta="wwu_start_clarityscan_book_online"
+                                    data-cta="cta.wwu.start.clarityscan_book_online"
                                     aria-label="Agenda ClarityScan en línea vía Stripe Checkout"
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -148,7 +148,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                 <Link
                                     to="/services/custom-workshops"
                                     className="cardCta"
-                                    data-cta="wwu_start_workshop"
+                                    data-cta="cta.wwu.start.workshop"
                                     data-section="wwu"
                                     data-step="cards"
                                 >
@@ -167,7 +167,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                 <Link
                                     to="https://booking.doulab.net/discovery"
                                     className="cardCta"
-                                    data-cta="wwu_start_call"
+                                    data-cta="cta.wwu.start.call"
                                     data-section="wwu"
                                     data-step="cards"
                                     aria-label="Agenda una llamada de descubrimiento"
@@ -303,7 +303,7 @@ export default function WorkWithUsPage(): JSX.Element {
                             <Link
                                 to="/services/clarityscan"
                                 className="buttonPrimary"
-                                data-cta="wwu_footer_clarityscan"
+                                data-cta="cta.wwu.footer.clarityscan"
                                 data-section="wwu"
                                 data-step="final"
                             >
@@ -312,7 +312,7 @@ export default function WorkWithUsPage(): JSX.Element {
                             <Link
                                 to="https://booking.doulab.net/discovery"
                                 className="buttonSecondary"
-                                data-cta="wwu_footer_contact"
+                                data-cta="cta.wwu.footer.contact"
                                 data-section="wwu"
                                 data-step="final"
                             >

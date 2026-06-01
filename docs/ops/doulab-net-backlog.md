@@ -151,7 +151,44 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Expected violation volume: high. Docusaurus inline hydration scripts + inline CSS blocks + JSON-LD blocks generate roughly 3-8 script-src reports and 20-100 style-src reports per page view.
 - Path to enforce documented in commit message (two-step soak: stand up a CF Worker collector + Reporting-Endpoints, land SEC-008 single JSON-LD component with sha256 hashes, iterate until zero violations, promote into enforced CSP).
 - Closes audit findings: SEC-002 (Report-Only step only; the enforce step remains pending the soak cycle).
-- Commits: f6306c58bd2a38d6ec7f10de12eb8a0ea355e2e8 (impl), pending (governance)
+- Commits: f6306c58bd2a38d6ec7f10de12eb8a0ea355e2e8 (impl), 64dcc91b7fe7a6f758f33b204e2f346ee326ab70 (governance)
+
+### E-N1
+- Description: Tier 1 foundation tokens (IMM design system alignment). Extends the prior E-L1 :root consolidation with the four IMM accent tokens (`--dl-indigo`, `--dl-purple`, `--dl-green`, `--dl-slate`) and two state tokens (`--dl-amber`, `--dl-red`), each annotated with the IMM canonical semantic meaning. Switches `--ifm-font-family-base` from Inter to Roboto, loads Roboto via Google Fonts, adds the corresponding CSP allowances.
+- Rationale: Per user directive ("the presentations and the site ideally should use the same font") and IMM canonical `design-system-spec.md`. Brand-family alignment between presentations and the web is a credibility signal for procurement-eligible buyers; a typographic split breaks that integrity. Accent + state tokens are the foundation for the IMM semantic components (Pillars, Roadmap, Radar, MaturityLadder, EvidenceMeter).
+- Acceptance criteria:
+  - `grep -c "^\s*--dl-" src/css/custom.css` returns the new six tokens in addition to the prior ones.
+  - `--ifm-font-family-base` leads with `'Roboto'`.
+  - Google Fonts loaded via `headTags` in `docusaurus.config.ts`.
+  - Both enforced CSP and Report-Only CSP allow `fonts.googleapis.com` (style-src) and `fonts.gstatic.com` (font-src).
+  - `npm run verify` exits 0.
+- Mermaid still pins Inter; aligning diagrams to Roboto deferred to a separate visual pass.
+- Reference memory: `feedback_typography.md`.
+- Commits: 464b1b41643c86ba1a5ab057cb59084495c6fc8b (impl), pending (governance)
+
+### E-O1
+- Description: Tier 2 semantic components — first two React components in the IMM semantic vocabulary, plus the IMM-DT page rewired to use them.
+- Rationale: The IMM design system is built around semantic components named for the epistemic work they encode (Pillars-grid, Roadmap, Radar, etc.). The web previously used generic `<CardGrid>` everywhere. Introducing matching React components is the first step toward parity between presentations and the site.
+- Acceptance criteria:
+  - New files exist: `src/components/imm/Pillars.tsx`, `Pillars.module.css`, `Roadmap.tsx`, `Roadmap.module.css`.
+  - `src/pages/services/imm-dt.tsx` uses `<Pillars>` for the 5 IMM-P 2.2 domains and `<Roadmap>` for the 6-horizon (0-3 / 3-6 / 6-9 / 9-12 / 12-24 / 24-36 months) plan.
+  - Components consume the new IMM accent tokens from E-N1 and `--ifm-font-family-base` (Roboto).
+  - Responsive at 5 / 3 / 2 / 1 columns for Pillars and horizontal / vertical for Roadmap at the 768 px breakpoint.
+- Closes audit findings: introduces the foundation for closing BRAND-005 (orphan visual system), BRAND-002 partial (token-driven consolidation), DOM-005 visual (IMM-P phase visualization).
+- Tier 3 (rebuild innovation-maturity.tsx around these components) follows in E-Q1.
+- Commits: 99d3c38d93d97f43d77ef659feeea87019886056 (impl), pending (governance)
+
+### E-P1
+- Description: Rebuild the homepage "The Problem" section around the IMM cause-chain pattern.
+- Rationale: Audit-2026-06 BP-002 P0 ethics: prior block mixed Gallup / McKinsey citations with vendor-blog sources (Intercom, Atlassian) and presented qualitative platitudes as cited statistics. Section was pure-deficit framed without a Doulab response.
+- Implementation: replaces the 8-card carousel with a 4-card cause-chain grid. Each card pairs a precisely-sourced root cause with a Doulab response decision-card pointing at the responding service (IMM-P / MCF / ClarityScan / Vigia Futura). Outcome anchor strip names the four metrics tracked (decision latency, cycle time, signal quality, capability) and explicitly disclaims activity-as-outcome. Visual encoding follows IMM semantic colors from E-N1: amber for cause, slate divider, indigo for response, green for outcome, red intentionally not used (audit flagged pure-deficit framing).
+- Acceptance criteria:
+  - No vendor-blog citations (Intercom, Atlassian, etc.) remain in the Problem section.
+  - Every numeric claim sourced.
+  - Section uses `imm-problem-cluster`, `imm-cause-chain`, `imm-decision-card` classes.
+  - Zero em-dashes; no "co-create the path forward".
+- Closes audit findings: BP-002 (mixed-credibility sources, pure-deficit framing), partial COPY-007 (homepage Problem block specifically; the global FinalCta still uses the canonical "Ready to make innovation repeatable?" headline as intended).
+- Commits: f0ee1337eb0af531fb0ef38a54ebb60f475f4ff6 (impl), pending (governance)
 
 ### E-J1 (BACKLOG ONLY, DEFERRED)
 - Description: Testimonials and named client quotes on doulab.net (homepage, case studies, services pages).

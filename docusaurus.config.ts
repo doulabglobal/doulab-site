@@ -21,7 +21,17 @@ const config: Config = {
   projectName: 'doulab-site',
   trailingSlash: false,
   onBrokenLinks: 'throw',
-  i18n: { defaultLocale: 'en', locales: ['en'] },
+  // ES launch (E-I2, 2026-06-01): bilingual rollout. EN at /*, ES at /es/*.
+  // Translation files live under i18n/es/. Until a given page or doc is
+  // translated, Docusaurus falls back to the EN source automatically.
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+    localeConfigs: {
+      en: { label: 'English', htmlLang: 'en-US' },
+      es: { label: 'Español', htmlLang: 'es-ES' },
+    },
+  },
 
   // Enable ```mermaid fences
   markdown: { mermaid: true, hooks: { onBrokenMarkdownLinks: 'warn' } },
@@ -121,6 +131,7 @@ const config: Config = {
         { to: '/about', label: 'About', position: 'left' },
         { to: '/work-with-us', label: 'Work with us', position: 'right' },
         { to: '/contact', label: 'Contact', position: 'right' },
+        { type: 'localeDropdown', position: 'right' },
       ],
     },
 

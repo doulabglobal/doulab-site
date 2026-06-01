@@ -1,0 +1,38 @@
+{
+  "title": {
+    "message": "Doulab",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Logotipo de Doulab",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Home": {
+    "message": "Inicio",
+    "description": "Navbar item with label Home"
+  },
+  "item.label.Services": {
+    "message": "Servicios",
+    "description": "Navbar item with label Services"
+  },
+  "item.label.Case Studies": {
+    "message": "Casos de estudio",
+    "description": "Navbar item with label Case Studies"
+  },
+  "item.label.Insights": {
+    "message": "Perspectivas",
+    "description": "Navbar item with label Insights"
+  },
+  "item.label.About": {
+    "message": "Nosotros",
+    "description": "Navbar item with label About"
+  },
+  "item.label.Work with us": {
+    "message": "Trabaja con nosotros",
+    "description": "Navbar item with label Work with us"
+  },
+  "item.label.Contact": {
+    "message": "Contacto",
+    "description": "Navbar item with label Contact"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Actual",
+    "description": "The label for version current"
+  },
+  "sidebar.whitepaperSidebar.category.Research & Resources": {
+    "message": "Investigación y recursos",
+    "description": "The label for category 'Research & Resources' in sidebar 'whitepaperSidebar'"
+  },
+  "sidebar.whitepaperSidebar.category.Innovation Lab Guide": {
+    "message": "Guía del laboratorio de innovación",
+    "description": "The label for category 'Innovation Lab Guide' in sidebar 'whitepaperSidebar'"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "link.title.Services": {
+    "message": "Servicios",
+    "description": "The title of the footer links column with title=Services in the footer"
+  },
+  "link.title.Docs": {
+    "message": "Documentación",
+    "description": "The title of the footer links column with title=Docs in the footer"
+  },
+  "link.title.Connect": {
+    "message": "Conectar",
+    "description": "The title of the footer links column with title=Connect in the footer"
+  },
+  "link.title.More": {
+    "message": "Más",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Overview": {
+    "message": "Resumen",
+    "description": "The label of footer link with label=Overview linking to /services"
+  },
+  "link.item.label.Case Studies": {
+    "message": "Casos de estudio",
+    "description": "The label of footer link with label=Case Studies linking to /case-studies"
+  },
+  "link.item.label.Vigía Futura": {
+    "message": "Vigía Futura",
+    "description": "The label of footer link with label=Vigía Futura linking to /vigia-futura"
+  },
+  "link.item.label.Insights": {
+    "message": "Perspectivas",
+    "description": "The label of footer link with label=Insights linking to /insights"
+  },
+  "link.item.label.Start with ClarityScan®": {
+    "message": "Empieza con ClarityScan®",
+    "description": "The label of footer link with label=Start with ClarityScan® linking to /services/clarityscan"
+  },
+  "link.item.label.Research & Resources": {
+    "message": "Investigación y recursos",
+    "description": "The label of footer link with label=Research & Resources linking to /docs/research-resources/"
+  },
+  "link.item.label.Releases": {
+    "message": "Versiones",
+    "description": "The label of footer link with label=Releases linking to /docs/releases"
+  },
+  "link.item.label.Contact": {
+    "message": "Contacto",
+    "description": "The label of footer link with label=Contact linking to /contact"
+  },
+  "link.item.label.Email": {
+    "message": "Correo",
+    "description": "The label of footer link with label=Email linking to mailto:hello@doulab.net"
+  },
+  "link.item.label.LinkedIn": {
+    "message": "LinkedIn",
+    "description": "The label of footer link with label=LinkedIn linking to https://www.linkedin.com/company/doulab"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/doulabglobal"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "The label of footer link with label=Blog linking to /blog"
+  },
+  "link.item.label.Privacy & Terms": {
+    "message": "Privacidad y términos",
+    "description": "The label of footer link with label=Privacy & Terms linking to /privacy-terms"
+  },
+  "link.item.label.RSS (XML)": {
+    "message": "RSS (XML)",
+    "description": "The label of footer link with label=RSS (XML) linking to https://www.doulab.net/blog/rss.xml"
+  },
+  "link.item.label.Atom (XML)": {
+    "message": "Atom (XML)",
+    "description": "The label of footer link with label=Atom (XML) linking to https://www.doulab.net/blog/atom.xml"
+  },
+  "link.item.label.Sitemap": {
+    "message": "Mapa del sitio",
+    "description": "The label of footer link with label=Sitemap linking to https://www.doulab.net/sitemap.xml"
+  },
+  "copyright": {
+    "message": "© 2026 Doulab. MicroCanvas® e IMM-P® son marcas registradas.",
+    "description": "The footer copyright"
+  }
+}

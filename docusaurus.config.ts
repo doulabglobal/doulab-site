@@ -26,6 +26,26 @@ const config: Config = {
   // Enable ```mermaid fences
   markdown: { mermaid: true, hooks: { onBrokenMarkdownLinks: 'warn' } },
 
+  // BRAND-007 (revised): load Roboto from Google Fonts so site typography matches IMM presentations.
+  // CSP additions for fonts.googleapis.com (style-src) and fonts.gstatic.com (font-src) live in static/_headers.
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
+    },
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+      },
+    },
+  ],
+
   // Load Mermaid theme
   themes: ['@docusaurus/theme-mermaid'],
 

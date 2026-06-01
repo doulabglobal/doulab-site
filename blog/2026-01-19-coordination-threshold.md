@@ -1,6 +1,6 @@
 ---
 title: "From Potential to Capability: when startup ecosystems hit their coordination threshold"
-description: "Why startup ecosystems often plateau after early activation — and how coordination, governance, and innovation maturity explain the break in compounding outcomes."
+description: "Why startup ecosystems often plateau after early activation, and how coordination, governance, and innovation maturity explain the break in compounding outcomes."
 slug: coordination-threshold-ecosystems
 authors: [luis]
 tags: [ecosystems, governance, coordination, innovation-maturity, latin-america, caribbean]

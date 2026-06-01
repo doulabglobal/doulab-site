@@ -34,14 +34,14 @@ export default function CustomWorkshopsPage(): ReactNode {
 
   return (
     <Layout
-      title="Custom Workshops — Align decisions & accelerate outcomes | Doulab"
+      title="Custom Workshops: Align decisions & accelerate outcomes | Doulab"
       description="Outcome-driven sessions to align teams, decide faster, and create momentum. Half-day or full-day formats, on-site or remote."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/custom-workshops" />
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:image" content="https://doulab.net/img/social/og-workshops.jpg" />
-        <meta property="og:image:alt" content="Doulab — Custom Workshops" />
+        <meta property="og:image:alt" content="Doulab: Custom Workshops" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload (shared Hero uses this base) */}
         <link
@@ -59,7 +59,7 @@ export default function CustomWorkshopsPage(): ReactNode {
         <Hero
           title="Custom Workshops"
           subtitle="Align. Decide. Move."
-          body="Tailored workshops that unblock decisions and turn strategy into action — on-site or remote."
+          body="Tailored workshops that unblock decisions and turn strategy into action, on-site or remote."
           imageBase="/img/workshops-hero"
           imageAlt="Custom innovation workshops"
           width={1600}
@@ -76,7 +76,7 @@ export default function CustomWorkshopsPage(): ReactNode {
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
               <h3 id="who-startups">Startups</h3>
-              <p>From idea to evidence to fit — faster, with clear decisions and owners.</p>
+              <p>From idea to evidence to fit, faster, with clear decisions and owners.</p>
             </article>
             <article className="card" aria-labelledby="who-public">
               <ClipboardList className="cardIcon" aria-hidden="true" />

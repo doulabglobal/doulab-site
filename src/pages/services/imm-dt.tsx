@@ -22,7 +22,7 @@ export default function IMMDTPage(): ReactNode {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    name: 'IMM-DT — Digital Transformation Maturity',
+    name: 'IMM-DT: Digital Transformation Maturity',
     serviceType: 'Digital Transformation Diagnostic & Roadmap',
     provider: { '@type': 'Organization', name: 'Doulab', url: 'https://www.doulab.net' },
     url: 'https://www.doulab.net/services/imm-dt',
@@ -33,12 +33,12 @@ export default function IMMDTPage(): ReactNode {
 
   return (
     <Layout
-      title="IMM-DT — Digital Transformation Maturity | Doulab"
+      title="IMM-DT: Digital Transformation Maturity | Doulab"
       description="IMM-DT is the digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance; sequence a 0–36 month roadmap with evidence-backed gates."
     >
       <Head>
         <link rel="canonical" href="https://www.doulab.net/services/imm-dt" />
-        <meta property="og:title" content="IMM-DT — Digital Transformation Maturity | Doulab" />
+        <meta property="og:title" content="IMM-DT: Digital Transformation Maturity | Doulab" />
         <meta
           property="og:description"
           content="The digital transformation vertical of IMM-P®. Baseline maturity, prioritize gaps, sequence a 0–36 month roadmap."
@@ -51,9 +51,9 @@ export default function IMMDTPage(): ReactNode {
         <Hero
           title="IMM-DT"
           subtitle="The digital transformation vertical of IMM-P®."
-          body="IMM-DT extends the Innovation Maturity Model — Program (IMM-P®) to the digital transformation domain. We baseline DT maturity across strategy, process, culture, technology and governance; benchmark against regional peers; and sequence a phased 0–36 month roadmap with evidence-backed readiness gates."
+          body="IMM-DT extends the Innovation Maturity Model: Program (IMM-P®) to the digital transformation domain. We baseline DT maturity across strategy, process, culture, technology and governance; benchmark against regional peers; and sequence a phased 0–36 month roadmap with evidence-backed readiness gates."
           imageBase="/img/services-hero"
-          imageAlt="IMM-DT — Digital Transformation Maturity"
+          imageAlt="IMM-DT: Digital Transformation Maturity"
           width={600}
           height={400}
           primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us about IMM-DT', dataCta: 'cta.services.imm-dt.hero.contact' }}

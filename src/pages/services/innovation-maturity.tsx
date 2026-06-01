@@ -155,7 +155,7 @@ export default function InnovationMaturityProgram(): ReactNode {
   return (
     <Layout
       title="Innovation Maturity Model Program (IMM-P)® | Doulab"
-      description="A domain-based, evidence-first program to baseline and strengthen innovation capability — improving decision-making under uncertainty across Discovery & Validation, Efficiency, Scaling, and Continuous Improvement — built on MicroCanvas® v2.2 and IMM-P® gates."
+      description="A domain-based, evidence-first program to baseline and strengthen innovation capability, improving decision-making under uncertainty across Discovery & Validation, Efficiency, Scaling, and Continuous Improvement, built on MicroCanvas® v2.2 and IMM-P® gates."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/innovation-maturity" />
@@ -163,7 +163,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <meta name="author" content="Luis Santiago Arias" />
         {/* Use a dedicated social card if you have it */}
         <meta property="og:image" content="https://doulab.net/img/social/og-imm-program.jpg" />
-        <meta property="og:image:alt" content="IMM-P® — structured, gated innovation program by Doulab" />
+        <meta property="og:image:alt" content="IMM-P®: structured, gated innovation program by Doulab" />
         <meta name="twitter:card" content="summary_large_image" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
@@ -199,7 +199,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <section className="section immWhatYouGet" id="imm-what-you-get" aria-labelledby="imm-what-you-get-title">
           <h2 id="imm-what-you-get-title">What you get</h2>
           <p className="sectionLead">
-            A pragmatic, evidence-based operating model your team can run every week—so innovation decisions become repeatable, measurable, and less risky.
+            A pragmatic, evidence-based operating model your team can run every week, so innovation decisions become repeatable, measurable, and less risky.
           </p>
 
           <div className="grid grid-3">
@@ -225,7 +225,7 @@ export default function InnovationMaturityProgram(): ReactNode {
 
             <article className="card" aria-labelledby="imm-deliverable-roadmap">
               <h3 id="imm-deliverable-roadmap">90-day roadmap</h3>
-              <p>A phased plan with measurable outcomes and ownership—so progress is visible to leadership.</p>
+              <p>A phased plan with measurable outcomes and ownership, so progress is visible to leadership.</p>
             </article>
           </div>
 
@@ -332,7 +332,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             <article className="card" aria-labelledby="imm-tiers">
               <Layers className="cardIcon" aria-hidden="true" />
               <h3 id="imm-tiers">Tiered delivery</h3>
-              <p>Tier 1 snapshot, Tier 2 diagnostic, Tier 3 evidence-backed audit — one internal master instrument.</p>
+              <p>Tier 1 snapshot, Tier 2 diagnostic, Tier 3 evidence-backed audit: one internal master instrument.</p>
             </article>
           </div>
         </section>
@@ -373,7 +373,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             {/* Phase 01 */}
           <article className="card" aria-labelledby="phase-01-title">
             <BookOpen className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-01-title">Phase 01 — Foundations (Readiness &amp; Operating System)</h3>
+            <h3 id="phase-01-title">Phase 01: Foundations (Readiness &amp; Operating System)</h3>
             <ul>
               <li>Baseline maturity (domain scoring, culture, governance, decision logic)</li>
               <li>Install innovation governance (roles, cadence, intake, decision owners, gate criteria)</li>
@@ -393,7 +393,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           {/* Phase 02 */}
           <article className="card" aria-labelledby="phase-02-title">
             <Target className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-02-title">Phase 02 — Structured Discovery &amp; Validation</h3>
+            <h3 id="phase-02-title">Phase 02: Structured Discovery &amp; Validation</h3>
             <ul>
               <li>Synthesize customer insights (segments, interviews, jobs/pains/gains, alternatives)</li>
               <li>Define the problem (problem statements, constraints, strategic objectives, OKR alignment)</li>
@@ -413,7 +413,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           {/* Phase 03 */}
           <article className="card" aria-labelledby="phase-03-title">
             <LineChart className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-03-title">Phase 03 — Efficiency (Process, Automation, Quality)</h3>
+            <h3 id="phase-03-title">Phase 03: Efficiency (Process, Automation, Quality)</h3>
             <ul>
               <li>Map processes (bottleneck removal, SOPs, handoffs, latency reduction)</li>
               <li>Implement automation & integrations (workflows, data pipelines, system boundaries)</li>
@@ -432,7 +432,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           {/* Phase 04 */}
           <article className="card" aria-labelledby="phase-04-title">
             <Rocket className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-04-title">Phase 04 — Scaling (Infrastructure, Partnerships, Growth)</h3>
+            <h3 id="phase-04-title">Phase 04: Scaling (Infrastructure, Partnerships, Growth)</h3>
             <ul>
               <li>Set scaling strategy (roadmap, sequencing, capacity planning)</li>
               <li>Align infrastructure & org (roles, talent plan, operating model adjustments)</li>
@@ -451,7 +451,7 @@ export default function InnovationMaturityProgram(): ReactNode {
           {/* Phase 05 */}
           <article className="card" aria-labelledby="phase-05-title">
             <Shield className="cardIcon" aria-hidden="true" />
-            <h3 id="phase-05-title">Phase 05 — Continuous Improvement (Learning &amp; Resilience)</h3>
+            <h3 id="phase-05-title">Phase 05: Continuous Improvement (Learning &amp; Resilience)</h3>
             <ul>
               <li>Install continuous learning system (feedback loops, retrospectives, portfolio reviews)</li>
               <li>Build knowledge management (playbooks, patterns, institutional memory)</li>
@@ -484,7 +484,7 @@ export default function InnovationMaturityProgram(): ReactNode {
         <section className="section" id="imm-delivery" aria-labelledby="imm-delivery-title">
           <h2 id="imm-delivery-title">Delivery options</h2>
           <p className="sectionLead">
-            Choose the operating cadence that matches your constraints. We keep the same gates and artifacts—only the depth and rollout
+            Choose the operating cadence that matches your constraints. We keep the same gates and artifacts; only the depth and rollout
             change.
           </p>
 
@@ -556,7 +556,7 @@ export default function InnovationMaturityProgram(): ReactNode {
 
         {/* FAQ — keep 2-column layout via existing grid class */}
         <section className="section" id="imm-faq" aria-labelledby="imm-faq-title">
-          <h2 id="imm-faq-title">IMM-P® — Frequently asked questions</h2>
+          <h2 id="imm-faq-title">IMM-P®: Frequently asked questions</h2>
 
           <div className={`faqList ${'pages-b4-p2__faqListGrid'} immFaqGrid`}>
             <details className="card">
@@ -714,7 +714,7 @@ export default function InnovationMaturityProgram(): ReactNode {
             label: 'Book a ClarityScan® online',
             dataCta: 'cta.services.imm.final.book_clarityscan_booking',
             newTab: true,
-            ariaLabel: 'Book a ClarityScan — baseline assessment',
+            ariaLabel: 'Book a ClarityScan baseline assessment',
           }}
           secondaryCta={{
             to: 'https://booking.doulab.net/discovery',

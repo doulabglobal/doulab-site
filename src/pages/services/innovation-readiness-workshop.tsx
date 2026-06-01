@@ -262,7 +262,7 @@ export default function InnovationReadinessWorkshopPage() {
               </p>
               <div className={'pages-services-innovation-readiness-workshop__columns'}>
                 <div className={'pages-services-innovation-readiness-workshop__column'}>
-                  <h4>Day 1 — In person</h4>
+                  <h4>Day 1: In person</h4>
                   <ul className={'pages-services-innovation-readiness-workshop__bulletList'}>
                     <li>
                       <strong>0:00–0:30</strong> – Welcome, context and expectations.
@@ -279,7 +279,7 @@ export default function InnovationReadinessWorkshopPage() {
                   </ul>
                 </div>
                 <div className={'pages-services-innovation-readiness-workshop__column'}>
-                  <h4>Day 2 — Online</h4>
+                  <h4>Day 2: Online</h4>
                   <ul className={'pages-services-innovation-readiness-workshop__bulletList'}>
                     <li>
                       <strong>0:00–0:30</strong> – Re-anchor, recap and alignment on goals.

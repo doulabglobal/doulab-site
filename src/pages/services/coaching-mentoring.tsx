@@ -69,14 +69,14 @@ export default function CoachingMentoringPage(): ReactNode {
 
   return (
     <Layout
-      title="Coaching & Mentoring — Practical guidance, real momentum | Doulab"
+      title="Coaching & Mentoring: Practical guidance, real momentum | Doulab"
       description="1:1 and team coaching to turn strategy into execution, build repeatable innovation, and move faster with less risk."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/coaching-mentoring" />
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:image" content="https://doulab.net/img/social/og-coaching.jpg" />
-        <meta property="og:image:alt" content="Doulab — Coaching & Mentoring" />
+        <meta property="og:image:alt" content="Doulab: Coaching & Mentoring" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload (shared Hero uses this base) */}
         <link
@@ -95,9 +95,9 @@ export default function CoachingMentoringPage(): ReactNode {
         <Hero
           title="Coaching & Mentoring"
           subtitle="Practical guidance. Real momentum."
-          body="1:1 and team coaching that helps leaders turn strategy into execution, build repeatable innovation, and navigate change with clarity — grounded in MicroCanvas® v2.2 and IMM-P®."
+          body="1:1 and team coaching that helps leaders turn strategy into execution, build repeatable innovation, and navigate change with clarity, grounded in MicroCanvas® v2.2 and IMM-P®."
           imageBase="/img/services-hero"
-          imageAlt="Coaching & mentoring — services overview"
+          imageAlt="Coaching & mentoring: services overview"
           width={1600}
           height={900}
           primaryCta={{
@@ -120,7 +120,7 @@ export default function CoachingMentoringPage(): ReactNode {
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
               <h3 id="who-startups">Startups</h3>
-              <p>From idea to evidence to fit—faster. Clear gates and focus.</p>
+              <p>From idea to evidence to fit, faster. Clear gates and focus.</p>
             </article>
             <article className="card" aria-labelledby="who-public">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />

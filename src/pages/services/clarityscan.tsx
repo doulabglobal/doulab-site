@@ -37,14 +37,14 @@ export default function ClarityScanPage(): ReactNode {
 
   return (
     <Layout
-      title="ClarityScan® — Rapid innovation maturity diagnostic | Doulab"
+      title="ClarityScan®: Rapid innovation maturity diagnostic | Doulab"
       description="A rapid, evidence-based diagnostic to baseline innovation/foresight maturity and pinpoint priority actions."
     >
       <Head>
         <link rel="canonical" href="https://doulab.net/services/clarityscan" />
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:image" content="https://doulab.net/img/social/og-clarityscan.jpg" />
-        <meta property="og:image:alt" content="ClarityScan® — rapid innovation maturity diagnostic" />
+        <meta property="og:image:alt" content="ClarityScan®: rapid innovation maturity diagnostic" />
         <meta name="twitter:card" content="summary_large_image" />
         {/* Hero LCP preload */}
         <link
@@ -61,7 +61,7 @@ export default function ClarityScanPage(): ReactNode {
         {/* Standardized two-column hero */}
         <Hero
           title="ClarityScan®"
-          subtitle="See where you are — and what to do next."
+          subtitle="See where you are, and what to do next."
           body="ClarityScan® is a tiered innovation/foresight maturity diagnostic. Start with a 15–20 minute Snapshot (Tier 1, CHF 150) for a clear baseline and a 30/60/90 plan; go deeper with a Diagnostic (Tier 2) or an evidence-backed Audit (Tier 3) when you need governance and auditability."
           imageBase="/img/clarityscan-hero"
           imageAlt="ClarityScan® diagnostic visual"
@@ -69,7 +69,7 @@ export default function ClarityScanPage(): ReactNode {
           height={900}
           primaryCta={{
             to: CLARITYSCAN_CHECKOUT_URL,
-            label: 'Book Tier 1 — CHF 150',
+            label: 'Book Tier 1: CHF 150',
             dataCta: 'cta.services.clarityscan.hero.book_clarityscan_online',
             ariaLabel: 'Book a ClarityScan Tier 1 Snapshot online via Stripe Checkout',
             external: true,
@@ -85,7 +85,7 @@ export default function ClarityScanPage(): ReactNode {
             <article className="card" aria-labelledby="who-startups">
               <Rocket className="cardIcon" aria-hidden="true" />
               <h3 id="who-startups">Startups</h3>
-              <p>From idea to evidence to fit—fast. Clear gates and focus.</p>
+              <p>From idea to evidence to fit, fast. Clear gates and focus.</p>
             </article>
             <article className="card" aria-labelledby="who-public">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />
@@ -155,7 +155,7 @@ export default function ClarityScanPage(): ReactNode {
 
         {/* Tiers */}
         <section className="section" id="tiers" aria-labelledby="tiers-title">
-          <h2 id="tiers-title">Three tiers — start where you are</h2>
+          <h2 id="tiers-title">Three tiers: start where you are</h2>
           <p className="sectionLead">
             ClarityScan® scales with the question you are trying to answer. Tier 1 is bookable online; Tier 2 and Tier 3 are
             scope-based and start with a short discovery call.
@@ -163,12 +163,12 @@ export default function ClarityScanPage(): ReactNode {
           <div className="cardGrid">
             <article className="card" aria-labelledby="tier-1-title">
               <Gauge className="cardIcon" aria-hidden="true" />
-              <h3 id="tier-1-title">Tier 1 — Snapshot</h3>
+              <h3 id="tier-1-title">Tier 1: Snapshot</h3>
               <p><strong>CHF 150</strong> · 15–20 minutes · paid online via Stripe</p>
               <ul>
                 <li>Fast scoring across strategy, culture, process, and results.</li>
                 <li>Single-page maturity readout with 3–5 priority moves and a 30/60/90 plan.</li>
-                <li>No evidence documentation required — qualitative scoring by the respondent.</li>
+                <li>No evidence documentation required; qualitative scoring by the respondent.</li>
               </ul>
               <p>Best for: a quick executive read, an inbound diagnostic for a new prospect, or a personal baseline before a deeper engagement.</p>
               <div className="cardFooter">
@@ -180,13 +180,13 @@ export default function ClarityScanPage(): ReactNode {
                   data-cta="cta.services.clarityscan.tier1.book_online"
                   aria-label="Book a ClarityScan Tier 1 Snapshot online via Stripe Checkout"
                 >
-                  Book Tier 1 — CHF 150 →
+                  Book Tier 1: CHF 150 →
                 </a>
               </div>
             </article>
             <article className="card" aria-labelledby="tier-2-title">
               <Layers className="cardIcon" aria-hidden="true" />
-              <h3 id="tier-2-title">Tier 2 — Diagnostic</h3>
+              <h3 id="tier-2-title">Tier 2: Diagnostic</h3>
               <p><strong>Scope-based</strong> · multi-day engagement · respondent cohorts</p>
               <ul>
                 <li>Structured questionnaire across role-segmented respondent cohorts (directive, middle management, operations).</li>
@@ -206,10 +206,10 @@ export default function ClarityScanPage(): ReactNode {
             </article>
             <article className="card" aria-labelledby="tier-3-title">
               <ClipboardCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="tier-3-title">Tier 3 — Audit</h3>
+              <h3 id="tier-3-title">Tier 3: Audit</h3>
               <p><strong>Scope-based</strong> · multi-week engagement · evidence-backed</p>
               <ul>
-                <li>Every score is backed by documented evidence — artifacts, decisions, observed practice.</li>
+                <li>Every score is backed by documented evidence: artifacts, decisions, observed practice.</li>
                 <li>Auditability for compliance, regulator-facing reviews, and institutional learning.</li>
                 <li>Tied to IMM-P® phase readiness gates; deliverable is a governance-grade dossier, not just a roadmap.</li>
               </ul>
@@ -239,7 +239,7 @@ export default function ClarityScanPage(): ReactNode {
           body="Start with Tier 1 (CHF 150, paid online) for a same-week baseline, or talk to us for a scoped Tier 2 / Tier 3 engagement."
           primaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,
-            label: 'Book Tier 1 — CHF 150',
+            label: 'Book Tier 1: CHF 150',
             dataCta: 'cta.services.clarityscan.final.book_clarityscan_booking',
             newTab: true,
           }}

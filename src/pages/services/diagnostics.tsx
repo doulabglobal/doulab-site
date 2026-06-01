@@ -15,8 +15,8 @@ import { CLARITYSCAN_CHECKOUT_URL } from '../../constants/urls';
 export default function DiagnosticsPage() {
     return (
         <Layout
-            title="Diagnostics — ClarityScan®, Foresight & Operating Model"
-            description="Evidence-based scans that baseline Strategy, Culture, Process, Results and turn gaps into a 30/60/90 plan. Built on MicroCanvas® 2.2 and IMM-P® — privacy-first."
+            title="Diagnostics: ClarityScan®, Foresight & Operating Model"
+            description="Evidence-based scans that baseline Strategy, Culture, Process, Results and turn gaps into a 30/60/90 plan. Built on MicroCanvas® 2.2 and IMM-P®; privacy-first."
         >
             <Head>
                 <link rel="canonical" href="https://doulab.net/services/diagnostics" />
@@ -40,7 +40,7 @@ export default function DiagnosticsPage() {
                                 Baseline capability. Reveal gaps. Act with confidence.
                             </p>
                             <p className="heroText">
-                                Evidence-based scans that baseline <strong>Strategy</strong>, <strong>Culture</strong>, <strong>Process</strong>, and <strong>Results</strong> — then convert gaps into a
+                                Evidence-based scans that baseline <strong>Strategy</strong>, <strong>Culture</strong>, <strong>Process</strong>, and <strong>Results</strong>, then convert gaps into a
                                 clear <strong>30/60/90-day plan</strong>. Built on MicroCanvas® 2.2 and IMM-P®; privacy-first by design.
                             </p>
                             <div className="heroCtas">
@@ -74,7 +74,7 @@ export default function DiagnosticsPage() {
                 <section className="section" aria-labelledby="diagnostics-offer-title">
                     <h2 id="diagnostics-offer-title">What we offer</h2>
                     <p className={`lead ${'pages-b4-p2__leadMax'}`}>
-                        Three lightweight, privacy-first scans tailored to where you are — each producing a focused brief and a
+                        Three lightweight, privacy-first scans tailored to where you are, each producing a focused brief and a
                         <strong> 30/60/90-day action plan</strong>.
                     </p>
 
@@ -82,7 +82,7 @@ export default function DiagnosticsPage() {
                         {/* ClarityScan */}
                         <article className="card" aria-labelledby="scan-clarity-title">
                             <Gauge className="cardIcon" aria-hidden="true" />
-                            <h3 id="scan-clarity-title">ClarityScan® — Innovation Maturity</h3>
+                            <h3 id="scan-clarity-title">ClarityScan®: Innovation Maturity</h3>
                             <p>Rapid baseline across Strategy, Culture, Process, Results with prioritized next moves.</p>
                             <ul>
                                 <li><strong>What we assess:</strong> strategy clarity &amp; OKRs; culture &amp; incentives; delivery cadence; results &amp; measurement.</li>
@@ -160,7 +160,7 @@ export default function DiagnosticsPage() {
                         <article className="card" aria-label="Options">
                             <CheckCircle className="cardIcon" aria-hidden="true" />
                             <h3>4) Options</h3>
-                            <p>DIY, Doulab support, or a hybrid — you choose the cadence and depth.</p>
+                            <p>DIY, Doulab support, or a hybrid: you choose the cadence and depth.</p>
                         </article>
                     </div>
                 </section>
@@ -172,7 +172,7 @@ export default function DiagnosticsPage() {
                         <article className="card" aria-label="Evidence & clarity">
                             <Gauge className="cardIcon" aria-hidden="true" />
                             <h3>Evidence &amp; clarity</h3>
-                            <p>Baseline across Strategy/Culture/Process/Results or foresight readiness — not opinions.</p>
+                            <p>Baseline across Strategy/Culture/Process/Results or foresight readiness, not opinions.</p>
                         </article>
                         <article className="card" aria-label="Actionable plan">
                             <CheckCircle className="cardIcon" aria-hidden="true" />

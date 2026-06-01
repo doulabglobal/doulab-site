@@ -17,15 +17,15 @@ import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 export default function ServicesPage(): ReactNode {
     return (
         <Layout
-            title="Services — Structured innovation, diagnostics, workshops & foresight | Doulab"
-            description="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes — privacy-first."
+            title="Services: Structured innovation, diagnostics, workshops & foresight | Doulab"
+            description="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes; privacy-first."
         >
             <Head>
                 <link rel="canonical" href="https://doulab.net/services" />
                 <meta property="og:title" content="Services - Structured innovation, diagnostics, workshops & foresight | Doulab" />
                 <meta property="og:description" content="Programs, workshops, diagnostics, and foresight to make innovation repeatable. Baselines, gated decisions, and measurable outcomes." />
                 <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
-                <meta property="og:image:alt" content="Doulab — Services" />
+                <meta property="og:image:alt" content="Doulab: Services" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="author" content="Luis Santiago Arias" />
                 {/* Preload LCP hero image (PNG fallback). Browser will choose best available source. */}
@@ -72,8 +72,8 @@ export default function ServicesPage(): ReactNode {
                             <h3 id="svc-diagnostics">ClarityScan®: Know where you stand</h3>
                             <p>A tiered, evidence-based diagnostic to baseline innovation/foresight maturity and surface gaps.</p>
                             <ul>
-                                <li>Tier 1 Snapshot — CHF 150, bookable online</li>
-                                <li>Tier 2 Diagnostic and Tier 3 Audit — scope-based</li>
+                                <li>Tier 1 Snapshot: CHF 150, bookable online</li>
+                                <li>Tier 2 Diagnostic and Tier 3 Audit: scope-based</li>
                             </ul>
                             <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan">
@@ -121,7 +121,7 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-imm-dt">
                             <Settings2 className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-imm-dt">IMM-DT: Digital transformation maturity</h3>
-                            <p>The digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance — then sequence a 0–36 month roadmap.</p>
+                            <p>The digital transformation vertical of IMM-P®. Baseline DT maturity across strategy, process, culture, technology and governance, then sequence a 0–36 month roadmap.</p>
                             <ul>
                                 <li>Built on MCF v2.2 + IMM-P® 2.2 (domain scoring, phase readiness)</li>
                                 <li>Pilot reference: FUNDAPEC fintech transformation</li>

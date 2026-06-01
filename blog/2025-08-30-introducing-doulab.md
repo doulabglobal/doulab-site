@@ -17,9 +17,9 @@ keywords:
 
 Innovation shouldn’t be a coin flip.
 
-We started **Doulab** to answer a stubborn question: *How do you make innovation and foresight repeatable—so strategy turns into measurable outcomes in any organization, not just the lucky ones?* Since then, we’ve supported teams across public institutions and companies—from **AFP Siembra** and **Alpha Inversiones** to **OGTIC/RedLab**, **FUNDAPEC**, and **Runway Innovation Hub**—and saw the same pattern: when teams can see clearly, decide faster, and learn in tight loops, they ship.
+We started **Doulab** to answer a stubborn question: *How do you make innovation and foresight repeatable, so strategy turns into measurable outcomes in any organization, not just the lucky ones?* Since then, we’ve supported teams across public institutions and companies, from **AFP Siembra** and **Alpha Inversiones** to **OGTIC/RedLab**, **FUNDAPEC**, and **Runway Innovation Hub**, and saw the same pattern: when teams can see clearly, decide faster, and learn in tight loops, they ship.
 
-Our purpose is simple: **help unlock global prosperity by helping others create better futures**. In practice, that means making innovation **repeatable** and foresight **practical**—so plans become outcomes you can measure.
+Our purpose is simple: **help unlock global prosperity by helping others create better futures**. In practice, that means making innovation **repeatable** and foresight **practical**, so plans become outcomes you can measure.
 
 **Default next step:** get a baseline in **15–20 minutes** with **[ClarityScan®](/services/clarityscan)**, or **[book a short discovery call](https://booking.doulab.net/discovery)**.
 
@@ -27,13 +27,13 @@ Our purpose is simple: **help unlock global prosperity by helping others create 
 
 ## What gets in the way (the problem)
 
-Across startups and institutions, the blockers rhyme. Here are the most common ones we see—each solvable with the right scaffolding:
+Across startups and institutions, the blockers rhyme. Here are the most common ones we see, each solvable with the right scaffolding:
 
 <div className="cardGrid">
   <article className="card">
     <h3>Culture isn’t wired for innovation</h3>
     <p>Efforts feel sporadic; engagement stays low. Global engagement hovers ~20–23%.</p>
-    <p><a href="https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx" target="_blank" rel="noopener noreferrer">Gallup — 2024</a></p>
+    <p><a href="https://www.gallup.com/workplace/645758/state-of-the-global-workplace-2024-press-release.aspx" target="_blank" rel="noopener noreferrer">Gallup, 2024</a></p>
   </article>
   <article className="card">
     <h3>Strategy treated as a document</h3>
@@ -63,7 +63,7 @@ Across startups and institutions, the blockers rhyme. Here are the most common o
   <article className="card">
     <h3>Customer insight off to the side</h3>
     <p>Offers drift from real needs; value left on the table.</p>
-    <p><a href="https://www.forrester.com/blogs/us-cx-index-2024-results/" target="_blank" rel="noopener noreferrer">Forrester — CX Index</a></p>
+    <p><a href="https://www.forrester.com/blogs/us-cx-index-2024-results/" target="_blank" rel="noopener noreferrer">Forrester, CX Index</a></p>
   </article>
   <article className="card">
     <h3>Scattered truth, slow bets</h3>
@@ -81,12 +81,12 @@ Across startups and institutions, the blockers rhyme. Here are the most common o
 
 We built two pieces that make the work feel less like guesswork:
 
-- The **MicroCanvas® Framework (MCF)**, a set of lightweight canvases that move teams from discovery to delivery—without weeks of meetings.  
-- The **Innovation Maturity Model — Program (IMM-P®)**, a structured way to baseline capability, prioritize gaps, and install practice across strategy, culture, process, and results.
+- The **MicroCanvas® Framework (MCF)**, a set of lightweight canvases that move teams from discovery to delivery, without weeks of meetings.  
+- The **Innovation Maturity Model: Program (IMM-P®)**, a structured way to baseline capability, prioritize gaps, and install practice across strategy, culture, process, and results.
 
 Used together, MCF + IMM reduce **decision latency** (fewer stalls), shorten **cycle time** (smaller bets, faster feedback), improve **signal quality** (evidence in planning & delivery), and raise **capability** (measurable progress across IMM dimensions).
 
-> With **AFP Siembra**, strategy-to-delivery support led to a digital savings product and a working innovation lab—practical scaffolding for repeatable outcomes. External site: <a href="https://afpsiembra.com" target="_blank" rel="noopener noreferrer">afpsiembra.com</a>.
+> With **AFP Siembra**, strategy-to-delivery support led to a digital savings product and a working innovation lab: practical scaffolding for repeatable outcomes. External site: <a href="https://afpsiembra.com" target="_blank" rel="noopener noreferrer">afpsiembra.com</a>.
 
 ## What we install (the solution)
 
@@ -105,7 +105,7 @@ You don’t need a moonshot to get moving. We right-size entry points and build 
   </article>
   <article className="card">
     <h3>Programs: build innovation capacity</h3>
-    <p>Structured journeys—like IMM—that install culture, process, and metrics to scale reliably.</p>
+    <p>Structured journeys, like IMM, that install culture, process, and metrics to scale reliably.</p>
     <div className="cardFooter"><a className="cardCta" href="/services/innovation-maturity">Explore programs →</a></div>
   </article>
   <article className="card">
@@ -122,7 +122,7 @@ You don’t need a moonshot to get moving. We right-size entry points and build 
 
 ## Who we’re for
 
-If you’re a founder or product leader pushing for clarity and speed; an executive team aligning strategy, governance, and operating rhythms; a public-sector leader building repeatable capacity; or a strategy/ops team hungry for better evidence loops—you’ll feel at home here.
+If you’re a founder or product leader pushing for clarity and speed; an executive team aligning strategy, governance, and operating rhythms; a public-sector leader building repeatable capacity; or a strategy/ops team hungry for better evidence loops, you’ll feel at home here.
 
 ## How we work together
 
@@ -136,15 +136,15 @@ We start where you are and build momentum:
 
 **Coaching & mentoring** unblock high-stakes priorities for execs, product, and GTM leaders. Learn more about **[coaching & mentoring](/services/coaching-mentoring)**.
 
-**Vigía Futura** is our foresight observatory—signals, executive briefings, and short policy/venture labs—so leaders can act before the curve. Visit **[Vigía Futura](/vigia-futura)**.
+**Vigía Futura** is our foresight observatory: signals, executive briefings, and short policy/venture labs, so leaders can act before the curve. Visit **[Vigía Futura](/vigia-futura)**.
 
 ## Why this matters now
 
-AI acceleration, shifting governance, and unsettled markets reward **learning velocity**. Teams that instrument decisions, run small bets, and iterate intentionally out-ship the rest. That’s the system we help you install—so you avoid the high cost of waiting and the regret of missed windows.
+AI acceleration, shifting governance, and unsettled markets reward **learning velocity**. Teams that instrument decisions, run small bets, and iterate intentionally out-ship the rest. That’s the system we help you install, so you avoid the high cost of waiting and the regret of missed windows.
 
 ## What’s coming next
 
-We’re publishing **[Distributed Federated Agentic AI](/docs/research-resources/distributed-federated-agentic-ai)** (open access). We’re rolling out **Vigía Futura**—a live radar (quarterly), executive briefings, and quick-turn policy/venture labs. And we’re expanding the **MCF toolkit** and open resources for teams and public institutions—see **[Research & Resources](/docs/research-resources)**.
+We’re publishing **[Distributed Federated Agentic AI](/docs/research-resources/distributed-federated-agentic-ai)** (open access). We’re rolling out **Vigía Futura**: a live radar (quarterly), executive briefings, and quick-turn policy/venture labs. And we’re expanding the **MCF toolkit** and open resources for teams and public institutions; see **[Research & Resources](/docs/research-resources)**.
 
 ---
 

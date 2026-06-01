@@ -19,14 +19,14 @@ export default function WorkWithUsPage(): JSX.Element {
     return (
         <Layout
             title="Work with Doulab"
-            description="Practical ways to start—diagnose, align, and build capability so strategy turns into sustained results."
+            description="Practical ways to start: diagnose, align, and build capability so strategy turns into sustained results."
         >
             <Head>
                 <link rel="canonical" href="https://doulab.net/work-with-us" />
                 <meta property="og:title" content="Work with Doulab" />
-                <meta property="og:description" content="Practical ways to start—diagnose, align, and build capability so strategy turns into sustained results." />
+                <meta property="og:description" content="Practical ways to start: diagnose, align, and build capability so strategy turns into sustained results." />
                 <meta property="og:image" content="https://doulab.net/img/docusaurus-social-card.jpg" />
-                <meta property="og:image:alt" content="Doulab — Work with us" />
+                <meta property="og:image:alt" content="Doulab: Work with us" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="author" content="Luis Santiago Arias" />
                 {/* LCP: hero image preload with next-gen sources */}
@@ -88,8 +88,8 @@ export default function WorkWithUsPage(): JSX.Element {
             <main>
                 <Hero
                     title="Work with Doulab"
-                    subtitle="Practical ways to start — diagnose, align, and build capability."
-                    body={"Start small or go deeper. We make innovation repeatable and foresight practical — so strategy turns into sustained results."}
+                    subtitle="Practical ways to start: diagnose, align, and build capability."
+                    body={"Start small or go deeper. We make innovation repeatable and foresight practical, so strategy turns into sustained results."}
                     imageBase="/img/work-with-us-hero"
                     imageAlt="Work with Doulab"
                     width={600}
@@ -162,7 +162,7 @@ export default function WorkWithUsPage(): JSX.Element {
                             <Users className="cardIcon" aria-hidden="true" />
                             <h3 id="wwu-card-call">Discovery Call</h3>
                             <p>
-                                Share goals and constraints; we’ll point you to the fastest path—diagnostic, workshop, program, or coaching.
+                                Share goals and constraints; we’ll point you to the fastest path: diagnostic, workshop, program, or coaching.
                             </p>
                             <div className="cardFooter">
                                 <Link

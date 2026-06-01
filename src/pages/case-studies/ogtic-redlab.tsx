@@ -258,7 +258,7 @@ export default function CaseOgticRedlab(): ReactNode {
         {/* Case study diagrams */}
         <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
           <h2 id="case-diagrams-title">Case diagrams</h2>
-          <Admonition type="tip" title="Diagram — System Flow">
+          <Admonition type="tip" title="Diagram: System Flow">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
     A[Problem Context] --> B[Evidence / Signals]
@@ -268,7 +268,7 @@ flowchart LR
     E --> F[Outcomes: Clearer Decisions + Reuse]
 `} />
           </Admonition>
-          <Admonition type="tip" title="Diagram — Capability Progression">
+          <Admonition type="tip" title="Diagram: Capability Progression">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
     A[Before: Isolated Labs]

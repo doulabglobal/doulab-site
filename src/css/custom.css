@@ -1112,6 +1112,23 @@ a:hover {
     color: #fff
 }
 
+/* F-2 follow-up: hero subtitles and similar large indigo display text
+   read poorly on the dark background. User directive: use white for
+   display text on dark; use Doulab green for interaction states
+   (navbar hover/active, page-level subnav) — distinct from inactive
+   and still brand-tied. */
+:is(html.theme-dark, html[data-theme='dark']) .heroSubtitle,
+:is(html.theme-dark, html[data-theme='dark']) .pages-work-with-us-index__heroSubtitle {
+    color: #fff
+}
+
+:is(html.theme-dark, html[data-theme='dark']) .navbar__link:hover,
+:is(html.theme-dark, html[data-theme='dark']) .navbar__link:focus,
+:is(html.theme-dark, html[data-theme='dark']) .navbar__link--active,
+:is(html.theme-dark, html[data-theme='dark']) .pages-work-with-us-index__subnav a {
+    color: var(--dl-green)
+}
+
 /* Dark-mode: final CTA + secondary buttons */
 :is(html.theme-dark, html[data-theme='dark']) .finalCta,
 :is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-finalCta,

@@ -103,7 +103,7 @@ export default function ClarityScanTier3Page(): ReactNode {
             }}
           >
             <div>
-              <h3 style={{ color: 'var(--dl-indigo, #4F46E5)' }}>Evidence-backed radar</h3>
+              <h3>Evidence-backed radar</h3>
               <Radar
                 ariaLabel="Example Tier 3 domain radar with evidence-backed baseline and target overlay"
                 title="Documented baseline vs target"

@@ -1,6 +1,12 @@
 /*
   Cache-Control: no-cache
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+  # E-R2 (audit-2026-06): the baseline enforced CSP below is OVERRIDDEN at runtime
+  # for HTML responses by `functions/_middleware.ts`, which injects a per-request
+  # `'nonce-<value>'` on `script-src` (replacing `'unsafe-inline'`) and adds the
+  # matching nonce attribute to inline <script> tags. Non-HTML responses, and any
+  # deployment where the middleware is disabled, continue to use this fallback CSP.
+  # The Report-Only policy is NOT touched by the middleware.
   Content-Security-Policy: default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
   # SEC-002 (audit-2026-06): parallel Report-Only CSP. Tightens script-src/style-src by removing 'unsafe-inline'.
   # Expected report volume is HIGH on first deploy: Docusaurus emits inline runtime/hydration scripts and inline styles on every page; JSON-LD blocks (contact, case-studies, work-with-us) will also fire script-src violations. Treat as monitoring-only until SEC-008 (JSON-LD hashing) and a nonce strategy land.

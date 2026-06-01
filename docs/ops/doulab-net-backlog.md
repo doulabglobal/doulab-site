@@ -552,7 +552,7 @@ Audit deliverables landed; implementation in 4 sub-phases:
 
 Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingual role files. Severity per audit; P0 ship first, P1 follow in G-2. Each entry cites the originating role-file ID for traceability. Bilingual scope is the default: EN + ES touched in the same commit.
 
-### G-1 (P0) — Locale-aware page metadata helper
+### G-1 (RESOLVED 2026-06-02) — Locale-aware page metadata helper
 - Description: Build `src/lib/page-metadata.ts` (or equivalent) that derives `canonical`, `og:url`, `og:image`, `hreflang` alternates, JSON-LD `url` / `inLanguage` from `(slug, locale, siteConfig)`. Apply to every `src/pages/**/*.tsx` and remove hand-rolled `<link rel="canonical">` strings.
 - Rationale: Every ES page currently declares `<link rel="canonical" href="https://doulab.net/<en-path>">` and per-page `og:image` as `https://doulab.net/...` (apex host, EN path). Google interprets the ES pages as duplicates of the EN pages and drops them from the index — the entire E-I2 ES launch is invisible to organic search. Same root cause for og:image apex-vs-www inconsistency and EN-URL JSON-LD on ES pages. One architectural change closes the largest SEO regression on the property.
 - Closes: IAUX-101, SEO-2026-07-001, SEO-2026-07-002, SEO-2026-07-006, SEO-2026-07-009.
@@ -562,9 +562,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - No hard-coded `https://doulab.net/` strings in `src/pages/**` or `i18n/es/**` (grep guard in `verify:build`).
   - `og:image` resolves to a single canonical host across both locales.
   - `npm run verify` exits 0.
-- Status: Open.
-- Commits: pending.
-
+- Status: RESOLVED 2026-06-02.
+- Commits: dd8700d (impl + sweep + tsconfig paths fix).
 ### G-2 (P0) — `book-clarityscan-success.tsx` auto-popup + false-success removal + paid-conversion event (bilingual)
 - Description: Remove the `useEffect` `window.open` from `src/pages/book-clarityscan-success.tsx` AND `i18n/es/docusaurus-plugin-content-pages/book-clarityscan-success.tsx`. Render explicit payment summary (amount, receipt id, email) and a prominent "Step 2 of 2: Schedule your session" manual-click button. Emit `cta.conversion.clarityscan.paid` with `{ locale, path }` on mount (depends on G-7 click-delegate landing first, or fire a one-off `window.cfBeacon` until then).
 - Rationale: Carried from audit-2026-06 CONV-002, now doubled by ES. Modern browsers block the popup whenever the Stripe redirect counts as non-user-initiated; when blocked, the copy "We already opened the scheduling page in a new tab for you" / "Ya abrimos la página de agendamiento" is literally false. No payment summary, no conversion event, no locale-aware support fallback — the highest-trust moment in the funnel (visitor just spent CHF 150) is mishandled in both locales.

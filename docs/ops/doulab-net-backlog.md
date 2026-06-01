@@ -331,6 +331,57 @@ Audit deliverables landed; implementation in 4 sub-phases:
 - Residual: the 29 `style-src-attr` Report-Only violations come from Docusaurus core hydration HTML (theme-color tokens, runtime inline styles), not from authored components. Three paths for a future pass: (a) accept `'unsafe-inline'` on `style-src-attr` in Report-Only, (b) swizzle the Docusaurus theme components that emit inline styles, (c) accept the report-only signal and never enforce `style-src-attr` strictly. Filed as **E-R2.2** in the next backlog batch.
 - Commits: d72cf32e8e4eb372fa281f565356f848070fb61f (impl), pending (governance)
 
+### E-S2 (live spot-check, multi-fix follow-up)
+- Description: Five live bugs caught in spot-check after the Phase S deploy; bundled into a single follow-up fix.
+- Findings + fixes:
+  1. **Homepage Problem section button text invisible** in light and dark mode. The Problem cards' response Link had `style={{ color: 'var(--dl-indigo) }}` overriding `.cardCta`'s `color: var(--dl-white)`. Fix: removed the inline color override; the global `.cardCta` styling (white text on indigo button) takes effect cleanly in both modes.
+  2. **/services "What we offer" cards collapsed** at desktop. Same CardGrid bug as VP-NEW-004 IMM-DT: the page used `<CardGrid>` whose CSS-module targets a different class than `.card`. Fix: `<CardGrid>` -> `<div className="cardGrid">`; removed the unused CardGrid import.
+  3. **ClarityScan T2 Diagnostic priority matrix overflow** at desktop. The 2x2 priority matrix was sitting in a 280-300px grid cell where its internal `gridTemplateColumns: '70px 1fr 1fr'` plus quadrant content overflowed. Fix: `style={{ gridColumn: '1 / -1' }}` on the priority matrix wrapper so it spans the full container width.
+  4. **ClarityScan T2 90-day roadmap collapsed** at desktop. Same root cause as the audit page Roadmap collapse (VP-NEW-005 below): the `<Roadmap>` component uses viewport-based media queries instead of container queries, so it collapses when its parent grid cell is narrower than the breakpoint. Fix: `style={{ gridColumn: '1 / -1' }}` on the Roadmap wrapper so it spans the full container width on the diagnostic page too.
+  5. **Roadmap component is not intrinsically responsive** (filed below as VP-NEW-005).
+- Commits: pending (impl), pending (governance)
+
+### VP-NEW-005 (BACKLOG, surfaced 2026-06-01 by live spot-check)
+- Description: `<Roadmap>` component is not intrinsically responsive — uses viewport-based `@media (max-width: 767px)` instead of a container query. When placed inside a narrow grid cell at desktop viewport, the inner 6-column track stays at 6 columns and the horizon labels squish to one-character-per-line.
+- Severity: P1 (workaround applied via `gridColumn: '1 / -1'` on every use site; needs proper component fix).
+- Effort: M (rewrite the Roadmap `.track` to use container queries via `@container` OR resize-observer + class swap at runtime).
+- Affected component: `src/components/imm/Roadmap.tsx` + `Roadmap.module.css`.
+- Fix path: define a container with `container-type: inline-size` on `.wrap`, then switch the `.track` from viewport-based `@media` to container-based `@container (max-width: 767px)`. Caniuse coverage for `@container`: ~93% as of 2026; safe to ship.
+- Status: BACKLOG.
+- Commits: pending.
+
+### VP-NEW-006 (BACKLOG, surfaced 2026-06-01 by live spot-check)
+- Description: `<EvidenceMeter>` reported overflow on `/services/clarityscan/audit` "Phase readiness gauge" section. The component's `.chartBox` has `min-width: 200px` and `max-width: 360px`; in a 280px grid cell at desktop, the SVG should fit, so the overflow is unclear without a live render. Possibly the `.wrap` parent flex container or the surrounding section's padding interacts poorly.
+- Severity: P2 (visible but specific to one section).
+- Effort: S (likely a single CSS tweak in EvidenceMeter.module.css OR a per-page wrapper style).
+- Fix path: open prod, inspect the overflow, decide between (a) wrapping the EvidenceMeter in a centered flex container at the page level, (b) tightening the component's max-width, or (c) `style={{ gridColumn: '1 / -1' }}` like the Roadmap workaround.
+- Status: BACKLOG.
+- Commits: pending.
+
+### COPY-NEW-001 (BACKLOG, surfaced 2026-06-01)
+- Description: The "Where strategy meets reality" homepage Problem cards cite Gallup 2024, McKinsey "Losing from day one" (2021), HBS Online (undated), OECD Strategic Foresight. User flagged: are these the most current sources, and are the claims aligned to the actual target market (LATAM + Caribbean enterprise + government + multilateral)?
+- Severity: P2 (credibility / market relevance).
+- Effort: M (research + content rewrite).
+- Fix path: research 2025-2026 sources that explicitly cover LATAM + Caribbean innovation, digital transformation, decision latency in regulated finance, public-sector DT in the region. Candidate sources: IDB (BID) innovation reports, CEPAL / ECLAC studies, OECD Latin American Economic Outlook, regional fintech maturity benchmarks (e.g., CARIBEquity). Replace 1-3 of the current sources with regional anchors where the data is stronger.
+- Status: BACKLOG.
+- Commits: pending.
+
+### BRAND-NEW-001 (BACKLOG, surfaced 2026-06-01 by live spot-check)
+- Description: Card-grid trailing-row imbalance. The global `.cardGrid` uses `repeat(12, 1fr)` with `.card { grid-column: span 4 }` (3-up desktop). With 3 or 6 cards the rows are balanced; with 4 or 5 cards the last row has a lone card or two-card row at 1/3 or 2/3 width that reads as ragged. User directive: "all the cards, site-wide should be visually balanced in terms of height, if we have several in the same page" and "if only 4 or only 3 or 6 so that is also visually balanced".
+- Severity: P2 (visual polish; brand integrity).
+- Effort: M (consider switching the cardGrid to `repeat(auto-fit, minmax(280px, 1fr))` for auto-balancing OR add `:nth-child` centering rules for trailing rows. Test across all pages that use cardGrid since this is a global change.)
+- Affected: `src/css/custom.css` `.cardGrid` rules (lines ~775-803).
+- Status: BACKLOG.
+- Commits: pending.
+
+### BRAND-NEW-002 (BACKLOG, surfaced 2026-06-01)
+- Description: Phase color normalization. User noted on the `/services/clarityscan/audit` "Phase readiness cascade" that phase accent colors may not be consistent with how phases are colored elsewhere on the site (e.g., `/services/innovation-maturity` IMM-P® cycle Roadmap, `/services/imm-dt` IMM-DT roadmap horizons).
+- Severity: P2 (brand consistency).
+- Effort: S (audit the 4-5 places that paint IMM-P phases and ensure the same phase index maps to the same `--dl-*` token everywhere).
+- Fix path: cross-check Roadmap state mapping (`now` / `next` / `later`) and any per-phase color assignments on innovation-maturity.tsx, imm-dt.tsx, clarityscan/audit.tsx, clarityscan/diagnostic.tsx. Pick one canonical phase-to-color map and apply.
+- Status: BACKLOG.
+- Commits: pending.
+
 ### E-R3 (BACKLOG, filed from R2 follow-up findings)
 - Description: Page-level `link-in-text-block` + `label-content-name-mismatch` A11y fixes.
 - Rationale: R2 (commit 070b3d5) fixed the component-level A11y issues but observed that two of the four failing Lighthouse audits trace to page-level patterns: inline `<a>` elements inside `<p>` or article text without underline (link-in-text-block) and CTA labels where the visible text and aria-label disagree (label-content-name-mismatch).

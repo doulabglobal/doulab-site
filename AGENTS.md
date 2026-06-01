@@ -102,5 +102,29 @@ All CODEX tasks must include explicit acceptance criteria in the request or in t
 - ops/audits/doulab-net/lighthouse-2026-01-18.pdf (reference only)
 - ops/audits/doulab-net/logs/build-cf.log (reference only)
 - ops/audits/doulab-net/logs/verify-build.log (reference only)
+- docs/ops/audit-2026-06/00-index.md (Multi-role audit consolidated index, 2026-06)
+- docs/ops/audit-2026-06/01-ia-ux.md
+- docs/ops/audit-2026-06/02-brand-visual.md
+- docs/ops/audit-2026-06/03-content-copy.md
+- docs/ops/audit-2026-06/04-conversion.md
+- docs/ops/audit-2026-06/05-seo.md
+- docs/ops/audit-2026-06/06-performance.md
+- docs/ops/audit-2026-06/07-accessibility.md
+- docs/ops/audit-2026-06/08-security-privacy.md
+- docs/ops/audit-2026-06/09-analytics.md
+- docs/ops/audit-2026-06/10-code-quality.md
+- docs/ops/audit-2026-06/11-blog-editorial.md
+- docs/ops/audit-2026-06/12-i18n.md
+- docs/ops/audit-2026-06/13-mcf-imm-domain.md
+- docs/ops/audit-2026-06/14-behavioral-economics.md
+- docs/ops/audit-2026-06/15-behavioral-psychology.md
+- docs/ops/audit-2026-06/16-sales-positioning.md
+- docs/ops/audit-2026-06/17-mobile-responsive.md
+- docs/ops/audit-2026-06/18-lighthouse.md
+- docs/ops/audit-2026-06/19-viewport-matrix.md
+- ops/audits/doulab-net/lighthouse-2026-06/ (live dev-preview Lighthouse runs v1+v2, parse harness, reference)
+- ops/audits/doulab-net/lighthouse-2026-06-prod/ (production Lighthouse runs against doulab.net, reference)
+- ops/audits/doulab-net/viewport-2026-06/ (Playwright viewport sweep v1, reference)
+- ops/audits/doulab-net/viewport-2026-06-v2/ (Playwright viewport sweep v2 clean, reference)
 
 Any new decision-relevant ops artifact must be added to this manifest.

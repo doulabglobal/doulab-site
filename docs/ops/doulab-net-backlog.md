@@ -3,8 +3,26 @@
 Phase B status: CLOSED (final commit hashes confirmed).
 Phase C status: CLOSED (C3 deferred; C5 blocked by robots source; conversion work completed via C11–C16).
 Phase D status: D0 intake; D1 blocked; D2-D19 complete (mapped).
+Phase E status: IN PROGRESS (multi-role audit 2026-06; implementation roadmap in 4 sub-phases per docs/ops/audit-2026-06/00-index.md).
 
 Each item includes ID, description, rationale, acceptance criteria, and commit mapping placeholder.
+
+## Phase E — Multi-role audit (2026-06)
+
+Audit deliverables landed; implementation in 4 sub-phases:
+- E.1 Truth & integrity (week 1) — broken glyphs, mark/version normalization, zero-byte stubs, broken funnels.
+- E.2 Conversion & trust (weeks 2–3) — tier surfacing, pricing transparency, IMM-DT vertical, testimonials, CTA hierarchy.
+- E.3 Structural (weeks 4–6) — IA cleanup (/services vs /what-we-do), brand token consolidation, image format strategy, CSP hardening.
+- E.4 Strategic (weeks 7+) — ES launch, named case studies, Lighthouse re-baseline, viewport screenshot harness, v4 migration.
+
+### E-A1
+- Description: Land 19-role multi-role audit + consolidated index + live Lighthouse/viewport verification artifacts.
+- Rationale: Establish evidence-based improvement backlog from independent role audits (IA/UX, brand, copy, conversion, SEO, perf, a11y, security, analytics, code, blog, i18n, MCF/IMM domain, behavioral econ, behavioral psych, sales, mobile, Lighthouse, viewport). ~280 findings surfaced.
+- Acceptance criteria:
+  - 19 role files + 1 consolidated index under docs/ops/audit-2026-06/.
+  - Live Lighthouse JSONs + Playwright viewport PNGs under ops/audits/doulab-net/.
+  - AGENTS.md manifest updated with all new ops artifacts.
+- Commits: 8d314807d22162378fa8a70df4890e64206fc426 (impl), pending (governance)
 
 ## P0
 

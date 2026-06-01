@@ -1,0 +1,102 @@
+/* Pillars: load-bearing-concept metaphor.
+   N pillars rendered as vertical columns sitting on a shared foundation. */
+
+.wrap {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  margin: 2rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+@media (max-width: 1023px) {
+  .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 767px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 479px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  background: var(--ifm-card-background-color, #fff);
+  border: 1px solid var(--ifm-color-emphasis-200, #e5e7eb);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  min-height: 100%;
+}
+
+.cap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1rem;
+  color: #fff;
+  background: var(--pillar-accent, var(--dl-indigo, #38249a));
+  border-bottom: 3px solid rgba(0, 0, 0, 0.12);
+}
+
+.capIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+}
+
+.capIcon :global(svg) {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke: #fff;
+}
+
+.title {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  margin: 0;
+  color: #fff;
+}
+
+.body {
+  font-family: var(--ifm-font-family-base, Roboto, sans-serif);
+  font-weight: 400;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 1rem;
+  flex: 1 1 auto;
+  color: var(--ifm-color-content, #1f2937);
+  margin: 0;
+}
+
+.foundation {
+  margin-top: 0;
+  height: 14px;
+  background: linear-gradient(
+    180deg,
+    var(--dl-slate, #484854) 0%,
+    color-mix(in srgb, var(--dl-slate, #484854) 70%, #000) 100%
+  );
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+}
+
+.foundationCaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-700, #4b5563);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}

@@ -7,6 +7,8 @@ import Link from '@docusaurus/Link';
 import Hero from '../../components/Hero';
 import FinalCta from '../../components/FinalCta';
 import CardGrid from '../../components/CardGrid/CardGrid';
+import Pillars from '../../components/imm/Pillars';
+import Roadmap from '../../components/imm/Roadmap';
 
 import Settings2 from 'lucide-react/dist/esm/icons/settings-2';
 import Target from 'lucide-react/dist/esm/icons/target';
@@ -14,7 +16,6 @@ import Users from 'lucide-react/dist/esm/icons/users';
 import Workflow from 'lucide-react/dist/esm/icons/workflow';
 import ShieldCheck from 'lucide-react/dist/esm/icons/shield-check';
 import Cpu from 'lucide-react/dist/esm/icons/cpu';
-import CalendarClock from 'lucide-react/dist/esm/icons/calendar-clock';
 import Layers from 'lucide-react/dist/esm/icons/layers';
 import ClipboardCheck from 'lucide-react/dist/esm/icons/clipboard-check';
 
@@ -67,33 +68,87 @@ export default function IMMDTPage(): ReactNode {
           <p className="sectionLead">
             Five domains, scored as per the IMM-P® 2.2 model, applied to the digital transformation problem space.
           </p>
-          <CardGrid>
-            <article className="card" aria-labelledby="dim-strategy">
-              <Target className="cardIcon" aria-hidden="true" />
-              <h3 id="dim-strategy">Strategy</h3>
-              <p>DT thesis, customer and business model clarity, portfolio choices, and the link from strategy to funded initiatives.</p>
-            </article>
-            <article className="card" aria-labelledby="dim-process">
-              <Workflow className="cardIcon" aria-hidden="true" />
-              <h3 id="dim-process">Process</h3>
-              <p>Delivery cadence, decision gates, evidence loops, and how the organization moves work from intent to outcome.</p>
-            </article>
-            <article className="card" aria-labelledby="dim-culture">
-              <Users className="cardIcon" aria-hidden="true" />
-              <h3 id="dim-culture">Culture</h3>
-              <p>Behaviors and incentives that support evidence-based decision-making, learning, and accountable risk-taking.</p>
-            </article>
-            <article className="card" aria-labelledby="dim-tech">
-              <Cpu className="cardIcon" aria-hidden="true" />
-              <h3 id="dim-tech">Technology</h3>
-              <p>Architecture, data, platforms, and the technical readiness to execute and scale the transformation safely.</p>
-            </article>
-            <article className="card" aria-labelledby="dim-governance">
-              <ShieldCheck className="cardIcon" aria-hidden="true" />
-              <h3 id="dim-governance">Governance</h3>
-              <p>Roles, decision rights, risk and compliance posture, and the institutional learning that compounds across cohorts.</p>
-            </article>
-          </CardGrid>
+          <Pillars
+            ariaLabel="IMM-DT measurement domains"
+            foundationLabel="IMM-P® 2.2 maturity model"
+            pillars={[
+              {
+                icon: <Target aria-hidden="true" />,
+                title: 'Strategy',
+                body: 'DT thesis, customer and business model clarity, portfolio choices, and the link from strategy to funded initiatives.',
+                accent: 'indigo',
+              },
+              {
+                icon: <Workflow aria-hidden="true" />,
+                title: 'Process',
+                body: 'Delivery cadence, decision gates, evidence loops, and how the organization moves work from intent to outcome.',
+                accent: 'slate',
+              },
+              {
+                icon: <Users aria-hidden="true" />,
+                title: 'Culture',
+                body: 'Behaviors and incentives that support evidence-based decision-making, learning, and accountable risk-taking.',
+                accent: 'purple',
+              },
+              {
+                icon: <Cpu aria-hidden="true" />,
+                title: 'Technology',
+                body: 'Architecture, data, platforms, and the technical readiness to execute and scale the transformation safely.',
+                accent: 'green',
+              },
+              {
+                icon: <ShieldCheck aria-hidden="true" />,
+                title: 'Governance',
+                body: 'Roles, decision rights, risk and compliance posture, and the institutional learning that compounds across cohorts.',
+                accent: 'amber',
+              },
+            ]}
+          />
+        </section>
+
+        {/* The IMM-DT roadmap */}
+        <section className="section" id="roadmap" aria-labelledby="roadmap-title">
+          <Roadmap
+            title="The IMM-DT roadmap"
+            horizons={[
+              {
+                range: '0–3 months',
+                label: 'Baseline',
+                body: 'Kickoff diagnostic, calibrated maturity model, named cohorts.',
+                state: 'now',
+              },
+              {
+                range: '3–6 months',
+                label: 'First wins',
+                body: 'Quick-win plays in the lowest-maturity domains; first phase-readiness gate.',
+                state: 'now',
+              },
+              {
+                range: '6–9 months',
+                label: 'Process anchoring',
+                body: 'Decision cadence and evidence loops embedded in delivery teams.',
+                state: 'next',
+              },
+              {
+                range: '9–12 months',
+                label: 'Cohort progression',
+                body: 'Second domain assessment, benchmark refresh, second gate.',
+                state: 'next',
+              },
+              {
+                range: '12–24 months',
+                label: 'Scale and govern',
+                body: 'Cross-domain roll-out, governance maturity, third gate.',
+                state: 'later',
+              },
+              {
+                range: '24–36 months',
+                label: 'Compounding',
+                body: 'Institutional learning, regulator-facing maturity, evidence dossiers.',
+                state: 'later',
+              },
+            ]}
+          />
         </section>
 
         {/* How IMM-DT delivers */}
@@ -114,11 +169,6 @@ export default function IMMDTPage(): ReactNode {
               <Target className="cardIcon" aria-hidden="true" />
               <h3>3. Benchmark</h3>
               <p>Compare against regional peers (e.g., fintech reference set for financial services) to make “good” concrete.</p>
-            </article>
-            <article className="card">
-              <CalendarClock className="cardIcon" aria-hidden="true" />
-              <h3>4. Roadmap</h3>
-              <p>Sequence prioritized initiatives across <strong>0–3, 3–6, 6–9, 9–12, 12–24 and 24–36 month</strong> horizons, with named owners and IMM-P® phase readiness gates.</p>
             </article>
           </CardGrid>
         </section>

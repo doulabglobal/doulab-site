@@ -3,6 +3,7 @@
 // Mirrors `imm-pillars-grid` from the IMM design system.
 
 import React, { type ReactNode, type CSSProperties } from 'react';
+import Link from '@docusaurus/Link';
 import styles from './Pillars.module.css';
 
 export type PillarAccent =
@@ -18,6 +19,10 @@ export type Pillar = {
   title: string;
   body: string;
   accent?: PillarAccent;
+  /** Internal Docusaurus route (e.g. "/services/innovation-maturity"). Mutually exclusive with href. */
+  to?: string;
+  /** External URL (e.g. "https://vif.doulab.net"). Mutually exclusive with to. */
+  href?: string;
 };
 
 export type PillarsProps = {
@@ -52,6 +57,22 @@ export default function Pillars({
             ['--pillar-accent' as string]: ACCENT_VAR[accent],
           } as CSSProperties;
           const headingId = `pillar-${i}-${p.title.replace(/\s+/g, '-').toLowerCase()}`;
+          const titleNode = p.to ? (
+            <Link to={p.to} className={styles.titleLink}>
+              {p.title}
+            </Link>
+          ) : p.href ? (
+            <Link
+              href={p.href}
+              className={styles.titleLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {p.title}
+            </Link>
+          ) : (
+            p.title
+          );
           return (
             <article
               key={headingId}
@@ -66,7 +87,7 @@ export default function Pillars({
                   </span>
                 ) : null}
                 <h3 id={headingId} className={styles.title}>
-                  {p.title}
+                  {titleNode}
                 </h3>
               </div>
               <p className={styles.body}>{p.body}</p>

@@ -153,21 +153,25 @@ export default function VigiaFuturaPage() {
                 title: 'VIF',
                 body: 'Vigía Incubation Framework. Architecture and operating standards for national public-private incubator networks.',
                 accent: 'indigo',
+                href: 'https://vif.doulab.net',
               },
               {
                 title: 'VILF',
                 body: 'Vigía Innovation Lab Framework. Five-spine architecture for innovation lab networks at the institutional and national level.',
                 accent: 'purple',
+                href: 'https://vilf.doulab.net',
               },
               {
                 title: 'IMM',
                 body: 'Innovation Maturity Model. The capability spine. Five domains that describe how ecosystems and institutions actually mature.',
                 accent: 'green',
+                to: '/services/innovation-maturity#imm-model',
               },
               {
                 title: 'IMM-P®',
                 body: 'The execution spine. The engagement program through which institutions advance their maturity with evidence, gates, and learning loops.',
                 accent: 'amber',
+                to: '/services/innovation-maturity',
               },
               {
                 title: 'MEL',

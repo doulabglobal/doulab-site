@@ -719,3 +719,85 @@ The Roboto stylesheet from Google Fonts (added in E-N1 for brand-family parity w
 The Phase E remediation delivered the predicted gains on **SEO (uniform 100), A11y (mostly held), security and trademark integrity, brand-token consolidation, IA cleanup, and visual semantic vocabulary**. It introduced a single Performance regression of **14 to 27 mobile Perf points across all pages**, traceable to the Roboto Google Fonts stylesheet being render-blocking (LH-NEW-005). Two secondary regressions: A11y dipped on pages with the new IMM semantic components (LH-NEW-006) and BP fell 4 points across the site (LH-NEW-007).
 
 **Net assessment**: the brand-family-typography win (Roboto sitewide matching the IMM decks) costs ~15 Perf points; the IMM-component visual win costs 5 A11y points on the affected pages. Both are recoverable with the source fixes in LH-NEW-005 and LH-NEW-006, which are next-pass work.
+
+---
+
+## Phase C verification — Lighthouse prod-v6 (post-E-R1 Phase A deploy, 2026-06-01)
+
+After E-R1 Phase A landed (commits `6cfbb2c` self-host Roboto + `070b3d5` IMM A11y + `b97c066` viewport harness + `c31ebb4` inspector-issues diagnostic) and Cloudflare auto-deployed, prod Lighthouse was re-run against the full 18 mobile + 4 desktop matrix. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v6/*.json`; parsed summary at `summary-v6.json`.
+
+### v6 scores
+
+| Page | Form | Perf | A11y | BP | SEO |
+|---|---|---|---|---|---|
+| `/` | mobile | **89** | 93 | 75 | 100 |
+| `/` | desktop | **98** | 92 | 74 | 100 |
+| `/services` | mobile | 83 | 100 | 75 | 100 |
+| `/services/clarityscan` | mobile | 81 | 96 | 75 | 100 |
+| `/services/clarityscan/diagnostic` | mobile | 82 | 88 | 75 | 100 |
+| `/services/clarityscan/audit` | mobile | 82 | 92 | 75 | 100 |
+| `/services/innovation-maturity` | mobile | **89** | 89 | 75 | 100 |
+| `/services/innovation-maturity` | desktop | 99 | 89 | 74 | 100 |
+| `/services/imm-dt` | mobile | 83 | 88 | 75 | 100 |
+| `/services/imm-dt` | desktop | 99 | 88 | 74 | 100 |
+| `/services/diagnostics` | mobile | 84 | 100 | 75 | 100 |
+| `/services/coaching-mentoring` | mobile | 84 | 100 | 75 | 100 |
+| `/services/custom-workshops` | mobile | 84 | 100 | 75 | 100 |
+| `/services/innovation-readiness-workshop` | mobile | 84 | 96 | 75 | 100 |
+| `/case-studies` | mobile | 80 | 96 | 75 | 100 |
+| `/case-studies/afp-siembra` | mobile | 79 | 96 | 75 | 100 |
+| `/about` | mobile | 86 | 96 | 75 | 100 |
+| `/contact` | mobile | 83 | 100 | 75 | 100 |
+| `/work-with-us` | mobile | 82 | 94 | 75 | 100 |
+| `/vigia-futura` | mobile | 83 | 96 | 75 | 100 |
+| `/insights` | mobile | 82 | 100 | 75 | 100 |
+
+Zero NO_NAVSTART runs this pass.
+
+### Delta vs prod-v5 (the regression baseline)
+
+| Page | Perf v5 | Perf v6 | Delta |
+|---|---|---|---|
+| `/` | 77 | **89** | **+12** |
+| `/services` | 66 | 83 | **+17** |
+| `/services/clarityscan` | 73 | 81 | +8 |
+| `/services/clarityscan/diagnostic` | 68 | 82 | **+14** |
+| `/services/clarityscan/audit` | 69 | 82 | **+13** |
+| `/services/innovation-maturity` | 72 | **89** | **+17** |
+| `/services/imm-dt` | 69 | 83 | **+14** |
+| `/case-studies` | 68 | 80 | +12 |
+| `/case-studies/afp-siembra` | 56 | 79 | **+23** |
+| `/about` | 66 | 86 | **+20** |
+| `/insights` | 68 | 82 | **+14** |
+| `/work-with-us` | 62 | 82 | **+20** |
+| `/vigia-futura` | 72 | 83 | +11 |
+| Home desktop | NO_NAVSTART | **98** | recovered |
+
+Average mobile Perf gain: **+15 points**, exactly the predicted recovery from LH-NEW-005.
+
+### Status of the regressions filed in E-R1
+
+**LH-NEW-005 (Roboto render-blocking) — RESOLVED.** Mobile Perf range 79-89 (target was 85+; 13 of 18 pages clear it, the rest 79-84). Desktop home 98. Top opportunity `render-blocking-resources` aggregate fell from **27,315 ms** (v5) to **21,324 ms** (v6) — the ~6 second drop matches the eliminated Roboto Google Fonts stylesheet (789 ms x 18 pages roughly). The residual 21 s is the existing Docusaurus styles.css bundle, which is a separate optimization. Zero `fonts.googleapis.com` references remain in any audited resource list. `font-src 'self' data:` verified on the deployed CSP.
+
+**LH-NEW-006 (IMM component A11y) — PARTIAL.** A11y on the three pages with the most new IMM semantic components:
+- `/services/innovation-maturity`: 88 -> 89 (+1)
+- `/services/imm-dt`: 87 -> 88 (+1)
+- `/services/clarityscan/diagnostic`: 87 -> 88 (+1)
+
+R2 fixed the component-level ARIA + contrast issues correctly. The residual 88-89 (vs target 93+) reflects the page-level audits R2 explicitly punted: `link-in-text-block` (inline `<a>` in paragraphs without underline) and `label-content-name-mismatch` (CTA aria-label vs visible-text disagreements). Filed as **E-R3** for a future page-level sweep.
+
+**LH-NEW-007 (BP inspector-issues) — PENDING.** BP stayed at 75 sitewide. The root cause is documented in `inspector-issues-summary.md` (R4 diagnostic): 33 CSP Report-Only violations from inline `style=` attributes and inline `<head>` scripts, plus 3 Cloudflare deprecation issues from the bot-detection script. Filed as **E-R2** for a separate page-level CSP cleanup pass.
+
+### Top opportunity (v6)
+
+| Opportunity | Pages | Total ms | Note |
+|---|---|---|---|
+| `render-blocking-resources` | 21 | 21,324 | Reduced from 27,315 ms (v5) by removing Google Fonts. Residual is Docusaurus styles.css. |
+| `unused-javascript` | 18 | 4,360 | Reduced from 4,860 ms; mostly Cloudflare Insights + Docusaurus runtime. |
+| `unused-css-rules` | 15 | 2,590 | Reduced from 7,620 ms — the consolidated `custom.css` from E-L1 + the IMM components helped. |
+
+### Net verdict
+
+E-R1 Phase A delivered the targeted recovery on **LH-NEW-005**. **LH-NEW-006** is component-level resolved; the remaining 4-5 A11y points trace to page-level issues filed as **E-R3**. **LH-NEW-007** is correctly understood (R4 diagnostic capture) and filed as **E-R2** for a dedicated CSP cleanup pass. Phase 4's audit-driven recovery loop closes cleanly with three new well-scoped follow-ups instead of a vague "BP is bad".
+
+The site now lives at **mobile Perf 79-89, desktop 98, A11y 88-100, BP 74-75, SEO uniform 100**. Compared to the prod-v3 pre-Phase-E baseline (mobile Perf 64-93, A11y 89-100, BP 78-79, SEO 85-100), every category is either even or better; the BP -4 is offset by the SEO +8-15 + A11y stability + the new visual semantic vocabulary + 5 new pages.

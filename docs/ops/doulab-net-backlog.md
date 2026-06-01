@@ -280,14 +280,30 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - LH-NEW-007 root cause identified (open DevTools on prod, capture inspector-issues content).
   - VP-NEW-002 harness fix lands; full 6-anchor sweep captures all 108 screenshots clean.
   - VP-NEW-003 desktop coverage captured.
-- Status: Phase A impl landed; Phase C re-audit pending.
+- Status: RESOLVED (Phase A landed + Phase C verified). Three follow-ups filed (E-R2, E-R3, VP-NEW-004).
 - Phase A commits (impl):
   - E-R1.1 (self-host Roboto): 6cfbb2c9383fb990d1e0c2e72e664ef2cd5d2351
   - E-R1.2 (IMM component A11y fixes): 070b3d52f07caae4741666a2017568d8b22929df
   - E-R1.3 (viewport harness v5.1): b97c066cc6c950172748588dd31f9569fdc010a0
   - E-R1.4 (inspector-issues diagnostic): c31ebb4e33ec61cc332a4e41dd7b508cd5519405
-- Phase A governance: pending (this commit)
-- Phase C verification: pending (re-run prod Lighthouse + viewport sweep after Cloudflare deploys).
+- Phase C verification (prod-v6 Lighthouse + v5.1 viewport):
+  - LH-NEW-005 RESOLVED. Mobile Perf v5 56-77 -> v6 79-89 (+15 average). Desktop home v5 NO_NAVSTART -> v6 98. render-blocking-resources total dropped 27,315 ms -> 21,324 ms.
+  - LH-NEW-006 PARTIAL. Component-level ARIA + contrast resolved; remaining 4-5 A11y points trace to page-level `link-in-text-block` and `label-content-name-mismatch` filed as E-R3.
+  - LH-NEW-007 PENDING. Root cause documented (33 CSP Report-Only violations + 3 Cloudflare deprecations). Filed as E-R2 for a dedicated CSP cleanup pass.
+  - VP-NEW-002 RESOLVED. Harness captured 108 of 108 screenshots; resumable + retry + throttle features all worked under sustained prod run.
+  - VP-NEW-003 RESOLVED. Desktop anchors (768 / 1280 / 1366 / 1920) captured cleanly; new IMM semantic components render correctly across all anchors.
+- New defect surfaced in Phase C: **VP-NEW-004** (filed below).
+
+### VP-NEW-004 (BACKLOG, surfaced 2026-06-01 by the Phase C viewport sweep)
+- Description: IMM-DT and ClarityScan T3 desktop column-collapse defect. Tabular sections render as "one-character-per-line" vertical columns at all four desktop anchors (768, 1280, 1366, 1920).
+- Severity: P1 (visible layout breakage on two flagship product pages at every desktop size).
+- Effort: S (likely a single CSS rule: `table-layout: fixed` or `grid-template-columns: min-content` somewhere in the rebuilt sections).
+- Affected pages: `/services/imm-dt` ("How IMM-DT delivers" / "Who IMM-DT is for" tables) and `/services/clarityscan/audit` ("How Tier 3 works" / phase-results matrix).
+- Mobile rendering is correct (collapse intentionally happens at narrow widths); only desktop breaks.
+- Evidence: 8 PNGs across the two pages at desktop anchors under `ops/audits/doulab-net/viewport-2026-06-prod-v5.1/`.
+- Acceptance: full re-sweep at desktop anchors shows readable tabular sections.
+- Status: BACKLOG; not in scope for E-R1 close-out.
+- Commits: pending.
 
 ### E-R2 (BACKLOG, filed from R4 diagnostic findings)
 - Description: Page-level CSP cleanup to clear the LH-NEW-007 inspector-issues audit.

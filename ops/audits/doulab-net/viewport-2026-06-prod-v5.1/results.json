@@ -1,0 +1,1084 @@
+[
+  {
+    "slug": "home",
+    "path": "/",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 7035,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\home\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "home",
+    "path": "/",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1171,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\home\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "home",
+    "path": "/",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1437,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\home\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "home",
+    "path": "/",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 9723,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\home\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "home",
+    "path": "/",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 3525,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\home\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "home",
+    "path": "/",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 2426,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\home\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services",
+    "path": "/services",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1087,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services",
+    "path": "/services",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1014,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services",
+    "path": "/services",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1068,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services",
+    "path": "/services",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1322,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services",
+    "path": "/services",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 2735,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services",
+    "path": "/services",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 10466,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan",
+    "path": "/services/clarityscan",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1178,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan",
+    "path": "/services/clarityscan",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1400,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan",
+    "path": "/services/clarityscan",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1931,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan",
+    "path": "/services/clarityscan",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 7885,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan",
+    "path": "/services/clarityscan",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1469,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan",
+    "path": "/services/clarityscan",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1262,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "path": "/services/clarityscan/diagnostic",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1186,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-diagnostic\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "path": "/services/clarityscan/diagnostic",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1658,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-diagnostic\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "path": "/services/clarityscan/diagnostic",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1240,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-diagnostic\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "path": "/services/clarityscan/diagnostic",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1197,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-diagnostic\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "path": "/services/clarityscan/diagnostic",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1223,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-diagnostic\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "path": "/services/clarityscan/diagnostic",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1379,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-diagnostic\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "path": "/services/clarityscan/audit",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1191,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-audit\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "path": "/services/clarityscan/audit",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1472,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-audit\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "path": "/services/clarityscan/audit",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1624,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-audit\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "path": "/services/clarityscan/audit",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1759,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-audit\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "path": "/services/clarityscan/audit",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1232,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-audit\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "path": "/services/clarityscan/audit",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 2793,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-clarityscan-audit\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "path": "/services/innovation-maturity",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 3388,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-maturity\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "path": "/services/innovation-maturity",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1151,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-maturity\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "path": "/services/innovation-maturity",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1272,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-maturity\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "path": "/services/innovation-maturity",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1241,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-maturity\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "path": "/services/innovation-maturity",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1305,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-maturity\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "path": "/services/innovation-maturity",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 6069,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-maturity\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-imm-dt",
+    "path": "/services/imm-dt",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1227,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-imm-dt\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-imm-dt",
+    "path": "/services/imm-dt",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1307,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-imm-dt\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-imm-dt",
+    "path": "/services/imm-dt",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1260,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-imm-dt\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-imm-dt",
+    "path": "/services/imm-dt",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 2394,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-imm-dt\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-imm-dt",
+    "path": "/services/imm-dt",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1266,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-imm-dt\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-imm-dt",
+    "path": "/services/imm-dt",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1240,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-imm-dt\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-diagnostics",
+    "path": "/services/diagnostics",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1356,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-diagnostics\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-diagnostics",
+    "path": "/services/diagnostics",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1202,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-diagnostics\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-diagnostics",
+    "path": "/services/diagnostics",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1195,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-diagnostics\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-diagnostics",
+    "path": "/services/diagnostics",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1129,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-diagnostics\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-diagnostics",
+    "path": "/services/diagnostics",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1322,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-diagnostics\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-diagnostics",
+    "path": "/services/diagnostics",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1787,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-diagnostics\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "path": "/services/coaching-mentoring",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1169,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-coaching-mentoring\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "path": "/services/coaching-mentoring",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1062,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-coaching-mentoring\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "path": "/services/coaching-mentoring",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1230,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-coaching-mentoring\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "path": "/services/coaching-mentoring",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1175,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-coaching-mentoring\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "path": "/services/coaching-mentoring",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 7551,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-coaching-mentoring\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "path": "/services/coaching-mentoring",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1155,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-coaching-mentoring\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-custom-workshops",
+    "path": "/services/custom-workshops",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1124,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-custom-workshops\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-custom-workshops",
+    "path": "/services/custom-workshops",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1093,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-custom-workshops\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-custom-workshops",
+    "path": "/services/custom-workshops",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1149,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-custom-workshops\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-custom-workshops",
+    "path": "/services/custom-workshops",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1098,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-custom-workshops\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-custom-workshops",
+    "path": "/services/custom-workshops",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1161,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-custom-workshops\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-custom-workshops",
+    "path": "/services/custom-workshops",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 6962,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-custom-workshops\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "path": "/services/innovation-readiness-workshop",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1257,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-readiness-workshop\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "path": "/services/innovation-readiness-workshop",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1294,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-readiness-workshop\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "path": "/services/innovation-readiness-workshop",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1247,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-readiness-workshop\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "path": "/services/innovation-readiness-workshop",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 2418,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-readiness-workshop\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "path": "/services/innovation-readiness-workshop",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 3643,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-readiness-workshop\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "path": "/services/innovation-readiness-workshop",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 4016,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\services-innovation-readiness-workshop\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies",
+    "path": "/case-studies",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1070,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies",
+    "path": "/case-studies",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 983,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies",
+    "path": "/case-studies",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 8043,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies",
+    "path": "/case-studies",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 11084,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies",
+    "path": "/case-studies",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1150,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies",
+    "path": "/case-studies",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1414,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "path": "/case-studies/afp-siembra",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1227,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies-afp-siembra\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "path": "/case-studies/afp-siembra",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 2220,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies-afp-siembra\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "path": "/case-studies/afp-siembra",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 49042,
+    "attempts": 2,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies-afp-siembra\\768x1024.png",
+    "captured": true,
+    "error": "attempt1:page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.doulab.net/case-studies/afp-siembra\", waiting until \"networkidle\"\u001b[22m\n"
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "path": "/case-studies/afp-siembra",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 2098,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies-afp-siembra\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "path": "/case-studies/afp-siembra",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 3004,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies-afp-siembra\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "path": "/case-studies/afp-siembra",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 4444,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\case-studies-afp-siembra\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "about",
+    "path": "/about",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1162,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\about\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "about",
+    "path": "/about",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 5449,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\about\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "about",
+    "path": "/about",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1019,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\about\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "about",
+    "path": "/about",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1195,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\about\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "about",
+    "path": "/about",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1786,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\about\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "about",
+    "path": "/about",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 2171,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\about\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "contact",
+    "path": "/contact",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1794,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\contact\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "contact",
+    "path": "/contact",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 10081,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\contact\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "contact",
+    "path": "/contact",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1018,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\contact\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "contact",
+    "path": "/contact",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 13724,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\contact\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "contact",
+    "path": "/contact",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 4850,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\contact\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "contact",
+    "path": "/contact",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1047,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\contact\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "work-with-us",
+    "path": "/work-with-us",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 2273,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\work-with-us\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "work-with-us",
+    "path": "/work-with-us",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 2706,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\work-with-us\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "work-with-us",
+    "path": "/work-with-us",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1107,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\work-with-us\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "work-with-us",
+    "path": "/work-with-us",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1102,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\work-with-us\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "work-with-us",
+    "path": "/work-with-us",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 48020,
+    "attempts": 2,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\work-with-us\\1366x768.png",
+    "captured": true,
+    "error": "attempt1:page.goto: Timeout 45000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.doulab.net/work-with-us\", waiting until \"networkidle\"\u001b[22m\n"
+  },
+  {
+    "slug": "work-with-us",
+    "path": "/work-with-us",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1167,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\work-with-us\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "vigia-futura",
+    "path": "/vigia-futura",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1234,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\vigia-futura\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "vigia-futura",
+    "path": "/vigia-futura",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1239,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\vigia-futura\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "vigia-futura",
+    "path": "/vigia-futura",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1149,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\vigia-futura\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "vigia-futura",
+    "path": "/vigia-futura",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1151,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\vigia-futura\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "vigia-futura",
+    "path": "/vigia-futura",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 1456,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\vigia-futura\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "vigia-futura",
+    "path": "/vigia-futura",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 8800,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\vigia-futura\\1920x1080.png",
+    "captured": true
+  },
+  {
+    "slug": "insights",
+    "path": "/insights",
+    "anchor": "360x640",
+    "status": 200,
+    "ms": 1075,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\insights\\360x640.png",
+    "captured": true
+  },
+  {
+    "slug": "insights",
+    "path": "/insights",
+    "anchor": "390x844",
+    "status": 200,
+    "ms": 1793,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\insights\\390x844.png",
+    "captured": true
+  },
+  {
+    "slug": "insights",
+    "path": "/insights",
+    "anchor": "768x1024",
+    "status": 200,
+    "ms": 1100,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\insights\\768x1024.png",
+    "captured": true
+  },
+  {
+    "slug": "insights",
+    "path": "/insights",
+    "anchor": "1280x800",
+    "status": 200,
+    "ms": 1094,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\insights\\1280x800.png",
+    "captured": true
+  },
+  {
+    "slug": "insights",
+    "path": "/insights",
+    "anchor": "1366x768",
+    "status": 200,
+    "ms": 2724,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\insights\\1366x768.png",
+    "captured": true
+  },
+  {
+    "slug": "insights",
+    "path": "/insights",
+    "anchor": "1920x1080",
+    "status": 200,
+    "ms": 1062,
+    "attempts": 1,
+    "file": "C:\\HB9HJU_BkSSD\\Dropbox\\LS\\Projects\\INFORMATIK-LLC\\Projects\\Doulab\\doulab-site\\ops\\audits\\doulab-net\\viewport-2026-06-prod-v5.1\\insights\\1920x1080.png",
+    "captured": true
+  }
+]

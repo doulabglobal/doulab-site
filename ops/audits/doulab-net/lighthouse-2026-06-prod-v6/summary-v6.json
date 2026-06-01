@@ -1,0 +1,225 @@
+{
+  "rows": [
+    {
+      "f": "about-mobile.json",
+      "ff": "mobile",
+      "url": "/about",
+      "perf": 86,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "case-studies-afp-siembra-mobile.json",
+      "ff": "mobile",
+      "url": "/case-studies/afp-siembra",
+      "perf": 79,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "case-studies-mobile.json",
+      "ff": "mobile",
+      "url": "/case-studies",
+      "perf": 80,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "contact-mobile.json",
+      "ff": "mobile",
+      "url": "/contact",
+      "perf": 83,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "home-desktop.json",
+      "ff": "desktop",
+      "url": "/",
+      "perf": 98,
+      "a11y": 92,
+      "bp": 74,
+      "seo": 100
+    },
+    {
+      "f": "home-mobile.json",
+      "ff": "mobile",
+      "url": "/",
+      "perf": 89,
+      "a11y": 93,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "insights-mobile.json",
+      "ff": "mobile",
+      "url": "/insights",
+      "perf": 82,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-clarityscan-audit-mobile.json",
+      "ff": "mobile",
+      "url": "/services/clarityscan/audit",
+      "perf": 82,
+      "a11y": 92,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-clarityscan-diagnostic-mobile.json",
+      "ff": "mobile",
+      "url": "/services/clarityscan/diagnostic",
+      "perf": 82,
+      "a11y": 88,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-clarityscan-mobile.json",
+      "ff": "mobile",
+      "url": "/services/clarityscan",
+      "perf": 81,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-coaching-mentoring-mobile.json",
+      "ff": "mobile",
+      "url": "/services/coaching-mentoring",
+      "perf": 84,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-custom-workshops-mobile.json",
+      "ff": "mobile",
+      "url": "/services/custom-workshops",
+      "perf": 84,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-diagnostics-mobile.json",
+      "ff": "mobile",
+      "url": "/services/diagnostics",
+      "perf": 84,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-imm-dt-desktop.json",
+      "ff": "desktop",
+      "url": "/services/imm-dt",
+      "perf": 99,
+      "a11y": 88,
+      "bp": 74,
+      "seo": 100
+    },
+    {
+      "f": "services-imm-dt-mobile.json",
+      "ff": "mobile",
+      "url": "/services/imm-dt",
+      "perf": 83,
+      "a11y": 88,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-innovation-maturity-desktop.json",
+      "ff": "desktop",
+      "url": "/services/innovation-maturity",
+      "perf": 99,
+      "a11y": 89,
+      "bp": 74,
+      "seo": 100
+    },
+    {
+      "f": "services-innovation-maturity-mobile.json",
+      "ff": "mobile",
+      "url": "/services/innovation-maturity",
+      "perf": 89,
+      "a11y": 89,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-innovation-readiness-workshop-mobile.json",
+      "ff": "mobile",
+      "url": "/services/innovation-readiness-workshop",
+      "perf": 84,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "services-mobile.json",
+      "ff": "mobile",
+      "url": "/services",
+      "perf": 83,
+      "a11y": 100,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "vigia-futura-mobile.json",
+      "ff": "mobile",
+      "url": "/vigia-futura",
+      "perf": 83,
+      "a11y": 96,
+      "bp": 75,
+      "seo": 100
+    },
+    {
+      "f": "work-with-us-mobile.json",
+      "ff": "mobile",
+      "url": "/work-with-us",
+      "perf": 82,
+      "a11y": 94,
+      "bp": 75,
+      "seo": 100
+    }
+  ],
+  "opps": [
+    {
+      "id": "render-blocking-resources",
+      "total": 21324,
+      "n": 21,
+      "title": "Eliminate render-blocking resources"
+    },
+    {
+      "id": "unused-javascript",
+      "total": 4360,
+      "n": 18,
+      "title": "Reduce unused JavaScript"
+    },
+    {
+      "id": "unused-css-rules",
+      "total": 2590,
+      "n": 15,
+      "title": "Reduce unused CSS"
+    },
+    {
+      "id": "server-response-time",
+      "total": 199.14100000000002,
+      "n": 1,
+      "title": "Initial server response time was short"
+    },
+    {
+      "id": "uses-responsive-images",
+      "total": 160,
+      "n": 1,
+      "title": "Properly size images"
+    }
+  ]
+}

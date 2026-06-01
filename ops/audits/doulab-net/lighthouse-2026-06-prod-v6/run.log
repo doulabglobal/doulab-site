@@ -1,0 +1,49 @@
+RETRY / mobile: 
+mobile / status=null dur=0.0s
+RETRY /services mobile: 
+mobile /services status=null dur=0.0s
+RETRY /services/clarityscan mobile: 
+mobile /services/clarityscan status=null dur=0.0s
+RETRY /services/clarityscan/diagnostic mobile: 
+mobile /services/clarityscan/diagnostic status=null dur=0.0s
+RETRY /services/clarityscan/audit mobile: 
+mobile /services/clarityscan/audit status=null dur=0.0s
+RETRY /services/innovation-maturity mobile: 
+mobile /services/innovation-maturity status=null dur=0.0s
+RETRY /services/imm-dt mobile: 
+mobile /services/imm-dt status=null dur=0.0s
+RETRY /services/diagnostics mobile: 
+mobile /services/diagnostics status=null dur=0.0s
+RETRY /services/coaching-mentoring mobile: 
+mobile /services/coaching-mentoring status=null dur=0.0s
+RETRY /services/custom-workshops mobile: 
+mobile /services/custom-workshops status=null dur=0.0s
+RETRY /services/innovation-readiness-workshop mobile: 
+mobile /services/innovation-readiness-workshop status=null dur=0.0s
+RETRY /case-studies mobile: 
+mobile /case-studies status=null dur=0.0s
+RETRY /case-studies/afp-siembra mobile: 
+mobile /case-studies/afp-siembra status=null dur=0.0s
+RETRY /about mobile: 
+mobile /about status=null dur=0.0s
+RETRY /contact mobile: 
+mobile /contact status=null dur=0.0s
+RETRY /work-with-us mobile: 
+mobile /work-with-us status=null dur=0.0s
+RETRY /vigia-futura mobile: 
+mobile /vigia-futura status=null dur=0.0s
+RETRY /insights mobile: 
+mobile /insights status=null dur=0.0s
+RETRY / desktop: 
+desktop / status=null dur=0.0s
+RETRY /services/innovation-maturity desktop: 
+desktop /services/innovation-maturity status=null dur=0.0s
+RETRY /services/imm-dt desktop: 
+desktop /services/imm-dt status=null dur=0.0s
+RETRY /services/clarityscan desktop: 
+desktop /services/clarityscan status=null dur=0.0s
+NO_NAVSTART occurrences: 0
+
+SKIP mobile / (exists)
+mobile /services ok=true dur=14.1s
+mobile /services/clarityscan ok=true dur=11.5s

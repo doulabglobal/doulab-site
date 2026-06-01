@@ -46,7 +46,23 @@ Audit deliverables landed; implementation in 4 sub-phases:
   - book-clarityscan.tsx contains no `window.open(` call.
   - `npm run verify` exits 0.
 - Closes audit findings: COPY-001, COPY-002, COPY-003, IAUX-001, DOM-003, BP-009, plus the conversion auto-popup theme flagged by 10 roles in 00-index.md theme T8.
-- Commits: 789781416d44cf722b4a75574eaf0a0744f659ea (impl), pending (governance)
+- Commits: 789781416d44cf722b4a75574eaf0a0744f659ea (impl), 44ba808c5b0ee74b1cb62944d8d8742ccd55c992 (governance)
+
+### E-D1
+- Description: Phase 1 conversion — surface ClarityScan® 3-tier structure, publish Tier 1 CHF 150 price, ship the IMM-DT digital transformation vertical, update homepage diagnostics card to reference the tier framing.
+- Rationale: Audit-2026-06 surfaced three structural gaps. (1) ClarityScan® is a 3-tier product per `IMM\linear\imm-p-2.2-template.yaml:96,184` (T1 Snapshot/T2 Diagnostic/T3 Audit) but the site treated it as one product; tiers were only mentioned buried in an IMM-P® FAQ. (2) The T1 price was hidden until Stripe Checkout — five separate audit roles (Conversion, Sales, Behavioral econ, Behavioral psych, Content) flagged this as a P0 funnel leak. (3) IMM-DT exists per `IMM\borrador-licencia-imm-ogtic-doulab.md:49` and is in pilot with FUNDAPEC per the FUNDAPEC kickoff deck — but had zero public surface. All three are now fixed; the new IMM-DT page is at /services/imm-dt.
+- Acceptance criteria:
+  - `/services/clarityscan` renders a three-card tier section with T1 = CHF 150 visible, T2/T3 scope-based with discovery-call CTAs.
+  - `/services/imm-dt` exists, builds, and is linked from both the services hub and the ClarityScan tier section.
+  - Homepage diagnostics card references tiers + price.
+  - `npm run verify` exits 0.
+- Closes audit findings: COPY-002, CONV-001 (pricing transparency), behavioral econ/psych pricing thread, IAUX-002 (partial — IMM-DT now surfaced).
+- Surfaces new findings (recorded in `docs/ops/audit-2026-06/18-lighthouse.md`):
+  - LH-NEW-002 — Cloudflare Content-Signal robots.txt overrides static (CF dashboard fix).
+  - LH-NEW-003 — 6× 503 errors on lazily-loaded JS chunks persist through fresh deploy (deploy-ops investigation).
+  - LH-NEW-004 — `/about` SEO regression (link-text).
+- Production Lighthouse mobile Perf gain after C1+B1 deploy: +12 to +21 per page (64–78 → 82–93). Desktop home 97 → 98. Raw JSON: `ops/audits/doulab-net/lighthouse-2026-06-prod-v2/`.
+- Commits: 5f2433162032eb13d131f7d3bd9325ec912ecd77 (impl), pending (governance)
 
 ## P0
 

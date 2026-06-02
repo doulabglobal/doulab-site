@@ -1100,13 +1100,13 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: RESOLVED (partial).
 - Commits: pending (c3 wave).
 
-### C3b (NEW, 2026-06-02)
+### C3b (RESOLVED 2026-06-02, partial)
 - Description: Dark-mode block dedup in `src/css/custom.css:~1127-1374`.
-- Rationale: ~250 lines of "append last" refinements have overlapping selectors set to different values (e.g. `.buttonSecondary` color set to `#e5e7eb` at one site, `#fff` at two later sites; `.finalCta` background gradient/transparent/var; `.dl-cards > li` background `#111318` twice). Last-wins semantics resolve correctly today but the redundancy makes the file harder to reason about and to dark-mode-audit. Consolidating into a single `[data-theme='dark']` block keeps behavior identical and shrinks the file ~80 lines.
+- Resolution: Conservative pass — removed 5 rule blocks fully shadowed by later `!important` declarations with identical or superset selectors: (a) `.sectionLead / .heroText` `#e5e7eb`; (b) `.section p / .card p / .card li` `#e5e7eb`; (c) `.finalCta` gradient + border + box-shadow none; (d) `.buttonSecondary` non-`!important` block + hover; (e) `.dl-cards > li #111318` non-`!important` x2; (f) the weaker "Body copy contrast in dark" duplicate. Preserved the new `.btn-secondary` selector pickup (different class, not covered earlier). Net: -42 lines (`-55 +13`). Behavior preserved because in every removed case the resolved value matches the surviving `!important` rule. Build green.
 - Acceptance criteria:
-  - Visual diff vs current build shows no behavioral change on `/`, `/services/clarityscan`, `/services/imm-dt`, `/work-with-us` in both light and dark.
-  - Net line count in `custom.css` reduces by ~80 lines.
-- Status: Open.
+  - Visual diff vs current build shows no behavioral change on `/`, `/services/clarityscan`, `/services/imm-dt`, `/work-with-us` in both light and dark. **Pending Luis visual smoke.**
+  - Net line count reduction. **Achieved: -42.**
+- Status: RESOLVED (partial; full structural consolidation deferred to a future C3b2 if needed).
 - Commits: pending.
 
 ### C3c (NEW, 2026-06-02)

@@ -1115,6 +1115,15 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: RESOLVED.
 - Commits: pending (polish wave).
 
+### PERF-101 (NEW, 2026-06-02) — Mobile LCP investigation
+- Description: Reduce mobile LCP on /services/clarityscan (currently 4.08 s prod, target < 2.5 s). Primary opportunity per prod Lighthouse: `render-blocking-resources` ~ 1.35 s. The site CSS bundle + main JS bundle both block first paint.
+- Candidate moves (each requires evaluation, NOT shipped here):
+  - Inline the critical CSS for the hero + first card grid via a Docusaurus theme swizzle of `theme-classic/Layout/Head.js` (or equivalent). Defer the rest of `styles.*.css`.
+  - Make `main.js` `defer` or `async`. Docusaurus emits it as a normal blocking script today; needs a theme override.
+  - Code-split Mermaid and lucide-react by route — Mermaid is only used in case-study pages and a few research docs; the global bundle could exclude it from non-Mermaid routes.
+- Status: Open (investigation filed; implementation TBD).
+- Commits: pending.
+
 ### SEC-104 (RESOLVED 2026-06-02) — Trusted Types adoption (Report-Only monitoring)
 - Description: Add `require-trusted-types-for 'script'` to the Report-Only CSP in `static/_headers` per the LOG-PENDING-06 monitoring follow-up.
 - Resolution: Added the directive to the existing `Content-Security-Policy-Report-Only` header. Report-Only means browsers log violations to DevTools / CF logs but do not block; this lets us inventory which DOM-XSS sinks (`Element.innerHTML`, `eval`-class, `script.src` from string) fire in Docusaurus + our code before promoting to enforced CSP.

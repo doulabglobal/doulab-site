@@ -76,3 +76,26 @@ No action needed on the cache or header layer.
 1. Open a `lcp-mobile-investigation` work item: capture a Lighthouse trace for `/services/clarityscan` mobile, identify the longest task in the main thread, decide whether to defer `<Mermaid>` or `lucide-react` icon imports.
 2. Trusted Types adoption: ship `require-trusted-types-for 'script'` directive in Report-Only mode; observe browser violations over a week before promoting.
 3. CLS outlier on `services-diagnostics-es-mobile`: inspect the page in mobile viewport to find the late-shifting element.
+
+## Addendum (2026-06-02): prod-vs-local correction
+
+The 44 JSONs above (`lighthouse-2026-07-prod-v1/`) were captured against `npm run serve --port=4173`, NOT the actual Cloudflare-served production site. Local serve does not gzip / brotli responses, so `uses-text-compression` shows ~2.25 s of phantom "savings" that Cloudflare handles automatically in prod. Re-ran Lighthouse against `https://www.doulab.net/services/clarityscan` mobile (simulate throttling) for ground truth:
+
+| Metric | Local serve (audit-2026-07) | Prod (Cloudflare) | Delta |
+|---|---|---|---|
+| Performance | 54 | 83 | +29 |
+| LCP | 6.38 s | 4.08 s | -2.30 s |
+| FCP | 4.59 s | 2.34 s | -2.25 s |
+| TBT | 404 ms | 94 ms | -310 ms |
+| CLS | 0.001 | 0.001 | — |
+| `uses-text-compression` savings | 2250 ms | 0 ms (handled) | full close |
+| `unused-javascript` savings | 600 ms | 160 ms | -440 ms |
+
+**Net**: real-world prod mobile LCP on /services/clarityscan is **4.08 s** — still above the 2.5 s "good" threshold but materially better than the local audit suggested. Prod perf score 83.
+
+Top remaining opportunities (real-world):
+- `render-blocking-resources`: 1.35 s. The site CSS (`styles.*.css`) and main JS bundle block first paint. Candidate fixes: inline critical CSS via Docusaurus customFields/swizzle, async-load main.js (Docusaurus controls this — needs theme override).
+- `unused-javascript`: 160 ms. Code-split per route, particularly Mermaid + lucide-react.
+- `unused-css-rules`: 160 ms. The G-batch and audit work already trimmed `custom.css`; further reduction requires moving per-page rules out of the global sheet.
+
+**Operational note for future Lighthouse passes**: capture against the live URL, not local serve, OR document the compression caveat in the artifact name. The `lighthouse-2026-07-prod-v1` directory should arguably be renamed `lighthouse-2026-07-local-v1` to reflect reality.

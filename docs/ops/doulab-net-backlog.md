@@ -750,6 +750,23 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open (depends on Luis SEC-101 confirmation).
 - Commits: pending.
 
+### G-19 (P2) — Broken in-page anchors on 3 surfaces (EN + ES)
+
+- Description: Docusaurus build at `9ffcb54` surfaced broken anchors on both locales:
+  - `/services/clarityscan` → `#tier-1-detail` (also `/es/services/clarityscan`)
+  - `/services/innovation-maturity` → `#imm-model` (also `/es/...`)
+  - `/vigia-futura` → `#index` and cross-link `/services/innovation-maturity#imm-model` (also `/es/...`)
+  Either add the missing `id="..."` anchors on the target sections, or rewrite the source links to existing anchors. Bilingual sweep: any rename must mirror EN → ES.
+- Rationale: Build warnings (non-blocking today) but they signal navigational dead-ends — internal links promising deep-section jumps that resolve to page-top. Hurts UX + SEO crawl quality. The `#imm-model` and `#tier-1-detail` anchors are likely casualties of prior section restructures during Phase E/F.
+- Closes: build-time anchor warnings on EN + ES.
+- Files to change: `src/pages/services/clarityscan.tsx`, `src/pages/services/innovation-maturity.tsx`, `src/pages/vigia-futura.tsx` and their ES mirrors under `i18n/es/docusaurus-plugin-content-pages/`.
+- Note: G-17 (ClarityScan time-claim) will touch `services/clarityscan` heavily — coordinate the `#tier-1-detail` fix with whichever G-17 path Luis picks (Path A may rename or remove the tier-1 section entirely, making this self-resolving).
+- Acceptance criteria:
+  - `npm run build` emits zero "Broken anchor" warnings for both EN and ES.
+  - All previously-broken links either resolve to a real section id or have been rewritten.
+- Status: Open.
+- Commits: pending.
+
 ## P0
 
 ### B-P0-01

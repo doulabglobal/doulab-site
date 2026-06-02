@@ -79,6 +79,24 @@
        white. Dark-mode value re-declared in the [data-theme='dark'] block
        below. */
     --dl-green-text: #3f8a1f;
+
+    /* C3 (2026-06-02): shared shadow tokens. Card baseline (sm), card hover
+       lift (lg), finalCta + work-with-us mid lift (md), hero image lift
+       (hero). Modules remain UNTOUCHED; this consolidates the 4 repeated
+       light-mode shadow literals inside custom.css only. */
+    --dl-shadow-sm:   0 2px 6px rgba(0, 0, 0, 0.06);
+    --dl-shadow-md:   0 4px 14px rgba(0, 0, 0, 0.06);
+    --dl-shadow-lg:   0 6px 14px rgba(0, 0, 0, 0.10);
+    --dl-shadow-hero: 0 10px 24px rgba(0, 0, 0, 0.08);
+
+    /* C3 (2026-06-02): shared radius tokens. Declared for future reuse;
+       existing module usages are NOT swept this turn (safe-path constraint
+       — modules untouched). New global rules in custom.css should reference
+       these tokens. */
+    --dl-radius-sm: 0.5rem;
+    --dl-radius-md: 0.75rem;
+    --dl-radius-lg: 1rem;
+    --dl-radius-xl: 16px;
 }
 
 /* F-2 close-out: dark-mode lighter siblings of the IMM primary so links,
@@ -141,14 +159,14 @@ body {
             border: 1px solid var(--dl-border);
             border-radius: 12px;
             padding: 1.25rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,.06);
+            box-shadow: var(--dl-shadow-sm);
             transition: transform .2s,box-shadow .2s,border-color .2s
         }
 
             .theme-doc-markdown.doulabDoc .dl-cards > li:hover,
             .theme-doc-markdown .dl-cards > li:hover {
                 transform: translateY(-3px);
-                box-shadow: 0 6px 14px rgba(0,0,0,.1);
+                box-shadow: var(--dl-shadow-lg);
                 border-color: rgba(79,70,229,.35)
             }
 
@@ -189,7 +207,7 @@ body {
         border: 1px solid var(--dl-border);
         border-radius: 16px;
         padding: 2rem 1rem;
-        box-shadow: 0 4px 14px rgba(0,0,0,.06);
+        box-shadow: var(--dl-shadow-md);
         margin-top: 2rem
     }
 
@@ -344,7 +362,7 @@ main p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):no
     border-radius: 1rem;
     padding: 1.25rem;
     background: var(--ifm-background-surface-color,#fff);
-    box-shadow: 0 2px 6px rgba(0,0,0,.06);
+    box-shadow: var(--dl-shadow-sm);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -353,7 +371,7 @@ main p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):no
 
     .card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0,0,0,.1);
+        box-shadow: var(--dl-shadow-lg);
         border-color: rgba(79,70,229,.35)
     }
 
@@ -564,7 +582,7 @@ a:hover {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0,0,0,.08)
+    box-shadow: var(--dl-shadow-hero)
 }
 
 /* IMM Hero diagram — fit-to-height to avoid clipping on vertical diagrams */
@@ -907,7 +925,7 @@ a:hover {
 
     .processStep:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0,0,0,.1);
+        box-shadow: var(--dl-shadow-lg);
         border-color: rgba(79,70,229,.35)
     }
 
@@ -1028,7 +1046,7 @@ a:hover {
     border: 1px solid var(--dl-border);
     border-radius: 16px;
     padding: 2rem 1rem;
-    box-shadow: 0 4px 14px rgba(0,0,0,.06)
+    box-shadow: var(--dl-shadow-md)
 }
 
     .finalCta h2 {
@@ -1216,7 +1234,7 @@ a:hover {
 @media (prefers-reduced-motion:reduce) {
     .card:hover, .processStep:hover {
         transform: none !important;
-        box-shadow: 0 2px 6px rgba(0,0,0,.06)
+        box-shadow: var(--dl-shadow-sm)
     }
 }
 
@@ -2222,7 +2240,7 @@ html[data-theme='dark'] .mermaid svg .note {
     width: 100%;
     height: auto;
     border-radius: 16px;
-    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    box-shadow: var(--dl-shadow-hero);
 }
 
 .pages-work-with-us-index__heroCtas {
@@ -2303,7 +2321,7 @@ html[data-theme='dark'] .mermaid svg .note {
     background: var(--dl-white);
     border-radius: 12px;
     border: 1px solid var(--dl-border);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    box-shadow: var(--dl-shadow-sm);
     padding: 1.25rem;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -2311,7 +2329,7 @@ html[data-theme='dark'] .mermaid svg .note {
 
     .pages-work-with-us-index__card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0,0,0,0.10);
+        box-shadow: var(--dl-shadow-lg);
         border-color: rgba(79,70,229,0.35);
     }
 
@@ -2491,7 +2509,7 @@ html[data-theme='dark'] .mermaid svg .note {
     border: 1px solid var(--dl-border);
     border-radius: 16px;
     padding: 2rem 1rem;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    box-shadow: var(--dl-shadow-md);
 }
 
     .pages-work-with-us-index__finalCta h2 {

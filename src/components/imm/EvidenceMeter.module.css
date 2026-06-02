@@ -24,19 +24,19 @@
 }
 
 .zoneRed {
-  fill: var(--dl-red, #d64545);
+  fill: var(--dl-red, #dc2626);
   fill-opacity: 0.85;
   stroke: none;
 }
 
 .zoneAmber {
-  fill: var(--dl-amber, #f0b429);
+  fill: var(--dl-amber, #f59e0b);
   fill-opacity: 0.9;
   stroke: none;
 }
 
 .zoneGreen {
-  fill: var(--dl-green, #1f9d55);
+  fill: var(--dl-green, #72c53c);
   fill-opacity: 0.9;
   stroke: none;
 }

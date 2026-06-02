@@ -89,7 +89,7 @@
 .target {
   background: transparent;
   color: var(--ifm-color-content, #1f2937);
-  border: 2px dashed var(--dl-green, #1f9d55);
+  border: 2px dashed var(--dl-green, #72c53c);
   opacity: 1;
 }
 
@@ -97,7 +97,7 @@
 .current.target {
   background: var(--dl-indigo, #38249a);
   color: #fff;
-  border: 2px dashed var(--dl-green, #1f9d55);
+  border: 2px dashed var(--dl-green, #72c53c);
 }
 
 .rungNumber {
@@ -161,7 +161,7 @@
 }
 
 .badgeTarget {
-  background: var(--dl-green, #1f9d55);
+  background: var(--dl-green, #72c53c);
   color: #0b0e19;
 }
 

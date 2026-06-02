@@ -18,7 +18,11 @@
   # style="" attribute: `display: none;`.
   # When CSP3 style-src-attr is matched by the browser, this allowlists ONLY that
   # one inline-style declaration. All other inline style= attributes still report.
-  Content-Security-Policy-Report-Only: default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; style-src-attr 'sha256-biLFinpqYMtWHmXfkA1BPeCY0/fNt46SAZ+BBk5YUog='; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'
+  # SEC-104 (2026-06-02): require-trusted-types-for 'script' added to Report-Only
+  # only — monitors which `eval`-class / `script.src` / `Element.innerHTML` sinks
+  # in Docusaurus + our code would fire if Trusted Types were enforced. Promote
+  # to enforced CSP once browser violation reports stabilize at zero.
+  Content-Security-Policy-Report-Only: default-src 'self'; img-src 'self' data: blob: https:; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; style-src-attr 'sha256-biLFinpqYMtWHmXfkA1BPeCY0/fNt46SAZ+BBk5YUog='; font-src 'self' data:; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; worker-src 'self' blob:; frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; require-trusted-types-for 'script'
   X-Frame-Options: DENY
   Cross-Origin-Opener-Policy: same-origin
   Referrer-Policy: strict-origin-when-cross-origin

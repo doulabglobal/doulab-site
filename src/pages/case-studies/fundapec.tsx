@@ -284,7 +284,7 @@ export default function CaseFundapec(): ReactNode {
         <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
           <h2 id="case-diagrams-title">Case diagrams</h2>
           <Admonition type="tip" title="Diagram: System Flow">
-            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+            <Mermaid value={`%%{init: {"flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
     A[Problem Context] --> B[Evidence / Signals]
     B --> C[Intervention: Relaunch Comunidad Platform]
@@ -294,7 +294,7 @@ flowchart LR
 `} />
           </Admonition>
           <Admonition type="tip" title="Diagram: Capability Progression">
-            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+            <Mermaid value={`%%{init: {"flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
     A[Before: Legacy Registrations]
     B[Validated Member Base]

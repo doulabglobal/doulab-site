@@ -243,7 +243,7 @@ export default function CaseAlphaInversiones(): ReactNode {
         <section className="section" id="case-diagrams" aria-labelledby="case-diagrams-title">
           <h2 id="case-diagrams-title">Diagramas del caso</h2>
           <Admonition type="tip" title="Diagrama: Flujo del sistema">
-            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+            <Mermaid value={`%%{init: {"flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
     A[Contexto del problema] --> B[Evidencia / Señales]
     B --> C[Intervención, ejecutar programa IMM-P®]
@@ -253,7 +253,7 @@ flowchart LR
 `} />
           </Admonition>
           <Admonition type="tip" title="Diagrama: Progresión de capacidades">
-            <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
+            <Mermaid value={`%%{init: {"flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
     A[Antes, ejecución basada en tareas]
     B[Capacitación y talleres MCF]

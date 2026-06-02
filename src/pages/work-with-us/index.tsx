@@ -92,8 +92,8 @@ export default function WorkWithUsPage(): JSX.Element {
                     body={"Start small or go deeper. We make innovation repeatable and foresight practical, so strategy turns into sustained results."}
                     imageBase="/img/work-with-us-hero"
                     imageAlt="Work with Doulab"
-                    width={600}
-                    height={400}
+                    width={1600}
+                    height={900}
                     primaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.wwu.hero.explore_clarityscan' }}
                     secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.wwu.hero.book_clarityscan_online', external: true, ariaLabel: 'Book a ClarityScan online via Stripe Checkout' }}
                     ctaNote="Partnership or referral? Book a 20-min discovery call."

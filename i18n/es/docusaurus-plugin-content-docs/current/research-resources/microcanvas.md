@@ -4,6 +4,7 @@ title: MicroCanvas Framework (v2.2)
 description: Un marco modular y guiado por evidencia que hace repetible la innovación, desde el descubrimiento hasta la entrega.
 keywords: [MicroCanvas, MCF, framework, innovation, repeatable]
 sidebar_label: MicroCanvas
+tags: [whitepaper]
 ---
 
 El MicroCanvas Framework (MCF) es un kit de herramientas modular que ayuda a los equipos a hacer repetible la innovación, desde el descubrimiento hasta la entrega, con pasos pequeños y trazables.

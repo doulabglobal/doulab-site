@@ -201,7 +201,7 @@ function ServicesSection() {
         <div className="card">
           <Search className="cardIcon" aria-hidden={true} />
           <h3>Diagnostics, Know Where You Stand</h3>
-          <p>Map innovation maturity and pinpoint gaps with an evidence-based baseline. Start with ClarityScan® Tier 1 (CHF 150) or scope a deeper Tier 2 / Tier 3 engagement.</p>
+          <p>Map innovation maturity and surface gaps with an evidence-based baseline, from a quick snapshot to a deeper engagement.</p>
           <p className="microcopy">Billed in CHF; local equivalent shown at checkout.</p>
           <div className="cardFooter">
             <Link
@@ -242,7 +242,7 @@ function ServicesSection() {
         <div className="card">
           <Users className="cardIcon" aria-hidden={true} />
           <h3>Coaching and Mentoring</h3>
-          <p>Targeted 1:1 or group support to remove blockers and sustain momentum.</p>
+          <p>Targeted 1:1 or group support to remove blockers, transfer practice, and sustain momentum across phases.</p>
           <div className="cardFooter">
             <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">
               Explore coaching and mentoring →
@@ -253,7 +253,7 @@ function ServicesSection() {
         <div className="card">
           <Radar className="cardIcon" aria-hidden={true} />
           <h3>Future Studies</h3>
-          <p>Foresight research and training to spot trends and inform resilient choices.</p>
+          <p>Foresight research and training to spot trends, surface weak signals, and inform resilient choices.</p>
           <div className="cardFooter">
             <Link to="/vigia-futura" className="cardCta" data-cta="cta.home.services.futures">
               Learn more →

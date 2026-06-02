@@ -202,7 +202,7 @@ function ServicesSection() {
         <div className="card">
           <Search className="cardIcon" aria-hidden={true} />
           <h3>Diagnósticos, sabe dónde estás parado</h3>
-          <p>Mapea la madurez en innovación e identifica brechas con una línea base basada en evidencia. Empieza con ClarityScan® Nivel 1 (CHF 150) o define el alcance de un Nivel 2 o Nivel 3 más profundo.</p>
+          <p>Mapea la madurez en innovación y revela brechas con una línea base basada en evidencia, desde un snapshot rápido hasta una intervención más profunda.</p>
           <p className="microcopy">Facturado en CHF; verás el equivalente local al pagar.</p>
           <div className="cardFooter">
             <Link
@@ -243,7 +243,7 @@ function ServicesSection() {
         <div className="card">
           <Users className="cardIcon" aria-hidden={true} />
           <h3>Coaching y Mentoría</h3>
-          <p>Acompañamiento 1:1 o grupal enfocado para remover bloqueos y sostener el impulso.</p>
+          <p>Acompañamiento 1:1 o grupal para remover bloqueos, transferir práctica y sostener el impulso a lo largo de las fases.</p>
           <div className="cardFooter">
             <Link to="/services/coaching-mentoring" className="cardCta" data-cta="cta.home.services.coaching">
               Explora coaching y mentoría →
@@ -254,7 +254,7 @@ function ServicesSection() {
         <div className="card">
           <Radar className="cardIcon" aria-hidden={true} />
           <h3>Estudios de Futuro</h3>
-          <p>Investigación y formación en prospectiva para detectar tendencias e informar decisiones resilientes.</p>
+          <p>Investigación y formación en prospectiva para detectar tendencias, identificar señales débiles e informar decisiones resilientes.</p>
           <div className="cardFooter">
             <Link to="/vigia-futura" className="cardCta" data-cta="cta.home.services.futures">
               Conoce más →

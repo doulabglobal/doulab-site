@@ -44,8 +44,8 @@ export default function ServicesPage(): ReactNode {
                     body={"Whether you're mapping maturity, aligning teams, or preparing to scale, we meet you where you are and co-create the path to outcomes."}
                     imageBase="/img/services-hero"
                     imageAlt="Our Services"
-                    width={600}
-                    height={400}
+                    width={1600}
+                    height={900}
                     primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     secondaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
                     ctaNote="Tier 1 ClarityScan is online-bookable for CHF 150. Programs and workshops are scoped on a discovery call. Billed in CHF; local equivalent shown at checkout."
@@ -121,7 +121,7 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-imm-dt">
                             <Settings2 className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-imm-dt">IMM-DT: Digital transformation maturity</h3>
-                            <p>The digital transformation vertical of IMM. Baseline DT maturity across strategy, process, culture, technology and governance, then sequence a 0–36 month roadmap.</p>
+                            <p>The digital transformation vertical of IMM. Baseline DT maturity across strategy, process, culture, technology, and governance.</p>
                             <ul>
                                 <li>Built on MCF v2.2 + IMM 2.2 (domain scoring, phase readiness)</li>
                                 <li>Pilot reference: FUNDAPEC fintech transformation</li>
@@ -137,7 +137,7 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-coaching">
                             <Users className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-coaching">Coaching &amp; mentoring: Grow with guidance</h3>
-                            <p>Targeted 1:1 and group support that removes blockers and sustains momentum.</p>
+                            <p>Targeted 1:1 and group support to remove blockers, transfer practice, and sustain delivery cadence.</p>
                             <ul>
                                 <li>Decision support &amp; feedback loops</li>
                                 <li>Rituals for delivery cadence</li>

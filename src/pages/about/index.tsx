@@ -197,7 +197,7 @@ export default function AboutPage(): ReactNode {
             <article className="card" aria-labelledby="pillars-workshops">
               <Lightbulb className="cardIcon" aria-hidden="true" />
               <h3 id="pillars-workshops">Workshops, spark aligned action</h3>
-              <p>Focused sessions that unlock decisions and turn strategy into next steps.</p>
+              <p>Focused sessions that unlock decisions, align teams, and turn strategy into clear next steps.</p>
               <div className="cardFooter">
                 <Link
                   to="/services/custom-workshops"

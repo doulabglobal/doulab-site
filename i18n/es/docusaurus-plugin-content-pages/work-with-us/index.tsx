@@ -92,8 +92,8 @@ export default function WorkWithUsPage(): JSX.Element {
                     body={"Empieza en pequeño o profundiza. Hacemos que la innovación sea repetible y la prospectiva práctica, para que la estrategia se convierta en resultados sostenidos."}
                     imageBase="/img/work-with-us-hero"
                     imageAlt="Trabaja con Doulab"
-                    width={600}
-                    height={400}
+                    width={1600}
+                    height={900}
                     primaryCta={{ to: '/services/clarityscan', label: 'Explora ClarityScan', dataCta: 'cta.wwu.hero.explore_clarityscan' }}
                     secondaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Agenda un ClarityScan® en línea', dataCta: 'cta.wwu.hero.book_clarityscan_online', external: true, ariaLabel: 'Agenda un ClarityScan en línea vía Stripe Checkout' }}
                     ctaNote="¿Alianza o referido? Agenda una llamada de descubrimiento de 20 min."

@@ -44,8 +44,8 @@ export default function ServicesPage(): ReactNode {
                     body={"Ya sea que estés mapeando madurez, alineando equipos o preparándote para escalar, te encontramos donde estás y cocreamos el camino hacia los resultados."}
                     imageBase="/img/services-hero"
                     imageAlt="Nuestros servicios"
-                    width={600}
-                    height={400}
+                    width={1600}
+                    height={900}
                     primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Agenda un ClarityScan® en línea', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     secondaryCta={{ to: '/services/clarityscan', label: 'Explora ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
                     ctaNote="ClarityScan Nivel 1 se reserva en línea por CHF 150. Los programas y talleres se definen en alcance durante una llamada de descubrimiento. Facturado en CHF; verás el equivalente local al pagar."
@@ -121,7 +121,7 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-imm-dt">
                             <Settings2 className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-imm-dt">IMM-DT: madurez en transformación digital</h3>
-                            <p>El vertical de transformación digital del IMM. Establece la línea base de madurez en transformación digital a lo largo de estrategia, proceso, cultura, tecnología y gobernanza, y luego secuencia una hoja de ruta de 0 a 36 meses.</p>
+                            <p>El vertical de transformación digital del IMM. Establece la línea base de madurez a lo largo de estrategia, proceso, cultura, tecnología y gobernanza.</p>
                             <ul>
                                 <li>Construido sobre MCF v2.2 e IMM 2.2 (puntuación por dominio, preparación por fase)</li>
                                 <li>Referencia piloto: transformación fintech de FUNDAPEC</li>
@@ -137,7 +137,7 @@ export default function ServicesPage(): ReactNode {
                         <article className="card" aria-labelledby="svc-coaching">
                             <Users className="cardIcon" aria-hidden="true" />
                             <h3 id="svc-coaching">Coaching y mentoría: crece con guía</h3>
-                            <p>Acompañamiento 1:1 y grupal enfocado que remueve bloqueos y sostiene el impulso.</p>
+                            <p>Acompañamiento 1:1 y grupal para remover bloqueos, transferir práctica y sostener la cadencia de entrega.</p>
                             <ul>
                                 <li>Apoyo a la decisión y ciclos de retroalimentación</li>
                                 <li>Rituales para la cadencia de entrega</li>

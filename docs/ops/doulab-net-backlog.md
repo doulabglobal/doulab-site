@@ -629,7 +629,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `npm run verify:build` fails on a synthetic ES file containing a new `data-cta` value not present in EN.
 - Status: RESOLVED 2026-06-02.
 - Commits: 4de3d47 (impl).
-### G-8 (P1) — Bilingual pricing infrastructure (needs Luis decision)
+### G-8 (RESOLVED 2026-06-02, partial) — Bilingual pricing infrastructure (needs Luis decision)
 - Description: Decide currency strategy for ES/LATAM: (a) keep CHF as premium signal + add mental-accounting microcopy (BEHE-004 / -011), (b) dual-display `CHF 150 (~USD 165)` everywhere, or (c) split Stripe SKU into per-locale Price IDs (CHF for EN, USD for ES). Implement chosen path: per-locale Stripe Checkout constants in `src/constants/urls.ts`, per-locale Stripe success URL configuration (so `/es/services/clarityscan` payers land on `/es/book-clarityscan-success`, not the EN page), publish "from CHF X" anchors on T2/T3/IMM-P®/Workshop tiers (SALES-101).
 - Rationale: CONV-2026-07-001 (P0), CONV-2026-07-011, BEHE-004 / -011, SALES-101, SALES-112. ES buyer pays in unfamiliar currency, lands on EN booking page, returns to EN success page; LATAM committee buyers cannot bracket spend on T2/T3/IMM-P® because no anchor is published. Open question for Luis blocks G-8 design but not G-8 filing.
 - Closes (conditional on decision): CONV-2026-07-001, CONV-2026-07-011, SALES-101 (partial — workshop + coaching tier bands need separate decisions), BEHE-011.
@@ -638,10 +638,10 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - Decision documented in `docs/ops/decisions/` (currency stance for ES).
   - ES Stripe payment redirects to `/es/book-clarityscan-success` (verify in Stripe Dashboard or via paid test transaction).
   - T2, T3, IMM-P®, workshop pages each carry a published anchor or stated "Custom".
-- Status: Open (blocked on Luis currency decision).
-- Commits: pending.
+- Status: RESOLVED (partial) 2026-06-02. Luis decision: **(a) keep CHF as premium signal + add mental-accounting microcopy**, EN + ES mirrored. Shipped microcopy "Billed in CHF; local equivalent shown at checkout." / "Facturado en CHF; verás el equivalente local al pagar." across 7 EN + 7 ES surfaces (`src/pages/services/clarityscan.tsx`, `src/pages/index.tsx`, `src/pages/services/index.tsx`, `src/pages/services/imm-dt.tsx` + ES mirrors). Per-locale Stripe Price IDs + ES success-page redirect NOT shipped (option (c) deferred).
+- Commits: pending (Wave B).
 
-### G-9 (P1) — `--dl-green-text` token + A11Y contrast remediation
+### G-9 (RESOLVED 2026-06-02, partial) — `--dl-green-text` token + A11Y contrast remediation
 - Description: Introduce paired tokens `--dl-green-text` (darker variant, ~`#3f8a1f` or `#2f7a3f`, ≥4.5:1 on white) and `--dl-green` (brand fill) in `src/css/custom.css`. Replace inline `style={{ color: 'var(--dl-green, …)' }}` with a class that uses `--dl-green-text` on `src/pages/services/imm-dt.tsx`, `services/clarityscan/diagnostic.tsx`, `src/pages/index.tsx`, and `src/components/imm/MaturityLadder.module.css`. Flip `.badgeTarget` text color from `#fff` to `#0b0e19`. Flip IMM funnel labels on `--p2` and `--p4` / `--p5` bars to `#0b0e19` (matches existing `--p2b` / `--p3` convention at `custom.css:690-691`). Add inline-prose-link underline carve-out: `main p a:not(.buttonPrimary):not(.buttonSecondary):not(.cardCta) { text-decoration: underline; text-decoration-thickness: from-font; text-underline-offset: 2px; }`. (Requires Luis sign-off because it crosses `feedback_links_underline_on_hover` — minimum carve-out needed to clear WCAG 1.4.1.)
 - Rationale: A11Y-2007-01 / -02 / -03 / -07, LH-006a/b. `--dl-green` on white = 2.15:1 in 4+ places; IMM funnel labels white-on-cyan/coral = 2.88-2.98:1; inline prose links `#38249a` on body text = 1.5:1 with no underline. Drives a11y scores to 88-89 across the IMM/ClarityScan family. T9 cross-role theme.
 - Closes: A11Y-2007-01, A11Y-2007-02, A11Y-2007-03, A11Y-2007-07, LH-006a/b (partial — A11Y-2007-04/-05 role-allowed-list goes in G-10).
@@ -650,8 +650,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - Lighthouse `color-contrast` audit passes on `/services/imm-dt`, `/services/clarityscan/diagnostic`, `/services/innovation-maturity`, `/` (both locales).
   - Lighthouse `link-in-text-block` audit passes on the same set.
   - Visual diff vs prior viewport-2026-07 sweep shows no regressions on dark mode.
-- Status: Open (prose-link carve-out blocked on Luis approval).
-- Commits: pending.
+- Status: RESOLVED (partial) 2026-06-02. Luis approved the prose-link carve-out. Shipped: `main p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }` at `src/css/custom.css:283-287` (immediately after the F-1 hover-only block, with traceability comment referencing audit-2026-07 role 19). The `--dl-green-text` token + IMM funnel label color flips are deferred to a follow-up (separate Lighthouse target).
+- Commits: pending (Wave A).
 
 ### G-10 (RESOLVED 2026-06-02) — `.heroSubtitle text-align: justify` mobile fix
 - Description: Inside `@media (max-width: 700px)` in `src/css/custom.css`, add `.components-hero__subtitle, .pages-b4-p2__heroSubtitleJustify, [class*="hero__subtitle"] { text-align: left; }`. Optionally add `text-wrap: balance` + `max-inline-size: ~52ch` on `.heroSubtitle` site-wide so longer ES copy wraps cleanly without overflow.
@@ -673,28 +673,28 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `build/**/*.html` contains exactly one `| Doulab` per `<title>`.
 - Status: RESOLVED 2026-06-02.
 - Commits: 2e997d6 (impl, wave 1).
-### G-12 (P1) — Em-dashes in ES blog bodies (no-em-dash rule violation)
+### G-12 (RESOLVED 2026-06-02) — Em-dashes in ES blog bodies (no-em-dash rule violation)
 - Description: Replace 6 em-dash (U+2014) instances in `i18n/es/docusaurus-plugin-content-blog/2025-09-12-clarityscan-decision-latency.md` (TL;DR + 4 References list + 1 body) and `i18n/es/docusaurus-plugin-content-blog/2026-01-19-coordination-threshold.md:22` (TL;DR) with colons, en-dashes, commas, or parentheses per the per-instance fit. Confirm with Luis that the EN dated-body grandfather does NOT extend to ES (ES surface launched after the exclusion).
 - Rationale: BLOG-004, COPY-112. The `feedback_no_em_dashes` rule applies to user-facing copy on every Doulab property; ES blog bodies are net-new surface launched in commit `eb1c8c8` and not subject to the EN dated-body grandfather. EN pages and `i18n/es/.../pages/` confirmed clean; only ES blog corpus needs the sweep.
 - Closes: BLOG-004 (ES scope only).
 - Files to change: `i18n/es/docusaurus-plugin-content-blog/2025-09-12-clarityscan-decision-latency.md`; `i18n/es/docusaurus-plugin-content-blog/2026-01-19-coordination-threshold.md`.
 - Acceptance criteria:
   - `grep -P "\xe2\x80\x94" i18n/es/docusaurus-plugin-content-blog/` returns nothing.
-- Status: Open (pending Luis confirmation on ES exclusion).
-- Commits: pending.
+- Status: RESOLVED 2026-06-02. Luis confirmed NO grandfather for ES. Swept 6 em-dashes: TL;DR header in `2026-01-19-coordination-threshold.md:22` → colon; TL;DR header in `2025-09-12-clarityscan-decision-latency.md:22` → colon; 4 citation separators on lines 292-295 → removed (period+space already preceded the source link).
+- Commits: pending (Wave A).
 
-### G-13 (P1) — Microsoft Bookings ES service types (locale-aware booking URLs)
-- Description: Provision ES Microsoft Bookings services (`/discovery-es`, `/briefing-es`, optionally `/clarityscan-es`, `/clarityscan-t2`, `/clarityscan-t3`) with Spanish meeting agenda copy. Add `BOOKING_DISCOVERY_URL_EN/ES`, `BOOKING_BRIEFING_URL_EN/ES` constants in `src/constants/urls.ts`. Migrate the 14 EN call sites and 14 ES call sites to import the locale-correct constant (consider a `bookingDiscoveryUrl(locale)` helper). Append `?src=<area>-<slot>-<locale>` per G-7's analytics convention.
+### G-13 (P1) — Google Workspace ES appointment schedules (was: Microsoft Bookings)
+- Description: **Reframed 2026-06-02**: platform migrated from Microsoft Bookings → Google Workspace (Google Calendar appointment scheduling). Provision ES Google Workspace appointment schedules (`/discovery-es`, `/briefing-es`, optionally `/clarityscan-es`, `/clarityscan-t2`, `/clarityscan-t3`) with Spanish meeting agenda copy. Wire each to a corresponding `booking.doulab.net/*` Cloudflare Redirect Rule (origin: Google Calendar appointment URL, similar to existing `booking.doulab.net/discovery → calendar.app.google/...`). Add `BOOKING_DISCOVERY_URL_EN/ES`, `BOOKING_BRIEFING_URL_EN/ES` constants in `src/constants/urls.ts`. Migrate the 14 EN call sites and 14 ES call sites to import the locale-correct constant.
 - Rationale: CONV-2026-07-005 (P1), CONV-2026-07-010, ANLT-009. All booking exits currently go to a single English Microsoft Bookings instance; ES visitor clicks Spanish CTA and lands on EN calendar. 14+ literal `https://booking.doulab.net/discovery` strings × 2 locales = 28 sites with no locale-aware routing.
 - Closes: CONV-2026-07-005, CONV-2026-07-010 (partial — T2/T3 tier-specific calendars are the second half), ANLT-009.
 - Files to change: Microsoft Bookings admin (out-of-repo); `src/constants/urls.ts`; 14 EN page files + 14 ES mirrors that hard-code `booking.doulab.net/{discovery,briefing}`.
 - Acceptance criteria:
   - `grep -rn "https://booking.doulab.net/" src/pages i18n/es/docusaurus-plugin-content-pages` returns no literal strings (all via constants/helper).
   - Click on `/es/contact` discovery CTA navigates to the ES Bookings service.
-- Status: Open (Microsoft Bookings provisioning blocked on Luis confirmation).
+- Status: Open (Google Workspace appointment-schedule provisioning is an out-of-repo task on Luis's GWS tenant — blocked on that work, not on a decision).
 - Commits: pending.
 
-### G-14 (P1) — Glossary canonicalization sweep (Gate, Case studies, CTA verbs, MCF version, cocrear)
+### G-14 (RESOLVED 2026-06-02, partial) — Glossary canonicalization sweep (Gate, Case studies, CTA verbs, MCF version, cocrear)
 - Description: Create `docs/ops/i18n-glossary.md` documenting canonical ES choices: **Gate → compuerta** (replace `punto de control` 10× and untranslated `gate` 1×); **Case studies → Casos de éxito** (update `navbar.json:19`, `footer.json:23`, `index.tsx:293`); **CTA verbs → Reserva** (paid Stripe) / **Agenda** (free booking) / **Empieza** (navigational); **MCF version → `MicroCanvas® Framework 2.2` / `MCF 2.2`** (sweep `MicroCanvas® Framework 2.1` 8× in `services/innovation-readiness-workshop.tsx` EN+ES); **cocrear** (no hyphen, RAE-current). Add CI grep guards. Translate the ~96 Mermaid node labels in 4 ES case-study files using the new glossary.
 - Rationale: I18N-001 (P0), I18N-002 (P0), I18N-003, I18N-004, COPY-102, COPY-103, COPY-105, COPY-106, COPY-115, T6 cross-role theme. Glossary drift across translation batches; same concept appears under different labels in nav, body, links, mermaid. Buyer building a mental model cannot tell whether these are the same construct.
 - Closes: I18N-001, I18N-002, I18N-003, I18N-004, COPY-102, COPY-103, COPY-105, COPY-106, COPY-115.
@@ -703,8 +703,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `grep -n "punto de control" i18n/es/` returns matches only in monitoring/dashboard contexts (zero in IMM-P® gate references).
   - `grep -n "MicroCanvas® Framework 2.1\|MCF 2.1" src/ i18n/` returns nothing.
   - Mermaid diagrams in ES case studies have Spanish node labels.
-- Status: Open (canonical confirmations blocked on Luis open questions).
-- Commits: pending.
+- Status: RESOLVED (partial) 2026-06-02. Luis canonicalized: **Gate → `punto de control`** (FLIPPED from the original spec direction — `punto de control` was actually dominant at ~112 vs ~28 for `compuerta`, so the smaller sweep was the right call); **Case studies → `Casos de estudio`** (matches existing nav/chrome); **CTA verbs → Reserva (paid Stripe) / Agenda (free booking) / Empieza (navigational)**. Shipped `docs/ops/i18n-glossary.md` documenting all three. Bulk sweeps via PS scripts: 12 files for Gate, 6 files for Casos de éxito, 10 files for CTA verbs (Comienza → Empieza, Inicia → Agenda for workshop/discovery booking CTAs, Programa un ClarityScan® → Reserva un ClarityScan® for the single Stripe-link case). MCF version sweep + cocrear sweep + Mermaid node label translation NOT shipped — pending.
+- Commits: pending (Wave B).
 
 ### G-15 (RESOLVED 2026-06-02) — Domain canon: MCF, VIF, home brand-marks, IMM-P® in diagnostics
 - Description: Four-part single commit. (a) `vigia-futura/index.tsx:150` EN+ES: `Methodology Coherence Framework` → `MicroCanvas Framework` (consider adding ®). (b) `vigia-futura/index.tsx:154` EN+ES + `docs/research-resources/index.mdx:99` EN+ES: `Vigía Incubation Framework` → `Vigía Incubanet Framework` (do not localize — `Incubanet` is a proper noun). (c) `src/pages/index.tsx:77,79,90,92`: restore `®` on `ClarityScan` and `í` accent on `Vigía Futura`; verify ES home parity. (d) `src/pages/services/diagnostics.tsx:19,44`: bare `IMM` → `IMM-P®` in "Built on …" credit lines; mirror ES.
@@ -739,7 +739,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open (blocked on Luis adjudication of Path A vs B).
 - Commits: pending.
 
-### G-18 (P1) — Privacy-terms processor accuracy (Microsoft Bookings, Stripe hedge, CF Pages Functions)
+### G-18 (RESOLVED 2026-06-02, partial) — Privacy-terms processor accuracy (Microsoft Bookings, Stripe hedge, CF Pages Functions)
 - Description: Three-part edit in both EN and ES `privacy-terms.tsx` and `docs/ops/gdpr-compliance.md`. (a) Replace every "Google Calendar appointment links" / "enlaces de citas de Google Calendar" with "Microsoft Bookings (Microsoft 365)" / "Microsoft Bookings (Microsoft 365)" in the data-sharing and processor sections. (b) Drop "if applicable" hedge on Stripe line in `gdpr-compliance.md:23`. (c) Expand "Cloudflare Pages (hosting and analytics)" to "Cloudflare Pages (hosting, analytics, and edge HTML processing for security headers)" to disclose `functions/_middleware.ts` per-request edge processing.
 - Rationale: SEC-101 (P1) — largest GDPR/nFADP accuracy gap, doubled by ES. SEC-102 (P2). SEC-103 (P2). Audit-2026-06 SEC-009 / SEC-006 never resolved.
 - Closes: SEC-101, SEC-102, SEC-103.
@@ -747,8 +747,17 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Acceptance criteria:
   - `grep -rn "Google Calendar" src/pages/privacy-terms.tsx i18n/es/docusaurus-plugin-content-pages/privacy-terms.tsx docs/ops/gdpr-compliance.md` returns nothing.
   - `grep -n "if applicable" docs/ops/gdpr-compliance.md` returns nothing on the Stripe line.
-- Status: Open (depends on Luis SEC-101 confirmation).
-- Commits: pending.
+- Status: RESOLVED (partial) 2026-06-02. **Scope collapsed**: (a) the booking-processor edit is MOOT — privacy-terms already said "Google Calendar appointment links" in both EN+ES, which is now factually correct after the MS Bookings → Google Workspace platform migration (see G-20); (b) the Stripe "if applicable" hedge was already absent in `privacy-terms.tsx` (only `gdpr-compliance.md:23` retained it — deferred to a follow-up); (c) shipped: Cloudflare disclosure expanded from "Cloudflare Web Analytics" to "Cloudflare (hosting and edge HTML processing) and Cloudflare Web Analytics (privacy-respecting analytics)" at `src/pages/privacy-terms.tsx:84-87` + ES mirror.
+- Commits: pending (Wave A).
+
+### G-20 (RESOLVED 2026-06-02) — MS Bookings → Google Calendar literal-text sweep + booking.doulab.net URL audit
+
+- Description: Platform migration 2026-06-02 (MS Bookings → Google Workspace). Replaced literal "Microsoft Bookings" with "Google Calendar" in 4 live surfaces (EN + ES): `book-clarityscan-success.tsx:56` body sentence, `services/custom-workshops.tsx:163` aria-label. URLs unchanged (already on `booking.doulab.net/*` indirection). Changelog entries in `docs/releases.mdx` and ES mirror (4 historical lines) grandfathered as-is.
+- Post-ship URL audit (curl, 2026-06-02): 5 of 6 Cloudflare Redirect Rules return 302 to Google Calendar (`booking.doulab.net/` → `calendar.google.com/calendar/u/0/appointments/...`; `/discovery`, `/clarityscan`, `/advisory`, `/hdworkshop` → `calendar.app.google/...`). **`/fdworkshop` returns HTTP 522** (Cloudflare connection timeout to origin) — out-of-repo Cloudflare config issue, filed for Luis to fix in CF Dashboard.
+- Rationale: privacy-terms / aria-label / user-facing copy was wrong-by-name after the migration. Trust + accessibility surface.
+- Closes: literal-text mismatch with the actual booking platform (was: audit-2026-06 T14, now MOOT given the platform itself moved).
+- Status: RESOLVED 2026-06-02 (in-repo). `/fdworkshop` 522 carries forward to Luis (Cloudflare Dashboard).
+- Commits: pending (Wave A).
 
 ### G-19 (P2) — Broken in-page anchors on 3 surfaces (EN + ES)
 

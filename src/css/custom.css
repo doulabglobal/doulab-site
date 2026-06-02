@@ -112,6 +112,16 @@
     --ifm-color-primary-lightest: #b8aee8;
     /* G-9 dark-mode lift: #9fd96a ≈ 8.7:1 on Docusaurus dark body. */
     --dl-green-text: #9fd96a;
+
+    /* Dark-mode lift for the neutral gray ramp. The light-mode values
+       (#444 / #555) render as near-invisible dark gray on the Docusaurus
+       dark body; lifting to lighter neutrals restores legibility for the
+       ~21 sites that use these tokens (microcopy captions, heroText, kpi
+       labels, FAQ summaries, work-with-us hero text, etc.). Reported
+       2026-06-02 dark-mode audit as the About P3 caption finding;
+       single-token fix cascades to every consumer. */
+    --dl-gray-700: #d1d5db;
+    --dl-gray-600: #c7cad1;
 }
 
 body {

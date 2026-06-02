@@ -641,7 +641,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: RESOLVED (partial) 2026-06-02. Luis decision: **(a) keep CHF as premium signal + add mental-accounting microcopy**, EN + ES mirrored. Shipped microcopy "Billed in CHF; local equivalent shown at checkout." / "Facturado en CHF; verás el equivalente local al pagar." across 7 EN + 7 ES surfaces (`src/pages/services/clarityscan.tsx`, `src/pages/index.tsx`, `src/pages/services/index.tsx`, `src/pages/services/imm-dt.tsx` + ES mirrors). Per-locale Stripe Price IDs + ES success-page redirect NOT shipped (option (c) deferred).
 - Commits: pending (Wave B).
 
-### G-9 (RESOLVED 2026-06-02, partial) — `--dl-green-text` token + A11Y contrast remediation
+### G-9 (RESOLVED 2026-06-02) — `--dl-green-text` token + A11Y contrast remediation
 - Description: Introduce paired tokens `--dl-green-text` (darker variant, ~`#3f8a1f` or `#2f7a3f`, ≥4.5:1 on white) and `--dl-green` (brand fill) in `src/css/custom.css`. Replace inline `style={{ color: 'var(--dl-green, …)' }}` with a class that uses `--dl-green-text` on `src/pages/services/imm-dt.tsx`, `services/clarityscan/diagnostic.tsx`, `src/pages/index.tsx`, and `src/components/imm/MaturityLadder.module.css`. Flip `.badgeTarget` text color from `#fff` to `#0b0e19`. Flip IMM funnel labels on `--p2` and `--p4` / `--p5` bars to `#0b0e19` (matches existing `--p2b` / `--p3` convention at `custom.css:690-691`). Add inline-prose-link underline carve-out: `main p a:not(.buttonPrimary):not(.buttonSecondary):not(.cardCta) { text-decoration: underline; text-decoration-thickness: from-font; text-underline-offset: 2px; }`. (Requires Luis sign-off because it crosses `feedback_links_underline_on_hover` — minimum carve-out needed to clear WCAG 1.4.1.)
 - Rationale: A11Y-2007-01 / -02 / -03 / -07, LH-006a/b. `--dl-green` on white = 2.15:1 in 4+ places; IMM funnel labels white-on-cyan/coral = 2.88-2.98:1; inline prose links `#38249a` on body text = 1.5:1 with no underline. Drives a11y scores to 88-89 across the IMM/ClarityScan family. T9 cross-role theme.
 - Closes: A11Y-2007-01, A11Y-2007-02, A11Y-2007-03, A11Y-2007-07, LH-006a/b (partial — A11Y-2007-04/-05 role-allowed-list goes in G-10).
@@ -650,8 +650,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - Lighthouse `color-contrast` audit passes on `/services/imm-dt`, `/services/clarityscan/diagnostic`, `/services/innovation-maturity`, `/` (both locales).
   - Lighthouse `link-in-text-block` audit passes on the same set.
   - Visual diff vs prior viewport-2026-07 sweep shows no regressions on dark mode.
-- Status: RESOLVED (partial) 2026-06-02. Luis approved the prose-link carve-out. Shipped: `main p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink) { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }` at `src/css/custom.css:283-287` (immediately after the F-1 hover-only block, with traceability comment referencing audit-2026-07 role 19). The `--dl-green-text` token + IMM funnel label color flips are deferred to a follow-up (separate Lighthouse target).
-- Commits: pending (Wave A).
+- Status: RESOLVED 2026-06-02. Shipped in two passes. **Pass 1 (Wave A)**: prose-link carve-out at `src/css/custom.css` (inline `main p a:not(.button)...` underlines always). **Pass 2 (Wave C)**: `--dl-green-text` token (`#3f8a1f` light / `#9fd96a` dark) added to `:root` + dark theme block. Inline `var(--dl-green, ...)` swept to `var(--dl-green-text, ...)` in text contexts on `services/imm-dt.tsx`, `services/clarityscan/{diagnostic,audit}.tsx`, `index.tsx`, plus ES mirrors, plus `MaturityLadder.module.css` text rules. `.badgeTarget` color flipped `#fff` → `#0b0e19`. IMM funnel labels: `--p2`, `--p4`, `--p5` added `color: #0b0f19;` matching existing `--p2b` / `--p3` convention. Borders + fills remain on `--dl-green` (correctly).
+- Commits: Wave A (3f2363e), Wave C (pending).
 
 ### G-10 (RESOLVED 2026-06-02) — `.heroSubtitle text-align: justify` mobile fix
 - Description: Inside `@media (max-width: 700px)` in `src/css/custom.css`, add `.components-hero__subtitle, .pages-b4-p2__heroSubtitleJustify, [class*="hero__subtitle"] { text-align: left; }`. Optionally add `text-wrap: balance` + `max-inline-size: ~52ch` on `.heroSubtitle` site-wide so longer ES copy wraps cleanly without overflow.
@@ -694,7 +694,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open (Google Workspace appointment-schedule provisioning is an out-of-repo task on Luis's GWS tenant — blocked on that work, not on a decision).
 - Commits: pending.
 
-### G-14 (RESOLVED 2026-06-02, partial) — Glossary canonicalization sweep (Gate, Case studies, CTA verbs, MCF version, cocrear)
+### G-14 (RESOLVED 2026-06-02) — Glossary canonicalization sweep (Gate, Case studies, CTA verbs, MCF version, cocrear)
 - Description: Create `docs/ops/i18n-glossary.md` documenting canonical ES choices: **Gate → compuerta** (replace `punto de control` 10× and untranslated `gate` 1×); **Case studies → Casos de éxito** (update `navbar.json:19`, `footer.json:23`, `index.tsx:293`); **CTA verbs → Reserva** (paid Stripe) / **Agenda** (free booking) / **Empieza** (navigational); **MCF version → `MicroCanvas® Framework 2.2` / `MCF 2.2`** (sweep `MicroCanvas® Framework 2.1` 8× in `services/innovation-readiness-workshop.tsx` EN+ES); **cocrear** (no hyphen, RAE-current). Add CI grep guards. Translate the ~96 Mermaid node labels in 4 ES case-study files using the new glossary.
 - Rationale: I18N-001 (P0), I18N-002 (P0), I18N-003, I18N-004, COPY-102, COPY-103, COPY-105, COPY-106, COPY-115, T6 cross-role theme. Glossary drift across translation batches; same concept appears under different labels in nav, body, links, mermaid. Buyer building a mental model cannot tell whether these are the same construct.
 - Closes: I18N-001, I18N-002, I18N-003, I18N-004, COPY-102, COPY-103, COPY-105, COPY-106, COPY-115.
@@ -703,8 +703,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
   - `grep -n "punto de control" i18n/es/` returns matches only in monitoring/dashboard contexts (zero in IMM-P® gate references).
   - `grep -n "MicroCanvas® Framework 2.1\|MCF 2.1" src/ i18n/` returns nothing.
   - Mermaid diagrams in ES case studies have Spanish node labels.
-- Status: RESOLVED (partial) 2026-06-02. Luis canonicalized: **Gate → `punto de control`** (FLIPPED from the original spec direction — `punto de control` was actually dominant at ~112 vs ~28 for `compuerta`, so the smaller sweep was the right call); **Case studies → `Casos de estudio`** (matches existing nav/chrome); **CTA verbs → Reserva (paid Stripe) / Agenda (free booking) / Empieza (navigational)**. Shipped `docs/ops/i18n-glossary.md` documenting all three. Bulk sweeps via PS scripts: 12 files for Gate, 6 files for Casos de éxito, 10 files for CTA verbs (Comienza → Empieza, Inicia → Agenda for workshop/discovery booking CTAs, Programa un ClarityScan® → Reserva un ClarityScan® for the single Stripe-link case). MCF version sweep + cocrear sweep + Mermaid node label translation NOT shipped — pending.
-- Commits: pending (Wave B).
+- Status: RESOLVED 2026-06-02. Shipped in two passes. **Pass 1 (Wave B)**: Gate canonical FLIPPED to `punto de control` (smaller sweep — `compuerta` was minority); `Casos de estudio`; CTA verbs Reserva/Agenda/Empieza; `docs/ops/i18n-glossary.md`. **Pass 2 (Wave C)**: MCF version `MicroCanvas® Framework 2.1` → `2.2` in EN+ES `innovation-readiness-workshop.tsx` (8 instances total); `cocrear` unification across 8 ES files (Co-creamos/Co-creemos/Co-crearemos/co-creados/co-creen → no-hyphen forms; English book title in `11-references.mdx` preserved); Mermaid node labels in 4 ES case-study files translated to Spanish (8 blocks total, agent-executed, brand marks + node IDs + arrow operators preserved).
+- Commits: Wave B (3f2363e), Wave C (pending).
 
 ### G-15 (RESOLVED 2026-06-02) — Domain canon: MCF, VIF, home brand-marks, IMM-P® in diagnostics
 - Description: Four-part single commit. (a) `vigia-futura/index.tsx:150` EN+ES: `Methodology Coherence Framework` → `MicroCanvas Framework` (consider adding ®). (b) `vigia-futura/index.tsx:154` EN+ES + `docs/research-resources/index.mdx:99` EN+ES: `Vigía Incubation Framework` → `Vigía Incubanet Framework` (do not localize — `Incubanet` is a proper noun). (c) `src/pages/index.tsx:77,79,90,92`: restore `®` on `ClarityScan` and `í` accent on `Vigía Futura`; verify ES home parity. (d) `src/pages/services/diagnostics.tsx:19,44`: bare `IMM` → `IMM-P®` in "Built on …" credit lines; mirror ES.
@@ -739,7 +739,7 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Open (blocked on Luis adjudication of Path A vs B).
 - Commits: pending.
 
-### G-18 (RESOLVED 2026-06-02, partial) — Privacy-terms processor accuracy (Microsoft Bookings, Stripe hedge, CF Pages Functions)
+### G-18 (RESOLVED 2026-06-02) — Privacy-terms processor accuracy (Microsoft Bookings, Stripe hedge, CF Pages Functions)
 - Description: Three-part edit in both EN and ES `privacy-terms.tsx` and `docs/ops/gdpr-compliance.md`. (a) Replace every "Google Calendar appointment links" / "enlaces de citas de Google Calendar" with "Microsoft Bookings (Microsoft 365)" / "Microsoft Bookings (Microsoft 365)" in the data-sharing and processor sections. (b) Drop "if applicable" hedge on Stripe line in `gdpr-compliance.md:23`. (c) Expand "Cloudflare Pages (hosting and analytics)" to "Cloudflare Pages (hosting, analytics, and edge HTML processing for security headers)" to disclose `functions/_middleware.ts` per-request edge processing.
 - Rationale: SEC-101 (P1) — largest GDPR/nFADP accuracy gap, doubled by ES. SEC-102 (P2). SEC-103 (P2). Audit-2026-06 SEC-009 / SEC-006 never resolved.
 - Closes: SEC-101, SEC-102, SEC-103.
@@ -747,8 +747,8 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Acceptance criteria:
   - `grep -rn "Google Calendar" src/pages/privacy-terms.tsx i18n/es/docusaurus-plugin-content-pages/privacy-terms.tsx docs/ops/gdpr-compliance.md` returns nothing.
   - `grep -n "if applicable" docs/ops/gdpr-compliance.md` returns nothing on the Stripe line.
-- Status: RESOLVED (partial) 2026-06-02. **Scope collapsed**: (a) the booking-processor edit is MOOT — privacy-terms already said "Google Calendar appointment links" in both EN+ES, which is now factually correct after the MS Bookings → Google Workspace platform migration (see G-20); (b) the Stripe "if applicable" hedge was already absent in `privacy-terms.tsx` (only `gdpr-compliance.md:23` retained it — deferred to a follow-up); (c) shipped: Cloudflare disclosure expanded from "Cloudflare Web Analytics" to "Cloudflare (hosting and edge HTML processing) and Cloudflare Web Analytics (privacy-respecting analytics)" at `src/pages/privacy-terms.tsx:84-87` + ES mirror.
-- Commits: pending (Wave A).
+- Status: RESOLVED 2026-06-02. Shipped in two passes. **Pass 1 (Wave A)**: Cloudflare disclosure expanded from "Cloudflare Web Analytics" to "Cloudflare (hosting and edge HTML processing) and Cloudflare Web Analytics (privacy-respecting analytics)" at `privacy-terms.tsx` EN+ES. Booking-processor edit MOOT (text already said "Google Calendar appointment links", now factually correct post-G-20). Stripe `privacy-terms.tsx` hedge already absent. **Pass 2 (Wave C)**: dropped the last "if applicable" hedge in `docs/ops/gdpr-compliance.md:23` ("Stripe Checkout for payments (if applicable to fixed-fee services)." → "Stripe Checkout for payments on fixed-fee services.").
+- Commits: Wave A (3f2363e), Wave C (pending).
 
 ### G-20 (RESOLVED 2026-06-02) — MS Bookings → Google Calendar literal-text sweep + booking.doulab.net URL audit
 

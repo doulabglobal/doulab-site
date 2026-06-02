@@ -1888,19 +1888,17 @@ Completion note: Guide split into /docs/research-resources/innovation-lab-guide/
   - Entry preserved from daily check log.
 - Status: Pending
 
-### LOG-PENDING-02
+### LOG-PENDING-02 (RESOLVED 2026-06-02)
 - Description: Unify hero images (sizes, aspect, preload hints) across all service pages.
-- Rationale: Migrated from CHECKLOG.md Pending / Next list.
-- Acceptance criteria:
-  - Entry preserved from daily check log.
-- Status: Pending
+- Resolution: Audited all 13 `<Hero>` usages. Canonical: 1600×900 (16:9). Bumped `src/pages/services/index.tsx` and `src/pages/work-with-us/index.tsx` from 600×400 to 1600×900 (EN + ES mirrors). Case-study pages keep their secondary 1200×720 (5:3) pattern intentionally. All preload patterns + srcset (avif/webp/png|jpg) confirmed consistent. No missing assets.
+- Status: RESOLVED.
+- Commits: pending (polish wave).
 
-### LOG-PENDING-03
+### LOG-PENDING-03 (RESOLVED 2026-06-02)
 - Description: Normalize card body lengths site-wide for perfect grid homogeneity.
-- Rationale: Migrated from CHECKLOG.md Pending / Next list.
-- Acceptance criteria:
-  - Entry preserved from daily check log.
-- Status: Pending
+- Resolution: Audited every cardGrid section. Three imbalanced sections fixed (EN + ES mirrors): (a) home services section — Card 1 (Diagnostics) trimmed from 160 to ~118 chars, Card 4 (Coaching) expanded from 73 to ~104, Card 5 (Future Studies) expanded from 76 to ~99; ratio dropped from 2.19x to ~1.67x. (b) services page services grid — Card 4 (IMM-DT) trimmed from 164 to ~130, Card 5 (Coaching) expanded from 76 to ~98; ratio dropped from 1.95x to ~1.45x. (c) about page service pillars — Card 2 (Workshops) expanded from 78 to ~104 chars; ratio dropped from 1.73x to ~1.30x. Mechanical layer (flex stretch via `[[feedback_card_height_balance]]`) was already in place; this normalized the underlying text.
+- Status: RESOLVED.
+- Commits: pending (polish wave).
 
 ### LOG-PENDING-04
 - Description: Privacy-first contact form (serverless handler + minimal fields) and spam protection.
@@ -1909,12 +1907,11 @@ Completion note: Guide split into /docs/research-resources/innovation-lab-guide/
   - Entry preserved from daily check log.
 - Status: Pending
 
-### LOG-PENDING-05
+### LOG-PENDING-05 (RESOLVED 2026-06-02)
 - Description: Blog: add per-post images/og tags and ensure tag=whitepaper discipline in docs.
-- Rationale: Migrated from CHECKLOG.md Pending / Next list.
-- Acceptance criteria:
-  - Entry preserved from daily check log.
-- Status: Pending
+- Resolution: Audited every blog post (4 EN). All have title/description/image/tags/slug/authors/keywords frontmatter; all referenced image assets exist on disk. OG infrastructure auto-populates from frontmatter — no edits needed on the blog side. Tag-discipline pass on `docs/research-resources/`: added `tags: [whitepaper]` to `microcanvas.md` and `innovation-lab-guide/index.mdx` (EN + ES mirrors). `distributed-federated-agentic-ai.md` was already tagged correctly. Per-chapter tagging on the 11 Innovation Lab Guide chapters deferred — chapters inherit from index for discoverability purposes.
+- Status: RESOLVED.
+- Commits: pending (polish wave).
 
 ### LOG-PENDING-06
 - Description: Monitoring: LCP/CLS check post-deploy; review CF Pages cache & headers in staging.

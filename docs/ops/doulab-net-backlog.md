@@ -1094,14 +1094,29 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: Done
 - Commits: 78fe9c9
 
-### C3
+### C3 (RESOLVED 2026-06-02, partial)
 - Description: CSS consolidation (safe path only).
-- Rationale: Reduce styling drift while preserving component encapsulation.
+- Resolution: Added `--dl-shadow-sm/md/lg/hero` + `--dl-radius-sm/md/lg/xl` tokens to the `:root` block in `src/css/custom.css`. Swept 13 light-mode shadow literals to `var(--dl-shadow-*)` (sm×4, md×3, lg×4, hero×2). Modules NOT touched (safe-path compliance). Build green. Two safe-path follow-ups filed below.
+- Status: RESOLVED (partial).
+- Commits: pending (c3 wave).
+
+### C3b (NEW, 2026-06-02)
+- Description: Dark-mode block dedup in `src/css/custom.css:~1127-1374`.
+- Rationale: ~250 lines of "append last" refinements have overlapping selectors set to different values (e.g. `.buttonSecondary` color set to `#e5e7eb` at one site, `#fff` at two later sites; `.finalCta` background gradient/transparent/var; `.dl-cards > li` background `#111318` twice). Last-wins semantics resolve correctly today but the redundancy makes the file harder to reason about and to dark-mode-audit. Consolidating into a single `[data-theme='dark']` block keeps behavior identical and shrinks the file ~80 lines.
 - Acceptance criteria:
-  - Global tokens/utilities consolidated into `custom.css`.
-  - Component/page CSS modules remain untouched.
-- Status: Not started
-- Commits: TBD
+  - Visual diff vs current build shows no behavioral change on `/`, `/services/clarityscan`, `/services/imm-dt`, `/work-with-us` in both light and dark.
+  - Net line count in `custom.css` reduces by ~80 lines.
+- Status: Open.
+- Commits: pending.
+
+### C3c (NEW, 2026-06-02)
+- Description: Fallback hex parity in `src/components/imm/EvidenceMeter.module.css` and `src/components/imm/MaturityLadder.module.css`.
+- Rationale: 7 module-local `var()` fallback hexes do not match the canonical `:root` token values. Example: `var(--dl-green, #1f9d55)` in MaturityLadder where the canonical token resolves to `#72c53c`; `var(--dl-red, #d64545)` and `var(--dl-amber, #f0b429)` in EvidenceMeter where the canonical tokens are `#dc2626` and `#f59e0b`. If the CSS var ever fails to load (legacy browser, MIME error, etc.) components render with wrong hues. Touches modules — out of C3's "modules untouched" safe-path scope, hence a separate item.
+- Acceptance criteria:
+  - All 7 module fallbacks match the corresponding `:root` token value byte-for-byte.
+  - No selector or rule structure changes in either module.
+- Status: Open.
+- Commits: pending.
 
 ### C4
 - Description: Accessibility micro-fixes.

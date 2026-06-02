@@ -64,7 +64,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           imageAlt="Talleres de innovación a medida"
           width={1600}
           height={900}
-          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Inicia un brief de taller', dataCta: 'cta.services.workshops.hero.discovery' }}
+          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Agenda un brief de taller', dataCta: 'cta.services.workshops.hero.discovery' }}
           secondaryCta={{ to: '/services', label: 'Ver nuestros servicios', dataCta: 'cta.services.workshops.hero.services' }}
           ctaNote="Construido sobre MicroCanvas® v2.2 y puntos de control de IMM-P®."
         />
@@ -153,14 +153,14 @@ export default function CustomWorkshopsPage(): ReactNode {
               <p className="microcopy">Típicamente se agenda en 1 a 2 semanas.</p>
               <div className="cardFooter">
                 <Link to="https://booking.doulab.net/discovery" className="cardCta" data-cta="cta.services.workshops.formats.halfday.brief">
-                  Inicia un brief de medio día →
+                  Agenda un brief de medio día →
                 </Link>
                 <a
                   href="https://booking.doulab.net/hdworkshop"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cta="cta.services.workshops.formats.halfday.book"
-                  aria-label="Agenda un taller de medio día vía Microsoft Bookings"
+                  aria-label="Agenda un taller de medio día vía Google Calendar"
                   className={`cardCta ${'pages-b4-p2__orderFirst'}`}
                 >
                   Agenda un taller de medio día →
@@ -187,7 +187,7 @@ export default function CustomWorkshopsPage(): ReactNode {
               <p className="microcopy">Típicamente se agenda en 1 a 2 semanas.</p>
               <div className="cardFooter">
                 <Link to="https://booking.doulab.net/discovery" className="cardCta" data-cta="cta.services.workshops.formats.fullday.brief">
-                  Inicia un brief de día completo →
+                  Agenda un brief de día completo →
                 </Link>
                 <Link
                   to="https://booking.doulab.net/fdworkshop"
@@ -226,9 +226,9 @@ export default function CustomWorkshopsPage(): ReactNode {
                   to="https://booking.doulab.net/discovery"
                   className="cardCta"
                   data-cta="cta.services.workshops.formats.innovation_readiness.brief"
-                  aria-label="Inicia un brief para el Taller de Preparación y Gobernanza para la Innovación"
+                  aria-label="Agenda un brief para el Taller de Preparación y Gobernanza para la Innovación"
                 >
-                  Inicia un brief →
+                  Agenda un brief →
                 </Link>
               </div>
             </article>
@@ -269,7 +269,7 @@ export default function CustomWorkshopsPage(): ReactNode {
           ariaLabelledbyId="workshops-final-title"
           title="¿Listo para alinear y avanzar?"
           body="Envíanos tus metas y restricciones. Diseñaremos el taller correcto y te pondremos en movimiento rápido."
-          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Inicia un brief de taller', dataCta: 'cta.services.workshops.final.discovery' }}
+          primaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Agenda un brief de taller', dataCta: 'cta.services.workshops.final.discovery' }}
           secondaryCta={{
             href: 'https://booking.doulab.net/hdworkshop',
             label: 'Agenda un taller de medio día',

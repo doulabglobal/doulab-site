@@ -16,7 +16,7 @@ export default function CaseAlphaInversiones(): ReactNode {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
-      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 2, name: 'Casos de estudio', item: localizedUrl('/case-studies') },
       { '@type': 'ListItem', position: 3, name: 'Alpha Inversiones: Alpha Escalable y Alpha en Línea', item: localizedUrl('/case-studies/alpha-inversiones') },
     ],
   };
@@ -85,7 +85,7 @@ export default function CaseAlphaInversiones(): ReactNode {
           className={`microcopy ${'pages-case-studies-alpha-inversiones__breadcrumb'}`}
         >
           <Link to="/case-studies" data-cta="cta.cases.breadcrumb">
-            ← Todos los casos de éxito
+            ← Todos los casos de estudio
           </Link>
         </nav>
 
@@ -114,7 +114,7 @@ export default function CaseAlphaInversiones(): ReactNode {
           <ul>
             <li><strong>Sector:</strong> Mercado de capitales, regulado</li>
             <li><strong>Enfoque:</strong> Programa de transformación y experiencia omnicanal</li>
-            <li><strong>Aproximación:</strong> Evidencia primero, compuertas y cadencia, CX y BI como capacidades transversales</li>
+            <li><strong>Aproximación:</strong> Evidencia primero, puntos de control y cadencia, CX y BI como capacidades transversales</li>
             <li><strong>Resultado:</strong> Un programa escalable, gobernanza más fuerte y mejores trayectos del cliente</li>
           </ul>
         </section>
@@ -134,7 +134,7 @@ export default function CaseAlphaInversiones(): ReactNode {
             <strong> Alpha en Línea</strong>, el sitio web y la app, como parte de un trayecto del cliente integrado y omnicanal.
           </p>
           <p className="microcopy">
-            Alpha Escalable en una línea: compuertas más claras, decisiones más rápidas, mejor entrega.
+            Alpha Escalable en una línea: puntos de control más claras, decisiones más rápidas, mejor entrega.
           </p>
         </section>
 
@@ -143,7 +143,7 @@ export default function CaseAlphaInversiones(): ReactNode {
           <h2 id="risks-title">Riesgos clave y mitigaciones</h2>
           <ul>
             <li><strong>Riesgo de adopción:</strong> Mitigado con pruebas de entrevistas y pilotos por etapas.</li>
-            <li><strong>Riesgo de entrega:</strong> Mitigado con revisiones de compuerta, responsables y cadencia semanal.</li>
+            <li><strong>Riesgo de entrega:</strong> Mitigado con revisiones de punto de control, responsables y cadencia semanal.</li>
             <li><strong>Riesgo de alineación:</strong> Mitigado con paquetes de evidencia y un comité de innovación.</li>
           </ul>
         </section>
@@ -168,13 +168,13 @@ export default function CaseAlphaInversiones(): ReactNode {
               </p>
             </li>
             <li>
-              <strong>Sistema de entrega:</strong> Instalamos cadencia, revisiones de compuerta, responsables de decisión y KPIs apropiados por etapa.
+              <strong>Sistema de entrega:</strong> Instalamos cadencia, revisiones de punto de control, responsables de decisión y KPIs apropiados por etapa.
               <ul>
-                <li><strong>Compuerta 1:</strong> Go o No Go después de descubrimiento, basado en paquetes de evidencia.</li>
-                <li><strong>Compuerta 2:</strong> Go o No Go antes de escalar, basado en adopción y riesgo.</li>
+                <li><strong>Punto de control 1:</strong> Go o No Go después de descubrimiento, basado en paquetes de evidencia.</li>
+                <li><strong>Punto de control 2:</strong> Go o No Go antes de escalar, basado en adopción y riesgo.</li>
               </ul>
               <p className="microcopy">
-                Modelo de gobernanza: <strong>RACI</strong> por iniciativa; cadencia <strong>semanal</strong>; <strong>checklist de compuerta</strong> por etapa;
+                Modelo de gobernanza: <strong>RACI</strong> por iniciativa; cadencia <strong>semanal</strong>; <strong>checklist de punto de control</strong> por etapa;
                 <strong> bitácora de decisiones</strong> y <strong>registro de riesgos</strong> para trazabilidad.
               </p>
               <p className="microcopy">
@@ -182,7 +182,7 @@ export default function CaseAlphaInversiones(): ReactNode {
                 Desarrollo, tiempo de ciclo y defectos escapados; Escala, adopción, NPS y economía unitaria.
               </p>
               <p className="microcopy">
-                Artefactos: carta del programa, checklist de compuerta, RACI, plantilla de paquete de evidencia, cadencia semanal.
+                Artefactos: carta del programa, checklist de punto de control, RACI, plantilla de paquete de evidencia, cadencia semanal.
               </p>
             </li>
             <li>
@@ -276,7 +276,7 @@ flowchart TB
             </article>
             <article className="card" aria-labelledby="cta-path-title">
               <h3 id="cta-path-title">Ruta recomendada</h3>
-              <p>Empieza pequeño: Llamada de descubrimiento → ClarityScan → Piloto Compuerta 1.</p>
+              <p>Empieza pequeño: Llamada de descubrimiento → ClarityScan → Piloto Punto de control 1.</p>
             </article>
             <article className="card" aria-labelledby="cta-related-title">
               <h3 id="cta-related-title">Servicios relacionados</h3>
@@ -284,9 +284,9 @@ flowchart TB
                 <li><Link to="/services/innovation-maturity">Programas, IMM-P®</Link></li>
                 <li><Link to="/services/clarityscan">Diagnósticos, ClarityScan®</Link></li>
               </ul>
-              <p>Mira más ejemplos en casos de éxito.</p>
+              <p>Mira más ejemplos en casos de estudio.</p>
               <div className="ctaCardButtons">
-                <Link to="/case-studies" className="buttonSecondary">Casos de éxito</Link>
+                <Link to="/case-studies" className="buttonSecondary">Casos de estudio</Link>
               </div>
             </article>
           </div>

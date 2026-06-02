@@ -48,7 +48,7 @@ export default function ServicesPage(): ReactNode {
                     height={400}
                     primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Book a ClarityScan® online', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     secondaryCta={{ to: '/services/clarityscan', label: 'Explore ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
-                    ctaNote="Tier 1 ClarityScan is online-bookable for CHF 150. Programs and workshops are scoped on a discovery call."
+                    ctaNote="Tier 1 ClarityScan is online-bookable for CHF 150. Programs and workshops are scoped on a discovery call. Billed in CHF; local equivalent shown at checkout."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
                     eager
@@ -74,6 +74,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Tier 1 Snapshot: CHF 150, bookable online</li>
                                 <li>Tier 2 Diagnostic and Tier 3 Audit: scope-based</li>
                             </ul>
+                            <p className="microcopy">Billed in CHF; local equivalent shown at checkout.</p>
                             <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explore ClarityScan tiers">
                                     Explore tiers →

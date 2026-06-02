@@ -88,7 +88,7 @@ export default function ClarityScanPage(): ReactNode {
             external: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Conversemos sobre N2 / N3', dataCta: 'cta.services.clarityscan.hero.contact' }}
-          ctaNote="El Nivel 1 se paga a través del checkout seguro de Stripe. Los Niveles 2 y 3 se definen en alcance en una llamada de descubrimiento de 20 minutos."
+          ctaNote="El Nivel 1 se paga a través del checkout seguro de Stripe. Los Niveles 2 y 3 se definen en alcance en una llamada de descubrimiento de 20 minutos. Facturado en CHF; verás el equivalente local al pagar."
         />
 
         {/* Who is it for? */}
@@ -175,6 +175,7 @@ export default function ClarityScanPage(): ReactNode {
               <Gauge className="cardIcon" aria-hidden="true" />
               <h3 id="tier-1-card">Nivel 1: Snapshot</h3>
               <p><strong>CHF 150</strong> · 15 a 20 minutos · pago en línea vía Stripe</p>
+              <p className="microcopy">Facturado en CHF; verás el equivalente local al pagar.</p>
               <ul>
                 <li>Una sola persona respondiente, autopuntuación cualitativa a lo largo de los cinco dominios del IMM.</li>
                 <li>PDF de una página: radar, escalera de madurez, de 3 a 5 movimientos prioritarios, plan de 30/60/90 días.</li>
@@ -369,7 +370,7 @@ export default function ClarityScanPage(): ReactNode {
             newTab: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Conversemos sobre N2 / N3', dataCta: 'cta.services.clarityscan.final.contact' }}
-          ctaNote="Nivel 1: recibo y enlace de reserva por correo electrónico. Llamada de descubrimiento: 20 minutos, sin preparación requerida."
+          ctaNote="Nivel 1: recibo y enlace de reserva por correo electrónico. Llamada de descubrimiento: 20 minutos, sin preparación requerida. Facturado en CHF; verás el equivalente local al pagar."
         />
       </main>
     </Layout>

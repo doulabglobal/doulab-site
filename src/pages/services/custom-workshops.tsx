@@ -160,7 +160,7 @@ export default function CustomWorkshopsPage(): ReactNode {
                   target="_blank"
                   rel="noopener noreferrer"
                   data-cta="cta.services.workshops.formats.halfday.book"
-                  aria-label="Book a half-day workshop via Microsoft Bookings"
+                  aria-label="Book a half-day workshop via Google Calendar"
                   className={`cardCta ${'pages-b4-p2__orderFirst'}`}
                 >
                   Book a half-day workshop →

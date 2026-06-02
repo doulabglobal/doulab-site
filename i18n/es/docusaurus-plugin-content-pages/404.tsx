@@ -56,7 +56,7 @@ export default function NotFound() {
             </article>
             <article className="card" aria-labelledby="notfound-home">
               <h3 id="notfound-home">Inicio</h3>
-              <p>Comienza de nuevo en la página principal de Doulab.</p>
+              <p>Empieza de nuevo en la página principal de Doulab.</p>
               <div className="cardFooter">
                 <Link to="/" className="cardCta" data-cta="cta.404.home">
                   Ir al inicio →

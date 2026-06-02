@@ -189,7 +189,7 @@ export default function AboutPage(): ReactNode {
                   className="cardCta"
                   data-cta="cta.about.pillars.diagnostics"
                 >
-                  Comienza con ClarityScan® →
+                  Empieza con ClarityScan® →
                 </Link>
               </div>
             </article>
@@ -272,8 +272,8 @@ export default function AboutPage(): ReactNode {
           id="about-final"
           ariaLabelledbyId="about-final-title"
           title="¿Quieres una lectura rápida de dónde estás?"
-          body="Comienza con ClarityScan® Nivel 1 (15 a 20 minutos, CHF 150), o agenda una llamada de descubrimiento de 20 minutos para mapear el encaje."
-          primaryCta={{ to: '/services/clarityscan', label: 'Comienza con ClarityScan®', dataCta: 'cta.about.final.clarityscan' }}
+          body="Empieza con ClarityScan® Nivel 1 (15 a 20 minutos, CHF 150), o agenda una llamada de descubrimiento de 20 minutos para mapear el encaje."
+          primaryCta={{ to: '/services/clarityscan', label: 'Empieza con ClarityScan®', dataCta: 'cta.about.final.clarityscan' }}
           secondaryCta={{
             href: CLARITYSCAN_CHECKOUT_URL,
             label: 'Agenda un ClarityScan® en línea',

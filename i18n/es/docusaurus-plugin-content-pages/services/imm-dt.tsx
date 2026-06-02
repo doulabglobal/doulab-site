@@ -280,7 +280,7 @@ export default function IMMDTPage(): ReactNode {
           </p>
           <p className="microcopy">
             Para organizaciones que aún no están listas para una intervención IMM-DT completa, empieza con <Link to="/services/clarityscan">ClarityScan®</Link>
-            {' '}Nivel 1 (CHF 150) para una lectura rápida sobre la madurez en innovación.
+            {' '}Nivel 1 (CHF 150) para una lectura rápida sobre la madurez en innovación. Facturado en CHF; verás el equivalente local al pagar.
           </p>
         </section>
 

@@ -16,7 +16,7 @@ export default function CaseFundapec(): ReactNode {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
-      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 2, name: 'Casos de estudio', item: localizedUrl('/case-studies') },
       { '@type': 'ListItem', position: 3, name: 'FUNDAPEC: Nuevos modelos de negocio y plataforma de exalumnos', item: localizedUrl('/case-studies/fundapec') },
     ],
   };
@@ -82,7 +82,7 @@ export default function CaseFundapec(): ReactNode {
       <main>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className={`microcopy ${'pages-case-studies-fundapec__breadcrumb'}`}>
-          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← Todos los casos de éxito</Link>
+          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← Todos los casos de estudio</Link>
         </nav>
 
         {/* Two-column standardized hero */}
@@ -174,7 +174,7 @@ export default function CaseFundapec(): ReactNode {
               <strong>Sondas de oferta:</strong> Ejecutamos sondas a nivel de oferta, sin precios, para evaluar viabilidad y fuerza de la señal.
             </li>
             <li>
-              <strong>Gobernanza y hoja de ruta:</strong> Definimos compuertas de decisión, responsables y criterios para pasar de descubrimiento
+              <strong>Gobernanza y hoja de ruta:</strong> Definimos puntos de control de decisión, responsables y criterios para pasar de descubrimiento
               a piloteo, con una hoja de ruta clara de crecimiento a 24 meses.
             </li>
           </ul>
@@ -201,13 +201,13 @@ export default function CaseFundapec(): ReactNode {
               Cadencia editorial, reglas de moderación y revisiones periódicas están en su lugar.
             </li>
             <li>
-              <strong>Sistema de entrega:</strong> Cadencia, revisiones de compuerta y responsables de decisión instalados.
+              <strong>Sistema de entrega:</strong> Cadencia, revisiones de punto de control y responsables de decisión instalados.
               <ul>
-                <li><strong>Compuerta 1:</strong> Go o No Go después de descubrimiento, basado en paquetes de evidencia.</li>
-                <li><strong>Compuerta 2:</strong> Go o No Go antes de escalar, basado en adopción y riesgo.</li>
+                <li><strong>Punto de control 1:</strong> Go o No Go después de descubrimiento, basado en paquetes de evidencia.</li>
+                <li><strong>Punto de control 2:</strong> Go o No Go antes de escalar, basado en adopción y riesgo.</li>
               </ul>
               <p className="microcopy">
-                Modelo de gobernanza: <strong>RACI</strong> por iniciativa; cadencia <strong>semanal</strong>; <strong>checklist de compuerta</strong> por etapa;
+                Modelo de gobernanza: <strong>RACI</strong> por iniciativa; cadencia <strong>semanal</strong>; <strong>checklist de punto de control</strong> por etapa;
                 <strong> bitácora de decisiones</strong> y <strong>registro de riesgos</strong> para trazabilidad.
               </p>
               <p className="microcopy">
@@ -218,10 +218,10 @@ export default function CaseFundapec(): ReactNode {
                 Línea base de capacidades: gobernanza, medición y cadencia de entrega al inicio, monitoreadas trimestralmente contra el árbol de KPI.
               </p>
               <p className="microcopy">
-                Ritmo operativo: revisiones semanales, verificaciones mensuales de compuerta y snapshots trimestrales de capacidades.
+                Ritmo operativo: revisiones semanales, verificaciones mensuales de punto de control y snapshots trimestrales de capacidades.
               </p>
               <p className="microcopy">
-                Artefactos: carta, checklist de compuerta, RACI, plantilla de paquete de evidencia, revisión semanal.
+                Artefactos: carta, checklist de punto de control, RACI, plantilla de paquete de evidencia, revisión semanal.
               </p>
             </li>
           </ul>
@@ -258,7 +258,7 @@ export default function CaseFundapec(): ReactNode {
               ahora sustenta opciones futuras de crecimiento de la Pista A.
             </li>
             <li>
-              <strong>Decisiones más rápidas y claras:</strong> Las revisiones de compuerta, los paquetes de evidencia y los responsables con rendición de cuentas redujeron la latencia de decisión.
+              <strong>Decisiones más rápidas y claras:</strong> Las revisiones de punto de control, los paquetes de evidencia y los responsables con rendición de cuentas redujeron la latencia de decisión.
             </li>
           </ul>
           <p className="microcopy">
@@ -319,7 +319,7 @@ flowchart TB
             </article>
             <article className="card" aria-labelledby="cta-path-title">
               <h3 id="cta-path-title">Ruta recomendada</h3>
-              <p>Empieza pequeño: Llamada de descubrimiento → ClarityScan → Piloto Compuerta 1.</p>
+              <p>Empieza pequeño: Llamada de descubrimiento → ClarityScan → Piloto Punto de control 1.</p>
             </article>
             <article className="card" aria-labelledby="cta-related-title">
               <h3 id="cta-related-title">Servicios relacionados</h3>
@@ -327,9 +327,9 @@ flowchart TB
                 <li><Link to="/services/innovation-maturity">Programas, IMM-P®</Link></li>
                 <li><Link to="/services/clarityscan">Diagnósticos, ClarityScan®</Link></li>
               </ul>
-              <p>Mira más ejemplos en casos de éxito.</p>
+              <p>Mira más ejemplos en casos de estudio.</p>
               <div className="ctaCardButtons">
-                <Link to="/case-studies" className="buttonSecondary">Casos de éxito</Link>
+                <Link to="/case-studies" className="buttonSecondary">Casos de estudio</Link>
               </div>
             </article>
           </div>

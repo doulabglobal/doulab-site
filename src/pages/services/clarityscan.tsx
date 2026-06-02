@@ -88,7 +88,7 @@ export default function ClarityScanPage(): ReactNode {
             external: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us about T2 / T3', dataCta: 'cta.services.clarityscan.hero.contact' }}
-          ctaNote="Tier 1 paid via secure Stripe checkout. Tiers 2 and 3 scoped on a 20-minute discovery call."
+          ctaNote="Tier 1 paid via secure Stripe checkout. Tiers 2 and 3 scoped on a 20-minute discovery call. Billed in CHF; local equivalent shown at checkout."
         />
 
         {/* Who is it for? */}
@@ -175,6 +175,7 @@ export default function ClarityScanPage(): ReactNode {
               <Gauge className="cardIcon" aria-hidden="true" />
               <h3 id="tier-1-card">Tier 1: Snapshot</h3>
               <p><strong>CHF 150</strong> · 15 to 20 minutes · paid online via Stripe</p>
+              <p className="microcopy">Billed in CHF; local equivalent shown at checkout.</p>
               <ul>
                 <li>Single respondent, qualitative self-scoring across the five IMM domains.</li>
                 <li>One-page PDF: radar, maturity ladder, 3 to 5 priority moves, 30/60/90 plan.</li>
@@ -368,7 +369,7 @@ export default function ClarityScanPage(): ReactNode {
             newTab: true,
           }}
           secondaryCta={{ to: 'https://booking.doulab.net/discovery', label: 'Talk to us about T2 / T3', dataCta: 'cta.services.clarityscan.final.contact' }}
-          ctaNote="Tier 1: receipt and booking link by email. Discovery call: 20 minutes, no prep required."
+          ctaNote="Tier 1: receipt and booking link by email. Discovery call: 20 minutes, no prep required. Billed in CHF; local equivalent shown at checkout."
         />
       </main>
     </Layout>

@@ -169,7 +169,7 @@ export default function VigiaFuturaPage() {
               },
               {
                 title: 'IMM-P®',
-                body: 'La columna de ejecución. El programa de vinculación mediante el cual las instituciones avanzan en su madurez con evidencia, compuertas y bucles de aprendizaje.',
+                body: 'La columna de ejecución. El programa de vinculación mediante el cual las instituciones avanzan en su madurez con evidencia, puntos de control y bucles de aprendizaje.',
                 accent: 'amber',
                 to: '/services/innovation-maturity',
               },

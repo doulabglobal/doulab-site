@@ -42,13 +42,13 @@ export default function Contact(): ReactNode {
   return (
     <Layout
       title="Contacto"
-      description="Inicia una llamada de descubrimiento o envíanos un brief. Privacidad primero, sin formularios de terceros."
+      description="Agenda una llamada de descubrimiento o envíanos un brief. Privacidad primero, sin formularios de terceros."
     >
       <PageMetadata slug="/contact" ogImage="/img/social/og-contact.jpg" />
       <Head>
         <meta name="author" content="Luis Santiago Arias" />
         <meta property="og:title" content="Contacto" />
-        <meta property="og:description" content="Inicia una llamada de descubrimiento o envíanos un brief. Privacidad primero, sin formularios de terceros." />
+        <meta property="og:description" content="Agenda una llamada de descubrimiento o envíanos un brief. Privacidad primero, sin formularios de terceros." />
         <meta property="og:image:alt" content="Doulab, Contacto" />
         <meta name="twitter:card" content="summary_large_image" />
 

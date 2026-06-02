@@ -82,8 +82,9 @@ export default function PrivacyAndTerms(): ReactNode {
               </li>
               <li>
                 <strong>Datos técnicos</strong>: Direcciones IP, identificadores de dispositivo, ubicación aproximada, tipo de navegador, configuración de
-                idioma y URLs de referencia capturadas a través de analítica respetuosa de la privacidad (Cloudflare Web Analytics) para entender
-                el desempeño del sitio. No usamos cookies de marketing ni de publicidad.
+                idioma y URLs de referencia capturadas a través de Cloudflare (alojamiento y procesamiento de HTML en el edge) y
+                Cloudflare Web Analytics (analítica respetuosa de la privacidad) para entender el desempeño del sitio.
+                No usamos cookies de marketing ni de publicidad.
               </li>
               <li>
                 <strong>Datos de pago</strong>: Stripe Checkout procesa los pagos por servicios de tarifa fija. Doulab no almacena números de tarjeta;

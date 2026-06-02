@@ -16,7 +16,7 @@ export default function CaseAfpSiembra(): ReactNode {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
-      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 2, name: 'Casos de estudio', item: localizedUrl('/case-studies') },
       { '@type': 'ListItem', position: 3, name: 'AFP Siembra: Alcanza y SILAB', item: localizedUrl('/case-studies/afp-siembra') },
     ],
   };
@@ -99,7 +99,7 @@ export default function CaseAfpSiembra(): ReactNode {
 
       <main>
         <nav aria-label="Breadcrumb" className={`microcopy ${'pages-case-studies-afp-siembra__breadcrumb'}`}>
-          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← Todos los casos de éxito</Link>
+          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← Todos los casos de estudio</Link>
         </nav>
 
         <Hero
@@ -131,7 +131,7 @@ export default function CaseAfpSiembra(): ReactNode {
           <ul>
             <li><strong>Sector:</strong> Pensiones y ahorro, regulado</li>
             <li><strong>Enfoque:</strong> Producto de ahorro digital y un laboratorio de innovación interno</li>
-            <li><strong>Aproximación:</strong> Evidencia primero, compuertas y cadencia, seguridad y cumplimiento</li>
+            <li><strong>Aproximación:</strong> Evidencia primero, puntos de control y cadencia, seguridad y cumplimiento</li>
             <li><strong>Resultado:</strong> Lanzamiento de la app y un motor de innovación repetible</li>
           </ul>
         </section>
@@ -171,14 +171,14 @@ export default function CaseAfpSiembra(): ReactNode {
               saldos mínimos.
             </li>
             <li>
-              <strong>Sistema de entrega:</strong> Establecimos una cadencia, compuertas de decisión y un playbook de laboratorio. Co-autores
-              de la carta, mandato, intake, compuertas de financiamiento y un modelo de gobernanza de SILAB para hacer la entrega repetible.
+              <strong>Sistema de entrega:</strong> Establecimos una cadencia, puntos de control de decisión y un playbook de laboratorio. Co-autores
+              de la carta, mandato, intake, puntos de control de financiamiento y un modelo de gobernanza de SILAB para hacer la entrega repetible.
               <ul>
-                <li><strong>Compuerta 1:</strong> Go o No Go después de descubrimiento, basado en paquetes de evidencia.</li>
-                <li><strong>Compuerta 2:</strong> Go o No Go antes de escalar, basado en adopción y riesgo.</li>
+                <li><strong>Punto de control 1:</strong> Go o No Go después de descubrimiento, basado en paquetes de evidencia.</li>
+                <li><strong>Punto de control 2:</strong> Go o No Go antes de escalar, basado en adopción y riesgo.</li>
               </ul>
-              <p className="microcopy">Valor de SILAB: decisiones más rápidas, compuertas más claras, mayor tasa de acierto.</p>
-              <p className="microcopy">Artefactos: carta del laboratorio, checklist de compuerta, RACI, plantilla de paquete de evidencia, cadencia semanal.</p>
+              <p className="microcopy">Valor de SILAB: decisiones más rápidas, puntos de control más claras, mayor tasa de acierto.</p>
+              <p className="microcopy">Artefactos: carta del laboratorio, checklist de punto de control, RACI, plantilla de paquete de evidencia, cadencia semanal.</p>
             </li>
             <li>
               <strong>Laboratorio de innovación y lanzamiento:</strong> A partir de octubre de 2023, conceptualizamos el SIEMBRA Innovation Lab, usando aprendizajes y resultados del proyecto Alcanza para diseñar una capacidad
@@ -207,7 +207,7 @@ export default function CaseAfpSiembra(): ReactNode {
           <h2 id="outcomes-title">Resultados</h2>
           <ul>
             <li><strong>Lanzamos</strong> la app de ahorro digital Alcanza con onboarding 100 por ciento digital.</li>
-            <li><strong>Instalamos</strong> la gobernanza de SILAB y una cadencia con revisiones de compuerta.</li>
+            <li><strong>Instalamos</strong> la gobernanza de SILAB y una cadencia con revisiones de punto de control.</li>
             <li><strong>Capturamos</strong> decisiones como paquetes de evidencia para mejorar la alineación.</li>
           </ul>
           <p className="microcopy">
@@ -222,7 +222,7 @@ export default function CaseAfpSiembra(): ReactNode {
           <h2 id="why-title">Por qué importó</h2>
           <ul>
             <li>Convirtió la estrategia en ejecución con un motor repetible para la innovación, SILAB.</li>
-            <li>Redujo la fricción en las decisiones mediante revisiones de compuerta, responsables y paquetes de evidencia.</li>
+            <li>Redujo la fricción en las decisiones mediante revisiones de punto de control, responsables y paquetes de evidencia.</li>
             <li>Construyó confianza y visibilidad mediante un lanzamiento público y una cadencia continua.</li>
           </ul>
         </section>
@@ -297,7 +297,7 @@ flowchart TB
             </article>
             <article className="card" aria-labelledby="cta-path-title">
               <h3 id="cta-path-title">Ruta recomendada</h3>
-              <p>Ruta recomendada: Llamada de descubrimiento → ClarityScan → Piloto Compuerta 1.</p>
+              <p>Ruta recomendada: Llamada de descubrimiento → ClarityScan → Piloto Punto de control 1.</p>
             </article>
             <article className="card" aria-labelledby="cta-related-title">
               <h3 id="cta-related-title">Servicios relacionados</h3>

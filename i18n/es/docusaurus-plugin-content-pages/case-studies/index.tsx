@@ -15,20 +15,20 @@ import LineChart from 'lucide-react/dist/esm/icons/line-chart';
 export default function CaseStudies(): ReactNode {
   return (
     <Layout
-      title="Casos de éxito, resultados y entrega repetible"
+      title="Casos de estudio, resultados y entrega repetible"
       description="Proyectos seleccionados y resultados medibles de Doulab, con puntos de control claros, paquetes de evidencia e indicadores."
     >
       <PageMetadata slug="/case-studies" ogImage="/img/social/og-case-studies.jpg" />
       <Head>
         <meta name="author" content="Luis Santiago Arias" />
-        <meta property="og:title" content="Casos de éxito, resultados y entrega repetible" />
+        <meta property="og:title" content="Casos de estudio, resultados y entrega repetible" />
         <meta
           property="og:description"
           content="Proyectos seleccionados y resultados medibles de Doulab, con puntos de control claros, paquetes de evidencia e indicadores."
         />
         <meta
           property="og:image:alt"
-          content="Imagen principal de casos de éxito, degradado índigo abstracto con acentos de marca Doulab."
+          content="Imagen principal de casos de estudio, degradado índigo abstracto con acentos de marca Doulab."
         />
         <meta name="twitter:card" content="summary_large_image" />
 
@@ -39,7 +39,7 @@ export default function CaseStudies(): ReactNode {
             '@type': 'BreadcrumbList',
             itemListElement: [
               { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
-              { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+              { '@type': 'ListItem', position: 2, name: 'Casos de estudio', item: localizedUrl('/case-studies') },
             ],
           })}
         </script>
@@ -72,11 +72,11 @@ export default function CaseStudies(): ReactNode {
       <main>
         {/* Two-column standardized hero with CTAs */}
         <Hero
-          title="Casos de éxito"
+          title="Casos de estudio"
           subtitle="Proyectos reales. Puntos de control claros. Resultados medibles."
           body="Cada caso muestra el contexto, lo que hicimos y los resultados, con los artefactos y la cadencia que lo hacen repetible."
           imageBase="/img/hero-cases"
-          imageAlt="Imagen principal de casos de éxito, degradado índigo abstracto con acentos de marca Doulab."
+          imageAlt="Imagen principal de casos de estudio, degradado índigo abstracto con acentos de marca Doulab."
           primaryCta={{
             to: '/services/clarityscan',
             label: 'Conoce ClarityScan',
@@ -104,7 +104,7 @@ export default function CaseStudies(): ReactNode {
         <section className="section" id="method" aria-labelledby="method-title">
           <h2 id="method-title">Cómo medimos el progreso</h2>
           <p className={`microcopy ${'pages-case-studies-case-studies__methodLead'}`}>
-            Seguimiento a través de las compuertas del IMM-P®, <strong>Descubrimiento, Validación, Eficiencia, Escala</strong>.
+            Seguimiento a través de las puntos de control del IMM-P®, <strong>Descubrimiento, Validación, Eficiencia, Escala</strong>.
           </p>
           <div className="cardGrid">
             <div className="card">
@@ -118,7 +118,7 @@ export default function CaseStudies(): ReactNode {
             </div>
             <div className="card">
               <CheckCircle className="cardIcon" aria-hidden={true} />
-              <h3>Revisiones de compuerta</h3>
+              <h3>Revisiones de punto de control</h3>
               <p>Criterios predefinidos y responsables aseguran claridad en cada punto de control.</p>
               <ul role="list">
                 <li>Go o No Go con base en evidencia</li>

@@ -19,7 +19,7 @@ hide_table_of_contents: false
 image: /img/social/2025-09-12-clarityscan-decision-latency.jpg
 ---
 
-> **TL;DR** — La latencia de decisión es el impuesto oculto sobre la innovación y el valor público. ClarityScan® entrega, en **30–45 minutos**: una línea base compartida, dos señales de prueba, responsables nombrados y un **plan a 30/60/90 días**. Los líderes que ejecutan este ciclo semanalmente reducen la latencia en **~30% en los primeros 30 días** y ven lanzamientos más tempranos, menos escalamientos y mayor confianza.
+> **TL;DR**: La latencia de decisión es el impuesto oculto sobre la innovación y el valor público. ClarityScan® entrega, en **30–45 minutos**: una línea base compartida, dos señales de prueba, responsables nombrados y un **plan a 30/60/90 días**. Los líderes que ejecutan este ciclo semanalmente reducen la latencia en **~30% en los primeros 30 días** y ven lanzamientos más tempranos, menos escalamientos y mayor confianza.
 
 Reducir la latencia mediana de decisión acorta el camino de la idea de política al servicio en funcionamiento, mejorando los resultados y la confianza.
 
@@ -91,17 +91,17 @@ Instrumenta la latencia agregando los timestamps **decision_requested_at** y **d
 
 *Línea base ClarityScan®: el primer paso para reducir la latencia de decisión.*
 
-> **Agenda tu línea base ahora:** [Programa un ClarityScan®](https://buy.stripe.com/28E00jdhCanL5Hb3xmcZa00)
+> **Agenda tu línea base ahora:** [Reserva un ClarityScan®](https://buy.stripe.com/28E00jdhCanL5Hb3xmcZa00)
 
 Pero pasemos ahora a qué es ClarityScan® y cómo puede reducir la latencia de decisión.
 
 ## La idea en una oración
 
-ClarityScan® es un diagnóstico rápido y estructurado basado en el [**MicroCanvas® Framework (MCF) v2.1**](https://themicrocanvas.com) y las compuertas del [**Programa del Modelo de Madurez en Innovación (IMM-P®)**](/services/innovation-maturity) que produce **próximos pasos accionables** en lugar de un informe largo o un conjunto desestructurado de comentarios.
+ClarityScan® es un diagnóstico rápido y estructurado basado en el [**MicroCanvas® Framework (MCF) v2.1**](https://themicrocanvas.com) y las puntos de control del [**Programa del Modelo de Madurez en Innovación (IMM-P®)**](/services/innovation-maturity) que produce **próximos pasos accionables** en lugar de un informe largo o un conjunto desestructurado de comentarios.
 
 ## Por qué lo construimos
 
-Durante dos décadas, en startups, empresas establecidas e instituciones gubernamentales, seguimos viendo equipos buenos trabajando duro sin un modelo compartido y unificado para la toma de decisiones rápida. Los objetivos eran amplios, los problemas difusos o indefinidos, y la "prueba" ambigua. Construimos **MicroCanvas®** para crear claridad compartida, y luego **IMM-P®** para instalar un ritmo de 12+12 semanas con compuertas de evidencia. Si no había claridad en un punto de control, pivoteábamos y procurábamos evidencia antes de avanzar.
+Durante dos décadas, en startups, empresas establecidas e instituciones gubernamentales, seguimos viendo equipos buenos trabajando duro sin un modelo compartido y unificado para la toma de decisiones rápida. Los objetivos eran amplios, los problemas difusos o indefinidos, y la "prueba" ambigua. Construimos **MicroCanvas®** para crear claridad compartida, y luego **IMM-P®** para instalar un ritmo de 12+12 semanas con puntos de control de evidencia. Si no había claridad en un punto de control, pivoteábamos y procurábamos evidencia antes de avanzar.
 
 Tras más de **250 experimentos**, a finales de 2024 nos dimos cuenta de que una pieza faltante en nuestro proceso de innovación sobre MCF 2.1 e IMM-P® era un **movimiento inicial** rápido y útil desde el día uno. Eso se convirtió en [**ClarityScan®**](/services/clarityscan), una conversación de **30–45 minutos** que encuentra cuellos de botella, nombra responsables y establece los primeros pasos a **30/60/90 días**.
 
@@ -115,9 +115,9 @@ Lo mantenemos breve y práctico:
 4. **Decisiones y responsables.** Quién decide qué, para cuándo.  
 5. **Plan a 30/60/90 días.** Un plan de corto plazo que reduce la latencia y construye impulso.
 
-La **Pasada rápida** cubre MCF 2.1: Ajuste Cliente y Problema, Objetivos y Resultados Clave, Alternativas de Solución, Prueba y Experimentos, y Gobernanza de Innovación; **más** las compuertas de cadencia del IMM-P.
+La **Pasada rápida** cubre MCF 2.1: Ajuste Cliente y Problema, Objetivos y Resultados Clave, Alternativas de Solución, Prueba y Experimentos, y Gobernanza de Innovación; **más** las puntos de control de cadencia del IMM-P.
 
-Esto se conecta con MCF produciendo: **Brecha de objetivo** → Análisis de Objetivos y Resultados Clave de MCF 2.1; Brecha de responsable → Responsable de Decisión y Gobernanza de MCF; Brecha de evidencia → Prueba y Experimentos de MCF; Brecha de cadencia → compuertas de evidencia del IMM-P.**
+Esto se conecta con MCF produciendo: **Brecha de objetivo** → Análisis de Objetivos y Resultados Clave de MCF 2.1; Brecha de responsable → Responsable de Decisión y Gobernanza de MCF; Brecha de evidencia → Prueba y Experimentos de MCF; Brecha de cadencia → puntos de control de evidencia del IMM-P.**
 
 Aquí hay una vista simple de una sesión típica de ClarityScan:
 
@@ -136,9 +136,9 @@ flowchart LR
 Desde la fundación de Doulab, y tras muchas colaboraciones con clientes, hemos aprendido que la latencia de decisión usualmente proviene de cuatro brechas:
 
 - **Brecha de objetivo**: Los equipos sostienen definiciones contrapuestas de "suficientemente bueno" o un alcance poco claro. Usando nuestro **Análisis de Objetivos y Resultados Clave (MCF 2.1)**, convertimos la ambigüedad en un objetivo nítido con señales medibles de éxito.  
-- **Brecha de responsable**: Muchas organizaciones carecen de un **Individuo Directamente Responsable** para decisiones críticas. Sin propiedad clara, las decisiones se estancan o esperan a que una autoridad superior intervenga. Asignamos responsables para cada próxima prueba y compuerta.  
+- **Brecha de responsable**: Muchas organizaciones carecen de un **Individuo Directamente Responsable** para decisiones críticas. Sin propiedad clara, las decisiones se estancan o esperan a que una autoridad superior intervenga. Asignamos responsables para cada próxima prueba y punto de control.  
 - **Brecha de evidencia**: **Las opiniones superan a los hechos**. Los equipos ceden ante la autoridad (incluso cuando no está claro quién es la autoridad) cuando la evidencia contradice la intuición. Cambiamos la cultura eligiendo **pruebas pequeñas y rápidas** que convierten el riesgo en aprendizaje. *(IMM-P: toma de decisiones basada en evidencia)*  
-- **Brecha de cadencia**: El trabajo avanza lentamente o sin ritmo. Agregamos un check-in simple semanal o quincenal con compuertas visibles y un **paquete de evidencia** vigente. Los equipos muestran prueba de trabajo y validan supuestos o pivotean cuando la evidencia lo indica.
+- **Brecha de cadencia**: El trabajo avanza lentamente o sin ritmo. Agregamos un check-in simple semanal o quincenal con puntos de control visibles y un **paquete de evidencia** vigente. Los equipos muestran prueba de trabajo y validan supuestos o pivotean cuando la evidencia lo indica.
 
 Reducir la latencia mediana de decisión acorta el camino de la idea de política o producto/servicio a un producto/servicio/política en funcionamiento, lo que mejora los resultados ciudadanos/de usuario y la confianza. ClarityScan® acelera decisiones con evidencia y supervisión, **nunca** saltándose el debido proceso o los controles de riesgo. Cada ciclo permanece **con humano en el ciclo**, con racional documentado y caminos claros de apelación. 
 
@@ -259,7 +259,7 @@ Un ministerio con ~**40 decisiones prioritarias/mes** que reduce la latencia med
 ## Cómo esto se conecta con MCF e IMM-P®
 
 - **MicroCanvas® Framework v2.1** proporciona el lenguaje compartido: clientes, problemas, objetivos y resultados clave, alternativas de solución, propósito, hipótesis de modelo de negocio/innovación y **prueba**.  
-- **IMM-P®** añade el ritmo operativo: **compuertas, responsables y paquetes de evidencia** a lo largo de **Descubrimiento → Validación → Eficiencia → Escala → Mejora Continua**.  
+- **IMM-P®** añade el ritmo operativo: **puntos de control, responsables y paquetes de evidencia** a lo largo de **Descubrimiento → Validación → Eficiencia → Escala → Mejora Continua**.  
 - **ClarityScan®** es el **movimiento inicial** que ubica tu trabajo actual en ese mapa y muestra el próximo paso medible.
 
 ---
@@ -289,10 +289,10 @@ Ese pequeño ciclo es el motor del impulso. Se repite entre equipos y escala en 
 
 ## Referencias
 
-- Gallup: “low engagement costs the global economy US$9.6 trillion, or 9% of global GDP.” — [*State of the Global Workplace 2025*](https://www.gallup.com/workplace/653386/state-of-the-global-workplace-2025.aspx)  
-- McKinsey: “when corporations launch transformations, roughly 70 percent fail.” — [*Why do most transformations fail?*](https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson)  
-- Forrester: “US consumer perceptions of CX quality have dropped for an unprecedented fourth year in a row …” — [*US CX Index 2025 results*](https://www.forrester.com/blogs/us-cx-index-2025-results/)  
-- HBS Online: “You’ll Make More Confident Decisions.” — [*The Advantages of Data‑Driven Decision‑Making*](https://online.hbs.edu/blog/post/data-driven-decision-making)  
+- Gallup: “low engagement costs the global economy US$9.6 trillion, or 9% of global GDP.” [*State of the Global Workplace 2025*](https://www.gallup.com/workplace/653386/state-of-the-global-workplace-2025.aspx)  
+- McKinsey: “when corporations launch transformations, roughly 70 percent fail.” [*Why do most transformations fail?*](https://www.mckinsey.com/capabilities/transformation/our-insights/why-do-most-transformations-fail-a-conversation-with-harry-robinson)  
+- Forrester: “US consumer perceptions of CX quality have dropped for an unprecedented fourth year in a row …” [*US CX Index 2025 results*](https://www.forrester.com/blogs/us-cx-index-2025-results/)  
+- HBS Online: “You’ll Make More Confident Decisions.” [*The Advantages of Data‑Driven Decision‑Making*](https://online.hbs.edu/blog/post/data-driven-decision-making)  
 - OECD: [*Survey on Drivers of Trust in Public Institutions 2024*](https://www.oecd.org/en/publications/oecd-survey-on-drivers-of-trust-in-public-institutions-2024-results_9a20554b-en.html)  
 - Pew Research: [*Public Trust in Government 1958–2024*](https://www.pewresearch.org/politics/2024/06/24/public-trust-in-government-1958-2024/)  
 - EY: [*How can governments build trust and demonstrate value to a skeptical public?*](https://www.globalgovernmentforum.com/how-can-governments-build-trust-and-demonstrate-value-to-a-skeptical-public/)  

@@ -16,7 +16,7 @@ export default function CaseOgticRedlab(): ReactNode {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: localizedUrl('/') },
-      { '@type': 'ListItem', position: 2, name: 'Casos de éxito', item: localizedUrl('/case-studies') },
+      { '@type': 'ListItem', position: 2, name: 'Casos de estudio', item: localizedUrl('/case-studies') },
       { '@type': 'ListItem', position: 3, name: 'OGTIC: Red de Laboratorios de Innovación RedLab', item: localizedUrl('/case-studies/ogtic-redlab') },
     ],
   };
@@ -83,7 +83,7 @@ export default function CaseOgticRedlab(): ReactNode {
       <main>
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className={`microcopy ${'pages-case-studies-ogtic-redlab__breadcrumb'}`}>
-          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← Todos los casos de éxito</Link>
+          <Link to="/case-studies" data-cta="cta.cases.breadcrumb">← Todos los casos de estudio</Link>
         </nav>
 
         {/* Two-column standardized hero */}
@@ -111,7 +111,7 @@ export default function CaseOgticRedlab(): ReactNode {
           <ul>
             <li><strong>Sector:</strong> Sector público, multi-institucional</li>
             <li><strong>Alcance:</strong> Diseño de red de innovación, cohortes y modelo operativo</li>
-            <li><strong>Aproximación:</strong> Guiada por evidencia, compuertas y cadencia, playbooks compartidos</li>
+            <li><strong>Aproximación:</strong> Guiada por evidencia, puntos de control y cadencia, playbooks compartidos</li>
             <li><strong>Resultado:</strong> Laboratorios alineados a un método común y decisiones más rápidas y claras</li>
           </ul>
         </section>
@@ -137,10 +137,10 @@ export default function CaseOgticRedlab(): ReactNode {
             innovación pública.
           </p>
           <p className="microcopy">
-            RedLab en una línea: compuertas más claras, lenguaje compartido, mejor entrega.
+            RedLab en una línea: puntos de control más claras, lenguaje compartido, mejor entrega.
           </p>
           <p className="microcopy">
-            Quién se beneficia primero: equipos de políticas, prestación de servicios y digitales que necesitan compuertas más claras y decisiones más rápidas.
+            Quién se beneficia primero: equipos de políticas, prestación de servicios y digitales que necesitan puntos de control más claras y decisiones más rápidas.
           </p>
           <p className="microcopy">
             Validación social: el formato de cohortes y los playbooks compartidos ayudan a los equipos a obtener victorias rápidas y reusar lo que funciona.
@@ -153,7 +153,7 @@ export default function CaseOgticRedlab(): ReactNode {
           <ul>
             <li><strong>Riesgo de adopción:</strong> Mitigado con revisiones entre pares, plantillas ligeras y victorias rápidas visibles.</li>
             <li><strong>Riesgo de continuidad:</strong> Mitigado con responsables nombrados, un ritmo operativo simple y playbooks.</li>
-            <li><strong>Riesgo de calidad de evidencia:</strong> Mitigado con paquetes de evidencia estándar y criterios de compuerta.</li>
+            <li><strong>Riesgo de calidad de evidencia:</strong> Mitigado con paquetes de evidencia estándar y criterios de punto de control.</li>
           </ul>
         </section>
 
@@ -164,11 +164,11 @@ export default function CaseOgticRedlab(): ReactNode {
           <ul>
             <li>
               <strong>Red y modelo operativo:</strong> Co-diseñamos la estructura de la red, la plantilla de carta de laboratorio, el intake
-              y las compuertas de decisión con responsables.
+              y las puntos de control de decisión con responsables.
             </li>
             <li>
               <strong>Programa de cohortes:</strong> Ejecutamos ciclos de cohorte, de descubrimiento a validación a entrega, con revisiones entre pares,
-              demo days y paquetes de evidencia en cada compuerta.
+              demo days y paquetes de evidencia en cada punto de control.
             </li>
             <li>
               <strong>Método compartido:</strong> Adoptamos{' '}
@@ -179,7 +179,7 @@ export default function CaseOgticRedlab(): ReactNode {
               <strong>Gobernanza y cadencia:</strong> Instalamos ritmos, stand-ups, revisiones, foros de decisión y KPIs apropiados por etapa
               ligados a resultados de política y servicio.
               <p className="microcopy">
-                Modelo de gobernanza: <strong>RACI</strong> por iniciativa; cadencia <strong>semanal</strong>; <strong>checklist de compuerta</strong> por etapa;
+                Modelo de gobernanza: <strong>RACI</strong> por iniciativa; cadencia <strong>semanal</strong>; <strong>checklist de punto de control</strong> por etapa;
                 <strong> bitácora de decisiones</strong> y <strong>registro de riesgos</strong> para trazabilidad.
               </p>
               <p className="microcopy">
@@ -193,14 +193,14 @@ export default function CaseOgticRedlab(): ReactNode {
                 Línea base de capacidades al inicio, monitoreada trimestralmente contra el árbol de KPI para mostrar ganancias de madurez en el tiempo.
               </p>
               <p className="microcopy">
-                Ritmo operativo: revisiones semanales, verificaciones mensuales de compuerta y snapshots trimestrales de capacidades.
+                Ritmo operativo: revisiones semanales, verificaciones mensuales de punto de control y snapshots trimestrales de capacidades.
               </p>
               <p className="microcopy">
-                SLA: respuesta a revisión de compuerta dentro de cinco días hábiles, con memo de decisión o solicitud de próxima evidencia.
+                SLA: respuesta a revisión de punto de control dentro de cinco días hábiles, con memo de decisión o solicitud de próxima evidencia.
               </p>
             </li>
             <li>
-              <strong>Playbooks y traspaso:</strong> Produjimos guías para cartas de laboratorio, paquetes de evidencia, criterios de compuerta y definiciones
+              <strong>Playbooks y traspaso:</strong> Produjimos guías para cartas de laboratorio, paquetes de evidencia, criterios de punto de control y definiciones
               de roles para preservar la memoria institucional y escalar.
               <p className="microcopy">
                 Paquete de evidencia: problema y supuestos, interesados y JTBD, plan de experimento y resultados, enlaces a artefactos, memo de decisión, siguiente paso.
@@ -230,9 +230,9 @@ export default function CaseOgticRedlab(): ReactNode {
           <h2 id="outcomes-title">Resultados</h2>
           <ul>
             <li><strong>Laboratorios puestos en marcha:</strong> Siete laboratorios de innovación co-creados y alineados a un método y cadencia comunes, al corte de septiembre 2025.</li>
-            <li><strong>Decisiones más rápidas:</strong> Las revisiones de compuerta y los responsables con rendición de cuentas redujeron la latencia de decisión entre las entidades participantes.</li>
+            <li><strong>Decisiones más rápidas:</strong> Las revisiones de punto de control y los responsables con rendición de cuentas redujeron la latencia de decisión entre las entidades participantes.</li>
             <li><strong>Ciclos más cortos:</strong> Los proyectos prioritarios pasaron de ideas a pilotos con evidencia auditable.</li>
-            <li><strong>Playbooks reutilizables:</strong> Cartas, criterios de compuerta y plantillas de evidencia estandarizan cómo avanza el trabajo.</li>
+            <li><strong>Playbooks reutilizables:</strong> Cartas, criterios de punto de control y plantillas de evidencia estandarizan cómo avanza el trabajo.</li>
             <li><strong>Mejora de capacidad:</strong> Los equipos practicaron entrega guiada por evidencia, aumentando confianza y alineación.</li>
           </ul>
           <p className="microcopy">
@@ -295,7 +295,7 @@ flowchart TB
             </article>
             <article className="card" aria-labelledby="cta-path-title">
               <h3 id="cta-path-title">Ruta recomendada</h3>
-              <p>Empieza pequeño: Llamada de descubrimiento → ClarityScan → Piloto Compuerta 1.</p>
+              <p>Empieza pequeño: Llamada de descubrimiento → ClarityScan → Piloto Punto de control 1.</p>
             </article>
             <article className="card" aria-labelledby="cta-related-title">
               <h3 id="cta-related-title">Servicios relacionados</h3>
@@ -303,9 +303,9 @@ flowchart TB
                 <li><Link to="/services/innovation-maturity">Programas, IMM-P®</Link></li>
                 <li><Link to="/services/clarityscan">Diagnósticos, ClarityScan®</Link></li>
               </ul>
-              <p>Mira más ejemplos en casos de éxito.</p>
+              <p>Mira más ejemplos en casos de estudio.</p>
               <div className="ctaCardButtons">
-                <Link to="/case-studies" className="buttonSecondary">Casos de éxito</Link>
+                <Link to="/case-studies" className="buttonSecondary">Casos de estudio</Link>
               </div>
             </article>
           </div>

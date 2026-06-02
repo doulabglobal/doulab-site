@@ -152,7 +152,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                     data-section="wwu"
                                     data-step="cards"
                                 >
-                                    Inicia un sprint de taller →
+                                    Agenda un sprint de taller →
                                 </Link>
                             </div>
                         </article>
@@ -307,7 +307,7 @@ export default function WorkWithUsPage(): JSX.Element {
                                 data-section="wwu"
                                 data-step="final"
                             >
-                                Comienza con ClarityScan®
+                                Empieza con ClarityScan®
                             </Link>
                             <Link
                                 to="https://booking.doulab.net/discovery"

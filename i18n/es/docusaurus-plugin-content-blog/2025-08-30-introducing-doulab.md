@@ -161,7 +161,7 @@ Sí. Hemos adaptado MCF + IMM para contextos públicos (por ejemplo, **RedLab**)
 
 ---
 
-## Comienza aquí
+## Empieza aquí
 
 ¿Prefieres pruebas antes que planes? **[Obtén tu línea base con ClarityScan®](/services/clarityscan)** y ve exactamente dónde enfocarte.  
 ¿Prefieres una conversación? **[Agenda una llamada de descubrimiento](https://booking.doulab.net/discovery)** y mapearemos objetivos, restricciones y un camino a la medida.

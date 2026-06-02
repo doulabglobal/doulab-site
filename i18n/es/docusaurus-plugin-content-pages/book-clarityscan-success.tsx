@@ -53,7 +53,7 @@ export default function BookClarityScanSuccessPage() {
         >
           <h2 id="step-2-heading">Paso 2 de 2: agenda tu sesión</h2>
           <p>
-            Elige un horario que te funcione en Microsoft Bookings. La página de agendamiento se abre en una nueva pestaña.
+            Elige un horario que te funcione en Google Calendar. La página de agendamiento se abre en una nueva pestaña.
           </p>
           <p>
             <a

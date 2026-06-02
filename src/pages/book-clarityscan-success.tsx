@@ -53,7 +53,7 @@ export default function BookClarityScanSuccessPage() {
         >
           <h2 id="step-2-heading">Step 2 of 2: schedule your session</h2>
           <p>
-            Choose a time that works for you on Microsoft Bookings. The scheduling page opens in a new tab.
+            Choose a time that works for you on Google Calendar. The scheduling page opens in a new tab.
           </p>
           <p>
             <a

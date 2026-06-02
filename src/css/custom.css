@@ -274,6 +274,17 @@ article a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):n
     text-underline-offset: 2px;
 }
 
+/* G-9 (2026-06-02, feedback_a11y_prose_link_underline): A11y carve-out from F-1.
+   Inline prose links inside body <p> elements ALWAYS underline, even at rest.
+   Audit-2026-07 role 19: brand indigo (#38249a) on dark body fails WCAG 1.4.1
+   when color is the only affordance. Buttons / cardCtas / cardLinks keep the
+   F-1 hover-only rule. Hover state inherits from F-1 above. */
+main p a:not(.button):not(.cardCta):not(.buttonPrimary):not(.buttonSecondary):not(.cardLink) {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
 .section {
     margin: 3rem auto;
     max-width: 1200px;

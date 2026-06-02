@@ -48,7 +48,7 @@ export default function ServicesPage(): ReactNode {
                     height={400}
                     primaryCta={{ to: CLARITYSCAN_CHECKOUT_URL, label: 'Agenda un ClarityScan® en línea', dataCta: 'cta.services.hero.book_clarityscan_online', external: true }}
                     secondaryCta={{ to: '/services/clarityscan', label: 'Explora ClarityScan', dataCta: 'cta.services.hero.explore_clarityscan' }}
-                    ctaNote="ClarityScan Nivel 1 se reserva en línea por CHF 150. Los programas y talleres se definen en alcance durante una llamada de descubrimiento."
+                    ctaNote="ClarityScan Nivel 1 se reserva en línea por CHF 150. Los programas y talleres se definen en alcance durante una llamada de descubrimiento. Facturado en CHF; verás el equivalente local al pagar."
                     id="services-hero"
                     ariaLabelledbyId="services-hero-title"
                     eager
@@ -74,6 +74,7 @@ export default function ServicesPage(): ReactNode {
                                 <li>Nivel 1 Snapshot: CHF 150, reservable en línea</li>
                                 <li>Nivel 2 Diagnóstico y Nivel 3 Auditoría: por alcance</li>
                             </ul>
+                            <p className="microcopy">Facturado en CHF; verás el equivalente local al pagar.</p>
                             <div className={`cardFooter ${'pages-b4-p1__cardFooterRow'}`}>
                                 <Link to="/services/clarityscan" className="cardCta" data-cta="cta.services.card.diagnostics" aria-label="Explora los niveles de ClarityScan">
                                     Explora los niveles →
@@ -94,8 +95,8 @@ export default function ServicesPage(): ReactNode {
                                 <li>Facilitación de decisiones y hoja de ruta</li>
                             </ul>
                             <div className="cardFooter">
-                                <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.services.card.workshops" aria-label="Inicia un sprint de taller con talleres a medida">
-                                    Inicia un sprint de taller →
+                                <Link to="/services/custom-workshops" className="cardCta" data-cta="cta.services.card.workshops" aria-label="Agenda un sprint de taller con talleres a medida">
+                                    Agenda un sprint de taller →
                                 </Link>
                             </div>
                         </article>

@@ -19,7 +19,7 @@ hide_table_of_contents: false
 image: /img/blog/2026/2026-01-19-coordination-threshold-hero.png
 ---
 
-> **TL;DR** — Muchos ecosistemas de startups generan creciente actividad pero les cuesta acumular resultados con el tiempo. Una vez que los ecosistemas alcanzan cierta escala, la **capacidad de coordinación, los arreglos de gobernanza y la madurez en innovación** se vuelven restricciones vinculantes. Sin aprendizaje compartido, lógica de progresión y continuidad institucional, los resultados se reinician entre cohortes en lugar de acumularse a través de ellas.
+> **TL;DR**: Muchos ecosistemas de startups generan creciente actividad pero les cuesta acumular resultados con el tiempo. Una vez que los ecosistemas alcanzan cierta escala, la **capacidad de coordinación, los arreglos de gobernanza y la madurez en innovación** se vuelven restricciones vinculantes. Sin aprendizaje compartido, lógica de progresión y continuidad institucional, los resultados se reinician entre cohortes en lugar de acumularse a través de ellas.
 
 {/* truncate */}
 

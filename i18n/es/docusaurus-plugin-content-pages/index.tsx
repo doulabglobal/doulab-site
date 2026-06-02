@@ -203,6 +203,7 @@ function ServicesSection() {
           <Search className="cardIcon" aria-hidden={true} />
           <h3>Diagnósticos, sabe dónde estás parado</h3>
           <p>Mapea la madurez en innovación e identifica brechas con una línea base basada en evidencia. Empieza con ClarityScan® Nivel 1 (CHF 150) o define el alcance de un Nivel 2 o Nivel 3 más profundo.</p>
+          <p className="microcopy">Facturado en CHF; verás el equivalente local al pagar.</p>
           <div className="cardFooter">
             <Link
               to="/services/clarityscan"

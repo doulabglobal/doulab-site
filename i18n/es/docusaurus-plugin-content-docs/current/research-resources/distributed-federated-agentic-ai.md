@@ -325,7 +325,7 @@ Esto no es solo una arquitectura técnica. Es un programa de entrega que usa **M
 
 ### 11) Conclusión
 
-No automatizamos instituciones. Las equipamos. Un diseño federado y agéntico permite a los líderes adoptar IA manteniendo control, transparencia y legitimidad. Comienza con una federación pequeña, prueba valor en semanas, luego crece con confianza.
+No automatizamos instituciones. Las equipamos. Un diseño federado y agéntico permite a los líderes adoptar IA manteniendo control, transparencia y legitimidad. Empieza con una federación pequeña, prueba valor en semanas, luego crece con confianza.
 
 ---
 
@@ -357,10 +357,10 @@ No automatizamos instituciones. Las equipamos. Un diseño federado y agéntico p
 
 ## Preguntas de investigación e hipótesis
 
-- RQ1: ¿Aumenta un modelo federado y con compuertas de evidencia la confianza y rendición de cuentas frente a operaciones centralizadas de IA?
+- RQ1: ¿Aumenta un modelo federado y con puntos de control de evidencia la confianza y rendición de cuentas frente a operaciones centralizadas de IA?
 - RQ2: ¿Reduce la maduración por etapas (MCF 2.2 x IMM-P®) el riesgo operativo y de gobernanza durante el escalamiento?
-- RQ3: ¿Reducen las compuertas con humano en el bucle más los paquetes de evidencia los resultados dañinos y el sesgo sin bloquear la entrega?
-- H1: Los nodos con compuertas de evidencia y pruebas de conformidad mostrarán tasas de incidentes más bajas y recuperación más rápida que la línea base.
+- RQ3: ¿Reducen las puntos de control con humano en el bucle más los paquetes de evidencia los resultados dañinos y el sesgo sin bloquear la entrega?
+- H1: Los nodos con puntos de control de evidencia y pruebas de conformidad mostrarán tasas de incidentes más bajas y recuperación más rápida que la línea base.
 - H2: La transparencia más las apelaciones mejora los puntajes de confianza del usuario y reduce las tasas de disputa.
 
 ## Metodología
@@ -380,7 +380,7 @@ No automatizamos instituciones. Las equipamos. Un diseño federado y agéntico p
 ## Análisis comparativo
 
 - Comparar contra operaciones de IA centralizadas y federaciones no gestionadas: confianza/apelaciones, tasas de incidentes, latencia, costo y riesgo de cambio.
-- Trade-offs: sobrecarga de gobernanza añadida vs. riesgo reducido de incidentes/cumplimiento; impactos de latencia de las compuertas de evidencia vs. ganancias de rendición de cuentas.
+- Trade-offs: sobrecarga de gobernanza añadida vs. riesgo reducido de incidentes/cumplimiento; impactos de latencia de las puntos de control de evidencia vs. ganancias de rendición de cuentas.
 - Guía: cuándo preferir lo centralizado (prototipos de bajo riesgo) vs. federado (regulado, multi-actor, contextos de alta confianza).
 
 ## Amenazas a la validez y limitaciones
@@ -407,14 +407,14 @@ No automatizamos instituciones. Las equipamos. Un diseño federado y agéntico p
 
 ## Repetibilidad e implementación de referencia
 
-- Artefactos: playbooks, listas de comprobación de compuertas, esquemas de paquetes de evidencia, pruebas de conformidad, archivos fuente de diagramas, configuraciones de ejemplo.
+- Artefactos: playbooks, listas de comprobación de puntos de control, esquemas de paquetes de evidencia, pruebas de conformidad, archivos fuente de diagramas, configuraciones de ejemplo.
 - Ruta de referencia: federación mínima (DID/VC, log de auditoría, dashboard de SLO, runbook) -> agregar BPM, vault y pagos como módulos opcionales.
 - Pasos de reproducción: publicar configuraciones versionadas, datos de prueba, muestras anonimizadas de evidencia; documentar dependencias y scripts de configuración.
 
 ## Supuestos y fuera de alcance
 
 - Los nodos participantes pueden operar DID/VC, logging de auditoría y monitoreo de SLO/SLA.
-- Existe patrocinio ejecutivo para las compuertas de gobernanza y la publicación de evidencia.
+- Existe patrocinio ejecutivo para las puntos de control de gobernanza y la publicación de evidencia.
 - Sin prescripción de proveedores de nube, LLMs o rieles de pago específicos; estos son pluggables.
 - Los detalles específicos de transferencia transfronteriza de datos están fuera de alcance; aplicar reglas locales de residencia.
 
@@ -423,33 +423,33 @@ No automatizamos instituciones. Las equipamos. Un diseño federado y agéntico p
 | Riesgo | Mitigación | Artefacto de evidencia | Dueño |
 | --- | --- | --- | --- |
 | Compromiso de identidad o credenciales | Llaves de quórum, listas de revocación, WebAuthn/FIDO para admins | Log de rotación de llaves, log de revocación | Seguridad |
-| Sesgo o comportamiento inseguro del modelo | Arnés de evaluación, pruebas de sesgo, compuerta humana, playbook de rollback | Reporte de evaluación, pruebas de sesgo, aprobaciones de compuerta | Seguridad de IA |
+| Sesgo o comportamiento inseguro del modelo | Arnés de evaluación, pruebas de sesgo, punto de control humana, playbook de rollback | Reporte de evaluación, pruebas de sesgo, aprobaciones de punto de control | Seguridad de IA |
 | Fuga de datos/violación de residencia | Acceso de privilegio mínimo, cifrado, minimización de datos | Logs de acceso, verificaciones DP/política, configuración de vault | Privacidad |
 | No conformidad de la federación | Pruebas de conformidad, playbook compartido, auditorías periódicas | Reporte de conformidad, hallazgos de auditoría | Arquitectura |
 | Brechas de fiabilidad del servicio | SLOs/SLIs, runbooks, simulacros de caos/recuperación | Dashboard de SLO, reportes de simulacro, RCAs de incidentes | SRE |
-| Drift de gobernanza | Revisiones de compuerta, comité de supervisión, métricas publicadas | Actas de compuerta, readouts de supervisión, reporte de OKR | PMO/Gobernanza |
+| Drift de gobernanza | Revisiones de punto de control, comité de supervisión, métricas publicadas | Actas de punto de control, readouts de supervisión, reporte de OKR | PMO/Gobernanza |
 
 ## Lista de comprobación de UX y transparencia
 
 - Resúmenes en lenguaje sencillo para aprobaciones/denegaciones y apelaciones.
-- Notificaciones al usuario sobre resultados de compuerta, con marcas de tiempo y enlaces a paquetes de evidencia.
+- Notificaciones al usuario sobre resultados de punto de control, con marcas de tiempo y enlaces a paquetes de evidencia.
 - Accesibilidad: contraste legible, jerarquía de encabezados y texto alternativo para diagramas.
 - Impugnabilidad: rutas claras de apelación y puntos de contacto.
 - Observabilidad para humanos: visor de rastro de auditoría con filtros (tiempo, agente, nodo).
 - Resúmenes de cara al público donde sea apropiado: métricas y resultados sanitizados.
 
-## Evidencia mínima para lanzar (alineada a compuertas)
+## Evidencia mínima para lanzar (alineada a puntos de control)
 
-- Compuerta 0-1: Reporte de preparación, matriz OKR, clasificación de datos, registro inicial de riesgos.
-- Compuerta 1-2: Problem Canvas validado, Mapa de Contexto, Paquete de Evidencia v1, memo de decisión.
-- Compuerta 2-3: Paquete de Evidencia v2, runbook v1, revisión de seguridad/privacidad, resultados de piloto, rollback probado.
-- Compuerta 3-4: Dashboard de SLO en vivo, reporte de red team, pruebas de conformidad, simulacro de respuesta a incidentes.
-- Compuerta 4-5: Playbook de política, dashboard de conformidad, plan de escalamiento, modelo de costo/TCO.
-- Compuerta 5-6: Dashboard de impacto, plan del siguiente ciclo, brief de prospectiva, log de lecciones aprendidas.
+- Punto de control 0-1: Reporte de preparación, matriz OKR, clasificación de datos, registro inicial de riesgos.
+- Punto de control 1-2: Problem Canvas validado, Mapa de Contexto, Paquete de Evidencia v1, memo de decisión.
+- Punto de control 2-3: Paquete de Evidencia v2, runbook v1, revisión de seguridad/privacidad, resultados de piloto, rollback probado.
+- Punto de control 3-4: Dashboard de SLO en vivo, reporte de red team, pruebas de conformidad, simulacro de respuesta a incidentes.
+- Punto de control 4-5: Playbook de política, dashboard de conformidad, plan de escalamiento, modelo de costo/TCO.
+- Punto de control 5-6: Dashboard de impacto, plan del siguiente ciclo, brief de prospectiva, log de lecciones aprendidas.
 
 ## Glosario
 
-- Evidence Pack: un paquete de artefactos (logs, decisiones, métricas) atados a una compuerta.
+- Evidence Pack: un paquete de artefactos (logs, decisiones, métricas) atados a una punto de control.
 - Gate: un punto de control de gobernanza mapeado a las etapas IMM-P® y MCF.
 - SLO/SLI: objetivo/indicador de nivel de servicio para fiabilidad operativa.
 - Vigia Futura: observatorio de prospectiva que alimenta señales a Pre-Discovery.

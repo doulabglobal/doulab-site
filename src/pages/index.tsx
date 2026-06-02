@@ -202,6 +202,7 @@ function ServicesSection() {
           <Search className="cardIcon" aria-hidden={true} />
           <h3>Diagnostics, Know Where You Stand</h3>
           <p>Map innovation maturity and pinpoint gaps with an evidence-based baseline. Start with ClarityScan® Tier 1 (CHF 150) or scope a deeper Tier 2 / Tier 3 engagement.</p>
+          <p className="microcopy">Billed in CHF; local equivalent shown at checkout.</p>
           <div className="cardFooter">
             <Link
               to="/services/clarityscan"

@@ -117,3 +117,25 @@
 .stateLater { opacity: 1; }
 .stateLater .label { font-weight: 500; }
 .stateLater .pill { background: var(--dl-slate, #484854); }
+
+/* F-2 / dark-mode parity: the horizon card background resolves to a dark
+   surface in dark mode, but .label / .body / .initiatives previously kept
+   their light-mode fallbacks (#1f2937 / var(--ifm-color-content)) which
+   rendered nearly invisible on the dark surface. Lift the card surface,
+   border, and text colors so the cards stay legible in dark mode.
+   Reported 2026-06-02 on /services/imm-dt; the same Roadmap component is
+   also used on /services/clarityscan/audit and elsewhere, so the fix
+   lives here in the module rather than per-page. */
+:global([data-theme='dark']) .horizon {
+  background: var(--ifm-background-surface-color, #111318);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: var(--dl-shadow-lg, 0 6px 14px rgba(0, 0, 0, 0.35));
+}
+:global([data-theme='dark']) .title,
+:global([data-theme='dark']) .label {
+  color: var(--ifm-heading-color, #f3f4f6);
+}
+:global([data-theme='dark']) .body,
+:global([data-theme='dark']) .initiatives {
+  color: var(--ifm-color-content, #e5e7eb);
+}

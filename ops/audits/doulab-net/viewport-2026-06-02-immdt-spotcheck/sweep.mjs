@@ -28,6 +28,7 @@ const ANCHORS = [
 ];
 
 const PAGE = { slug: 'services-imm-dt', path: '/services/imm-dt' };
+const THEME = process.argv.find((a) => a.startsWith('--theme='))?.slice('--theme='.length) || 'light';
 const base = 'http://127.0.0.1:4173';
 const outRoot = path.dirname(fileURLToPath(import.meta.url));
 
@@ -41,7 +42,7 @@ const resultsPath = path.join(outRoot, 'results.json');
 async function flushResults() { await writeFile(resultsPath, JSON.stringify(results, null, 2)); }
 
 const browser = await chromium.launch({ headless: true });
-const dir = path.join(outRoot, PAGE.slug);
+const dir = path.join(outRoot, PAGE.slug + (THEME === 'dark' ? '-dark' : ''));
 await mkdir(dir, { recursive: true });
 
 try {
@@ -50,10 +51,16 @@ try {
     const context = await browser.newContext({
       viewport: { width: anchor.width, height: anchor.height },
       deviceScaleFactor: 1,
+      colorScheme: THEME === 'dark' ? 'dark' : 'light',
       userAgent: anchor.width < 500
         ? 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'
         : undefined,
     });
+
+    // Force Docusaurus theme via localStorage before navigation.
+    await context.addInitScript((theme) => {
+      try { localStorage.setItem('theme', theme); } catch {}
+    }, THEME);
 
     const start = Date.now();
     let status = 0;

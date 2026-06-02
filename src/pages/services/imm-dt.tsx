@@ -164,7 +164,10 @@ export default function IMMDTPage(): ReactNode {
               </p>
             </div>
 
-            <div>
+            {/* F-5 pattern: EvidenceMeter spans the full row so it sits BELOW the
+                Radar + MaturityLadder (row 1) instead of competing for a narrow
+                column on row 1, which caused visual overlap reported 2026-06-02. */}
+            <div style={{ gridColumn: '1 / -1' }}>
               <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Phase readiness gate</h3>
               <EvidenceMeter
                 ariaLabel="Example phase readiness meter at 68 out of 100"

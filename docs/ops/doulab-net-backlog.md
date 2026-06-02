@@ -1109,14 +1109,17 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 - Status: RESOLVED (partial; full structural consolidation deferred to a future C3b2 if needed).
 - Commits: pending.
 
-### C3c (NEW, 2026-06-02)
+### C3c (RESOLVED 2026-06-02)
 - Description: Fallback hex parity in `src/components/imm/EvidenceMeter.module.css` and `src/components/imm/MaturityLadder.module.css`.
-- Rationale: 7 module-local `var()` fallback hexes do not match the canonical `:root` token values. Example: `var(--dl-green, #1f9d55)` in MaturityLadder where the canonical token resolves to `#72c53c`; `var(--dl-red, #d64545)` and `var(--dl-amber, #f0b429)` in EvidenceMeter where the canonical tokens are `#dc2626` and `#f59e0b`. If the CSS var ever fails to load (legacy browser, MIME error, etc.) components render with wrong hues. Touches modules — out of C3's "modules untouched" safe-path scope, hence a separate item.
-- Acceptance criteria:
-  - All 7 module fallbacks match the corresponding `:root` token value byte-for-byte.
-  - No selector or rule structure changes in either module.
-- Status: Open.
-- Commits: pending.
+- Resolution: Realigned 6 fallback hexes to match canonical `:root` tokens. EvidenceMeter: `#d64545` → `#dc2626` (red), `#f0b429` → `#f59e0b` (amber), `#1f9d55` → `#72c53c` (green). MaturityLadder: 3 instances of `#1f9d55` → `#72c53c` (green) via replace_all. Indigo fallbacks (`#38249a`) already matched. No selector or rule structure changes.
+- Status: RESOLVED.
+- Commits: pending (polish wave).
+
+### SEC-104 (RESOLVED 2026-06-02) — Trusted Types adoption (Report-Only monitoring)
+- Description: Add `require-trusted-types-for 'script'` to the Report-Only CSP in `static/_headers` per the LOG-PENDING-06 monitoring follow-up.
+- Resolution: Added the directive to the existing `Content-Security-Policy-Report-Only` header. Report-Only means browsers log violations to DevTools / CF logs but do not block; this lets us inventory which DOM-XSS sinks (`Element.innerHTML`, `eval`-class, `script.src` from string) fire in Docusaurus + our code before promoting to enforced CSP.
+- Status: RESOLVED (monitoring); promote to enforced once violations stabilize at zero.
+- Commits: pending (polish wave).
 
 ### C4
 - Description: Accessibility micro-fixes.

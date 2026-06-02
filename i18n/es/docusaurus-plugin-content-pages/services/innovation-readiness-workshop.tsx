@@ -24,7 +24,7 @@ export default function InnovationReadinessWorkshopPage() {
             </p>
             <p className={'pages-services-innovation-readiness-workshop__heroBody'}>
               Un taller híbrido de 8 horas que integra prospectiva, cultura, el
-              MicroCanvas® Framework 2.1, IMM-P® y gobernanza de células de trabajo
+              MicroCanvas® Framework 2.2, IMM-P® y gobernanza de células de trabajo
               para que tus iniciativas de innovación se vuelvan predecibles,
               alineadas y basadas en evidencia.
             </p>
@@ -222,7 +222,7 @@ export default function InnovationReadinessWorkshopPage() {
                     y de equipo sobre significado, comportamientos y resiliencia.
                   </li>
                   <li>
-                    <strong>MicroCanvas® Framework 2.1</strong> - trabajo práctico
+                    <strong>MicroCanvas® Framework 2.2</strong> - trabajo práctico
                     con problema, cliente, valor, fricción y factibilidad.
                   </li>
                 </ul>
@@ -320,7 +320,7 @@ export default function InnovationReadinessWorkshopPage() {
                 </p>
               </div>
               <div className={'pages-services-innovation-readiness-workshop__card'}>
-                <h3>MicroCanvas® Framework 2.1</h3>
+                <h3>MicroCanvas® Framework 2.2</h3>
                 <p>
                   Para estructurar problemas, insights de cliente, valor, fricción y
                   factibilidad de manera consistente a través de las iniciativas.
@@ -480,7 +480,7 @@ export default function InnovationReadinessWorkshopPage() {
               y gobernanza de ejecución.
             </p>
             <p className={'pages-services-innovation-readiness-workshop__bodyText'}>
-              Somos los autores del MicroCanvas® Framework 2.1 y del Programa IMM-P®
+              Somos los autores del MicroCanvas® Framework 2.2 y del Programa IMM-P®
               de Madurez y Metodología en Innovación, y trabajamos con organizaciones
               públicas y privadas para convertir la innovación en una capacidad
               repetible y basada en evidencia. Este taller es facilitado personalmente

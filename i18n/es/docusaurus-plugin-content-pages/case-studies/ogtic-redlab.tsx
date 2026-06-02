@@ -229,7 +229,7 @@ export default function CaseOgticRedlab(): ReactNode {
           <p id="outcomes-desc" className="sr-only">Qué cambió, cómo mejoraron las decisiones y crecimiento de capacidades.</p>
           <h2 id="outcomes-title">Resultados</h2>
           <ul>
-            <li><strong>Laboratorios puestos en marcha:</strong> Siete laboratorios de innovación co-creados y alineados a un método y cadencia comunes, al corte de septiembre 2025.</li>
+            <li><strong>Laboratorios puestos en marcha:</strong> Siete laboratorios de innovación cocreados y alineados a un método y cadencia comunes, al corte de septiembre 2025.</li>
             <li><strong>Decisiones más rápidas:</strong> Las revisiones de punto de control y los responsables con rendición de cuentas redujeron la latencia de decisión entre las entidades participantes.</li>
             <li><strong>Ciclos más cortos:</strong> Los proyectos prioritarios pasaron de ideas a pilotos con evidencia auditable.</li>
             <li><strong>Playbooks reutilizables:</strong> Cartas, criterios de punto de control y plantillas de evidencia estandarizan cómo avanza el trabajo.</li>
@@ -260,20 +260,20 @@ export default function CaseOgticRedlab(): ReactNode {
           <Admonition type="tip" title="Diagrama: Flujo del sistema">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
-    A[Problem Context] --> B[Evidence / Signals]
-    B --> C[Intervention: Establish Cohort Program]
-    C --> D[Enablers: Governance + Playbooks]
-    D --> E[Capability: Repeatable Lab Delivery]
-    E --> F[Outcomes: Clearer Decisions + Reuse]
+    A[Contexto del problema] --> B[Evidencia / Señales]
+    B --> C[Intervención, establecer programa de cohortes]
+    C --> D[Habilitadores, gobernanza y playbooks]
+    D --> E[Capacidad, entrega de laboratorio repetible]
+    E --> F[Resultados, decisiones más claras y reutilización]
 `} />
           </Admonition>
           <Admonition type="tip" title="Diagrama: Progresión de capacidades">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
-    A[Before: Isolated Labs]
-    B[Shared MCF Method]
-    C[IMM-P® Gate Cadence]
-    D[After: Network Delivery]
+    A[Antes, laboratorios aislados]
+    B[Método MCF compartido]
+    C[Cadencia de punto de control IMM-P®]
+    D[Después, entrega en red]
 `} />
           </Admonition>
         </section>

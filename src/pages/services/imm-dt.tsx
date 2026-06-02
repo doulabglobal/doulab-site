@@ -165,7 +165,7 @@ export default function IMMDTPage(): ReactNode {
             </div>
 
             <div>
-              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>Phase readiness gate</h3>
+              <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Phase readiness gate</h3>
               <EvidenceMeter
                 ariaLabel="Example phase readiness meter at 68 out of 100"
                 score={68}

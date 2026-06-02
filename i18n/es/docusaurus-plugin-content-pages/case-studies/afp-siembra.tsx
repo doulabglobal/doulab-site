@@ -28,7 +28,7 @@ export default function CaseAfpSiembra(): ReactNode {
     url: localizedUrl('/case-studies/afp-siembra'),
     inLanguage: 'es',
     description:
-      'De la estrategia a la entrega repetible: un producto de ahorro digital y un laboratorio de innovación co-creados.',
+      'De la estrategia a la entrega repetible: un producto de ahorro digital y un laboratorio de innovación cocreados.',
     image: localizedUrl('/img/social/og-afp-siembra.jpg'),
     about: {
       '@type': 'Organization',
@@ -67,14 +67,14 @@ export default function CaseAfpSiembra(): ReactNode {
   return (
     <Layout
       title="AFP Siembra: Alcanza y SILAB | Caso de éxito"
-      description="De la estrategia a la entrega repetible: un producto de ahorro digital y un laboratorio de innovación co-creados."
+      description="De la estrategia a la entrega repetible: un producto de ahorro digital y un laboratorio de innovación cocreados."
     >
       <PageMetadata slug="/case-studies/afp-siembra" ogImage="/img/social/og-afp-siembra.jpg" />
       <Head>
         <meta property="og:title" content="AFP Siembra: Alcanza y SILAB | Caso de éxito" />
         <meta
           property="og:description"
-          content="De la estrategia a la entrega repetible: un producto de ahorro digital y un laboratorio de innovación co-creados."
+          content="De la estrategia a la entrega repetible: un producto de ahorro digital y un laboratorio de innovación cocreados."
         />
         <meta property="og:image:alt" content="AFP Siembra, producto Alcanza y laboratorio de innovación SILAB." />
         <meta name="twitter:card" content="summary_large_image" />
@@ -233,20 +233,20 @@ export default function CaseAfpSiembra(): ReactNode {
           <Admonition type="tip" title="Diagrama: Flujo del sistema">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
-    A[Problem Context] --> B[Evidence / Signals]
-    B --> C[Intervention: Establish SILAB + Digital Launch]
-    C --> D[Enablers: Gate Reviews + Evidence Packs]
-    D --> E[Capability: Repeatable Product Delivery]
-    E --> F[Outcomes: Digital Onboarding + Alignment]
+    A[Contexto del problema] --> B[Evidencia / Señales]
+    B --> C[Intervención, establecer SILAB y lanzamiento digital]
+    C --> D[Habilitadores, revisiones de punto de control y paquetes de evidencia]
+    D --> E[Capacidad, entrega de producto repetible]
+    E --> F[Resultados, onboarding digital y alineación]
 `} />
           </Admonition>
           <Admonition type="tip" title="Diagrama: Progresión de capacidades">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
-    A[Before: Ad-hoc Product Delivery]
-    B[MCF Workshops + Evidence Packs]
-    C[IMM-P® Gate Reviews]
-    D[After: SILAB Delivery Cadence]
+    A[Antes, entrega de producto ad hoc]
+    B[Talleres MCF y paquetes de evidencia]
+    C[Revisiones de punto de control IMM-P®]
+    D[Después, cadencia de entrega SILAB]
 `} />
           </Admonition>
         </section>

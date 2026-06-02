@@ -178,10 +178,10 @@ function ProblemSection() {
           <Gauge
             size={20}
             aria-hidden={true}
-            style={{ color: 'var(--dl-green, #2f7a3f)', flexShrink: 0, marginTop: '0.15rem' }}
+            style={{ color: 'var(--dl-green-text, #3f8a1f)', flexShrink: 0, marginTop: '0.15rem' }}
           />
           <span>
-            <strong style={{ color: 'var(--dl-green, #2f7a3f)' }}>What we measure.</strong>{' '}
+            <strong style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>What we measure.</strong>{' '}
             Decision latency, cycle time, signal quality, and capability growth across IMM
             dimensions. No activity counts dressed up as outcomes. Named client deltas are published
             in each case study when consent allows.

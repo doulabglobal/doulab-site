@@ -298,7 +298,7 @@ export default function WorkWithUsPage(): JSX.Element {
                 <section id="get-started" className="section" aria-labelledby="wwu-cta-title">
                     <div className="finalCta">
                         <h2 id="wwu-cta-title">¿Listo para pasar de planes a entregas repetibles?</h2>
-                        <p>Empieza con ClarityScan® o agenda una llamada de descubrimiento. Co-crearemos el camino desde la idea hasta los resultados.</p>
+                        <p>Empieza con ClarityScan® o agenda una llamada de descubrimiento. Cocrearemos el camino desde la idea hasta los resultados.</p>
                         <div className={`heroCtas ${'pages-work-with-us-work-with-us__centeredCtas'}`}>
                             <Link
                                 to="/services/clarityscan"

@@ -20,7 +20,7 @@
 - Cloudflare Pages (hosting, CDN, web analytics).
 - GitHub (source code and CI/CD).
 - Google Calendar appointment links (external scheduling for bookings).
-- Stripe Checkout for payments (if applicable to fixed-fee services).
+- Stripe Checkout for payments on fixed-fee services.
 
 ## Tracking stance
 - Default stance: no non-essential tracking or marketing cookies unless explicitly configured.

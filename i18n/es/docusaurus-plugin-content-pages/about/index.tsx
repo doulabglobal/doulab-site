@@ -141,7 +141,7 @@ export default function AboutPage(): ReactNode {
 
         {/* Proof + outcomes microcopy under hero */}
         <p className={`microcopy ${'pages-b4-p1__microcopyCenterTight'}`}>
-          7 laboratorios co-creados en 2024. Reducimos la latencia de decisiones y el tiempo de ciclo.
+          7 laboratorios cocreados en 2024. Reducimos la latencia de decisiones y el tiempo de ciclo.
         </p>
 
         {/* Purpose */}

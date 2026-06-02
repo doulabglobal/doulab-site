@@ -144,7 +144,7 @@ export default function ClarityScanTier2Page(): ReactNode {
             </div>
 
             <div style={{ gridColumn: '1 / -1' }}>
-              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>Fragmento de hoja de ruta a 90 días</h3>
+              <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Fragmento de hoja de ruta a 90 días</h3>
               <Roadmap
                 ariaLabel="Ejemplo de hoja de ruta de noventa días del Nivel 2 con tres horizontes"
                 horizons={[
@@ -305,7 +305,7 @@ function PriorityMatrix(): ReactNode {
           Esfuerzo (bajo ←)
         </div>
         <div style={{ ...cellBase, borderColor: 'var(--dl-green, #72c53c)' }}>
-          <strong style={{ color: 'var(--dl-green, #72c53c)' }}>Logros rápidos</strong>
+          <strong style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Logros rápidos</strong>
           <p style={{ margin: '0.3rem 0 0', fontSize: '0.9rem' }}>
             Plantilla de memo de decisión. Revisión semanal de portafolio.
           </p>

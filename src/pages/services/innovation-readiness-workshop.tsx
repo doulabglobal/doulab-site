@@ -24,7 +24,7 @@ export default function InnovationReadinessWorkshopPage() {
             </p>
             <p className={'pages-services-innovation-readiness-workshop__heroBody'}>
               An 8-hour hybrid workshop that integrates foresight, culture, the
-              MicroCanvas® Framework 2.1, IMM-P® and work-cell governance so your
+              MicroCanvas® Framework 2.2, IMM-P® and work-cell governance so your
               innovation initiatives become predictable, aligned and
               evidence-based.
             </p>
@@ -222,7 +222,7 @@ export default function InnovationReadinessWorkshopPage() {
                     and team reflection on meaning, behaviors and resilience.
                   </li>
                   <li>
-                    <strong>MicroCanvas® Framework 2.1</strong> - hands-on work
+                    <strong>MicroCanvas® Framework 2.2</strong> - hands-on work
                     with problem, customer, value, friction and feasibility.
                   </li>
                 </ul>
@@ -320,7 +320,7 @@ export default function InnovationReadinessWorkshopPage() {
                 </p>
               </div>
               <div className={'pages-services-innovation-readiness-workshop__card'}>
-                <h3>MicroCanvas® Framework 2.1</h3>
+                <h3>MicroCanvas® Framework 2.2</h3>
                 <p>
                   To structure problems, customer insights, value, friction and
                   feasibility in a consistent way across initiatives.
@@ -480,7 +480,7 @@ export default function InnovationReadinessWorkshopPage() {
               and execution governance.
             </p>
             <p className={'pages-services-innovation-readiness-workshop__bodyText'}>
-              We are the authors of the MicroCanvas® Framework 2.1 and the IMM-P®
+              We are the authors of the MicroCanvas® Framework 2.2 and the IMM-P®
               Innovation Maturity and Methodology Program, and work with public
               and private organizations to turn innovation into a repeatable,
               evidence-based capability. This workshop is facilitated personally

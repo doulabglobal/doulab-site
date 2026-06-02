@@ -96,7 +96,7 @@ export default function CaseStudies(): ReactNode {
         <section className="section" id="featured" aria-labelledby="featured-title">
           <h2 id="featured-title">Proyectos destacados</h2>
           <p className="sectionLead">Ejemplos de cómo los puntos de control, la evidencia y la cadencia impulsan resultados.</p>
-          <p className="microcopy">Evidencia: 7 laboratorios co-creados en 2024.</p>
+          <p className="microcopy">Evidencia: 7 laboratorios cocreados en 2024.</p>
           <CaseStudyCards variant="grid" />
         </section>
 

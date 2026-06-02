@@ -178,10 +178,10 @@ function ProblemSection() {
           <Gauge
             size={20}
             aria-hidden={true}
-            style={{ color: 'var(--dl-green, #2f7a3f)', flexShrink: 0, marginTop: '0.15rem' }}
+            style={{ color: 'var(--dl-green-text, #3f8a1f)', flexShrink: 0, marginTop: '0.15rem' }}
           />
           <span>
-            <strong style={{ color: 'var(--dl-green, #2f7a3f)' }}>Qué medimos.</strong>{' '}
+            <strong style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Qué medimos.</strong>{' '}
             Latencia de decisión, tiempo de ciclo, calidad de la señal y crecimiento de capacidades a
             lo largo de las dimensiones del IMM. Nada de conteos de actividad disfrazados de resultados.
             Los deltas nombrados por cliente se publican en cada caso de estudio cuando el consentimiento

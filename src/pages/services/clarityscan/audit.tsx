@@ -140,7 +140,7 @@ export default function ClarityScanTier3Page(): ReactNode {
             </div>
 
             <div style={{ gridColumn: '1 / -1' }}>
-              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>Phase readiness gauge</h3>
+              <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Phase readiness gauge</h3>
               <EvidenceMeter
                 ariaLabel="Example Tier 3 phase readiness meter at 72 out of 100"
                 score={72}

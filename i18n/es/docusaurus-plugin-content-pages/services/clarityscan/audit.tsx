@@ -140,7 +140,7 @@ export default function ClarityScanTier3Page(): ReactNode {
             </div>
 
             <div style={{ gridColumn: '1 / -1' }}>
-              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>Medidor de preparación por fase</h3>
+              <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Medidor de preparación por fase</h3>
               <EvidenceMeter
                 ariaLabel="Ejemplo de medidor de preparación por fase del Nivel 3 en 72 de 100"
                 score={72}

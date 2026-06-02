@@ -143,7 +143,7 @@ export default function ClarityScanTier2Page(): ReactNode {
             </div>
 
             <div style={{ gridColumn: '1 / -1' }}>
-              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>90-day roadmap snippet</h3>
+              <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>90-day roadmap snippet</h3>
               <Roadmap
                 ariaLabel="Example Tier 2 ninety-day roadmap with three horizons"
                 horizons={[
@@ -304,7 +304,7 @@ function PriorityMatrix(): ReactNode {
           Effort (low ←)
         </div>
         <div style={{ ...cellBase, borderColor: 'var(--dl-green, #72c53c)' }}>
-          <strong style={{ color: 'var(--dl-green, #72c53c)' }}>Quick wins</strong>
+          <strong style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Quick wins</strong>
           <p style={{ margin: '0.3rem 0 0', fontSize: '0.9rem' }}>
             Decision memo template. Weekly portfolio review.
           </p>

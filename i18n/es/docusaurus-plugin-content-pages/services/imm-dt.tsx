@@ -165,7 +165,7 @@ export default function IMMDTPage(): ReactNode {
             </div>
 
             <div>
-              <h3 style={{ color: 'var(--dl-green, #10B981)' }}>Punto de control de preparación por fase</h3>
+              <h3 style={{ color: 'var(--dl-green-text, #3f8a1f)' }}>Punto de control de preparación por fase</h3>
               <EvidenceMeter
                 ariaLabel="Medidor de preparación por fase de ejemplo en 68 sobre 100"
                 score={68}

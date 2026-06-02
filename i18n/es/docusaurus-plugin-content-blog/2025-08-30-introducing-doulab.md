@@ -151,7 +151,7 @@ Estamos publicando **[Distributed Federated Agentic AI](/docs/research-resources
 ## Preguntas frecuentes
 
 **¿Esto es "consultoría"?**  
-Es **instalación de sistemas**: andamiajes de decisión, cadencias operativas y construcción de capacidad. Co-creamos, transferimos e instrumentamos para que tu equipo lo opere.
+Es **instalación de sistemas**: andamiajes de decisión, cadencias operativas y construcción de capacidad. Cocreamos, transferimos e instrumentamos para que tu equipo lo opere.
 
 **¿Qué tan rápido veremos valor?**  
 La mayoría de los equipos obtienen una línea base y acciones focalizadas en **una semana** vía ClarityScan® y/o un taller de un día.

@@ -245,20 +245,20 @@ export default function CaseAlphaInversiones(): ReactNode {
           <Admonition type="tip" title="Diagrama: Flujo del sistema">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
-    A[Problem Context] --> B[Evidence / Signals]
-    B --> C[Intervention: Run IMM-P® Program]
-    C --> D[Enablers: Committee + Gate Reviews]
-    D --> E[Capability: Innovation Pipeline]
-    E --> F[Outcomes: Aligned Decisions + Scalable Delivery]
+    A[Contexto del problema] --> B[Evidencia / Señales]
+    B --> C[Intervención, ejecutar programa IMM-P®]
+    C --> D[Habilitadores, comité y revisiones de punto de control]
+    D --> E[Capacidad, pipeline de innovación]
+    E --> F[Resultados, decisiones alineadas y entrega escalable]
 `} />
           </Admonition>
           <Admonition type="tip" title="Diagrama: Progresión de capacidades">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
-    A[Before: Task-based Execution]
-    B[MCF Training + Workshops]
-    C[IMM-P® Cadence + Governance]
-    D[After: Role-based Delivery]
+    A[Antes, ejecución basada en tareas]
+    B[Capacitación y talleres MCF]
+    C[Cadencia y gobernanza IMM-P®]
+    D[Después, entrega basada en roles]
 `} />
           </Admonition>
         </section>

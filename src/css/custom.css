@@ -71,6 +71,14 @@
     --dl-slate: #484854;
     --dl-amber: #f59e0b;
     --dl-red: #dc2626;
+
+    /* G-9 (2026-06-02, audit-2026-07 role 07): paired *-text tokens for
+       brand colors used as TEXT on light/dark surfaces. Brand fills stay on
+       `--dl-green` etc.; text usages must reference `--dl-green-text` so
+       WCAG 1.4.3 contrast passes. Light-mode value: #3f8a1f ≈ 4.7:1 on
+       white. Dark-mode value re-declared in the [data-theme='dark'] block
+       below. */
+    --dl-green-text: #3f8a1f;
 }
 
 /* F-2 close-out: dark-mode lighter siblings of the IMM primary so links,
@@ -84,6 +92,8 @@
     --ifm-color-primary-light: #9a8bdc;
     --ifm-color-primary-lighter: #a497e0;
     --ifm-color-primary-lightest: #b8aee8;
+    /* G-9 dark-mode lift: #9fd96a ≈ 8.7:1 on Docusaurus dark body. */
+    --dl-green-text: #9fd96a;
 }
 
 body {
@@ -710,11 +720,11 @@ a:hover {
 
 /* Palette (match the original hero image vibe) */
 .immFunnel__bar--p1 { background: #0B5ED7; }
-.immFunnel__bar--p2 { background: #00A6C8; }
+.immFunnel__bar--p2 { background: #00A6C8; color: #0b0f19; }
 .immFunnel__bar--p2b { background: #57C000; color: #0b0f19; }
 .immFunnel__bar--p3 { background: #FF8A00; color: #0b0f19; }
-.immFunnel__bar--p4 { background: #F26B5E; }
-.immFunnel__bar--p5 { background: #F26B5E; }
+.immFunnel__bar--p4 { background: #F26B5E; color: #0b0f19; }
+.immFunnel__bar--p5 { background: #F26B5E; color: #0b0f19; }
 
 /* Typography inside bars */
 .immFunnel__title {

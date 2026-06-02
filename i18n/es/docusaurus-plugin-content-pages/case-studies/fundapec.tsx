@@ -286,20 +286,20 @@ export default function CaseFundapec(): ReactNode {
           <Admonition type="tip" title="Diagrama: Flujo del sistema">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart LR
-    A[Problem Context] --> B[Evidence / Signals]
-    B --> C[Intervention: Relaunch Comunidad Platform]
-    C --> D[Enablers: Governance + Decision Log]
-    D --> E[Capability: Engagement Engine]
-    E --> F[Outcomes: Validated Members + Clearer Decisions]
+    A[Contexto del problema] --> B[Evidencia / Señales]
+    B --> C[Intervención, relanzar plataforma Comunidad]
+    C --> D[Habilitadores, gobernanza y bitácora de decisiones]
+    D --> E[Capacidad, motor de participación]
+    E --> F[Resultados, miembros validados y decisiones más claras]
 `} />
           </Admonition>
           <Admonition type="tip" title="Diagrama: Progresión de capacidades">
             <Mermaid value={`%%{init: {"theme":"neutral","flowchart":{"curve":"linear"},"themeVariables":{"fontSize":"16px"}} }%%
 flowchart TB
-    A[Before: Legacy Registrations]
-    B[Validated Member Base]
-    C[Governed Engagement Cadence]
-    D[After: Sustainable Community Platform]
+    A[Antes, registros legados]
+    B[Base de miembros validados]
+    C[Cadencia de participación gobernada]
+    D[Después, plataforma de comunidad sostenible]
 `} />
           </Admonition>
         </section>

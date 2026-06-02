@@ -1028,6 +1028,11 @@ a:hover {
         padding: .75rem 1rem
     }
 
+    [data-theme='dark'] .faqGrid details {
+        background: var(--ifm-background-surface-color);
+        border-color: rgba(255, 255, 255, 0.12);
+    }
+
     .faqGrid summary {
         cursor: pointer;
         font-weight: 600
@@ -2137,6 +2142,36 @@ html[data-theme='dark'] .mermaid svg .note {
   margin-top: 0.75rem;
 }
 
+/* Dark-mode parity for innovation-readiness-workshop. Page-level CSS originally
+   hardcoded #ffffff page + section backgrounds and #ffffff card surfaces with
+   no dark counterparts, so every section below the hero rendered as light
+   surfaces with light text on the dark page background. Reported 2026-06-02
+   dark-mode audit. */
+[data-theme='dark'] .pages-services-innovation-readiness-workshop__page {
+  background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .pages-services-innovation-readiness-workshop__section {
+  background: var(--ifm-background-color);
+}
+
+[data-theme='dark'] .pages-services-innovation-readiness-workshop__sectionAlt {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .pages-services-innovation-readiness-workshop__sectionCta {
+  background: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .pages-services-innovation-readiness-workshop__card {
+  background: var(--ifm-background-surface-color);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+[data-theme='dark'] .pages-services-innovation-readiness-workshop__typicalAgenda {
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+
 
 /* ---- migrated from pages/vigia-futura/vigia-futura.module.css ---- */
 .pages-vigia-futura-vigia-futura__subnav {
@@ -2447,6 +2482,11 @@ html[data-theme='dark'] .mermaid svg .note {
         border: 1px solid var(--dl-border);
         border-radius: .5rem;
         padding: .75rem 1rem;
+    }
+
+    [data-theme='dark'] .pages-work-with-us-index__faqGrid details {
+        background: var(--ifm-background-surface-color);
+        border-color: rgba(255, 255, 255, 0.12);
     }
 
     .pages-work-with-us-index__faqGrid summary {

@@ -1,0 +1,254 @@
+[
+  {
+    "slug": "home",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 1048
+  },
+  {
+    "slug": "home",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 961
+  },
+  {
+    "slug": "services",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 876
+  },
+  {
+    "slug": "services",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 843
+  },
+  {
+    "slug": "services-clarityscan",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 981
+  },
+  {
+    "slug": "services-clarityscan",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 970
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 973
+  },
+  {
+    "slug": "services-clarityscan-diagnostic",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 952
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 984
+  },
+  {
+    "slug": "services-clarityscan-audit",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 950
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 1097
+  },
+  {
+    "slug": "services-innovation-maturity",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 1013
+  },
+  {
+    "slug": "services-imm-dt",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 990
+  },
+  {
+    "slug": "services-imm-dt",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 962
+  },
+  {
+    "slug": "services-diagnostics",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 893
+  },
+  {
+    "slug": "services-diagnostics",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 863
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 883
+  },
+  {
+    "slug": "services-coaching-mentoring",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 878
+  },
+  {
+    "slug": "services-custom-workshops",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 919
+  },
+  {
+    "slug": "services-custom-workshops",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 890
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 1116
+  },
+  {
+    "slug": "services-innovation-readiness-workshop",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 1010
+  },
+  {
+    "slug": "case-studies",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 879
+  },
+  {
+    "slug": "case-studies",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 851
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 4668
+  },
+  {
+    "slug": "case-studies-afp-siembra",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 1970
+  },
+  {
+    "slug": "about",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 847
+  },
+  {
+    "slug": "about",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 1909
+  },
+  {
+    "slug": "contact",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 863
+  },
+  {
+    "slug": "contact",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 793
+  },
+  {
+    "slug": "work-with-us",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 874
+  },
+  {
+    "slug": "work-with-us",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 862
+  },
+  {
+    "slug": "vigia-futura",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 1002
+  },
+  {
+    "slug": "vigia-futura",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 953
+  },
+  {
+    "slug": "insights",
+    "anchor": "1280x800-desktop",
+    "status": 200,
+    "captured": true,
+    "ms": 889
+  },
+  {
+    "slug": "insights",
+    "anchor": "390x844-mobile",
+    "status": 200,
+    "captured": true,
+    "ms": 846
+  }
+]

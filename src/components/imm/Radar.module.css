@@ -148,3 +148,23 @@
   stroke: var(--ifm-color-emphasis-500);
   opacity: 0.85;
 }
+
+/* Dark-mode readout text: title, axis labels, label scores, caption, and
+   legend previously inherited light-mode #1f2937 / #4b5563 fallbacks which
+   rendered dark-on-dark. Lift to bright values. */
+[data-theme='dark'] .title {
+  color: var(--ifm-heading-color, #f3f4f6);
+}
+
+[data-theme='dark'] .label {
+  fill: var(--ifm-color-content, #e5e7eb);
+}
+
+[data-theme='dark'] .labelScore {
+  fill: var(--ifm-color-emphasis-500, #c7cad1);
+}
+
+[data-theme='dark'] .caption,
+[data-theme='dark'] .legend {
+  color: var(--ifm-color-emphasis-400, #d1d5db);
+}

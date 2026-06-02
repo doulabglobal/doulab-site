@@ -123,3 +123,21 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
+
+/* Dark-mode parity: pillar body previously inherited light-mode #1f2937
+   fallback, rendering nearly invisible on the dark card surface. Lift body
+   color + card surface + border. Caps (colored headers) stay brand-true.
+   Reported 2026-06-02 audit; affects IMM-P, IMM-DT, ClarityScan, and any
+   page that renders <Pillars>. */
+:global([data-theme='dark']) .pillar {
+  background: var(--ifm-background-surface-color, #111318);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+:global([data-theme='dark']) .body {
+  color: var(--ifm-color-content, #e5e7eb);
+}
+
+:global([data-theme='dark']) .foundationCaption {
+  color: var(--ifm-color-emphasis-500, #c7cad1);
+}

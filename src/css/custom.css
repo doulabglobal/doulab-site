@@ -1152,14 +1152,9 @@ a:hover {
     border-top-color: rgba(255,255,255,.12)
 }
 
-:is(html.theme-dark, html[data-theme='dark']) .sectionLead, :is(html.theme-dark, html[data-theme='dark']) .heroText {
-    color: #e5e7eb
-}
-
-:is(html.theme-dark, html[data-theme='dark']) .section p, :is(html.theme-dark, html[data-theme='dark']) .card p, :is(html.theme-dark, html[data-theme='dark']) .card li {
-    color: #e5e7eb
-}
-
+/* C3b: .sectionLead / .heroText / .section p / .card p / .card li dark-mode
+   color rules previously declared here were fully shadowed by the !important
+   refinement block below (~line 1290). Removed; behavior preserved. */
 :is(html.theme-dark, html[data-theme='dark']) .card h3, :is(html.theme-dark, html[data-theme='dark']) .card h4 {
     color: #fff
 }
@@ -1181,34 +1176,9 @@ a:hover {
     color: var(--dl-green)
 }
 
-/* Dark-mode: final CTA + secondary buttons */
-:is(html.theme-dark, html[data-theme='dark']) .finalCta,
-:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-finalCta,
-:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-finalCta {
-    background: linear-gradient(180deg,#0f1220 0%,#0b0e19 100%);
-    border-color: rgba(255,255,255,.12);
-    box-shadow: none
-}
-
-:is(html.theme-dark, html[data-theme='dark']) .buttonSecondary,
-:is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary {
-    color: #e5e7eb;
-    border-color: rgba(255,255,255,.24);
-    background: transparent !important
-}
-
-    :is(html.theme-dark, html[data-theme='dark']) .buttonSecondary:hover,
-    :is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary:hover {
-        background: #1a1d26
-    }
-
-/* Docs dark-mode card fix */
-:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-cards > li,
-:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-cards > li {
-    background: #111318;
-    border-color: rgba(255,255,255,.12);
-    box-shadow: none
-}
+/* C3b: dark-mode .finalCta / .buttonSecondary / .dl-cards rules previously
+   declared here were fully shadowed by the !important refinement block
+   below (~line 1290). Removed; behavior preserved. */
 
 /* Badges */
 .badge {
@@ -1375,30 +1345,18 @@ a:hover {
     border-color: rgba(255,255,255,.12) !important;
     box-shadow: none !important;
 }
-/* Secondary buttons: white text by default in dark */
-:is(html.theme-dark, html[data-theme='dark']) .buttonSecondary,
-:is(html.theme-dark, html[data-theme='dark']) .dl-buttonSecondary,
+/* C3b: pick up the new `.btn-secondary` selector that the !important block
+   above doesn't cover. Color + border-color only — background and hover are
+   handled there. */
 :is(html.theme-dark, html[data-theme='dark']) .btn-secondary {
     color: #fff;
     border-color: rgba(255,255,255,.24);
 }
 
-/* Body copy contrast in dark: sections, cards, process steps */
-:is(html.theme-dark, html[data-theme='dark']) .sectionLead,
-:is(html.theme-dark, html[data-theme='dark']) .heroText,
-:is(html.theme-dark, html[data-theme='dark']) .card p,
-:is(html.theme-dark, html[data-theme='dark']) .processStep p {
-    color: #e5e7eb;
-}
-
-
-/* Docs: card + CTA blocks in dark stay dark (no white fill) */
-:is(html.theme-dark, html[data-theme='dark']) .theme-doc-markdown.doulabDoc .dl-cards > li,
-:is(html.theme-dark, html[data-theme='dark']) .markdown.doulabDoc .dl-cards > li {
-    background: #111318;
-    border-color: rgba(255,255,255,.12);
-    box-shadow: none;
-}
+/* C3b: weaker `.sectionLead / .card p / .processStep p` `#e5e7eb` rule and
+   the weaker `.dl-cards > li #111318` rule that previously sat here were
+   fully shadowed by their !important counterparts earlier in this block.
+   Removed; behavior preserved. */
 
 /* Center the in-page subnav and match content width */
 .container > .subnav {

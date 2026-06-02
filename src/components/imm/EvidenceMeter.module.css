@@ -110,3 +110,20 @@
   stroke: var(--ifm-color-emphasis-500);
   opacity: 0.9;
 }
+
+/* Dark-mode readout: the score "68 / 100" and the label below previously
+   inherited light-mode fallbacks (#1f2937 / #374151 / #4b5563) and rendered
+   dark-on-dark when --ifm-heading-color / --ifm-color-emphasis-* didn't
+   auto-flip. Lift to bright values so the numeric score and unit stay legible.
+   Reported 2026-06-02 on /services/imm-dt. */
+[data-theme='dark'] .score {
+  color: var(--ifm-heading-color, #f3f4f6);
+}
+
+[data-theme='dark'] .scoreUnit {
+  color: var(--ifm-color-emphasis-500, #c7cad1);
+}
+
+[data-theme='dark'] .label {
+  color: var(--ifm-color-emphasis-400, #d1d5db);
+}

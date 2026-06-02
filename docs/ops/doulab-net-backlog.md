@@ -1229,29 +1229,18 @@ Drawn from `docs/ops/audit-2026-07/00-index.md` consolidation of the 19 bilingua
 
 ## Phase D - Quality & Compliance Hardening
 
-### D0
+### D0 (RESOLVED 2026-06-02)
 - Description: Lighthouse 2026-01-19 findings intake.
-- Rationale: Capture audit findings and seed remediation backlog.
-- Acceptance criteria:
-  - SEO: robots.txt invalid due to unknown directive "Content-Signal: search=yes,ai-train=no".
-  - Best Practices: CSP Trusted Types missing; script-src includes 'unsafe-inline'; no preload directive found.
-  - Accessibility: contrast issues on .problemCard; links rely on color; identical links same purpose.
-  - Best Practices/Console: deprecated API warning; asset 503s (observed in report).
-  - Performance: render-blocking requests; unused JS estimate; missing explicit image width/height.
-- Evidence: `ops/audits/doulab-net/lighthouse-2026-01-19.pdf`
-- Notes: Derived from Lighthouse 13.0.1 report.
-- Status: Intake
-- Commits: 81a261d
+- Resolution: Reconciled against current state in `docs/ops/log-pending-06-monitoring-report.md`. Of the original 10 findings: 5 RESOLVED (robots.txt validity, problemCard contrast, links-rely-on-color, hero image dimensions, deprecated API), 3 partial / now-non-issue (CSP unsafe-inline mitigated via nonce middleware; asset 503s transient; identical-links spot-checked OK), 2 carry forward as separate follow-ups (Trusted Types adoption + mobile LCP render-blocking investigation).
+- Evidence: `ops/audits/doulab-net/lighthouse-2026-01-19.pdf` superseded by `lighthouse-2026-07-prod-v1/` (44 JSONs).
+- Status: RESOLVED.
+- Commits: pending (monitoring wave).
 
-### D1
+### D1 (RESOLVED 2026-06-02)
 - Description: robots.txt discovery + fix (invalid directive).
-- Rationale: Resolve robots.txt validity error flagged by Lighthouse.
-- Acceptance criteria:
-  - Identify source of robots.txt / Content-Signal directive.
-  - Remove invalid directive or document external source if not in repo.
-- Status: Blocked (robots.txt not found; source unknown)
-- Notes: robots.txt not found in repo; likely Cloudflare/edge-generated.
-- Commits: 81a261d
+- Resolution: Valid `static/robots.txt` shipped (verified live via curl). The old `Content-Signal: search=yes,ai-train=no` directive is gone. `sitemap_index.xml` referenced. Disallow rules cover `/book-clarityscan` and `/docs/ops/`.
+- Status: RESOLVED.
+- Commits: pending (monitoring wave).
 
 
 ### D2
@@ -1913,10 +1902,9 @@ Completion note: Guide split into /docs/research-resources/innovation-lab-guide/
 - Status: RESOLVED.
 - Commits: pending (polish wave).
 
-### LOG-PENDING-06
+### LOG-PENDING-06 (RESOLVED 2026-06-02)
 - Description: Monitoring: LCP/CLS check post-deploy; review CF Pages cache & headers in staging.
-- Rationale: Migrated from CHECKLOG.md Pending / Next list.
-- Acceptance criteria:
-  - Entry preserved from daily check log.
-- Status: Pending
+- Resolution: Full monitoring report at `docs/ops/log-pending-06-monitoring-report.md`. Findings (44 URLs, prod): desktop healthy (perf 96-97, LCP 1.2-1.5 s); mobile LCP plateaus at ~6 s on every page (systemic, render-blocking JS suspected, not the hero image). CLS excellent overall (avg 0.011, one outlier at `services-diagnostics-es-mobile = 0.239`). CF Pages cache + security headers verified correct via live curl (1-year immutable on /assets/*, 1-year on /img/*, no-cache on HTML to let the nonce middleware run, full CSP + HSTS + COOP + frame-options stack in place). Two follow-ups carry: mobile-LCP investigation + Trusted Types adoption.
+- Status: RESOLVED.
+- Commits: pending (monitoring wave).
 
